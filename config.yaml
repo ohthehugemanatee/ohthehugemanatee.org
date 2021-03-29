@@ -2,3 +2,6 @@ baseURL: http://ohthehugemanatee.github.io
 disablePathToLower: true
 languageCode: en-us
 title: Oh, The Huge Manatee
+permalinks:
+  blog: blog/:year/:month/:day/:title/
+
