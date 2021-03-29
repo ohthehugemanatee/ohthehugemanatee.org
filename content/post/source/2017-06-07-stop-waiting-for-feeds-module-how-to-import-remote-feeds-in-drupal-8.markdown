@@ -389,5 +389,5 @@ Very important for testing, and the whole reason we have `migrate_plus` module i
 
 Okay, now that's really it. Happy feeding!
 
-{{< figure class="center" src="/images/feed-me-seymour.gif" title=""Feed me, Seymour!"" >}}
+!["Feed me, Seymour!"](/images/feed-me-seymour.gif)
 

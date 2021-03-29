@@ -44,7 +44,7 @@ CEO Sadya Nadella is frank that **closed-source licensing as a profit model is a
 
 This shift is old news for most of the world. As much as the Hacker News crowd still bitches about it as FUD, this strategic direction has been in and out of the financial pages for years now. Microsoft has pivoted to platform services. Look at their profits by product over the last 8 years:
 
-{{< figure class="center" src="/images/microsoft-profits-by-product.png" title="Microsoft profits by product, over year." >}}
+![Microsoft profits by product, over year.](/images/microsoft-profits-by-product.png)
 
 The trend is obvious: **server and platform services are the place to invest**. Office only remains at the top of the heap because it transitioned to SaaS. Even Windows license profits are declining. This means focusing on interoperability. Make sure *everything* can run on your platform, because anything else is to handicap the source of your biggest short- and medium-term profit. In fact, **remaining adversarial to Open Source would kill the golden goose**. Microsoft *has* to change its values in order to make this shift.
 

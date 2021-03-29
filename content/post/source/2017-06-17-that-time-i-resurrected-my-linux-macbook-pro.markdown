@@ -14,11 +14,11 @@ I have a 2012 Macbook Pro - yes, that coveted "last good model" - and it runs Ub
 
 I tried starting into Startup Manager by holding the "Option" key. No bootable options appeared. Just an unhopeful file folder with a question mark. This was Not A Good Sign.
 
-{{< figure class="center" src="/images/folder-questionmark.jpg" title="When this is all your computer does, it is Not A Good Sign." >}} 
+![When this is all your computer does, it is Not A Good Sign.](/images/folder-questionmark.jpg) 
 
 Generally this icon means that EFI couldn't find a valid startup device. This is not the first time I've seen this - I've played with my boot options enough to mess this up for myself a few times! I breathed a heavy sigh and tried starting onto the recovery partition by holding "Command+R". I hadn't done anything in particular with Grub recently, but I had done some kernel updates, and you never know... But the recovery boot just got me a circle with a line through it, the universal "no" sign. This was an even worse sign.
 
-{{< figure class="center" src="/images/mac-no-sign.png" title="This is an Even Worse Sign." >}} 
+![This is an Even Worse Sign.](/images/mac-no-sign.png) 
 
 This immediately threw the issue out of the realm of "something I messed up myself", and into the less-entertaining realm of "hardware failure." 
 

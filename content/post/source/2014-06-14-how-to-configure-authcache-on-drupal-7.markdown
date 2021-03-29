@@ -52,7 +52,7 @@ Now that you're set up to deliver cached content to authenticated users, we can 
 
 As we proceed, you will notice a little red button which has appeared in the top left corner of your browser window.
 
-{{< figure class="left" src="/images/authcache-debug.png" width="300" title="authcache debug" alt="the authcache debug block" >}}
+![authcache debug" alt="the authcache debug block](/images/authcache-debug.png" width="300)
 
 This is Authcache Debug: a helpful little block which tells you if the page was delivered from cache, or if an element on there is still preventing the page from being cached. If you're logged in as admin, you'll notice that it says the page has been excluded of cache, because "Caching disabled for superuser". So in order to test this properly, you'll have to create another user account to keep open in a separate browser window. Go ahead and do that now.
 
@@ -73,7 +73,7 @@ For the page elements which are less predictable than forms, authcache modules o
 
 Working from the top of the page downwards, first we'll deal with that "Your posts" quicktab. Edit the View which generates that block, at admin/structure/views/view/posts/edit/block_2 . If you expand the "Advanced" section on the right, you'll see that we have an "Authcache" section now! Open it up, and enable the "authcache" checkbox which appears. Now you have a wealth of options for caching just this View. 
 
-{{< figure class="center" src="/images/authcache-views.png" title="authcache views" alt="the authcache views interface" >}}
+![authcache views" alt="the authcache views interface](/images/authcache-views.png)
 
 Note that just because it's customized per user doesn't mean it shouldn't be cached! We can cache this fragment for about an hour before running that query again. Once we save the View and clear caches, if you return to the frontpage you'll find that each user gets their own "Your posts" block. Success!
 
@@ -83,11 +83,11 @@ You should apply these same tricks to all three blocks on the sidebar: users lik
 
 You can find it in the Panels Content admin screen (thanks, authcache_panels!).
 
-{{< figure class="center" src="/images/authcache-panels.png" title="authcache panels" alt="the authcache panels interface" >}}
+![authcache panels" alt="the authcache panels interface](/images/authcache-panels.png)
 
 You can find it on the Block configuration page (thanks, authcache_block!).
 
-{{< figure class="center" src="/images/authcache-block.png" title="authcache block" alt="the authcache block interface" >}}
+![authcache block" alt="the authcache block interface](/images/authcache-block.png)
 
 (note: on the Demo site these are not positioned as blocks; they are positioned by panels. That means they don't go through blocks' normal render process, which means that authcache_block would be useless here!
 
@@ -122,7 +122,7 @@ Troubleshooting/Going deeper
 
 That's normal. There are all sorts of situations in which you would not want to cache a page. If one of your test users creates a node and then visits that new node, you will notice just such a red light.
 
-{{< figure class="center" src="/images/authcache-red.png" title="authcache red" alt="authcache cancels caching on a page" >}}
+![authcache red" alt="authcache cancels caching on a page](/images/authcache-red.png)
 
 Authcache Debug is your best friend here. Sometimes this is something simple, like in this example. All we need to do is enable authcache_menu, and this will turn green. Other times the problem is deeper. Perhaps there is a page element which needs a caching mechanism defined. Or perhaps a fragment that you have set to use ESI, isn't visible for the ESI tags to be evaluated. 
 

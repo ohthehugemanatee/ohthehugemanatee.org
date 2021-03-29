@@ -12,7 +12,7 @@ title: 'Drupal Does Face Recognition: Introducing Image Auto Tag module'
 
 Last week I wrote a Drupal module that uses face recognition to automatically tag images with the people in them. You can find it on [Github](https://github.com/ohthehugemanatee/image_auto_tag), of course. With this module, you can add an image to a node, and automatically populate an entity_reference field with the names of the people in the image. This isn't such a big deal for individual nodes of course; it's really interesting for bulk use cases, like Digital Asset Management systems.
 
-{{< figure class="center" src="/images/image-auto-tag.gif" title="Automatic tags, now in a Gif." >}}
+![Automatic tags, now in a Gif.](/images/image-auto-tag.gif)
 
 I had a great time at Drupalcon Nashville, reconnecting with friends, mentors, and colleagues as always. But this time I had some fresh perspective. After 3 months working with Microsoft's (badass) CSE unit - building cutting edge proofs-of-concept for some of their biggest customers - the contrast was powerful. The Drupal core development team are famously obsessive about code quality and about optimizing the experience for developers and users. The velocity in the platform is truly amazing. But we're missing out on a lot of the recent stuff that large organizations are building in their more custom applications. You may have noticed the same: all the cool kids are posting about Machine Learning, sentiment analysis, and computer vision. We don't see any of that at Drupalcon.
 

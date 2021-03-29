@@ -9,7 +9,7 @@ title: Stay for community
 ---
 The [Crellpocalypse](https://www.garfieldtech.com/blog/tmi-outing) in the Drupal world last week has shaken the entire community. This event and its handling have called our fundamental values and structures into question. We've had [fights on social media](https://www.reddit.com/r/drupal/comments/60y9mq/larry_garfield_on_harassment_in_the_drupal_project/), calls for [Dries to step down](https://mikkel.hoegh.org/2017/03/23/vote-no-confidence-drupal-association-leadership), and valuable contributors [stepping away from the community](https://janezurevc.name/time-take-some-time-drupal-community). I have friends on every side of the situation, but all I can think is: **This seems like the perfect time for a singing, dancing, spandexed pageant about the Drupal community.**
 
-{{< figure class="center" src="/images/drupalcon-la.jpg" title="Twelve years of code, and singing the Drupalcon song with Dries and Larry is still one of my favorite memories." >}} 
+![Twelve years of code, and singing the Drupalcon song with Dries and Larry is still one of my favorite memories.](/images/drupalcon-la.jpg) 
 
 **Why?** For those who don't know, I'm one of the authors of the [DrupalCon Prenote](https://www.youtube.com/playlist?list=PLjVW3kqu-3e_Q41ETbML6RfbRssEdVvC4), the "pre-keynote" show that kicks off DrupalCon right before Dries' keynote. The organizer (and my officemate), Jeffrey A. "jam" McGuire and I have been living our own special version of the crisis (**Read Jam's post about taking sides on this [here](https://medium.com/@horncologne/drupal-im-taking-sides-f46194122a05)**). Our friend Larry Garfield has been an enthusiastic part of the Prenote ever since his first appearance as "Lord Over-Engineering" [at Drupalcon Austin](https://www.youtube.com/watch?v=i5bW41KYUE0&list=PLjVW3kqu-3e_Q41ETbML6RfbRssEdVvC4&index=20). Dries has often played a special guest role, too. With Drupalcon Baltimore looming on the horizon, everything seems to be coming together in one awful moment full of painful reminders - and it's just when we're supposed to be cheering for "community." That awful conjunction is what makes this next Prenote in Baltimore more important than ever.
 
@@ -38,4 +38,4 @@ However you feel about the Crellpocalypse, please don't leave. Not yet. Stay, an
 
 **[I'll see you at the Prenote.](https://events.drupal.org/baltimore2017/balti-more-prenote-balti-most-fun-drupalcon)**
 
-{{< figure class="center" src="/images/DrupalConAsia-2.jpg" title="The Prenote: The most fun you can have at Drupalcon." >}}
+![The Prenote: The most fun you can have at Drupalcon.](/images/DrupalConAsia-2.jpg)
