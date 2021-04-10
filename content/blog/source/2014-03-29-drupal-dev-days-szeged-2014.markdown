@@ -4,6 +4,7 @@ categories:
 - drupal
 comments: true
 date: "2014-03-29T15:27:50Z"
+slug: drupal-dev-days-szeged-2014
 title: 'Drupal Dev Days Szeged, or: why you should attend every Camp you can '
 ---
 Today is the last day of [Drupal Dev Days](http://szeged2014.drupaldays.org/) in Szeged, Hungary, and I've never been more full of the "Drupal spirit!"

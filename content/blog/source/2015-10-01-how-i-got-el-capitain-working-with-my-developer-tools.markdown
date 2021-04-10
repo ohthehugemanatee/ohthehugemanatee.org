@@ -7,6 +7,7 @@ categories:
 comments: true
 date: "2015-10-01T12:44:42Z"
 published: true
+slug: how-i-got-el-capitain-working-with-my-developer-tools
 title: El Capitain broke my developer stuff! Here's how to fix it
 ---
 Last night I installed OSX's new "El Capitain" update, and it broke most of the tools I use in my daily life as a developer, including homebrew and git. Here are the steps I had to follow to get everything working again.

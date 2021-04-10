@@ -3,6 +3,7 @@ categories:
 - Android
 comments: true
 date: "2015-05-29T12:20:33Z"
+slug: troubleshooting-android-error-505-from-google-play
 title: Troubleshooting Android error -505 from google play
 ---
 I recently got a new Android phone, and very quickly had trouble installing some of my favorite apps. Google's Play Store downloads the app successfully, then presents me with "Unknown Error -505". 

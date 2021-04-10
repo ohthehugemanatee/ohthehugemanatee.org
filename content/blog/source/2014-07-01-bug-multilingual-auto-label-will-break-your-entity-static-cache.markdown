@@ -5,6 +5,7 @@ categories:
 - forumone
 comments: true
 date: "2014-07-01T17:00:45Z"
+slug: bug-multilingual-auto-label-will-break-your-entity-static-cache
 title: 'Bug: Multilingual Auto Label will break your Entity Static Cache'
 ---
 This is an important one to note: If you use the popular [Automatic Entity Label](https://www.drupal.org/project/auto_entitylabel) module on a multilingual site, [it will break your paths](https://www.drupal.org/node/2295325) because of an interaction with Drupal's built in object cache. I looked at this briefly a few months ago and ran out of time, but my (badass) colleague [bburg](https://www.drupal.org/u/bburg) figured it out this week. 

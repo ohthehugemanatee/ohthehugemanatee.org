@@ -5,6 +5,7 @@ categories:
 comments: true
 created: 1366306354
 date: "2013-04-18T00:00:00Z"
+slug: adding-rules-to-your-contrib-module-so-you-can-reject-half-the-tickets-in-your-queue
 title: Adding Rules to your contrib module (so you can reject half the tickets in
   your queue)
 ---

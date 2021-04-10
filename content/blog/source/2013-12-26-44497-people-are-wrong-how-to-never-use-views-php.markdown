@@ -6,6 +6,7 @@ categories:
 - howto
 comments: true
 date: "2013-12-26T12:01:44Z"
+slug: 44497-people-are-wrong-how-to-never-use-views-php
 title: '44,497 people are wrong: how to NEVER need Views PHP.'
 ---
 

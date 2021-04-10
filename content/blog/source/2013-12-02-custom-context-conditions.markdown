@@ -5,6 +5,7 @@ categories:
 - howto
 comments: true
 date: "2013-12-02T09:06:49Z"
+slug: custom-context-conditions
 title: Custom Context conditions
 ---
 One of the big advantages to using the [Context module](https://drupal.org/project/context "Context Module on drupal.org") is how totally extensible it is. Not only can you use and re-use the built in conditions, you can write your own. This brings all the power of the custom PHP evaluation method of block placement, but in a structure that makes your code re-usable, contributable, versioned, and standards-based. Writing a custom Context Condition is also a great template for how to integrate custom behaviors in many of the more complex Drupal modules such as Views and Search\_API. We'll see this pattern again and again, and this is about the most basic one to demonstrate with.

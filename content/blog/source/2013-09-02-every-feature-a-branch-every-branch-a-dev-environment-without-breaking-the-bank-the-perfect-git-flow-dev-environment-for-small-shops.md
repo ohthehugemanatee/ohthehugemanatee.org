@@ -6,6 +6,7 @@ categories:
 comments: true
 created: 1378148748
 date: "2013-09-02T00:00:00Z"
+slug: every-feature-a-branch-every-branch-a-dev-environment-without-breaking-the-bank-the-perfect-git-flow-dev-environment-for-small-shops
 title: Every feature a branch, every branch a dev environment... without breaking
   the bank! The perfect git-flow dev environment for small shops
 ---

@@ -6,6 +6,7 @@ categories:
 - howto
 comments: true
 date: "2015-05-02T10:10:36Z"
+slug: how-to-build-a-new-source-for-drupal-migrate-8
 title: How to build a new source for Drupal Migrate 8
 ---
 This week I wanted to accomplish a task in Drupal 8 that would be simple in Drupal 7: Import several CSV files, each one related to the others by taxonomy terms. Most importantly, I wanted to do it with [Migrate module](https://drupal.org/project/migrate).

@@ -2,6 +2,7 @@
 categories: null
 comments: true
 date: "2016-08-13T16:44:40Z"
+slug: getting-my-notes-out-of-evernote
 title: Getting my notes out of Evernote
 ---
 

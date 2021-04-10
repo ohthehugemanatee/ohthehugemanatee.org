@@ -6,6 +6,7 @@ categories:
 - sysadmin
 comments: true
 date: "2014-01-10T09:22:01Z"
+slug: drush-self-aliases
 title: Drush self aliases
 ---
 I ran into an interesting problem with the drush *@self* alias today. I wanted to pull a fresh copy of the DB down from a client's live site to my local development copy. Should be as easy as *drush sql-sync @clientsite.live @self*, right? I've done this a thousand times before.

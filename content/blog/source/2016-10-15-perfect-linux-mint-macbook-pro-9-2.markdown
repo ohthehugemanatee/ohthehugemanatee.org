@@ -4,6 +4,7 @@ categories:
 - osx
 comments: true
 date: "2016-10-15T18:44:40Z"
+slug: perfect-linux-mint-macbook-pro-9-2
 title: Perfect Linux Mint on my Macbook Pro 9,2
 ---
 

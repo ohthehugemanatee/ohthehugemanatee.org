@@ -5,6 +5,7 @@ categories:
 - open source
 comments: true
 date: "2019-10-08T19:10:15Z"
+slug: chinese-censorship-and-free-software
 title: Chinese censorship, values decisions, and free software
 ---
 Chinese censors are in the news this weekend: [Blizzard banned a grandmaster Hearthstone player for supporting Hong Kong in an interview](https://variety.com/2019/gaming/news/blizzard-bans-blitzchung-hearthstone-hong-kong-china-statement-1203363050/), [South Park was added to the "banned" list for their critique of Chinese censorship in Hollywood](https://www.newsweek.com/south-park-band-china-why-banned-china-s23-e02-23x02-1463762), and [an NBA franchise owner's job was on the line for a pro-HK tweet](https://www.cnn.com/2019/10/07/business/houston-rockets-nba-china-daryl-morey/index.html). Increasingly, Western companies are finding themselves up against the wall to prioritize western liberal values against access to the enormous Chinese market. We can imagine the difficult, high-pressure decisions for executives in this situation.

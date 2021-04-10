@@ -3,6 +3,7 @@ categories:
 - drupalplanet
 comments: true
 date: "2014-05-28T12:44:01Z"
+slug: drupal-superheroes-assemble
 title: 'Drupal Superheroes: ASSEMBLE!'
 ---
 <img alt="Drop Signal" src="/images/dropsignal.jpg" align=left> Regular Drupalcon attendees know that the opening pre-keynote session is one of the highlights of the con. That's the session where we welcome everyone to the con with stupid jokes, some well known Drupalists, and a lot of fun. This year is going to be especially good - and we need your help!

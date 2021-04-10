@@ -4,6 +4,7 @@ categories:
 - hacking
 comments: true
 date: "2014-05-18T18:55:31Z"
+slug: recovering-photos-and-data-from-a-keylocked-android-phone
 title: How to recover photos and data from a keylocked Android phone
 ---
 Recently a good friend of mine passed away suddenly. Her family asked me to recover her photos and videos from her computer and android phone. The computer was easy enough, but the android phone posed a real problem. It had a keylock enabled, and USB debugging disabled. There was no external SD card to pull out, which meant that all the photos were stored on the internal memory. The phone was a totally stock Samsung Galaxy S3 mini. With a lot of reading, I worked out a way to get a data dump from her phone without having to bypass the keylock.

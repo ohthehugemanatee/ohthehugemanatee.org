@@ -4,6 +4,7 @@ categories:
 - career
 comments: true
 date: "2016-07-29T13:14:06Z"
+slug: moving-to-amazee-labs
 title: Moving to Amazee Labs
 ---
 About a month and a half ago, I left my position at [Forum One](https://forumone.com) to start work on a project with [Amazee Labs](https://amazeelabs.com). Yes, a month and a half is an eternity in Internet-Time, but better to blog about it late than not at all!

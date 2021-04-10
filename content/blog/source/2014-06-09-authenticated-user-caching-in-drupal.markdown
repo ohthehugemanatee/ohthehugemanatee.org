@@ -5,6 +5,7 @@ categories:
 - performance
 comments: true
 date: "2014-06-09T22:21:01Z"
+slug: authenticated-user-caching-in-drupal
 title: Authenticated User Caching Concepts in Drupal 7
 ---
 Drupal has a wide variety of highly effective solutions for caching anonymous user content. The typical setup is APC, Memcached or Redis, and Varnish in front, and this can easily serve thousands of concurrent anonymous users. There is excellent documentation out there discussing this kind of simple caching.

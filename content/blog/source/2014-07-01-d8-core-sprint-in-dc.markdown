@@ -4,6 +4,7 @@ categories:
 - drupalplanet
 comments: true
 date: "2014-07-01T16:27:17Z"
+slug: d8-core-sprint-in-dc
 title: D8 Core sprint in DC
 ---
 A quick note to all the Drupalists in the DC general area - Forum One is trying to put together a D8 core sprint in their DC office space. They're coordinating with the DC Meetup group to try and spread the word to as many community members as possible!

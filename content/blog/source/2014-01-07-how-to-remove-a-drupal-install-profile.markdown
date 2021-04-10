@@ -5,6 +5,7 @@ categories:
 - drupalplanet
 comments: true
 date: "2014-01-07T13:23:45Z"
+slug: how-to-remove-a-drupal-install-profile
 title: How to remove a Drupal install profile
 ---
 

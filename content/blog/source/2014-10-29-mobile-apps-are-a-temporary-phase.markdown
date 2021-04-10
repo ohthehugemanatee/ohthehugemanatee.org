@@ -5,6 +5,7 @@ categories:
 - prognostication
 comments: true
 date: "2014-10-29T13:13:04Z"
+slug: mobile-apps-are-a-temporary-phase
 title: Mobile Apps are a Temporary Phase, All Hail the Accessible Web
 ---
 <p>Dries made <a href="http://buytaert.net/w3c-declares-html5-standard-final">an interesting post about the new HTML5 standard</a> the other day. OK, the post itself is more of an announcement, but the meat (as far as I&rsquo;m concerned) is near the end, where he says that &ldquo;The trend in development seems to be towards native mobile applications rather than mobile websites.&rdquo; He links to the excellent <a href="http://a16z.com/2014/10/28/mobile-is-eating-the-world/">Mobile is Eating the World</a> presentation by Benedict Evans as evidence.</p>

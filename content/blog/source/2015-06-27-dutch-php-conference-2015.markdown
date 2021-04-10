@@ -5,6 +5,7 @@ categories:
 comments: true
 date: "2015-06-27T12:04:52Z"
 published: true
+slug: dutch-php-conference-2015
 title: How the world sees Drupal - the Dutch PHP Conference 2015
 ---
 

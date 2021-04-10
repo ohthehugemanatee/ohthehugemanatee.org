@@ -7,6 +7,7 @@ categories:
 - drupalplanet
 comments: true
 date: "2018-01-10T20:32:50Z"
+slug: im-joining-microsoft-because-theyre-doing-open-source-right
 title: I'm joining Microsoft, because they're doing Open Source Right
 ---
 

@@ -4,6 +4,7 @@ categories:
 - microsoft
 comments: true
 date: "2018-02-07T16:42:50Z"
+slug: the-number-1-question-i-get-asked-working-at-msy-do-you-run-linux
 title: 'The #1 Question I Get Asked Working at MS: Why Do You Run Linux?'
 ---
 

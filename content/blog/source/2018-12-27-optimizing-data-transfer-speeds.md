@@ -4,6 +4,7 @@ categories:
 - sysadmin
 comments: true
 date: "2018-12-27T10:30:23Z"
+slug: optimizing-data-transfer-speeds
 title: Optimizing data transfer speeds
 ---
 One of my holiday projects was to set up my home "data warehouse." Ever since [Dropbox killed modern Linux filesystem support](https://www.dropboxforum.com/t5/Syncing-and-uploads/Linux-Dropbox-client-warn-me-that-it-ll-stop-syncing-in-Nov-why/m-p/290065/highlight/true#M42255) I've been using (and loving) [Nextcloud](https://nextcloud.com/) from my home. It backs up to an encrypted [Duplicati](https://www.duplicati.com/) store on [Azure blob store](https://azure.microsoft.com/en-us/services/storage/blobs/), so that's offsite backups taken care of. But it was time to knit all my various drives together into a single RAID data warehouse. The only problem: how to transfer my 2 terabytes (rounded to make the math in the post easier) of data, without nasty downtime during the holidays?

@@ -5,6 +5,7 @@ categories:
 - drupalplanet
 comments: true
 date: "2014-01-03T13:09:11Z"
+slug: how-to-create-a-custom-panels-pane
 title: How to create a custom Panels Pane
 ---
 

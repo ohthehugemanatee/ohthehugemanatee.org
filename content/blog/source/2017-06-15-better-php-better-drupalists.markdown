@@ -6,6 +6,7 @@ categories:
 - php
 comments: true
 date: "2017-06-15T17:19:24Z"
+slug: better-php-better-drupalists
 title: 'Better PHP === Better Drupalists: the PHP track at Drupalcon Vienna'
 ---
 

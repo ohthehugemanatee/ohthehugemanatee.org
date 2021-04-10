@@ -4,6 +4,7 @@ categories:
 - hacking
 comments: true
 date: "2015-04-04T08:09:47Z"
+slug: how-and-why-to-update-the-modem-slash-baseband-firmware-on-a-samsung-phone
 title: How and why to update the modem/baseband firmware on a Samsung Android phone
 ---
 If you have a Samsung Android phone, and you use Samsung's own version of Android, this article is not for you. When Samsung sends you updates to Android, they also will include any relevant updates to the modem/baseband firmware. So stop reading and go have a cup of tea or something, your job is done.

@@ -4,6 +4,7 @@ categories:
 - ubuntu
 comments: true
 date: "2018-01-25T11:05:31Z"
+slug: my-war-on-systemd-resolved
 title: My War on Systemd-resolved
 ---
 

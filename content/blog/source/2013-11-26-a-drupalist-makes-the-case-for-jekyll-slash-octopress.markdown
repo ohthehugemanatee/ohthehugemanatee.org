@@ -3,6 +3,7 @@ categories:
 - Jekyll/Octopress
 comments: true
 date: "2013-11-26T17:59:05Z"
+slug: a-drupalist-makes-the-case-for-jekyll-slash-octopress
 title: A Drupalist makes the case for Jekyll/Octopress
 ---
 

@@ -7,6 +7,7 @@ categories:
 - migrate
 comments: true
 date: "2017-06-07T00:33:24Z"
+slug: stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8
 title: 'Stop waiting for Feeds module: how to import RSS in Drupal 8'
 ---
 
@@ -94,7 +95,8 @@ destination:
   plugin: 'entity:node'
 
 process:
-  title: title
+  slug: stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8
+title: title
   field_remote_url: link
   body: summary
   created:
@@ -207,7 +209,8 @@ Yep, it's that simple. This is where you declare what Drupal entity type will re
 
 ``` yaml
 process:
-  title: title
+  slug: stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8
+title: title
   field_remote_url: link
   body: summary
   created:

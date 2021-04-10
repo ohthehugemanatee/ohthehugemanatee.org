@@ -5,6 +5,7 @@ categories:
 - ruby
 comments: true
 date: "2014-01-10T21:20:55Z"
+slug: another-cryptic-ruby-message
 title: Another cryptic Ruby message
 ---
 Ruby on Rails drives me nuts, and today I found another example of why: the cryptic error messages. After a server update, my chiliproject/redmine site refused to start. The error message was

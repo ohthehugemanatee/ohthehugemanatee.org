@@ -9,6 +9,7 @@ categories:
 - migrate
 comments: true
 date: "2017-02-11T11:18:44Z"
+slug: a-year-between-the-cracks-of-decoupled-drupal
 title: Between the cracks of decoupled (Drupal) architecture
 ---
 In any decoupled architecture, people tend to focus on the pieces that will fit together. But what nobody ever tells you is: *watch out for the cracks!* 

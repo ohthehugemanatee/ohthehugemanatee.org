@@ -5,6 +5,7 @@ categories:
 - displaysuite
 comments: true
 date: "2014-04-02T16:12:13Z"
+slug: how-to-create-a-custom-display-suite-field
 title: How to create a custom Display Suite field
 ---
 A few months ago I posted about [how to create a custom Panels pane](https://ohthehugemanatee.org/blog/2014/01/03/how-to-create-a-custom-panels-pane), a critical reference for anyone who uses Panels layouts. The other part of the toolkit for quick and awesome layouts is the [Display Suite](https://drupal.org/projects/ds) module. With DS you can create new "Display modes" for your content, to be reused around the site. For example, on one recent site I had four standard ways to display my nodes: Full, Teaser, Mini-Teaser, and Search Result. DS made this configuration a cinch.

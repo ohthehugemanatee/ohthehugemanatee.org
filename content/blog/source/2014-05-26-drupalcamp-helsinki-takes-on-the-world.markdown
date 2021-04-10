@@ -4,6 +4,7 @@ categories:
 - drupalplanet
 comments: true
 date: "2014-05-26T15:14:58Z"
+slug: drupalcamp-helsinki-takes-on-the-world
 title: Drupalcamp Helsinki takes on the world
 ---
 Last weekend I got to keynote [Drupalcamp Helsinki](http://drupalcamp.fi) with my friend and often-collaborator, [scaragucc](http://twitter.com/adamjurantenor) - and what a great camp it was! Organizer [Lauri Eskola](https://twitter.com/laurii1) deserves tremendous credit for taking this camp to the next level. They doubled their attendance from last year, attracted positive attention from some great notables in the global Drupal world, and got their local community energized to engage more. At all the various after parties there were frequent toasts of "one of the best Drupalcamps in the world!"

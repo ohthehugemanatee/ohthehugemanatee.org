@@ -7,6 +7,7 @@ categories:
 - microsoft
 comments: true
 date: "2018-04-19T18:06:51Z"
+slug: face-recognition-on-drupal
 title: 'Drupal Does Face Recognition: Introducing Image Auto Tag module'
 ---
 

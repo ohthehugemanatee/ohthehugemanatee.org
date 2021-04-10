@@ -4,6 +4,7 @@ categories:
 - copyright
 comments: true
 date: "2019-03-21T23:44:43Z"
+slug: an-open-letter-to-my-meps-about-article-17-formerly-article-13
 title: An Open Letter to my MEPs about Article 17 (formerly article 13)
 ---
 

@@ -3,6 +3,7 @@ categories:
 - Drupal
 comments: true
 date: "2015-12-08T12:06:02Z"
+slug: how-drupal-should-handle-client-side-framework-obsolescence
 title: How Drupal should handle client-side framework obsolescence
 ---
 Today I read a great blog post from Dries: [Should we decouple Drupal with a client side framework?](http://buytaert.net/should-we-decouple-drupal-with-a-client-side-framework?utm_content=buffer17eab&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer). As usual, Dries puts a lot of thought into his writing, and braves a shitstorm of responses by laying his thinking bare while he's still mulling it over. I couldn't resist adding to the storm.

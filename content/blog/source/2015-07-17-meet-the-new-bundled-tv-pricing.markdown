@@ -4,6 +4,7 @@ categories:
 - internet
 comments: true
 date: "2015-07-17T11:27:29Z"
+slug: meet-the-new-bundled-tv-pricing
 title: Bundled TV pricing will come back from the dead
 ---
 Everyone is excited these days about the [death of ESPN](https://500ish.com/the-9-bullet-points-of-doom-for-espn-a692d0f48182), particularly as evidence of the [death of "bundle priced" Cable TV](http://www.thefiscaltimes.com/2015/03/12/Long-Slow-Death-Cable-Just-Reached-Tipping-Point). Consumers are supposed to be excited that soon they will only have to pay for the content they want. Don't get too excited yet.

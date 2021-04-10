@@ -6,6 +6,7 @@ categories:
 - drupalplanet
 comments: true
 date: "2014-11-03T17:30:32Z"
+slug: drupalgeddon-means-we-cant-trust-humans-with-updates
 title: 'Drupalgeddon: Best Practices Aren''t Good Enough Anymore'
 ---
 <p>Last week&rsquo;s <a href="https://www.drupal.org/PSA-2014-003">Public Service Announcement</a> from the Drupal security team caused a lot of attention. And rightfully so &ndash; it told us that the vast majority of Drupal 7 sites around the world are considered compromised. A mere 7 hours after critical security patch <a href="https://www.drupal.org/SA-CORE-2014-005">SA-CORE-2014-005</a> was released, robots were spotted in the wild, bulk-hacking Drupal 7 sites with this vulnerability. This is something that&rsquo;s never happened to the Drupal community before, and it is extremely serious. In some way it&rsquo;s our own version of Heartbleed and other highly-publicized critical vulnerabilities in open source software.</p>

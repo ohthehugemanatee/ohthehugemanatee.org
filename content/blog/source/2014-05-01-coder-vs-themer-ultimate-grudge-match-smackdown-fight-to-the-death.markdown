@@ -4,6 +4,7 @@ categories:
 - drupalcon
 comments: true
 date: "2014-05-01T17:15:31Z"
+slug: coder-vs-themer-ultimate-grudge-match-smackdown-fight-to-the-death
 title: Coder vs. Themer Ultimate Grudge Match Smackdown Fight to the Death
 ---
 I'm really excited about a new session that I've been doing with my friend and colleague, [Adam Juran aka scaragucc](https://twitter.com/adamjurantenor): the Coder vs Themer Ultimate Grudge Match Smackdown Fight to the Death! The basic premise: we both start with the same wireframe of a front page to build. But *I'm only allowed to use the module layer, and Adam is only allowed to use the theme layer*. It's a really fun and entertaining way to play with the blurry lines between "coder" and "themer". We get the audience pretty pumped up, which is impressive for a session that's basically about watching other people code!

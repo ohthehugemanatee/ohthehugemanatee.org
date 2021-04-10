@@ -6,6 +6,7 @@ categories:
 - community
 comments: true
 date: "2017-07-28T17:01:59Z"
+slug: bring-php-to-drupalcon
 title: Why no mainstream PHP speakers come to Drupalcon - and how we're changing that
 ---
 I've learned something incredible as the PHP Track Chair for Drupalcon Vienna. **The Drupal Association has no way to invite PHP speakers to Drupalcon**. 

@@ -6,6 +6,7 @@ categories:
 - code
 comments: true
 date: "2016-11-05T12:05:50Z"
+slug: writing-drupal-8-code-for-drupal-7
 title: Writing Drupal 8 code for Drupal 7
 ---
 

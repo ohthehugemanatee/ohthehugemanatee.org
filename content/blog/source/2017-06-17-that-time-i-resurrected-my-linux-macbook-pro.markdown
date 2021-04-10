@@ -5,6 +5,7 @@ categories:
 comments: true
 date: "2017-06-17T23:06:02Z"
 published: true
+slug: that-time-i-resurrected-my-linux-macbook-pro
 title: That time I resurrected my Linux MacBook Pro
 ---
 

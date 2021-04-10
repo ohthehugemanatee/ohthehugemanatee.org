@@ -5,6 +5,7 @@ categories:
 - community
 comments: true
 date: "2017-03-30T12:22:11Z"
+slug: stay-for-community
 title: Stay for community
 ---
 The [Crellpocalypse](https://www.garfieldtech.com/blog/tmi-outing) in the Drupal world last week has shaken the entire community. This event and its handling have called our fundamental values and structures into question. We've had [fights on social media](https://www.reddit.com/r/drupal/comments/60y9mq/larry_garfield_on_harassment_in_the_drupal_project/), calls for [Dries to step down](https://mikkel.hoegh.org/2017/03/23/vote-no-confidence-drupal-association-leadership), and valuable contributors [stepping away from the community](https://janezurevc.name/time-take-some-time-drupal-community). I have friends on every side of the situation, but all I can think is: **This seems like the perfect time for a singing, dancing, spandexed pageant about the Drupal community.**

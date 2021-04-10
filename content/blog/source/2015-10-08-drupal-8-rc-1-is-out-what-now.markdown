@@ -5,6 +5,7 @@ categories:
 - Drupal 8
 comments: true
 date: "2015-10-08T11:16:02Z"
+slug: drupal-8-rc-1-is-out-what-now
 title: Drupal 8 RC 1 is out! What now?
 ---
 Last night (my time) I got the good news over twitter:

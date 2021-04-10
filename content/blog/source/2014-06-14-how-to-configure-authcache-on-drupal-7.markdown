@@ -5,6 +5,7 @@ categories:
 - Caching
 comments: true
 date: "2014-06-14T16:15:40Z"
+slug: how-to-configure-authcache-on-drupal-7
 title: How to configure Authcache on Drupal 7
 ---
 So you have authenticated user traffic you want to cache? Good - you're on the right post. This post is a walk through for caching content for authenticated users in Drupal 7. We will be using the Authcache suite of modules. If you haven't read it yet, I strongly recommend you check out my last post, [Authenticated User Caching Concepts in Drupal 7](https://ohthehugemanatee.org/blog/2014/06/09/authenticated-user-caching-in-drupal/).

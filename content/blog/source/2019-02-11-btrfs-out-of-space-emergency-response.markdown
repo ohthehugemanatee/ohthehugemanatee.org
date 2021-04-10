@@ -6,6 +6,7 @@ categories:
 comments: true
 date: "2019-02-11T13:58:39Z"
 published: true
+slug: btrfs-out-of-space-emergency-response
 title: BTRFS and free space - emergency response
 ---
 I run BTRFS on my root filesystem (on Linux), mostly for the quick snapshot and restore functionality. Yesterday I ran into a common problem: **my drive was suddenly full**. I went from 4GB of free space on my system drive to 0 in an instant, causing all sorts of chaos on my system. 

@@ -6,6 +6,7 @@ categories:
 - drupalplanet
 comments: true
 date: "2017-02-21T22:33:08Z"
+slug: what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh
 title: 'What Crell doesn''t want you to know: how to automate letsencrypt on platform.sh'
 ---
 

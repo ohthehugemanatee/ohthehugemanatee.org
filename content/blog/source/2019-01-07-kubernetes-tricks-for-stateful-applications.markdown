@@ -5,6 +5,7 @@ categories:
 comments: true
 date: "2019-01-07T11:10:21Z"
 published: true
+slug: kubernetes-tricks-for-stateful-applications
 title: 'Kubernetes for stateful applications: Scaling macroservices'
 ---
 I recently got to proctor an [Openhack](https://openhack.microsoft.com/) event on modern containerization. It ended up an excuse to dig deep on one of the corner cases that we all encounter, but no one likes to talk about.

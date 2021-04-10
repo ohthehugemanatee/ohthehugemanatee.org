@@ -4,6 +4,7 @@ categories:
 - rant
 comments: true
 date: "2016-08-15T11:46:10Z"
+slug: 301-redirects-are-the-herpes-of-the-internet
 title: 301 Redirects are the Herpes of the Internet
 ---
 My client bought a domain name based on her favorite username when she was young. Like any teenager, she didn't choose the best name. But SpongeBobLover16 (name changed to preserve her anonymity) wanted to exert her online independence. She decided she would give her real name domain to SpongeBobLover16.com in a 301 redirect. Her parents told her she should always use a 302, but she ignored their advice. "I remember it felt so good," she says today, "but now I have to live with that mistake every day." 5 years later, her real name domain, SusanExample.com, still redirects to that old username on Google. Old friends and family can only see her domain as SpongeBobLover16.com. They say it doesn't bother them, that they love her anyway, but Susan feels marked for life.

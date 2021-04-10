@@ -3,6 +3,7 @@ categories:
 - programming
 comments: true
 date: "2014-05-12T14:08:39Z"
+slug: why-use-an-ide-when-vim-is-so-awesome
 title: Why use an IDE when vim is so awesome?
 ---
 One thing I've never really understood is IDEs. I mean, I get it when you have a complex, emulated environment as a key part of your development. But for the majority of us who write in high level languages like PHP or Ruby, I just don't see the benefit. Why use some mouse-y, graphics dependent piece of software when you can use the ubiquitous Vim?

@@ -6,6 +6,7 @@ categories:
 comments: true
 date: "2017-08-04T12:03:27Z"
 published: true
+slug: the-only-3-tools-you-need-to-become-a-rock-star-developer
 title: The 3 skills you need to become a rock star developer
 ---
 

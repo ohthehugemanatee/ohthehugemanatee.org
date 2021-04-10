@@ -3,6 +3,7 @@ categories:
 - sysadmin
 comments: true
 date: "2013-12-20T16:29:27Z"
+slug: ssh-lifehacks-to-make-your-ssh-life-easy
 title: SSH lifehacks to make your SSH life easy
 ---
 If you use SSH every day, or even every other day, this post is for you. We're going to walk through some of the more convenient options available to you in your global SSH configuration to make your life easier and faster.

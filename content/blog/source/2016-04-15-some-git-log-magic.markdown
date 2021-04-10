@@ -6,6 +6,7 @@ categories:
 comments: true
 date: "2016-04-15T13:12:41Z"
 published: true
+slug: some-git-log-magic
 title: Some git log magic
 ---
 Today I got to generate git statistics for my team. It's more fun than it sounds! First of all, it's always entertaining to learn just how flexible git's reporting can get. Secondly, it's a chance to dive back into my old sysadmin tool kit and play with awk, sed, and friends.

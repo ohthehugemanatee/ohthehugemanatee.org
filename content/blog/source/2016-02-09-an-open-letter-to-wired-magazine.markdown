@@ -4,6 +4,7 @@ categories:
 - adblock
 comments: true
 date: "2016-02-09T14:10:31Z"
+slug: an-open-letter-to-wired-magazine
 title: An Open Letter to Wired Magazine
 ---
 

@@ -2,6 +2,7 @@
 categories: null
 comments: true
 date: "2016-10-31T09:05:07Z"
+slug: developer-options-for-replacing-your-old-macbook-pro
 title: Developer options for replacing your old MacBook Pro
 ---
 The developer world is abuzz with criticism of the new Macbook Pro. After 4 years of waiting for an update, what we got has [two less ports, slower memory and a worse GPU](https://medium.com/charged-tech/apple-just-told-the-world-it-has-no-idea-who-the-mac-is-for-722a2438389b#.3cl5g99bu), is [a vanity project that the core demographic of Apple’s customers probably won’t even use](https://medium.com/charged-tech/apple-just-told-the-world-it-has-no-idea-who-the-mac-is-for-722a2438389b#.3cl5g99bu), in the final balance: [merely consumer-level](https://petersphilo.org/2016/10/29/open-letter-to-tim-cook/). It's slammed as [incompatible](https://macperformanceguide.com/blog/2016/20161029_1016-Apple2016MacBookPro-compatibility.html), [absurd](https://twitter.com/lapcatsoftware/status/791760906678067200), and [for pros... actually an insult](http://cdm.link/2016/10/apples-computer-vision-looks-backward-others-look-forward/).
