@@ -4,7 +4,7 @@ title: Oh The Huge Manatee!
 theme: hyde-hyde
 disqusShortname: ohthehugemanatee
 permalinks:
-  blog: blog/:year/:month/:day/:title/
+  blog: blog/:year/:month/:day/:slug/
 
 Menus:
   main:
