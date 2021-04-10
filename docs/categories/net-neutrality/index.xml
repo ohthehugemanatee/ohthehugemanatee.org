@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>net neutrality on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/net-neutrality/</link>
+    <link>https://ohthehugemanatee.org/categories/net-neutrality/</link>
     <description>Recent content in net neutrality on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Dec 2010 00:50:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/net-neutrality/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 Dec 2010 00:50:00 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/net-neutrality/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Net Neutrality and Steve Wozniak</title>
-      <link>http://ohthehugemanatee.github.io/2010/12/net-neutrality-and-steve-wozniak.html</link>
+      <link>https://ohthehugemanatee.org/2010/12/net-neutrality-and-steve-wozniak.html</link>
       <pubDate>Wed, 22 Dec 2010 00:50:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2010/12/net-neutrality-and-steve-wozniak.html</guid>
+      <guid>https://ohthehugemanatee.org/2010/12/net-neutrality-and-steve-wozniak.html</guid>
       <description>{% raw %} I know no one reads this blog but me, but I may as well put this up here. &amp;nbsp;Net Neutrality: I&#39;m for it.
 Steve Wozniak has an excellent Open Letter up on the Atlantic about the issue. &amp;nbsp;He takes the examples of public goods such as roadworks and compares them favorably to privately managed utilities like Cable TV and Internet. Personally, I think his letter is a much more effective critique of the FCC than it is a championing of the public works model of construction.</description>
     </item>

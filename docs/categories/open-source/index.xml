@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>open source on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/open-source/</link>
+    <link>https://ohthehugemanatee.org/categories/open-source/</link>
     <description>Recent content in open source on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Oct 2019 19:10:15 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Oct 2019 19:10:15 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/open-source/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chinese censorship, values decisions, and free software</title>
-      <link>http://ohthehugemanatee.github.io/blog/2019/10/08/chinese-censorship-and-free-software/</link>
+      <link>https://ohthehugemanatee.org/blog/2019/10/08/chinese-censorship-and-free-software/</link>
       <pubDate>Tue, 08 Oct 2019 19:10:15 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2019/10/08/chinese-censorship-and-free-software/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2019/10/08/chinese-censorship-and-free-software/</guid>
       <description>Chinese censors are in the news this weekend: Blizzard banned a grandmaster Hearthstone player for supporting Hong Kong in an interview, South Park was added to the &amp;ldquo;banned&amp;rdquo; list for their critique of Chinese censorship in Hollywood, and an NBA franchise owner&amp;rsquo;s job was on the line for a pro-HK tweet. Increasingly, Western companies are finding themselves up against the wall to prioritize western liberal values against access to the enormous Chinese market.</description>
     </item>
     
     <item>
       <title>I&#39;m joining Microsoft, because they&#39;re doing Open Source Right</title>
-      <link>http://ohthehugemanatee.github.io/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</link>
+      <link>https://ohthehugemanatee.org/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</link>
       <pubDate>Wed, 10 Jan 2018 20:32:50 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</guid>
       <description>I&amp;rsquo;m excited to announce that I&amp;rsquo;ve signed with Microsoft as a Principal Software Engineering Manager. I&amp;rsquo;m joining Microsoft because they are doing enterprise Open Source the Right Way, and I want to be a part of it. This is a sentence that I never believed I would write or say, so I want to explain.
 First I have to acknowledge the history. I co-founded my first tech company just as the Halloween documents were leaked.</description>
     </item>
     
     <item>
       <title>DD-WRT, versioning, and the Linksys WRT54G wireless router</title>
-      <link>http://ohthehugemanatee.github.io/2010/12/dd-wrt-versioning-and-linksys-wrt54g.html</link>
+      <link>https://ohthehugemanatee.org/2010/12/dd-wrt-versioning-and-linksys-wrt54g.html</link>
       <pubDate>Mon, 20 Dec 2010 12:47:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2010/12/dd-wrt-versioning-and-linksys-wrt54g.html</guid>
+      <guid>https://ohthehugemanatee.org/2010/12/dd-wrt-versioning-and-linksys-wrt54g.html</guid>
       <description>{% raw %} I have had all sorts of trouble with the wireless situation in my apartment. &amp;nbsp;The layout of the place is such that the kitchen sits in between the two major rooms (living room and bedroom), and I swear those kitchen walls must be made of lead. &amp;nbsp;No wireless signal seems to get through. &amp;nbsp;I have phone jacks for ADSL in the living room and bedroom, nothing in between.</description>
     </item>
     

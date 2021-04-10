@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pwnagetool on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/pwnagetool/</link>
+    <link>https://ohthehugemanatee.org/categories/pwnagetool/</link>
     <description>Recent content in pwnagetool on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Dec 2010 01:32:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/pwnagetool/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Dec 2010 01:32:00 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/pwnagetool/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to jailbreak and unlock iPhone 3GS IOS 4.2.1, old baseband</title>
-      <link>http://ohthehugemanatee.github.io/2010/12/how-to-jailbreak-and-unlock-iphone-3gs.html</link>
+      <link>https://ohthehugemanatee.org/2010/12/how-to-jailbreak-and-unlock-iphone-3gs.html</link>
       <pubDate>Mon, 20 Dec 2010 01:32:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2010/12/how-to-jailbreak-and-unlock-iphone-3gs.html</guid>
+      <guid>https://ohthehugemanatee.org/2010/12/how-to-jailbreak-and-unlock-iphone-3gs.html</guid>
       <description>{% raw %} After wasting my evening working out a jailbreak/unlock for an old version of IOS, I discovered a side note in a devteam blog update&amp;nbsp;that gave me clues on how to jailbreak and unlock my phones for the latest version of IOS. &amp;nbsp;So I spent another evening working on that. I haven&#39;t seen complete instructions anywhere yet, so here they are. &amp;nbsp;How to update your iPhone 3GS to 4.</description>
     </item>
     
     <item>
       <title>Unlocking and jailbreaking my iPhone 3gs on 4.1.2 - a little late</title>
-      <link>http://ohthehugemanatee.github.io/2010/12/unlocking-and-jailbreaking-my-iphone.html</link>
+      <link>https://ohthehugemanatee.org/2010/12/unlocking-and-jailbreaking-my-iphone.html</link>
       <pubDate>Sat, 18 Dec 2010 02:02:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2010/12/unlocking-and-jailbreaking-my-iphone.html</guid>
+      <guid>https://ohthehugemanatee.org/2010/12/unlocking-and-jailbreaking-my-iphone.html</guid>
       <description>{% raw %} While I was away over the weekend, I borked my iphone. &amp;nbsp;I was running IOS 4.0, and I was having trouble with network connections.
 The statusbar wouldn&#39;t reflect my actual connection status. &amp;nbsp;WiFi connections would rarely show up in the statusbar, though I knew I was surfing wirelessly (my router at 10.10.10.1 was accessible to the phone, for starters...)WiFi would periodically crash. &amp;nbsp;In the middle of a good network connection, it would just.</description>
     </item>

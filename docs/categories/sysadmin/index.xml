@@ -2,56 +2,56 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sysadmin on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/sysadmin/</link>
+    <link>https://ohthehugemanatee.org/categories/sysadmin/</link>
     <description>Recent content in sysadmin on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Feb 2019 13:58:39 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Feb 2019 13:58:39 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/sysadmin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BTRFS and free space - emergency response</title>
-      <link>http://ohthehugemanatee.github.io/blog/2019/02/11/btrfs-out-of-space-emergency-response/</link>
+      <link>https://ohthehugemanatee.org/blog/2019/02/11/btrfs-out-of-space-emergency-response/</link>
       <pubDate>Mon, 11 Feb 2019 13:58:39 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2019/02/11/btrfs-out-of-space-emergency-response/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2019/02/11/btrfs-out-of-space-emergency-response/</guid>
       <description>I run BTRFS on my root filesystem (on Linux), mostly for the quick snapshot and restore functionality. Yesterday I ran into a common problem: my drive was suddenly full. I went from 4GB of free space on my system drive to 0 in an instant, causing all sorts of chaos on my system.
 This problem happens to lots of people because BTRFS doesn&amp;rsquo;t have a linear relationship to &amp;ldquo;free space available&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>Kubernetes for stateful applications: Scaling macroservices</title>
-      <link>http://ohthehugemanatee.github.io/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/</link>
+      <link>https://ohthehugemanatee.org/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/</link>
       <pubDate>Mon, 07 Jan 2019 11:10:21 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/</guid>
       <description>I recently got to proctor an Openhack event on modern containerization. It ended up an excuse to dig deep on one of the corner cases that we all encounter, but no one likes to talk about.
 Kubernetes is one of the greatest orchestration and scaling tools ever built, designed for modern decoupled, stateless architectures. Kubernetes tutorials abound to show you these strong use cases. But in the real world where you don&amp;rsquo;t get to build &amp;ldquo;green field&amp;rdquo; every time, there are a lot of applications that don&amp;rsquo;t fit that model.</description>
     </item>
     
     <item>
       <title>Optimizing data transfer speeds</title>
-      <link>http://ohthehugemanatee.github.io/blog/2018/12/27/optimizing-data-transfer-speeds/</link>
+      <link>https://ohthehugemanatee.org/blog/2018/12/27/optimizing-data-transfer-speeds/</link>
       <pubDate>Thu, 27 Dec 2018 10:30:23 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2018/12/27/optimizing-data-transfer-speeds/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2018/12/27/optimizing-data-transfer-speeds/</guid>
       <description>One of my holiday projects was to set up my home &amp;ldquo;data warehouse.&amp;rdquo; Ever since Dropbox killed modern Linux filesystem support I&amp;rsquo;ve been using (and loving) Nextcloud from my home. It backs up to an encrypted Duplicati store on Azure blob store, so that&amp;rsquo;s offsite backups taken care of. But it was time to knit all my various drives together into a single RAID data warehouse. The only problem: how to transfer my 2 terabytes (rounded to make the math in the post easier) of data, without nasty downtime during the holidays?</description>
     </item>
     
     <item>
       <title>What Crell doesn&#39;t want you to know: how to automate letsencrypt on platform.sh</title>
-      <link>http://ohthehugemanatee.github.io/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</link>
+      <link>https://ohthehugemanatee.org/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</link>
       <pubDate>Tue, 21 Feb 2017 22:33:08 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</guid>
       <description>If you believe the docs and the twitters, there is no way to automate letsencrypt certificates updates on platform.sh. You have to create the certificates manually, upload them manually, and maintain them manually.
 But as readers of this blog know, the docs are only the start of the story. I&amp;rsquo;ve really enjoyed working with platform.sh with one of my private clients, and I couldn&amp;rsquo;t believe that with all the flexibility - all the POWER - letsencrypt was really out of reach.</description>
     </item>
     
     <item>
       <title>Drush self aliases</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/01/10/drush-self-aliases/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/01/10/drush-self-aliases/</link>
       <pubDate>Fri, 10 Jan 2014 09:22:01 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/01/10/drush-self-aliases/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/01/10/drush-self-aliases/</guid>
       <description>I ran into an interesting problem with the drush @self alias today. I wanted to pull a fresh copy of the DB down from a client&amp;rsquo;s live site to my local development copy. Should be as easy as drush sql-sync @clientsite.live @self, right? I&amp;rsquo;ve done this a thousand times before.
 And I&amp;rsquo;ve also ignored the warning message every time before, but today I thought I&amp;rsquo;d check it out:
  WARNING: Using temporary files to store and transfer sql-dump.</description>
@@ -59,29 +59,29 @@ And I&amp;rsquo;ve also ignored the warning message every time before, but today
     
     <item>
       <title>SSH lifehacks to make your SSH life easy</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/12/20/ssh-lifehacks-to-make-your-ssh-life-easy/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/12/20/ssh-lifehacks-to-make-your-ssh-life-easy/</link>
       <pubDate>Fri, 20 Dec 2013 16:29:27 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/12/20/ssh-lifehacks-to-make-your-ssh-life-easy/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/12/20/ssh-lifehacks-to-make-your-ssh-life-easy/</guid>
       <description>If you use SSH every day, or even every other day, this post is for you. We&amp;rsquo;re going to walk through some of the more convenient options available to you in your global SSH configuration to make your life easier and faster.
 First of all, you should know that SSH has a great configuration file, typically located in your home directory at .ssh/config. Everything we&amp;rsquo;re talking about today belongs there. There&amp;rsquo;s tons of stuff you can do with it, and I&amp;rsquo;m only going to scratch the surface.</description>
     </item>
     
     <item>
       <title>SSL certificates demystified</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/06/20/ssl-certificates-demystified/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/06/20/ssl-certificates-demystified/</link>
       <pubDate>Thu, 20 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/06/20/ssl-certificates-demystified/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/06/20/ssl-certificates-demystified/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How to set up Apache Solr Multicore for Drupal</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/04/18/how-to-set-up-apache-solr-multicore-for-drupal/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/04/18/how-to-set-up-apache-solr-multicore-for-drupal/</link>
       <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/04/18/how-to-set-up-apache-solr-multicore-for-drupal/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/04/18/how-to-set-up-apache-solr-multicore-for-drupal/</guid>
       <description></description>
     </item>
     

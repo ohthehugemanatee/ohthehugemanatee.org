@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Drupalgeddon on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/drupalgeddon/</link>
+    <link>https://ohthehugemanatee.org/categories/drupalgeddon/</link>
     <description>Recent content in Drupalgeddon on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Nov 2014 17:30:32 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/drupalgeddon/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Nov 2014 17:30:32 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/drupalgeddon/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Drupalgeddon: Best Practices Aren&#39;t Good Enough Anymore</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/11/03/drupalgeddon-means-we-cant-trust-humans-with-updates/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/11/03/drupalgeddon-means-we-cant-trust-humans-with-updates/</link>
       <pubDate>Mon, 03 Nov 2014 17:30:32 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/11/03/drupalgeddon-means-we-cant-trust-humans-with-updates/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/11/03/drupalgeddon-means-we-cant-trust-humans-with-updates/</guid>
       <description></description>
     </item>
     

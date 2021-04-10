@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>drupal-quick-guides on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/drupal-quick-guides/</link>
+    <link>https://ohthehugemanatee.org/categories/drupal-quick-guides/</link>
     <description>Recent content in drupal-quick-guides on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Apr 2012 16:17:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/drupal-quick-guides/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Apr 2012 16:17:00 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/drupal-quick-guides/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Drupal quick learning guides: Custom modules</title>
-      <link>http://ohthehugemanatee.github.io/2012/04/drupal-quick-learning-guides-custom.html</link>
+      <link>https://ohthehugemanatee.org/2012/04/drupal-quick-learning-guides-custom.html</link>
       <pubDate>Mon, 23 Apr 2012 16:17:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2012/04/drupal-quick-learning-guides-custom.html</guid>
+      <guid>https://ohthehugemanatee.org/2012/04/drupal-quick-learning-guides-custom.html</guid>
       <description>{% raw %} Ah, it&#39;s nice to be done with the basic structure stuff. At this point, I&#39;m going to assume that you know the basics of how to administer a Drupal site. You understand the file structure, you know where to go to download themes and modules, and you know how to make sites out of the big pieces you can find that way. Awesome. This is where it gets fun.</description>
     </item>
     
     <item>
       <title>Drupal quick learning guides: Drupal structure</title>
-      <link>http://ohthehugemanatee.github.io/2012/04/drupal-quick-learning-guides-drupal.html</link>
+      <link>https://ohthehugemanatee.org/2012/04/drupal-quick-learning-guides-drupal.html</link>
       <pubDate>Mon, 16 Apr 2012 14:01:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2012/04/drupal-quick-learning-guides-drupal.html</guid>
+      <guid>https://ohthehugemanatee.org/2012/04/drupal-quick-learning-guides-drupal.html</guid>
       <description>{% raw %} I&#39;ve been lax about posting lately, and to make this easier on myself I think I&#39;ll post a bunch of quick guides for basic coding procedures with Drupal. Simple things and concepts, explored in just enough detail for you to understand how it works, resource links so you can actually go and put it into practice. The first thing you need to understand about Drupal is the structure.</description>
     </item>
     

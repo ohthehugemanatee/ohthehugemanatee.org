@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>atheros on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/atheros/</link>
+    <link>https://ohthehugemanatee.org/categories/atheros/</link>
     <description>Recent content in atheros on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Mar 2011 12:19:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/atheros/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Mar 2011 12:19:00 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/atheros/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Still more wireless troubleshooting</title>
-      <link>http://ohthehugemanatee.github.io/2011/03/still-more-wireless-troubleshooting.html</link>
+      <link>https://ohthehugemanatee.org/2011/03/still-more-wireless-troubleshooting.html</link>
       <pubDate>Thu, 24 Mar 2011 12:19:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/03/still-more-wireless-troubleshooting.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/03/still-more-wireless-troubleshooting.html</guid>
       <description>{% raw %} The damnedest thing happened - I went out of town. &amp;nbsp;I went out of town, and discovered that I was STILL getting dropouts every 90 seconds! &amp;nbsp;On a totally different router, on the opposite site of the planet, in a rural area with no conceivable wireless interference. &amp;nbsp;This prompted me to boot into Windows 7 (I have a Boot Camp partition) to try my ping test under a totally different software stack.</description>
     </item>
     

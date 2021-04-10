@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>update on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/update/</link>
+    <link>https://ohthehugemanatee.org/categories/update/</link>
     <description>Recent content in update on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Dec 2010 02:02:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/update/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Dec 2010 02:02:00 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/update/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unlocking and jailbreaking my iPhone 3gs on 4.1.2 - a little late</title>
-      <link>http://ohthehugemanatee.github.io/2010/12/unlocking-and-jailbreaking-my-iphone.html</link>
+      <link>https://ohthehugemanatee.org/2010/12/unlocking-and-jailbreaking-my-iphone.html</link>
       <pubDate>Sat, 18 Dec 2010 02:02:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2010/12/unlocking-and-jailbreaking-my-iphone.html</guid>
+      <guid>https://ohthehugemanatee.org/2010/12/unlocking-and-jailbreaking-my-iphone.html</guid>
       <description>{% raw %} While I was away over the weekend, I borked my iphone. &amp;nbsp;I was running IOS 4.0, and I was having trouble with network connections.
 The statusbar wouldn&#39;t reflect my actual connection status. &amp;nbsp;WiFi connections would rarely show up in the statusbar, though I knew I was surfing wirelessly (my router at 10.10.10.1 was accessible to the phone, for starters...)WiFi would periodically crash. &amp;nbsp;In the middle of a good network connection, it would just.</description>
     </item>

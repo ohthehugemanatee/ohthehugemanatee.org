@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>notes on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/notes/</link>
+    <link>https://ohthehugemanatee.org/categories/notes/</link>
     <description>Recent content in notes on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Dec 2013 14:11:23 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Dec 2013 14:11:23 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>This is why real *nix people hate OSX</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/12/03/this-is-why-real-star-nix-people-hate-osx/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/12/03/this-is-why-real-star-nix-people-hate-osx/</link>
       <pubDate>Tue, 03 Dec 2013 14:11:23 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/12/03/this-is-why-real-star-nix-people-hate-osx/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/12/03/this-is-why-real-star-nix-people-hate-osx/</guid>
       <description>You know what grinds my gears? Unnecessary changes to behaviors of totally standard Linux/Unix commands in OSX. 99% of the time you can use the OSX command line like any sane CLI, but every once in awhile you run into these oddities that are seemingly only there to piss you off. I ran into one today: sed behaves differently on OSX. It counts its arguments differently, so you have to explicitly give it an empty argument for -i.</description>
     </item>
     

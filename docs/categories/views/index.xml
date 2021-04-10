@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>views on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/views/</link>
+    <link>https://ohthehugemanatee.org/categories/views/</link>
     <description>Recent content in views on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Dec 2013 12:01:44 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/views/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Dec 2013 12:01:44 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/views/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>44,497 people are wrong: how to NEVER need Views PHP.</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/12/26/44497-people-are-wrong-how-to-never-use-views-php/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/12/26/44497-people-are-wrong-how-to-never-use-views-php/</link>
       <pubDate>Thu, 26 Dec 2013 12:01:44 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/12/26/44497-people-are-wrong-how-to-never-use-views-php/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/12/26/44497-people-are-wrong-how-to-never-use-views-php/</guid>
       <description>You&amp;rsquo;re building a View, but you can&amp;rsquo;t get that field to display the way you want it to. Or filter, or sort. Or maybe you have some data in a custom table that you want to include in the View. So you look for a contributed module, and Views PHP looks like the answer to your problem! Until you read the module page, where it says:
  &amp;ldquo;&amp;hellip;it is highly advisable to use regular handlers and plugins when available (or even to create one yourself).</description>
     </item>

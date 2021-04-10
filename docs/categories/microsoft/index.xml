@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>microsoft on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/microsoft/</link>
+    <link>https://ohthehugemanatee.org/categories/microsoft/</link>
     <description>Recent content in microsoft on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Apr 2018 18:06:51 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/microsoft/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Apr 2018 18:06:51 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/microsoft/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Drupal Does Face Recognition: Introducing Image Auto Tag module</title>
-      <link>http://ohthehugemanatee.github.io/blog/2018/04/19/face-recognition-on-drupal/</link>
+      <link>https://ohthehugemanatee.org/blog/2018/04/19/face-recognition-on-drupal/</link>
       <pubDate>Thu, 19 Apr 2018 18:06:51 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2018/04/19/face-recognition-on-drupal/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2018/04/19/face-recognition-on-drupal/</guid>
       <description>Last week I wrote a Drupal module that uses face recognition to automatically tag images with the people in them. You can find it on Github, of course. With this module, you can add an image to a node, and automatically populate an entity_reference field with the names of the people in the image. This isn&amp;rsquo;t such a big deal for individual nodes of course; it&amp;rsquo;s really interesting for bulk use cases, like Digital Asset Management systems.</description>
     </item>
     
     <item>
       <title>The #1 Question I Get Asked Working at MS: Why Do You Run Linux?</title>
-      <link>http://ohthehugemanatee.github.io/blog/2018/02/07/the-number-1-question-i-get-asked-working-at-msy-do-you-run-linux/</link>
+      <link>https://ohthehugemanatee.org/blog/2018/02/07/the-number-1-question-i-get-asked-working-at-msy-do-you-run-linux/</link>
       <pubDate>Wed, 07 Feb 2018 16:42:50 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2018/02/07/the-number-1-question-i-get-asked-working-at-msy-do-you-run-linux/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2018/02/07/the-number-1-question-i-get-asked-working-at-msy-do-you-run-linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>I&#39;m joining Microsoft, because they&#39;re doing Open Source Right</title>
-      <link>http://ohthehugemanatee.github.io/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</link>
+      <link>https://ohthehugemanatee.org/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</link>
       <pubDate>Wed, 10 Jan 2018 20:32:50 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</guid>
       <description>I&amp;rsquo;m excited to announce that I&amp;rsquo;ve signed with Microsoft as a Principal Software Engineering Manager. I&amp;rsquo;m joining Microsoft because they are doing enterprise Open Source the Right Way, and I want to be a part of it. This is a sentence that I never believed I would write or say, so I want to explain.
 First I have to acknowledge the history. I co-founded my first tech company just as the Halloween documents were leaked.</description>
     </item>

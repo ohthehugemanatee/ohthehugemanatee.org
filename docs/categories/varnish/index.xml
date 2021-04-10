@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>varnish on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/varnish/</link>
+    <link>https://ohthehugemanatee.org/categories/varnish/</link>
     <description>Recent content in varnish on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 May 2011 21:07:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/varnish/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 May 2011 21:07:00 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/varnish/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The complete Drupal Cache - Serving HTTP and HTTPS content with Varnish</title>
-      <link>http://ohthehugemanatee.github.io/2011/05/complete-drupal-cache-serving-http-and.html</link>
+      <link>https://ohthehugemanatee.org/2011/05/complete-drupal-cache-serving-http-and.html</link>
       <pubDate>Sun, 22 May 2011 21:07:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/05/complete-drupal-cache-serving-http-and.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/05/complete-drupal-cache-serving-http-and.html</guid>
       <description>{% raw %} Varnish is a fantastic caching proxy, commonly used for CMSes. It&#39;s not uncommon to see benchmarks boasting 300-500 page loads per second - I&#39;ve seen benches up to 5000 hits per second. That&#39;s faster than serving flat HTML from Apache; we&#39;re talking about a serious benefit to your server load here.
 Part of Varnish&#39;s tremendous speed comes from how lean it is. At only 58,000 lines of code, it&#39;s very lightweight.</description>
     </item>

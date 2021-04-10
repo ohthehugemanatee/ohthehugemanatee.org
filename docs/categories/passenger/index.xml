@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>passenger on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/passenger/</link>
+    <link>https://ohthehugemanatee.org/categories/passenger/</link>
     <description>Recent content in passenger on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 May 2011 13:17:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/passenger/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 May 2011 13:17:00 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/passenger/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Running Redmine in a subdirectory</title>
-      <link>http://ohthehugemanatee.github.io/2011/05/running-redmine-in-subdirectory.html</link>
+      <link>https://ohthehugemanatee.org/2011/05/running-redmine-in-subdirectory.html</link>
       <pubDate>Mon, 16 May 2011 13:17:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/05/running-redmine-in-subdirectory.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/05/running-redmine-in-subdirectory.html</guid>
       <description>{% raw %} Redmine is a fantastic project management tool for technically oriented organizations. &amp;nbsp;At my job, we use it to manage 30-50 active projects at a time, as well as the back history of several hundred projects. &amp;nbsp;Oddly enough, the normal installation process puts it on port 3000 . &amp;nbsp;We had some trouble with developers&#39; ISPs not allowing HTTPS traffic over non-standard ports, so we had to move redmine onto port 443 along with the rest of the SSL traffic.</description>
     </item>
     

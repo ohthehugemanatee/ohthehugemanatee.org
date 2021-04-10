@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rant on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/rant/</link>
+    <link>https://ohthehugemanatee.org/categories/rant/</link>
     <description>Recent content in rant on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Aug 2016 11:46:10 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/rant/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Aug 2016 11:46:10 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/rant/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>301 Redirects are the Herpes of the Internet</title>
-      <link>http://ohthehugemanatee.github.io/blog/2016/08/15/301-redirects-are-the-herpes-of-the-internet/</link>
+      <link>https://ohthehugemanatee.org/blog/2016/08/15/301-redirects-are-the-herpes-of-the-internet/</link>
       <pubDate>Mon, 15 Aug 2016 11:46:10 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2016/08/15/301-redirects-are-the-herpes-of-the-internet/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2016/08/15/301-redirects-are-the-herpes-of-the-internet/</guid>
       <description>My client bought a domain name based on her favorite username when she was young. Like any teenager, she didn&amp;rsquo;t choose the best name. But SpongeBobLover16 (name changed to preserve her anonymity) wanted to exert her online independence. She decided she would give her real name domain to SpongeBobLover16.com in a 301 redirect. Her parents told her she should always use a 302, but she ignored their advice. &amp;ldquo;I remember it felt so good,&amp;rdquo; she says today, &amp;ldquo;but now I have to live with that mistake every day.</description>
     </item>
     

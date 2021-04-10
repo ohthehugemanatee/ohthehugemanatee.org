@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>network on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/network/</link>
+    <link>https://ohthehugemanatee.org/categories/network/</link>
     <description>Recent content in network on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Dec 2018 10:30:23 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/network/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Dec 2018 10:30:23 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/network/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Optimizing data transfer speeds</title>
-      <link>http://ohthehugemanatee.github.io/blog/2018/12/27/optimizing-data-transfer-speeds/</link>
+      <link>https://ohthehugemanatee.org/blog/2018/12/27/optimizing-data-transfer-speeds/</link>
       <pubDate>Thu, 27 Dec 2018 10:30:23 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2018/12/27/optimizing-data-transfer-speeds/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2018/12/27/optimizing-data-transfer-speeds/</guid>
       <description>One of my holiday projects was to set up my home &amp;ldquo;data warehouse.&amp;rdquo; Ever since Dropbox killed modern Linux filesystem support I&amp;rsquo;ve been using (and loving) Nextcloud from my home. It backs up to an encrypted Duplicati store on Azure blob store, so that&amp;rsquo;s offsite backups taken care of. But it was time to knit all my various drives together into a single RAID data warehouse. The only problem: how to transfer my 2 terabytes (rounded to make the math in the post easier) of data, without nasty downtime during the holidays?</description>
     </item>
     

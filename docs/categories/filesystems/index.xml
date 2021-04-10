@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>filesystems on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/filesystems/</link>
+    <link>https://ohthehugemanatee.org/categories/filesystems/</link>
     <description>Recent content in filesystems on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Feb 2019 13:58:39 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/filesystems/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Feb 2019 13:58:39 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/filesystems/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BTRFS and free space - emergency response</title>
-      <link>http://ohthehugemanatee.github.io/blog/2019/02/11/btrfs-out-of-space-emergency-response/</link>
+      <link>https://ohthehugemanatee.org/blog/2019/02/11/btrfs-out-of-space-emergency-response/</link>
       <pubDate>Mon, 11 Feb 2019 13:58:39 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2019/02/11/btrfs-out-of-space-emergency-response/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2019/02/11/btrfs-out-of-space-emergency-response/</guid>
       <description>I run BTRFS on my root filesystem (on Linux), mostly for the quick snapshot and restore functionality. Yesterday I ran into a common problem: my drive was suddenly full. I went from 4GB of free space on my system drive to 0 in an instant, causing all sorts of chaos on my system.
 This problem happens to lots of people because BTRFS doesn&amp;rsquo;t have a linear relationship to &amp;ldquo;free space available&amp;rdquo;.</description>
     </item>

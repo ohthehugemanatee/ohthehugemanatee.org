@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ubuntu on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/ubuntu/</link>
+    <link>https://ohthehugemanatee.org/categories/ubuntu/</link>
     <description>Recent content in ubuntu on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Jan 2018 11:05:31 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Jan 2018 11:05:31 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My War on Systemd-resolved</title>
-      <link>http://ohthehugemanatee.github.io/blog/2018/01/25/my-war-on-systemd-resolved/</link>
+      <link>https://ohthehugemanatee.org/blog/2018/01/25/my-war-on-systemd-resolved/</link>
       <pubDate>Thu, 25 Jan 2018 11:05:31 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2018/01/25/my-war-on-systemd-resolved/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2018/01/25/my-war-on-systemd-resolved/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Setting up Secure LDAP on Ubuntu 10.04 - the idiot&#39;s guide to SSL, TLS, and SLAPD</title>
-      <link>http://ohthehugemanatee.github.io/2011/05/setting-up-secure-ldap-on-ubuntu-1004.html</link>
+      <link>https://ohthehugemanatee.org/2011/05/setting-up-secure-ldap-on-ubuntu-1004.html</link>
       <pubDate>Fri, 13 May 2011 21:58:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/05/setting-up-secure-ldap-on-ubuntu-1004.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/05/setting-up-secure-ldap-on-ubuntu-1004.html</guid>
       <description>{% raw %} LDAP is one of the Elder Gods of the UNIX world. &amp;nbsp;It had it&#39;s beginnings in DAP, the first Directory Access Protocol, in 1988. &amp;nbsp;Within a decade DAP was more or less discarded in favor of the Lightweight Directory Access Protocol. &amp;nbsp;And it has stayed in basically the same format ever since.
 LDAP is, as you might have guessed, a directory protocol. &amp;nbsp;It was developed in response to X.</description>
     </item>

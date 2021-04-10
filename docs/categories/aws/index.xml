@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>aws on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/aws/</link>
+    <link>https://ohthehugemanatee.org/categories/aws/</link>
     <description>Recent content in aws on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Apr 2011 15:26:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/aws/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Apr 2011 15:26:00 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simple AWS backups with Snapshots and AMIs</title>
-      <link>http://ohthehugemanatee.github.io/2011/04/simple-aws-backups-with-snapshots-and.html</link>
+      <link>https://ohthehugemanatee.org/2011/04/simple-aws-backups-with-snapshots-and.html</link>
       <pubDate>Sat, 30 Apr 2011 15:26:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/04/simple-aws-backups-with-snapshots-and.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/04/simple-aws-backups-with-snapshots-and.html</guid>
       <description>{% raw %} Are you just getting started with Amazon Web Services? &amp;nbsp;It&#39;s a great service, but it faces some reliability challenges. &amp;nbsp;This post explains how to set up a simple backup system using Amazon&#39;s &#34;snapshot&#34; &#34;machine image&#34; functionalities.
 Dependencies
 Before you begin, you will need:
@@ -24,20 +24,20 @@ Everyone knows that Amazon Instances are ephemeral.</description>
     
     <item>
       <title>AWS Load Balancer SSL limitations</title>
-      <link>http://ohthehugemanatee.github.io/2011/04/aws-load-balancer-ssl-limitations.html</link>
+      <link>https://ohthehugemanatee.org/2011/04/aws-load-balancer-ssl-limitations.html</link>
       <pubDate>Fri, 29 Apr 2011 13:58:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/04/aws-load-balancer-ssl-limitations.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/04/aws-load-balancer-ssl-limitations.html</guid>
       <description>{% raw %} No one else seems to have documented this anywhere, so I&#39;m gonna do it here.
 Amazon Web Services has a great little load balancer system you can use. &amp;nbsp;A few clicks, and you&#39;re away to the races with a shiny load balancer of your own! &amp;nbsp;The best part? &amp;nbsp;It will even do SSL termination at the load balancer for you. &amp;nbsp;Just paste in your certs and away you go!</description>
     </item>
     
     <item>
       <title>Multiple SSL sites on one AWS instance</title>
-      <link>http://ohthehugemanatee.github.io/2011/04/multiple-ssl-sites-on-one-aws-instance.html</link>
+      <link>https://ohthehugemanatee.org/2011/04/multiple-ssl-sites-on-one-aws-instance.html</link>
       <pubDate>Fri, 29 Apr 2011 13:44:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/04/multiple-ssl-sites-on-one-aws-instance.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/04/multiple-ssl-sites-on-one-aws-instance.html</guid>
       <description>{% raw %} It&#39;s a familiar problem - you can&#39;t really host multiple SSL sites on a single IP address. &amp;nbsp;There&#39;s a fancy workaround if you get a pricey multi-domain certificate, of course. &amp;nbsp;But separate sites, with separate certificates just won&#39;t work. &amp;nbsp;The reason is simple - put yourself in Apache&#39;s shoes.
 When you&#39;re using name based virtualhosts, Apache uses the request headers to determine which vhost should get the request.</description>
     </item>

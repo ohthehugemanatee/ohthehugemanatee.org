@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>displaysuite on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/displaysuite/</link>
+    <link>https://ohthehugemanatee.org/categories/displaysuite/</link>
     <description>Recent content in displaysuite on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Apr 2014 16:12:13 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/displaysuite/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Apr 2014 16:12:13 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/displaysuite/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to create a custom Display Suite field</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/04/02/how-to-create-a-custom-display-suite-field/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/04/02/how-to-create-a-custom-display-suite-field/</link>
       <pubDate>Wed, 02 Apr 2014 16:12:13 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/04/02/how-to-create-a-custom-display-suite-field/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/04/02/how-to-create-a-custom-display-suite-field/</guid>
       <description>A few months ago I posted about how to create a custom Panels pane, a critical reference for anyone who uses Panels layouts. The other part of the toolkit for quick and awesome layouts is the Display Suite module. With DS you can create new &amp;ldquo;Display modes&amp;rdquo; for your content, to be reused around the site. For example, on one recent site I had four standard ways to display my nodes: Full, Teaser, Mini-Teaser, and Search Result.</description>
     </item>
     

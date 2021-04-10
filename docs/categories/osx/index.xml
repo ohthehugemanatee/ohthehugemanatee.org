@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>osx on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/osx/</link>
+    <link>https://ohthehugemanatee.org/categories/osx/</link>
     <description>Recent content in osx on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Oct 2016 18:44:40 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/osx/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Oct 2016 18:44:40 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/osx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Perfect Linux Mint on my Macbook Pro 9,2</title>
-      <link>http://ohthehugemanatee.github.io/blog/2016/10/15/perfect-linux-mint-macbook-pro-9-2/</link>
+      <link>https://ohthehugemanatee.org/blog/2016/10/15/perfect-linux-mint-macbook-pro-9-2/</link>
       <pubDate>Sat, 15 Oct 2016 18:44:40 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2016/10/15/perfect-linux-mint-macbook-pro-9-2/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2016/10/15/perfect-linux-mint-macbook-pro-9-2/</guid>
       <description>A few months ago I posted about my frustrations getting El Capitan working with my relatively simple developer needs. At the time I complained about the direction Apple is going. One of these days, I threatened, I would jump back to Linux as a primary desktop environment.
 This week I read about everyone&amp;rsquo;s problems getting OSX Sierra going, and I decided it was time to take the plunge. Apple, I completely understand the direction you are going with your environment.</description>
     </item>
     
     <item>
       <title>El Capitain broke my developer stuff! Here&#39;s how to fix it</title>
-      <link>http://ohthehugemanatee.github.io/blog/2015/10/01/how-i-got-el-capitain-working-with-my-developer-tools/</link>
+      <link>https://ohthehugemanatee.org/blog/2015/10/01/how-i-got-el-capitain-working-with-my-developer-tools/</link>
       <pubDate>Thu, 01 Oct 2015 12:44:42 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2015/10/01/how-i-got-el-capitain-working-with-my-developer-tools/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2015/10/01/how-i-got-el-capitain-working-with-my-developer-tools/</guid>
       <description>Last night I installed OSX&amp;rsquo;s new &amp;ldquo;El Capitain&amp;rdquo; update, and it broke most of the tools I use in my daily life as a developer, including homebrew and git. Here are the steps I had to follow to get everything working again.
  Disable System Integrity Protection   System Integrity Protection is a new feature of OSX, also called &amp;ldquo;rootless.&amp;rdquo; As the nickname suggests, it creates another level of access above your root account.</description>
     </item>
     
     <item>
       <title>Still more wireless troubleshooting</title>
-      <link>http://ohthehugemanatee.github.io/2011/03/still-more-wireless-troubleshooting.html</link>
+      <link>https://ohthehugemanatee.org/2011/03/still-more-wireless-troubleshooting.html</link>
       <pubDate>Thu, 24 Mar 2011 12:19:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/03/still-more-wireless-troubleshooting.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/03/still-more-wireless-troubleshooting.html</guid>
       <description>{% raw %} The damnedest thing happened - I went out of town. &amp;nbsp;I went out of town, and discovered that I was STILL getting dropouts every 90 seconds! &amp;nbsp;On a totally different router, on the opposite site of the planet, in a rural area with no conceivable wireless interference. &amp;nbsp;This prompted me to boot into Windows 7 (I have a Boot Camp partition) to try my ping test under a totally different software stack.</description>
     </item>
     

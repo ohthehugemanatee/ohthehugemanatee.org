@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>openssl on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/openssl/</link>
+    <link>https://ohthehugemanatee.org/categories/openssl/</link>
     <description>Recent content in openssl on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Apr 2011 13:58:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/openssl/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Apr 2011 13:58:00 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/openssl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS Load Balancer SSL limitations</title>
-      <link>http://ohthehugemanatee.github.io/2011/04/aws-load-balancer-ssl-limitations.html</link>
+      <link>https://ohthehugemanatee.org/2011/04/aws-load-balancer-ssl-limitations.html</link>
       <pubDate>Fri, 29 Apr 2011 13:58:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/04/aws-load-balancer-ssl-limitations.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/04/aws-load-balancer-ssl-limitations.html</guid>
       <description>{% raw %} No one else seems to have documented this anywhere, so I&#39;m gonna do it here.
 Amazon Web Services has a great little load balancer system you can use. &amp;nbsp;A few clicks, and you&#39;re away to the races with a shiny load balancer of your own! &amp;nbsp;The best part? &amp;nbsp;It will even do SSL termination at the load balancer for you. &amp;nbsp;Just paste in your certs and away you go!</description>
     </item>

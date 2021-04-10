@@ -2,111 +2,111 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/</link>
+    <link>https://ohthehugemanatee.org/</link>
     <description>Recent content on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Oct 2019 19:10:15 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Oct 2019 19:10:15 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chinese censorship, values decisions, and free software</title>
-      <link>http://ohthehugemanatee.github.io/blog/2019/10/08/chinese-censorship-and-free-software/</link>
+      <link>https://ohthehugemanatee.org/blog/2019/10/08/chinese-censorship-and-free-software/</link>
       <pubDate>Tue, 08 Oct 2019 19:10:15 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2019/10/08/chinese-censorship-and-free-software/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2019/10/08/chinese-censorship-and-free-software/</guid>
       <description>Chinese censors are in the news this weekend: Blizzard banned a grandmaster Hearthstone player for supporting Hong Kong in an interview, South Park was added to the &amp;ldquo;banned&amp;rdquo; list for their critique of Chinese censorship in Hollywood, and an NBA franchise owner&amp;rsquo;s job was on the line for a pro-HK tweet. Increasingly, Western companies are finding themselves up against the wall to prioritize western liberal values against access to the enormous Chinese market.</description>
     </item>
     
     <item>
       <title>An Open Letter to my MEPs about Article 17 (formerly article 13)</title>
-      <link>http://ohthehugemanatee.github.io/blog/2019/03/21/an-open-letter-to-my-meps-about-article-17-formerly-article-13/</link>
+      <link>https://ohthehugemanatee.org/blog/2019/03/21/an-open-letter-to-my-meps-about-article-17-formerly-article-13/</link>
       <pubDate>Thu, 21 Mar 2019 23:44:43 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2019/03/21/an-open-letter-to-my-meps-about-article-17-formerly-article-13/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2019/03/21/an-open-letter-to-my-meps-about-article-17-formerly-article-13/</guid>
       <description>The proposal for a directive on copyright in the digital single market is disastrous for the EU economy, culture, and democracy in the digital world. It is particularly bad for my country of Germany, as a leading light in Europe in all three areas. I am writing all of my MEPs listed in support of this impossibly bad proposal.
 The German and European economies would be terribly damaged by this article, which effectively rules out small and medium sized competition in favor of the largest incumbents.</description>
     </item>
     
     <item>
       <title>BTRFS and free space - emergency response</title>
-      <link>http://ohthehugemanatee.github.io/blog/2019/02/11/btrfs-out-of-space-emergency-response/</link>
+      <link>https://ohthehugemanatee.org/blog/2019/02/11/btrfs-out-of-space-emergency-response/</link>
       <pubDate>Mon, 11 Feb 2019 13:58:39 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2019/02/11/btrfs-out-of-space-emergency-response/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2019/02/11/btrfs-out-of-space-emergency-response/</guid>
       <description>I run BTRFS on my root filesystem (on Linux), mostly for the quick snapshot and restore functionality. Yesterday I ran into a common problem: my drive was suddenly full. I went from 4GB of free space on my system drive to 0 in an instant, causing all sorts of chaos on my system.
 This problem happens to lots of people because BTRFS doesn&amp;rsquo;t have a linear relationship to &amp;ldquo;free space available&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>Kubernetes for stateful applications: Scaling macroservices</title>
-      <link>http://ohthehugemanatee.github.io/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/</link>
+      <link>https://ohthehugemanatee.org/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/</link>
       <pubDate>Mon, 07 Jan 2019 11:10:21 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/</guid>
       <description>I recently got to proctor an Openhack event on modern containerization. It ended up an excuse to dig deep on one of the corner cases that we all encounter, but no one likes to talk about.
 Kubernetes is one of the greatest orchestration and scaling tools ever built, designed for modern decoupled, stateless architectures. Kubernetes tutorials abound to show you these strong use cases. But in the real world where you don&amp;rsquo;t get to build &amp;ldquo;green field&amp;rdquo; every time, there are a lot of applications that don&amp;rsquo;t fit that model.</description>
     </item>
     
     <item>
       <title>Optimizing data transfer speeds</title>
-      <link>http://ohthehugemanatee.github.io/blog/2018/12/27/optimizing-data-transfer-speeds/</link>
+      <link>https://ohthehugemanatee.org/blog/2018/12/27/optimizing-data-transfer-speeds/</link>
       <pubDate>Thu, 27 Dec 2018 10:30:23 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2018/12/27/optimizing-data-transfer-speeds/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2018/12/27/optimizing-data-transfer-speeds/</guid>
       <description>One of my holiday projects was to set up my home &amp;ldquo;data warehouse.&amp;rdquo; Ever since Dropbox killed modern Linux filesystem support I&amp;rsquo;ve been using (and loving) Nextcloud from my home. It backs up to an encrypted Duplicati store on Azure blob store, so that&amp;rsquo;s offsite backups taken care of. But it was time to knit all my various drives together into a single RAID data warehouse. The only problem: how to transfer my 2 terabytes (rounded to make the math in the post easier) of data, without nasty downtime during the holidays?</description>
     </item>
     
     <item>
       <title>Drupal Does Face Recognition: Introducing Image Auto Tag module</title>
-      <link>http://ohthehugemanatee.github.io/blog/2018/04/19/face-recognition-on-drupal/</link>
+      <link>https://ohthehugemanatee.org/blog/2018/04/19/face-recognition-on-drupal/</link>
       <pubDate>Thu, 19 Apr 2018 18:06:51 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2018/04/19/face-recognition-on-drupal/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2018/04/19/face-recognition-on-drupal/</guid>
       <description>Last week I wrote a Drupal module that uses face recognition to automatically tag images with the people in them. You can find it on Github, of course. With this module, you can add an image to a node, and automatically populate an entity_reference field with the names of the people in the image. This isn&amp;rsquo;t such a big deal for individual nodes of course; it&amp;rsquo;s really interesting for bulk use cases, like Digital Asset Management systems.</description>
     </item>
     
     <item>
       <title>The #1 Question I Get Asked Working at MS: Why Do You Run Linux?</title>
-      <link>http://ohthehugemanatee.github.io/blog/2018/02/07/the-number-1-question-i-get-asked-working-at-msy-do-you-run-linux/</link>
+      <link>https://ohthehugemanatee.org/blog/2018/02/07/the-number-1-question-i-get-asked-working-at-msy-do-you-run-linux/</link>
       <pubDate>Wed, 07 Feb 2018 16:42:50 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2018/02/07/the-number-1-question-i-get-asked-working-at-msy-do-you-run-linux/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2018/02/07/the-number-1-question-i-get-asked-working-at-msy-do-you-run-linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>My War on Systemd-resolved</title>
-      <link>http://ohthehugemanatee.github.io/blog/2018/01/25/my-war-on-systemd-resolved/</link>
+      <link>https://ohthehugemanatee.org/blog/2018/01/25/my-war-on-systemd-resolved/</link>
       <pubDate>Thu, 25 Jan 2018 11:05:31 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2018/01/25/my-war-on-systemd-resolved/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2018/01/25/my-war-on-systemd-resolved/</guid>
       <description></description>
     </item>
     
     <item>
       <title>I&#39;m joining Microsoft, because they&#39;re doing Open Source Right</title>
-      <link>http://ohthehugemanatee.github.io/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</link>
+      <link>https://ohthehugemanatee.org/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</link>
       <pubDate>Wed, 10 Jan 2018 20:32:50 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</guid>
       <description>I&amp;rsquo;m excited to announce that I&amp;rsquo;ve signed with Microsoft as a Principal Software Engineering Manager. I&amp;rsquo;m joining Microsoft because they are doing enterprise Open Source the Right Way, and I want to be a part of it. This is a sentence that I never believed I would write or say, so I want to explain.
 First I have to acknowledge the history. I co-founded my first tech company just as the Halloween documents were leaked.</description>
     </item>
     
     <item>
       <title>The 3 skills you need to become a rock star developer</title>
-      <link>http://ohthehugemanatee.github.io/blog/2017/08/04/the-only-3-tools-you-need-to-become-a-rock-star-developer/</link>
+      <link>https://ohthehugemanatee.org/blog/2017/08/04/the-only-3-tools-you-need-to-become-a-rock-star-developer/</link>
       <pubDate>Fri, 04 Aug 2017 12:03:27 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2017/08/04/the-only-3-tools-you-need-to-become-a-rock-star-developer/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2017/08/04/the-only-3-tools-you-need-to-become-a-rock-star-developer/</guid>
       <description>A lot is made of so-called &amp;ldquo;rockstar developers&amp;rdquo; in any given language or framework. They have a seemingly magical knowledge of the language and API, finding obscure methods and writing best-practice code as if by instinct. I&amp;rsquo;d like to lift the curtain on this: it&amp;rsquo;s not that hard to be this kind of rock star. You can do it, too&amp;hellip; even without a fancy computer science degree. If you know how to code in a given language, you just need 3 skills and some patience.</description>
     </item>
     
     <item>
       <title>Why no mainstream PHP speakers come to Drupalcon - and how we&#39;re changing that</title>
-      <link>http://ohthehugemanatee.github.io/blog/2017/07/28/bring-php-to-drupalcon/</link>
+      <link>https://ohthehugemanatee.org/blog/2017/07/28/bring-php-to-drupalcon/</link>
       <pubDate>Fri, 28 Jul 2017 17:01:59 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2017/07/28/bring-php-to-drupalcon/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2017/07/28/bring-php-to-drupalcon/</guid>
       <description>I&amp;rsquo;ve learned something incredible as the PHP Track Chair for Drupalcon Vienna. The Drupal Association has no way to invite PHP speakers to Drupalcon.
 This blew me away when I first learned about it. After all the work to bring mainstream PHP to Drupal core, after all the outreach to PHP-FIG, after all the talks Drupalists have given at major PHP conferences, how is this possible?
 You see, basically every other PHP conference covers their speakers&#39; travel and accommodation costs.</description>
@@ -114,10 +114,10 @@ You see, basically every other PHP conference covers their speakers&#39; travel 
     
     <item>
       <title>That time I resurrected my Linux MacBook Pro</title>
-      <link>http://ohthehugemanatee.github.io/blog/2017/06/17/that-time-i-resurrected-my-linux-macbook-pro/</link>
+      <link>https://ohthehugemanatee.org/blog/2017/06/17/that-time-i-resurrected-my-linux-macbook-pro/</link>
       <pubDate>Sat, 17 Jun 2017 23:06:02 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2017/06/17/that-time-i-resurrected-my-linux-macbook-pro/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2017/06/17/that-time-i-resurrected-my-linux-macbook-pro/</guid>
       <description>In the airport last week, my laptop stopped booting.
 I have a 2012 Macbook Pro - yes, that coveted &amp;ldquo;last good model&amp;rdquo; - and it runs Ubuntu Linux. It&amp;rsquo;s my roving office as I travel the world to conferences, performances, and job sites. So when I started it up at JFK airport this week and got a gray screen of death, I was a little concerned.
 I tried starting into Startup Manager by holding the &amp;ldquo;Option&amp;rdquo; key.</description>
@@ -125,145 +125,145 @@ I tried starting into Startup Manager by holding the &amp;ldquo;Option&amp;rdquo
     
     <item>
       <title>Better PHP === Better Drupalists: the PHP track at Drupalcon Vienna</title>
-      <link>http://ohthehugemanatee.github.io/blog/2017/06/15/better-php-better-drupalists/</link>
+      <link>https://ohthehugemanatee.org/blog/2017/06/15/better-php-better-drupalists/</link>
       <pubDate>Thu, 15 Jun 2017 17:19:24 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2017/06/15/better-php-better-drupalists/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2017/06/15/better-php-better-drupalists/</guid>
       <description>&lt;p&gt;One of the best parts of Drupal 8 is our shift to enterprise PHP coding structures. With tools like composer and Symfony&amp;rsquo;s structures like Events and Dependency Injection, Drupalists are learning to be great PHP developers, and vice-versa. Today, the fastest route to becoming a rock star Drupalist is through PHP.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m one of the PHP track chairs for Drupalcon Vienna, and this year our focus is &lt;em&gt;better PHP === better Drupalists&lt;/em&gt;. How can better PHP make your life as a Drupal developer easier?&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Stop waiting for Feeds module: how to import RSS in Drupal 8</title>
-      <link>http://ohthehugemanatee.github.io/blog/2017/06/07/stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8/</link>
+      <link>https://ohthehugemanatee.org/blog/2017/06/07/stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8/</link>
       <pubDate>Wed, 07 Jun 2017 00:33:24 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2017/06/07/stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2017/06/07/stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8/</guid>
       <description>How do you import an RSS feed into entities with Drupal 8? In Drupal 6 and 7, you probably used the Feeds module. Feeds 7 made it easy (-ish) to click together a configuration that matches an RSS (or any XML, or CSV, or OPML, etc) source to a Drupal entity type, maps source data into Drupal fields, and runs an import with the site Cron. Where has that functionality gone in D8?</description>
     </item>
     
     <item>
       <title>Stay for community</title>
-      <link>http://ohthehugemanatee.github.io/blog/2017/03/30/stay-for-community/</link>
+      <link>https://ohthehugemanatee.org/blog/2017/03/30/stay-for-community/</link>
       <pubDate>Thu, 30 Mar 2017 12:22:11 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2017/03/30/stay-for-community/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2017/03/30/stay-for-community/</guid>
       <description>The Crellpocalypse in the Drupal world last week has shaken the entire community. This event and its handling have called our fundamental values and structures into question. We&amp;rsquo;ve had fights on social media, calls for Dries to step down, and valuable contributors stepping away from the community. I have friends on every side of the situation, but all I can think is: This seems like the perfect time for a singing, dancing, spandexed pageant about the Drupal community.</description>
     </item>
     
     <item>
       <title>What Crell doesn&#39;t want you to know: how to automate letsencrypt on platform.sh</title>
-      <link>http://ohthehugemanatee.github.io/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</link>
+      <link>https://ohthehugemanatee.org/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</link>
       <pubDate>Tue, 21 Feb 2017 22:33:08 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</guid>
       <description>If you believe the docs and the twitters, there is no way to automate letsencrypt certificates updates on platform.sh. You have to create the certificates manually, upload them manually, and maintain them manually.
 But as readers of this blog know, the docs are only the start of the story. I&amp;rsquo;ve really enjoyed working with platform.sh with one of my private clients, and I couldn&amp;rsquo;t believe that with all the flexibility - all the POWER - letsencrypt was really out of reach.</description>
     </item>
     
     <item>
       <title>Between the cracks of decoupled (Drupal) architecture</title>
-      <link>http://ohthehugemanatee.github.io/blog/2017/02/11/a-year-between-the-cracks-of-decoupled-drupal/</link>
+      <link>https://ohthehugemanatee.org/blog/2017/02/11/a-year-between-the-cracks-of-decoupled-drupal/</link>
       <pubDate>Sat, 11 Feb 2017 11:18:44 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2017/02/11/a-year-between-the-cracks-of-decoupled-drupal/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2017/02/11/a-year-between-the-cracks-of-decoupled-drupal/</guid>
       <description>In any decoupled architecture, people tend to focus on the pieces that will fit together. But what nobody ever tells you is: watch out for the cracks!
 The cracks are the integration points between the different components. It&amp;rsquo;s not GraphQL as a communication layer; it&amp;rsquo;s that no one thinks to log GraphQL inconsistencies when they occur. It&amp;rsquo;s not &amp;ldquo;what&amp;rsquo;s my development environment&amp;rdquo;, it&amp;rsquo;s &amp;ldquo;how do these three development environments work on my localhost at the same time?</description>
     </item>
     
     <item>
       <title>Writing Drupal 8 code for Drupal 7</title>
-      <link>http://ohthehugemanatee.github.io/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/</link>
+      <link>https://ohthehugemanatee.org/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/</link>
       <pubDate>Sat, 05 Nov 2016 12:05:50 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/</guid>
       <description>A year ago I proposed a session for Drupalcon Mumbai and Drupalcon New Orleans, called &amp;ldquo;The best of both worlds&amp;rdquo;. It promised to show attendees how to write Drupal 8 code for Drupal 7 sites. I never ended up giving the session, but this week I got an email asking for more information. So in case it ever comes up again, here&amp;rsquo;s my own collection of resources on the subject.</description>
     </item>
     
     <item>
       <title>Developer options for replacing your old MacBook Pro</title>
-      <link>http://ohthehugemanatee.github.io/blog/2016/10/31/developer-options-for-replacing-your-old-macbook-pro/</link>
+      <link>https://ohthehugemanatee.org/blog/2016/10/31/developer-options-for-replacing-your-old-macbook-pro/</link>
       <pubDate>Mon, 31 Oct 2016 09:05:07 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2016/10/31/developer-options-for-replacing-your-old-macbook-pro/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2016/10/31/developer-options-for-replacing-your-old-macbook-pro/</guid>
       <description>The developer world is abuzz with criticism of the new Macbook Pro. After 4 years of waiting for an update, what we got has two less ports, slower memory and a worse GPU, is a vanity project that the core demographic of Apple’s customers probably won’t even use, in the final balance: merely consumer-level. It&amp;rsquo;s slammed as incompatible, absurd, and for pros&amp;hellip; actually an insult.
 If you&amp;rsquo;re a developer in late 2016, and are in the market for a new laptop, there are some great options out there.</description>
     </item>
     
     <item>
       <title>Perfect Linux Mint on my Macbook Pro 9,2</title>
-      <link>http://ohthehugemanatee.github.io/blog/2016/10/15/perfect-linux-mint-macbook-pro-9-2/</link>
+      <link>https://ohthehugemanatee.org/blog/2016/10/15/perfect-linux-mint-macbook-pro-9-2/</link>
       <pubDate>Sat, 15 Oct 2016 18:44:40 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2016/10/15/perfect-linux-mint-macbook-pro-9-2/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2016/10/15/perfect-linux-mint-macbook-pro-9-2/</guid>
       <description>A few months ago I posted about my frustrations getting El Capitan working with my relatively simple developer needs. At the time I complained about the direction Apple is going. One of these days, I threatened, I would jump back to Linux as a primary desktop environment.
 This week I read about everyone&amp;rsquo;s problems getting OSX Sierra going, and I decided it was time to take the plunge. Apple, I completely understand the direction you are going with your environment.</description>
     </item>
     
     <item>
       <title>301 Redirects are the Herpes of the Internet</title>
-      <link>http://ohthehugemanatee.github.io/blog/2016/08/15/301-redirects-are-the-herpes-of-the-internet/</link>
+      <link>https://ohthehugemanatee.org/blog/2016/08/15/301-redirects-are-the-herpes-of-the-internet/</link>
       <pubDate>Mon, 15 Aug 2016 11:46:10 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2016/08/15/301-redirects-are-the-herpes-of-the-internet/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2016/08/15/301-redirects-are-the-herpes-of-the-internet/</guid>
       <description>My client bought a domain name based on her favorite username when she was young. Like any teenager, she didn&amp;rsquo;t choose the best name. But SpongeBobLover16 (name changed to preserve her anonymity) wanted to exert her online independence. She decided she would give her real name domain to SpongeBobLover16.com in a 301 redirect. Her parents told her she should always use a 302, but she ignored their advice. &amp;ldquo;I remember it felt so good,&amp;rdquo; she says today, &amp;ldquo;but now I have to live with that mistake every day.</description>
     </item>
     
     <item>
       <title>Getting my notes out of Evernote</title>
-      <link>http://ohthehugemanatee.github.io/blog/2016/08/13/getting-my-notes-out-of-evernote/</link>
+      <link>https://ohthehugemanatee.org/blog/2016/08/13/getting-my-notes-out-of-evernote/</link>
       <pubDate>Sat, 13 Aug 2016 16:44:40 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2016/08/13/getting-my-notes-out-of-evernote/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2016/08/13/getting-my-notes-out-of-evernote/</guid>
       <description>The Why I&amp;rsquo;m an obsessive note taker. Meetings, ideas, to do lists, grocery lists&amp;hellip; The act of writing really helps me remember, so I&amp;rsquo;ve been writing everything down since I was a teenager. For years I had a thousand text documents scattered around my computer. In 2008 I discovered that the act of writing isn&amp;rsquo;t nearly as effective as the act of searching, so I resolved to start taking notes in a central, searchable, sync&amp;rsquo;ed system.</description>
     </item>
     
     <item>
       <title>Moving to Amazee Labs</title>
-      <link>http://ohthehugemanatee.github.io/blog/2016/07/29/moving-to-amazee-labs/</link>
+      <link>https://ohthehugemanatee.org/blog/2016/07/29/moving-to-amazee-labs/</link>
       <pubDate>Fri, 29 Jul 2016 13:14:06 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2016/07/29/moving-to-amazee-labs/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2016/07/29/moving-to-amazee-labs/</guid>
       <description>About a month and a half ago, I left my position at Forum One to start work on a project with Amazee Labs. Yes, a month and a half is an eternity in Internet-Time, but better to blog about it late than not at all!
 I loved my position at Forum One. I got to work with worthwhile clients like Oxfam and United Way, I got to solve interesting and tricky Drupal problems, and I got to work with some truly brilliant colleagues.</description>
     </item>
     
     <item>
       <title>Some git log magic</title>
-      <link>http://ohthehugemanatee.github.io/blog/2016/04/15/some-git-log-magic/</link>
+      <link>https://ohthehugemanatee.org/blog/2016/04/15/some-git-log-magic/</link>
       <pubDate>Fri, 15 Apr 2016 13:12:41 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2016/04/15/some-git-log-magic/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2016/04/15/some-git-log-magic/</guid>
       <description>Today I got to generate git statistics for my team. It&amp;rsquo;s more fun than it sounds! First of all, it&amp;rsquo;s always entertaining to learn just how flexible git&amp;rsquo;s reporting can get. Secondly, it&amp;rsquo;s a chance to dive back into my old sysadmin tool kit and play with awk, sed, and friends.
 There were a few questions I wanted to answer about one particular developer&amp;rsquo;s input. I&amp;rsquo;m concerned that he is working too much after hours.</description>
     </item>
     
     <item>
       <title>An Open Letter to Wired Magazine</title>
-      <link>http://ohthehugemanatee.github.io/blog/2016/02/09/an-open-letter-to-wired-magazine/</link>
+      <link>https://ohthehugemanatee.org/blog/2016/02/09/an-open-letter-to-wired-magazine/</link>
       <pubDate>Tue, 09 Feb 2016 14:10:31 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2016/02/09/an-open-letter-to-wired-magazine/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2016/02/09/an-open-letter-to-wired-magazine/</guid>
       <description>Dear Wired - I read your post about the changes in ad blocker policy on your site. Thanks for writing in such an open and respectful tone; it&amp;rsquo;s clear you care about your readers and want to find a reasonable way forward.
 Unfortunately the post fails to address the REASONS that your readers use ad blockers. If only you had gone a little bit farther in the post and offered specific promises in exchange for being whitelisted, I think you would keep a much larger proportion of your readers.</description>
     </item>
     
     <item>
       <title>How Drupal should handle client-side framework obsolescence</title>
-      <link>http://ohthehugemanatee.github.io/blog/2015/12/08/how-drupal-should-handle-client-side-framework-obsolescence/</link>
+      <link>https://ohthehugemanatee.org/blog/2015/12/08/how-drupal-should-handle-client-side-framework-obsolescence/</link>
       <pubDate>Tue, 08 Dec 2015 12:06:02 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2015/12/08/how-drupal-should-handle-client-side-framework-obsolescence/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2015/12/08/how-drupal-should-handle-client-side-framework-obsolescence/</guid>
       <description>Today I read a great blog post from Dries: Should we decouple Drupal with a client side framework?. As usual, Dries puts a lot of thought into his writing, and braves a shitstorm of responses by laying his thinking bare while he&amp;rsquo;s still mulling it over. I couldn&amp;rsquo;t resist adding to the storm.
 I completely agree that Drupal would benefit from figuring out a standardized approach to decoupled front ends. I think Dries is spot-on in supporting a &amp;ldquo;progressive decoupling&amp;rdquo; model as a great best-of-both-worlds response that can happen within 8.</description>
     </item>
     
     <item>
       <title>Drupal 8 RC 1 is out! What now?</title>
-      <link>http://ohthehugemanatee.github.io/blog/2015/10/08/drupal-8-rc-1-is-out-what-now/</link>
+      <link>https://ohthehugemanatee.org/blog/2015/10/08/drupal-8-rc-1-is-out-what-now/</link>
       <pubDate>Thu, 08 Oct 2015 11:16:02 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2015/10/08/drupal-8-rc-1-is-out-what-now/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2015/10/08/drupal-8-rc-1-is-out-what-now/</guid>
       <description>Last night (my time) I got the good news over twitter:
 That&amp;rsquo;s right, Drupal 8 has it&amp;rsquo;s first release. But what does that mean? Is it done? Can I start using it yet? What kind of changes are coming? Will dawehner get to sleep, at last?
 Are we there yet? Despite all the rejoicing on social media, this isn&amp;rsquo;t the final release for Drupal 8 - it&amp;rsquo;s only the first Release Candidate.</description>
@@ -271,165 +271,165 @@ Are we there yet? Despite all the rejoicing on social media, this isn&amp;rsquo;
     
     <item>
       <title>El Capitain broke my developer stuff! Here&#39;s how to fix it</title>
-      <link>http://ohthehugemanatee.github.io/blog/2015/10/01/how-i-got-el-capitain-working-with-my-developer-tools/</link>
+      <link>https://ohthehugemanatee.org/blog/2015/10/01/how-i-got-el-capitain-working-with-my-developer-tools/</link>
       <pubDate>Thu, 01 Oct 2015 12:44:42 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2015/10/01/how-i-got-el-capitain-working-with-my-developer-tools/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2015/10/01/how-i-got-el-capitain-working-with-my-developer-tools/</guid>
       <description>Last night I installed OSX&amp;rsquo;s new &amp;ldquo;El Capitain&amp;rdquo; update, and it broke most of the tools I use in my daily life as a developer, including homebrew and git. Here are the steps I had to follow to get everything working again.
  Disable System Integrity Protection   System Integrity Protection is a new feature of OSX, also called &amp;ldquo;rootless.&amp;rdquo; As the nickname suggests, it creates another level of access above your root account.</description>
     </item>
     
     <item>
       <title>Bundled TV pricing will come back from the dead</title>
-      <link>http://ohthehugemanatee.github.io/blog/2015/07/17/meet-the-new-bundled-tv-pricing/</link>
+      <link>https://ohthehugemanatee.org/blog/2015/07/17/meet-the-new-bundled-tv-pricing/</link>
       <pubDate>Fri, 17 Jul 2015 11:27:29 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2015/07/17/meet-the-new-bundled-tv-pricing/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2015/07/17/meet-the-new-bundled-tv-pricing/</guid>
       <description>Everyone is excited these days about the death of ESPN, particularly as evidence of the death of &amp;ldquo;bundle priced&amp;rdquo; Cable TV. Consumers are supposed to be excited that soon they will only have to pay for the content they want. Don&amp;rsquo;t get too excited yet.
 Let&amp;rsquo;s remember the basic purpose of bundled cable TV: for content producers, cable company bundles provide an easy, single outlet for their content. It&amp;rsquo;s &amp;ldquo;somebody else&amp;rdquo; who will get the content to their viewers, sell advertising, and collect payment.</description>
     </item>
     
     <item>
       <title>How the world sees Drupal - the Dutch PHP Conference 2015</title>
-      <link>http://ohthehugemanatee.github.io/blog/2015/06/27/dutch-php-conference-2015/</link>
+      <link>https://ohthehugemanatee.org/blog/2015/06/27/dutch-php-conference-2015/</link>
       <pubDate>Sat, 27 Jun 2015 12:04:52 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2015/06/27/dutch-php-conference-2015/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2015/06/27/dutch-php-conference-2015/</guid>
       <description>One of the most exciting parts about the switch to Drupal 8 is the rapprochement of the Drupal community with the rest of PHP. This weekend I spoke at the Dutch PHP Conference in Amsterdam, where I got to be part of the vanguard of Drupalists reconnecting with the larger PHP world. The experience had a big impact on my perspective of the future of Drupal as a platform and as a community.</description>
     </item>
     
     <item>
       <title>Troubleshooting Android error -505 from google play</title>
-      <link>http://ohthehugemanatee.github.io/blog/2015/05/29/troubleshooting-android-error-505-from-google-play/</link>
+      <link>https://ohthehugemanatee.org/blog/2015/05/29/troubleshooting-android-error-505-from-google-play/</link>
       <pubDate>Fri, 29 May 2015 12:20:33 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2015/05/29/troubleshooting-android-error-505-from-google-play/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2015/05/29/troubleshooting-android-error-505-from-google-play/</guid>
       <description>I recently got a new Android phone, and very quickly had trouble installing some of my favorite apps. Google&amp;rsquo;s Play Store downloads the app successfully, then presents me with &amp;ldquo;Unknown Error -505&amp;rdquo;.
 This error message means precisely nothing. It means &amp;ldquo;something went wrong during installation, and we&amp;rsquo;re not telling you what.&amp;rdquo; This drives me crazy. This blog post is about how to get more information out of that error message, and how to fix the problem.</description>
     </item>
     
     <item>
       <title>How to build a new source for Drupal Migrate 8</title>
-      <link>http://ohthehugemanatee.github.io/blog/2015/05/02/how-to-build-a-new-source-for-drupal-migrate-8/</link>
+      <link>https://ohthehugemanatee.org/blog/2015/05/02/how-to-build-a-new-source-for-drupal-migrate-8/</link>
       <pubDate>Sat, 02 May 2015 10:10:36 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2015/05/02/how-to-build-a-new-source-for-drupal-migrate-8/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2015/05/02/how-to-build-a-new-source-for-drupal-migrate-8/</guid>
       <description>This week I wanted to accomplish a task in Drupal 8 that would be simple in Drupal 7: Import several CSV files, each one related to the others by taxonomy terms. Most importantly, I wanted to do it with Migrate module.
 Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used from the GUI, rather, it provides a framework of &amp;ldquo;source&amp;rdquo;, &amp;ldquo;destination&amp;rdquo;, and &amp;ldquo;migration&amp;rdquo; classes so that even the most convoluted migration is 90% written for you.</description>
     </item>
     
     <item>
       <title>How and why to update the modem/baseband firmware on a Samsung Android phone</title>
-      <link>http://ohthehugemanatee.github.io/blog/2015/04/04/how-and-why-to-update-the-modem-slash-baseband-firmware-on-a-samsung-phone/</link>
+      <link>https://ohthehugemanatee.org/blog/2015/04/04/how-and-why-to-update-the-modem-slash-baseband-firmware-on-a-samsung-phone/</link>
       <pubDate>Sat, 04 Apr 2015 08:09:47 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2015/04/04/how-and-why-to-update-the-modem-slash-baseband-firmware-on-a-samsung-phone/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2015/04/04/how-and-why-to-update-the-modem-slash-baseband-firmware-on-a-samsung-phone/</guid>
       <description>If you have a Samsung Android phone, and you use Samsung&amp;rsquo;s own version of Android, this article is not for you. When Samsung sends you updates to Android, they also will include any relevant updates to the modem/baseband firmware. So stop reading and go have a cup of tea or something, your job is done.
 But for everyone who uses a custom ROM like Cyanogenmod, ParanoidAndroid, or AOKP, sit up and pay attention: you&amp;rsquo;re missing some key updates for your phone, and it&amp;rsquo;s probably the reason you have trouble with cellular signal or battery life.</description>
     </item>
     
     <item>
       <title>Drupalgeddon: Best Practices Aren&#39;t Good Enough Anymore</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/11/03/drupalgeddon-means-we-cant-trust-humans-with-updates/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/11/03/drupalgeddon-means-we-cant-trust-humans-with-updates/</link>
       <pubDate>Mon, 03 Nov 2014 17:30:32 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/11/03/drupalgeddon-means-we-cant-trust-humans-with-updates/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/11/03/drupalgeddon-means-we-cant-trust-humans-with-updates/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mobile Apps are a Temporary Phase, All Hail the Accessible Web</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/10/29/mobile-apps-are-a-temporary-phase/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/10/29/mobile-apps-are-a-temporary-phase/</link>
       <pubDate>Wed, 29 Oct 2014 13:13:04 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/10/29/mobile-apps-are-a-temporary-phase/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/10/29/mobile-apps-are-a-temporary-phase/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Get memcache statistics from the command line in one easy command</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/07/22/get-memcache-statistics-from-the-command-line-in-one-easy-command/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/07/22/get-memcache-statistics-from-the-command-line-in-one-easy-command/</link>
       <pubDate>Tue, 22 Jul 2014 15:43:30 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/07/22/get-memcache-statistics-from-the-command-line-in-one-easy-command/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/07/22/get-memcache-statistics-from-the-command-line-in-one-easy-command/</guid>
       <description>A quick one for myself to come back to. I can never find this one liner when I need it! It&amp;rsquo;s simple enough:
 watch &#39;php -r &#39;&amp;quot;&#39;&amp;quot;&#39;$m=new Memcache;$m-&amp;gt;connect(&amp;quot;127.0.0.1&amp;quot;, 11211);print_r($m-&amp;gt;getstats());&#39;&amp;quot;&#39;&amp;quot; Next time I need to get memcached stats, I&amp;rsquo;ll check back here.</description>
     </item>
     
     <item>
       <title>Bug: Multilingual Auto Label will break your Entity Static Cache</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/07/01/bug-multilingual-auto-label-will-break-your-entity-static-cache/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/07/01/bug-multilingual-auto-label-will-break-your-entity-static-cache/</link>
       <pubDate>Tue, 01 Jul 2014 17:00:45 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/07/01/bug-multilingual-auto-label-will-break-your-entity-static-cache/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/07/01/bug-multilingual-auto-label-will-break-your-entity-static-cache/</guid>
       <description>This is an important one to note: If you use the popular Automatic Entity Label module on a multilingual site, it will break your paths because of an interaction with Drupal&amp;rsquo;s built in object cache. I looked at this briefly a few months ago and ran out of time, but my (badass) colleague bburg figured it out this week.
 For now, the only solution is a slow one - we clear static entity caches when we generate multilingual titles.</description>
     </item>
     
     <item>
       <title>D8 Core sprint in DC</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/07/01/d8-core-sprint-in-dc/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/07/01/d8-core-sprint-in-dc/</link>
       <pubDate>Tue, 01 Jul 2014 16:27:17 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/07/01/d8-core-sprint-in-dc/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/07/01/d8-core-sprint-in-dc/</guid>
       <description>A quick note to all the Drupalists in the DC general area - Forum One is trying to put together a D8 core sprint in their DC office space. They&amp;rsquo;re coordinating with the DC Meetup group to try and spread the word to as many community members as possible!
 If you haven&amp;rsquo;t been to a code sprint before, it&amp;rsquo;s basically a coding party. Developers get together and help each other contribute better and faster by reviewing code on the spot, mentoring each other, and generally working in small ad-hoc groups.</description>
     </item>
     
     <item>
       <title>How to configure Authcache on Drupal 7</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/06/14/how-to-configure-authcache-on-drupal-7/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/06/14/how-to-configure-authcache-on-drupal-7/</link>
       <pubDate>Sat, 14 Jun 2014 16:15:40 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/06/14/how-to-configure-authcache-on-drupal-7/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/06/14/how-to-configure-authcache-on-drupal-7/</guid>
       <description>So you have authenticated user traffic you want to cache? Good - you&amp;rsquo;re on the right post. This post is a walk through for caching content for authenticated users in Drupal 7. We will be using the Authcache suite of modules. If you haven&amp;rsquo;t read it yet, I strongly recommend you check out my last post, Authenticated User Caching Concepts in Drupal 7.
 Our goal is a simple authenticated user caching system based on Authcache&amp;rsquo;s AJAX implementation, with a Memcached backend.</description>
     </item>
     
     <item>
       <title>Authenticated User Caching Concepts in Drupal 7</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/06/09/authenticated-user-caching-in-drupal/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/06/09/authenticated-user-caching-in-drupal/</link>
       <pubDate>Mon, 09 Jun 2014 22:21:01 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/06/09/authenticated-user-caching-in-drupal/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/06/09/authenticated-user-caching-in-drupal/</guid>
       <description>Drupal has a wide variety of highly effective solutions for caching anonymous user content. The typical setup is APC, Memcached or Redis, and Varnish in front, and this can easily serve thousands of concurrent anonymous users. There is excellent documentation out there discussing this kind of simple caching.
 But what about authenticated users? You can cache elements of the page using a method like Render cache, Entity Cache, or Views Content Cache.</description>
     </item>
     
     <item>
       <title>Drupal Superheroes: ASSEMBLE!</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/05/28/drupal-superheroes-assemble/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/05/28/drupal-superheroes-assemble/</link>
       <pubDate>Wed, 28 May 2014 12:44:01 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/05/28/drupal-superheroes-assemble/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/05/28/drupal-superheroes-assemble/</guid>
       <description>Regular Drupalcon attendees know that the opening pre-keynote session is one of the highlights of the con. That&amp;rsquo;s the session where we welcome everyone to the con with stupid jokes, some well known Drupalists, and a lot of fun. This year is going to be especially good - and we need your help!
 The evil Lord Over Engineering is threatening to delay the release of the CMS, which we need to save the world!</description>
     </item>
     
     <item>
       <title>Drupalcamp Helsinki takes on the world</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/05/26/drupalcamp-helsinki-takes-on-the-world/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/05/26/drupalcamp-helsinki-takes-on-the-world/</link>
       <pubDate>Mon, 26 May 2014 15:14:58 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/05/26/drupalcamp-helsinki-takes-on-the-world/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/05/26/drupalcamp-helsinki-takes-on-the-world/</guid>
       <description>Last weekend I got to keynote Drupalcamp Helsinki with my friend and often-collaborator, scaragucc - and what a great camp it was! Organizer Lauri Eskola deserves tremendous credit for taking this camp to the next level. They doubled their attendance from last year, attracted positive attention from some great notables in the global Drupal world, and got their local community energized to engage more. At all the various after parties there were frequent toasts of &amp;ldquo;one of the best Drupalcamps in the world!</description>
     </item>
     
     <item>
       <title>How to recover photos and data from a keylocked Android phone</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/05/18/recovering-photos-and-data-from-a-keylocked-android-phone/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/05/18/recovering-photos-and-data-from-a-keylocked-android-phone/</link>
       <pubDate>Sun, 18 May 2014 18:55:31 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/05/18/recovering-photos-and-data-from-a-keylocked-android-phone/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/05/18/recovering-photos-and-data-from-a-keylocked-android-phone/</guid>
       <description>Recently a good friend of mine passed away suddenly. Her family asked me to recover her photos and videos from her computer and android phone. The computer was easy enough, but the android phone posed a real problem. It had a keylock enabled, and USB debugging disabled. There was no external SD card to pull out, which meant that all the photos were stored on the internal memory. The phone was a totally stock Samsung Galaxy S3 mini.</description>
     </item>
     
     <item>
       <title>Why use an IDE when vim is so awesome?</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/05/12/why-use-an-ide-when-vim-is-so-awesome/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/05/12/why-use-an-ide-when-vim-is-so-awesome/</link>
       <pubDate>Mon, 12 May 2014 14:08:39 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/05/12/why-use-an-ide-when-vim-is-so-awesome/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/05/12/why-use-an-ide-when-vim-is-so-awesome/</guid>
       <description>One thing I&amp;rsquo;ve never really understood is IDEs. I mean, I get it when you have a complex, emulated environment as a key part of your development. But for the majority of us who write in high level languages like PHP or Ruby, I just don&amp;rsquo;t see the benefit. Why use some mouse-y, graphics dependent piece of software when you can use the ubiquitous Vim?
 I use Vim because:
  It can do everything any IDE I&amp;rsquo;ve seen can do.</description>
@@ -437,38 +437,38 @@ I use Vim because:
     
     <item>
       <title>Coder vs. Themer Ultimate Grudge Match Smackdown Fight to the Death</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/05/01/coder-vs-themer-ultimate-grudge-match-smackdown-fight-to-the-death/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/05/01/coder-vs-themer-ultimate-grudge-match-smackdown-fight-to-the-death/</link>
       <pubDate>Thu, 01 May 2014 17:15:31 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/05/01/coder-vs-themer-ultimate-grudge-match-smackdown-fight-to-the-death/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/05/01/coder-vs-themer-ultimate-grudge-match-smackdown-fight-to-the-death/</guid>
       <description>I&amp;rsquo;m really excited about a new session that I&amp;rsquo;ve been doing with my friend and colleague, Adam Juran aka scaragucc: the Coder vs Themer Ultimate Grudge Match Smackdown Fight to the Death! The basic premise: we both start with the same wireframe of a front page to build. But I&amp;rsquo;m only allowed to use the module layer, and Adam is only allowed to use the theme layer. It&amp;rsquo;s a really fun and entertaining way to play with the blurry lines between &amp;ldquo;coder&amp;rdquo; and &amp;ldquo;themer&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>How to create a custom Display Suite field</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/04/02/how-to-create-a-custom-display-suite-field/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/04/02/how-to-create-a-custom-display-suite-field/</link>
       <pubDate>Wed, 02 Apr 2014 16:12:13 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/04/02/how-to-create-a-custom-display-suite-field/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/04/02/how-to-create-a-custom-display-suite-field/</guid>
       <description>A few months ago I posted about how to create a custom Panels pane, a critical reference for anyone who uses Panels layouts. The other part of the toolkit for quick and awesome layouts is the Display Suite module. With DS you can create new &amp;ldquo;Display modes&amp;rdquo; for your content, to be reused around the site. For example, on one recent site I had four standard ways to display my nodes: Full, Teaser, Mini-Teaser, and Search Result.</description>
     </item>
     
     <item>
       <title>Drupal Dev Days Szeged, or: why you should attend every Camp you can </title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/03/29/drupal-dev-days-szeged-2014/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/03/29/drupal-dev-days-szeged-2014/</link>
       <pubDate>Sat, 29 Mar 2014 15:27:50 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/03/29/drupal-dev-days-szeged-2014/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/03/29/drupal-dev-days-szeged-2014/</guid>
       <description>Today is the last day of Drupal Dev Days in Szeged, Hungary, and I&amp;rsquo;ve never been more full of the &amp;ldquo;Drupal spirit!&amp;rdquo;
 One of Drupal&amp;rsquo;s greatest strengths is the closness of its&#39; community, how friendly and accepting they can be. Drupalcons are highlight events for many, not because of the learning as much as because of the social track: the chance to see old friends and make new ones. Even more important is the chance to experience in person this incredibly friendly community.</description>
     </item>
     
     <item>
       <title>Another cryptic Ruby message</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/01/10/another-cryptic-ruby-message/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/01/10/another-cryptic-ruby-message/</link>
       <pubDate>Fri, 10 Jan 2014 21:20:55 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/01/10/another-cryptic-ruby-message/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/01/10/another-cryptic-ruby-message/</guid>
       <description>Ruby on Rails drives me nuts, and today I found another example of why: the cryptic error messages. After a server update, my chiliproject/redmine site refused to start. The error message was
  &amp;ldquo;Object is not missing constant Issue!&amp;rdquo;
  What does that even mean? It took me a little while to understand that Issue in this context is the Redmine object &amp;ldquo;Issue&amp;rdquo;. But still, &amp;ldquo;Object is not missing constant X&amp;rdquo; isn&amp;rsquo;t much help.</description>
@@ -476,10 +476,10 @@ One of Drupal&amp;rsquo;s greatest strengths is the closness of its&#39; communi
     
     <item>
       <title>Drush self aliases</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/01/10/drush-self-aliases/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/01/10/drush-self-aliases/</link>
       <pubDate>Fri, 10 Jan 2014 09:22:01 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/01/10/drush-self-aliases/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/01/10/drush-self-aliases/</guid>
       <description>I ran into an interesting problem with the drush @self alias today. I wanted to pull a fresh copy of the DB down from a client&amp;rsquo;s live site to my local development copy. Should be as easy as drush sql-sync @clientsite.live @self, right? I&amp;rsquo;ve done this a thousand times before.
 And I&amp;rsquo;ve also ignored the warning message every time before, but today I thought I&amp;rsquo;d check it out:
  WARNING: Using temporary files to store and transfer sql-dump.</description>
@@ -487,77 +487,77 @@ And I&amp;rsquo;ve also ignored the warning message every time before, but today
     
     <item>
       <title>How to remove a Drupal install profile</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/01/07/how-to-remove-a-drupal-install-profile/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/01/07/how-to-remove-a-drupal-install-profile/</link>
       <pubDate>Tue, 07 Jan 2014 13:23:45 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/01/07/how-to-remove-a-drupal-install-profile/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/01/07/how-to-remove-a-drupal-install-profile/</guid>
       <description>Install profiles are a great way to throw together a functional Drupal site really quickly. In Drupal 6, an Install Profile was just a blueprint for setting up a site really quickly. What you did after the site was installed was your own business! But in Drupal 7 profiles are much more integrated with core. The assumption is that when you use an install profile, you want to rely on the profile&amp;rsquo;s maintainer for all your updates.</description>
     </item>
     
     <item>
       <title>How to create a custom Panels Pane</title>
-      <link>http://ohthehugemanatee.github.io/blog/2014/01/03/how-to-create-a-custom-panels-pane/</link>
+      <link>https://ohthehugemanatee.org/blog/2014/01/03/how-to-create-a-custom-panels-pane/</link>
       <pubDate>Fri, 03 Jan 2014 13:09:11 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2014/01/03/how-to-create-a-custom-panels-pane/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2014/01/03/how-to-create-a-custom-panels-pane/</guid>
       <description>Lots of sites are now built with the &amp;ldquo;Panels everywhere&amp;rdquo; method, using Panels and Panelizer to configure modular layouts in the Drupal GUI. These modules come with lots of great default Panes, and create even more defaults based on your existing Blocks and Views. But there&amp;rsquo;s always a case for a custom Pane.
 As usual, I&amp;rsquo;ll assume that you have an empty custom module called mymodule, with only a .info and a .</description>
     </item>
     
     <item>
       <title>44,497 people are wrong: how to NEVER need Views PHP.</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/12/26/44497-people-are-wrong-how-to-never-use-views-php/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/12/26/44497-people-are-wrong-how-to-never-use-views-php/</link>
       <pubDate>Thu, 26 Dec 2013 12:01:44 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/12/26/44497-people-are-wrong-how-to-never-use-views-php/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/12/26/44497-people-are-wrong-how-to-never-use-views-php/</guid>
       <description>You&amp;rsquo;re building a View, but you can&amp;rsquo;t get that field to display the way you want it to. Or filter, or sort. Or maybe you have some data in a custom table that you want to include in the View. So you look for a contributed module, and Views PHP looks like the answer to your problem! Until you read the module page, where it says:
  &amp;ldquo;&amp;hellip;it is highly advisable to use regular handlers and plugins when available (or even to create one yourself).</description>
     </item>
     
     <item>
       <title>SSH lifehacks to make your SSH life easy</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/12/20/ssh-lifehacks-to-make-your-ssh-life-easy/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/12/20/ssh-lifehacks-to-make-your-ssh-life-easy/</link>
       <pubDate>Fri, 20 Dec 2013 16:29:27 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/12/20/ssh-lifehacks-to-make-your-ssh-life-easy/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/12/20/ssh-lifehacks-to-make-your-ssh-life-easy/</guid>
       <description>If you use SSH every day, or even every other day, this post is for you. We&amp;rsquo;re going to walk through some of the more convenient options available to you in your global SSH configuration to make your life easier and faster.
 First of all, you should know that SSH has a great configuration file, typically located in your home directory at .ssh/config. Everything we&amp;rsquo;re talking about today belongs there. There&amp;rsquo;s tons of stuff you can do with it, and I&amp;rsquo;m only going to scratch the surface.</description>
     </item>
     
     <item>
       <title>This is why real *nix people hate OSX</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/12/03/this-is-why-real-star-nix-people-hate-osx/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/12/03/this-is-why-real-star-nix-people-hate-osx/</link>
       <pubDate>Tue, 03 Dec 2013 14:11:23 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/12/03/this-is-why-real-star-nix-people-hate-osx/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/12/03/this-is-why-real-star-nix-people-hate-osx/</guid>
       <description>You know what grinds my gears? Unnecessary changes to behaviors of totally standard Linux/Unix commands in OSX. 99% of the time you can use the OSX command line like any sane CLI, but every once in awhile you run into these oddities that are seemingly only there to piss you off. I ran into one today: sed behaves differently on OSX. It counts its arguments differently, so you have to explicitly give it an empty argument for -i.</description>
     </item>
     
     <item>
       <title>Custom Context conditions</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/12/02/custom-context-conditions/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/12/02/custom-context-conditions/</link>
       <pubDate>Mon, 02 Dec 2013 09:06:49 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/12/02/custom-context-conditions/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/12/02/custom-context-conditions/</guid>
       <description>One of the big advantages to using the Context module is how totally extensible it is. Not only can you use and re-use the built in conditions, you can write your own. This brings all the power of the custom PHP evaluation method of block placement, but in a structure that makes your code re-usable, contributable, versioned, and standards-based. Writing a custom Context Condition is also a great template for how to integrate custom behaviors in many of the more complex Drupal modules such as Views and Search_API.</description>
     </item>
     
     <item>
       <title>A Drupalist makes the case for Jekyll/Octopress</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/11/26/a-drupalist-makes-the-case-for-jekyll-slash-octopress/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/11/26/a-drupalist-makes-the-case-for-jekyll-slash-octopress/</link>
       <pubDate>Tue, 26 Nov 2013 17:59:05 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/11/26/a-drupalist-makes-the-case-for-jekyll-slash-octopress/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/11/26/a-drupalist-makes-the-case-for-jekyll-slash-octopress/</guid>
       <description>Today I&amp;rsquo;m launching my new domain, OhTheHugeManatee.org. ORG was the only TLD left, but I&amp;rsquo;m asking after .com . :)
 I made the decision to launch it using Jekyll and Octopress, rather than Drupal. This feels a little funny to a career Drupalist like myself. Why not use Drupal 7, or use it as a testing ground for Drupal 8? Anyone who knows me will know that I complain bitterly about Ruby, and I&amp;rsquo;ve been vocal about the misuse of Jekyll for healthcare.</description>
     </item>
     
     <item>
       <title>Every feature a branch, every branch a dev environment... without breaking the bank! The perfect git-flow dev environment for small shops</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/09/02/every-feature-a-branch-every-branch-a-dev-environment-without-breaking-the-bank-the-perfect-git-flow-dev-environment-for-small-shops/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/09/02/every-feature-a-branch-every-branch-a-dev-environment-without-breaking-the-bank-the-perfect-git-flow-dev-environment-for-small-shops/</link>
       <pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/09/02/every-feature-a-branch-every-branch-a-dev-environment-without-breaking-the-bank-the-perfect-git-flow-dev-environment-for-small-shops/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/09/02/every-feature-a-branch-every-branch-a-dev-environment-without-breaking-the-bank-the-perfect-git-flow-dev-environment-for-small-shops/</guid>
       <description>mysql_user=&amp;lsquo;root&amp;rsquo; mysql_pw=&amp;lsquo;your-mysql-password&amp;rsquo; worktree_root=&amp;quot;/var/www/public_html&amp;quot; http_root=&amp;ldquo;http://example.com&amp;rdquo; support_files=&amp;quot;/home/git&amp;quot;
 while read oldrev newrev ref do branch=echo $ref |cut -d/ -f3 worktree=&amp;quot;$worktree_root/$GL_REPO/$branch&amp;quot; repo_sanitized=echo ${GL_REPO//[-._]/} branch_sanitized=echo ${branch//[-._]/} db_name=&amp;quot;$repo_sanitized&amp;quot;_&amp;quot;$branch_sanitized&amp;quot;
  # Exit nicely if this is the gitolite-admin repo. if [ $GL_REPO = &amp;lsquo;gitolite-admin&amp;rsquo; ]; then exit 0 fi
@@ -566,123 +566,123 @@ while read oldrev newrev ref do branch=echo $ref |cut -d/ -f3 worktree=&amp;quot
     
     <item>
       <title>SSL certificates demystified</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/06/20/ssl-certificates-demystified/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/06/20/ssl-certificates-demystified/</link>
       <pubDate>Thu, 20 Jun 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/06/20/ssl-certificates-demystified/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/06/20/ssl-certificates-demystified/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Review: GeoServer Beginner&#39;s Guide, by Stefano Iacovella and Brian Youngblood</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/05/21/review-geoserver-beginners-guide-by-stefano-iacovella-and-brian-youngblood/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/05/21/review-geoserver-beginners-guide-by-stefano-iacovella-and-brian-youngblood/</link>
       <pubDate>Tue, 21 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/05/21/review-geoserver-beginners-guide-by-stefano-iacovella-and-brian-youngblood/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/05/21/review-geoserver-beginners-guide-by-stefano-iacovella-and-brian-youngblood/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Adding Rules to your contrib module (so you can reject half the tickets in your queue)</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/04/18/adding-rules-to-your-contrib-module-so-you-can-reject-half-the-tickets-in-your-queue/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/04/18/adding-rules-to-your-contrib-module-so-you-can-reject-half-the-tickets-in-your-queue/</link>
       <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/04/18/adding-rules-to-your-contrib-module-so-you-can-reject-half-the-tickets-in-your-queue/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/04/18/adding-rules-to-your-contrib-module-so-you-can-reject-half-the-tickets-in-your-queue/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How to set up Apache Solr Multicore for Drupal</title>
-      <link>http://ohthehugemanatee.github.io/blog/2013/04/18/how-to-set-up-apache-solr-multicore-for-drupal/</link>
+      <link>https://ohthehugemanatee.org/blog/2013/04/18/how-to-set-up-apache-solr-multicore-for-drupal/</link>
       <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2013/04/18/how-to-set-up-apache-solr-multicore-for-drupal/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2013/04/18/how-to-set-up-apache-solr-multicore-for-drupal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How to uninstall Dolly Drive</title>
-      <link>http://ohthehugemanatee.github.io/2013/03/how-to-uninstall-dolly-drive.html</link>
+      <link>https://ohthehugemanatee.org/2013/03/how-to-uninstall-dolly-drive.html</link>
       <pubDate>Tue, 05 Mar 2013 12:37:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2013/03/how-to-uninstall-dolly-drive.html</guid>
+      <guid>https://ohthehugemanatee.org/2013/03/how-to-uninstall-dolly-drive.html</guid>
       <description>{% raw %} I recently tried the Dolly Drive backup service, and decided it wasn&#39;t for me. Foolishly, I uninstalled it the way you uninstall everything on OSX: by dragging it&#39;s Application icon to the Trash. I thought it was gone for good... it wasn&#39;t until weeks later that I noticed my system would gradually slow down after boot.
 This is a brand new Macbook Pro, so there&#39;s no good reason for slow down.</description>
     </item>
     
     <item>
       <title>Announcing the Resource Conflict Drupal module</title>
-      <link>http://ohthehugemanatee.github.io/2012/06/announcing-resource-conflict-drupal.html</link>
+      <link>https://ohthehugemanatee.org/2012/06/announcing-resource-conflict-drupal.html</link>
       <pubDate>Wed, 13 Jun 2012 22:35:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2012/06/announcing-resource-conflict-drupal.html</guid>
+      <guid>https://ohthehugemanatee.org/2012/06/announcing-resource-conflict-drupal.html</guid>
       <description>{% raw %} I recently took over an aging Drupal module, Resource Conflict. It had a D6 version with a lot of outstanding bugs in the queue... I started by simply rewriting it for D7 and my specific use case, but ended up in a discussion with the module&#39;s old maintainer about a total rewrite for&amp;nbsp;Entities&amp;nbsp;and&amp;nbsp;Rules. So that&#39;s what I did, and I just released the 7.x-3.x-dev version.
 Resource Conflict USED to be a module that detected booking conflicts in resources, and threw a form error.</description>
     </item>
     
     <item>
       <title>Drupal developers&#39; toolkit: handy tools and functions to make your life easier</title>
-      <link>http://ohthehugemanatee.github.io/2012/06/drupal-developers-toolkit-handy-tools.html</link>
+      <link>https://ohthehugemanatee.org/2012/06/drupal-developers-toolkit-handy-tools.html</link>
       <pubDate>Fri, 08 Jun 2012 17:23:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2012/06/drupal-developers-toolkit-handy-tools.html</guid>
+      <guid>https://ohthehugemanatee.org/2012/06/drupal-developers-toolkit-handy-tools.html</guid>
       <description>{% raw %} Drupal is big and complex, and no matter how good you are, you will need to debug. Before you get started coding for a Drupal site, you should download and enable the very useful devel module on your dev site. Go ahead, I&#39;ll wait.
 This primer covers all the tools that I&#39;ll use in later tutorials on this blog. In the real world I end up using 5-6 of these guys regularly.</description>
     </item>
     
     <item>
       <title>Drupal quick learning guides: Custom modules</title>
-      <link>http://ohthehugemanatee.github.io/2012/04/drupal-quick-learning-guides-custom.html</link>
+      <link>https://ohthehugemanatee.org/2012/04/drupal-quick-learning-guides-custom.html</link>
       <pubDate>Mon, 23 Apr 2012 16:17:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2012/04/drupal-quick-learning-guides-custom.html</guid>
+      <guid>https://ohthehugemanatee.org/2012/04/drupal-quick-learning-guides-custom.html</guid>
       <description>{% raw %} Ah, it&#39;s nice to be done with the basic structure stuff. At this point, I&#39;m going to assume that you know the basics of how to administer a Drupal site. You understand the file structure, you know where to go to download themes and modules, and you know how to make sites out of the big pieces you can find that way. Awesome. This is where it gets fun.</description>
     </item>
     
     <item>
       <title>Drupal quick learning guides: Drupal structure</title>
-      <link>http://ohthehugemanatee.github.io/2012/04/drupal-quick-learning-guides-drupal.html</link>
+      <link>https://ohthehugemanatee.org/2012/04/drupal-quick-learning-guides-drupal.html</link>
       <pubDate>Mon, 16 Apr 2012 14:01:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2012/04/drupal-quick-learning-guides-drupal.html</guid>
+      <guid>https://ohthehugemanatee.org/2012/04/drupal-quick-learning-guides-drupal.html</guid>
       <description>{% raw %} I&#39;ve been lax about posting lately, and to make this easier on myself I think I&#39;ll post a bunch of quick guides for basic coding procedures with Drupal. Simple things and concepts, explored in just enough detail for you to understand how it works, resource links so you can actually go and put it into practice. The first thing you need to understand about Drupal is the structure.</description>
     </item>
     
     <item>
       <title>On Drupal Entities, or how Organic Groups and Taxonomy are the same thing</title>
-      <link>http://ohthehugemanatee.github.io/2012/03/on-drupal-entities-or-how-organic.html</link>
+      <link>https://ohthehugemanatee.org/2012/03/on-drupal-entities-or-how-organic.html</link>
       <pubDate>Sun, 25 Mar 2012 12:58:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2012/03/on-drupal-entities-or-how-organic.html</guid>
+      <guid>https://ohthehugemanatee.org/2012/03/on-drupal-entities-or-how-organic.html</guid>
       <description>{% raw %} I&#39;m a big fan of the new Entities model for Drupal. I&#39;ve been working a lot with it lately, and it makes a lot of sense... but my favorite part is how it keeps blowing away my old assumptions, inherited from 7 years of Drupal experience. Here&#39;s a big one that got me recently: Organic Groups is useless, because it&#39;s basically Taxonomy with a couple of neat add-ons.</description>
     </item>
     
     <item>
       <title>Sony hacked AGAIN - time to turn out the lights?</title>
-      <link>http://ohthehugemanatee.github.io/2011/05/ouch-sony.html</link>
+      <link>https://ohthehugemanatee.org/2011/05/ouch-sony.html</link>
       <pubDate>Tue, 24 May 2011 23:37:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/05/ouch-sony.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/05/ouch-sony.html</guid>
       <description>{% raw %} Ouch, Sony. Hot on the heels of the last 4 hacks have come another two in a row. Sony BMG Greece was hacked on Monday, and now Sony BMG Japan.
 Though I stand by my comments from my earlier post (see: What the Sony hacks tell us about their Sysadmins and Management), there is another important dimension to this story. That&#39;s the dimension of a feeding frenzy.</description>
     </item>
     
     <item>
       <title>The complete Drupal Cache - Serving HTTP and HTTPS content with Varnish</title>
-      <link>http://ohthehugemanatee.github.io/2011/05/complete-drupal-cache-serving-http-and.html</link>
+      <link>https://ohthehugemanatee.org/2011/05/complete-drupal-cache-serving-http-and.html</link>
       <pubDate>Sun, 22 May 2011 21:07:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/05/complete-drupal-cache-serving-http-and.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/05/complete-drupal-cache-serving-http-and.html</guid>
       <description>{% raw %} Varnish is a fantastic caching proxy, commonly used for CMSes. It&#39;s not uncommon to see benchmarks boasting 300-500 page loads per second - I&#39;ve seen benches up to 5000 hits per second. That&#39;s faster than serving flat HTML from Apache; we&#39;re talking about a serious benefit to your server load here.
 Part of Varnish&#39;s tremendous speed comes from how lean it is. At only 58,000 lines of code, it&#39;s very lightweight.</description>
     </item>
     
     <item>
       <title>What the Sony hacks tell us about their Sysadmins and management</title>
-      <link>http://ohthehugemanatee.github.io/2011/05/what-sony-hacks-tell-us-about-their.html</link>
+      <link>https://ohthehugemanatee.org/2011/05/what-sony-hacks-tell-us-about-their.html</link>
       <pubDate>Sat, 21 May 2011 00:04:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/05/what-sony-hacks-tell-us-about-their.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/05/what-sony-hacks-tell-us-about-their.html</guid>
       <description>{% raw %} I wouldn&#39;t want to be a Sony sysadmin right now. F-Secure just blogged about evidence of a fourth hack at the electronics giant. This one is relatively harmless - a phishing scam being run from Sony servers - but this pattern of security problems should tell us a few things about Sony&#39;s SysAdmin staff:
 1) They&#39;re powerless in their own organization.
 2) They don&#39;t get to set IT resource policy.</description>
@@ -690,47 +690,47 @@ Part of Varnish&#39;s tremendous speed comes from how lean it is. At only 58,000
     
     <item>
       <title>Sendmail Return-path, php, and the importance of the variables you don&#39;t think of</title>
-      <link>http://ohthehugemanatee.github.io/2011/05/sendmail-return-path-php-and-importance.html</link>
+      <link>https://ohthehugemanatee.org/2011/05/sendmail-return-path-php-and-importance.html</link>
       <pubDate>Fri, 20 May 2011 20:37:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/05/sendmail-return-path-php-and-importance.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/05/sendmail-return-path-php-and-importance.html</guid>
       <description>{% raw %} I got called in for an interesting issue on one of the servers I co-maintain today. &amp;nbsp;Sites were messing up left right and center, in all sorts of bizarre ways. &amp;nbsp;CSS wouldn&#39;t be delivered, or half of it would be, or some of the content would disappear... and different on every page load! &amp;nbsp;It only took me a moment to confirm - the server was out of space on the root device.</description>
     </item>
     
     <item>
       <title>Running Redmine in a subdirectory</title>
-      <link>http://ohthehugemanatee.github.io/2011/05/running-redmine-in-subdirectory.html</link>
+      <link>https://ohthehugemanatee.org/2011/05/running-redmine-in-subdirectory.html</link>
       <pubDate>Mon, 16 May 2011 13:17:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/05/running-redmine-in-subdirectory.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/05/running-redmine-in-subdirectory.html</guid>
       <description>{% raw %} Redmine is a fantastic project management tool for technically oriented organizations. &amp;nbsp;At my job, we use it to manage 30-50 active projects at a time, as well as the back history of several hundred projects. &amp;nbsp;Oddly enough, the normal installation process puts it on port 3000 . &amp;nbsp;We had some trouble with developers&#39; ISPs not allowing HTTPS traffic over non-standard ports, so we had to move redmine onto port 443 along with the rest of the SSL traffic.</description>
     </item>
     
     <item>
       <title>Setting up Secure LDAP on Ubuntu 10.04 - the idiot&#39;s guide to SSL, TLS, and SLAPD</title>
-      <link>http://ohthehugemanatee.github.io/2011/05/setting-up-secure-ldap-on-ubuntu-1004.html</link>
+      <link>https://ohthehugemanatee.org/2011/05/setting-up-secure-ldap-on-ubuntu-1004.html</link>
       <pubDate>Fri, 13 May 2011 21:58:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/05/setting-up-secure-ldap-on-ubuntu-1004.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/05/setting-up-secure-ldap-on-ubuntu-1004.html</guid>
       <description>{% raw %} LDAP is one of the Elder Gods of the UNIX world. &amp;nbsp;It had it&#39;s beginnings in DAP, the first Directory Access Protocol, in 1988. &amp;nbsp;Within a decade DAP was more or less discarded in favor of the Lightweight Directory Access Protocol. &amp;nbsp;And it has stayed in basically the same format ever since.
 LDAP is, as you might have guessed, a directory protocol. &amp;nbsp;It was developed in response to X.</description>
     </item>
     
     <item>
       <title>Updating kernels for Amazon (AWS) Instances</title>
-      <link>http://ohthehugemanatee.github.io/2011/05/updating-kernels-for-amazon-aws.html</link>
+      <link>https://ohthehugemanatee.org/2011/05/updating-kernels-for-amazon-aws.html</link>
       <pubDate>Mon, 09 May 2011 17:27:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/05/updating-kernels-for-amazon-aws.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/05/updating-kernels-for-amazon-aws.html</guid>
       <description>{% raw %} Lately I&#39;ve been getting hit by an odd kernel bug on one of the servers I maintain. &amp;nbsp;It&#39;s discussed in some depth on Launchpad, but the gist is that when trying to find an idle cpu for a new thread, the scheduler divides by cpu_power. &amp;nbsp;On EC2 instances, it&#39;s possible for cpu_power to be 0, which causes a divide by zero kernel crash. &amp;nbsp;Why cpu_power is 0 is still an unknown; this should never be the case.</description>
     </item>
     
     <item>
       <title>Simple AWS backups with Snapshots and AMIs</title>
-      <link>http://ohthehugemanatee.github.io/2011/04/simple-aws-backups-with-snapshots-and.html</link>
+      <link>https://ohthehugemanatee.org/2011/04/simple-aws-backups-with-snapshots-and.html</link>
       <pubDate>Sat, 30 Apr 2011 15:26:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/04/simple-aws-backups-with-snapshots-and.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/04/simple-aws-backups-with-snapshots-and.html</guid>
       <description>{% raw %} Are you just getting started with Amazon Web Services? &amp;nbsp;It&#39;s a great service, but it faces some reliability challenges. &amp;nbsp;This post explains how to set up a simple backup system using Amazon&#39;s &#34;snapshot&#34; &#34;machine image&#34; functionalities.
 Dependencies
 Before you begin, you will need:
@@ -742,78 +742,78 @@ Everyone knows that Amazon Instances are ephemeral.</description>
     
     <item>
       <title>AWS Load Balancer SSL limitations</title>
-      <link>http://ohthehugemanatee.github.io/2011/04/aws-load-balancer-ssl-limitations.html</link>
+      <link>https://ohthehugemanatee.org/2011/04/aws-load-balancer-ssl-limitations.html</link>
       <pubDate>Fri, 29 Apr 2011 13:58:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/04/aws-load-balancer-ssl-limitations.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/04/aws-load-balancer-ssl-limitations.html</guid>
       <description>{% raw %} No one else seems to have documented this anywhere, so I&#39;m gonna do it here.
 Amazon Web Services has a great little load balancer system you can use. &amp;nbsp;A few clicks, and you&#39;re away to the races with a shiny load balancer of your own! &amp;nbsp;The best part? &amp;nbsp;It will even do SSL termination at the load balancer for you. &amp;nbsp;Just paste in your certs and away you go!</description>
     </item>
     
     <item>
       <title>Multiple SSL sites on one AWS instance</title>
-      <link>http://ohthehugemanatee.github.io/2011/04/multiple-ssl-sites-on-one-aws-instance.html</link>
+      <link>https://ohthehugemanatee.org/2011/04/multiple-ssl-sites-on-one-aws-instance.html</link>
       <pubDate>Fri, 29 Apr 2011 13:44:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/04/multiple-ssl-sites-on-one-aws-instance.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/04/multiple-ssl-sites-on-one-aws-instance.html</guid>
       <description>{% raw %} It&#39;s a familiar problem - you can&#39;t really host multiple SSL sites on a single IP address. &amp;nbsp;There&#39;s a fancy workaround if you get a pricey multi-domain certificate, of course. &amp;nbsp;But separate sites, with separate certificates just won&#39;t work. &amp;nbsp;The reason is simple - put yourself in Apache&#39;s shoes.
 When you&#39;re using name based virtualhosts, Apache uses the request headers to determine which vhost should get the request.</description>
     </item>
     
     <item>
       <title>Working with Bash - awk</title>
-      <link>http://ohthehugemanatee.github.io/2011/04/working-with-bash-awk.html</link>
+      <link>https://ohthehugemanatee.org/2011/04/working-with-bash-awk.html</link>
       <pubDate>Sun, 24 Apr 2011 12:24:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/04/working-with-bash-awk.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/04/working-with-bash-awk.html</guid>
       <description>{% raw %} Now a quickie - one of my favorite tools: awk. &amp;nbsp;Some of you will probably think of this as obvious, and that&#39;s great. &amp;nbsp;But tools like awk are the things that I skipped learning when I got started... and when I finally started using them, my world expanded tremendously. &amp;nbsp;Here&#39;s hoping I can pay it forward to one other sysadmin out there. &amp;nbsp;So let&#39;s get going.</description>
     </item>
     
     <item>
       <title>HTC Inspire, Cyanogenmod 7, and HSUPA</title>
-      <link>http://ohthehugemanatee.github.io/2011/04/htc-inspire-cyanogenmod-7-and-hsupa.html</link>
+      <link>https://ohthehugemanatee.org/2011/04/htc-inspire-cyanogenmod-7-and-hsupa.html</link>
       <pubDate>Thu, 14 Apr 2011 02:21:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/04/htc-inspire-cyanogenmod-7-and-hsupa.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/04/htc-inspire-cyanogenmod-7-and-hsupa.html</guid>
       <description>{% raw %} About a month ago, I picked up my first Android phone: the HTC Inspire 4g, from AT&amp;amp;T in the US. &amp;nbsp;I determined to root it, install a custom OS, and laugh at all the poor saps who get bad battery life on HTC Sense.
 The first challenge is in the name. &amp;nbsp;See, the HTC Inspire 4G is really just a rebranded HTC Desire HD, which is a tweaked HTC Desire, which is another name for the HTC Ace.</description>
     </item>
     
     <item>
       <title>Still more wireless troubleshooting</title>
-      <link>http://ohthehugemanatee.github.io/2011/03/still-more-wireless-troubleshooting.html</link>
+      <link>https://ohthehugemanatee.org/2011/03/still-more-wireless-troubleshooting.html</link>
       <pubDate>Thu, 24 Mar 2011 12:19:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/03/still-more-wireless-troubleshooting.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/03/still-more-wireless-troubleshooting.html</guid>
       <description>{% raw %} The damnedest thing happened - I went out of town. &amp;nbsp;I went out of town, and discovered that I was STILL getting dropouts every 90 seconds! &amp;nbsp;On a totally different router, on the opposite site of the planet, in a rural area with no conceivable wireless interference. &amp;nbsp;This prompted me to boot into Windows 7 (I have a Boot Camp partition) to try my ping test under a totally different software stack.</description>
     </item>
     
     <item>
       <title>Heat issues on my XBMC mediacenter</title>
-      <link>http://ohthehugemanatee.github.io/2011/01/heat-issues-on-my-xbmc-mediacenter.html</link>
+      <link>https://ohthehugemanatee.org/2011/01/heat-issues-on-my-xbmc-mediacenter.html</link>
       <pubDate>Fri, 21 Jan 2011 21:47:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2011/01/heat-issues-on-my-xbmc-mediacenter.html</guid>
+      <guid>https://ohthehugemanatee.org/2011/01/heat-issues-on-my-xbmc-mediacenter.html</guid>
       <description>{% raw %} I run an XBMC mediacenter at home, on my old Compaq C765 laptop (the laptop I used to use as a Hackintosh, until I got a real Mac). &amp;nbsp;I say it&#39;s old, but it&#39;s perfectly well powered:
 2.1ghz Intel Core 2 Duo2gb RAMIntel GMA X3100 &#34;graphics&#34; adapterApart from the X3100, it&#39;s a perfectly good little computer, and perfect for a media center. &amp;nbsp;XBMC is super easy to install - just install Ubuntu as you normally would, and install the XBMC package using your favorite package manager (&#34;</description>
     </item>
     
     <item>
       <title>Net Neutrality and Steve Wozniak</title>
-      <link>http://ohthehugemanatee.github.io/2010/12/net-neutrality-and-steve-wozniak.html</link>
+      <link>https://ohthehugemanatee.org/2010/12/net-neutrality-and-steve-wozniak.html</link>
       <pubDate>Wed, 22 Dec 2010 00:50:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2010/12/net-neutrality-and-steve-wozniak.html</guid>
+      <guid>https://ohthehugemanatee.org/2010/12/net-neutrality-and-steve-wozniak.html</guid>
       <description>{% raw %} I know no one reads this blog but me, but I may as well put this up here. &amp;nbsp;Net Neutrality: I&#39;m for it.
 Steve Wozniak has an excellent Open Letter up on the Atlantic about the issue. &amp;nbsp;He takes the examples of public goods such as roadworks and compares them favorably to privately managed utilities like Cable TV and Internet. Personally, I think his letter is a much more effective critique of the FCC than it is a championing of the public works model of construction.</description>
     </item>
     
     <item>
       <title>More DD-WRT / Linksys WRT54G troubleshooting</title>
-      <link>http://ohthehugemanatee.github.io/2010/12/more-dd-wrt-linksys-wrt54g.html</link>
+      <link>https://ohthehugemanatee.org/2010/12/more-dd-wrt-linksys-wrt54g.html</link>
       <pubDate>Wed, 22 Dec 2010 00:45:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2010/12/more-dd-wrt-linksys-wrt54g.html</guid>
+      <guid>https://ohthehugemanatee.org/2010/12/more-dd-wrt-linksys-wrt54g.html</guid>
       <description>{% raw %} After my evening spent getting my DD-WRT firmware to a stable version (as opposed to the version recommended by the DD-WRT website), I had hoped that I had seen the end of my wireless issues.
 No such luck.
 I have definitely seen an improvement - in a ping flood test, I&#39;m only seeing 0.5% dropped packets now, which is an improvement over the 2% I was seeing before.</description>
@@ -821,48 +821,48 @@ I have definitely seen an improvement - in a ping flood test, I&#39;m only seein
     
     <item>
       <title>DD-WRT, versioning, and the Linksys WRT54G wireless router</title>
-      <link>http://ohthehugemanatee.github.io/2010/12/dd-wrt-versioning-and-linksys-wrt54g.html</link>
+      <link>https://ohthehugemanatee.org/2010/12/dd-wrt-versioning-and-linksys-wrt54g.html</link>
       <pubDate>Mon, 20 Dec 2010 12:47:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2010/12/dd-wrt-versioning-and-linksys-wrt54g.html</guid>
+      <guid>https://ohthehugemanatee.org/2010/12/dd-wrt-versioning-and-linksys-wrt54g.html</guid>
       <description>{% raw %} I have had all sorts of trouble with the wireless situation in my apartment. &amp;nbsp;The layout of the place is such that the kitchen sits in between the two major rooms (living room and bedroom), and I swear those kitchen walls must be made of lead. &amp;nbsp;No wireless signal seems to get through. &amp;nbsp;I have phone jacks for ADSL in the living room and bedroom, nothing in between.</description>
     </item>
     
     <item>
       <title>How to jailbreak and unlock iPhone 3GS IOS 4.2.1, old baseband</title>
-      <link>http://ohthehugemanatee.github.io/2010/12/how-to-jailbreak-and-unlock-iphone-3gs.html</link>
+      <link>https://ohthehugemanatee.org/2010/12/how-to-jailbreak-and-unlock-iphone-3gs.html</link>
       <pubDate>Mon, 20 Dec 2010 01:32:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2010/12/how-to-jailbreak-and-unlock-iphone-3gs.html</guid>
+      <guid>https://ohthehugemanatee.org/2010/12/how-to-jailbreak-and-unlock-iphone-3gs.html</guid>
       <description>{% raw %} After wasting my evening working out a jailbreak/unlock for an old version of IOS, I discovered a side note in a devteam blog update&amp;nbsp;that gave me clues on how to jailbreak and unlock my phones for the latest version of IOS. &amp;nbsp;So I spent another evening working on that. I haven&#39;t seen complete instructions anywhere yet, so here they are. &amp;nbsp;How to update your iPhone 3GS to 4.</description>
     </item>
     
     <item>
       <title>I baked a computer (and it worked!)</title>
-      <link>http://ohthehugemanatee.github.io/2010/12/i-baked-computer-and-it-worked.html</link>
+      <link>https://ohthehugemanatee.org/2010/12/i-baked-computer-and-it-worked.html</link>
       <pubDate>Mon, 20 Dec 2010 00:57:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2010/12/i-baked-computer-and-it-worked.html</guid>
+      <guid>https://ohthehugemanatee.org/2010/12/i-baked-computer-and-it-worked.html</guid>
       <description>{% raw %} This weekend a friend asked me to have a look at his HP DV9500 laptop. &amp;nbsp;It was having trouble - when you turned it on, the screen showed nothing but a solid grey with a few thin black bars. &amp;nbsp;The grey increased in intensity as the system ran, until it ran off the colors that the display knew how to show.
 Clearly, there was a problem with the video card.</description>
     </item>
     
     <item>
       <title>Unlocking and jailbreaking my iPhone 3gs on 4.1.2 - a little late</title>
-      <link>http://ohthehugemanatee.github.io/2010/12/unlocking-and-jailbreaking-my-iphone.html</link>
+      <link>https://ohthehugemanatee.org/2010/12/unlocking-and-jailbreaking-my-iphone.html</link>
       <pubDate>Sat, 18 Dec 2010 02:02:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/2010/12/unlocking-and-jailbreaking-my-iphone.html</guid>
+      <guid>https://ohthehugemanatee.org/2010/12/unlocking-and-jailbreaking-my-iphone.html</guid>
       <description>{% raw %} While I was away over the weekend, I borked my iphone. &amp;nbsp;I was running IOS 4.0, and I was having trouble with network connections.
 The statusbar wouldn&#39;t reflect my actual connection status. &amp;nbsp;WiFi connections would rarely show up in the statusbar, though I knew I was surfing wirelessly (my router at 10.10.10.1 was accessible to the phone, for starters...)WiFi would periodically crash. &amp;nbsp;In the middle of a good network connection, it would just.</description>
     </item>
     
     <item>
       <title>About me</title>
-      <link>http://ohthehugemanatee.github.io/about/</link>
+      <link>https://ohthehugemanatee.org/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/about/</guid>
+      <guid>https://ohthehugemanatee.org/about/</guid>
       <description>My name is Campbell Vertesi; I’m a principal lead software engineer with Microsoft, and an opera singer.
 I’ve been working with computers for 23 years. I started with desktop repair, moved into sysadmin work, and eventually discovered Drupal 4.1 and the beginnings of the web application world. Since then I’ve been in most roles in the web consultant ecosystem: coder, themer, project manager, information architect, technical lead, CEO, and CTO. I’ve presented at dozens of software conferences, often on the main stage or as a keynote.</description>
     </item>

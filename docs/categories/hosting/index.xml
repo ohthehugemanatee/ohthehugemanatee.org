@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hosting on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/hosting/</link>
+    <link>https://ohthehugemanatee.org/categories/hosting/</link>
     <description>Recent content in hosting on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Feb 2017 22:33:08 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/hosting/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Feb 2017 22:33:08 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/hosting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What Crell doesn&#39;t want you to know: how to automate letsencrypt on platform.sh</title>
-      <link>http://ohthehugemanatee.github.io/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</link>
+      <link>https://ohthehugemanatee.org/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</link>
       <pubDate>Tue, 21 Feb 2017 22:33:08 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</guid>
       <description>If you believe the docs and the twitters, there is no way to automate letsencrypt certificates updates on platform.sh. You have to create the certificates manually, upload them manually, and maintain them manually.
 But as readers of this blog know, the docs are only the start of the story. I&amp;rsquo;ve really enjoyed working with platform.sh with one of my private clients, and I couldn&amp;rsquo;t believe that with all the flexibility - all the POWER - letsencrypt was really out of reach.</description>
     </item>

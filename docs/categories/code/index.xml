@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>code on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/code/</link>
+    <link>https://ohthehugemanatee.org/categories/code/</link>
     <description>Recent content in code on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Aug 2017 12:03:27 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Aug 2017 12:03:27 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The 3 skills you need to become a rock star developer</title>
-      <link>http://ohthehugemanatee.github.io/blog/2017/08/04/the-only-3-tools-you-need-to-become-a-rock-star-developer/</link>
+      <link>https://ohthehugemanatee.org/blog/2017/08/04/the-only-3-tools-you-need-to-become-a-rock-star-developer/</link>
       <pubDate>Fri, 04 Aug 2017 12:03:27 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2017/08/04/the-only-3-tools-you-need-to-become-a-rock-star-developer/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2017/08/04/the-only-3-tools-you-need-to-become-a-rock-star-developer/</guid>
       <description>A lot is made of so-called &amp;ldquo;rockstar developers&amp;rdquo; in any given language or framework. They have a seemingly magical knowledge of the language and API, finding obscure methods and writing best-practice code as if by instinct. I&amp;rsquo;d like to lift the curtain on this: it&amp;rsquo;s not that hard to be this kind of rock star. You can do it, too&amp;hellip; even without a fancy computer science degree. If you know how to code in a given language, you just need 3 skills and some patience.</description>
     </item>
     
     <item>
       <title>Writing Drupal 8 code for Drupal 7</title>
-      <link>http://ohthehugemanatee.github.io/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/</link>
+      <link>https://ohthehugemanatee.org/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/</link>
       <pubDate>Sat, 05 Nov 2016 12:05:50 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/</guid>
       <description>A year ago I proposed a session for Drupalcon Mumbai and Drupalcon New Orleans, called &amp;ldquo;The best of both worlds&amp;rdquo;. It promised to show attendees how to write Drupal 8 code for Drupal 7 sites. I never ended up giving the session, but this week I got an email asking for more information. So in case it ever comes up again, here&amp;rsquo;s my own collection of resources on the subject.</description>
     </item>
     

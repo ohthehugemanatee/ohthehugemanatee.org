@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>k8s on Oh The Huge Manatee!</title>
-    <link>http://ohthehugemanatee.github.io/categories/k8s/</link>
+    <link>https://ohthehugemanatee.org/categories/k8s/</link>
     <description>Recent content in k8s on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Jan 2019 11:10:21 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Jan 2019 11:10:21 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubernetes for stateful applications: Scaling macroservices</title>
-      <link>http://ohthehugemanatee.github.io/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/</link>
+      <link>https://ohthehugemanatee.org/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/</link>
       <pubDate>Mon, 07 Jan 2019 11:10:21 +0000</pubDate>
       
-      <guid>http://ohthehugemanatee.github.io/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/</guid>
+      <guid>https://ohthehugemanatee.org/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/</guid>
       <description>I recently got to proctor an Openhack event on modern containerization. It ended up an excuse to dig deep on one of the corner cases that we all encounter, but no one likes to talk about.
 Kubernetes is one of the greatest orchestration and scaling tools ever built, designed for modern decoupled, stateless architectures. Kubernetes tutorials abound to show you these strong use cases. But in the real world where you don&amp;rsquo;t get to build &amp;ldquo;green field&amp;rdquo; every time, there are a lot of applications that don&amp;rsquo;t fit that model.</description>
     </item>
