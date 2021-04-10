@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>system on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/system/</link>
+    <description>Recent content in system on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Oct 2015 12:44:42 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>El Capitain broke my developer stuff! Here&#39;s how to fix it</title>
+      <link>http://ohthehugemanatee.github.io/blog/2015/10/01/how-i-got-el-capitain-working-with-my-developer-tools/</link>
+      <pubDate>Thu, 01 Oct 2015 12:44:42 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2015/10/01/how-i-got-el-capitain-working-with-my-developer-tools/</guid>
+      <description>Last night I installed OSX&amp;rsquo;s new &amp;ldquo;El Capitain&amp;rdquo; update, and it broke most of the tools I use in my daily life as a developer, including homebrew and git. Here are the steps I had to follow to get everything working again.
+ Disable System Integrity Protection   System Integrity Protection is a new feature of OSX, also called &amp;ldquo;rootless.&amp;rdquo; As the nickname suggests, it creates another level of access above your root account.</description>
+    </item>
+    
+  </channel>
+</rss>

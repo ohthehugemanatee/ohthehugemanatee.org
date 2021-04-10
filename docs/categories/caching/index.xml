@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>caching on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/caching/</link>
+    <description>Recent content in caching on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Jun 2014 16:15:40 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/caching/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to configure Authcache on Drupal 7</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/06/14/how-to-configure-authcache-on-drupal-7/</link>
+      <pubDate>Sat, 14 Jun 2014 16:15:40 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/06/14/how-to-configure-authcache-on-drupal-7/</guid>
+      <description>So you have authenticated user traffic you want to cache? Good - you&amp;rsquo;re on the right post. This post is a walk through for caching content for authenticated users in Drupal 7. We will be using the Authcache suite of modules. If you haven&amp;rsquo;t read it yet, I strongly recommend you check out my last post, Authenticated User Caching Concepts in Drupal 7.
+Our goal is a simple authenticated user caching system based on Authcache&amp;rsquo;s AJAX implementation, with a Memcached backend.</description>
+    </item>
+    
+    <item>
+      <title>The complete Drupal Cache - Serving HTTP and HTTPS content with Varnish</title>
+      <link>http://ohthehugemanatee.github.io/2011/05/complete-drupal-cache-serving-http-and.html</link>
+      <pubDate>Sun, 22 May 2011 21:07:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2011/05/complete-drupal-cache-serving-http-and.html</guid>
+      <description>{% raw %} Varnish is a fantastic caching proxy, commonly used for CMSes. It&#39;s not uncommon to see benchmarks boasting 300-500 page loads per second - I&#39;ve seen benches up to 5000 hits per second. That&#39;s faster than serving flat HTML from Apache; we&#39;re talking about a serious benefit to your server load here.
+Part of Varnish&#39;s tremendous speed comes from how lean it is. At only 58,000 lines of code, it&#39;s very lightweight.</description>
+    </item>
+    
+  </channel>
+</rss>

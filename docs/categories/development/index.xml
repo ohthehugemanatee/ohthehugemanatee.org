@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>development on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/development/</link>
+    <description>Recent content in development on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Aug 2017 12:03:27 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The 3 skills you need to become a rock star developer</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/08/04/the-only-3-tools-you-need-to-become-a-rock-star-developer/</link>
+      <pubDate>Fri, 04 Aug 2017 12:03:27 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/08/04/the-only-3-tools-you-need-to-become-a-rock-star-developer/</guid>
+      <description>A lot is made of so-called &amp;ldquo;rockstar developers&amp;rdquo; in any given language or framework. They have a seemingly magical knowledge of the language and API, finding obscure methods and writing best-practice code as if by instinct. I&amp;rsquo;d like to lift the curtain on this: it&amp;rsquo;s not that hard to be this kind of rock star. You can do it, too&amp;hellip; even without a fancy computer science degree. If you know how to code in a given language, you just need 3 skills and some patience.</description>
+    </item>
+    
+  </channel>
+</rss>

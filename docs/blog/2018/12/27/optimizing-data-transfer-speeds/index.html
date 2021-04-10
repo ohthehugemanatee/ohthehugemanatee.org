@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.81.0" />
+
+    
+    
+    
+
+<title>Optimizing data transfer speeds • Oh The Huge Manatee!</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Optimizing data transfer speeds"/>
+<meta name="twitter:description" content="One of my holiday projects was to set up my home &ldquo;data warehouse.&rdquo; Ever since Dropbox killed modern Linux filesystem support I&rsquo;ve been using (and loving) Nextcloud from my home. It backs up to an encrypted Duplicati store on Azure blob store, so that&rsquo;s offsite backups taken care of. But it was time to knit all my various drives together into a single RAID data warehouse. The only problem: how to transfer my 2 terabytes (rounded to make the math in the post easier) of data, without nasty downtime during the holidays?"/>
+
+<meta property="og:title" content="Optimizing data transfer speeds" />
+<meta property="og:description" content="One of my holiday projects was to set up my home &ldquo;data warehouse.&rdquo; Ever since Dropbox killed modern Linux filesystem support I&rsquo;ve been using (and loving) Nextcloud from my home. It backs up to an encrypted Duplicati store on Azure blob store, so that&rsquo;s offsite backups taken care of. But it was time to knit all my various drives together into a single RAID data warehouse. The only problem: how to transfer my 2 terabytes (rounded to make the math in the post easier) of data, without nasty downtime during the holidays?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ohthehugemanatee.github.io/blog/2018/12/27/optimizing-data-transfer-speeds/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2018-12-27T10:30:23&#43;00:00" />
+<meta property="article:modified_time" content="2018-12-27T10:30:23&#43;00:00" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.71157e768c4e111a23c3531b95e0cbb59bbef3c9e6901d36247cb53d6b6be258.css" integrity="sha256-cRV&#43;doxOERojw1MbleDLtZu&#43;88nmkB02JHy1PWtr4lg=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+<link rel="stylesheet" href="/scss/custom.c9bb9cdc7e3b8c0c27464cdd02ce48b05b01c1737cdbff727ae9152da7d3b432.css" integrity="sha256-ybuc3H47jAwnRkzdAs5IsFsBwXN82/9yeukVLafTtDI=">
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="http://ohthehugemanatee.github.io">
+        
+          Oh The Huge Manatee!
+        
+        </a>
+      </span>
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="http://ohthehugemanatee.github.ioimages/oh_the_huge_manatee.png" alt="Author Image" class="img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, a principal lead software engineer at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Oh The Huge Manatee!</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/about">
+						<span>About Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/">
+						<span>Blog</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/campbellvertesi" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	<a href="https://github.com/ohthehugemanatee" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/campbellvertesi" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>Optimizing data transfer speeds</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Dec 27, 2018
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="/categories/network">NETWORK</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/sysadmin">SYSADMIN</a>
+              
+          
+      
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 6 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>One of my holiday projects was to set up my home &ldquo;data warehouse.&rdquo; Ever since <a href="https://www.dropboxforum.com/t5/Syncing-and-uploads/Linux-Dropbox-client-warn-me-that-it-ll-stop-syncing-in-Nov-why/m-p/290065/highlight/true#M42255">Dropbox killed modern Linux filesystem support</a> I&rsquo;ve been using (and loving) <a href="https://nextcloud.com/">Nextcloud</a> from my home. It backs up to an encrypted <a href="https://www.duplicati.com/">Duplicati</a> store on <a href="https://azure.microsoft.com/en-us/services/storage/blobs/">Azure blob store</a>, so that&rsquo;s offsite backups taken care of. But it was time to knit all my various drives together into a single RAID data warehouse. The only problem: how to transfer my 2 terabytes (rounded to make the math in the post easier) of data, without nasty downtime during the holidays?</p>
+<p>A local network transfer is the fastest, with the least downtime. I have a switched gigabit network in my house, and all my servers are hard wired. That&rsquo;s about 125 megabytes per second; a theoretical 5 hours to transfer everything. Not bad! Start up an rsync and I&rsquo;m all done! So I kicked it off and went to bed:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud.vert
+$ rsync -axz /media/usbdrive/ warehouse:/mnt/storage/ --log-file<span style="color:#f92672">=</span>transfer-to-warehouse.log &amp;
+</code></pre></div><p>I woke up in the morning with the excitement of a kid on Christmas. Everything should be done, right?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh warehouse df -h |grep md0
+/dev/md0        2.7T  501G  2.1T  20% /mnt/storage
+$
+</code></pre></div><p>Wait, what? How had it only transferred 500 gigabytes overnight? Including time for <em>Doctor Who</em> and breakfast, that was only 1 Megabit per second! I knew it was time to play everyone&rsquo;s favorite game: <em>&ldquo;where&rsquo;s the bottleneck?</em></p>
+<p>I guess it could be rsync scanning all those small files. If that&rsquo;s the case, we&rsquo;ll see high CPU usage, and even higher load numbers (as processes are I/O blocked):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud
+$ top
+
+top - 08:22:27 up 10:26,  <span style="color:#ae81ff">1</span> user,  load average: 1.20, 1.34, 1.33
+Tasks: <span style="color:#ae81ff">170</span> total,   <span style="color:#ae81ff">2</span> running, <span style="color:#ae81ff">106</span> sleeping,   <span style="color:#ae81ff">0</span> stopped,   <span style="color:#ae81ff">0</span> zombie
+%Cpu<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>: 28.0 us,  2.1 sy,  0.0 ni, 69.5 id,  0.1 wa,  0.0 hi,  0.3 si,  0.0 st
+KiB Mem : <span style="color:#ae81ff">16330372</span> total,   <span style="color:#ae81ff">180568</span> free,   <span style="color:#ae81ff">657104</span> used, <span style="color:#ae81ff">15492700</span> buff/cache
+KiB Swap:  <span style="color:#ae81ff">4194300</span> total,  <span style="color:#ae81ff">4162556</span> free,    <span style="color:#ae81ff">31744</span> used. <span style="color:#ae81ff">15300068</span> avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                                  
+ <span style="color:#ae81ff">8755</span> ohthehu+  <span style="color:#ae81ff">20</span>   <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">130572</span>  <span style="color:#ae81ff">58456</span>   <span style="color:#ae81ff">2672</span> R  99.0  0.4 513:14.75 rsync                                                                                    
+ <span style="color:#ae81ff">8756</span> ohthehu+  <span style="color:#ae81ff">20</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">49596</span>   <span style="color:#ae81ff">6648</span>   <span style="color:#ae81ff">5152</span> S  16.9  0.0  92:12.29 ssh 
+...
+</code></pre></div><p>OK, let&rsquo;s kill the transfer and start again using a single large, piped tarball. No more small file scans!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud
+$ cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | ssh warehouse <span style="color:#e6db74">&#34;cd /mnt/storage &amp;&amp; tar xpvf -&#34;</span>
+</code></pre></div><p>That helps, but we&rsquo;re still compressing lots of data unnecessarily (most of my data is already compressed), and encrypting it, too. We can improve it with a lightweight ssh cipher and disabled compression:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud
+$ cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | ssh -o Compression<span style="color:#f92672">=</span>no -c chacha20-poly1305@openssh.com warehouse <span style="color:#e6db74">&#34;cd /mnt/storage &amp;&amp; tar xpf -&#34;</span>
+</code></pre></div><p>That chacha20-poly1305 is a very fast cipher indeed - faster than the old arcfour cipher we used to use in this case. But SSH still puts extra work on the CPU. So let&rsquo;s remove it completely from the equation and just use netcat.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | pv | nc -l -q <span style="color:#ae81ff">5</span> -p <span style="color:#ae81ff">9999</span> 
+<span style="color:#75715e"># in a separate terminal</span>
+$ ssh warehouse cd /mnt/storage <span style="color:#f92672">&amp;&amp;</span> nc nextcloud <span style="color:#ae81ff">9999</span> | pv | tar -xf -
+</code></pre></div><p>Transfer speeds now average about 61 megabytes per second. That&rsquo;s fast enough to kick in the law of diminishing returns on my optimization effort: this will take about 8 hours to transfer if I keep it running. I had to pause work for an hour; now if I spend another hour on this, it has to shave more than 25% off my transfer time to finish any earlier tonight. I&rsquo;m not confident I can beat those numbers.</p>
+<p>Still - What happened to my 125 theoretical megabytes per second? Here are the culprits I suspect - and can&rsquo;t really do anything about:</p>
+<ul>
+<li>
+<p><strong>Slow disk</strong>: We are writing to a software RAID5 array of old drives. In my head I was using the channel width of SATA-II for my calculations. In reality, and especially on spinning metal, write speeds are much slower. I looked up my component disks on <a href="userbenchmark.com">userbenchmark.com</a>, and the slowest member has an average sustained sequential write speed of 69 MB/s. This is very likely my first bottleneck. At most I can only use half of my available bandwidth.</p>
+</li>
+<li>
+<p><strong>TCP</strong>: After replacing all my drives with SSDs, TCP is the next culprit I would go after. The protocol technically only has about 6% of overhead, but it also dynamically seeks the maximum send rate through <a href="https://en.wikipedia.org/wiki/TCP_congestion_control">TCP Congestion Control</a>. It keeps trying to send &ldquo;just a little faster&rdquo;, until the number of unacknowledged packets exceeds a threshold. Then it backs off to 50%, and goes back to &ldquo;just a little faster&rdquo; mode. This loop means your practical speed with a TCP stream is about 75% of the pipe&rsquo;s theoretical maximum. Think of it like John Cleese offering just one more &ldquo;wafer thin&rdquo; packet. I considered using UDP to avoid this, but I actually <em>want</em> the error-checking in TCP. Probably the best solution is <a href="https://github.com/LabAdvComp/UDR">something esoteric like UDR</a>.</p>
+</li>
+<li>
+<p><strong>Slow CPU</strong>: This is the last bottleneck here. <em>Warehouse</em> is an old Intel Core2 Duo I had lying around the house. Untar and netcat aren&rsquo;t exactly CPU hungry beasts, but at some point there IS a maximum. If you believe the FreeNAS folks, a fileserver needs an i5 and 8 gigs of RAM for basic functionality. I haven&rsquo;t found that to be the case, but then I&rsquo;m not using RAID-Z, either.</p>
+</li>
+</ul>
+<p>I&rsquo;m happy with the outcome here. I have another drive to copy later, with another terabyte. I&rsquo;m considering removing that slowest drive from my RAID array, since the next-slowest one is almost 50% faster. Then I can copy to the array while it&rsquo;s in degraded mode, and re-add the slowpoke afterwards. We&rsquo;ll see.</p>
+<p>Happy holidays!</p>
+<h3 id="appendix-easy-performance-testing">Appendix: easy performance testing</h3>
+<p>If you&rsquo;re working on a similar problem for yourself, you might find these performance testing commands helpful. The idea is to tease apart each component of the transfer. There are better, more detailed, dedicated tools for each of these, but in a game of &ldquo;find the bottleneck&rdquo; you really only need quick and dirty validation. Fun fact: the command <em>dd</em> is actually short for <strong>D</strong>own and <strong>D</strong>irty. Well it should be, at any rate.</p>
+<p><strong>Read speed (on the source</strong> is easy: hand an arbitrary large file to dd, and write down the numbers it gives.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>large-file.tar.bz2 of<span style="color:#f92672">=</span>/dev/null bs<span style="color:#f92672">=</span>1M
+<span style="color:#ae81ff">1021317200</span> bytes <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> GB<span style="color:#f92672">)</span> copied, 3.9888 s, <span style="color:#ae81ff">256</span> MB/s
+</code></pre></div><p><strong>Network speed</strong> can be tested by netcatting a gigabyte of zeros from one machine to the other.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># On the receiving machine, open a port to /dev/null</span>
+$ nc -vvlnp <span style="color:#ae81ff">12345</span> &gt;/dev/null
+<span style="color:#75715e"># On the sending machine, send a gig of zeroes to that port</span>
+$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero bs<span style="color:#f92672">=</span>1M count<span style="color:#f92672">=</span>1K | nc -vvn 192.168.1.50 <span style="color:#ae81ff">12345</span>
+Connection to 192.168.1.50 <span style="color:#ae81ff">12345</span> port <span style="color:#f92672">[</span>tcp/*<span style="color:#f92672">]</span> succeeded!
+1024+0 records in
+1024+0 records out
+<span style="color:#ae81ff">1073741824</span> bytes <span style="color:#f92672">(</span>1.1 GB, 1.0 GiB<span style="color:#f92672">)</span> copied, 11.7811 s, 91.1 MB/s
+<span style="color:#75715e"># Remember, 8 bits to a byte!</span>
+$ echo <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>bc -l <span style="color:#f92672">&lt;&lt;&lt;</span> 91*8<span style="color:#66d9ef">)</span><span style="color:#e6db74"> Megabits&#34;</span>
+<span style="color:#ae81ff">728</span> Megabits
+</code></pre></div><p><strong>Write speed on the destination</strong> can be tested with dd, too:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero bs<span style="color:#f92672">=</span>1M count<span style="color:#f92672">=</span><span style="color:#ae81ff">1024</span> of<span style="color:#f92672">=</span>/mnt/storage/test.img
+1024+0 records in
+1024+0 records out
+<span style="color:#ae81ff">1073741824</span> bytes <span style="color:#f92672">(</span>1.1 GB, 1.0 GiB<span style="color:#f92672">)</span> copied, 55.3836 s, 19.4 MB/s
+</code></pre></div><p>(note: these tests were run while the copy was happening on warehouse. Your numbers should be better than this!)</p>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/blog/2018/04/19/face-recognition-on-drupal/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Drupal Does Face Recognition: Introducing Image Auto Tag module</span>
+    </a>
+    
+    
+    <a href="/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/" class="navigation-next">
+      <span class="navigation-tittle">Kubernetes for stateful applications: Scaling macroservices</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+
+
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'ohthehugemanatee';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" integrity="sha384-ZbbbT1gw3joYkKRqh0kWyRp32UAvdqkpbLedQJSlnI8iLQcFVxaGyrOgOJiDQTTR" crossorigin="anonymous"></script>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+    
+
+
+
+    </body>
+</html>

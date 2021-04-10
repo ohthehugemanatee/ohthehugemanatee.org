@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>drupalcon on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/drupalcon/</link>
+    <description>Recent content in drupalcon on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Apr 2018 18:06:51 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/drupalcon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Drupal Does Face Recognition: Introducing Image Auto Tag module</title>
+      <link>http://ohthehugemanatee.github.io/blog/2018/04/19/face-recognition-on-drupal/</link>
+      <pubDate>Thu, 19 Apr 2018 18:06:51 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2018/04/19/face-recognition-on-drupal/</guid>
+      <description>Last week I wrote a Drupal module that uses face recognition to automatically tag images with the people in them. You can find it on Github, of course. With this module, you can add an image to a node, and automatically populate an entity_reference field with the names of the people in the image. This isn&amp;rsquo;t such a big deal for individual nodes of course; it&amp;rsquo;s really interesting for bulk use cases, like Digital Asset Management systems.</description>
+    </item>
+    
+    <item>
+      <title>Why no mainstream PHP speakers come to Drupalcon - and how we&#39;re changing that</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/07/28/bring-php-to-drupalcon/</link>
+      <pubDate>Fri, 28 Jul 2017 17:01:59 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/07/28/bring-php-to-drupalcon/</guid>
+      <description>I&amp;rsquo;ve learned something incredible as the PHP Track Chair for Drupalcon Vienna. The Drupal Association has no way to invite PHP speakers to Drupalcon.
+This blew me away when I first learned about it. After all the work to bring mainstream PHP to Drupal core, after all the outreach to PHP-FIG, after all the talks Drupalists have given at major PHP conferences, how is this possible?
+You see, basically every other PHP conference covers their speakers&#39; travel and accommodation costs.</description>
+    </item>
+    
+    <item>
+      <title>Better PHP === Better Drupalists: the PHP track at Drupalcon Vienna</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/06/15/better-php-better-drupalists/</link>
+      <pubDate>Thu, 15 Jun 2017 17:19:24 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/06/15/better-php-better-drupalists/</guid>
+      <description>&lt;p&gt;One of the best parts of Drupal 8 is our shift to enterprise PHP coding structures. With tools like composer and Symfony&amp;rsquo;s structures like Events and Dependency Injection, Drupalists are learning to be great PHP developers, and vice-versa. Today, the fastest route to becoming a rock star Drupalist is through PHP.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m one of the PHP track chairs for Drupalcon Vienna, and this year our focus is &lt;em&gt;better PHP === better Drupalists&lt;/em&gt;. How can better PHP make your life as a Drupal developer easier?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Coder vs. Themer Ultimate Grudge Match Smackdown Fight to the Death</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/05/01/coder-vs-themer-ultimate-grudge-match-smackdown-fight-to-the-death/</link>
+      <pubDate>Thu, 01 May 2014 17:15:31 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/05/01/coder-vs-themer-ultimate-grudge-match-smackdown-fight-to-the-death/</guid>
+      <description>I&amp;rsquo;m really excited about a new session that I&amp;rsquo;ve been doing with my friend and colleague, Adam Juran aka scaragucc: the Coder vs Themer Ultimate Grudge Match Smackdown Fight to the Death! The basic premise: we both start with the same wireframe of a front page to build. But I&amp;rsquo;m only allowed to use the module layer, and Adam is only allowed to use the theme layer. It&amp;rsquo;s a really fun and entertaining way to play with the blurry lines between &amp;ldquo;coder&amp;rdquo; and &amp;ldquo;themer&amp;rdquo;.</description>
+    </item>
+    
+  </channel>
+</rss>

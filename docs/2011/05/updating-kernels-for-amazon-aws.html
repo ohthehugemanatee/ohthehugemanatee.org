@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.81.0" />
+
+    
+    
+    
+
+<title>Updating kernels for Amazon (AWS) Instances • Oh The Huge Manatee!</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Updating kernels for Amazon (AWS) Instances"/>
+<meta name="twitter:description" content="{% raw %} Lately I&#39;ve been getting hit by an odd kernel bug on one of the servers I maintain. &nbsp;It&#39;s discussed in some depth on Launchpad, but the gist is that when trying to find an idle cpu for a new thread, the scheduler divides by cpu_power. &nbsp;On EC2 instances, it&#39;s possible for cpu_power to be 0, which causes a divide by zero kernel crash. &nbsp;Why cpu_power is 0 is still an unknown; this should never be the case."/>
+
+<meta property="og:title" content="Updating kernels for Amazon (AWS) Instances" />
+<meta property="og:description" content="{% raw %} Lately I&#39;ve been getting hit by an odd kernel bug on one of the servers I maintain. &nbsp;It&#39;s discussed in some depth on Launchpad, but the gist is that when trying to find an idle cpu for a new thread, the scheduler divides by cpu_power. &nbsp;On EC2 instances, it&#39;s possible for cpu_power to be 0, which causes a divide by zero kernel crash. &nbsp;Why cpu_power is 0 is still an unknown; this should never be the case." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ohthehugemanatee.github.io/2011/05/updating-kernels-for-amazon-aws.html" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2011-05-09T17:27:00&#43;00:00" />
+<meta property="article:modified_time" content="2011-05-09T17:27:00&#43;00:00" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.71157e768c4e111a23c3531b95e0cbb59bbef3c9e6901d36247cb53d6b6be258.css" integrity="sha256-cRV&#43;doxOERojw1MbleDLtZu&#43;88nmkB02JHy1PWtr4lg=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+<link rel="stylesheet" href="/scss/custom.c9bb9cdc7e3b8c0c27464cdd02ce48b05b01c1737cdbff727ae9152da7d3b432.css" integrity="sha256-ybuc3H47jAwnRkzdAs5IsFsBwXN82/9yeukVLafTtDI=">
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="http://ohthehugemanatee.github.io">
+        
+          Oh The Huge Manatee!
+        
+        </a>
+      </span>
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="http://ohthehugemanatee.github.ioimages/oh_the_huge_manatee.png" alt="Author Image" class="img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, a principal lead software engineer at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Oh The Huge Manatee!</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/about">
+						<span>About Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/">
+						<span>Blog</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/campbellvertesi" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	<a href="https://github.com/ohthehugemanatee" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/campbellvertesi" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>Updating kernels for Amazon (AWS) Instances</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> May 09, 2011
+    
+    
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 6 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    
+{% raw %}
+<div class="css-full-post-content js-full-post-content">
+Lately I've been getting hit by an odd kernel bug on one of the servers I maintain. &nbsp;It's discussed in some depth on <a href="https://bugs.launchpad.net/ubuntu/+source/linux-ec2/+bug/614853">Launchpad</a>, but the gist is that when trying to find an idle cpu for a new thread, the scheduler divides by cpu_power. &nbsp;On EC2 instances, it's possible for cpu_power to be 0, which causes a divide by zero kernel crash. &nbsp;<u>Why</u> cpu_power is 0 is still an unknown; this should never be the case. &nbsp;But in the meantime, there's a patch committed to ec2 kernel 2.6.32-313.26 which adds a check before running this division. &nbsp;If cpu_power is 0, it waits a bit and tries again. &nbsp;I believe it also adds a kernel yell, to help with tracking down the underlying problem. &nbsp;In the meantime, this bug was crashing one of my instances.<br /><br />So it's time to update the kernel. &nbsp;This should be easy, right? &nbsp;apt-get dist-upgrade seems to do it... but if you reboot, uname -r will tell you you're still on the old kernel. &nbsp;That's when the swearing begins.<br /><br />You see, cloud based hosting is a very seductive thing. &nbsp;Those servers LOOK like real servers. &nbsp;They FEEL like real servers. &nbsp;And in 99% of all ways they ACT like real servers. &nbsp;But they are not real servers. &nbsp;And that 1% of difference is where all of the pain comes in. &nbsp;As an aside, succumbing to this illusion is setting yourself up for disaster with any cloud based server.<br /><br />One of the differences is that you don't have a real boot sector, or a real BIOS. &nbsp;Everything you know about the first steps of booting a system has to go out the window. &nbsp;Amazon uses Xen virtualization, which means that all that boot stuff you know should be replaced with <a href="http://wiki.xensource.com/xenwiki/PvGrub">PVGrub</a>. &nbsp;Actually, don't bother learning too much about it; we're just interested in upgrading our kernel.<br /><br />Amazon <a href="http://ec2-downloads.s3.amazonaws.com/user_specified_kernels.pdf">documents this in a PDF</a>, which is a bit painful to work through. &nbsp;I've walked you through my process here.<br /><br />The first thing to know is that you need kernel support for PVGrub (or PV-Grub, because they're inconsistent with the naming). &nbsp;Don't sweat this too much, pvgrub is supported in most big distros. &nbsp;Amazon claims to have tested with these ones:<br /><br />• Fedora 8‐9 Xen kernels<br />• Fedora 13 (2.6.33.6‐147 and higher)<br />• SLES/openSUSE 10.x, 11.0, 11.1 Xen<br />• SLES/openSUSE 11.x EC2 Variant<br />• Ubuntu EC2 Variant  kernels<br />• RHEL 5.x kernels <br />• RHEL 6.x kernels<br />• CentOS 5.x kernels<br />• Gentoo<br /><br />Ubuntu, at least, is smart enough to install the EC2 variant kernels in that apt-get dist-upgrade you ran earlier, so that much is done for you already. <br /><br />The next thing you need to know is that PVGrub has a strong historical connection to PXE booters. &nbsp;If you haven't worked with network booting, that's what PXE does for you. &nbsp;The main difference is that you have to go back to having separate initrd and vmlinuz images in your /boot directory. &nbsp;To be honest, I never trusted booting without vmlinuz, so this made me a little happy. &nbsp;It made me even happier to see that apt-get had dropped both images in there for me already. <br /><br />Now you have to create a grub boot list. &nbsp;On a real server, this is the file which tells Grub which kernels are options for booting. &nbsp;Create /boot/grub/menu.lst with the following content:<br /><br /><blockquote><code> default 0</code><code> timeout 3<br /></code><code> title EC2<br /></code><code> root (hd0)<br /></code><code> kernel /boot/vmlinuz-2.6.32-314-ec2 root=/dev/sda1</code><code> initrd /boot/initrd.img-2.6.32-314-ec2</code></blockquote><br />Those are the vmlinuz and initrd filenames that I got from my update - since you're following this guide somewhere in the future, those version numbers will be different. &nbsp;Have a quick look to see what you've got in /boot , and replace those filenames in your own menu.lst.<br /><br />That's it - but in order to make this active, you have to bundle it as an AMI and start a new instance. &nbsp;This actually enforces a very good, conservative workflow. &nbsp;You get to run your updates, and test the kernel update on a non-live environment before moving your live IP over. <br /><br />Because you're using a non-standard kernel, you do have to manually specify a few things in your AMI build process. &nbsp;Here's the run-down:<br /><blockquote><code> # ec2-bundle-vol -r [ARCH] -d [DESTINATION] -p [AMI-NAME] -u [AWS-USERID] -k [KEYFILE] -c [CERTFILE] -s 10240 -e [EXCEPTIONS] --kernel [KERNEL-ID]</code></blockquote><div>This is your standard <a href="http://docs.amazonwebservices.com/AmazonEC2/dg/2006-10-01/CLTRG-ami-bundle-vol.html">ec2-bundle-vol</a> command. &nbsp;If you don't use this too often, here are the variables:<br /><br /><ul><li>[ARCH] is the CPU architecture for your instance. &nbsp;It's either i386 or x86_64</li><li>[DESTINATION] is the temporary filespace to use when building the AMI. &nbsp;<b>Do not do this on the root partition</b>. &nbsp;I use /mnt , which is the 100gb EBS volume provided with the instance.</li><li>[AMI-NAME] is the name for the AMI. It can be anything, I used production-kernel-2.6.32-314-ec2</li><li>[AWS-USERID] Your AWS userID number. &nbsp;You can find it in the top right corner of the AWS account page.</li><li>[KEYFILE] and [CERTFILE] are your AWS keyfile and certificate files, which are used to authenticate with AWS.</li><li>[EXCEPTIONS] is a comma delineated list of directories to leave out of the image file. &nbsp;In my case this is /mnt,/tmp,/ebs . &nbsp;Note that if you leave /tmp out, the tempdir created automatically will have incorrect permissions.</li></ul><div>[KERNEL-ID] doesn't fit into a bullet point. &nbsp;This is an ID that identifies the architecture of the instance for Amazon's bootloader, and it's important. &nbsp;Choose the right KID depending on your CPU, instance type, and region:</div><div><div><table><tbody><tr><td></td><td><b>32-bit Instance</b></td><td><b>64-bit Instance</b></td><td><b>32-bit EBS</b></td><td><b>64-bit EBS</b></td></tr><tr><td><b>US-East-1</b></td><td>aki-407d9529</td><td>aki-427d952b</td><td>aki-4c7d9525</td><td>aki-4e7d9527</td></tr><tr><td><b>US-West-1</b></td><td>aki-99a0f1dc</td><td>aki-9ba0f1de</td><td>aki-9da0f1d8</td><td>aki-9fa0f1da</td></tr><tr><td><b>EU-West-1</b></td><td>aki-4deec439</td><td>aki-4feec43b</td><td>aki-47eec433</td><td>aki-41eec435</td></tr><tr><td><b>AP-SouthEast-1</b></td><td>aki-13d5aa41</td><td>aki-11d5aa43</td><td>aki-6fd5aa3d</td><td>aki-6dd5aa3f</td></tr></tbody></table></div><div><br /></div><div>One important note: in Amazon's PDF documentation, they use an odd character set. &nbsp;This means that the hyphen in the middle of the AKI is not a unicode hyphen. &nbsp;I spent more than an hour trying to figure out why my AMI was complaining of an invalid AKI over this! &nbsp;Either copy and paste the ID from this blog post, or type it in by hand. <br /><br />From here on in ,it's a standard AMI upload and register process:<br /><br /><blockquote><code> # ec2-upload-bundle -b [BUCKET-LOCATION] -m [MANIFEST] -a [KEY] -s [SECRET KEY]</code></blockquote><br /><br /><ul><li>[BUCKET-LOCATION] is the name of an S3 bucket where you want to save this AMI. &nbsp;If the bucket doesn't exist, ec2-upload-bundle will create it.</li><li>[MANIFEST] is the manifest file created with ec2-bundle-vol above. &nbsp;It'll be in the same directory, with the same name, just with the extension .manifest.xml . &nbsp;For example, /mnt/production-kernel-2.6.32-314-ec2.manifest.xml</li><li>[KEY] and [SECRET KEY] are your AWS key and secret key, which you can get from your AWS Account area.</li></ul><br /><code><br /># ec2-register –-name [AMI NAME] [S3 MANIFEST]<br /></code><br /><br /><br /><ul><li>[AMI NAME] is the name of your AMI (duh)</li><li>[S3 MANIFEST] is the path of the manifest file you just uploaded, including the bucket path, on S3. &nbsp;For example prod-upgrade/production-kernel-2.6.32-314-ec2.manifest.xml</li></ul>Now start your new AMI, and test like hell before replacing that production instance!&nbsp;</div></div></div>
+</div>
+{% endraw %}
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/2011/04/simple-aws-backups-with-snapshots-and.html" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Simple AWS backups with Snapshots and AMIs</span>
+    </a>
+    
+    
+    <a href="/2011/05/setting-up-secure-ldap-on-ubuntu-1004.html" class="navigation-next">
+      <span class="navigation-tittle">Setting up Secure LDAP on Ubuntu 10.04 - the idiot&#39;s guide to SSL, TLS, and SLAPD</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+
+
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'ohthehugemanatee';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" integrity="sha384-ZbbbT1gw3joYkKRqh0kWyRp32UAvdqkpbLedQJSlnI8iLQcFVxaGyrOgOJiDQTTR" crossorigin="anonymous"></script>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+    
+
+
+
+    </body>
+</html>

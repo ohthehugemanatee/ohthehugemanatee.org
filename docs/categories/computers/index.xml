@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>computers on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/computers/</link>
+    <description>Recent content in computers on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Dec 2010 00:57:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/computers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I baked a computer (and it worked!)</title>
+      <link>http://ohthehugemanatee.github.io/2010/12/i-baked-computer-and-it-worked.html</link>
+      <pubDate>Mon, 20 Dec 2010 00:57:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2010/12/i-baked-computer-and-it-worked.html</guid>
+      <description>{% raw %} This weekend a friend asked me to have a look at his HP DV9500 laptop. &amp;nbsp;It was having trouble - when you turned it on, the screen showed nothing but a solid grey with a few thin black bars. &amp;nbsp;The grey increased in intensity as the system ran, until it ran off the colors that the display knew how to show.
+Clearly, there was a problem with the video card.</description>
+    </item>
+    
+  </channel>
+</rss>

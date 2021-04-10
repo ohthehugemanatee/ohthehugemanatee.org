@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ami on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/ami/</link>
+    <description>Recent content in ami on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Apr 2011 15:26:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/ami/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple AWS backups with Snapshots and AMIs</title>
+      <link>http://ohthehugemanatee.github.io/2011/04/simple-aws-backups-with-snapshots-and.html</link>
+      <pubDate>Sat, 30 Apr 2011 15:26:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2011/04/simple-aws-backups-with-snapshots-and.html</guid>
+      <description>{% raw %} Are you just getting started with Amazon Web Services? &amp;nbsp;It&#39;s a great service, but it faces some reliability challenges. &amp;nbsp;This post explains how to set up a simple backup system using Amazon&#39;s &#34;snapshot&#34; &#34;machine image&#34; functionalities.
+Dependencies
+Before you begin, you will need:
+Amazon&#39;s standard EC2 Command Line ToolsAlestic&#39;s ebs-consistent-snapshot programTech Kismet&#39;s remove-old-snapshots.php script (which must be so named)
+
+AMI Images
+Everyone knows that Amazon Instances are ephemeral.</description>
+    </item>
+    
+  </channel>
+</rss>

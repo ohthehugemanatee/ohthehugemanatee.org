@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>drupal 8 on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/drupal-8/</link>
+    <description>Recent content in drupal 8 on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Jun 2017 17:19:24 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/drupal-8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Better PHP === Better Drupalists: the PHP track at Drupalcon Vienna</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/06/15/better-php-better-drupalists/</link>
+      <pubDate>Thu, 15 Jun 2017 17:19:24 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/06/15/better-php-better-drupalists/</guid>
+      <description>&lt;p&gt;One of the best parts of Drupal 8 is our shift to enterprise PHP coding structures. With tools like composer and Symfony&amp;rsquo;s structures like Events and Dependency Injection, Drupalists are learning to be great PHP developers, and vice-versa. Today, the fastest route to becoming a rock star Drupalist is through PHP.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m one of the PHP track chairs for Drupalcon Vienna, and this year our focus is &lt;em&gt;better PHP === better Drupalists&lt;/em&gt;. How can better PHP make your life as a Drupal developer easier?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Stop waiting for Feeds module: how to import RSS in Drupal 8</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/06/07/stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8/</link>
+      <pubDate>Wed, 07 Jun 2017 00:33:24 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/06/07/stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8/</guid>
+      <description>How do you import an RSS feed into entities with Drupal 8? In Drupal 6 and 7, you probably used the Feeds module. Feeds 7 made it easy (-ish) to click together a configuration that matches an RSS (or any XML, or CSV, or OPML, etc) source to a Drupal entity type, maps source data into Drupal fields, and runs an import with the site Cron. Where has that functionality gone in D8?</description>
+    </item>
+    
+    <item>
+      <title>Writing Drupal 8 code for Drupal 7</title>
+      <link>http://ohthehugemanatee.github.io/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/</link>
+      <pubDate>Sat, 05 Nov 2016 12:05:50 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/</guid>
+      <description>A year ago I proposed a session for Drupalcon Mumbai and Drupalcon New Orleans, called &amp;ldquo;The best of both worlds&amp;rdquo;. It promised to show attendees how to write Drupal 8 code for Drupal 7 sites. I never ended up giving the session, but this week I got an email asking for more information. So in case it ever comes up again, here&amp;rsquo;s my own collection of resources on the subject.</description>
+    </item>
+    
+    <item>
+      <title>Drupal 8 RC 1 is out! What now?</title>
+      <link>http://ohthehugemanatee.github.io/blog/2015/10/08/drupal-8-rc-1-is-out-what-now/</link>
+      <pubDate>Thu, 08 Oct 2015 11:16:02 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2015/10/08/drupal-8-rc-1-is-out-what-now/</guid>
+      <description>Last night (my time) I got the good news over twitter:
+That&amp;rsquo;s right, Drupal 8 has it&amp;rsquo;s first release. But what does that mean? Is it done? Can I start using it yet? What kind of changes are coming? Will dawehner get to sleep, at last?
+Are we there yet? Despite all the rejoicing on social media, this isn&amp;rsquo;t the final release for Drupal 8 - it&amp;rsquo;s only the first Release Candidate.</description>
+    </item>
+    
+    <item>
+      <title>How to build a new source for Drupal Migrate 8</title>
+      <link>http://ohthehugemanatee.github.io/blog/2015/05/02/how-to-build-a-new-source-for-drupal-migrate-8/</link>
+      <pubDate>Sat, 02 May 2015 10:10:36 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2015/05/02/how-to-build-a-new-source-for-drupal-migrate-8/</guid>
+      <description>This week I wanted to accomplish a task in Drupal 8 that would be simple in Drupal 7: Import several CSV files, each one related to the others by taxonomy terms. Most importantly, I wanted to do it with Migrate module.
+Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used from the GUI, rather, it provides a framework of &amp;ldquo;source&amp;rdquo;, &amp;ldquo;destination&amp;rdquo;, and &amp;ldquo;migration&amp;rdquo; classes so that even the most convoluted migration is 90% written for you.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.81.0" />
+
+    
+    
+    
+
+<title>Unlocking and jailbreaking my iPhone 3gs on 4.1.2 - a little late • Oh The Huge Manatee!</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Unlocking and jailbreaking my iPhone 3gs on 4.1.2 - a little late"/>
+<meta name="twitter:description" content="{% raw %} While I was away over the weekend, I borked my iphone. &nbsp;I was running IOS 4.0, and I was having trouble with network connections.
+The statusbar wouldn&#39;t reflect my actual connection status. &nbsp;WiFi connections would rarely show up in the statusbar, though I knew I was surfing wirelessly (my router at 10.10.10.1 was accessible to the phone, for starters...)WiFi would periodically crash. &nbsp;In the middle of a good network connection, it would just."/>
+
+<meta property="og:title" content="Unlocking and jailbreaking my iPhone 3gs on 4.1.2 - a little late" />
+<meta property="og:description" content="{% raw %} While I was away over the weekend, I borked my iphone. &nbsp;I was running IOS 4.0, and I was having trouble with network connections.
+The statusbar wouldn&#39;t reflect my actual connection status. &nbsp;WiFi connections would rarely show up in the statusbar, though I knew I was surfing wirelessly (my router at 10.10.10.1 was accessible to the phone, for starters...)WiFi would periodically crash. &nbsp;In the middle of a good network connection, it would just." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ohthehugemanatee.github.io/2010/12/unlocking-and-jailbreaking-my-iphone.html" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2010-12-18T02:02:00&#43;00:00" />
+<meta property="article:modified_time" content="2010-12-18T02:02:00&#43;00:00" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.71157e768c4e111a23c3531b95e0cbb59bbef3c9e6901d36247cb53d6b6be258.css" integrity="sha256-cRV&#43;doxOERojw1MbleDLtZu&#43;88nmkB02JHy1PWtr4lg=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+<link rel="stylesheet" href="/scss/custom.c9bb9cdc7e3b8c0c27464cdd02ce48b05b01c1737cdbff727ae9152da7d3b432.css" integrity="sha256-ybuc3H47jAwnRkzdAs5IsFsBwXN82/9yeukVLafTtDI=">
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="http://ohthehugemanatee.github.io">
+        
+          Oh The Huge Manatee!
+        
+        </a>
+      </span>
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="http://ohthehugemanatee.github.ioimages/oh_the_huge_manatee.png" alt="Author Image" class="img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, a principal lead software engineer at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Oh The Huge Manatee!</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/about">
+						<span>About Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/">
+						<span>Blog</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/campbellvertesi" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	<a href="https://github.com/ohthehugemanatee" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/campbellvertesi" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>Unlocking and jailbreaking my iPhone 3gs on 4.1.2 - a little late</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Dec 18, 2010
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="/categories/cydia">CYDIA</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/iphone">IPHONE</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/itunes">ITUNES</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/jailbreak">JAILBREAK</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/pwnagetool">PWNAGETOOL</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/ultrasn0w">ULTRASN0W</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/unlock">UNLOCK</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/update">UPDATE</a>
+              
+          
+      
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 4 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    
+{% raw %}
+<div class="css-full-post-content js-full-post-content">
+While I was away over the weekend, I borked my iphone. &nbsp;I was running IOS 4.0, and I was having trouble with network connections.<br /><ul><li>The statusbar wouldn't reflect my actual connection status. &nbsp;WiFi connections would rarely show up in the statusbar, though I knew I was surfing wirelessly (my router at 10.10.10.1 was accessible to the phone, for starters...)</li><li>WiFi would periodically crash. &nbsp;In the middle of a good network connection, it would just. stop. working. &nbsp;I could go to System Preferences and see that WiFi was inexplicably disabled. &nbsp;If I tried to enable it, the switch animation would work, but no networks would be visible. &nbsp;Exiting and re-entering System Preferences would show WiFi disabled again.</li><li>Periodically all networking would crap out. &nbsp;The statusbar would show a good 3G connection, and ifconfig would show an IP... but the phone couldn't establish any connections, anywhere. &nbsp;</li></ul><div>Only rebooting ever solved any of the above problems. &nbsp;So this weekend I started to look into it, and it occurred to me that maybe SBSettings was interfering with networking - I periodically disable or enable Wifi in SBSettings, and it occurred to me that maybe there was a conflict there. &nbsp;So I uninstalled SBSettings, (noting that it unnecessarily included iphone zsrelay in the uninstall)...</div><div><br /></div><div>And my phone stopped getting signal. &nbsp;I had never seen anything like it before. &nbsp;It didn't show an operator, just 0 signal bars. &nbsp;It could get wifi, but couldn't access the Internet over it. &nbsp;In retrospect, I think the SBSettings uninstall borked my yellowsn0w unlock, and at the same time my networking subsystem in general wasn't working. &nbsp;</div><div><br /></div><div>The solution was clear - I had to reinstall. &nbsp;I figured I would do an update at the same time, just in case the networking issue was related. &nbsp;So I spent this evening painfully updating to 4.1.2. &nbsp;For anyone who encounters the same kind of pain I did:</div><div><br /></div><div><ul><li>Don't bother with the latest Apple firmware. &nbsp;Firmware 4.2.1 is not easily crackable for the iphone 3gs yet, and besides, <a href="http://www.iclarified.com/entry/index.php?enid=12944">the most common way</a> to crack is to install the baseband from the iPad (06.15), which brings&nbsp;all sorts of problems, including broken GPS and disappearing battery charge.... deal breakers for most people IMO. &nbsp;</li><li>But when you try to install a non-current version of the firmware, iTunes won't let you! &nbsp;It phones home to the iTunes update servers to make sure that you are restoring to the most recent version. &nbsp;If it hears back that there is a MORE RECENT version than what you are trying to use, it will throw a message:</li></ul><blockquote><i>This device is not eligible for the requested build</i></blockquote><ul><li>If you use the older hack, and change your /etc/hosts so that gs.apple.com points to 127.0.0.1 (your own computer), it will complain that the update server is not responding, and refuse to go forward. &nbsp;This check involves an exchange of an encrypted key, which uses your unique iPhone's ID as one variable and Apple's passphrase as another. &nbsp;<a href="http://www.saurik.com/id/12">Saurik (of Cydia fame) set up a server</a>&nbsp;(note: really awesome post, recommended reading) to keep a backup of examples of successful SHSH key "handshakes" for each device, so you have to use the IP of this server instead.<br /></li></ul><br /></div>So here are the steps I had to follow, for reference:<br /><br /><ol><li>Download the 4.1.2 .ipsw for your iphone. &nbsp;I found it on binsearch by searching iPhone2,1_4.1_8B117_Restore.ipsw .</li><li>Download PwnageTool - get it from the torrent or the links on the official <a href="http://blog.iphone-dev.org/">devteam blog</a> site only! Everyone else is at best a scammer, or at worst a hack stealing the product of devteam's hard work.</li><li>Use <a href="http://blog.iphone-dev.org/post/1359246784/20102010-event">pwnagetool</a> to build yourself a custom version of the 4.1.2 firmware you just downloaded.</li><li>To foil Apple's update server check, add a line to etc/hosts pointing gs.apple.com to&nbsp;74.208.10.249 , Saurik's SHSH backup IP as of this writing. <br />If you have used Cydia before (and clicked the "make my life easier" button), this will be enough to get the restore going. &nbsp;If not, even a failed check of your validity for the firmware involves a key exchange, and having this IP in /etc/hosts will make sure that the SHSH key gets uploaded to Saurik's server. &nbsp;Give it about a day, and try again. &nbsp;Did I remember to link to Saurik's<a href="http://www.saurik.com/id/12"> really interesting blog post</a> about this? It explains a lot. &nbsp;If that doesn't help, try the <a href="http://thefirmwareumbrella.blogspot.com/">TinyUmbrella tool</a>.</li><li>When your custom .ipsw is written, put your iphone into DFU mode, open iTunes, and OPTION-click (for Macs) on the Restore link to select your custom firmware.</li><li>When your phone is restored and working, use Cydia to install ultrasn0w (the unlock).</li></ol>This took up MUCH to much of my evening. &nbsp;Once again, I found myself exercising creativity in swearing at computers.
+</div>
+{% endraw %}
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    
+    <a href="/2010/12/i-baked-computer-and-it-worked.html" class="navigation-next">
+      <span class="navigation-tittle">I baked a computer (and it worked!)</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+
+
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'ohthehugemanatee';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" integrity="sha384-ZbbbT1gw3joYkKRqh0kWyRp32UAvdqkpbLedQJSlnI8iLQcFVxaGyrOgOJiDQTTR" crossorigin="anonymous"></script>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+    
+
+
+
+    </body>
+</html>

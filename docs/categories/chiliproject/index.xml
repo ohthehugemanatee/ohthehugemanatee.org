@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chiliproject on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/chiliproject/</link>
+    <description>Recent content in chiliproject on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Jan 2014 21:20:55 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/chiliproject/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Another cryptic Ruby message</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/01/10/another-cryptic-ruby-message/</link>
+      <pubDate>Fri, 10 Jan 2014 21:20:55 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/01/10/another-cryptic-ruby-message/</guid>
+      <description>Ruby on Rails drives me nuts, and today I found another example of why: the cryptic error messages. After a server update, my chiliproject/redmine site refused to start. The error message was
+ &amp;ldquo;Object is not missing constant Issue!&amp;rdquo;
+ What does that even mean? It took me a little while to understand that Issue in this context is the Redmine object &amp;ldquo;Issue&amp;rdquo;. But still, &amp;ldquo;Object is not missing constant X&amp;rdquo; isn&amp;rsquo;t much help.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>android on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/android/</link>
+    <description>Recent content in android on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 May 2015 12:20:33 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Troubleshooting Android error -505 from google play</title>
+      <link>http://ohthehugemanatee.github.io/blog/2015/05/29/troubleshooting-android-error-505-from-google-play/</link>
+      <pubDate>Fri, 29 May 2015 12:20:33 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2015/05/29/troubleshooting-android-error-505-from-google-play/</guid>
+      <description>I recently got a new Android phone, and very quickly had trouble installing some of my favorite apps. Google&amp;rsquo;s Play Store downloads the app successfully, then presents me with &amp;ldquo;Unknown Error -505&amp;rdquo;.
+This error message means precisely nothing. It means &amp;ldquo;something went wrong during installation, and we&amp;rsquo;re not telling you what.&amp;rdquo; This drives me crazy. This blog post is about how to get more information out of that error message, and how to fix the problem.</description>
+    </item>
+    
+    <item>
+      <title>How and why to update the modem/baseband firmware on a Samsung Android phone</title>
+      <link>http://ohthehugemanatee.github.io/blog/2015/04/04/how-and-why-to-update-the-modem-slash-baseband-firmware-on-a-samsung-phone/</link>
+      <pubDate>Sat, 04 Apr 2015 08:09:47 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2015/04/04/how-and-why-to-update-the-modem-slash-baseband-firmware-on-a-samsung-phone/</guid>
+      <description>If you have a Samsung Android phone, and you use Samsung&amp;rsquo;s own version of Android, this article is not for you. When Samsung sends you updates to Android, they also will include any relevant updates to the modem/baseband firmware. So stop reading and go have a cup of tea or something, your job is done.
+But for everyone who uses a custom ROM like Cyanogenmod, ParanoidAndroid, or AOKP, sit up and pay attention: you&amp;rsquo;re missing some key updates for your phone, and it&amp;rsquo;s probably the reason you have trouble with cellular signal or battery life.</description>
+    </item>
+    
+    <item>
+      <title>How to recover photos and data from a keylocked Android phone</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/05/18/recovering-photos-and-data-from-a-keylocked-android-phone/</link>
+      <pubDate>Sun, 18 May 2014 18:55:31 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/05/18/recovering-photos-and-data-from-a-keylocked-android-phone/</guid>
+      <description>Recently a good friend of mine passed away suddenly. Her family asked me to recover her photos and videos from her computer and android phone. The computer was easy enough, but the android phone posed a real problem. It had a keylock enabled, and USB debugging disabled. There was no external SD card to pull out, which meant that all the photos were stored on the internal memory. The phone was a totally stock Samsung Galaxy S3 mini.</description>
+    </item>
+    
+    <item>
+      <title>HTC Inspire, Cyanogenmod 7, and HSUPA</title>
+      <link>http://ohthehugemanatee.github.io/2011/04/htc-inspire-cyanogenmod-7-and-hsupa.html</link>
+      <pubDate>Thu, 14 Apr 2011 02:21:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2011/04/htc-inspire-cyanogenmod-7-and-hsupa.html</guid>
+      <description>{% raw %} About a month ago, I picked up my first Android phone: the HTC Inspire 4g, from AT&amp;amp;T in the US. &amp;nbsp;I determined to root it, install a custom OS, and laugh at all the poor saps who get bad battery life on HTC Sense.
+The first challenge is in the name. &amp;nbsp;See, the HTC Inspire 4G is really just a rebranded HTC Desire HD, which is a tweaked HTC Desire, which is another name for the HTC Ace.</description>
+    </item>
+    
+  </channel>
+</rss>

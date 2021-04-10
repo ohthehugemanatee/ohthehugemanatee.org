@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jekyll/Octopress on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/jekyll/octopress/</link>
+    <description>Recent content in Jekyll/Octopress on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://ohthehugemanatee.github.io/categories/jekyll/octopress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Drupalist makes the case for Jekyll/Octopress</title>
+      <link>http://ohthehugemanatee.github.io/blog/2013/11/26/a-drupalist-makes-the-case-for-jekyll-slash-octopress/</link>
+      <pubDate>Tue, 26 Nov 2013 17:59:05 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2013/11/26/a-drupalist-makes-the-case-for-jekyll-slash-octopress/</guid>
+      <description>Today I&amp;rsquo;m launching my new domain, OhTheHugeManatee.org. ORG was the only TLD left, but I&amp;rsquo;m asking after .com . :)
+I made the decision to launch it using Jekyll and Octopress, rather than Drupal. This feels a little funny to a career Drupalist like myself. Why not use Drupal 7, or use it as a testing ground for Drupal 8? Anyone who knows me will know that I complain bitterly about Ruby, and I&amp;rsquo;ve been vocal about the misuse of Jekyll for healthcare.</description>
+    </item>
+    
+  </channel>
+</rss>

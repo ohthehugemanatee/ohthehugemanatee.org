@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cyanogenmod on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/cyanogenmod/</link>
+    <description>Recent content in cyanogenmod on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Apr 2011 02:21:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/cyanogenmod/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTC Inspire, Cyanogenmod 7, and HSUPA</title>
+      <link>http://ohthehugemanatee.github.io/2011/04/htc-inspire-cyanogenmod-7-and-hsupa.html</link>
+      <pubDate>Thu, 14 Apr 2011 02:21:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2011/04/htc-inspire-cyanogenmod-7-and-hsupa.html</guid>
+      <description>{% raw %} About a month ago, I picked up my first Android phone: the HTC Inspire 4g, from AT&amp;amp;T in the US. &amp;nbsp;I determined to root it, install a custom OS, and laugh at all the poor saps who get bad battery life on HTC Sense.
+The first challenge is in the name. &amp;nbsp;See, the HTC Inspire 4G is really just a rebranded HTC Desire HD, which is a tweaked HTC Desire, which is another name for the HTC Ace.</description>
+    </item>
+    
+  </channel>
+</rss>

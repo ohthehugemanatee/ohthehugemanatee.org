@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>decoupled on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/decoupled/</link>
+    <description>Recent content in decoupled on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Feb 2017 11:18:44 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/decoupled/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Between the cracks of decoupled (Drupal) architecture</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/02/11/a-year-between-the-cracks-of-decoupled-drupal/</link>
+      <pubDate>Sat, 11 Feb 2017 11:18:44 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/02/11/a-year-between-the-cracks-of-decoupled-drupal/</guid>
+      <description>In any decoupled architecture, people tend to focus on the pieces that will fit together. But what nobody ever tells you is: watch out for the cracks!
+The cracks are the integration points between the different components. It&amp;rsquo;s not GraphQL as a communication layer; it&amp;rsquo;s that no one thinks to log GraphQL inconsistencies when they occur. It&amp;rsquo;s not &amp;ldquo;what&amp;rsquo;s my development environment&amp;rdquo;, it&amp;rsquo;s &amp;ldquo;how do these three development environments work on my localhost at the same time?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>entity on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/entity/</link>
+    <description>Recent content in entity on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 Mar 2012 12:58:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/entity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Drupal Entities, or how Organic Groups and Taxonomy are the same thing</title>
+      <link>http://ohthehugemanatee.github.io/2012/03/on-drupal-entities-or-how-organic.html</link>
+      <pubDate>Sun, 25 Mar 2012 12:58:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2012/03/on-drupal-entities-or-how-organic.html</guid>
+      <description>{% raw %} I&#39;m a big fan of the new Entities model for Drupal. I&#39;ve been working a lot with it lately, and it makes a lot of sense... but my favorite part is how it keeps blowing away my old assumptions, inherited from 7 years of Drupal experience. Here&#39;s a big one that got me recently: Organic Groups is useless, because it&#39;s basically Taxonomy with a couple of neat add-ons.</description>
+    </item>
+    
+  </channel>
+</rss>

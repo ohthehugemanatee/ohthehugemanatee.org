@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>drupalplanet on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/drupalplanet/</link>
+    <description>Recent content in drupalplanet on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Apr 2018 18:06:51 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/drupalplanet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Drupal Does Face Recognition: Introducing Image Auto Tag module</title>
+      <link>http://ohthehugemanatee.github.io/blog/2018/04/19/face-recognition-on-drupal/</link>
+      <pubDate>Thu, 19 Apr 2018 18:06:51 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2018/04/19/face-recognition-on-drupal/</guid>
+      <description>Last week I wrote a Drupal module that uses face recognition to automatically tag images with the people in them. You can find it on Github, of course. With this module, you can add an image to a node, and automatically populate an entity_reference field with the names of the people in the image. This isn&amp;rsquo;t such a big deal for individual nodes of course; it&amp;rsquo;s really interesting for bulk use cases, like Digital Asset Management systems.</description>
+    </item>
+    
+    <item>
+      <title>I&#39;m joining Microsoft, because they&#39;re doing Open Source Right</title>
+      <link>http://ohthehugemanatee.github.io/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</link>
+      <pubDate>Wed, 10 Jan 2018 20:32:50 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</guid>
+      <description>I&amp;rsquo;m excited to announce that I&amp;rsquo;ve signed with Microsoft as a Principal Software Engineering Manager. I&amp;rsquo;m joining Microsoft because they are doing enterprise Open Source the Right Way, and I want to be a part of it. This is a sentence that I never believed I would write or say, so I want to explain.
+First I have to acknowledge the history. I co-founded my first tech company just as the Halloween documents were leaked.</description>
+    </item>
+    
+    <item>
+      <title>Why no mainstream PHP speakers come to Drupalcon - and how we&#39;re changing that</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/07/28/bring-php-to-drupalcon/</link>
+      <pubDate>Fri, 28 Jul 2017 17:01:59 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/07/28/bring-php-to-drupalcon/</guid>
+      <description>I&amp;rsquo;ve learned something incredible as the PHP Track Chair for Drupalcon Vienna. The Drupal Association has no way to invite PHP speakers to Drupalcon.
+This blew me away when I first learned about it. After all the work to bring mainstream PHP to Drupal core, after all the outreach to PHP-FIG, after all the talks Drupalists have given at major PHP conferences, how is this possible?
+You see, basically every other PHP conference covers their speakers&#39; travel and accommodation costs.</description>
+    </item>
+    
+    <item>
+      <title>Better PHP === Better Drupalists: the PHP track at Drupalcon Vienna</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/06/15/better-php-better-drupalists/</link>
+      <pubDate>Thu, 15 Jun 2017 17:19:24 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/06/15/better-php-better-drupalists/</guid>
+      <description>&lt;p&gt;One of the best parts of Drupal 8 is our shift to enterprise PHP coding structures. With tools like composer and Symfony&amp;rsquo;s structures like Events and Dependency Injection, Drupalists are learning to be great PHP developers, and vice-versa. Today, the fastest route to becoming a rock star Drupalist is through PHP.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m one of the PHP track chairs for Drupalcon Vienna, and this year our focus is &lt;em&gt;better PHP === better Drupalists&lt;/em&gt;. How can better PHP make your life as a Drupal developer easier?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Stop waiting for Feeds module: how to import RSS in Drupal 8</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/06/07/stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8/</link>
+      <pubDate>Wed, 07 Jun 2017 00:33:24 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/06/07/stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8/</guid>
+      <description>How do you import an RSS feed into entities with Drupal 8? In Drupal 6 and 7, you probably used the Feeds module. Feeds 7 made it easy (-ish) to click together a configuration that matches an RSS (or any XML, or CSV, or OPML, etc) source to a Drupal entity type, maps source data into Drupal fields, and runs an import with the site Cron. Where has that functionality gone in D8?</description>
+    </item>
+    
+    <item>
+      <title>Stay for community</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/03/30/stay-for-community/</link>
+      <pubDate>Thu, 30 Mar 2017 12:22:11 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/03/30/stay-for-community/</guid>
+      <description>The Crellpocalypse in the Drupal world last week has shaken the entire community. This event and its handling have called our fundamental values and structures into question. We&amp;rsquo;ve had fights on social media, calls for Dries to step down, and valuable contributors stepping away from the community. I have friends on every side of the situation, but all I can think is: This seems like the perfect time for a singing, dancing, spandexed pageant about the Drupal community.</description>
+    </item>
+    
+    <item>
+      <title>What Crell doesn&#39;t want you to know: how to automate letsencrypt on platform.sh</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</link>
+      <pubDate>Tue, 21 Feb 2017 22:33:08 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</guid>
+      <description>If you believe the docs and the twitters, there is no way to automate letsencrypt certificates updates on platform.sh. You have to create the certificates manually, upload them manually, and maintain them manually.
+But as readers of this blog know, the docs are only the start of the story. I&amp;rsquo;ve really enjoyed working with platform.sh with one of my private clients, and I couldn&amp;rsquo;t believe that with all the flexibility - all the POWER - letsencrypt was really out of reach.</description>
+    </item>
+    
+    <item>
+      <title>Between the cracks of decoupled (Drupal) architecture</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/02/11/a-year-between-the-cracks-of-decoupled-drupal/</link>
+      <pubDate>Sat, 11 Feb 2017 11:18:44 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/02/11/a-year-between-the-cracks-of-decoupled-drupal/</guid>
+      <description>In any decoupled architecture, people tend to focus on the pieces that will fit together. But what nobody ever tells you is: watch out for the cracks!
+The cracks are the integration points between the different components. It&amp;rsquo;s not GraphQL as a communication layer; it&amp;rsquo;s that no one thinks to log GraphQL inconsistencies when they occur. It&amp;rsquo;s not &amp;ldquo;what&amp;rsquo;s my development environment&amp;rdquo;, it&amp;rsquo;s &amp;ldquo;how do these three development environments work on my localhost at the same time?</description>
+    </item>
+    
+    <item>
+      <title>Writing Drupal 8 code for Drupal 7</title>
+      <link>http://ohthehugemanatee.github.io/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/</link>
+      <pubDate>Sat, 05 Nov 2016 12:05:50 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/</guid>
+      <description>A year ago I proposed a session for Drupalcon Mumbai and Drupalcon New Orleans, called &amp;ldquo;The best of both worlds&amp;rdquo;. It promised to show attendees how to write Drupal 8 code for Drupal 7 sites. I never ended up giving the session, but this week I got an email asking for more information. So in case it ever comes up again, here&amp;rsquo;s my own collection of resources on the subject.</description>
+    </item>
+    
+    <item>
+      <title>Drupal 8 RC 1 is out! What now?</title>
+      <link>http://ohthehugemanatee.github.io/blog/2015/10/08/drupal-8-rc-1-is-out-what-now/</link>
+      <pubDate>Thu, 08 Oct 2015 11:16:02 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2015/10/08/drupal-8-rc-1-is-out-what-now/</guid>
+      <description>Last night (my time) I got the good news over twitter:
+That&amp;rsquo;s right, Drupal 8 has it&amp;rsquo;s first release. But what does that mean? Is it done? Can I start using it yet? What kind of changes are coming? Will dawehner get to sleep, at last?
+Are we there yet? Despite all the rejoicing on social media, this isn&amp;rsquo;t the final release for Drupal 8 - it&amp;rsquo;s only the first Release Candidate.</description>
+    </item>
+    
+    <item>
+      <title>How to build a new source for Drupal Migrate 8</title>
+      <link>http://ohthehugemanatee.github.io/blog/2015/05/02/how-to-build-a-new-source-for-drupal-migrate-8/</link>
+      <pubDate>Sat, 02 May 2015 10:10:36 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2015/05/02/how-to-build-a-new-source-for-drupal-migrate-8/</guid>
+      <description>This week I wanted to accomplish a task in Drupal 8 that would be simple in Drupal 7: Import several CSV files, each one related to the others by taxonomy terms. Most importantly, I wanted to do it with Migrate module.
+Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used from the GUI, rather, it provides a framework of &amp;ldquo;source&amp;rdquo;, &amp;ldquo;destination&amp;rdquo;, and &amp;ldquo;migration&amp;rdquo; classes so that even the most convoluted migration is 90% written for you.</description>
+    </item>
+    
+    <item>
+      <title>Drupalgeddon: Best Practices Aren&#39;t Good Enough Anymore</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/11/03/drupalgeddon-means-we-cant-trust-humans-with-updates/</link>
+      <pubDate>Mon, 03 Nov 2014 17:30:32 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/11/03/drupalgeddon-means-we-cant-trust-humans-with-updates/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bug: Multilingual Auto Label will break your Entity Static Cache</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/07/01/bug-multilingual-auto-label-will-break-your-entity-static-cache/</link>
+      <pubDate>Tue, 01 Jul 2014 17:00:45 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/07/01/bug-multilingual-auto-label-will-break-your-entity-static-cache/</guid>
+      <description>This is an important one to note: If you use the popular Automatic Entity Label module on a multilingual site, it will break your paths because of an interaction with Drupal&amp;rsquo;s built in object cache. I looked at this briefly a few months ago and ran out of time, but my (badass) colleague bburg figured it out this week.
+For now, the only solution is a slow one - we clear static entity caches when we generate multilingual titles.</description>
+    </item>
+    
+    <item>
+      <title>D8 Core sprint in DC</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/07/01/d8-core-sprint-in-dc/</link>
+      <pubDate>Tue, 01 Jul 2014 16:27:17 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/07/01/d8-core-sprint-in-dc/</guid>
+      <description>A quick note to all the Drupalists in the DC general area - Forum One is trying to put together a D8 core sprint in their DC office space. They&amp;rsquo;re coordinating with the DC Meetup group to try and spread the word to as many community members as possible!
+If you haven&amp;rsquo;t been to a code sprint before, it&amp;rsquo;s basically a coding party. Developers get together and help each other contribute better and faster by reviewing code on the spot, mentoring each other, and generally working in small ad-hoc groups.</description>
+    </item>
+    
+    <item>
+      <title>How to configure Authcache on Drupal 7</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/06/14/how-to-configure-authcache-on-drupal-7/</link>
+      <pubDate>Sat, 14 Jun 2014 16:15:40 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/06/14/how-to-configure-authcache-on-drupal-7/</guid>
+      <description>So you have authenticated user traffic you want to cache? Good - you&amp;rsquo;re on the right post. This post is a walk through for caching content for authenticated users in Drupal 7. We will be using the Authcache suite of modules. If you haven&amp;rsquo;t read it yet, I strongly recommend you check out my last post, Authenticated User Caching Concepts in Drupal 7.
+Our goal is a simple authenticated user caching system based on Authcache&amp;rsquo;s AJAX implementation, with a Memcached backend.</description>
+    </item>
+    
+    <item>
+      <title>Authenticated User Caching Concepts in Drupal 7</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/06/09/authenticated-user-caching-in-drupal/</link>
+      <pubDate>Mon, 09 Jun 2014 22:21:01 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/06/09/authenticated-user-caching-in-drupal/</guid>
+      <description>Drupal has a wide variety of highly effective solutions for caching anonymous user content. The typical setup is APC, Memcached or Redis, and Varnish in front, and this can easily serve thousands of concurrent anonymous users. There is excellent documentation out there discussing this kind of simple caching.
+But what about authenticated users? You can cache elements of the page using a method like Render cache, Entity Cache, or Views Content Cache.</description>
+    </item>
+    
+    <item>
+      <title>Drupal Superheroes: ASSEMBLE!</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/05/28/drupal-superheroes-assemble/</link>
+      <pubDate>Wed, 28 May 2014 12:44:01 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/05/28/drupal-superheroes-assemble/</guid>
+      <description>Regular Drupalcon attendees know that the opening pre-keynote session is one of the highlights of the con. That&amp;rsquo;s the session where we welcome everyone to the con with stupid jokes, some well known Drupalists, and a lot of fun. This year is going to be especially good - and we need your help!
+The evil Lord Over Engineering is threatening to delay the release of the CMS, which we need to save the world!</description>
+    </item>
+    
+    <item>
+      <title>Drupalcamp Helsinki takes on the world</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/05/26/drupalcamp-helsinki-takes-on-the-world/</link>
+      <pubDate>Mon, 26 May 2014 15:14:58 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/05/26/drupalcamp-helsinki-takes-on-the-world/</guid>
+      <description>Last weekend I got to keynote Drupalcamp Helsinki with my friend and often-collaborator, scaragucc - and what a great camp it was! Organizer Lauri Eskola deserves tremendous credit for taking this camp to the next level. They doubled their attendance from last year, attracted positive attention from some great notables in the global Drupal world, and got their local community energized to engage more. At all the various after parties there were frequent toasts of &amp;ldquo;one of the best Drupalcamps in the world!</description>
+    </item>
+    
+    <item>
+      <title>Coder vs. Themer Ultimate Grudge Match Smackdown Fight to the Death</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/05/01/coder-vs-themer-ultimate-grudge-match-smackdown-fight-to-the-death/</link>
+      <pubDate>Thu, 01 May 2014 17:15:31 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/05/01/coder-vs-themer-ultimate-grudge-match-smackdown-fight-to-the-death/</guid>
+      <description>I&amp;rsquo;m really excited about a new session that I&amp;rsquo;ve been doing with my friend and colleague, Adam Juran aka scaragucc: the Coder vs Themer Ultimate Grudge Match Smackdown Fight to the Death! The basic premise: we both start with the same wireframe of a front page to build. But I&amp;rsquo;m only allowed to use the module layer, and Adam is only allowed to use the theme layer. It&amp;rsquo;s a really fun and entertaining way to play with the blurry lines between &amp;ldquo;coder&amp;rdquo; and &amp;ldquo;themer&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>How to create a custom Display Suite field</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/04/02/how-to-create-a-custom-display-suite-field/</link>
+      <pubDate>Wed, 02 Apr 2014 16:12:13 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/04/02/how-to-create-a-custom-display-suite-field/</guid>
+      <description>A few months ago I posted about how to create a custom Panels pane, a critical reference for anyone who uses Panels layouts. The other part of the toolkit for quick and awesome layouts is the Display Suite module. With DS you can create new &amp;ldquo;Display modes&amp;rdquo; for your content, to be reused around the site. For example, on one recent site I had four standard ways to display my nodes: Full, Teaser, Mini-Teaser, and Search Result.</description>
+    </item>
+    
+    <item>
+      <title>Drupal Dev Days Szeged, or: why you should attend every Camp you can </title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/03/29/drupal-dev-days-szeged-2014/</link>
+      <pubDate>Sat, 29 Mar 2014 15:27:50 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/03/29/drupal-dev-days-szeged-2014/</guid>
+      <description>Today is the last day of Drupal Dev Days in Szeged, Hungary, and I&amp;rsquo;ve never been more full of the &amp;ldquo;Drupal spirit!&amp;rdquo;
+One of Drupal&amp;rsquo;s greatest strengths is the closness of its&#39; community, how friendly and accepting they can be. Drupalcons are highlight events for many, not because of the learning as much as because of the social track: the chance to see old friends and make new ones. Even more important is the chance to experience in person this incredibly friendly community.</description>
+    </item>
+    
+    <item>
+      <title>Drush self aliases</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/01/10/drush-self-aliases/</link>
+      <pubDate>Fri, 10 Jan 2014 09:22:01 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/01/10/drush-self-aliases/</guid>
+      <description>I ran into an interesting problem with the drush @self alias today. I wanted to pull a fresh copy of the DB down from a client&amp;rsquo;s live site to my local development copy. Should be as easy as drush sql-sync @clientsite.live @self, right? I&amp;rsquo;ve done this a thousand times before.
+And I&amp;rsquo;ve also ignored the warning message every time before, but today I thought I&amp;rsquo;d check it out:
+ WARNING: Using temporary files to store and transfer sql-dump.</description>
+    </item>
+    
+    <item>
+      <title>How to remove a Drupal install profile</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/01/07/how-to-remove-a-drupal-install-profile/</link>
+      <pubDate>Tue, 07 Jan 2014 13:23:45 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/01/07/how-to-remove-a-drupal-install-profile/</guid>
+      <description>Install profiles are a great way to throw together a functional Drupal site really quickly. In Drupal 6, an Install Profile was just a blueprint for setting up a site really quickly. What you did after the site was installed was your own business! But in Drupal 7 profiles are much more integrated with core. The assumption is that when you use an install profile, you want to rely on the profile&amp;rsquo;s maintainer for all your updates.</description>
+    </item>
+    
+    <item>
+      <title>How to create a custom Panels Pane</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/01/03/how-to-create-a-custom-panels-pane/</link>
+      <pubDate>Fri, 03 Jan 2014 13:09:11 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/01/03/how-to-create-a-custom-panels-pane/</guid>
+      <description>Lots of sites are now built with the &amp;ldquo;Panels everywhere&amp;rdquo; method, using Panels and Panelizer to configure modular layouts in the Drupal GUI. These modules come with lots of great default Panes, and create even more defaults based on your existing Blocks and Views. But there&amp;rsquo;s always a case for a custom Pane.
+As usual, I&amp;rsquo;ll assume that you have an empty custom module called mymodule, with only a .info and a .</description>
+    </item>
+    
+    <item>
+      <title>44,497 people are wrong: how to NEVER need Views PHP.</title>
+      <link>http://ohthehugemanatee.github.io/blog/2013/12/26/44497-people-are-wrong-how-to-never-use-views-php/</link>
+      <pubDate>Thu, 26 Dec 2013 12:01:44 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2013/12/26/44497-people-are-wrong-how-to-never-use-views-php/</guid>
+      <description>You&amp;rsquo;re building a View, but you can&amp;rsquo;t get that field to display the way you want it to. Or filter, or sort. Or maybe you have some data in a custom table that you want to include in the View. So you look for a contributed module, and Views PHP looks like the answer to your problem! Until you read the module page, where it says:
+ &amp;ldquo;&amp;hellip;it is highly advisable to use regular handlers and plugins when available (or even to create one yourself).</description>
+    </item>
+    
+    <item>
+      <title>Custom Context conditions</title>
+      <link>http://ohthehugemanatee.github.io/blog/2013/12/02/custom-context-conditions/</link>
+      <pubDate>Mon, 02 Dec 2013 09:06:49 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2013/12/02/custom-context-conditions/</guid>
+      <description>One of the big advantages to using the Context module is how totally extensible it is. Not only can you use and re-use the built in conditions, you can write your own. This brings all the power of the custom PHP evaluation method of block placement, but in a structure that makes your code re-usable, contributable, versioned, and standards-based. Writing a custom Context Condition is also a great template for how to integrate custom behaviors in many of the more complex Drupal modules such as Views and Search_API.</description>
+    </item>
+    
+    <item>
+      <title>Adding Rules to your contrib module (so you can reject half the tickets in your queue)</title>
+      <link>http://ohthehugemanatee.github.io/blog/2013/04/18/adding-rules-to-your-contrib-module-so-you-can-reject-half-the-tickets-in-your-queue/</link>
+      <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2013/04/18/adding-rules-to-your-contrib-module-so-you-can-reject-half-the-tickets-in-your-queue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Announcing the Resource Conflict Drupal module</title>
+      <link>http://ohthehugemanatee.github.io/2012/06/announcing-resource-conflict-drupal.html</link>
+      <pubDate>Wed, 13 Jun 2012 22:35:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2012/06/announcing-resource-conflict-drupal.html</guid>
+      <description>{% raw %} I recently took over an aging Drupal module, Resource Conflict. It had a D6 version with a lot of outstanding bugs in the queue... I started by simply rewriting it for D7 and my specific use case, but ended up in a discussion with the module&#39;s old maintainer about a total rewrite for&amp;nbsp;Entities&amp;nbsp;and&amp;nbsp;Rules. So that&#39;s what I did, and I just released the 7.x-3.x-dev version.
+Resource Conflict USED to be a module that detected booking conflicts in resources, and threw a form error.</description>
+    </item>
+    
+    <item>
+      <title>Drupal developers&#39; toolkit: handy tools and functions to make your life easier</title>
+      <link>http://ohthehugemanatee.github.io/2012/06/drupal-developers-toolkit-handy-tools.html</link>
+      <pubDate>Fri, 08 Jun 2012 17:23:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2012/06/drupal-developers-toolkit-handy-tools.html</guid>
+      <description>{% raw %} Drupal is big and complex, and no matter how good you are, you will need to debug. Before you get started coding for a Drupal site, you should download and enable the very useful devel module on your dev site. Go ahead, I&#39;ll wait.
+This primer covers all the tools that I&#39;ll use in later tutorials on this blog. In the real world I end up using 5-6 of these guys regularly.</description>
+    </item>
+    
+    <item>
+      <title>Drupal quick learning guides: Custom modules</title>
+      <link>http://ohthehugemanatee.github.io/2012/04/drupal-quick-learning-guides-custom.html</link>
+      <pubDate>Mon, 23 Apr 2012 16:17:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2012/04/drupal-quick-learning-guides-custom.html</guid>
+      <description>{% raw %} Ah, it&#39;s nice to be done with the basic structure stuff. At this point, I&#39;m going to assume that you know the basics of how to administer a Drupal site. You understand the file structure, you know where to go to download themes and modules, and you know how to make sites out of the big pieces you can find that way. Awesome. This is where it gets fun.</description>
+    </item>
+    
+    <item>
+      <title>Drupal quick learning guides: Drupal structure</title>
+      <link>http://ohthehugemanatee.github.io/2012/04/drupal-quick-learning-guides-drupal.html</link>
+      <pubDate>Mon, 16 Apr 2012 14:01:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2012/04/drupal-quick-learning-guides-drupal.html</guid>
+      <description>{% raw %} I&#39;ve been lax about posting lately, and to make this easier on myself I think I&#39;ll post a bunch of quick guides for basic coding procedures with Drupal. Simple things and concepts, explored in just enough detail for you to understand how it works, resource links so you can actually go and put it into practice. The first thing you need to understand about Drupal is the structure.</description>
+    </item>
+    
+    <item>
+      <title>On Drupal Entities, or how Organic Groups and Taxonomy are the same thing</title>
+      <link>http://ohthehugemanatee.github.io/2012/03/on-drupal-entities-or-how-organic.html</link>
+      <pubDate>Sun, 25 Mar 2012 12:58:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2012/03/on-drupal-entities-or-how-organic.html</guid>
+      <description>{% raw %} I&#39;m a big fan of the new Entities model for Drupal. I&#39;ve been working a lot with it lately, and it makes a lot of sense... but my favorite part is how it keeps blowing away my old assumptions, inherited from 7 years of Drupal experience. Here&#39;s a big one that got me recently: Organic Groups is useless, because it&#39;s basically Taxonomy with a couple of neat add-ons.</description>
+    </item>
+    
+    <item>
+      <title>The complete Drupal Cache - Serving HTTP and HTTPS content with Varnish</title>
+      <link>http://ohthehugemanatee.github.io/2011/05/complete-drupal-cache-serving-http-and.html</link>
+      <pubDate>Sun, 22 May 2011 21:07:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2011/05/complete-drupal-cache-serving-http-and.html</guid>
+      <description>{% raw %} Varnish is a fantastic caching proxy, commonly used for CMSes. It&#39;s not uncommon to see benchmarks boasting 300-500 page loads per second - I&#39;ve seen benches up to 5000 hits per second. That&#39;s faster than serving flat HTML from Apache; we&#39;re talking about a serious benefit to your server load here.
+Part of Varnish&#39;s tremendous speed comes from how lean it is. At only 58,000 lines of code, it&#39;s very lightweight.</description>
+    </item>
+    
+  </channel>
+</rss>

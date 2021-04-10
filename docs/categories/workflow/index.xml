@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>workflow on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/workflow/</link>
+    <description>Recent content in workflow on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Sep 2013 00:00:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/workflow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Every feature a branch, every branch a dev environment... without breaking the bank! The perfect git-flow dev environment for small shops</title>
+      <link>http://ohthehugemanatee.github.io/blog/2013/09/02/every-feature-a-branch-every-branch-a-dev-environment-without-breaking-the-bank-the-perfect-git-flow-dev-environment-for-small-shops/</link>
+      <pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2013/09/02/every-feature-a-branch-every-branch-a-dev-environment-without-breaking-the-bank-the-perfect-git-flow-dev-environment-for-small-shops/</guid>
+      <description>mysql_user=&amp;lsquo;root&amp;rsquo; mysql_pw=&amp;lsquo;your-mysql-password&amp;rsquo; worktree_root=&amp;quot;/var/www/public_html&amp;quot; http_root=&amp;ldquo;http://example.com&amp;rdquo; support_files=&amp;quot;/home/git&amp;quot;
+while read oldrev newrev ref do branch=echo $ref |cut -d/ -f3 worktree=&amp;quot;$worktree_root/$GL_REPO/$branch&amp;quot; repo_sanitized=echo ${GL_REPO//[-._]/} branch_sanitized=echo ${branch//[-._]/} db_name=&amp;quot;$repo_sanitized&amp;quot;_&amp;quot;$branch_sanitized&amp;quot;
+ # Exit nicely if this is the gitolite-admin repo. if [ $GL_REPO = &amp;lsquo;gitolite-admin&amp;rsquo; ]; then exit 0 fi
+ # Did we delete a branch? Delete the DB and checkout if [ $newrev = &amp;lsquo;0000000000000000000000000000000000000000&amp;rsquo; ]; then if [ ! $branch = &amp;lsquo;master&amp;rsquo; ]; then echo &amp;ldquo;Deleting working tree and DB for branch $branch.</description>
+    </item>
+    
+  </channel>
+</rss>

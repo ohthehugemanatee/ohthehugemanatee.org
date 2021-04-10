@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>community on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/community/</link>
+    <description>Recent content in community on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Jul 2017 17:01:59 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/community/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why no mainstream PHP speakers come to Drupalcon - and how we&#39;re changing that</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/07/28/bring-php-to-drupalcon/</link>
+      <pubDate>Fri, 28 Jul 2017 17:01:59 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/07/28/bring-php-to-drupalcon/</guid>
+      <description>I&amp;rsquo;ve learned something incredible as the PHP Track Chair for Drupalcon Vienna. The Drupal Association has no way to invite PHP speakers to Drupalcon.
+This blew me away when I first learned about it. After all the work to bring mainstream PHP to Drupal core, after all the outreach to PHP-FIG, after all the talks Drupalists have given at major PHP conferences, how is this possible?
+You see, basically every other PHP conference covers their speakers&#39; travel and accommodation costs.</description>
+    </item>
+    
+    <item>
+      <title>Stay for community</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/03/30/stay-for-community/</link>
+      <pubDate>Thu, 30 Mar 2017 12:22:11 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/03/30/stay-for-community/</guid>
+      <description>The Crellpocalypse in the Drupal world last week has shaken the entire community. This event and its handling have called our fundamental values and structures into question. We&amp;rsquo;ve had fights on social media, calls for Dries to step down, and valuable contributors stepping away from the community. I have friends on every side of the situation, but all I can think is: This seems like the perfect time for a singing, dancing, spandexed pageant about the Drupal community.</description>
+    </item>
+    
+  </channel>
+</rss>

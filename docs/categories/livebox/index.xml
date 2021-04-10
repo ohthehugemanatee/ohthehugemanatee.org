@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>livebox on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/livebox/</link>
+    <description>Recent content in livebox on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Dec 2010 12:47:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/livebox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DD-WRT, versioning, and the Linksys WRT54G wireless router</title>
+      <link>http://ohthehugemanatee.github.io/2010/12/dd-wrt-versioning-and-linksys-wrt54g.html</link>
+      <pubDate>Mon, 20 Dec 2010 12:47:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2010/12/dd-wrt-versioning-and-linksys-wrt54g.html</guid>
+      <description>{% raw %} I have had all sorts of trouble with the wireless situation in my apartment. &amp;nbsp;The layout of the place is such that the kitchen sits in between the two major rooms (living room and bedroom), and I swear those kitchen walls must be made of lead. &amp;nbsp;No wireless signal seems to get through. &amp;nbsp;I have phone jacks for ADSL in the living room and bedroom, nothing in between.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>redmine on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/redmine/</link>
+    <description>Recent content in redmine on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Jan 2014 21:20:55 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/redmine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Another cryptic Ruby message</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/01/10/another-cryptic-ruby-message/</link>
+      <pubDate>Fri, 10 Jan 2014 21:20:55 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/01/10/another-cryptic-ruby-message/</guid>
+      <description>Ruby on Rails drives me nuts, and today I found another example of why: the cryptic error messages. After a server update, my chiliproject/redmine site refused to start. The error message was
+ &amp;ldquo;Object is not missing constant Issue!&amp;rdquo;
+ What does that even mean? It took me a little while to understand that Issue in this context is the Redmine object &amp;ldquo;Issue&amp;rdquo;. But still, &amp;ldquo;Object is not missing constant X&amp;rdquo; isn&amp;rsquo;t much help.</description>
+    </item>
+    
+    <item>
+      <title>Running Redmine in a subdirectory</title>
+      <link>http://ohthehugemanatee.github.io/2011/05/running-redmine-in-subdirectory.html</link>
+      <pubDate>Mon, 16 May 2011 13:17:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2011/05/running-redmine-in-subdirectory.html</guid>
+      <description>{% raw %} Redmine is a fantastic project management tool for technically oriented organizations. &amp;nbsp;At my job, we use it to manage 30-50 active projects at a time, as well as the back history of several hundred projects. &amp;nbsp;Oddly enough, the normal installation process puts it on port 3000 . &amp;nbsp;We had some trouble with developers&#39; ISPs not allowing HTTPS traffic over non-standard ports, so we had to move redmine onto port 443 along with the rest of the SSL traffic.</description>
+    </item>
+    
+  </channel>
+</rss>

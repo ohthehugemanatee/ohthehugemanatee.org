@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sony on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/sony/</link>
+    <description>Recent content in sony on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 May 2011 00:04:00 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/sony/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What the Sony hacks tell us about their Sysadmins and management</title>
+      <link>http://ohthehugemanatee.github.io/2011/05/what-sony-hacks-tell-us-about-their.html</link>
+      <pubDate>Sat, 21 May 2011 00:04:00 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/2011/05/what-sony-hacks-tell-us-about-their.html</guid>
+      <description>{% raw %} I wouldn&#39;t want to be a Sony sysadmin right now. F-Secure just blogged about evidence of a fourth hack at the electronics giant. This one is relatively harmless - a phishing scam being run from Sony servers - but this pattern of security problems should tell us a few things about Sony&#39;s SysAdmin staff:
+1) They&#39;re powerless in their own organization.
+2) They don&#39;t get to set IT resource policy.</description>
+    </item>
+    
+  </channel>
+</rss>

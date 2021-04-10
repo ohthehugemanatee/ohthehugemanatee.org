@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>drush on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/drush/</link>
+    <description>Recent content in drush on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Jan 2014 09:22:01 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/drush/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Drush self aliases</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/01/10/drush-self-aliases/</link>
+      <pubDate>Fri, 10 Jan 2014 09:22:01 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/01/10/drush-self-aliases/</guid>
+      <description>I ran into an interesting problem with the drush @self alias today. I wanted to pull a fresh copy of the DB down from a client&amp;rsquo;s live site to my local development copy. Should be as easy as drush sql-sync @clientsite.live @self, right? I&amp;rsquo;ve done this a thousand times before.
+And I&amp;rsquo;ve also ignored the warning message every time before, but today I thought I&amp;rsquo;d check it out:
+ WARNING: Using temporary files to store and transfer sql-dump.</description>
+    </item>
+    
+  </channel>
+</rss>

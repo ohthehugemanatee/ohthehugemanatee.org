@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>career on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/career/</link>
+    <description>Recent content in career on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Jul 2016 13:14:06 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/career/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moving to Amazee Labs</title>
+      <link>http://ohthehugemanatee.github.io/blog/2016/07/29/moving-to-amazee-labs/</link>
+      <pubDate>Fri, 29 Jul 2016 13:14:06 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2016/07/29/moving-to-amazee-labs/</guid>
+      <description>About a month and a half ago, I left my position at Forum One to start work on a project with Amazee Labs. Yes, a month and a half is an eternity in Internet-Time, but better to blog about it late than not at all!
+I loved my position at Forum One. I got to work with worthwhile clients like Oxfam and United Way, I got to solve interesting and tricky Drupal problems, and I got to work with some truly brilliant colleagues.</description>
+    </item>
+    
+  </channel>
+</rss>

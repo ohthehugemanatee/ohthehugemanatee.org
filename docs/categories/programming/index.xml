@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/programming/</link>
+    <description>Recent content in programming on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 May 2014 14:08:39 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why use an IDE when vim is so awesome?</title>
+      <link>http://ohthehugemanatee.github.io/blog/2014/05/12/why-use-an-ide-when-vim-is-so-awesome/</link>
+      <pubDate>Mon, 12 May 2014 14:08:39 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2014/05/12/why-use-an-ide-when-vim-is-so-awesome/</guid>
+      <description>One thing I&amp;rsquo;ve never really understood is IDEs. I mean, I get it when you have a complex, emulated environment as a key part of your development. But for the majority of us who write in high level languages like PHP or Ruby, I just don&amp;rsquo;t see the benefit. Why use some mouse-y, graphics dependent piece of software when you can use the ubiquitous Vim?
+I use Vim because:
+ It can do everything any IDE I&amp;rsquo;ve seen can do.</description>
+    </item>
+    
+  </channel>
+</rss>

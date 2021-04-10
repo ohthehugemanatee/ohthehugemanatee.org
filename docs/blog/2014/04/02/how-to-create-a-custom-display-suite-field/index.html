@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.81.0" />
+
+    
+    
+    
+
+<title>How to create a custom Display Suite field • Oh The Huge Manatee!</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to create a custom Display Suite field"/>
+<meta name="twitter:description" content="A few months ago I posted about how to create a custom Panels pane, a critical reference for anyone who uses Panels layouts. The other part of the toolkit for quick and awesome layouts is the Display Suite module. With DS you can create new &ldquo;Display modes&rdquo; for your content, to be reused around the site. For example, on one recent site I had four standard ways to display my nodes: Full, Teaser, Mini-Teaser, and Search Result."/>
+
+<meta property="og:title" content="How to create a custom Display Suite field" />
+<meta property="og:description" content="A few months ago I posted about how to create a custom Panels pane, a critical reference for anyone who uses Panels layouts. The other part of the toolkit for quick and awesome layouts is the Display Suite module. With DS you can create new &ldquo;Display modes&rdquo; for your content, to be reused around the site. For example, on one recent site I had four standard ways to display my nodes: Full, Teaser, Mini-Teaser, and Search Result." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ohthehugemanatee.github.io/blog/2014/04/02/how-to-create-a-custom-display-suite-field/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2014-04-02T16:12:13&#43;00:00" />
+<meta property="article:modified_time" content="2014-04-02T16:12:13&#43;00:00" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.71157e768c4e111a23c3531b95e0cbb59bbef3c9e6901d36247cb53d6b6be258.css" integrity="sha256-cRV&#43;doxOERojw1MbleDLtZu&#43;88nmkB02JHy1PWtr4lg=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+<link rel="stylesheet" href="/scss/custom.c9bb9cdc7e3b8c0c27464cdd02ce48b05b01c1737cdbff727ae9152da7d3b432.css" integrity="sha256-ybuc3H47jAwnRkzdAs5IsFsBwXN82/9yeukVLafTtDI=">
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="http://ohthehugemanatee.github.io">
+        
+          Oh The Huge Manatee!
+        
+        </a>
+      </span>
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="http://ohthehugemanatee.github.ioimages/oh_the_huge_manatee.png" alt="Author Image" class="img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, a principal lead software engineer at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Oh The Huge Manatee!</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/about">
+						<span>About Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/">
+						<span>Blog</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/campbellvertesi" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	<a href="https://github.com/ohthehugemanatee" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/campbellvertesi" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>How to create a custom Display Suite field</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Apr 02, 2014
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="/categories/displaysuite">DISPLAYSUITE</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/drupal">DRUPAL</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/drupalplanet">DRUPALPLANET</a>
+              
+          
+      
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 2 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>A few months ago I posted about <a href="https://ohthehugemanatee.org/blog/2014/01/03/how-to-create-a-custom-panels-pane">how to create a custom Panels pane</a>, a critical reference for anyone who uses Panels layouts. The other part of the toolkit for quick and awesome layouts is the <a href="https://drupal.org/projects/ds">Display Suite</a> module. With DS you can create new &ldquo;Display modes&rdquo; for your content, to be reused around the site. For example, on one recent site I had four standard ways to display my nodes: Full, Teaser, Mini-Teaser, and Search Result. DS made this configuration a cinch.</p>
+<p>But just as in Panels you sometimes need a pane that isn&rsquo;t provided out of the box, in Display Suite you sometimes want to add a field that isn&rsquo;t really a field on your content. In a recent site build, I used this capability to include information from the Organic Groups a user belongs to on his profile as it appears in search results.</p>
+<p>DS offers some ability to create this kind of custom field through the UI, but I&rsquo;m talking about more complicated outcomes where you need/want to use custom code instead. This is actually even easier than custom panels panes.</p>
+<p>In our example, we will display the user&rsquo;s name, but backwards. Obviously you can do much more complex things with this, but it&rsquo;s nice to have a simple example!</p>
+<h1 id="declare-your-fields">Declare your fields</h1>
+<p>First we have to tell Display Suite about our new custom field. We do this with <a href="http://drupalcontrib.org/api/drupal/contributions!ds!ds.api.php/function/hook_ds_fields_info/7">hook_ds_fields_info()</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+
+<span style="color:#75715e">//@file: Add a custom suite to display suite for Users.
+</span><span style="color:#75715e"></span>
+<span style="color:#e6db74">/**
+</span><span style="color:#e6db74"> * Implements hook_ds_fields_info().
+</span><span style="color:#e6db74"> * Declare my custom field.
+</span><span style="color:#e6db74"> */</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_ds_fields_info</span>($entity_type) {
+  $fields <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
+
+  <span style="color:#66d9ef">if</span> ($entity_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;user&#39;</span>) { 
+    $fields[<span style="color:#e6db74">&#39;backwards_username&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
+      <span style="color:#e6db74">&#39;title&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;Backwards Username&#39;</span>),
+      <span style="color:#e6db74">&#39;field_type&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">DS_FIELD_TYPE_FUNCTION</span>,
+      <span style="color:#e6db74">&#39;function&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;mymodule_backwards_username&#39;</span>,
+    );
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">array</span>($entity_type <span style="color:#f92672">=&gt;</span> $fields);
+  }
+  <span style="color:#66d9ef">return</span>;
+}
+</code></pre></div><p>Any guesses whathappens next? That&rsquo;s right, we have to write our render function under the name we just declared. You can put anything here, really anything renderable at all.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
+</span><span style="color:#e6db74"> * Render function for the Backwards Username field.
+</span><span style="color:#e6db74"> */</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_backwards_username</span>($field) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($field[<span style="color:#e6db74">&#39;entity&#39;</span>]<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">name</span>)) { 
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">check_plain</span>(<span style="color:#a6e22e">strrev</span>($field[<span style="color:#e6db74">&#39;entity&#39;</span>]<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">name</span>));
+  }
+}
+</code></pre></div><p>That&rsquo;s it. So simple, you&rsquo;ll wonder why you ever did it any other way!</p>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/blog/2014/03/29/drupal-dev-days-szeged-2014/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Drupal Dev Days Szeged, or: why you should attend every Camp you can </span>
+    </a>
+    
+    
+    <a href="/blog/2014/05/01/coder-vs-themer-ultimate-grudge-match-smackdown-fight-to-the-death/" class="navigation-next">
+      <span class="navigation-tittle">Coder vs. Themer Ultimate Grudge Match Smackdown Fight to the Death</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+
+
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'ohthehugemanatee';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" integrity="sha384-ZbbbT1gw3joYkKRqh0kWyRp32UAvdqkpbLedQJSlnI8iLQcFVxaGyrOgOJiDQTTR" crossorigin="anonymous"></script>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+    
+
+
+
+    </body>
+</html>

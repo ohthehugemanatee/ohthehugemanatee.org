@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.81.0" />
+
+    
+    
+    
+
+<title>Drupal developers&#39; toolkit: handy tools and functions to make your life easier • Oh The Huge Manatee!</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Drupal developers&#39; toolkit: handy tools and functions to make your life easier"/>
+<meta name="twitter:description" content="{% raw %} Drupal is big and complex, and no matter how good you are, you will need to debug. Before you get started coding for a Drupal site, you should download and enable the very useful devel module on your dev site. Go ahead, I&#39;ll wait.
+This primer covers all the tools that I&#39;ll use in later tutorials on this blog. In the real world I end up using 5-6 of these guys regularly."/>
+
+<meta property="og:title" content="Drupal developers&#39; toolkit: handy tools and functions to make your life easier" />
+<meta property="og:description" content="{% raw %} Drupal is big and complex, and no matter how good you are, you will need to debug. Before you get started coding for a Drupal site, you should download and enable the very useful devel module on your dev site. Go ahead, I&#39;ll wait.
+This primer covers all the tools that I&#39;ll use in later tutorials on this blog. In the real world I end up using 5-6 of these guys regularly." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://ohthehugemanatee.github.io/2012/06/drupal-developers-toolkit-handy-tools.html" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2012-06-08T17:23:00&#43;00:00" />
+<meta property="article:modified_time" content="2012-06-08T17:23:00&#43;00:00" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.71157e768c4e111a23c3531b95e0cbb59bbef3c9e6901d36247cb53d6b6be258.css" integrity="sha256-cRV&#43;doxOERojw1MbleDLtZu&#43;88nmkB02JHy1PWtr4lg=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+<link rel="stylesheet" href="/scss/custom.c9bb9cdc7e3b8c0c27464cdd02ce48b05b01c1737cdbff727ae9152da7d3b432.css" integrity="sha256-ybuc3H47jAwnRkzdAs5IsFsBwXN82/9yeukVLafTtDI=">
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="http://ohthehugemanatee.github.io">
+        
+          Oh The Huge Manatee!
+        
+        </a>
+      </span>
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="http://ohthehugemanatee.github.ioimages/oh_the_huge_manatee.png" alt="Author Image" class="img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, a principal lead software engineer at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Oh The Huge Manatee!</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/about">
+						<span>About Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/">
+						<span>Blog</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/campbellvertesi" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	<a href="https://github.com/ohthehugemanatee" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/campbellvertesi" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>Drupal developers&#39; toolkit: handy tools and functions to make your life easier</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Jun 08, 2012
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="/categories/drupal">DRUPAL</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/drupalplanet">DRUPALPLANET</a>
+              
+          
+      
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 3 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    
+{% raw %}
+<div class="css-full-post-content js-full-post-content">
+Drupal is big and complex, and no matter how good you are, you will need to debug. Before you get started coding for a Drupal site, you should download and enable the very useful <a href="http://drupal.org/project/devel">devel</a> module on your dev site. Go ahead, I'll wait.<br /><br />This primer covers all the tools that I'll use in later tutorials on this blog. In the real world I end up using 5-6 of these guys regularly. Learn them. They help.<br /><h3>    drupal_set_message()</h3><div>Printing a message is the basic tool of any debugging, and you need to know this core function. This lets you print a message to the page, Drupal-style. Usage: drupal_set_message($message, $severity).</div><div><br /></div><div><code>drupal_set_message(t('Hello %name!', array('%name' =&gt; 'John Doe')), 'warning');</code>&nbsp;</div><div><br /></div><div>Note that I use the t() function to process text in drupal_set_message. This is partly because the function itself doesn't do any text sanitizing, so it's good practice to insert a layer there. It's also because you can't &nbsp;insert variables directly into the message, and t() is a convenient way of doing that.</div><div><br /></div><div>Note that drupal_set_message() does not do well with large messages - it is not recommended to print big arrays directly to the message area. For that, we'll use another function:</div><h3>    dpm()</h3><div>This sets a variable of your choice to Drupal's messaging system, in a nice compact output handled by krumo.&nbsp;</div><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-H4xCqcjlhF8/T9IuHpEFIMI/AAAAAAAAAA8/lctbEESP66E/s1600/Screen+shot+2012-06-08+at+6.53.24+PM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="289" src="http://3.bp.blogspot.com/-H4xCqcjlhF8/T9IuHpEFIMI/AAAAAAAAAA8/lctbEESP66E/s320/Screen+shot+2012-06-08+at+6.53.24+PM.png" width="320" /></a></div><div>Most of Drupal is understandable and learnable on the fly with just this simple tool. Usage: dpm($variable, $name = NULL).</div><div><br /></div><div><code>dpm($node, 'This is the node variable');</code></div><div><br /><h3>   kpr()</h3><div>Just like dpm, but it prints to the page header rather than the Drupal message area. Helpful when your theme doesn't print messages. You can also have it return a string instead of printing it automatically, which comes in handy in some fairly bizarre circumstances. Usage: kpr($variable, $return = FALSE, $name = NULL).&nbsp;</div><div><br /></div><div><code>kpr($node, FALSE, 'This is the node variable');</code></div><div><br /></div><h3>   dvm()</h3><div>OK, you don't like krumo. Maybe you're a masochist, or maybe you have some esoteric requirements to deal with. Either way, you want dvm(). It prints variables in a more traditional format into the message area. I have used this to get variables into pastebin, very helpful when asking for help on Drupal IRC channels. :) Usage: dvm($variable, $name = NULL).</div><div><br /></div><div><code>dvm($node, 'This is the node variable');</code></div><h3>   dpr()</h3></div><div>If your theme doesn't display messages, dpr() prints variables to the page header without krumo. Same usage case as above. Just like kpr(), you can return a string with this function. Usage: dpr($variable, $return = FALSE, $name = NULL).</div><div><br /></div><div><code>dpr($node, FALSE, 'This is the node variable');</code></div><div><br /></div><div><h3>  dargs()</h3></div><div>This guy shows you the arguments passed into the current function, using krumo for readability. This is my go-to function when using Drupal hooks. The API documentation is great, but there's nothing like simply seeing the variables you have to work with. Usage: dargs()</div><div><br /></div><code>function swearing_custom_form_alter(&amp;$form, &amp;$form_state, $form_id) {<br />&nbsp; dargs();<br />}</code><br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-N3-bpT3pgeI/T9Iy8ptSNkI/AAAAAAAAABI/FnlybyhHqeQ/s1600/Screen-shot-2012-06-08-at-7.12.02-PM.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="297" src="http://4.bp.blogspot.com/-N3-bpT3pgeI/T9Iy8ptSNkI/AAAAAAAAABI/FnlybyhHqeQ/s320/Screen-shot-2012-06-08-at-7.12.02-PM.png" width="320" /></a></div><div><h3> dd()</h3></div><div>For those awful times when a hook doesn't produce direct output, there's always dd(). This guy prints a given variable to a file called "drupal_debug.txt" in your site's temporary files directory. This comes in very handy. Usage: dd($variable, $name = NULL)</div><div><br /></div><div><code>dd($node, 'This is the node variable');</code></div><div><br /></div><h3> ddebug_backtrace()</h3><div>This prints a backtrace for the current function in krumo, in the head of your current page. Devel module comes with the ability to enable this automatically for fatal errors, but occasionally you just want to see how things work. Usage: ddebug_backtrace().</div><div><br /></div><h3> db_queryd()</h3><div>This tool is handy for testing queries. Devel also has the ability to display a query log at the bottom of every page, showing every query with a time-to-execute. That can be pretty overwhelming. db_queryd() lets you put in a single query and see if your database spits out any errors. Usage: db_queryd($query, $arguments = array())</div><div><br /></div><div><br /></div>
+</div>
+{% endraw %}
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/2012/04/drupal-quick-learning-guides-custom.html" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">Drupal quick learning guides: Custom modules</span>
+    </a>
+    
+    
+    <a href="/2012/06/announcing-resource-conflict-drupal.html" class="navigation-next">
+      <span class="navigation-tittle">Announcing the Resource Conflict Drupal module</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+
+
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'ohthehugemanatee';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" integrity="sha384-ZbbbT1gw3joYkKRqh0kWyRp32UAvdqkpbLedQJSlnI8iLQcFVxaGyrOgOJiDQTTR" crossorigin="anonymous"></script>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+    
+
+
+
+    </body>
+</html>

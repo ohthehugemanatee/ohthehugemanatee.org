@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Oh The Huge Manatee!</title>
+    <link>http://ohthehugemanatee.github.io/categories/linux/</link>
+    <description>Recent content in linux on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Feb 2019 13:58:39 +0000</lastBuildDate><atom:link href="http://ohthehugemanatee.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BTRFS and free space - emergency response</title>
+      <link>http://ohthehugemanatee.github.io/blog/2019/02/11/btrfs-out-of-space-emergency-response/</link>
+      <pubDate>Mon, 11 Feb 2019 13:58:39 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2019/02/11/btrfs-out-of-space-emergency-response/</guid>
+      <description>I run BTRFS on my root filesystem (on Linux), mostly for the quick snapshot and restore functionality. Yesterday I ran into a common problem: my drive was suddenly full. I went from 4GB of free space on my system drive to 0 in an instant, causing all sorts of chaos on my system.
+This problem happens to lots of people because BTRFS doesn&amp;rsquo;t have a linear relationship to &amp;ldquo;free space available&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>The #1 Question I Get Asked Working at MS: Why Do You Run Linux?</title>
+      <link>http://ohthehugemanatee.github.io/blog/2018/02/07/the-number-1-question-i-get-asked-working-at-msy-do-you-run-linux/</link>
+      <pubDate>Wed, 07 Feb 2018 16:42:50 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2018/02/07/the-number-1-question-i-get-asked-working-at-msy-do-you-run-linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>My War on Systemd-resolved</title>
+      <link>http://ohthehugemanatee.github.io/blog/2018/01/25/my-war-on-systemd-resolved/</link>
+      <pubDate>Thu, 25 Jan 2018 11:05:31 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2018/01/25/my-war-on-systemd-resolved/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>That time I resurrected my Linux MacBook Pro</title>
+      <link>http://ohthehugemanatee.github.io/blog/2017/06/17/that-time-i-resurrected-my-linux-macbook-pro/</link>
+      <pubDate>Sat, 17 Jun 2017 23:06:02 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2017/06/17/that-time-i-resurrected-my-linux-macbook-pro/</guid>
+      <description>In the airport last week, my laptop stopped booting.
+I have a 2012 Macbook Pro - yes, that coveted &amp;ldquo;last good model&amp;rdquo; - and it runs Ubuntu Linux. It&amp;rsquo;s my roving office as I travel the world to conferences, performances, and job sites. So when I started it up at JFK airport this week and got a gray screen of death, I was a little concerned.
+I tried starting into Startup Manager by holding the &amp;ldquo;Option&amp;rdquo; key.</description>
+    </item>
+    
+    <item>
+      <title>Perfect Linux Mint on my Macbook Pro 9,2</title>
+      <link>http://ohthehugemanatee.github.io/blog/2016/10/15/perfect-linux-mint-macbook-pro-9-2/</link>
+      <pubDate>Sat, 15 Oct 2016 18:44:40 +0000</pubDate>
+      
+      <guid>http://ohthehugemanatee.github.io/blog/2016/10/15/perfect-linux-mint-macbook-pro-9-2/</guid>
+      <description>A few months ago I posted about my frustrations getting El Capitan working with my relatively simple developer needs. At the time I complained about the direction Apple is going. One of these days, I threatened, I would jump back to Linux as a primary desktop environment.
+This week I read about everyone&amp;rsquo;s problems getting OSX Sierra going, and I decided it was time to take the plunge. Apple, I completely understand the direction you are going with your environment.</description>
+    </item>
+    
+  </channel>
+</rss>
