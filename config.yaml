@@ -24,3 +24,17 @@ params:
     twitter: "campbellvertesi"
     github: "ohthehugemanatee"
     linkedin: "campbellvertesi"
+
+mediaTypes:
+  application/atom:
+    suffixes: 
+      - xml
+outputFormats:
+  Atom:
+    mediaType: "application/atom"
+    baseName: "atom"
+    isPlainText: false
+outputs:
+  home:
+    - "HTML"
+    - "Atom"
