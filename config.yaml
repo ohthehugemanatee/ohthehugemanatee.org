@@ -18,8 +18,8 @@ params:
   relatedPosts: true
   highlightjs: true
   highlightjsstyle: "solarized-dark"
+  authorimage: "/images/oh_the_huge_manatee.png"
   social:
-    gravatar: "campbell@vertesi.com"
     twitter: "campbellvertesi"
     github: "ohthehugemanatee"
     linkedin: "campbellvertesi"
