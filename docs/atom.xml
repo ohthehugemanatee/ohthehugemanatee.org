@@ -1,28 +1,1311 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Oh The Huge Manatee!</title>
-  <link href="https://ohthehugemanatee.org/index.xml" rel="self"/>
+  <link href="https://ohthehugemanatee.org/atom.xml" rel="self"/>
   <link href="https://ohthehugemanatee.org/"/>
   <updated>2019-10-08T19:10:15+00:00</updated>
   <id>https://ohthehugemanatee.org/</id>
+  <author>
+    <name>Campbell Vertesi (ohthehugemanatee)</name>
+    <uri>https://ohthehugemanatee.org/</uri>
+  </author>
   <generator>Hugo -- gohugo.io</generator>
   <entry>
-    <title type="html"><![CDATA[Blogs]]></title>
-    <link href="https://ohthehugemanatee.org/blog/"/>
-    <id>https://ohthehugemanatee.org/blog/</id>
+    <title type="html"><![CDATA[Chinese censorship, values decisions, and free software]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2019/10/08/chinese-censorship-and-free-software/"/>
+    <id>https://ohthehugemanatee.org/blog/2019/10/08/chinese-censorship-and-free-software/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
     <published>2019-10-08T19:10:15+00:00</published>
     <updated>2019-10-08T19:10:15+00:00</updated>
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p>Chinese censors are in the news this weekend: <a href="https://variety.com/2019/gaming/news/blizzard-bans-blitzchung-hearthstone-hong-kong-china-statement-1203363050/">Blizzard banned a grandmaster Hearthstone player for supporting Hong Kong in an interview</a>, <a href="https://www.newsweek.com/south-park-band-china-why-banned-china-s23-e02-23x02-1463762">South Park was added to the &ldquo;banned&rdquo; list for their critique of Chinese censorship in Hollywood</a>, and <a href="https://www.cnn.com/2019/10/07/business/houston-rockets-nba-china-daryl-morey/index.html">an NBA franchise owner&rsquo;s job was on the line for a pro-HK tweet</a>. Increasingly, Western companies are finding themselves up against the wall to prioritize western liberal values against access to the enormous Chinese market. We can imagine the difficult, high-pressure decisions for executives in this situation.</p>
+<p>As a consumer it feels like we don&rsquo;t face that kind of pressure, or that kind of decision. Those of us whose choices do not impact thousands of employees' livelihoods, and millions of consumers' information environments, seem to have little leverage. If <a href="https://www.theguardian.com/technology/2019/sep/25/revealed-how-tiktok-censors-videos-that-do-not-please-beijing">TikTok quietly hides any videos of Hong Kong unrest</a>, or <a href="https://sputniknews.com/asia/201801121060701327-china-delta-apology-taiwan-tibet/">Delta lists Taiwan as a part of China</a>, or <a href="https://mothership.sg/2018/01/marriott-zara-qantas-taiwan-tibet-sovereignty/">Marriott includes cities in Tibet, Taiwan, Hong Kong, and Macau as inside China</a>&hellip; we can&rsquo;t tell the difference. The whole point of censorship is that you remain blissfully unaware of what you&rsquo;re missing.</p>
+<p>When we as consumers think about China&rsquo;s censorship power in our lives the important question is: <em>How can we tell when it&rsquo;s happening</em>? It&rsquo;s not unthinkable for Chrome to invisibly hide certain content, or Facebook, or your iPhone. In fact most of the information services you use likely do this already, in the name of curating content you will &ldquo;like.&rdquo; This isn&rsquo;t necessarily a problem in and of itself; it only gets problematic when the filters are <em>invisible</em>.</p>
+<p>This is a part of the point of Free and Open Source software. Filters can&rsquo;t be applied in secret, and by definition you have the right to fork software to do things <em>your</em> way if you like. It&rsquo;s <em>your</em> right to have <em>your</em> device behave the way <em>you</em> want it to. And black boxes should inspire some suspicion that they may be doing things you don&rsquo;t like.</p>
+<p>At this point it would be easy to descend into the typical open source rant: if only Facebook open sourced its filters! If only Instagram were open! I&rsquo;ll leave that for others. I want to point out something a little subtler:</p>
+<p>The executive&rsquo;s values decision about western liberalism vs a larger addressable market, is remarkably close to the developer&rsquo;s values decision about a license that respects user control vs the easier monetization and control of a black box. That decision in turn is related to the consumer&rsquo;s values decision, about software that respects your rights vs the convenience of a popular black box.</p>
+<p>It&rsquo;s easy to criticize Blizzard&rsquo;s decision to bow to Chinese sensibilities. But how do <em>you</em> decide, on your own much smaller scale? Do <em>you</em> prioritize values over convenience? Or do you accept the censored experience of a black box as a user? Do you enjoy the control of that black box as a developer?</p>
+<p>Hearthstone players are by definition running a black box OS. Users of iOS, Windows, and Android demonstrate comfort with invisible censors in other parts of their devices. Is their presence in video streams and gameplay all that different? Do they have any right to complain? Having given away control to black boxes, perhaps complaining is the way they can impact the way their device runs.</p>
+]]></content>
   </entry>
   <entry>
-    <title type="html"><![CDATA[About me]]></title>
-    <link href="https://ohthehugemanatee.org/about/"/>
-    <id>https://ohthehugemanatee.org/about/</id>
-    <published>0001-01-01T00:00:00+00:00</published>
-    <updated>0001-01-01T00:00:00+00:00</updated>
-    <content type="html"><![CDATA[<p>My name is Campbell Vertesi; I’m a principal lead software engineer with Microsoft, and an opera singer.</p>
-<p>I’ve been working with computers for 23 years. I started with desktop repair, moved into sysadmin work, and eventually discovered Drupal 4.1 and the beginnings of the web application world. Since then I’ve been in most roles in the web consultant ecosystem: coder, themer, project manager, information architect, technical lead, CEO, and CTO. I’ve presented at dozens of software conferences, often on the main stage or as a keynote.</p>
-<p>I’ve been fortunate enough to work with great organizations like the Jane Goodall Institute, the Mozilla Foundation, the EPA, the United Way, and Oxfam International. I’ve helped out big commercial organizations like Intel, Ringier Axel Springer, and Volkswagen. I&rsquo;ve contributed to many open source projects along the way.</p>
-<p>The rest of the stuff I do is scattered around the Internet and real life. I’m co-founder of the opera band <a href="https://thecastmusic.com/">The Cast</a>, bringing crowds to their feet with awesome classical music. I speak English, French, Italian, and German, and I love to travel. I love to learn anything new, so I get hobbies like most people get colds. I have three awesome kids, and a great life here in Berlin, Germany. You can find out more about me and these other interests at <a href="https://campbell.vertesi.com/">campbell.vertesi.com</a>.</p>
+    <title type="html"><![CDATA[An Open Letter to my MEPs about Article 17 (formerly article 13)]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2019/03/21/an-open-letter-to-my-meps-about-article-17-formerly-article-13/"/>
+    <id>https://ohthehugemanatee.org/blog/2019/03/21/an-open-letter-to-my-meps-about-article-17-formerly-article-13/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2019-03-21T23:44:43+00:00</published>
+    <updated>2019-03-21T23:44:43+00:00</updated>
+    <content type="html"><![CDATA[<p>The proposal for a directive on copyright in the digital single market is disastrous for the <strong>EU economy, culture, and democracy in the digital world</strong>. It is particularly bad for my country of Germany, as a leading light in Europe in all three areas. I am writing all of my MEPs listed in support of this impossibly bad proposal.</p>
+<p>The German and European economies would be terribly damaged by this article, which <strong>effectively rules out small and medium sized competition in favor of the largest incumbents</strong>. I work for Microsoft on precisely the kind of machine-understanding tasks involved in the copyright filter requirement. I can tell you with authority: <strong>it is an impossible task which only the deepest pockets can approach</strong>. <strong>Article 17 makes Germany and Europe into hostile venues for Internet startups</strong>. The next generation of Youtubes, Soundclouds, and Netflixes are not possible under this Article - unless of course, it&rsquo;s an existing mega-corporation who decides to start it. <strong>This is a tremendous handicap in the fastest growing sector of the global economy.</strong></p>
+<p>The disaster for culture exemplifies the impossibility of such a filter. My &ldquo;side business&rdquo; is an entertainment company, making opera music accessible for tens of thousands of Europeans every year. The entire classical music industry opposes digital filters because we all know the consequence: <strong>a machine or untrained human can&rsquo;t tell the difference between the 300 different versions of Bach&rsquo;s Wohl Temperierte Klavier</strong>. The piece is identified as probably copyrighted because copyrighted versions exist, and taken down as a precaution. <strong>Famously even the European anthem, <em>An die Freude</em>, suffers automated takedowns</strong> because there are copyrighted versions of the piece. <strong>Asking platforms to bulk-police content means that the more influential a piece of music is for our culture - that is to say, the more versions of it exist - the more prone it is to spurious blocking on copyright grounds.</strong></p>
+<p>As much as the technical infeasibility and halting the spread of the most important pieces of our European culture bother me,** the effect on democracy in the digital age is the worst part of this Article. User-generated content is foundational to online discussion**. It is precisely this content which enriches online debate and engagement, which reaches younger generations and pulls them into a very participatory democratic environment. You&rsquo;ve no doubt heard that **memes are culture**, but **they are also the medium of exchange in the biggest democratic commons humankind has ever created**. Legislation which shuts down this medium of exchange, or which forces the commons into channels controlled by the largest (foreign) economic actors in history, is bad for the EU.</p>
+<p><strong>Perhaps the world needs a digital copyright equivalent of Brexit</strong>, to scare everyone else away from the copyright lobby. Perhaps we all need a material example to see just how poorly the copyright lobby&rsquo;s 1960&rsquo;s-era ideology fits the 21st century economy.</p>
+<p><strong>But I would prefer it not be my country, my continent that makes an example of itself.</strong></p>
+<p>Please heed <a href="https://saveyourinternet.eu/statements/">the warnings from internet experts, the UN Special Rapporteur on Freedom of Expression, NGOs, programmers, and academics</a>. I urge you to reconsider your position on this digital Brexit.</p>
+<p>Sincerely,</p>
+<p>Campbell Vertesi</p>
+<p>Berlin, Germany</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[BTRFS and free space - emergency response]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2019/02/11/btrfs-out-of-space-emergency-response/"/>
+    <id>https://ohthehugemanatee.org/blog/2019/02/11/btrfs-out-of-space-emergency-response/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2019-02-11T13:58:39+00:00</published>
+    <updated>2019-02-11T13:58:39+00:00</updated>
+    <content type="html"><![CDATA[<p>I run BTRFS on my root filesystem (on Linux), mostly for the quick snapshot and restore functionality. Yesterday I ran into a common problem: <strong>my drive was suddenly full</strong>. I went from 4GB of free space on my system drive to 0 in an instant, causing all sorts of chaos on my system.</p>
+<p>This problem happens to lots of people because BTRFS doesn&rsquo;t have a linear relationship to &ldquo;free space available&rdquo;. There are a few concepts that get in the way:</p>
+<ul>
+<li><strong>Compression</strong>: BTRFS supports compressing data as it writes. This obviously changes the amount of data that can be stored. - 50MB of text may take only 5MB &ldquo;room&rdquo; on the drive.</li>
+<li><strong>Metadata</strong>: BTRFS stores your data separately from metadata. Both data and metadata occupy &ldquo;space&rdquo;.</li>
+<li><strong>Chunk allocation</strong>: BTRFS allocates space for your data in chunks.</li>
+<li><strong>Multiple devices</strong>: BTRFS supports multiple devices working together, RAID-style. That means there&rsquo;s extra information to store for every file. For example, RAID-1 stores two copies of every file, so a 50MB file takes 100MB of space.</li>
+<li><strong>Snapshots</strong>: BTRFS can store snapshots of your device, which really store more like a diff from the current state. How much data is in the diff depends on your current state&hellip; so the snapshot itself doesn&rsquo;t have a consistent size.</li>
+<li><strong>Nested volumes</strong>: BTRFS lets you divide the filesystem into &ldquo;subvolumes&rdquo; - each of which can (someday) have its own RAID configuration.</li>
+</ul>
+<p>It&rsquo;s easy to look at the drive and tell how many MiB of space has not been used yet. But it&rsquo;s very hard to accurately say how much of your data you can write in that space. For this reason the amount of &ldquo;free space&rdquo; reported on BRFS volumes by system utilities like <code>df</code> can jump a lot - like my disappearing 4GiB. Worse, the free space reported by general tools is misleading. BTRFS can run out of space while <code>df</code> still thinks you have lots available.</p>
+<p>Let&rsquo;s walk through how BTRFS stores data, to understand the problem a bit better. Then we can solve it with some of BTRFS' own tools.</p>
+<h2 id="how-much-free-space-do-i-have">How much free space do I have?</h2>
+<p>Rather than using general tools like <code>df</code> to answer this question, it&rsquo;s better to get more detail using the <code>btrfs</code> CLI tool.</p>
+<p>BTRFS starts out with a big pool of raw storage, and allocates as it goes. You can get a listing of all the devices in a block device like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo btrfs <span style="color:#66d9ef">fi</span> show
+Label: <span style="color:#e6db74">&#39;OS&#39;</span>  uuid: c0d21ade-5570-41a3-b0cf-a5ce219e7a8e
+  Total devices <span style="color:#ae81ff">1</span> FS bytes used 31.74GiB
+  devid    <span style="color:#ae81ff">1</span> size 48.83GiB used 47.80GiB path /dev/nvme0n1p2
+</code></pre></div><p>In this case, I only have one physical device involved. You can see that it gives me a total number of bytes allocated, compared to the total size. In another filesystem this might be the number reported to <code>df</code>. Not so with BTRFS! Let&rsquo;s dig deeper.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ btrfs <span style="color:#66d9ef">fi</span> df /
+
+Data, single: total<span style="color:#f92672">=</span>45.75GiB, used<span style="color:#f92672">=</span>30.56GiB
+System, single: total<span style="color:#f92672">=</span>32.00MiB, used<span style="color:#f92672">=</span>16.00KiB
+Metadata, single: total<span style="color:#f92672">=</span>2.02GiB, used<span style="color:#f92672">=</span>1.17GiB
+GlobalReserve, single: total<span style="color:#f92672">=</span>89.31MiB, used<span style="color:#f92672">=</span>0.00B
+</code></pre></div><p>The &ldquo;total&rdquo; values here are the breakdown of what the first command counts as &ldquo;used&rdquo;. <code>btrfs fi df</code> shows us of the allocated space, how much is actually storing data, and how much is just empty allocation. In this case: on my 48GiB device, 47GiB is allocated. Of the allocation, 31GiB is actually storing data. Side note: if you&rsquo;re in a multi-drive situation this command will take into account RAID metadata.</p>
+<p>Here&rsquo;s an easier view:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo btrfs <span style="color:#66d9ef">fi</span> usage /
+
+Overall:
+    Device size:      48.83GiB
+    Device allocated:     47.80GiB
+    Device unallocated:      1.03GiB
+    Device missing:        0.00B
+    Used:       31.74GiB
+    Free <span style="color:#f92672">(</span>estimated<span style="color:#f92672">)</span>:     16.22GiB  <span style="color:#f92672">(</span>min: 16.22GiB<span style="color:#f92672">)</span>
+    Data ratio:           1.00
+    Metadata ratio:         1.00
+    Global reserve:     89.31MiB  <span style="color:#f92672">(</span>used: 0.00B<span style="color:#f92672">)</span>
+
+Data,single: Size:45.75GiB, Used:30.56GiB
+   /dev/nvme0n1p2   45.75GiB
+
+Metadata,single: Size:2.02GiB, Used:1.18GiB
+   /dev/nvme0n1p2    2.02GiB
+
+System,single: Size:32.00MiB, Used:16.00KiB
+   /dev/nvme0n1p2   32.00MiB
+
+Unallocated:
+   /dev/nvme0n1p2    1.03GiB
+</code></pre></div><p>This shows the breakdown of space allocated and used across all the devices in this block device. &ldquo;Overall&rdquo; is for the whole block device, and that &ldquo;Free (estimated)&rdquo; number is what gets reported to <code>df</code>.</p>
+<p>This is a problem: <strong>most of my normal tools tell me I have 15GB free space. But if I write 1GiB more data, BTRFS will run out of space anyways.</strong> This issue is a pain in the ass and hard to diagnose. It&rsquo;s even harder to fix, since most of the solutions require having some extra space on the device.</p>
+<h2 id="converting-unused-allocation-to-free-space">Converting unused allocation to free space</h2>
+<p>So, why does BTRFS allocate so much space to store such a small amount of data? Here I am storing 31GiB of data in 47GiB of allocation, the used/total ratio is 0.66! This is very inefficient. It&rsquo;s an unfortunate consequence of being a copy-on-write filesystem - BTRFS starts every write in a freshly allocated chunk. But the chunksize is static, and files come in all sizes. So lots of the time, a chunk is incompletely filled. That&rsquo;s the &ldquo;allocated but not used&rdquo; space we&rsquo;re complaining about.</p>
+<p>Fortunately there&rsquo;s a way to address this problem: BTRFS has a tool to &ldquo;rebalance&rdquo; your filesystem. It was originally designed for balancing the data stored across multiple drives (hence the name). It is also useful in single drive configurations though, to rebalance how data is stored within the allocation.</p>
+<p>By default, <code>balance</code> will rewrite <em>all</em> the data on the disk. This is probably unnecessary. Chunks will be unevenly filled, but we saw above that the average should be about 66% used. So we&rsquo;ll filter based on data (<code>-d</code>) usage, and only rebalance chunks that are less than 66% used. That will leave any partially filled chunks which are more-filled than average.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Run it in the background, cause it takes a long time.</span>
+$ sudo btrfs balance start -dusage<span style="color:#f92672">=</span><span style="color:#ae81ff">66</span> / &amp;
+<span style="color:#75715e"># Check status</span>
+$ sudo btrfs balance status -v /       
+Balance on <span style="color:#e6db74">&#39;/&#39;</span> is running
+<span style="color:#ae81ff">1</span> out of about <span style="color:#ae81ff">27</span> chunks balanced <span style="color:#f92672">(</span><span style="color:#ae81ff">5</span> considered<span style="color:#f92672">)</span>,  96% left
+Dumping filters: flags 0x1, state 0x1, 
+<span style="color:#75715e"># Or be lazy, and have bash report status every 60 seconds.</span>
+$ <span style="color:#66d9ef">while</span> :; <span style="color:#66d9ef">do</span> sudo btrfs balance status -v / ; sleep 60; <span style="color:#66d9ef">done</span>
+Balance on <span style="color:#e6db74">&#39;/&#39;</span> is running
+<span style="color:#ae81ff">3</span> out of about <span style="color:#ae81ff">27</span> chunks balanced <span style="color:#f92672">(</span><span style="color:#ae81ff">12</span> considered<span style="color:#f92672">)</span>,  89% left
+Dumping filters: flags 0x1, state 0x1, force is off
+  DATA <span style="color:#f92672">(</span>flags 0x2<span style="color:#f92672">)</span>: balancing, usage<span style="color:#f92672">=</span><span style="color:#ae81ff">66</span>
+Balance on <span style="color:#e6db74">&#39;/&#39;</span> is running
+<span style="color:#ae81ff">4</span> out of about <span style="color:#ae81ff">27</span> chunks balanced <span style="color:#f92672">(</span><span style="color:#ae81ff">13</span> considered<span style="color:#f92672">)</span>,  85% left
+Dumping filters: flags 0x1, state 0x1, force is off
+  DATA <span style="color:#f92672">(</span>flags 0x2<span style="color:#f92672">)</span>: balancing, usage<span style="color:#f92672">=</span><span style="color:#ae81ff">66</span>
+...
+<span style="color:#75715e"># When the balance operation finishes:</span>
+Done, had to relocate <span style="color:#ae81ff">19</span> out of <span style="color:#ae81ff">59</span> chunks
+</code></pre></div><p>There&rsquo;s a nice big differnce once it&rsquo;s finished:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ btrfs filesystem df /
+Data, single: total<span style="color:#f92672">=</span>32.53GiB, used<span style="color:#f92672">=</span>30.83GiB
+System, single: total<span style="color:#f92672">=</span>32.00MiB, used<span style="color:#f92672">=</span>16.00KiB
+Metadata, single: total<span style="color:#f92672">=</span>2.02GiB, used<span style="color:#f92672">=</span>1.17GiB
+GlobalReserve, single: total<span style="color:#f92672">=</span>84.67MiB, used<span style="color:#f92672">=</span>0.00B
+</code></pre></div><p>That&rsquo;s 15GiB of space allocated for other use. My usage ratio is now 0.94. Huzzah! In some rare cases you may need to do this on the Metadata allocation (use <code>-musage</code> instead of <code>-dusage</code> above).</p>
+<h2 id="if-youve-already-run-out-of-space">If you&rsquo;ve already run out of space</h2>
+<p>If you have already run out of space, you can&rsquo;t run a <code>balance</code>! In that caseyou have to get sneaky. Here are your options:</p>
+<h3 id="1-free-up-space">1) Free up space</h3>
+<p>This is harder than it sounds. If you just delete data, it will probably leave those chunks partially filled and therefore allocated. What you really need is <em>unallocated</em> space. The easiest place to get this is by deleting snapshots. Start from the oldest one, since it will be the biggest.</p>
+<p>Once you have a little bit of wiggle room, rebalance a small segment, like Metadata. Then proceed with rebalancing data as described above.</p>
+<h3 id="2-add-some-space">2) Add some space</h3>
+<p>Don&rsquo;t forget, a BTRFS volume can span multiple devices! I had to exercise this option recently. Add a device - a flash drive will do, but choose the fastest thing you can - and add it to the BTRFS volume.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Add your extra drive (/dev/sda).</span>
+$ sudo btrfs device add -f /dev/sda / 
+<span style="color:#75715e"># Now run the smallest balance operation you can.</span>
+$ sudo btrfs balance start -dusage<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> /
+Done, had to relocate <span style="color:#ae81ff">1</span> out of <span style="color:#ae81ff">59</span> chunks
+<span style="color:#75715e"># Remove the device, and run a proper balance.</span>
+$ sudo btrfs device remove /dev/sda /
+$ sudo btrfs balance start -dusage<span style="color:#f92672">=</span><span style="color:#ae81ff">66</span> /
+Done, had to relocate <span style="color:#ae81ff">18</span> out of <span style="color:#ae81ff">59</span> chunks
+</code></pre></div><p>Balance operations usually take a long time - more than an hour is not unusual. It will take even longer with slow flash media involved. For that reason, I use a very low balance filter (<code>-dusage=</code>) in this example. We only need to free up a teensy bit of space to run balance again without the flash disk in the mix.</p>
+<p>And this last option is how I saved my computer last night. I hope this helps someone out of a similar predicament someday.</p>
+<p><strong>UPDATE</strong></p>
+<p>Now that I&rsquo;ve had to do this a few times, it&rsquo;s <em>way</em> better to rebalance a full filesystem by adding a ramdisk to it. Not only is it faster than a flash device, it&rsquo;s also more reliable in most cases&hellip; and certainly for my kind of use case (a developer laptop) the important preconditions apply: lots of RAM, reliable power source. Here&rsquo;s the recipe:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Create a ramdisk. Make sure /dev/ram0 isn&#39;t in use already before doing this!</span>
+$ sudo mknod -m <span style="color:#ae81ff">660</span> /dev/ram0 b <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">0</span> 
+$ sudo chown root:disk /dev/ram0
+<span style="color:#75715e"># Mount the ramdisk with a concrete size. Otherwise it grows to whatever is needed.</span>
+$ sudo mkdir /mnt/ramdisk
+$ sudo mount -t ramfs -o size<span style="color:#f92672">=</span>4G,maxsize<span style="color:#f92672">=</span>4G /dev/ram0 /mnt/ramdisk
+<span style="color:#75715e"># Create a file on the ramdisk to use as a loopback device.</span>
+$ sudo dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero of /mnt/ramdisk/extend.img bs<span style="color:#f92672">=</span>4M count<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>
+$ sudo losetup -fP /mnt/ramdisk/extend.img
+<span style="color:#75715e"># figure out which loopback device ID is yours</span>
+$ sudo losetup -a |grep extend.img
+/dev/loop10: <span style="color:#f92672">[</span>5243078<span style="color:#f92672">]</span>:8563965 <span style="color:#f92672">(</span>/mnt/ramdisk/extend.img<span style="color:#f92672">)</span>
+<span style="color:#75715e"># Add the loopback device to the btrfs filesystem</span>
+$ sudo btrfs device add /dev/loop10 /
+<span style="color:#75715e"># Decide on your balance ratio and balance as usual.</span>
+$ sudo btrfs <span style="color:#66d9ef">fi</span> usage / |head -n <span style="color:#ae81ff">6</span>
+Overall:
+    Device size:		 400.91GiB
+    Device allocated:		 396.36GiB
+    Device unallocated:		   4.55GiB
+    Device missing:		     0.00B
+    Used:			 348.91GiB
+$ echo <span style="color:#e6db74">&#39;scale=2;348/396&#39;</span> |bc
+.87
+
+$ sudo btrfs balance start -dusage<span style="color:#f92672">=</span><span style="color:#ae81ff">87</span> /
+Done, had to relocate <span style="color:#ae81ff">46</span> out of <span style="color:#ae81ff">400</span> chunks
+<span style="color:#75715e"># Remove the device and destroy it.</span>
+$ sudo btrfs device delete /dev/loop0 /
+$ sudo losetup -d /dev/loop10
+$ sudo umount /mnt/ramdisk
+$ sudo rm -rf /dev/ram0 
+</code></pre></div>]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Kubernetes for stateful applications: Scaling macroservices]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/"/>
+    <id>https://ohthehugemanatee.org/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2019-01-07T11:10:21+00:00</published>
+    <updated>2019-01-07T11:10:21+00:00</updated>
+    <content type="html"><![CDATA[<p>I recently got to proctor an <a href="https://openhack.microsoft.com/">Openhack</a> event on modern containerization. It ended up an excuse to dig deep on one of the corner cases that we all encounter, but no one likes to talk about.</p>
+<p><a href="https://kubernetes.io/">Kubernetes</a> is one of the greatest <strong>orchestration</strong> and <strong>scaling</strong> tools ever built, designed for modern <strong>decoupled</strong>, <strong>stateless</strong> architectures. Kubernetes tutorials abound to show you these strong use cases. <strong>But in the real world where you don&rsquo;t get to build &ldquo;green field&rdquo; every time, there are a lot of applications that don&rsquo;t fit that model</strong>.</p>
+<p>Lots of people out there are still writing tightly-coupled monoliths, in many cases for good reason. In some use cases microservices style scalability isn&rsquo;t even useful - you actually <em>prefer</em> stateful applications with tight coupling. For example a game server, where you don&rsquo;t want to scale player capacity per-game, you want to add more games (server instances).</p>
+<p>So today I&rsquo;m writing about <strong>stateful, non-scalable applications in kubernetes.</strong></p>
+<p>There are a few different approaches to coupling appliciation components:</p>
+<h2 id="multi-container-pods">Multi-container pods</h2>
+<p>Level 0 is to simply specify multiple components (containers) in your deployment.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
+<span style="color:#f92672">metadata</span>:
+  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-deployment</span>
+  <span style="color:#f92672">labels</span>:
+    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+<span style="color:#f92672">spec</span>:
+  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">3</span>
+  <span style="color:#f92672">selector</span>:
+    <span style="color:#f92672">matchLabels</span>:
+      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+  <span style="color:#f92672">template</span>:
+    <span style="color:#f92672">metadata</span>:
+      <span style="color:#f92672">labels</span>:
+        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+    <span style="color:#f92672">spec</span>:
+      <span style="color:#f92672">containers</span>:
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">php</span>
+        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">php:fpm</span>
+        <span style="color:#f92672">ports</span>:
+        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">9000</span>
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
+        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:latest</span>
+        <span style="color:#f92672">ports</span>:
+        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
+</code></pre></div><p>This specifies 3 copies of the same application, with the same two containers in each replica. This is a coupled application, but it&rsquo;s still stateless. Let&rsquo;s add a volume - that&rsquo;s where we get into trouble.</p>
+<p>The problem: If you add a Volume the normal way (<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">persistentVolumeClaim</a>), each of your replicas will try and connect to the same volume. It&rsquo;ll act like a network shared drive. Maybe that&rsquo;s OK for your application, but not if it&rsquo;s our super-stateful example! And depending on your volume class, the volume may reject multiple connections like (<a href="https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv">Azure Disk</a> does, for example).</p>
+<p>So how do we get around this limitation? I want a separate volume for each instance of the application.</p>
+<p>Kubernetes supports a different object type for this use case, called a <a href="https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/">StatefulSet</a>. This is exactly what it sounds like: a set of objects that define a stateful application. It&rsquo;s a template for creating multiple copies of <em>all resources</em> defined therein.</p>
+<p>A statefulset will create replicas similar to a deployment, but it will set up separate Volumes and VolumeClaims for each one. The replicas will be identical except for an index number at the end of the labels. The first one might be called <code>nginx-deployment-0</code>, the second: <code>nginx-deployment-1</code>, and so on.  The result is a set of tightly coupled components, which can be individually addressed, and scaled using normal Kubernetes tools.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">StatefulSet</span>
+<span style="color:#f92672">metadata</span>:
+  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
+  <span style="color:#f92672">labels</span>:
+    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+<span style="color:#f92672">spec</span>:
+  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">3</span>
+  <span style="color:#f92672">selector</span>:
+    <span style="color:#f92672">matchLabels</span>:
+      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+  <span style="color:#f92672">serviceName</span>: <span style="color:#e6db74">&#34;nginx&#34;</span>
+  <span style="color:#f92672">template</span>:
+    <span style="color:#f92672">metadata</span>:
+      <span style="color:#f92672">labels</span>:
+        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+    <span style="color:#f92672">spec</span>:
+      <span style="color:#f92672">containers</span>:
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
+        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:latest</span>
+        <span style="color:#f92672">ports</span>:
+        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">php</span>
+        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">php:fpm</span>
+        <span style="color:#f92672">volumeMounts</span>:
+        - <span style="color:#f92672">mountPath</span>: <span style="color:#e6db74">&#34;/var/www/html&#34;</span>
+          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">data</span>
+  <span style="color:#f92672">volumeClaimTemplates</span>:
+    - <span style="color:#f92672">metadata</span>:
+        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">data</span>
+      <span style="color:#f92672">spec</span>:
+        <span style="color:#f92672">storageClassName</span>: <span style="color:#ae81ff">default</span>
+        <span style="color:#f92672">accessModes</span>:
+          - <span style="color:#ae81ff">ReadWriteOnce</span>
+        <span style="color:#f92672">resources</span>:
+          <span style="color:#f92672">requests</span>:
+            <span style="color:#f92672">storage</span>: <span style="color:#ae81ff">5Gi</span>
+---
+<span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Service</span>
+<span style="color:#f92672">metadata</span>:
+  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
+  <span style="color:#f92672">labels</span>:
+    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+<span style="color:#f92672">spec</span>:
+  <span style="color:#f92672">ports</span>:
+    - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">http</span>
+  <span style="color:#f92672">clusterIP</span>: <span style="color:#ae81ff">None</span>
+  <span style="color:#f92672">selector</span>:
+    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</code></pre></div><p>There are a few details to notice here.</p>
+<p>Yes, we&rsquo;ve replaced <em>Deployment</em> with <em>StatefulSet</em>. You get a shiny gold star if you noticed that one.</p>
+<p>The interesting part is the <em>VolumeClaimTemplates</em> section, below the containers definition. This keyword only exists inside a StatefulSet, and it&rsquo;s just what it sounds like: a template for creating Persistent Volume Claims.</p>
+<p>If you apply this config, you&rsquo;ll see three PVs created, with three PVCs, attached to three Pods. You can apply HPA rules to scale these up and down just like you would with deployments.</p>
+<p>There&rsquo;s also that weird Service at the bottom. A naked service with no clusterIP? What&rsquo;s the point? The point is as a helper for Kubernetes' internal DNS. All of those nice StatefulSet pods will come under a neat subdomain, eg nginx-0.nginx, nginx-1.nginx, etc. Additionally you can connect to active members of the StatefulSet by using that nginx domain component. A dns lookup on it will show all the IPs of the active members in the CNAME record.</p>
+<p>&ldquo;But what about external access?&rdquo; I hear you cry. Yes, we&rsquo;ve built a great stateful application that can scale instances, but it&rsquo;s only internally addressable! Good luck hosting those games&hellip;</p>
+<h2 id="external-access-and-metacontroller">External access and metacontroller</h2>
+<p>Normally you would put a LoadBalancer service in front of your application. But a Kubernetes load balancer will grab all of these StatefulSet members - so you can&rsquo;t address them externally one-by-one. What you <em>really</em> want to do, is create an external IP address for each statefulset member.</p>
+<p>One solution is to use a reverse proxy like nginx or HAProxy, configured to differentiate based on hostnames. But this is a blog post about Kubernetes, so we&rsquo;re going to do this the Kubernetes way!</p>
+<p>Kubernetes is very extensible. If Pods, Services, etc don&rsquo;t make sense for your application or domain, you can define custom object types and behaviors, through <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/">custom resources and controllers</a>. That&rsquo;s pretty edge case, but as we&rsquo;ve seen, some kubernetes edge cases are mainstream cases in the real world.</p>
+<p>In our super-stateful application, we don&rsquo;t need a custom resource type. But we do want to attach <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#custom-controllers">custom behaviors</a> to our StatefulSet: every time we start up a pod we should create a LoadBalancer for it. We should be nice and tear them down when the pods are scaled down, of course.</p>
+<p>We&rsquo;ll use the <a href="https://github.com/GoogleCloudPlatform/metacontroller">Metacontroller</a> add-on to make our lives easier. Metacontroller makes it &ldquo;easy&rdquo; to add custom behaviors. Just write a short script, stick it into a ConfigMap or FaaS, and let Metacontroller work its magic!</p>
+<p>Metacontroller project comes with several well documented examples, including one that&rsquo;s very close to our requirement: <a href="https://github.com/GoogleCloudPlatform/metacontroller/tree/master/examples/service-per-pod">service-per-pod</a>.</p>
+<p>Step 1 is to install Metacontroller, of course:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Create &#39;metacontroller&#39; namespace, service account, and role/binding.</span>
+kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontroller/master/manifests/metacontroller-rbac.yaml
+<span style="color:#75715e"># Create CRDs for Metacontroller APIs, and the Metacontroller StatefulSet.</span>
+kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontroller/master/manifests/metacontroller.yaml
+</code></pre></div><p>Then we&rsquo;ll add some new metadata to our existing StatefulSet. The metacontroller script will use these values to configure the load balancers.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">StatefulSet</span>
+<span style="color:#f92672">metadata</span>:
+  <span style="color:#f92672">annotations</span>:
+    <span style="color:#f92672">service-per-pod-label</span>: <span style="color:#e6db74">&#34;pod-name&#34;</span>
+    <span style="color:#f92672">service-per-pod-ports</span>: <span style="color:#e6db74">&#34;80:80&#34;</span>
+...
+</code></pre></div><p>We also need to tell Kubernetes to decorate each StatefulSet with a pod-name label. We do this in the StatefulSet&rsquo;s pod template.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">...
+<span style="color:#f92672">spec</span>:
+  <span style="color:#f92672">template</span>:
+    <span style="color:#f92672">metadata</span>:
+      <span style="color:#f92672">annotations</span>:
+        <span style="color:#f92672">pod-name-label</span>: <span style="color:#e6db74">&#34;pod-name&#34;</span>
+...
+</code></pre></div><p>Note: this only works in k8s 1.9+ - if you&rsquo;re stuck with a lower version, you can script this action with Metacontroller, too. :).</p>
+<p>Now you&rsquo;re going to need two hooks. Put them in a directory together so they&rsquo;re easy to apply at once. These ones are written in jsonnet, but you could write this in whatever language you like.</p>
+<p>The first hook actually creates the LoadBalancer for each Pod.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">function(request) {
+  local statefulset = request.<span style="color:#66d9ef">object</span>,
+  local labelKey = statefulset.metadata.annotations[<span style="color:#e6db74">&#34;service-per-pod-label&#34;</span>],
+  local ports = statefulset.metadata.annotations[<span style="color:#e6db74">&#34;service-per-pod-ports&#34;</span>],
+
+  <span style="color:#75715e">// Create a service for each Pod, with a selector on the given label key.
+</span><span style="color:#75715e"></span>  attachments: [
+    {
+      apiVersion: <span style="color:#e6db74">&#34;v1&#34;</span>,
+      kind: <span style="color:#e6db74">&#34;Service&#34;</span>,
+      metadata: {
+        name: statefulset.metadata.name + <span style="color:#e6db74">&#34;-&#34;</span> + index,
+        labels: {app: <span style="color:#e6db74">&#34;service-per-pod&#34;</span>}
+      },
+      spec: {
+        type: <span style="color:#e6db74">&#34;LoadBalancer&#34;</span>,
+        selector: {
+<span style="color:#a6e22e">          [labelKey]</span>: statefulset.metadata.name + <span style="color:#e6db74">&#34;-&#34;</span> + index
+        },
+        ports: [
+          {
+            local parts = std.split(portnums, <span style="color:#e6db74">&#34;:&#34;</span>),
+            port: std.parseInt(parts[<span style="color:#ae81ff">0</span>]),
+            targetPort: std.parseInt(parts[<span style="color:#ae81ff">1</span>]),
+          }
+          <span style="color:#66d9ef">for</span> portnums <span style="color:#66d9ef">in</span> std.split(ports, <span style="color:#e6db74">&#34;,&#34;</span>)
+        ]
+      }
+    }
+    <span style="color:#66d9ef">for</span> index <span style="color:#66d9ef">in</span> std.range(<span style="color:#ae81ff">0</span>, statefulset.spec.replicas - <span style="color:#ae81ff">1</span>)
+  ]
+}
+</code></pre></div><p>The other hook is the &ldquo;finalizer&rdquo; - it responds to changes or deletions in pods by tearing down the corresponding LoadBalancers.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">function(request) {
+  <span style="color:#75715e">// If the StatefulSet is updated to no longer match our decorator selector,
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// or if the StatefulSet is deleted, clean up any attachments we made.
+</span><span style="color:#75715e"></span>  attachments: [],
+  <span style="color:#75715e">// Mark as finalized once we observe all Services are gone.
+</span><span style="color:#75715e"></span>  finalized: std.length(request.attachments[<span style="color:#960050;background-color:#1e0010">&#39;</span>Service.v1<span style="color:#960050;background-color:#1e0010">&#39;</span>]) == <span style="color:#ae81ff">0</span>
+}
+</code></pre></div><p>Add those into a subdirectory, and put them into a configmap together. Metacontroller will run them from there.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create configmap service-per-pod-hooks -n metacontroller --from-file<span style="color:#f92672">=</span>hooks
+</code></pre></div><p>Now apply the actual decorator controller which will run those functions. Note that you have to identify your hook jsonnet files by (file) name! Get the name wrong, and the finalizer will hang forever, <a href="https://github.com/kubernetes/kubernetes/issues/72598">preventing you from deleting your statefulset</a>. In my case, the files were called <code>create-lb-per-pod.jsonnet</code> and <code>finalizer.json</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">metacontroller.k8s.io/v1alpha1</span>
+<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">DecoratorController</span>
+<span style="color:#f92672">metadata</span>:
+  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
+<span style="color:#f92672">spec</span>:
+  <span style="color:#f92672">resources</span>:
+  - <span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1beta1</span>
+    <span style="color:#f92672">resource</span>: <span style="color:#ae81ff">statefulsets</span>
+    <span style="color:#f92672">annotationSelector</span>:
+      <span style="color:#f92672">matchExpressions</span>:
+      - {<span style="color:#f92672">key: service-per-pod-label, operator</span>: <span style="color:#ae81ff">Exists}</span>
+      - {<span style="color:#f92672">key: service-per-pod-ports, operator</span>: <span style="color:#ae81ff">Exists}</span>
+  <span style="color:#f92672">attachments</span>:
+  - <span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+    <span style="color:#f92672">resource</span>: <span style="color:#ae81ff">services</span>
+  <span style="color:#f92672">hooks</span>:
+    <span style="color:#f92672">sync</span>:
+      <span style="color:#f92672">webhook</span>:
+        <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://service-per-pod.metacontroller/create-lb-per-pod</span>
+    <span style="color:#f92672">finalize</span>:
+      <span style="color:#f92672">webhook</span>:
+        <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://service-per-pod.metacontroller/finalizer</span>
+---
+<span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1beta1</span>
+<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
+<span style="color:#f92672">metadata</span>:
+  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
+  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">metacontroller</span>
+<span style="color:#f92672">spec</span>:
+  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">1</span>
+  <span style="color:#f92672">selector</span>:
+    <span style="color:#f92672">matchLabels</span>:
+      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
+  <span style="color:#f92672">template</span>:
+    <span style="color:#f92672">metadata</span>:
+      <span style="color:#f92672">labels</span>:
+        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
+    <span style="color:#f92672">spec</span>:
+      <span style="color:#f92672">containers</span>:
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
+        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">metacontroller/jsonnetd:0.1</span>
+        <span style="color:#f92672">imagePullPolicy</span>: <span style="color:#ae81ff">Always</span>
+        <span style="color:#f92672">workingDir</span>: <span style="color:#ae81ff">/hooks</span>
+        <span style="color:#f92672">volumeMounts</span>:
+        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
+          <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/hooks</span>
+      <span style="color:#f92672">volumes</span>:
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
+        <span style="color:#f92672">configMap</span>:
+          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod-hooks</span>
+---
+<span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Service</span>
+<span style="color:#f92672">metadata</span>:
+  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
+  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">metacontroller</span>
+<span style="color:#f92672">spec</span>:
+  <span style="color:#f92672">selector</span>:
+    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
+  <span style="color:#f92672">ports</span>:
+  - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
+    <span style="color:#f92672">targetPort</span>: <span style="color:#ae81ff">8080</span>
+
+</code></pre></div><p>That&rsquo;s it! Now you can scale complete replicas of a very-stateful application with a simple <code>kubectl scale sts nginx --replicas=900</code>.</p>
+<p>Enjoy bragging to your friends about your &ldquo;macroservices architecture&rdquo;, pushing the limits of Kubernetes to run and replicate a stateful monolith!</p>
+<p><em>Everyone hates writing YAML. Check out the <a href="https://github.com/ohthehugemanatee/kubernetes-stateful-example">sample code for this post on Github</a></em></p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Optimizing data transfer speeds]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2018/12/27/optimizing-data-transfer-speeds/"/>
+    <id>https://ohthehugemanatee.org/blog/2018/12/27/optimizing-data-transfer-speeds/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2018-12-27T10:30:23+00:00</published>
+    <updated>2018-12-27T10:30:23+00:00</updated>
+    <content type="html"><![CDATA[<p>One of my holiday projects was to set up my home &ldquo;data warehouse.&rdquo; Ever since <a href="https://www.dropboxforum.com/t5/Syncing-and-uploads/Linux-Dropbox-client-warn-me-that-it-ll-stop-syncing-in-Nov-why/m-p/290065/highlight/true#M42255">Dropbox killed modern Linux filesystem support</a> I&rsquo;ve been using (and loving) <a href="https://nextcloud.com/">Nextcloud</a> from my home. It backs up to an encrypted <a href="https://www.duplicati.com/">Duplicati</a> store on <a href="https://azure.microsoft.com/en-us/services/storage/blobs/">Azure blob store</a>, so that&rsquo;s offsite backups taken care of. But it was time to knit all my various drives together into a single RAID data warehouse. The only problem: how to transfer my 2 terabytes (rounded to make the math in the post easier) of data, without nasty downtime during the holidays?</p>
+<p>A local network transfer is the fastest, with the least downtime. I have a switched gigabit network in my house, and all my servers are hard wired. That&rsquo;s about 125 megabytes per second; a theoretical 5 hours to transfer everything. Not bad! Start up an rsync and I&rsquo;m all done! So I kicked it off and went to bed:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud.vert
+$ rsync -axz /media/usbdrive/ warehouse:/mnt/storage/ --log-file<span style="color:#f92672">=</span>transfer-to-warehouse.log &amp;
+</code></pre></div><p>I woke up in the morning with the excitement of a kid on Christmas. Everything should be done, right?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh warehouse df -h |grep md0
+/dev/md0        2.7T  501G  2.1T  20% /mnt/storage
+$
+</code></pre></div><p>Wait, what? How had it only transferred 500 gigabytes overnight? Including time for <em>Doctor Who</em> and breakfast, that was only 1 Megabit per second! I knew it was time to play everyone&rsquo;s favorite game: <em>&ldquo;where&rsquo;s the bottleneck?</em></p>
+<p>I guess it could be rsync scanning all those small files. If that&rsquo;s the case, we&rsquo;ll see high CPU usage, and even higher load numbers (as processes are I/O blocked):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud
+$ top
+
+top - 08:22:27 up 10:26,  <span style="color:#ae81ff">1</span> user,  load average: 1.20, 1.34, 1.33
+Tasks: <span style="color:#ae81ff">170</span> total,   <span style="color:#ae81ff">2</span> running, <span style="color:#ae81ff">106</span> sleeping,   <span style="color:#ae81ff">0</span> stopped,   <span style="color:#ae81ff">0</span> zombie
+%Cpu<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>: 28.0 us,  2.1 sy,  0.0 ni, 69.5 id,  0.1 wa,  0.0 hi,  0.3 si,  0.0 st
+KiB Mem : <span style="color:#ae81ff">16330372</span> total,   <span style="color:#ae81ff">180568</span> free,   <span style="color:#ae81ff">657104</span> used, <span style="color:#ae81ff">15492700</span> buff/cache
+KiB Swap:  <span style="color:#ae81ff">4194300</span> total,  <span style="color:#ae81ff">4162556</span> free,    <span style="color:#ae81ff">31744</span> used. <span style="color:#ae81ff">15300068</span> avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                                  
+ <span style="color:#ae81ff">8755</span> ohthehu+  <span style="color:#ae81ff">20</span>   <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">130572</span>  <span style="color:#ae81ff">58456</span>   <span style="color:#ae81ff">2672</span> R  99.0  0.4 513:14.75 rsync                                                                                    
+ <span style="color:#ae81ff">8756</span> ohthehu+  <span style="color:#ae81ff">20</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">49596</span>   <span style="color:#ae81ff">6648</span>   <span style="color:#ae81ff">5152</span> S  16.9  0.0  92:12.29 ssh 
+...
+</code></pre></div><p>OK, let&rsquo;s kill the transfer and start again using a single large, piped tarball. No more small file scans!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud
+$ cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | ssh warehouse <span style="color:#e6db74">&#34;cd /mnt/storage &amp;&amp; tar xpvf -&#34;</span>
+</code></pre></div><p>That helps, but we&rsquo;re still compressing lots of data unnecessarily (most of my data is already compressed), and encrypting it, too. We can improve it with a lightweight ssh cipher and disabled compression:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud
+$ cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | ssh -o Compression<span style="color:#f92672">=</span>no -c chacha20-poly1305@openssh.com warehouse <span style="color:#e6db74">&#34;cd /mnt/storage &amp;&amp; tar xpf -&#34;</span>
+</code></pre></div><p>That chacha20-poly1305 is a very fast cipher indeed - faster than the old arcfour cipher we used to use in this case. But SSH still puts extra work on the CPU. So let&rsquo;s remove it completely from the equation and just use netcat.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | pv | nc -l -q <span style="color:#ae81ff">5</span> -p <span style="color:#ae81ff">9999</span> 
+<span style="color:#75715e"># in a separate terminal</span>
+$ ssh warehouse cd /mnt/storage <span style="color:#f92672">&amp;&amp;</span> nc nextcloud <span style="color:#ae81ff">9999</span> | pv | tar -xf -
+</code></pre></div><p>Transfer speeds now average about 61 megabytes per second. That&rsquo;s fast enough to kick in the law of diminishing returns on my optimization effort: this will take about 8 hours to transfer if I keep it running. I had to pause work for an hour; now if I spend another hour on this, it has to shave more than 25% off my transfer time to finish any earlier tonight. I&rsquo;m not confident I can beat those numbers.</p>
+<p>Still - What happened to my 125 theoretical megabytes per second? Here are the culprits I suspect - and can&rsquo;t really do anything about:</p>
+<ul>
+<li>
+<p><strong>Slow disk</strong>: We are writing to a software RAID5 array of old drives. In my head I was using the channel width of SATA-II for my calculations. In reality, and especially on spinning metal, write speeds are much slower. I looked up my component disks on <a href="userbenchmark.com">userbenchmark.com</a>, and the slowest member has an average sustained sequential write speed of 69 MB/s. This is very likely my first bottleneck. At most I can only use half of my available bandwidth.</p>
+</li>
+<li>
+<p><strong>TCP</strong>: After replacing all my drives with SSDs, TCP is the next culprit I would go after. The protocol technically only has about 6% of overhead, but it also dynamically seeks the maximum send rate through <a href="https://en.wikipedia.org/wiki/TCP_congestion_control">TCP Congestion Control</a>. It keeps trying to send &ldquo;just a little faster&rdquo;, until the number of unacknowledged packets exceeds a threshold. Then it backs off to 50%, and goes back to &ldquo;just a little faster&rdquo; mode. This loop means your practical speed with a TCP stream is about 75% of the pipe&rsquo;s theoretical maximum. Think of it like John Cleese offering just one more &ldquo;wafer thin&rdquo; packet. I considered using UDP to avoid this, but I actually <em>want</em> the error-checking in TCP. Probably the best solution is <a href="https://github.com/LabAdvComp/UDR">something esoteric like UDR</a>.</p>
+</li>
+<li>
+<p><strong>Slow CPU</strong>: This is the last bottleneck here. <em>Warehouse</em> is an old Intel Core2 Duo I had lying around the house. Untar and netcat aren&rsquo;t exactly CPU hungry beasts, but at some point there IS a maximum. If you believe the FreeNAS folks, a fileserver needs an i5 and 8 gigs of RAM for basic functionality. I haven&rsquo;t found that to be the case, but then I&rsquo;m not using RAID-Z, either.</p>
+</li>
+</ul>
+<p>I&rsquo;m happy with the outcome here. I have another drive to copy later, with another terabyte. I&rsquo;m considering removing that slowest drive from my RAID array, since the next-slowest one is almost 50% faster. Then I can copy to the array while it&rsquo;s in degraded mode, and re-add the slowpoke afterwards. We&rsquo;ll see.</p>
+<p>Happy holidays!</p>
+<h3 id="appendix-easy-performance-testing">Appendix: easy performance testing</h3>
+<p>If you&rsquo;re working on a similar problem for yourself, you might find these performance testing commands helpful. The idea is to tease apart each component of the transfer. There are better, more detailed, dedicated tools for each of these, but in a game of &ldquo;find the bottleneck&rdquo; you really only need quick and dirty validation. Fun fact: the command <em>dd</em> is actually short for <strong>D</strong>own and <strong>D</strong>irty. Well it should be, at any rate.</p>
+<p><strong>Read speed (on the source</strong> is easy: hand an arbitrary large file to dd, and write down the numbers it gives.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>large-file.tar.bz2 of<span style="color:#f92672">=</span>/dev/null bs<span style="color:#f92672">=</span>1M
+<span style="color:#ae81ff">1021317200</span> bytes <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> GB<span style="color:#f92672">)</span> copied, 3.9888 s, <span style="color:#ae81ff">256</span> MB/s
+</code></pre></div><p><strong>Network speed</strong> can be tested by netcatting a gigabyte of zeros from one machine to the other.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># On the receiving machine, open a port to /dev/null</span>
+$ nc -vvlnp <span style="color:#ae81ff">12345</span> &gt;/dev/null
+<span style="color:#75715e"># On the sending machine, send a gig of zeroes to that port</span>
+$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero bs<span style="color:#f92672">=</span>1M count<span style="color:#f92672">=</span>1K | nc -vvn 192.168.1.50 <span style="color:#ae81ff">12345</span>
+Connection to 192.168.1.50 <span style="color:#ae81ff">12345</span> port <span style="color:#f92672">[</span>tcp/*<span style="color:#f92672">]</span> succeeded!
+1024+0 records in
+1024+0 records out
+<span style="color:#ae81ff">1073741824</span> bytes <span style="color:#f92672">(</span>1.1 GB, 1.0 GiB<span style="color:#f92672">)</span> copied, 11.7811 s, 91.1 MB/s
+<span style="color:#75715e"># Remember, 8 bits to a byte!</span>
+$ echo <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>bc -l <span style="color:#f92672">&lt;&lt;&lt;</span> 91*8<span style="color:#66d9ef">)</span><span style="color:#e6db74"> Megabits&#34;</span>
+<span style="color:#ae81ff">728</span> Megabits
+</code></pre></div><p><strong>Write speed on the destination</strong> can be tested with dd, too:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero bs<span style="color:#f92672">=</span>1M count<span style="color:#f92672">=</span><span style="color:#ae81ff">1024</span> of<span style="color:#f92672">=</span>/mnt/storage/test.img
+1024+0 records in
+1024+0 records out
+<span style="color:#ae81ff">1073741824</span> bytes <span style="color:#f92672">(</span>1.1 GB, 1.0 GiB<span style="color:#f92672">)</span> copied, 55.3836 s, 19.4 MB/s
+</code></pre></div><p>(note: these tests were run while the copy was happening on warehouse. Your numbers should be better than this!)</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Drupal Does Face Recognition: Introducing Image Auto Tag module]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2018/04/19/face-recognition-on-drupal/"/>
+    <id>https://ohthehugemanatee.org/blog/2018/04/19/face-recognition-on-drupal/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2018-04-19T18:06:51+00:00</published>
+    <updated>2018-04-19T18:06:51+00:00</updated>
+    <content type="html"><![CDATA[<p>Last week I wrote a Drupal module that uses face recognition to automatically tag images with the people in them. You can find it on <a href="https://github.com/ohthehugemanatee/image_auto_tag">Github</a>, of course. With this module, you can add an image to a node, and automatically populate an entity_reference field with the names of the people in the image. This isn&rsquo;t such a big deal for individual nodes of course; it&rsquo;s really interesting for bulk use cases, like Digital Asset Management systems.</p>
+<p><img src="/images/image-auto-tag.gif" alt="Automatic tags, now in a Gif."></p>
+<p>I had a great time at Drupalcon Nashville, reconnecting with friends, mentors, and colleagues as always. But this time I had some fresh perspective. After 3 months working with Microsoft&rsquo;s (badass) CSE unit - building cutting edge proofs-of-concept for some of their biggest customers - the contrast was powerful. The Drupal core development team are famously obsessive about code quality and about optimizing the experience for developers and users. The velocity in the platform is truly amazing. But we&rsquo;re missing out on a lot of the recent stuff that large organizations are building in their more custom applications. You may have noticed the same: all the cool kids are posting about Machine Learning, sentiment analysis, and computer vision. We don&rsquo;t see any of that at Drupalcon.</p>
+<p>There&rsquo;s no reason to miss out on this stuff, though. Services like Azure are making it extremely easy to do all of these things, layering simple HTTP-based APIs on top of the complexity. As far as I can tell, the biggest obstacle is that there aren&rsquo;t well defined standards for how to interact with these kinds of services, so it&rsquo;s hard to make a generic module for them. This isn&rsquo;t like the Lucene/Solr/ElasticSearch world, where one set of syntax - indeed, one model of how to think of content and communicate with a search-specialized service - has come to dominate. Great modules like search_api depend on these conceptual similarities between backends, and they just don&rsquo;t exist yet for cognitive services.</p>
+<p>So I set out to try and explore those problems in a Drupal module.</p>
+<p><strong>Image Auto Tag</strong> is my first experiment. It works, and I encourage you to play around with it, but please don&rsquo;t even think of using it in production yet. It&rsquo;s a starting point for how we might build an analog to the great <a href="https://drupal.org/project/search_api">search_api</a> framework, for cognitive services rather than search.</p>
+<p>I built it on Azure&rsquo;s Cognitive Services Face API to start. Since the service is free for up to 5000 requests per month, this seemed like a place that most Drupalists would feel comfortable playing. Next up I&rsquo;ll abstract the Azure portion of it into a plugin system, and try to define a common interface that makes sense whether it&rsquo;s referring to Azure cognitive services, or a self-hosted, open source system like <a href="https://cmusatyalab.github.io/openface/">OpenFace</a>. That&rsquo;s the actual &ldquo;hard work&rdquo;.</p>
+<p>In the meantime, I&rsquo;ll continue to make this more robust with more tests, an easier UI, asynchronous operations, and so on. At a minimum it&rsquo;ll become a solid &ldquo;Azure Face Detection&rdquo; module for Drupal, but I would love to make it more generally useful than that.</p>
+<p>Comments, Issues, and helpful PRs are welcome.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[The #1 Question I Get Asked Working at MS: Why Do You Run Linux?]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2018/02/07/the-number-1-question-i-get-asked-working-at-msy-do-you-run-linux/"/>
+    <id>https://ohthehugemanatee.org/blog/2018/02/07/the-number-1-question-i-get-asked-working-at-msy-do-you-run-linux/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2018-02-07T16:42:50+00:00</published>
+    <updated>2018-02-07T16:42:50+00:00</updated>
+    <content type="html"><![CDATA[<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[My War on Systemd-resolved]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2018/01/25/my-war-on-systemd-resolved/"/>
+    <id>https://ohthehugemanatee.org/blog/2018/01/25/my-war-on-systemd-resolved/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2018-01-25T11:05:31+00:00</published>
+    <updated>2018-01-25T11:05:31+00:00</updated>
+    <content type="html"><![CDATA[<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[I&#39;m joining Microsoft, because they&#39;re doing Open Source Right]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/"/>
+    <id>https://ohthehugemanatee.org/blog/2018/01/10/im-joining-microsoft-because-theyre-doing-open-source-right/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2018-01-10T20:32:50+00:00</published>
+    <updated>2018-01-10T20:32:50+00:00</updated>
+    <content type="html"><![CDATA[<p>I&rsquo;m excited to announce that I&rsquo;ve signed with <strong>Microsoft</strong> as a Principal Software Engineering Manager. <strong>I&rsquo;m joining Microsoft because they are doing enterprise Open Source the Right Way, and I want to be a part of it</strong>. This is a sentence that I never believed I would write or say, so I want to explain.</p>
+<p>First I have to acknowledge the history. I co-founded my first tech company just as the <a href="https://en.wikipedia.org/wiki/Halloween_documents">Halloween documents</a> were leaked. That&rsquo;s where the world learned that Microsoft considered Open Source (and Linux in particular) a threat, and was intentionally spreading FUD as a strategic counter. It was also the origin of their famous <a href="https://en.wikipedia.org/wiki/Embrace%2C_extend%2C_and_extinguish">Embrace, Extend, and Extinguish</a> strategy. The Microsoft approach to Open Source only got more aggressive from there, funneling money to <a href="https://en.wikipedia.org/wiki/SCO/Linux_controversies">SCO&rsquo;s lawsuits</a> against Linux and its users, calling OSS licensing a &ldquo;cancer&rdquo;, and accusing Linux of violating MS intellectual property.</p>
+<p>I don&rsquo;t need to get exhaustive about this to make my point: <strong>for the first decade of my career (or more), Microsoft was rightly perceived as a villain in the OSS world</strong>. They did real damage and disservice to the open source movement, and ultimately to their own customers. Five years ago I wouldn&rsquo;t have even entertained the thought of working for &ldquo;the evil empire.&rdquo;</p>
+<p>Yes, Microsoft has made nice movements towards open source since the new CEO (Satya Nadella) took over in 2014. They open sourced .NET and Visual Studio, they released Typescript, they joined the <a href="https://www.linuxfoundation.org/">Linux Foundation</a> and went platinum with the <a href="https://opensource.org/">Open Source Initiative</a>, but come on. I&rsquo;m an open source warrior, an evangelist, and developer. I could see through the bullshit. Even when Microsoft announced the Linux subsystem on Windows, I was certain that this was just another round of Embrace, Extend, Extinguish.</p>
+<p>Then I met <a href="http://www.joshholmes.com/">Josh Holmes</a> at the <a href="https://www.phpconference.nl/">Dutch PHP Conference</a>.</p>
+<p>First of all, I was shocked to meet a Microsoft representative at an open source conference. He didn&rsquo;t even have bodyguards. I remember my first question for him was &ldquo;What are you <em>doing</em> here?&rdquo;.</p>
+<p>Josh told me a story about visiting startup conferences in Silicon Valley on behalf of Microsoft in 2007, and reporting back to Ballmer&rsquo;s office:</p>
+<blockquote>
+<p>&ldquo;The good news is, no one is making jokes about Microsoft anymore. The bad news is, <strong>they aren&rsquo;t even making jokes about Microsoft anymore</strong>.&rdquo;</p>
+</blockquote>
+<p>For Josh, this was a big &ldquo;aha&rdquo; moment. The booming tech startup space was focused on Open Source, so if Microsoft wanted to survive there, they had to come to the table.</p>
+<p>That revelation led to the creation of the Microsoft Partner Catalyst Team. Here&rsquo;s Josh&rsquo;s explanation of the team and its job, from an <a href="https://www.youtube.com/watch?v=qkTioWRH-Ws">interview</a> at the time I met him:</p>
+<blockquote>
+<p>&ldquo;We work with a lot of startups, at the very top edge of the enterprise mix. We look at their toughest problems, and we go solve those problems with open source. We&rsquo;ve got 70 engineers and architects, and we go work with the startups hand in hand. We&rsquo;ll sit down for a little pair programming with them, sometimes it will be a large enough problem that will take it off on our own and we&rsquo;ll work on it for a while, and we&rsquo;ll come back and give them the code. Everything that we do ends up in Github under typically an MIT or Apache license if it&rsquo;s original work that we&rsquo;re doing on our own, or a lot of times we&rsquo;re actually working within other open source projects.&rdquo;</p>
+</blockquote>
+<p>Meeting with Josh was a turning point for my understanding of Microsoft. This wasn&rsquo;t just something that I could begrudgingly call &ldquo;OK for open source&rdquo;. This wasn&rsquo;t just lip service. This was a whole department of people that were doing <em>exactly</em> what I believe in. Not only did I like the sound of this; I found that <strong>I actually wanted to work with this group</strong>.</p>
+<p>Still, when I considered interviewing with Microsoft, <strong>I knew that my first question had to be about &ldquo;Embrace, Extend, and Extinguish&rdquo;</strong>. Josh is a nice guy, and very smart, but I wasn&rsquo;t going to let the wool be pulled over <em>my</em> eyes.</p>
+<p>Over the next months, I would speak with five different people doing exactly this kind of work at Microsoft. I  I did my research, I plumbed all my back-channel resources for dirt. And everything I came back with said <strong>I was wrong</strong>.</p>
+<p>Microsoft really <em>is</em> undergoing a fundamental shift towards Open Source.</p>
+<p>CEO Sadya Nadella is frank that <strong>closed-source licensing as a profit model is a dead-end</strong>. Since 2014, Microsoft has been transitioning their core business from licensed software to platform services. After all, why sell a license once, when you can rent it out monthly? So they move all the licensed products they can online, and rent, instead of selling them. Then they rent out the infrastructure itself, too - hence Azure. Suddenly flexibility is at a premium. As one CTO put it, <strong>for Azure to be Windows-only would be a liability</strong>.</p>
+<p>This shift is old news for most of the world. As much as the Hacker News crowd still bitches about it as FUD, this strategic direction has been in and out of the financial pages for years now. Microsoft has pivoted to platform services. Look at their profits by product over the last 8 years:</p>
+<p><img src="/images/microsoft-profits-by-product.png" alt="Microsoft profits by product, over year."></p>
+<p>The trend is obvious: <strong>server and platform services are the place to invest</strong>. Office only remains at the top of the heap because it transitioned to SaaS. Even Windows license profits are declining. This means focusing on interoperability. Make sure <em>everything</em> can run on your platform, because anything else is to handicap the source of your biggest short- and medium-term profit. In fact, <strong>remaining adversarial to Open Source would kill the golden goose</strong>. Microsoft <em>has</em> to change its values in order to make this shift.</p>
+<p>So much for financial and strategic direction; but this is a hundred-thousand-person company. That ship doesn&rsquo;t turn on a dime, no matter what the press releases tell you. So <strong>my second interview question became &ldquo;How is the transition going?&quot;</strong> This sort of question makes people uncomfortable: the answer is either transparently unrealistic, or critical of your environment and colleagues. Over and over again, I heard the right answer: It&rsquo;s freakin' hard.</p>
+<p>MS has more than 40 years of proprietary development experience and institutional momentum. All of their culture and systems - from hiring, to code reviews, to legal authorizations - have been organized around that model. That&rsquo;s very hard to change! I heard horror stories about the beginning of the transition, having to pass every line of contribution past the Legal department. I heard about managers feeling lost, or losing a sense of authority over their own team. I heard about development teams struggling to understand that their place in an OSS project was on par with some Rando Calrissian contributor from Kansas. And I heard about how the company was helping people with the transition, changing systems and structures to make this cultural shift happen.</p>
+<p>The stories I heard were important evidence, which contradicted the old narrative I had in my head. <strong>Embrace, extend, extinguish does not involve leadership challenges, or breaking down of hierarchies</strong>. It does not involve personal struggle and departmental reorganization. The stories I heard evidenced an organization trying a real paradigm shift, for tens of thousands of people around the world. It is not perfect, and it is not finished, but I believe that the transition is real.</p>
+<p><strong>When you accept that Microsoft is trying to reorient its own culture to Open Source, suddenly all those &ldquo;transparent&rdquo; PR moves you dismissed get re-framed</strong>. They are accomplishments. It&rsquo;s incredibly difficult to change the culture of one of the biggest companies in the world&hellip; but today, almost half of Azure users run Linux. Microsoft&rsquo;s virtualization work made them the <a href="http://www.techradar.com/news/software/operating-systems/inside-the-linux-kernel-3-0-1035353/2">fifth largest contributor to the 3.x Linux kernel</a>. Microsoft maintains <a href="https://octoverse.github.com/">the biggest project on Github (by contributor count)</a>. They maintain a BSD distribution <em>and</em> a Linux distribution. And a huge part of LXD (the container-based virtualization system for Linux) comes from Microsoft&rsquo;s work with Canonical.</p>
+<p>That&rsquo;s impressive for any company. But Microsoft? It boggles the mind. This level of contribution is not lip-service. You don&rsquo;t maintain a 15 thousand person community just for PR. <strong>Microsoft is contributing as much or more to open source than many other major players, who have had this in their culture from the start</strong> (Google, Facebook, Twitter, LinkedIn&hellip;). It&rsquo;s an accomplishment, and it&rsquo;s impressive!</p>
+<p>In the group I&rsquo;m entering, a strong commitment to Open Source is built into the project structure, the team responsibilities, and the budgeting practice. Every project has time specifically set aside for contribution; developers' connections to their communities are respected and encouraged. After a decade of working with companies who try to engage with open source responsibly, I can say that <strong>this is the strongest institutional commitment to &ldquo;giving back&rdquo; that I have ever seen</strong>. It&rsquo;s a stronger support for contribution than I&rsquo;ve ever been able to offer in any of my roles, from sole proprietor to CTO.</p>
+<p>This does mean a lot more work outside of the Drupal world, though. I will still attend Drupalcons. I will still give technical talks, participate, and help make great open source communities for Drupal and other OSS projects. If anything, I will do those things <em>more</em>. And I will do them wearing a Microsoft shirt.</p>
+<p>Microsoft is making a genuine, and enormous, push to being open source community members and leaders. From everything I&rsquo;ve seen, they are doing it extremely well. From the outside at least, <strong>this is what it looks like to do enterprise Open Source The Right Way</strong>.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[The 3 skills you need to become a rock star developer]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2017/08/04/the-only-3-tools-you-need-to-become-a-rock-star-developer/"/>
+    <id>https://ohthehugemanatee.org/blog/2017/08/04/the-only-3-tools-you-need-to-become-a-rock-star-developer/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2017-08-04T12:03:27+00:00</published>
+    <updated>2017-08-04T12:03:27+00:00</updated>
+    <content type="html"><![CDATA[<p>A lot is made of so-called &ldquo;rockstar developers&rdquo; in any given language or framework. They have a seemingly magical knowledge of the language and API, finding obscure methods and writing best-practice code as if by instinct. I&rsquo;d like to lift the curtain on this: it&rsquo;s not that hard to be this kind of rock star. You can do it, too&hellip; even without a fancy computer science degree. If you know how to code in a given language, you just need 3 skills and some patience. It will take about a year of working this way to get there, but you&rsquo;ll find people throwing around &ldquo;the R word&rdquo; sooner than you think.</p>
+<ol>
+<li>Know how to explore the source</li>
+</ol>
+<hr>
+<p>For most of us this comes down to knowing how to use your IDE, but other tools are available. It doesn&rsquo;t matter what tool you use, as long as it has these functionalities at a minimum:</p>
+<ul>
+<li><strong>Something that lets you explore the object graph.</strong> In my IDE, a hotkey takes you directly from any usage of a function, method, or property, to the definition in use. It respects overrides and understands class inheritance. A different hotkey shows me the descendants of a method/property/class; how it&rsquo;s extended and overridden by it&rsquo;s children. You need to be able to poke around the entire application with enough ease that you can notice common design patterns. Class structure is where some of the most important design patterns live, and you want to learn from and match the rest of your application or framework.</li>
+<li><strong>Something that lets you quickly look up documentation.</strong> One of my favorite things about Drupal is that the documentation standard is in the code itself, which makes this one very easy to satisfy. Most good IDEs will integrate with external documentation systems though. Exact types and example usages should be a hotkey away.</li>
+<li><strong>Something that provides hints as you code.</strong> My IDE pays attention to type hints, and suggests available methods and properties as I type. This is more a speed thing than anything else, but it saves me from having to remember every single corner of the API.</li>
+<li><strong>Fast, robust searching.</strong> Very often you know what you want to do, but you don&rsquo;t know quite how to do it. The rest of your framework is your friend: look for other code that does something similar. Think about how you might do this searching a codebase: simple text matching probably won&rsquo;t do - you need regex matching, at least. Constraint by location, probably constraints by filename, too. The other day I (really) was looking for an example of custom route access callbacks in Drupal - something that&rsquo;s awkwardly described in the doco, and it turns out, doesn&rsquo;t exactly work as documented anyway. I needed to search files matching <code>*.services.yml</code> for services with a tag value &ldquo;applies_to&rdquo; that starts with an underscore. The robust search capability of my IDE helped me find my example, and all I had to write was a little regex.</li>
+</ul>
+<p>These functionalities are standard-issue in any normal IDE. So perhaps we should just reduce this whole point to &ldquo;use an IDE, and learn its hotkeys.&rdquo; This will help you learn by example much faster.</p>
+<ol start="2">
+<li>Know how to use your debugger</li>
+</ol>
+<hr>
+<p>There are two kinds of developers in the world: those who use a debugger, and those who piss their time into the wind. Most self-taught developers spend years beating their heads against the wall trying to resolve bugs. It&rsquo;s a major effort to remember everything in state, so they can&rsquo;t write more than 2 lines of code without some visible output to validate what&rsquo;s going on. I understand. I did this too. The PHP debugger (XDebug) seemed complicated to use, and I didn&rsquo;t really understand why it was important. So I avoided it for a long time.</p>
+<p><strong>Holy shit, it&rsquo;s important</strong>. A debugger lets you step through your code one line at a time, as it&rsquo;s being executed. You can look at the value of any variable, try out isolated lines of code to see what they return, and modify values as it&rsquo;s running. Honestly half the time, I develop by writing a skeleton of what I want in sloppy, busted code&hellip; then fire up the debugger and do the real writing while I&rsquo;m looking at the actual values involved.</p>
+<p>The other really valuable contribution of a debugger to your life, is that you can &ldquo;step into&rdquo; any function or method being called. That means you can jump directly inside the function to see what it does, and inside the functions <em>it</em> uses, and so on and so on. Turns out that it&rsquo;s turtles all the way down: this is the best way to learn really how your framework works. Five and six layers deep you find patterns of abstraction that you simply won&rsquo;t get anywhere else. The kind of understanding you get from walking a complete code path to it&rsquo;s full depth, is impossible to get any other way. It&rsquo;s the kind of understanding that rock stars have.</p>
+<p>Debuggers typically offer other useful functionalities, like performance profiling. Those are great when you need them, and I don&rsquo;t want to minimize their importance. Compared to the everyday functionalities though, these are edge cases. You need the basic tool of debugging <em>every time you touch the code.</em> So invest the time to figure out your debugger. It will take you an afternoon to really figure it out on your local environment. Spend that afternoon now. Thank me later.</p>
+<ol start="3">
+<li>Know how to write tests</li>
+</ol>
+<hr>
+<p>I&rsquo;ll let you in on a secret: you don&rsquo;t have to be good at writing tests. Being good (generally) means your tests run faster, and cover more edge cases. Those are both Good Things, but the basic value of even amateur, I&rsquo;m-just-figuring-it-out tests is 75% of the point.</p>
+<p>The core value of tests is that they run the exact. same. thing. every. damn. time. That&rsquo;s more precise than refreshing your browser, where a hundred factors might come into play before your code fires. Oh, and did I mention that you can trigger your debugger from your tests? Because you can.</p>
+<p>A basic test is just firing off one method or function on it&rsquo;s own, with known values as input. You write &ldquo;asserts&rdquo; to check the output. For example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">testAddition</span>() {
+  $result <span style="color:#f92672">=</span> <span style="color:#a6e22e">\MathClass</span><span style="color:#f92672">::</span><span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>);
+  <span style="color:#a6e22e">self</span><span style="color:#f92672">::</span><span style="color:#a6e22e">assertEquals</span>(<span style="color:#ae81ff">6</span>, $result);
+}
+</code></pre></div><p>This is not the most complicated concept in the world. But this four lines means I can re-run the <code>addition</code> function a thousand times, stepping through it, with the same values every time. For testing a little additon function, this is certainly not necessary. But for testing submitted values entered on a web form, it saves me a ridiculous amount of time copypasting Lipsum text and fighting with form cache. You can also use this for big, integrated tests that require lots of dependencies. For example, Drupal includes base classes for various levels of bootstrap right up to the whole system. If you&rsquo;re writing a complicated migration, it&rsquo;s not crazy to have a test for it. You can determine the exact start state of the system (effectively a db dump), kick off the exact migration scripts in the right order, and validate the result, all in one command, with no clicking or human inaccuracy.</p>
+<p>Tests do more than just save you time in coding. They also save time in maintenance, since you can leave your tests in place and know as soon as there&rsquo;s a regression. They also make refactoring possible. Having complete tests that make sure the whole system <em>works</em> means that I never have to worry if my refactor broke something. I know it didn&rsquo;t, because it passes the same tests.</p>
+<p>OK, we all get it: testing saves you time. But the important part of test writing for this article, is how much you learn about your framework as you&rsquo;re doing it. You see, the hard part of writing tests is paring down the system you need for the test, to get rid of external factors. For example, technically I could bootstrap all of Symfony to run that example test above&hellip; but it&rsquo;s much faster if I just instantiate the MathClass class and run the function directly. So in my test, I won&rsquo;t bother starting anything from the system around it.</p>
+<p>Most of your tests will be somewhere in between this simple example and a behemoth which needs the full weight of your framework to run. You want to only instantiate the bare minimum. So in Symphony, maybe you bootstrap the service container, but you only load up the services you need for the code you&rsquo;re testing. And of those, probably half of them can be &ldquo;dummies&rdquo; that are just there to give a type signature to a constructor. Good testing frameworks (shout out to PHPUnit!) make this easy.</p>
+<p>The process of trying to pare down (or build up) dependencies to the minimum you need, <em>is a fantastic way to learn your framework&rsquo;s internals</em>. What REALLY are the dependencies for this function? What subsystems from my framework does it need to run, and what parts of those subsystems? This is a lot like the understanding you get from stepping through an entire request in the debugger: it&rsquo;s rock-star level understanding.</p>
+<p>I&rsquo;m not going to write a detailed howto on testing here. There are a thousand of them all over the internet, and it&rsquo;s pretty specific to your individual language. The point is: write tests. It will take a couple of months to get used to it, but after that you&rsquo;ll find you develop faster, refactor faster, experience fewer bugs and regressions&hellip; and you&rsquo;ll find you understand your framework better than any of your peers.</p>
+<h2 id="being-a-rock-star-developer">Being a rock star developer</h2>
+<p>These three tools are the fast track to understanding your framework and language on an extremely deep level. That understanding is the definition of a &ldquo;rock star&rdquo; developer. You will still google for solutions sometimes, but more often you&rsquo;ll look directly at the doco, or for other examples in the code. You&rsquo;ll probably still forget exactly which methods to use for obscure corners of the framework, or what parameters they take, but you&rsquo;ll have the tools to rediscover that information readily at hand. Most importantly, you&rsquo;ll understand how your system <em>thinks</em>, which is what being a rock star is all about.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Why no mainstream PHP speakers come to Drupalcon - and how we&#39;re changing that]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2017/07/28/bring-php-to-drupalcon/"/>
+    <id>https://ohthehugemanatee.org/blog/2017/07/28/bring-php-to-drupalcon/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2017-07-28T17:01:59+00:00</published>
+    <updated>2017-07-28T17:01:59+00:00</updated>
+    <content type="html"><![CDATA[<p>I&rsquo;ve learned something incredible as the PHP Track Chair for Drupalcon Vienna. <strong>The Drupal Association has no way to invite PHP speakers to Drupalcon</strong>.</p>
+<p>This blew me away when I first learned about it. After all the work to bring mainstream PHP to Drupal core, after all the outreach to <a href="https://php-fig.org">PHP-FIG</a>, after all the talks Drupalists have given at major PHP conferences, how is this possible?</p>
+<p>You see, <strong>basically every other PHP conference covers their speakers' travel and accommodation costs</strong>. Drupalcon doesn&rsquo;t, and never has. Historically it has to do with Drupalcon&rsquo;s identity as a community conference, rather than a professional one. But it means <strong>the best PHP speakers never get to Drupalcon</strong>.</p>
+<p>On one hand that&rsquo;s great for our project: our speakers are all passionate volunteers! They&rsquo;re specialists who care deeply about the project. On the other hand, it contributes to isolated, &ldquo;stay on the island&rdquo; thinking. If the only speakers we hear are Drupalists, where do we get new insights? If the only people at the BoF or code sprint table are Drupalists, how do we leverage the strengths of the broader PHP community? How do we contribute back? <em>How do we grow?</em></p>
+<p>Every year, the lack of financial support holds back major PHP contributors from speaking at Drupalcon. The maintainers of Composer, PHPUnit, and Guzzle <em>want</em> to come to Drupalcon, but we don&rsquo;t make it possible. <strong>These people built and maintain the cornerstones of Drupal. Why do we hold them at arm&rsquo;s length?</strong></p>
+<p>This year, as Drupalcon PHP Track Chair, I&rsquo;m in a position to make some changes. So I invited two notable PHP speakers to come and join us at the con: <strong>Sebastian Bergmann, author of PHPUnit</strong>, and <strong>Michelle Sanver, president of @phpwomen</strong>. Today I&rsquo;m announcing a very special <a href="https://www.gofundme.com/php-at-drupalcon">GoFundMe campaign</a> to pay the travel and accommodation for these two exceptional contributors.</p>
+<!-- raw HTML omitted -->
+<p>I believe in the benefits of closer cooperation with the PHP community.</p>
+<p>I believe there&rsquo;s a lot we can learn from these people, and a lot we can teach them too.</p>
+<p><strong>And I believe that I&rsquo;m not the only one.</strong></p>
+<p>We&rsquo;ve estimated costs conservatively; this is not a lot of money. Anything we collect above and beyond their needs will go to the Drupal Association, but let&rsquo;s be honest with ourselves: this campaign isn&rsquo;t just about bringing Sebastian and Michelle to Drupalcon. <strong>Your donation shows the Drupal Association that you want to welcome contributors from other communities.</strong> You prove to them that their constituents <em>want</em> to bring in this kind of speaker. <strong>When you donate, you stand up for the kind of community you believe in.</strong></p>
+<p>Please <a href="https://www.gofundme.com/php-at-drupalcon/donate">donate</a>, share, and tweet the campaign today.</p>
+<!-- raw HTML omitted -->
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[That time I resurrected my Linux MacBook Pro]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2017/06/17/that-time-i-resurrected-my-linux-macbook-pro/"/>
+    <id>https://ohthehugemanatee.org/blog/2017/06/17/that-time-i-resurrected-my-linux-macbook-pro/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2017-06-17T23:06:02+00:00</published>
+    <updated>2017-06-17T23:06:02+00:00</updated>
+    <content type="html"><![CDATA[<p>In the airport last week, my laptop stopped booting.</p>
+<p>I have a 2012 Macbook Pro - yes, that coveted &ldquo;last good model&rdquo; - and it runs Ubuntu Linux. It&rsquo;s my roving office as I travel the world to conferences, performances, and job sites. So when I started it up at JFK airport this week and got a gray screen of death, I was a little concerned.</p>
+<p>I tried starting into Startup Manager by holding the &ldquo;Option&rdquo; key. No bootable options appeared. Just an unhopeful file folder with a question mark. This was Not A Good Sign.</p>
+<p><img src="/images/folder-questionmark.jpg" alt="When this is all your computer does, it is Not A Good Sign."></p>
+<p>Generally this icon means that EFI couldn&rsquo;t find a valid startup device. This is not the first time I&rsquo;ve seen this - I&rsquo;ve played with my boot options enough to mess this up for myself a few times! I breathed a heavy sigh and tried starting onto the recovery partition by holding &ldquo;Command+R&rdquo;. I hadn&rsquo;t done anything in particular with Grub recently, but I had done some kernel updates, and you never know&hellip; But the recovery boot just got me a circle with a line through it, the universal &ldquo;no&rdquo; sign. This was an even worse sign.</p>
+<p><img src="/images/mac-no-sign.png" alt="This is an Even Worse Sign."></p>
+<p>This immediately threw the issue out of the realm of &ldquo;something I messed up myself&rdquo;, and into the less-entertaining realm of &ldquo;hardware failure.&rdquo;</p>
+<p>At home I have some tools for diagnosing this sort of issue, but in the airport I had limited options - and unlimited time. So I started into Apple&rsquo;s built in Diagnostic Test mode by holding &ldquo;D&rdquo;. A lesser-known feature of the Apple boot manager, is that if it doesn&rsquo;t have a device to boot from, it can download an image from the Internet, load it into RAM, and boot from there. I had never had the chance to try it out before, but that didn&rsquo;t give much satisfaction as I grimly waited for it to work it&rsquo;s magic.</p>
+<p>The diagnostic report looked fine, everything in tip-top shape! That is, until I went to the hard drive diagnostic page - there wasn&rsquo;t one. Not just no hard drive diagnostic, but completely no page for SATA diagnostics at all.</p>
+<p>At this point it was clear that a catastrophic hard disk failure was my best-case scenario. Maybe it just skipped the drive diagnostic because no devices reported back, I hoped. There&rsquo;s something zen in that moment, when you find yourself <em>hoping</em> that you&rsquo;ve <em>only</em> lost your entire hard drive. All my work is backed up and relatively accessible, after all; I could stare digital death in the eye with only a hundred-Euro bill for a new drive. A motherboard failure, though - I tried not to think of it.</p>
+<p>When I got home, I pulled out my toolkit. I opened up my mac to look for signs of burnout or other damage. Nothing. No smell, no scorches, no scratches. Not even any capacitor whine. I have a lot of respect for the engineers who designed a system that, even after 5 years of hard abuse, still retained it&rsquo;s &ldquo;new motherboard smell.&rdquo; I optimistically tried re-seating the SATA cable for my drive, but wasn&rsquo;t surprised when that didn&rsquo;t work.</p>
+<p>I opened my desktop gaming computer, and plugged my laptop hard disk in there. I got the worst result possible from this test: the drive worked fine. It booted into my beautifully customized Linux desktop, dutifully selecting a random background image from the Internet - as luck would have it, a man screaming at his laptop in frustration. Though everyone knows that the silicon gods have a strong sense of irony.</p>
+<p>I did a couple of follow up tests to confirm the diagnosis, but it was clear: the hard drive was fine, it was the SATA controller on my Macbook that had died. Everything else seemed intact; I could boot from a USB stick just fine, with a reasonable performance degradation (there&rsquo;s a ~33% speed difference between SATA3 and USB3 interfaces). But it couldn&rsquo;t detect anything connected internally.</p>
+<p>The first goal was to get myself a computer for work. I&rsquo;m a contractor, which means that I don&rsquo;t take days off if I can help it. So I threw together a nice looking machine from spare parts I had laying around the house, and used my ex-laptop hard drive as a primary. When it first booted, I confess to a very satisfying &ldquo;I told you those parts would come in handy someday&rdquo; jab to my wife. She was very impressed, I could tell from the way she rolled her eyes at me. :)</p>
+<p>My immediate need of a working machine for the office satisfied, the second priority was to buy a new laptop. I&rsquo;m on the road <strong>a lot</strong>. A desktop working environment - even one that lets me cheerfully tease my partner a little - is a band-aid at best. In fact, my next onsite was in Zürich in two weeks! I briefly considered taking my tower carry-on, before buckling down to find a computer.</p>
+<p>My local electronics shop was a bust. They had plenty of beautiful looking machines that would run Linux perfectly nicely - those Lenovos are really coming along! - but they all had one fatal flaw: I can&rsquo;t work on a German keyboard.</p>
+<p>I&rsquo;ve lived in Germany for 6 years now; I&rsquo;m comfortable in the language and culture, and I can complain about the bureaucracy with the best of them. But I just can&rsquo;t handle their terrible keyboard layout. QWERTZ might be fine for writing the language, but code and the *nix terminal are very QWERTY-centric. No, there was no way I would put up with a QWERTZ laptop for my next 5 years.</p>
+<p>So I bought one of the popular Dell XPS 13 &ldquo;developer edition&rdquo; laptops, with Ubuntu pre-installed. I excitedly checked my order status right away, and saw the shipping date&hellip; was the day after I leave for Zürich. Shit.</p>
+<p>So my old laptop is back in service, limping along for one last hurrah. The black box on the back looks like some impressive hardware hack, but it&rsquo;s just the old internal drive connected by USB.</p>
+<figure class="center">
+    <img src="/images/me-and-my-busted-laptop.jpg"/> 
+</figure>
+
+<p>Yes, I had to do the GRUB dance pretty extensively to get it booting. boot-repair is a wonderful tool, but nothing seems to handle elegantly switching between BIOS and EFI boot modes. I ended up having to copy EFI files from my USB stick by hand. As every Linux desktop user ever has said: &ldquo;if it&rsquo;s working I won&rsquo;t ask any questions.&rdquo;</p>
+<p>Yes, I will take this computer into a board room in two weeks.</p>
+<p>No, I am not ashamed. I&rsquo;m actually pretty satisfied with myself. It&rsquo;s been years since I&rsquo;ve built a computer myself, let alone rigged one up with duct tape and spare parts. It&rsquo;s been ages since I&rsquo;ve had to dig around in the Linux boot process (greatly improved since 2005, Linus be praised). And it&rsquo;s been a long time since I&rsquo;ve sported duct tape on my computer.</p>
+<p>In a couple weeks I&rsquo;ll find out just how much special sauce Dell has put into their default Ubuntu setup to make it run. My setup is&hellip; not very default.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Better PHP === Better Drupalists: the PHP track at Drupalcon Vienna]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2017/06/15/better-php-better-drupalists/"/>
+    <id>https://ohthehugemanatee.org/blog/2017/06/15/better-php-better-drupalists/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2017-06-15T17:19:24+00:00</published>
+    <updated>2017-06-15T17:19:24+00:00</updated>
+    <content type="html"><![CDATA[<p>One of the best parts of Drupal 8 is our shift to enterprise PHP coding structures. With tools like composer and Symfony&rsquo;s structures like Events and Dependency Injection, Drupalists are learning to be great PHP developers, and vice-versa. Today, the fastest route to becoming a rock star Drupalist is through PHP.</p>
+<p>I&rsquo;m one of the PHP track chairs for Drupalcon Vienna, and this year our focus is <em>better PHP === better Drupalists</em>. How can better PHP make your life as a Drupal developer easier?</p>
+<p><strong>Do you like PHP 7?</strong> We want to hear about the technicalities of types, throwing all the things, and your favorite operators (mine is null coalesce, but full respect for you spaceship operator fans).</p>
+<p><strong>Have you seen the light of functional programming?</strong> Tell us why we should love higher orders with lambda functions and closures. Let&rsquo;s hear the finer points of first class functions.</p>
+<p><strong>Do your tests bring all the bugs to the yard?</strong> We want to talk about it. Every method is a promise, and your tests make sure you keep your promises. We want sessions about test driven development in a drupal context, choosing the right test framework and scope, and how your real-world tests are saving you real-world time.</p>
+<p><strong>Have you written a composer library wrapper module yet?</strong> Submit a session about how composer is saving you lines of code.</p>
+<p><strong>Is your development environment fine-tuned for drupal excellence?</strong> Tell us how, and why.</p>
+<p>We have only two weeks left until session submissions close! <a href="https://events.drupal.org/node/add/session?og_group_ref=14447">Get your session in now</a> and help us make Drupal code something to be proud of.</p>]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Stop waiting for Feeds module: how to import RSS in Drupal 8]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2017/06/07/stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8/"/>
+    <id>https://ohthehugemanatee.org/blog/2017/06/07/stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2017-06-07T00:33:24+00:00</published>
+    <updated>2017-06-07T00:33:24+00:00</updated>
+    <content type="html"><![CDATA[<p>How do you import an RSS feed into entities with Drupal 8? In Drupal 6 and 7, you probably used the <a href="https://drupal.org/project/feeds">Feeds</a> module. Feeds 7 made it easy (-ish) to click together a configuration that matches an RSS (or any XML, or CSV, or OPML, etc) source to a Drupal entity type, maps source data into Drupal fields, and runs an import with the site Cron. Where has that functionality gone in D8? I recently had to build a podcast mirror for a client that needed this functionality, and I was surprised at what I found.</p>
+<p><strong>Feeds module</strong> doesn&rsquo;t have a stable release candidate, and it doesn&rsquo;t look like one is coming any time soon. They&rsquo;re still surveying people about what feeds module should even DO in D8. As the module page explains:</p>
+<p>{%blockquote %}
+It&rsquo;s not ready yet, but we are brainstorming about what would be the best way forward. Want to help us? Fill in our survey.
+If you decide to use it, don&rsquo;t be mad if we break it later.
+{% endblockquote %}</p>
+<p>This does not inspire confidence.</p>
+<p>The next great candidate is <a href="https://www.drupal.org/docs/8/core/modules/aggregator/overview">Aggregator</a> module (in core). Unfortunately, Aggregator gives you no control over the kind of entity to create, let alone any kind of field mapping. It imports content into its own Aggregated Content entity, with everything in one field, and linking offsite. I suppose you could extend it to choose you own entity type, map fields etc, but that seems like a lot of work for such a simple feature.</p>
+<p>Frustrating, right?</p>
+<p><strong>What if I told you that Drupal 8 can do everything Feeds 7 can?</strong></p>
+<p>What if I told you that it&rsquo;s even better: instead of clicking through endless menus and configuration links, waiting for things to load, missing problems, and banging your head against the mouse, you can set this up with one simple piece of text. You can copy and paste it directly from this blog post into Drupal&rsquo;s admin interface.</p>
+<h2 id="what-how">What? How?</h2>
+<p>Drupal 8 can do all the Feedsy stuff you like with <a href="https://www.drupal.org/docs/8/api/migrate-api/migrate-api-overview">Migrate</a> module. Migrate in D8 core already contains all the elements you need to build a regular importer of ANYTHING into D8. Add a couple of contrib modules to provide specific plugins for XML sources and convenience drush functions, and <em>baby you&rsquo;ve got a stew goin'!</em></p>
+<p>Here&rsquo;s the short version Howto:</p>
+<p><strong>1) Download and enable <a href="https://drupal.org/project/migrate_plus">migrate_plus</a> and <a href="https://drupal.org/project/migrate_tools">migrate_tools</a> modules.</strong> You should be doing this with composer, but I won&rsquo;t judge. Just get them into your codebase and enable them. Migrate Plus provides plugins for core Migrate, so you can parse remote XML, JSON, CSV, or even arbitrary spreadsheet data. Migrate Tools gives us drush commands for running migrations.</p>
+<p><strong>2) Write your Migration configuration in text</strong>, and paste it into the configuration import admin page (<code>admin/config/development/configuration/single/import</code>), or import it another way. I&rsquo;ve included a starter YAML just below, you should be able to copypasta, change a few values, and be done in time for tea.</p>
+<p><strong>3) Add a line to your system cron</strong> to run <code>drush migrate -y my_rss_importer</code> at whatever interval you like.</p>
+<p>That&rsquo;s it. One YAML file, most of which is copypasta. One cronjob. All done!</p>
+<p>Here&rsquo;s my RSS importer config for your copy and pasting pleasure. If you&rsquo;re already comfortable with migration YAMLs and XPaths, just add the names of your RSS fields as selectors in the source section, map them to drupal fields in the process section, and you&rsquo;re all done!</p>
+<p>If you aren&rsquo;t familiar with this stuff yet, don&rsquo;t worry! We&rsquo;ll dissect this together, below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_importer</span>
+<span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Import my RSS feed&#39;</span>
+<span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
+
+<span style="color:#f92672">source</span>:
+  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">url</span>
+  <span style="color:#f92672">data_fetcher_plugin</span>: <span style="color:#ae81ff">http</span>
+  <span style="color:#f92672">urls</span>: <span style="color:#e6db74">&#39;https://example.com/feed.rss&#39;</span>
+  <span style="color:#f92672">data_parser_plugin</span>: <span style="color:#ae81ff">simple_xml</span>
+
+  <span style="color:#f92672">item_selector</span>: <span style="color:#ae81ff">/rss/channel/item</span>
+  <span style="color:#f92672">fields</span>:
+    -
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">guid</span>
+      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">GUID</span>
+      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">guid</span>
+    -
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">title</span>
+      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Title</span>
+      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">title</span>
+    -
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">pub_date</span>
+      <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Publication date&#39;</span>
+      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">pubDate</span>
+    -
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">link</span>
+      <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Origin link&#39;</span>
+      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">link</span>
+    -
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">summary</span>
+      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Summary</span>
+      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:summary&#39;</span>
+    -
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">image</span>
+      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Image</span>
+      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:image[&#39;&#39;href&#39;&#39;]&#39;</span>
+
+  <span style="color:#f92672">ids</span>:
+    <span style="color:#f92672">guid</span>:
+      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+
+<span style="color:#f92672">destination</span>:
+  <span style="color:#f92672">plugin</span>: <span style="color:#e6db74">&#39;entity:node&#39;</span>
+
+<span style="color:#f92672">process</span>:
+  <span style="color:#f92672">slug</span>: <span style="color:#ae81ff">stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8</span>
+<span style="color:#f92672">title</span>: <span style="color:#ae81ff">title</span>
+  <span style="color:#f92672">field_remote_url</span>: <span style="color:#ae81ff">link</span>
+  <span style="color:#f92672">body</span>: <span style="color:#ae81ff">summary</span>
+  <span style="color:#f92672">created</span>:
+    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">format_date</span>
+    <span style="color:#f92672">from_format</span>: <span style="color:#e6db74">&#39;D, d M Y H:i:s O&#39;</span>
+    <span style="color:#f92672">to_format</span>: <span style="color:#e6db74">&#39;U&#39;</span>
+    <span style="color:#f92672">source</span>: <span style="color:#ae81ff">pub_date</span>
+  <span style="color:#f92672">status</span>:
+    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
+    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">1</span>
+  <span style="color:#f92672">type</span>:
+    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
+    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">podcast_episode</span>
+
+</code></pre></div><p>Some of you can just stop here. If you&rsquo;re familiar with the format and the structures involved, this example is probably all you need to set up your easy RSS importer.</p>
+<p>In the interest of good examples for Migrate module though, I&rsquo;m going to continue. Read on if you want to learn more about how this config works, and how you can use Migrate to do even more amazing things&hellip;</p>
+<h2 id="anatomy-of-a-migration-yaml">Anatomy of a migration YAML</h2>
+<p>Let&rsquo;s dive into that YAML a bit. Migrate is one of the most powerful components of Drupal 8 core, and this configuration is your gateway to it.</p>
+<p>That YAML looks like a lot, but it&rsquo;s really just 4 sections. They can appear in any order, but we need all 4: General information, source, destination, and data processing. This isn&rsquo;t rocket science after all! Let&rsquo;s look at these sections one at a time.</p>
+<p><strong>General information</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_importer</span>
+<span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;My RSS feed importer&#39;</span>
+<span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
+</code></pre></div><p>This is the basic stuff about the migration configuration. At a minimum it needs a unique machine-readable ID, a human-readable label, and <code>status: true</code> so it&rsquo;s enabled. There are other keys you can include here for fun extra features, like module dependencies, groupings (so you can run several imports together!), tags, and language. These are the critical ones, though.</p>
+<p><strong>Source</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
+  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">url</span>
+  <span style="color:#f92672">data_fetcher_plugin</span>: <span style="color:#ae81ff">file</span>
+  <span style="color:#f92672">urls</span>: <span style="color:#e6db74">&#39;https://example.com/feed.rss&#39;</span>
+  <span style="color:#f92672">data_parser_plugin</span>: <span style="color:#ae81ff">simple_xml</span>
+
+  <span style="color:#f92672">item_selector</span>: <span style="color:#ae81ff">/rss/channel/item</span>
+  <span style="color:#f92672">fields</span>:
+    -
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">guid</span>
+      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">GUID</span>
+      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">guid</span>
+    -
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">title</span>
+      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Item Title</span>
+      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">title</span>
+    -
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">pub_date</span>
+      <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Publication date&#39;</span>
+      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">pubDate</span>
+    -
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">link</span>
+      <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Origin link&#39;</span>
+      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">link</span>
+    -
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">summary</span>
+      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Summary</span>
+      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:summary&#39;</span>
+
+  <span style="color:#f92672">ids</span>:
+    <span style="color:#f92672">guid</span>:
+      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</code></pre></div><p>This is the one that intimidates most people: it&rsquo;s where you describe the RSS source. Migrate module is even more flexible than Feeds was, so there&rsquo;s a lot to specify here&hellip; but it all makes sense if you take it in small pieces.</p>
+<p>First: we want to use a remote file, so we&rsquo;ll use the Url plugin (there are others, but none that we care about right now). All the rest of the settings belong to the Url plugin, even though they aren&rsquo;t indented or anything.</p>
+<p>There are two possibilities for Url&rsquo;s data_fetcher setting: file and http. <code>file</code> is for anything you could pass to PHP&rsquo;s <a href="https://secure.php.net/manual/en/function.file-get-contents.php">file_get_contents</a>, including remote URLs. There are some great performance tricks in there, so it&rsquo;s a good option for most use cases. We&rsquo;ll be using <code>file</code> for our example. <code>http</code> is specifically for remote files accessed over HTTP, and lets you use the full power of the HTTP spec to get your file. Think authentication headers, cache rules, etc.</p>
+<p>Next we declare which plugin will read (parse) the data from that remote URL. We can read JSON, SOAP, arbitrary XML&hellip; in our use case this is an RSS feed, so we&rsquo;ll use one of the XML plugins. SimpleXML is just what it sounds like: a simple way to get data out of XML. In extreme use cases you might use XML instead, but I haven&rsquo;t encountered that yet (ever, anywhere, in any of my projects). TL;DR: SimpleXML is great. Use it.</p>
+<p>Third, we have to tell the source where it can find the actual items to import. XML is freeform, so there&rsquo;s no way for Migrate to know where the future &ldquo;nodes&rdquo; are in the document. So you have to give it the XPath to the items. RSS feeds have a standardized path: <code>/rss/channel/item</code>.</p>
+<p>Next we have to identify the &ldquo;fields&rdquo; in the source. You see, migrate module is built around the idea that you&rsquo;ll map source fields to destination fields. That&rsquo;s core to how it thinks about the whole process. Since XML (and by extension RSS) is an unstructured format - it doesn&rsquo;t think of itself as having &ldquo;fields&rdquo; at all. So we&rsquo;ll have to give our source plugin XPaths for the data we want out of the feed, assigning each path to a virtual &ldquo;field&rdquo;. These &ldquo;fake fields&rdquo; let Migrate treat this source just like any other.</p>
+<p>If you haven&rsquo;t worked with XPaths before, the example YAML in this post gives you most of what you need to know. It&rsquo;s just a simple text system for specifying a tag within an unstructured XML document. Not too complicated when you get into it. You may want to <a href="https://duckduckgo.com/?q=xpath+basics">find a good tutorial</a> to learn some of the tricks.</p>
+<p>Let&rsquo;s look at one of these &ldquo;fake fields&rdquo;:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">summary</span>
+      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Summary</span>
+      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:summary&#39;</span>
+</code></pre></div><p><em>name</em> is how we&rsquo;ll address this field in the rest of the migration. It&rsquo;s the source &ldquo;field name&rdquo;. <em>label</em> is the human readable name for the field. <em>selector</em> is the XPath inside the item. Most items are flat - certainly in RSS - so it&rsquo;s basically just the tag that surrounds the data you want. There, was that so hard?</p>
+<p>As a side note, you can see that my RSS feeds tend to be for iTunes. Sometimes the world eats an apple, sometimes an apple eats the world. Buy me a beer at Drupalcon and we can argue about standards.</p>
+<p>Fifth and finally, we identify which &ldquo;field&rdquo; in the source contains a unique identifier. Migrate module keeps track of the association between the source and destination objects, so it can handle updates, rollbacks, and more. The example YAML relies on the very common (but technically optional) <code>&lt;guid&gt;</code> tag as a unique identifier.</p>
+<p><strong>Destination</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">destination</span>:
+  <span style="color:#f92672">plugin</span>: <span style="color:#e6db74">&#39;entity:node&#39;</span>
+</code></pre></div><p>Yep, it&rsquo;s that simple. This is where you declare what Drupal entity type will receive the data. Actually, you could write any sort of destination plugin for this - if you want Drupal to migrate data into some crazy exotic system, you can do it! But in 99.9% of cases you&rsquo;re migrating into Drupal entities, so you&rsquo;ll want <code>entity:something</code> here. Don&rsquo;t worry about bundles (content types) here; that&rsquo;s something we take care of in field mapping.</p>
+<p><strong>Process</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">process</span>:
+  <span style="color:#f92672">slug</span>: <span style="color:#ae81ff">stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8</span>
+<span style="color:#f92672">title</span>: <span style="color:#ae81ff">title</span>
+  <span style="color:#f92672">field_remote_url</span>: <span style="color:#ae81ff">link</span>
+  <span style="color:#f92672">body</span>: <span style="color:#ae81ff">summary</span>
+  <span style="color:#f92672">created</span>:
+    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">format_date</span>
+    <span style="color:#f92672">from_format</span>: <span style="color:#e6db74">&#39;D, d M Y H:i:s O&#39;</span>
+    <span style="color:#f92672">to_format</span>: <span style="color:#e6db74">&#39;U&#39;</span>
+    <span style="color:#f92672">source</span>: <span style="color:#ae81ff">pub_date</span>
+  <span style="color:#f92672">status</span>:
+    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
+    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">1</span>
+  <span style="color:#f92672">type</span>:
+    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
+    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">podcast_episode</span>
+</code></pre></div><p>This is where the action happens: the process section describes how destination fields should get their data from the source. It&rsquo;s the &ldquo;field mapping&rdquo;, and more. Each key is a destination field, each value describes where the data comes from.</p>
+<p>If you don&rsquo;t want to migrate the whole field exactly as it&rsquo;s presented in the source, you can put individual fields through <a href="https://www.drupal.org/docs/8/api/migrate-api/migrate-process-plugins">Migrate plugins</a>. These plugins apply all sorts of changes to the source content, to get it into the shape Drupal needs for a field value. If you want to take a substring from the source, explode it into an array, extract one array value and make sure it&rsquo;s a valid Drupal machine name, you can do that here. I won&rsquo;t do it in my example because that sort of thing isn&rsquo;t common for RSS feeds, but it&rsquo;s definitely possible.</p>
+<p>The examples of plugins that you see here are simple ones. <code>status</code> and <code>type</code> show you how to set a fixed field value. There are other ways, but the <code>default_value</code> plugin is the best way to keep your sanity.</p>
+<p>The <code>created</code> field is a bit more interesting. The Drupal field is a unix timestamp of the time a node was authored. The source RSS uses a string time format, though. We&rsquo;ll use the <code>format_date</code> plugin to convert between the two. Neat, eh?</p>
+<p>Don&rsquo;t forget to map values into Drupal&rsquo;s <code>status</code> and <code>type</code> fields! <code>type</code> is especially important: that&rsquo;s what determines the content type, and nodes can&rsquo;t be saved without it!</p>
+<h2 id="thats-it">That&rsquo;s it?</h2>
+<p>Yes, that&rsquo;s it. You now have a migrator that pulls from any kind of remote source, and creates Drupal entities out of the items it finds. Your system cron entry makes sure this runs on a regular schedule, rather than overloading Drupal&rsquo;s cron.</p>
+<p>More importantly, if you&rsquo;re this comfortable with Migrate module, you&rsquo;ve just gained a <em>lot</em> of new power. This is a framework for getting data from anywhere, to anywhere, with a lot of convenience functionality in between.</p>
+<p>Happy feeding!</p>
+<h2 id="tips-and-tricks">Tips and tricks</h2>
+<p>OK I lied, there is way more to say about Migrate. It&rsquo;s a wonderful, extensible framework, and that means there are lots of options for you. Here are some of the obstacles and solutions I&rsquo;ve found helpful.</p>
+<p><strong>Importing files</strong></p>
+<p>Did you notice that I didn&rsquo;t map the images into Drupal fields in my example? That&rsquo;s because it&rsquo;s a bit confusing. We actually have an image URL that we need to download, then we have to create a file entity based on the downloaded file, and then we add the File ID to the node&rsquo;s field as a value. That&rsquo;s more complicated than I wanted to get into in the general example.</p>
+<p>To do this, we have to create a pipeline of plugins that will operate in sequence, to create the value we want to stick in our field_image.  It looks something like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#f92672">field_image</span>:
+    -
+      <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">download</span>
+      <span style="color:#f92672">source</span>:
+        - <span style="color:#ae81ff">image</span>
+        - <span style="color:#ae81ff">constants/destination_uri</span>
+      <span style="color:#f92672">rename</span>: <span style="color:#66d9ef">true</span>
+    -
+      <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">entity_generate</span>
+</code></pre></div><p>Looking at that download plugin, <em>image</em> seems clear. That&rsquo;s the source URL we got out of the RSS feed. But what is <em>constants/destination_uri</em>, I hear you cry? I&rsquo;m glad you asked. It&rsquo;s a constant, which I added in the source section and didn&rsquo;t tell you about. You can add any arbitrary keys to the source section, and they&rsquo;ll be available like this in processing. It is good practice to lump all your constants together into one key, to keep the namespace clean. This is what it looks like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
+  <span style="color:#ae81ff">... usual source stuff here ...</span>
+  <span style="color:#f92672">constants</span>:
+    <span style="color:#f92672">destination_uri</span>: <span style="color:#e6db74">&#39;public://my_rss_feed/post.jpg&#39;</span>
+</code></pre></div><p>Before you ask, yes this is exactly the same as using the <code>default_value</code> plugin. Still, <code>default_value</code> is preferred for readability wherever possible. In this case it isn&rsquo;t really possible.</p>
+<p>Also, note that the download plugin lets me set <code>rename: true</code>. This means that in case of a name conflict, a _0, _1, _2, _3 etc will be added to the end of the filename.</p>
+<p>You can see the whole structure here, of one plugin passing its result to the next. You can chain unlimited plugins together this way&hellip;</p>
+<p><strong>Multiple interrelated migrations</strong></p>
+<p>One of the coolest tricks that Migrate can do is to manage interdependencies between migrations. Maybe you don&rsquo;t want those images just as File entities, you actually want them in Paragraphs, which should appear in the imported node. Easy-peasy.</p>
+<p>First, you have to create a second migration for the Paragraph. Technically you should have a separate Migration YAML for each destination entity type. (yes, <code>entity_generate</code> is a dirty way to get around it, use it sparingly). So we create our second migration just for the paragraph, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_images_importer</span>
+<span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Import the images from my RSS feed&#39;</span>
+<span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
+
+<span style="color:#f92672">source</span>:
+  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">url</span>
+  <span style="color:#f92672">data_fetcher_plugin</span>: <span style="color:#ae81ff">http</span>
+  <span style="color:#f92672">urls</span>: <span style="color:#e6db74">&#39;https://example.com/feed.rss&#39;</span>
+  <span style="color:#f92672">data_parser_plugin</span>: <span style="color:#ae81ff">simple_xml</span>
+
+  <span style="color:#f92672">item_selector</span>: <span style="color:#ae81ff">/rss/channel/item</span>
+  <span style="color:#f92672">fields</span>:
+    -
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">guid</span>
+      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">GUID</span>
+      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">guid</span>
+    -
+      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">image</span>
+      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Image</span>
+      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:image[&#39;&#39;href&#39;&#39;]&#39;</span>
+
+  <span style="color:#f92672">ids</span>:
+    <span style="color:#f92672">guid</span>:
+      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+  <span style="color:#f92672">constants</span>:
+    <span style="color:#f92672">destination_uri</span>: <span style="color:#e6db74">&#39;public://my_rss_feed/post.jpg&#39;</span>
+
+<span style="color:#f92672">destination</span>:
+  <span style="color:#f92672">plugin</span>: <span style="color:#e6db74">&#39;entity:paragraph&#39;</span>
+
+<span style="color:#f92672">process</span>:
+  <span style="color:#f92672">type</span>:
+    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
+    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">podcast_image</span>
+  <span style="color:#f92672">field_image</span>:
+    -
+      <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">download</span>
+      <span style="color:#f92672">source</span>:
+        - <span style="color:#ae81ff">image</span>
+        - <span style="color:#ae81ff">constants/destination_uri</span>
+      <span style="color:#f92672">rename</span>: <span style="color:#66d9ef">true</span>
+    -
+      <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">entity_generate</span>
+
+</code></pre></div><p>If you look at that closely, you&rsquo;ll see it&rsquo;s a simpler version of the node migration we did at first. I did the copy pasting myself! Here are the differences:</p>
+<ul>
+<li>Different ID and label (duh)</li>
+<li>We only care about two &ldquo;fields&rdquo; on the source: GUID and the image URL.</li>
+<li>The destination is a paragraph instead of a node.</li>
+<li>We&rsquo;re doing the image trick I just mentioned.</li>
+</ul>
+<p>Now, in the node migration, we can add our paragraphs field to the &ldquo;process&rdquo; section like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#f92672">field_paragraphs</span>:
+    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">migration_lookup</span>
+    <span style="color:#f92672">migration</span>: <span style="color:#ae81ff">my_rss_images_importer</span>
+    <span style="color:#f92672">source</span>: <span style="color:#ae81ff">guid</span>
+</code></pre></div><p>We&rsquo;re using the <code>migration_lookup</code> plugin. This plugin takes the value of the field given in <code>source</code>, and looks it up in <code>my_rss_images_importer</code> to see if anything with that source ID was migrated. Remember where we configured the source plugin to know that <code>guid</code> was the unique identifier for each item in this feed? That comes in handy here.</p>
+<p>So we pass the guid to <code>migration_lookup</code>, and it returns the id of the paragraph which was created for that guid. It finds out what Drupal entity ID corresponds to that source ID, and returns the Drupal entity ID to use as a field value. You can use this trick to associate content migrated from separate feeds, totally separate data sources, or whatever.</p>
+<p>You should also add a dependency on <code>my_rss_images_importer</code> at the bottom of your YAML file, like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">migration_dependencies</span>:
+  <span style="color:#f92672">required</span>:
+    - <span style="color:#ae81ff">my_rss_images_importer</span>
+</code></pre></div><p>This will ensure that <code>my_rss_images_importer</code> will always run before <code>my_rss_importer</code>.</p>
+<p>(NB: in Drupal &lt; 8.3, this plugin is called <code>migration</code>)</p>
+<p><strong>Formatting dates</strong></p>
+<p>Very often you will receive dates in a format other than what Drupal wants to accept as a valid field value. In this case the <code>format_date</code> process plugin comes in very handy, like this:</p>
+<pre><code>  field_published_date:
+    plugin: format_date
+    from_format: 'D, d M Y H:i:s O'
+    to_format: 'Y-m-d\TH:i:s'
+    source: pub_date
+</code></pre><p>This one is pretty self-explanatory: from format, to format, and source. This is important when migrating from Drupal 6, whose date fields store dates differently from 8. It&rsquo;s also sometimes handy for RSS feeds. :)</p>
+<p><strong>Drush commands</strong></p>
+<p>Very important for testing, and the whole reason we have <code>migrate_plus</code> module installed! Here are some handy drush commands for interacting with your migration:</p>
+<ul>
+<li><code>drush ms</code>: Gives you the status of all known migrations. How many items are there to import? How many have been imported? Is the import running?</li>
+<li><code>drush migrate-rollback</code>: Rolls back one or more migrations, deleting all the imported content.</li>
+<li><code>drush migrate-messages</code>: Get logged messages for a particular migration.</li>
+<li><code>drush mi</code>: Runs a migration. use <code>--all</code> to run them all. Don&rsquo;t worry, Migrate will sort out any dependencies you&rsquo;ve declared and run them in the right order. Also worth noting: <code>--limit=10</code> does a limited run of 10 items, and <code>--feedback=10</code> gives you an in-progress status line every 10 items (otherwise you get nothing until it&rsquo;s finished!).</li>
+</ul>
+<p>Okay, now that&rsquo;s really it. Happy feeding!</p>
+<p><img src="/images/feed-me-seymour.gif" alt="&ldquo;Feed me, Seymour!""></p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Stay for community]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2017/03/30/stay-for-community/"/>
+    <id>https://ohthehugemanatee.org/blog/2017/03/30/stay-for-community/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2017-03-30T12:22:11+00:00</published>
+    <updated>2017-03-30T12:22:11+00:00</updated>
+    <content type="html"><![CDATA[<p>The <a href="https://www.garfieldtech.com/blog/tmi-outing">Crellpocalypse</a> in the Drupal world last week has shaken the entire community. This event and its handling have called our fundamental values and structures into question. We&rsquo;ve had <a href="https://www.reddit.com/r/drupal/comments/60y9mq/larry_garfield_on_harassment_in_the_drupal_project/">fights on social media</a>, calls for <a href="https://mikkel.hoegh.org/2017/03/23/vote-no-confidence-drupal-association-leadership">Dries to step down</a>, and valuable contributors <a href="https://janezurevc.name/time-take-some-time-drupal-community">stepping away from the community</a>. I have friends on every side of the situation, but all I can think is: <strong>This seems like the perfect time for a singing, dancing, spandexed pageant about the Drupal community.</strong></p>
+<p><img src="/images/drupalcon-la.jpg" alt="Twelve years of code, and singing the Drupalcon song with Dries and Larry is still one of my favorite memories."></p>
+<p><strong>Why?</strong> For those who don&rsquo;t know, I&rsquo;m one of the authors of the <a href="https://www.youtube.com/playlist?list=PLjVW3kqu-3e_Q41ETbML6RfbRssEdVvC4">DrupalCon Prenote</a>, the &ldquo;pre-keynote&rdquo; show that kicks off DrupalCon right before Dries' keynote. The organizer (and my officemate), Jeffrey A. &ldquo;jam&rdquo; McGuire and I have been living our own special version of the crisis (<strong>Read Jam&rsquo;s post about taking sides on this <a href="https://medium.com/@horncologne/drupal-im-taking-sides-f46194122a05">here</a></strong>). Our friend Larry Garfield has been an enthusiastic part of the Prenote ever since his first appearance as &ldquo;Lord Over-Engineering&rdquo; <a href="https://www.youtube.com/watch?v=i5bW41KYUE0&amp;list=PLjVW3kqu-3e_Q41ETbML6RfbRssEdVvC4&amp;index=20">at Drupalcon Austin</a>. Dries has often played a special guest role, too. With Drupalcon Baltimore looming on the horizon, everything seems to be coming together in one awful moment full of painful reminders - and it&rsquo;s just when we&rsquo;re supposed to be cheering for &ldquo;community.&rdquo; That awful conjunction is what makes this next Prenote in Baltimore more important than ever.</p>
+<p>I have a tremendous respect for how painful this whole situation is for everyone involved. This very public meltdown, which has already done tremendous material damage, is made even more painful by the personal friendships of the key people involved. Klaus, Dries, and Larry have been colleagues for more than a decade. Even if this was only a private falling out, it would have been a painful one. And this is a public explosion. I can&rsquo;t imagine the emotional strain that each of them is under right now. Internet mob outrage is a terrible experience, made much worse when it comes from your friends and colleagues, directed at your friends and colleagues.</p>
+<p><strong>And this is exactly why we need a Prenote right now.</strong> Because this is terrible shit that we&rsquo;re wading through, and the Prenote exists to remind us of why we should keep going. The Drupal community - not the specific leadership, but the agglomeration of people, practices, code, and rules - has a lot that&rsquo;s worth fighting for. We are the largest open source software community in the world, with a uniquely personal connection to its members. An incredible diversity of contributors from every culture imaginable who, for the most part, manage to work very well together.</p>
+<p><strong>The Drupal community is on the leading edge of how a community of this size and diversity can work.</strong>  No one has ever done this before. Things like our <a href="https://www.drupal.org/dcoc">Code of Conduct</a>, <a href="https://www.drupal.org/governance/community-working-group">Community Working Group</a>, and <a href="https://www.drupal.org/conflict-resolution">conflict resolution process</a>, can seem like established and unassailable systems. They aren&rsquo;t. Go read the version history of those links; we just get a group of people together at a Drupalcon or on video conference to try to figure out how to handle this stuff, and then codify it in writing. We take models from other kinds of communities and try to adapt them, we suggest crazy new ideas and directions. <strong>As a community, Drupal actively and aggressively tries to figure out how to make itself more diverse, and less conflict prone.</strong> Humanity has never done collaborative communities on this scale before, and the Drupal Community is on the bleeding edge of it all.</p>
+<p>The cost of the bleeding edge is that we make mistakes. We set off conflicts, we discover new kinds of obstacles. We muddle through every time, and then in retrospect try to find a better way forward for next time. I don&rsquo;t mean to diminish the size or importance of any of these conflicts. They can be serious, existential crises.</p>
+<ul>
+<li><a href="http://buytaert.net/acquia-my-drupal-startup">When Acquia first formed</a> and started to hold outsize influence, it was an existential crisis. We had to figure out how to handle a conflict of interest in our leadership, and what to do about a (then) totally asymmetrical services market. Acquia is now just one large player of several in the Drupal marketplace, and Dries found a compromise between his interests that has lasted almost a decade.</li>
+<li>When <a href="http://www.jenlampton.com/blog/introducing-backdrop-cms-drupal-fork">Nate and Jen forked Drupal</a> into <a href="https://backdropcms.org/">Backdrop CMS</a>, it presented another existential crisis for our community. We had never had such a credible fork from such key community members before. It was the apex of a crisis in the development direction for the whole project. We had to figure out how to address developer experience, how to work with a forked project, and even how to continue working with the forkers themselves. Backdrop is now a normal part of the ecosystem; Jenn and Nate remain important and welcomed Drupal community leaders almost four years later.</li>
+<li>We have had critical tensions, messy relationships, and fallings out with some of our most appreciated developers and community leaders. Whether it&rsquo;s offense taken at <a href="https://web-beta.archive.org/web/20151105173458/http://morten.dk/blog/language-twitter-misunderstanding-drupal-community">Morten</a>, or outbursts from <a href="https://www.reddit.com/r/drupal/comments/5e8dcd/a_fundamental_cultural_shift_in_drupal_or_my/">Chx</a>, these have divided our community and forced us to solve diversity problems that no one else has ever had to deal with.</li>
+</ul>
+<p>I could go on. The point is: With each crucible, we the Drupal community must try to learn and build better systems for the next time.</p>
+<p>So right now, in the midst of all this anger, this prejudice, and these accusations, I&rsquo;m here to say: <strong>we will learn from this, too.</strong> The Drupal community is extraordinary, but we must adapt in order to survive. Losing Larry is a big hit to our community in almost every dimension. This public explosion has been a big hit to us in almost every other dimension. The arguments and animosities we&rsquo;ve unleashed feel like they will tear us apart. But we must look forward. We must use this event for introspection and carry on as a better, improved community.</p>
+<p><em>Do you think Larry was punished for thoughtcrime?</em> Pitch in and help build a system where the next Larry can&rsquo;t be treated that way. <em>Do you think Dries and the DA deserve our trust in their decision?</em> Join up and help make sure the next iteration preserves the strength of independent leadership.</p>
+<p>The prenote is about why we are here, why we&rsquo;ve stayed here all these years. Because it&rsquo;s fun, because it&rsquo;s supportive, because we love it. Sometimes the best way to start addressing your pain is through humor - and we desperately need to start addressing this.</p>
+<p>However you feel about the Crellpocalypse, please don&rsquo;t leave. Not yet. Stay, and help the community improve. Don&rsquo;t stay for your job. Don&rsquo;t stay for Dries, or the DA, or Larry. Stay for the community.</p>
+<p><strong><a href="https://events.drupal.org/baltimore2017/balti-more-prenote-balti-most-fun-drupalcon">I&rsquo;ll see you at the Prenote.</a></strong></p>
+<p><img src="/images/DrupalConAsia-2.jpg" alt="The Prenote: The most fun you can have at Drupalcon."></p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[What Crell doesn&#39;t want you to know: how to automate letsencrypt on platform.sh]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/"/>
+    <id>https://ohthehugemanatee.org/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2017-02-21T22:33:08+00:00</published>
+    <updated>2017-02-21T22:33:08+00:00</updated>
+    <content type="html"><![CDATA[<p>If you believe the <a href="https://docs.platform.sh/development/going-live.html#prerequisites">docs</a> and the <a href="https://twitter.com/damz/status/672559665377501184">twitters</a>, there is no way to automate <a href="https://letsencrypt.org/">letsencrypt</a> certificates updates on <a href="https://platform.sh/">platform.sh</a>. You have to create the certificates manually, upload them manually, and maintain them manually.</p>
+<p>But as readers of this blog know, the docs are only the start of the story. I&rsquo;ve really enjoyed working with platform.sh with one of my private clients, and I couldn&rsquo;t believe that with all the flexibility - all the POWER - letsencrypt was really out of reach. I found a few attempts to script it, and one really great <a href="https://gitlab.com/snippets/27467">snippet on gitlab</a>. But no one had ever really synthesized this stuff into an easy howto. So here we go.</p>
+<h3 id="1-add-some-writeable-directories-where-platformsh-cli-and-letsencrypt-need-them">1) Add some writeable directories where platform.sh CLI and letsencrypt need them.</h3>
+<p>Normally when Platform deploys your application, it puts it all in a read-only filesystem. We&rsquo;re going to mount some special directories read-write so all the letsencrypt/platform magic can work.</p>
+<p>Edit your application&rsquo;s <code>.platform.app.yaml</code> file, and find the <code>mounts:</code> section. At the bottom, add these three lines. Make sure to match the indents with everything else under the <code>mounts:</code> section!</p>
+<pre><code>    &quot;/web/.well-known&quot;: &quot;shared:files/.well-known&quot;
+    &quot;/keys&quot;: &quot;shared:files/keys&quot;
+    &quot;/.platformsh&quot;: &quot;shared:files/.platformsh&quot;
+</code></pre><p>Let&rsquo;s walk through each of these:</p>
+<ul>
+<li>/web/.well-known: In order to confirm that you actually control example.com, letsencrypt drops a file somewhere on your website, and then tries to fetch it. This directory is where it&rsquo;s going to do the drop and fetch. My webroot is <code>web</code>, you should change this to match your own environment. You might use <code>public</code> or <code>www</code> or something.</li>
+<li>/keys: You have to store your keyfiles SOMEWHERE. This is that place.</li>
+<li>/.platformsh: Your master environment needs a bit of configuration to be able to login to platform and update the certs on your account. This is where that will go.</li>
+</ul>
+<h3 id="2-expose-the-well-known-directory-to-the-internet">2) Expose the .well-known directory to the Internet</h3>
+<p>I mentioned above that letsencrypt test your control over a domain by creating a file which it tries to fetch over the Internet. We already created the writeable directory where the scripts can drop the file, but platform.sh (wisely) defaults to hide your directories from the Internet. We&rsquo;re going to add some configuration to the &ldquo;web&rdquo; app section to expose this .well-known directory. Find the <code>web:</code> section of your <code>.platform.app.yaml</code> file, and the <code>locations:</code> section under that. At the bottom of that section, add this:</p>
+<pre><code>      '/.well-known':
+            # Allow access to all files in the public files directory.
+            allow: true
+            expires: 5m
+            passthru: false
+            root: 'web/.well-known'
+            # Do not execute PHP scripts.
+            scripts: false
+</code></pre><p>Make sure you match the indents of the other location entries! In my (default) <code>.platform.app.yaml</code> file, I have 8 spaces before that <code>'/.well-known':</code> line. Also note that the <code>root:</code> parameter there also uses my webroot directory, so adjust that to fit your environment.</p>
+<h3 id="3-download-the-binaries-you-need-during-the-application-build-phase">3) Download the binaries you need during the application &ldquo;build&rdquo; phase</h3>
+<p>In order to do this, we&rsquo;re going to need to have the platform.sh CLI tool, and a let&rsquo;s encrypt CLI tool called lego. We&rsquo;ll download them during the &ldquo;build&rdquo; phase of your application. Still in the <code>platform.app.yaml</code> file, find the <code>hooks:</code> section, and the <code>build:</code> section under that. Add these steps to the bottom of the build:</p>
+<pre><code>      cd ~
+      curl -sL https://github.com/xenolf/lego/releases/download/v0.3.1/lego_linux_amd64.tar.xz | tar -C .global/bin -xJ --strip-components=1 lego/lego
+      curl -sfSL -o .global/bin/platform.phar https://github.com/platformsh/platformsh-cli/releases/download/v3.12.1/platform.phar
+</code></pre><p>We&rsquo;re just downloading reasonably recent releases of our two tools. If anyone has a better way to get the latest release of either tool, please let me know. Otherwise we&rsquo;re stuck keeping this up to date manually.</p>
+<h3 id="4-configure-the-platformsh-cli">4) Configure the platform.sh CLI</h3>
+<p>In order to configure the platform.sh CLI on your server, we have to deploy the changes from steps 1-3. Go ahead and do that now. I&rsquo;ll wait.</p>
+<p>Now connect to your platform environment via SSH (<code>platform ssh -e master</code> for most of us). First we&rsquo;ll add a config file for platform. Edit a file in <code>.platformsh/config.yaml</code> with the editor of choice. You don&rsquo;t have to use vi, but it will win you some points with me. Here are the contents for that file:</p>
+<pre><code>updates:
+    check: false
+api:
+    token_file: token
+</code></pre><p>Pretty straightforward: this tells platform not to bother updating the CLI tool automatically (it can&rsquo;t - read-only filesystem, remember?). It then tells it to login using an API token, which it can find in the file <code>.platformsh/token</code>. Let&rsquo;s create that file next.</p>
+<p>Log into the platform.sh web UI (you can launch it with <code>platform web</code> if you&rsquo;re feeling sassy), and navigate to your account settings &gt; api tokens. That&rsquo;s at <code>https://accounts.platform.sh/user/12345/api-tokens</code> (with your own user ID of course). Add an API token, and copy its value into <code>.platformsh/token</code> on the environment we&rsquo;re working on. The token should be the only contents of that file.</p>
+<p>Now let&rsquo;s test it by running <code>php /app/.global/bin/platform.phar auth:info</code>. If you see your account information, congratulations! You have a working platform.sh CLI installed.</p>
+<h3 id="5-request-your-first-certificate-by-hand">5) Request your first certificate by hand</h3>
+<p>Still SSH&rsquo;ed into that environment, let&rsquo;s see if everything works.</p>
+<pre><code>lego --email=&quot;support@example.com&quot; --domains=&quot;www.example.com&quot; --webroot=/app/public/ --path=/app/keys/ -a run
+csplit -f /app/keys/certificates/www.example.com.crt- /app/keys/certificates/www.example.com.crt '/-----BEGIN CERTIFICATE-----/' '{1}' -z -s
+php /app/.global/bin/platform.phar domain:update -p $PLATFORM_PROJECT --no-wait --yes --cert /app/keys/certificates/www.example.com.crt-00 --chain /app/keys/certificates/www.example.com.crt-01 --key /app/keys/certificates/www.example.com.key example.com
+</code></pre><p>This is three commands: register the cert with letsencrypt, then split the resulting file into it&rsquo;s components, then register those components with platform.sh. If you didn&rsquo;t get any errors, go ahead and test your site - it&rsquo;s got a certificate! (yay)</p>
+<h3 id="6-set-up-automatic-renewals-on-cron">6) Set up automatic renewals on cron</h3>
+<p>Back to <code>.platform.app.yaml</code>, look for the <code>crons:</code> section. If you&rsquo;re running drupal, you probably have a drupal cronjob in there already. Add this one at the bottom, matching indents as always.</p>
+<pre><code>    letsencrypt:
+        spec: '0 0 1 * *'
+        cmd: '/bin/sh /app/scripts/letsencrypt.sh'
+</code></pre><p>Now let&rsquo;s create the script. Add the file <code>scripts/letsencrypt.sh</code> to your repo, with this content:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/usr/bin/env bash
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e"># Checks and updates the letsencrypt HTTPS cert.</span>
+
+set -e
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$PLATFORM_ENVIRONMENT<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;master-7rqtwti&#34;</span> <span style="color:#f92672">]</span>
+  <span style="color:#66d9ef">then</span>
+    <span style="color:#75715e"># Renew the certificate</span>
+    lego --email<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;example@example.org&#34;</span> --domains<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;example.org&#34;</span> --webroot<span style="color:#f92672">=</span>/app/web/ --path<span style="color:#f92672">=</span>/app/keys/ -a renew
+    <span style="color:#75715e"># Split the certificate from any intermediate chain</span>
+    csplit -f /app/keys/certificates/example.org.crt- /app/keys/certificates/example.org.crt <span style="color:#e6db74">&#39;/-----BEGIN CERTIFICATE-----/&#39;</span> <span style="color:#e6db74">&#39;{1}&#39;</span> -z -s
+    <span style="color:#75715e"># Update the certificates on the domain</span>
+    php /app/.global/bin/platform.phar domain:update -p $PLATFORM_PROJECT --no-wait --yes --cert /app/keys/certificates/example.org.crt-00 --chain /app/keys/certificates/example.org.crt-01 --key /app/keys/certificates/example.org.key example.org
+<span style="color:#66d9ef">fi</span>
+</code></pre></div><p>Obviously you should replace all those <code>example.org</code>s and email addresses with your own domain. Make the file executable with <code>chmod u+x scripts/letsencrypt.sh</code>, commit it, and push it up to your platform.sh environment.</p>
+<h3 id="7-send-a-bragging-email-to-crell">7) Send a bragging email to Crell</h3>
+<p>Technically this isn&rsquo;t supposed to be possible, but YOU DID IT! Make sure to rub it in.</p>
+<p><img src="/images/larry-garfield.jpg" alt="&ldquo;Larry is waiting to hear from you. (photo credit Jesus Manuel Olivas)""></p>
+<p>Good luck!</p>
+<p>PS - I&rsquo;m just gonna link one more time to the guy whose snippet made this all possible: <a href="https://www.drupal.org/u/hanoii">Ariel Barreiro</a> did the hardest part of this. I&rsquo;m grateful that he made his notes public!</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Between the cracks of decoupled (Drupal) architecture]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2017/02/11/a-year-between-the-cracks-of-decoupled-drupal/"/>
+    <id>https://ohthehugemanatee.org/blog/2017/02/11/a-year-between-the-cracks-of-decoupled-drupal/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2017-02-11T11:18:44+00:00</published>
+    <updated>2017-02-11T11:18:44+00:00</updated>
+    <content type="html"><![CDATA[<p>In any decoupled architecture, people tend to focus on the pieces that will fit together. But what nobody ever tells you is: <em>watch out for the cracks!</em></p>
+<p>The cracks are the integration points between the different components. It&rsquo;s not GraphQL as a communication layer; it&rsquo;s that no one thinks to log GraphQL inconsistencies when they occur. It&rsquo;s not &ldquo;what&rsquo;s my development environment&rdquo;, it&rsquo;s &ldquo;how do these three development environments work on my localhost at the same time?&rdquo;. It&rsquo;s the thousand little complexities that you don&rsquo;t think about, basically because they aren&rsquo;t directly associated with a noun. We&rsquo;ve discovered &ldquo;crack&rdquo; problems like this in technical architecture and devops, communication, and even project management. They add up to a lot of unplanned time, and they have presented some serious project risks.</p>
+<p>A bit more about my recent project with <a href="https://amazeelabs.com">Amazee Labs</a>. It&rsquo;s quite a cool stack: several data sources feed into <a href="https://drupal.org">Drupal 8</a>, which offers an editorial experience and <a href="https://graphql.org">GraphQL</a> endpoints. Four <a href="https://facebook.github.io/react/">React</a>/<a href="https://facebook.github.io/relay/">Relay</a> sites sit in front, consuming the data and even offering an authenticated user experience (<a href="https://auth0.com">Auth0</a>). I&rsquo;ve been working with brilliant people: <a href="https://www.drupal.org/u/fubhy">Sebastian Siemssen</a>, <a href="https://www.drupal.org/u/moshe-weitzman">Moshe Weitzman</a>, <a href="https://github.com/pmelab">Philipp Melab</a>, and others. It has taken all of us to deal with the crack complexity.</p>
+<p>The first crack appeared as we were setting up environments for our development teams. How do you segment repositories? They get deployed to different servers, and run in very different environments. But they are critically connected to each other. We decided to have a separate &ldquo;back end&rdquo; repo, and separate repos for each &ldquo;front end&rdquo; site. Since Relay needs to compile the entire data schema on startup, this means that every time the back end is redeployed with a data model change, we have to automatically redeploy the front end(s). For local development, we ended up building a mock data backend in MongoDB running in Docker. Add one more technology to support to your list, with normal attendant support and maintenance issues.</p>
+<p>DevOps in general is more complicated and expensive in a decoupled environment. It&rsquo;s all easy at first, but at some point you have to start connecting the front- and back-ends on peoples' local development environments. Cue obvious problems like port conflicts, but also less obvious ones. The React developers don&rsquo;t know anything about drupal, drush, or php development environments. This means your enviroment setup needs to be VERY streamlined, even idiot-proof. Your devops team has to support a much wider variety of users than normal. Two of our front-enders had setups that made spinning up the back-end take more than 30 minutes. 30 minutes! We didn&rsquo;t even know that was possible with our stack.  The project coordinater has to budget significant time for this kind of support and maintenance.</p>
+<p>Some of the cracks just mean you have to code <em>very</em> carefully. At one point we discovered that certain kinds of invalid schema are perfectly tolerable to the GraphQL module. We could query everything just fine - but React couldn&rsquo;t compile the schema, and gave cryptic errors that were hard to track down. Or what about the issues where there <em>are</em> no error messages to work with? CORS problems were notoriously easy to miss, until everything broke without clear errors. Some of these are impossible to avoid. The best you can do is be thorough about your test coverage, add integration tests which consider all environments, and <em>document all the things</em>.</p>
+<p>Not all the cracks are technological; some are purely communication. In order to use a shared data service, we need a shared data model and API. So how do you communicate and coordinate that between 5 teams and 5 applications? We found this bottleneck extremely difficult. At first, it simply took a long time to get API components built. We had to coordinate so many stakeholders, that the back-end data arch and GraphQL endpoints got way behind the front-end sites. At another point, one backender organically became the go-to for everything GraphQL. He was a bottleneck within weeks, and was stuck with all the information silo&rsquo;ed in his head. This is still an active problem area for us. We&rsquo;re working on thorough and well-maintained documentation as a reference point, but this costs time as well.</p>
+<p>Even project managers and scrum masters found new complexities. We had more than 30 people working on this project, and everyone had to be well coordinated and informed. You certainly can&rsquo;t do scrum with 30 people together - the sprint review would take days! But split it out into many smaller teams and your information and coordination problems just got much harder. Eventually we found our solution: we have 3 teams, each with their own PO, frontender(s) and backender(s), who take responsibility for whole features at a time. Each team does its own, quite vanilla, scrum process. Layered on top of this, developers are in groups which cut across the scrum teams, which have coordination meetings and maintain documentation and code standards. All the back-enders meet weekly and work with the same standards, but the tightest coordination is internal to a feature. So far this is working well, but ask me again in a few months. :)</p>
+<p>Working in a fully decoupled architecture and team structure has been amazing. It really is possible, and it really does provide a lot more flexibility. But it demands a harder focus on standards, communication, coordination, and architecture. Sometimes it&rsquo;s not about the bricks; it&rsquo;s about the mortar between them. So the next time you start work on a decoupled architecture, <em>watch out for the cracks!</em></p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Writing Drupal 8 code for Drupal 7]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/"/>
+    <id>https://ohthehugemanatee.org/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2016-11-05T12:05:50+00:00</published>
+    <updated>2016-11-05T12:05:50+00:00</updated>
+    <content type="html"><![CDATA[<p>A year ago I proposed a session for <a href="https://events.drupal.org/asia2016">Drupalcon Mumbai</a> and <a href="https://events.drupal.org/neworleans2016">Drupalcon New Orleans</a>, called <a href="https://events.drupal.org/neworleans2016/sessions/best-both-worlds-writing-drupal-8-code-drupal-7-sites">&ldquo;The best of both worlds&rdquo;</a>. It promised to show attendees how to write Drupal 8 code for Drupal 7 sites. I never ended up giving the session, but this week I got an email asking for more information. So in case it ever comes up again, here&rsquo;s my own collection of resources on the subject.</p>
+<p>The big improvement that&rsquo;s hard for D7 developers to get used to is injected services. The <a href="https://www.drupal.org/project/service_container">service container module</a> makes that possible in D7. The brilliant <a href="https://www.drupal.org/u/fabianx">FabianX</a> wrote it to make his life easier in writing <a href="https://www.drupal.org/project/render_cache">render cache</a>, and his is always a good example to follow! This module creates a service container for D7, which you use just like the container in D8. You can write independent, OO code that is unit testable, with service dependencies declared in a YAML file. Note that you will also need the <a href="https://www.drupal.org/project/registry_autoload">registry autoload</a> module to get PS4 namespaced autoloading!</p>
+<p>I just mentioned unit testable code as a benefit of the service container. To be honest this is a little tricksy in Drupal 7. For my own custom work I tend to isolate the test environment from the rest of Drupal, so I don&rsquo;t have to deal with everything else. Again, I followed Fabian&rsquo;s example there by looking at how <a href="http://cgit.drupalcode.org/render_cache/tree/tests?h=7.x-2.x">render cache does it&rsquo;s tests</a>. If you do want better integration, there is a good lullabot post that talks about (more) proper PHPUnit integration. <a href="https://www.lullabot.com/articles/write-unit-tests-for-your-drupal-7-code-part-1">https://www.lullabot.com/articles/write-unit-tests-for-your-drupal-7-code-part-1</a> .</p>
+<p>Next on my list is Composer-managed dependencies. The Acquia developer blog has a great post about <a href="https://dev.acquia.com/blog/using-composer-manager-get-island-now">using Composer Manager for this in D7</a>. This is a huge win for a lot of custom modules, and very easy.</p>
+<p>Last is plugins. The rest of this list is in no particular order, but I left plugins for last because I think this isn&rsquo;t actually necessary in D7. Personally I use modules' own hooks and just autoload independent classes. You might consider using plugins instead if you&rsquo;re going to write several plugins for the same module. In any case, <a href="https://www.previousnext.com.au/blog/drupal-8-now-object-oriented-plugins-drupal-7">Lee Rowlands has the go-to blog post about this</a>.</p>
+<p>All together, you can combine these approaches to write code for D7 with the biggest Dx features of D8: service injection, phpunit testing, composer libraries, and plugins. Note that each of these blog posts assumes different workarounds for all the other functionalities&hellip; but they should help you get an understanding of how to use that particular Dx improvement in 7.</p>
+<p>When I wrote that session proposal, I thought of this as a good way for D7 developers to learn D8 practices gradually, one at a time. I no longer think that&rsquo;s true. Mostly, there are so few working examples of D7 code using these practices, that it&rsquo;s quite hard to get your stuff working. This is particularly hard when you&rsquo;re just learning about the concept in the first place! Personally, I could mess around with this stuff and make my life harder with it in D7. But I couldn&rsquo;t really get the best advantage out of them until I had better examples. My best learning aids were the examples in D8 core, and the code scaffolding available through Drush and Drupal console.</p>
+<p>But now that I&rsquo;m comfortable with the concepts&hellip; I would absolutely use these approaches in D7 work. You know, if I&rsquo;m FORCED to work in the old system. :)</p>
+<p>One last aside here: it is easy to fall into the mindset that Drupal 8 practices are better just because they&rsquo;re newer. This is simply not true. These practices are not handed down from heaven, after all! When you have the rest of the D8 architecture in place, certain kinds of code tasks are much easier. That&rsquo;s why we like developing for it so much more. But other (less common, IMO) tasks are harder. And doing any of this in D7 means you have to put the architecture in place, too. That&rsquo;s a lot of time, and it&rsquo;s only worthwhile if you&rsquo;re going to use the particular strengths of these practices.</p>
+<p>So if it looks like one of these D8 practices will make your life easier for a particular task in D7, then by all means use these approaches to get there. Composer manager has a particularly low bar - it&rsquo;s so easy to use, and makes so many tasks easier, it&rsquo;s a good approach to many tasks. But if I ever catch you implementing service container to get two lines of code into a form_alter, I will come to where you work and slap your hands off the keyboard.</p>
+<p>Happy coding!</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Developer options for replacing your old MacBook Pro]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2016/10/31/developer-options-for-replacing-your-old-macbook-pro/"/>
+    <id>https://ohthehugemanatee.org/blog/2016/10/31/developer-options-for-replacing-your-old-macbook-pro/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2016-10-31T09:05:07+00:00</published>
+    <updated>2016-10-31T09:05:07+00:00</updated>
+    <content type="html"><![CDATA[<p>The developer world is abuzz with criticism of the new Macbook Pro. After 4 years of waiting for an update, what we got has <a href="https://medium.com/charged-tech/apple-just-told-the-world-it-has-no-idea-who-the-mac-is-for-722a2438389b#.3cl5g99bu">two less ports, slower memory and a worse GPU</a>, is <a href="https://medium.com/charged-tech/apple-just-told-the-world-it-has-no-idea-who-the-mac-is-for-722a2438389b#.3cl5g99bu">a vanity project that the core demographic of Apple’s customers probably won’t even use</a>, in the final balance: <a href="https://petersphilo.org/2016/10/29/open-letter-to-tim-cook/">merely consumer-level</a>. It&rsquo;s slammed as <a href="https://macperformanceguide.com/blog/2016/20161029_1016-Apple2016MacBookPro-compatibility.html">incompatible</a>, <a href="https://twitter.com/lapcatsoftware/status/791760906678067200">absurd</a>, and <a href="http://cdm.link/2016/10/apples-computer-vision-looks-backward-others-look-forward/">for pros&hellip; actually an insult</a>.</p>
+<p>If you&rsquo;re a developer in late 2016, and are in the market for a new laptop, there are some great options out there. It&rsquo;s too bad that the latest line of Mac products don&rsquo;t make the cut. I&rsquo;ve been neck deep in this research myself, since it&rsquo;s time to retire my mid-2012 non-retina Macbook Pro anyway. I thought I&rsquo;d share.</p>
+<p>I&rsquo;m looking for a new laptop. It should be portable enough to count as an &ldquo;Ultrabook&rdquo;, powerful enough to run my IDE and many virtualized environments, with enough battery life to get me through long plane or trane trips. And it should have very high build quality, both for durability and aesthetics.</p>
+<h2 id="operating-system">Operating System</h2>
+<p>OSX made it&rsquo;s name on a great user experience, and that&rsquo;s still mostly true. It&rsquo;s no longer true by such a wide margin, though. Windows has made enormous strides since then - it still feels frustrating for me, but it&rsquo;s worth a try for you.</p>
+<p>Most exciting for an open source guy like me, is the discovery that Linux desktops have gotten great. Gone are the days of futzing around just to get things set up in the first place. With a contemporary Ubuntu or Mint system (at least) you get a pleasant desktop experience out of the box. Give a try to Ubuntu on a live CD, and see how it feels for you. Depending on your mission critical applications, Linux might be a strong choice.</p>
+<p>If you find that you <em>have</em> to be on OSX, then you&rsquo;re stuck with either Apple hardware, or a <a href="http://www.hackintosh.com/">hackintosh</a>. From personal experience, a hackintosh is a great weekend project, but takes much more work than any Linux system I&rsquo;ve used. Every update meant serious surgery. Not for the faint of heart - but if you really need OSX, this might be the best path for you!</p>
+<p>Since we&rsquo;ve accepted that we&rsquo;re likely moving away from the mac platform, I&rsquo;m not going to talk much about the operating system here anymore. These systems all (apparently) have good Linux compatibility, so the choice of OS is up to you.</p>
+<h2 id="apple">Apple</h2>
+<p>There&rsquo;s a lot (still) to like about Apple products.</p>
+<ul>
+<li>The OS is UNIX-enough-for-most</li>
+<li>The best applications for creatives and developers always have an OSX version</li>
+<li>Build quality is fantastic</li>
+<li>Aesthetics are market leading (ie it&rsquo;s pretty)</li>
+</ul>
+<p>Unfortunately, there are down sides too:</p>
+<ul>
+<li>The OS is increasingly &ldquo;locked in&rdquo;. With every update, you have to boot into recovery mode to disable some &ldquo;security&rdquo; features that lock you out of your own machine.</li>
+<li>For many development applications, you actually need a third party (well maintained) repo of otherwise standard applications - homebrew.</li>
+<li>The cost! The new MacBook Pro is a very expensive way to buy 4 year old hardware.</li>
+<li>The ecosystem is very clearly moving away from developer needs. From pushing everything to iCloud, to converging Ux with mobile, to disappointing hardware specs, there&rsquo;s no question which way Apple is headed. And it isn&rsquo;t towards better meeting your needs as a dev.</li>
+</ul>
+<p>With all this considered, I wouldn&rsquo;t buy a new MacBook for my work tasks. But developers should seriously consider staying with the old Macbook Pro 2012s for another couple of years. Hardware-wise it&rsquo;s still OK, it&rsquo;s just a question of how long before the OS gets too locked down for you.</p>
+<p>Looks like you can get one of these babies from eBay for <a href="http://www.ebay.com/sch/i.html?_from=R40&amp;_trksid=p2050601.m570.l1313.TR12.TRC2.A0.H0.Xmacbook+pro+2012.TRS0&amp;_nkw=macbook+pro+2012&amp;_sacat=0">about $800</a>.</p>
+<h2 id="lenovo-thinkpad">Lenovo Thinkpad</h2>
+<p>Thinkpads have been the developer workhorse for years. Durable, with well known and supported hardware, they&rsquo;re especially known for their great Linux support.</p>
+<p>Personally I&rsquo;ve always found the build quality lacking in Thinkpads, but I know people who go so far as to custom build and swap out their own components for this versatile beast. Look for models with X, P, or T in the model number, for the best developer oriented models. These babies are extremely customizable - you can get top end hardware, in a well-built and light package. Note the battery life is normally (tested at) 11 hours, and a spare battery pack can bump that up past 24 hours of use. Apple hardware can&rsquo;t even touch that. The spec sheets say that Thinkpads are only fractionally thicker than a Macbook Air, and both models come in at just under 3lbs.</p>
+<p>For more information, I can only recommend <a href="https://hackaday.com/2016/10/28/apple-sucks-now-heres-a-thinkpad-buyers-guide/">Hackaday&rsquo;s recent Thinkpad buyer&rsquo;s guide</a>.</p>
+<h2 id="dell-xps-13-developer-edition">Dell XPS 13 Developer Edition</h2>
+<p>The XPS 13 is another laptop that you see at developer conventions. The developer edition has the option to come with Ubuntu pre-installed, meaning Linux - or at least Debian - compatibility is guaranteed. My colleagues who use XPS 13s love them.</p>
+<p>In most configurations you get a touch screen, and somewhere between 11 and 22 hours of battery life, depending on usage. The only complaint I&rsquo;ve heard is the positioning of the webcam. It&rsquo;s on the lower part of the screen bezel, so if you Skype a lot, everyone gets a nice view up your nose. From personal experience, my only complaint is the build quality. It still feels plastic, and just doesn&rsquo;t match up to the machined metal that I&rsquo;ve gotten used to.  Still, the XPS 13 Developer Edition is rightfully a leading laptop for serious developers.</p>
+<h2 id="razer-blade-stealth">Razer Blade Stealth</h2>
+<p>I never thought that Razer would end up on my short list of laptops to consider, but here we are. The <a href="http://www.razerzone.com/gaming-systems/razer-blade-stealth">New Razer Blade Stealth</a> is a powerhouse machine, in a machined metal chassis that feels every bit as sturdy as a Mac. The processor is the most powerful I&rsquo;ve seen in anything ultrabook-sized. Though Razer doesn&rsquo;t officially offer Linux as an option, users on their forums report that Ubuntu works out of the box.</p>
+<p>The only real down side to this machine is the battery, which is rated for just 9 hours of use. I say &ldquo;just&rdquo; 9 hours, even though our comparison system got 5-7 hours when it was new. Still, it&rsquo;s something to consider.</p>
+<h2 id="conclusions-for-now">Conclusions for now</h2>
+<p>The moment I stepped outside the Apple store, I discovered that there is still a very healthy and diverse market of options for laptop buyers. Every other laptop I considered was cheaper and more powerful than the Macbook Pro line. Every other laptop was more compatible, had more ports, and generally seemed more useful to me. If that&rsquo;s the competitive landscape into which Apple is launching their &ldquo;absurd&rdquo; efforts, they must really have abandoned the developer demographic. On the plus side, Linux support is everywhere now. It&rsquo;s possible that this move by Apple will spur a serious wave of Linux adoption among developers.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[Perfect Linux Mint on my Macbook Pro 9,2]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2016/10/15/perfect-linux-mint-macbook-pro-9-2/"/>
+    <id>https://ohthehugemanatee.org/blog/2016/10/15/perfect-linux-mint-macbook-pro-9-2/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2016-10-15T18:44:40+00:00</published>
+    <updated>2016-10-15T18:44:40+00:00</updated>
+    <content type="html"><![CDATA[<p>A few months ago I posted about my <a href="/blog/2015/10/01/how-i-got-el-capitain-working-with-my-developer-tools/">frustrations getting El Capitan working</a> with my relatively simple developer needs. At the time I complained about the direction Apple is going. One of these days, I threatened, I would jump back to Linux as a primary desktop environment.</p>
+<p>This week I read about everyone&rsquo;s problems getting OSX Sierra going, and I decided it was time to take the plunge. Apple, I completely understand the direction you are going with your environment. You&rsquo;ve gotta lock down in order to make peoples' computers reliable, easy to use appliances. But I don&rsquo;t want an appliance, I want a computer. I disagree with some of your choices about the system, what software I should use, where I may install it from, and how I may use it. I&rsquo;m switching to an OS that lets me make those choices.</p>
+<p>Someone recently described the choice to me as &ldquo;program, or be programmed.&rdquo; That really stuck in my mind. OSX increasingly feels like &ldquo;someone else&rsquo;s computer&rdquo; for me. Someone else is making all the choices. Well, I don&rsquo;t have to &ldquo;be programmed&rdquo; passively. I can run an environment which respects my choices about privacy, which gives me the freedom to do whatever I want with my computer. So this week I went back to Linux.</p>
+<p>The last time I used Linux as a primary laptop OS was with Gentoo in 2003. OK, easy to say that this has come a LONG way since then. Still I don&rsquo;t know if I would recommend converting your existing system if you&rsquo;re a techno noob; better to buy a system with Linux pre-configured. With that said, I am damn impressed with how well <a href="http://linuxmint.com/">Linux Mint</a> runs out of the box on my Macbook Pro 9,2 (mid-2012). Setting everything up was a snap.</p>
+<h2 id="how-to-get-linux-mint-18-running-perfectly-on-a-macbook-pro-92">How to Get Linux Mint 18 running perfectly on a Macbook Pro 9,2</h2>
+<p>Just install it. Seriously, that&rsquo;s it. It just works.TM</p>
+<p>Installation went totally smoothly for me. I am dual booting for now, but I haven&rsquo;t had to get back into OSX all week. Note that you can access all your OSX files from inside Linux, as long as you don&rsquo;t have OSX&rsquo;s &ldquo;FileVault&rdquo; disk encryption turned on. Only Macs can decrypt that. There is a similar (more compatible) full disk encryption system for Linux, but at least during the transition I advise you to disable encryption for both &ldquo;sides&rdquo; of your computer. I did have to install ReFind to keep the dual boot working.</p>
+<p>Linux Mint asks you for permission to use the non-GPL drivers it needs to run your wireless card, and your CPU&rsquo;s special capabilities. It was a checkbox. Everything just worked. I really tried to find anything substantially broken out of the box, and came up empty. Touchpad, sound, webcam, suspend/resume&hellip; everything worked just fine.</p>
+<h2 id="applications">Applications</h2>
+<p>I was pleasantly surprised to find that all of my most important applications have Linux flavors available, and they&rsquo;re easy to install. Much easier - or more standardized at least - than installation packages on OSX or Windows! Here are the big ones I use, with any relevant notes.</p>
+<ul>
+<li>SimpleNote</li>
+<li>Firefox Developer Edition</li>
+<li>PHPStorm - sadly I couldn&rsquo;t get it to keep my old licenses. I had to re-enter my license code manually.</li>
+<li>Toggl</li>
+<li>PrivateInternetAccess</li>
+<li>Slack - this app is pretty slow, surprisingly. I may go back to the web version.</li>
+<li>Zoom meetings - still just as painful on Linux</li>
+<li>Skype - skype.com has a newer version of this than the apt repo. No idea what the difference is, but it&rsquo;s still a resource hog.</li>
+<li>Lastpass - browser extension, but deserves a special mention. The version of the extension that&rsquo;s installed automatically (3.3.1) is SLOW and could never connect to Lastpass reliably. Did I mention it&rsquo;s SLOW? It singlehandedly destroyed my system&rsquo;s performance. Visit <a href="">the extension&rsquo;s page on addons.mozilla.org</a> and scroll down down down until you find &ldquo;developer channel&rdquo;. There you can download the current version, 4.1.29a. That&rsquo;s fast and light and current and working.</li>
+<li>FileVault - I keep my most sensitive files in a filevault-encrypted image. Unfortunately, only macs can open that format. I moved everything into a Veracrypt encrypted image instead, as the best multi-platform option.</li>
+<li>Docker - docker &ldquo;native&rdquo; for mac is actually running on a very slim Linux VM, so I knew it would be faster on a native Linux machine. But I was surprised that my informal benchmarks clocked it at almost 3x faster!</li>
+</ul>
+<p>I was worried about application coverage, but so far I haven&rsquo;t found any gaps.</p>
+<h2 id="tweaks">Tweaks</h2>
+<p>I had two big tweaks: the task bar, and the touchpad. I also did one minor tweak to improve my battery life.</p>
+<p>I actually like the OSX dock and task bar concept. I find the default Windows-style taskbar finicky and a painful way to describe what applications are currently running. So I added <a href="https://glx-dock.org/">Cairo Dock</a>, and configured Cinnamon&rsquo;s built in taskbars to be a bit more OSX&rsquo;ish.</p>
+<p>I&rsquo;m very finicky about my touchpad&rsquo;s behavior, and Linux Mint&rsquo;s control panel didn&rsquo;t expose enough of the options to me. Fortunately the Mac touchpad runs on the excellent <a href="ftp://www.x.org/pub/X11R7.5/doc/man/man4/synaptics.4.html">Synaptics driver</a>. That means you can configure every detail from the terminal with &ldquo;synclient optionname=value&rdquo; or &ldquo;synclient -l&rdquo; to list your current settings. Use that man page I linked to tell what options do what, and you can set the perfect configuration. Once you&rsquo;ve figured out what options are just right for you, put them in a file called /etc/X11/xorg.conf.d/60-synaptics.conf, like this:</p>
+<pre><code>Section &quot;InputClass&quot;
+  Identifier &quot;touchpad&quot;
+  Driver &quot;synaptics&quot;
+  MatchIsTouchpad &quot;on&quot;
+  MatchDevicePath &quot;/dev/input/event*&quot;
+  Option &quot;FingerHigh&quot; &quot;90&quot;
+  Option &quot;CoastingSpeed&quot; &quot;7&quot;
+  Option &quot;CoastingFriction&quot; &quot;16&quot;
+  Option &quot;EmulateTwoFingerMinW&quot; &quot;2&quot;
+  Option &quot;RTCornerButton&quot; &quot;0&quot;
+  Option &quot;RBCornerButton&quot; &quot;0&quot;
+  Option &quot;LTCornerButton&quot; &quot;0&quot;
+  Option &quot;LBCornerButton&quot; &quot;0&quot;
+  Option &quot;PalmDetect&quot; &quot;on&quot;
+EndSection
+</code></pre><p>You will probably have to create the xorg.conf.d subdirectory&hellip; and you&rsquo;ll have to be sudo for the whole thing.</p>
+<p>Finally, I thought I&rsquo;d try to get more life out of this old battery. So I installed <a href="https://01.org/powertop">powertop</a>, and accepted all of it&rsquo;s automated recommendations. Now I get about 5 hours, which matches my experience in OSX. It is a 4 year old laptop, after all!</p>
+<p>That&rsquo;s it. One file to edit from the terminal, press &ldquo;OK&rdquo; a bunch on one application, and I got (what feels to me) like a perfect setup. This is so much better than the old days of walking uphill through the snow (both ways!) to get your display working. This is a polished, pleasant to use desktop environment.</p>
+<p>I&rsquo;m happy I switched.</p>
+<p>Update October 17 - The hardware CPU fan governor was letting the CPU run very very hot. I finally installed <a href="https://github.com/dgraziotin/mbpfan">mbpfan</a>, and it&rsquo;s under control again. This is all just&hellip; so much more painless than I remember!</p>
 ]]></content>
   </entry>
 </feed>

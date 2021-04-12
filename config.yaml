@@ -34,7 +34,13 @@ outputFormats:
     mediaType: "application/atom"
     baseName: "atom"
     isPlainText: false
+  DrupalPlanet:
+    mediaType: "application/atom"
+    baseName: "drupalplanet"
+    isPlainText: false
 outputs:
   home:
     - "HTML"
+    - "RSS"
     - "Atom"
+    - "DrupalPlanet"
