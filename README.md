@@ -6,6 +6,5 @@ This is the source of the next version of [my blog](https://ohthehugemanatee.org
 
 - Get unnecessary stuff out of the root:
   - `apple-touch-icon-144-precomposed.png` 
-  - `config.*`
 - Fix favicon
 - Launch!
