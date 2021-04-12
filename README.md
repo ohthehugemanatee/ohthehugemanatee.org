@@ -4,5 +4,4 @@ This is the source of the next version of [my blog](https://ohthehugemanatee.org
 
 ## TODO
 
-- Fix favicon
 - Launch!
