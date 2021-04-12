@@ -4,7 +4,6 @@ This is the source of the next version of [my blog](https://ohthehugemanatee.org
 
 ## TODO
 
-- Add robots.txt
 - Get unnecessary stuff out of the root:
   - `apple-touch-icon-144-precomposed.png` 
   - `config.*`
