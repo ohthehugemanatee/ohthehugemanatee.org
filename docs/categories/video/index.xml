@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>video on Oh The Huge Manatee!</title>
+    <link>https://ohthehugemanatee.org/categories/video/</link>
+    <description>Recent content in video on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Nov 2020 20:47:39 +0200</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/video/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Format Video for Fast Playback on the Web</title>
+      <link>https://ohthehugemanatee.org/blog/2020/11/11/how-to-format-video-for-fast-playback-on-the-web/</link>
+      <pubDate>Wed, 11 Nov 2020 20:47:39 +0200</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/blog/2020/11/11/how-to-format-video-for-fast-playback-on-the-web/</guid>
+      <description>It&amp;rsquo;s a pain in the ass to get your video optimized for web. Not only do you have to work out codecs and their support across browsers, but even within codecs there are tricks to help it stream more easily. Here&amp;rsquo;s the short version.
+In terms of format, there are some really great options if you only care about compatibility with the most popular browsers (ahem - chrome). webm/VP8 is the way to go here, or webm/VP9 if you really only care about chrome.</description>
+    </item>
+    
+  </channel>
+</rss>

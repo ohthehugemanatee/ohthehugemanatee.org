@@ -2,13 +2,45 @@
   <title>Oh The Huge Manatee!</title>
   <link href="https://ohthehugemanatee.org/atom.xml" rel="self"/>
   <link href="https://ohthehugemanatee.org/"/>
-  <updated>2019-10-08T19:10:15+00:00</updated>
+  <updated>2020-11-11T20:47:39+02:00</updated>
   <id>https://ohthehugemanatee.org/</id>
   <author>
     <name>Campbell Vertesi (ohthehugemanatee)</name>
     <uri>https://ohthehugemanatee.org/</uri>
   </author>
   <generator>Hugo -- gohugo.io</generator>
+  <entry>
+    <title type="html"><![CDATA[How to Format Video for Fast Playback on the Web]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2020/11/11/how-to-format-video-for-fast-playback-on-the-web/"/>
+    <id>https://ohthehugemanatee.org/blog/2020/11/11/how-to-format-video-for-fast-playback-on-the-web/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2020-11-11T20:47:39+02:00</published>
+    <updated>2021-04-14T20:47:39+02:00</updated>
+    <content type="html"><![CDATA[<p>It&rsquo;s a pain in the ass to get your video optimized for web. Not only do you have to work out codecs and their support across browsers, but even within codecs there are tricks to help it stream more easily. Here&rsquo;s the short version.</p>
+<p>In terms of format, there are some really great options if you only care about compatibility with the most popular browsers (ahem - chrome). webm/VP8 is the way to go here, or webm/VP9 if you really only care about chrome. You&rsquo;ll get a very small filesize and high quality, with hardware playback on the latest devices. But if you want to include Safari and others, or if you care about non-flagsip devices or ones more than a couple of years old, it has to be MP4/h.264 . Your filesize won&rsquo;t be as small, but it will play with hardware acceleration on any device since about 2011.</p>
+<p>One common opimization is to use <code>@media</code> queries to dfault to webm/VP9 and fallback to other formats based on the browser capabilities. Do that if you want, but for my use cases I prefer simplicity over bandwidth savings.</p>
+<p>I use <a href="https://ffmpeg.org/">ffmpeg</a>, because it does everything except my laundry (and I&rsquo;m pretty sure that&rsquo;s because I don&rsquo;t know th right flags for &ldquo;spin cycle&rdquo;). To convert one video into a format that is universally compatible:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ffmpeg  -i input.mp4 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  -c:v libx264 <span style="color:#75715e"># h264 encoder \</span>
+  -profile:v main <span style="color:#75715e"># h264 options to make available. for &gt;5 year old phones, use &#34;baseline&#34;. \</span>
+  -preset veryslow <span style="color:#75715e"># slowest option, best compression \</span>
+  -s hd720 <span style="color:#75715e"># rarely need higher resolution than this \</span>
+  -b:v 1.5M <span style="color:#75715e"># sets the video bitrate \</span>
+  -an <span style="color:#75715e"># no audio track; this is for a background video \</span>
+  -movflags +faststart <span style="color:#75715e"># allows playing while the file is downloading \</span>
+  output.mp4
+</code></pre></div><p>The non-obvious options:</p>
+<ul>
+<li><code>-profile:v main</code> sets which features of h264 to use. The standard evolved over time, and depending on just how new your playback devices are, there improvements available. Most of the time <code>main</code> is the right choice, but if you want to target older devices use <code>baseline</code>.</li>
+<li><code>-b:v 1.5M</code> sets a 1.5 Megabit bitrate. You should experiment with this number to find the right tradeoff between quality and filesize. You can find out the bitrate of your original source with <code>ffinfo</code>, or with the output of this <code>ffmpeg</code> command.</li>
+<li><code>-an</code> puts no audio in the finished video. I worked this out while making a background video for a site, so ths was appropriate. Side benefit that it simplifies this blog post. :) If you want audio, you could replace this with <code>-codec:a aac</code> is a very compatible option.</li>
+<li><code>movflags +faststart</code> is critical if you want the video to play before being fully downloaded. Video files contain multiple streams of data (at least one stream of video and one of audio). Usually the metadata about each stream is at the <em>end</em> of the filee, meaning that a player has to load the whole file before it knows how to play the data. Faststart breaks the file up into chunks and puts the metadata in with each chunk, so your player can start playing the video as soon as the first bit is loaded.</li>
+</ul>
+<p>That&rsquo;s all you really need to make good looking video files, optimized for web, which play before they&rsquo;re fully downloaded, and work on every device. Have fun!</p>
+]]></content>
+  </entry>
   <entry>
     <title type="html"><![CDATA[Chinese censorship, values decisions, and free software]]></title>
     <link href="https://ohthehugemanatee.org/blog/2019/10/08/chinese-censorship-and-free-software/"/>
@@ -1247,65 +1279,6 @@ set -e
 <p>The only real down side to this machine is the battery, which is rated for just 9 hours of use. I say &ldquo;just&rdquo; 9 hours, even though our comparison system got 5-7 hours when it was new. Still, it&rsquo;s something to consider.</p>
 <h2 id="conclusions-for-now">Conclusions for now</h2>
 <p>The moment I stepped outside the Apple store, I discovered that there is still a very healthy and diverse market of options for laptop buyers. Every other laptop I considered was cheaper and more powerful than the Macbook Pro line. Every other laptop was more compatible, had more ports, and generally seemed more useful to me. If that&rsquo;s the competitive landscape into which Apple is launching their &ldquo;absurd&rdquo; efforts, they must really have abandoned the developer demographic. On the plus side, Linux support is everywhere now. It&rsquo;s possible that this move by Apple will spur a serious wave of Linux adoption among developers.</p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[Perfect Linux Mint on my Macbook Pro 9,2]]></title>
-    <link href="https://ohthehugemanatee.org/blog/2016/10/15/perfect-linux-mint-macbook-pro-9-2/"/>
-    <id>https://ohthehugemanatee.org/blog/2016/10/15/perfect-linux-mint-macbook-pro-9-2/</id>
-    <author>
-      <name>Campbell Vertesi (ohthehugemanatee)</name>
-    </author>
-    <published>2016-10-15T18:44:40+00:00</published>
-    <updated>2016-10-15T18:44:40+00:00</updated>
-    <content type="html"><![CDATA[<p>A few months ago I posted about my <a href="/blog/2015/10/01/how-i-got-el-capitain-working-with-my-developer-tools/">frustrations getting El Capitan working</a> with my relatively simple developer needs. At the time I complained about the direction Apple is going. One of these days, I threatened, I would jump back to Linux as a primary desktop environment.</p>
-<p>This week I read about everyone&rsquo;s problems getting OSX Sierra going, and I decided it was time to take the plunge. Apple, I completely understand the direction you are going with your environment. You&rsquo;ve gotta lock down in order to make peoples' computers reliable, easy to use appliances. But I don&rsquo;t want an appliance, I want a computer. I disagree with some of your choices about the system, what software I should use, where I may install it from, and how I may use it. I&rsquo;m switching to an OS that lets me make those choices.</p>
-<p>Someone recently described the choice to me as &ldquo;program, or be programmed.&rdquo; That really stuck in my mind. OSX increasingly feels like &ldquo;someone else&rsquo;s computer&rdquo; for me. Someone else is making all the choices. Well, I don&rsquo;t have to &ldquo;be programmed&rdquo; passively. I can run an environment which respects my choices about privacy, which gives me the freedom to do whatever I want with my computer. So this week I went back to Linux.</p>
-<p>The last time I used Linux as a primary laptop OS was with Gentoo in 2003. OK, easy to say that this has come a LONG way since then. Still I don&rsquo;t know if I would recommend converting your existing system if you&rsquo;re a techno noob; better to buy a system with Linux pre-configured. With that said, I am damn impressed with how well <a href="http://linuxmint.com/">Linux Mint</a> runs out of the box on my Macbook Pro 9,2 (mid-2012). Setting everything up was a snap.</p>
-<h2 id="how-to-get-linux-mint-18-running-perfectly-on-a-macbook-pro-92">How to Get Linux Mint 18 running perfectly on a Macbook Pro 9,2</h2>
-<p>Just install it. Seriously, that&rsquo;s it. It just works.TM</p>
-<p>Installation went totally smoothly for me. I am dual booting for now, but I haven&rsquo;t had to get back into OSX all week. Note that you can access all your OSX files from inside Linux, as long as you don&rsquo;t have OSX&rsquo;s &ldquo;FileVault&rdquo; disk encryption turned on. Only Macs can decrypt that. There is a similar (more compatible) full disk encryption system for Linux, but at least during the transition I advise you to disable encryption for both &ldquo;sides&rdquo; of your computer. I did have to install ReFind to keep the dual boot working.</p>
-<p>Linux Mint asks you for permission to use the non-GPL drivers it needs to run your wireless card, and your CPU&rsquo;s special capabilities. It was a checkbox. Everything just worked. I really tried to find anything substantially broken out of the box, and came up empty. Touchpad, sound, webcam, suspend/resume&hellip; everything worked just fine.</p>
-<h2 id="applications">Applications</h2>
-<p>I was pleasantly surprised to find that all of my most important applications have Linux flavors available, and they&rsquo;re easy to install. Much easier - or more standardized at least - than installation packages on OSX or Windows! Here are the big ones I use, with any relevant notes.</p>
-<ul>
-<li>SimpleNote</li>
-<li>Firefox Developer Edition</li>
-<li>PHPStorm - sadly I couldn&rsquo;t get it to keep my old licenses. I had to re-enter my license code manually.</li>
-<li>Toggl</li>
-<li>PrivateInternetAccess</li>
-<li>Slack - this app is pretty slow, surprisingly. I may go back to the web version.</li>
-<li>Zoom meetings - still just as painful on Linux</li>
-<li>Skype - skype.com has a newer version of this than the apt repo. No idea what the difference is, but it&rsquo;s still a resource hog.</li>
-<li>Lastpass - browser extension, but deserves a special mention. The version of the extension that&rsquo;s installed automatically (3.3.1) is SLOW and could never connect to Lastpass reliably. Did I mention it&rsquo;s SLOW? It singlehandedly destroyed my system&rsquo;s performance. Visit <a href="">the extension&rsquo;s page on addons.mozilla.org</a> and scroll down down down until you find &ldquo;developer channel&rdquo;. There you can download the current version, 4.1.29a. That&rsquo;s fast and light and current and working.</li>
-<li>FileVault - I keep my most sensitive files in a filevault-encrypted image. Unfortunately, only macs can open that format. I moved everything into a Veracrypt encrypted image instead, as the best multi-platform option.</li>
-<li>Docker - docker &ldquo;native&rdquo; for mac is actually running on a very slim Linux VM, so I knew it would be faster on a native Linux machine. But I was surprised that my informal benchmarks clocked it at almost 3x faster!</li>
-</ul>
-<p>I was worried about application coverage, but so far I haven&rsquo;t found any gaps.</p>
-<h2 id="tweaks">Tweaks</h2>
-<p>I had two big tweaks: the task bar, and the touchpad. I also did one minor tweak to improve my battery life.</p>
-<p>I actually like the OSX dock and task bar concept. I find the default Windows-style taskbar finicky and a painful way to describe what applications are currently running. So I added <a href="https://glx-dock.org/">Cairo Dock</a>, and configured Cinnamon&rsquo;s built in taskbars to be a bit more OSX&rsquo;ish.</p>
-<p>I&rsquo;m very finicky about my touchpad&rsquo;s behavior, and Linux Mint&rsquo;s control panel didn&rsquo;t expose enough of the options to me. Fortunately the Mac touchpad runs on the excellent <a href="ftp://www.x.org/pub/X11R7.5/doc/man/man4/synaptics.4.html">Synaptics driver</a>. That means you can configure every detail from the terminal with &ldquo;synclient optionname=value&rdquo; or &ldquo;synclient -l&rdquo; to list your current settings. Use that man page I linked to tell what options do what, and you can set the perfect configuration. Once you&rsquo;ve figured out what options are just right for you, put them in a file called /etc/X11/xorg.conf.d/60-synaptics.conf, like this:</p>
-<pre><code>Section &quot;InputClass&quot;
-  Identifier &quot;touchpad&quot;
-  Driver &quot;synaptics&quot;
-  MatchIsTouchpad &quot;on&quot;
-  MatchDevicePath &quot;/dev/input/event*&quot;
-  Option &quot;FingerHigh&quot; &quot;90&quot;
-  Option &quot;CoastingSpeed&quot; &quot;7&quot;
-  Option &quot;CoastingFriction&quot; &quot;16&quot;
-  Option &quot;EmulateTwoFingerMinW&quot; &quot;2&quot;
-  Option &quot;RTCornerButton&quot; &quot;0&quot;
-  Option &quot;RBCornerButton&quot; &quot;0&quot;
-  Option &quot;LTCornerButton&quot; &quot;0&quot;
-  Option &quot;LBCornerButton&quot; &quot;0&quot;
-  Option &quot;PalmDetect&quot; &quot;on&quot;
-EndSection
-</code></pre><p>You will probably have to create the xorg.conf.d subdirectory&hellip; and you&rsquo;ll have to be sudo for the whole thing.</p>
-<p>Finally, I thought I&rsquo;d try to get more life out of this old battery. So I installed <a href="https://01.org/powertop">powertop</a>, and accepted all of it&rsquo;s automated recommendations. Now I get about 5 hours, which matches my experience in OSX. It is a 4 year old laptop, after all!</p>
-<p>That&rsquo;s it. One file to edit from the terminal, press &ldquo;OK&rdquo; a bunch on one application, and I got (what feels to me) like a perfect setup. This is so much better than the old days of walking uphill through the snow (both ways!) to get your display working. This is a polished, pleasant to use desktop environment.</p>
-<p>I&rsquo;m happy I switched.</p>
-<p>Update October 17 - The hardware CPU fan governor was letting the CPU run very very hot. I finally installed <a href="https://github.com/dgraziotin/mbpfan">mbpfan</a>, and it&rsquo;s under control again. This is all just&hellip; so much more painless than I remember!</p>
 ]]></content>
   </entry>
 </feed>
