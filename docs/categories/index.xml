@@ -89,6 +89,24 @@
     </item>
     
     <item>
+      <title>dev</title>
+      <link>https://ohthehugemanatee.org/categories/dev/</link>
+      <pubDate>Thu, 24 Jan 2019 15:12:30 +0200</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/categories/dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>serverless</title>
+      <link>https://ohthehugemanatee.org/categories/serverless/</link>
+      <pubDate>Thu, 24 Jan 2019 15:12:30 +0200</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/categories/serverless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>k8s</title>
       <link>https://ohthehugemanatee.org/categories/k8s/</link>
       <pubDate>Mon, 07 Jan 2019 11:10:21 +0000</pubDate>

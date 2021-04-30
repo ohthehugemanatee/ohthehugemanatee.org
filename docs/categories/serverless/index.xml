@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>serverless on Oh The Huge Manatee!</title>
+    <link>https://ohthehugemanatee.org/categories/serverless/</link>
+    <description>Recent content in serverless on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Jan 2019 15:12:30 +0200</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/serverless/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Serverless is the MS Access of the Future</title>
+      <link>https://ohthehugemanatee.org/blog/2019/01/24/serverless-is-the-ms-access-of-the-future/</link>
+      <pubDate>Thu, 24 Jan 2019 15:12:30 +0200</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/blog/2019/01/24/serverless-is-the-ms-access-of-the-future/</guid>
+      <description>Controversial opinion time: the usefulness of what we presently call &amp;ldquo;serverless&amp;rdquo; will always be limited to simple use cases. It is a great choice for glue code or simple projects, but it will never be the best choice for even medium complexity development problems. Containers and similar technologies will eat its lunch the same way RDBMSes ate MSAccess&#39;.
+The benefits of serverless are real. Don&amp;rsquo;t worry about infrastructure, don&amp;rsquo;t worry about scaling or availability.</description>
+    </item>
+    
+  </channel>
+</rss>

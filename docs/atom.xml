@@ -230,6 +230,28 @@ $ sudo rm -rf /dev/ram0
 </code></pre></div>]]></content>
   </entry>
   <entry>
+    <title type="html"><![CDATA[Serverless is the MS Access of the Future]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2019/01/24/serverless-is-the-ms-access-of-the-future/"/>
+    <id>https://ohthehugemanatee.org/blog/2019/01/24/serverless-is-the-ms-access-of-the-future/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2019-01-24T15:12:30+02:00</published>
+    <updated>2019-01-24T15:12:30+02:00</updated>
+    <content type="html"><![CDATA[<p>Controversial opinion time: the usefulness of what we presently call &ldquo;serverless&rdquo; will always be limited to simple use cases. It is a great choice for glue code or simple projects, but it will never be the best choice for even medium complexity development problems. Containers and similar technologies will eat its lunch the same way RDBMSes ate MSAccess'.</p>
+<p>The benefits of serverless are real. Don&rsquo;t worry about infrastructure, don&rsquo;t worry about scaling or availability. Just paste your code here and we&rsquo;ll take care of the rest! Minimal running costs, infinite scalability, simpler units of code to maintain!</p>
+<p>These benefits are only possible because the cloud provider made a lot of decisions for you, in a way that is sensible for a majority use case. These are all decisions that you could hypothetically configure for yourself, given the time to do so. And it&rsquo;s exactly here that the core value of serverless is found. If your use case happens to fit within the frame set out by your serverless provider, there&rsquo;s real value on the table in terms of setup and maintenance time/cost (and SLA).</p>
+<p>These decisions come with limitations, like most technical choices. What languages and versions can you use? What modules, what dependency management systems? What external binaries are available? What memory or disk is available, with what kind of I/O throughput? What&rsquo;s the local development environment, and how well does it replicate the live one? What are the scaling characteristics? And so on.</p>
+<p>In a simple use case, most of these probably don&rsquo;t matter, and the ones that <em>do</em> matter are often exposed by the cloud provider. You can choose your VM size, for example, and preemptive scaling rules, and attach disks and external services, and supply secondary binaries yourself, and&hellip;</p>
+<p>Very quickly you&rsquo;ve taken on a similar complexity, setup, and maintenance cost to what you were trying to avoid in the first place. This might be OK if it were a net zero transaction, but it&rsquo;s not. You&rsquo;ve taken on those costs, in exchange for&hellip; the rest of the limitations and a platform over which you have no control.</p>
+<p>This feels a lot like so many MSAccess applications I worked with in the early 2000&rsquo;s. When the application was simple, it was great to have a visual data engine. But with a larger data model, the UI increasingly became an obstacle. You would increasingly use text to express your queries, duplicate data in more convenient tables to avoid tricky joins, and &hellip; In the end, the workarounds piled up. Managing a complex application on MSAccess is just as hard as managing it on any other RDBMS, but without the flexibility and power, and with more kludgy workarounds. Access is a great product for simple or straightforward use cases. But the moment your application grows too big, you start paying a heavy tax.</p>
+<p>It&rsquo;s not controversial to suggest that the core value of Serverless is providing OOTB great hosting for simpler, highly encapsulated code, even code segments. The controversial part is the future prediction, where the metaphor really kicks in.</p>
+<p>What happened to MSAccess? Other RDBMS' got much better, and friendlier. From easy-to-use ORMs for easy-to-use programming languages, to GUIs like MySQLAdmin, to cloud-based application builders backed by RDBMSes, the full-powered RDBMS ecosystem gradually took over the use case for MSAccess. The ease-of-use benefit which was so core to the Access value proposition gradually disappeared, and users ended up with the choice between a fully-flexible power system and a limited one, both relatively easy to use. Finally Access 2010 became a GUI on top of SQL, integrated with Sharepoint.</p>
+<p>Serverless is headed in a similar direction. Other tools, largely from the container ecosystem, are already nibbling at their lunch. If you&rsquo;re at the point where you need to configure VM sizes and scaling rules on your Serverless provider, you&rsquo;re probably considering jumping to a managed Kubernetes provider instead. If you don&rsquo;t need to configure that stuff, you&rsquo;re looking at pure-container cloud solutions like Azure Container Instances. Same flexibility and cost structure, but with run-anywhere compatibility and a development environment which matches the CI testbed and prod. The only uncontested ground left is applications that are too small to bother containerizing.</p>
+<p>Meanwhile the container ecosystem is taking off at rocket speed, making that &ldquo;flexibility tradeoff&rdquo; worse and worsse for serverless. Where is the multi-cloud ecosystem for serverless? Where is the network security modeling market? Compare the difficulty of local dev and hosted CI environments for serverless code, to the out of the box auto-detected container builds available in every major CI platform. I&rsquo;s clear: serverless isn&rsquo;t actually all that much easier anymore. And it&rsquo;s only going one way. Soon enough, Serverless will become a nice frontend for a container runtime.</p>
+]]></content>
+  </entry>
+  <entry>
     <title type="html"><![CDATA[Kubernetes for stateful applications: Scaling macroservices]]></title>
     <link href="https://ohthehugemanatee.org/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/"/>
     <id>https://ohthehugemanatee.org/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/</id>
@@ -1231,54 +1253,6 @@ set -e
 <p>One last aside here: it is easy to fall into the mindset that Drupal 8 practices are better just because they&rsquo;re newer. This is simply not true. These practices are not handed down from heaven, after all! When you have the rest of the D8 architecture in place, certain kinds of code tasks are much easier. That&rsquo;s why we like developing for it so much more. But other (less common, IMO) tasks are harder. And doing any of this in D7 means you have to put the architecture in place, too. That&rsquo;s a lot of time, and it&rsquo;s only worthwhile if you&rsquo;re going to use the particular strengths of these practices.</p>
 <p>So if it looks like one of these D8 practices will make your life easier for a particular task in D7, then by all means use these approaches to get there. Composer manager has a particularly low bar - it&rsquo;s so easy to use, and makes so many tasks easier, it&rsquo;s a good approach to many tasks. But if I ever catch you implementing service container to get two lines of code into a form_alter, I will come to where you work and slap your hands off the keyboard.</p>
 <p>Happy coding!</p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[Developer options for replacing your old MacBook Pro]]></title>
-    <link href="https://ohthehugemanatee.org/blog/2016/10/31/developer-options-for-replacing-your-old-macbook-pro/"/>
-    <id>https://ohthehugemanatee.org/blog/2016/10/31/developer-options-for-replacing-your-old-macbook-pro/</id>
-    <author>
-      <name>Campbell Vertesi (ohthehugemanatee)</name>
-    </author>
-    <published>2016-10-31T09:05:07+00:00</published>
-    <updated>2016-10-31T09:05:07+00:00</updated>
-    <content type="html"><![CDATA[<p>The developer world is abuzz with criticism of the new Macbook Pro. After 4 years of waiting for an update, what we got has <a href="https://medium.com/charged-tech/apple-just-told-the-world-it-has-no-idea-who-the-mac-is-for-722a2438389b#.3cl5g99bu">two less ports, slower memory and a worse GPU</a>, is <a href="https://medium.com/charged-tech/apple-just-told-the-world-it-has-no-idea-who-the-mac-is-for-722a2438389b#.3cl5g99bu">a vanity project that the core demographic of Apple’s customers probably won’t even use</a>, in the final balance: <a href="https://petersphilo.org/2016/10/29/open-letter-to-tim-cook/">merely consumer-level</a>. It&rsquo;s slammed as <a href="https://macperformanceguide.com/blog/2016/20161029_1016-Apple2016MacBookPro-compatibility.html">incompatible</a>, <a href="https://twitter.com/lapcatsoftware/status/791760906678067200">absurd</a>, and <a href="http://cdm.link/2016/10/apples-computer-vision-looks-backward-others-look-forward/">for pros&hellip; actually an insult</a>.</p>
-<p>If you&rsquo;re a developer in late 2016, and are in the market for a new laptop, there are some great options out there. It&rsquo;s too bad that the latest line of Mac products don&rsquo;t make the cut. I&rsquo;ve been neck deep in this research myself, since it&rsquo;s time to retire my mid-2012 non-retina Macbook Pro anyway. I thought I&rsquo;d share.</p>
-<p>I&rsquo;m looking for a new laptop. It should be portable enough to count as an &ldquo;Ultrabook&rdquo;, powerful enough to run my IDE and many virtualized environments, with enough battery life to get me through long plane or trane trips. And it should have very high build quality, both for durability and aesthetics.</p>
-<h2 id="operating-system">Operating System</h2>
-<p>OSX made it&rsquo;s name on a great user experience, and that&rsquo;s still mostly true. It&rsquo;s no longer true by such a wide margin, though. Windows has made enormous strides since then - it still feels frustrating for me, but it&rsquo;s worth a try for you.</p>
-<p>Most exciting for an open source guy like me, is the discovery that Linux desktops have gotten great. Gone are the days of futzing around just to get things set up in the first place. With a contemporary Ubuntu or Mint system (at least) you get a pleasant desktop experience out of the box. Give a try to Ubuntu on a live CD, and see how it feels for you. Depending on your mission critical applications, Linux might be a strong choice.</p>
-<p>If you find that you <em>have</em> to be on OSX, then you&rsquo;re stuck with either Apple hardware, or a <a href="http://www.hackintosh.com/">hackintosh</a>. From personal experience, a hackintosh is a great weekend project, but takes much more work than any Linux system I&rsquo;ve used. Every update meant serious surgery. Not for the faint of heart - but if you really need OSX, this might be the best path for you!</p>
-<p>Since we&rsquo;ve accepted that we&rsquo;re likely moving away from the mac platform, I&rsquo;m not going to talk much about the operating system here anymore. These systems all (apparently) have good Linux compatibility, so the choice of OS is up to you.</p>
-<h2 id="apple">Apple</h2>
-<p>There&rsquo;s a lot (still) to like about Apple products.</p>
-<ul>
-<li>The OS is UNIX-enough-for-most</li>
-<li>The best applications for creatives and developers always have an OSX version</li>
-<li>Build quality is fantastic</li>
-<li>Aesthetics are market leading (ie it&rsquo;s pretty)</li>
-</ul>
-<p>Unfortunately, there are down sides too:</p>
-<ul>
-<li>The OS is increasingly &ldquo;locked in&rdquo;. With every update, you have to boot into recovery mode to disable some &ldquo;security&rdquo; features that lock you out of your own machine.</li>
-<li>For many development applications, you actually need a third party (well maintained) repo of otherwise standard applications - homebrew.</li>
-<li>The cost! The new MacBook Pro is a very expensive way to buy 4 year old hardware.</li>
-<li>The ecosystem is very clearly moving away from developer needs. From pushing everything to iCloud, to converging Ux with mobile, to disappointing hardware specs, there&rsquo;s no question which way Apple is headed. And it isn&rsquo;t towards better meeting your needs as a dev.</li>
-</ul>
-<p>With all this considered, I wouldn&rsquo;t buy a new MacBook for my work tasks. But developers should seriously consider staying with the old Macbook Pro 2012s for another couple of years. Hardware-wise it&rsquo;s still OK, it&rsquo;s just a question of how long before the OS gets too locked down for you.</p>
-<p>Looks like you can get one of these babies from eBay for <a href="http://www.ebay.com/sch/i.html?_from=R40&amp;_trksid=p2050601.m570.l1313.TR12.TRC2.A0.H0.Xmacbook+pro+2012.TRS0&amp;_nkw=macbook+pro+2012&amp;_sacat=0">about $800</a>.</p>
-<h2 id="lenovo-thinkpad">Lenovo Thinkpad</h2>
-<p>Thinkpads have been the developer workhorse for years. Durable, with well known and supported hardware, they&rsquo;re especially known for their great Linux support.</p>
-<p>Personally I&rsquo;ve always found the build quality lacking in Thinkpads, but I know people who go so far as to custom build and swap out their own components for this versatile beast. Look for models with X, P, or T in the model number, for the best developer oriented models. These babies are extremely customizable - you can get top end hardware, in a well-built and light package. Note the battery life is normally (tested at) 11 hours, and a spare battery pack can bump that up past 24 hours of use. Apple hardware can&rsquo;t even touch that. The spec sheets say that Thinkpads are only fractionally thicker than a Macbook Air, and both models come in at just under 3lbs.</p>
-<p>For more information, I can only recommend <a href="https://hackaday.com/2016/10/28/apple-sucks-now-heres-a-thinkpad-buyers-guide/">Hackaday&rsquo;s recent Thinkpad buyer&rsquo;s guide</a>.</p>
-<h2 id="dell-xps-13-developer-edition">Dell XPS 13 Developer Edition</h2>
-<p>The XPS 13 is another laptop that you see at developer conventions. The developer edition has the option to come with Ubuntu pre-installed, meaning Linux - or at least Debian - compatibility is guaranteed. My colleagues who use XPS 13s love them.</p>
-<p>In most configurations you get a touch screen, and somewhere between 11 and 22 hours of battery life, depending on usage. The only complaint I&rsquo;ve heard is the positioning of the webcam. It&rsquo;s on the lower part of the screen bezel, so if you Skype a lot, everyone gets a nice view up your nose. From personal experience, my only complaint is the build quality. It still feels plastic, and just doesn&rsquo;t match up to the machined metal that I&rsquo;ve gotten used to.  Still, the XPS 13 Developer Edition is rightfully a leading laptop for serious developers.</p>
-<h2 id="razer-blade-stealth">Razer Blade Stealth</h2>
-<p>I never thought that Razer would end up on my short list of laptops to consider, but here we are. The <a href="http://www.razerzone.com/gaming-systems/razer-blade-stealth">New Razer Blade Stealth</a> is a powerhouse machine, in a machined metal chassis that feels every bit as sturdy as a Mac. The processor is the most powerful I&rsquo;ve seen in anything ultrabook-sized. Though Razer doesn&rsquo;t officially offer Linux as an option, users on their forums report that Ubuntu works out of the box.</p>
-<p>The only real down side to this machine is the battery, which is rated for just 9 hours of use. I say &ldquo;just&rdquo; 9 hours, even though our comparison system got 5-7 hours when it was new. Still, it&rsquo;s something to consider.</p>
-<h2 id="conclusions-for-now">Conclusions for now</h2>
-<p>The moment I stepped outside the Apple store, I discovered that there is still a very healthy and diverse market of options for laptop buyers. Every other laptop I considered was cheaper and more powerful than the Macbook Pro line. Every other laptop was more compatible, had more ports, and generally seemed more useful to me. If that&rsquo;s the competitive landscape into which Apple is launching their &ldquo;absurd&rdquo; efforts, they must really have abandoned the developer demographic. On the plus side, Linux support is everywhere now. It&rsquo;s possible that this move by Apple will spur a serious wave of Linux adoption among developers.</p>
 ]]></content>
   </entry>
 </feed>
