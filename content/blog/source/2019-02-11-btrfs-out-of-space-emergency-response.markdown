@@ -155,9 +155,10 @@ Balance operations usually take a long time - more than an hour is not unusual. 
 
 And this last option is how I saved my computer last night. I hope this helps someone out of a similar predicament someday.
 
-**UPDATE**
 
-Now that I've had to do this a few times, it's *way* better to rebalance a full filesystem by adding a ramdisk to it. Not only is it faster than a flash device, it's also more reliable in most cases... and certainly for my kind of use case (a developer laptop) the important preconditions apply: lots of RAM, reliable power source. Here's the recipe:
+**Update to the update**: Do not do this! A friendly commentor from the BTRFS community let me know that this is actually a *really bad idea*, since anything that interrupts your RAM will wreck your filesystem irreparably. Thank you @Zygo for the correction, and sorry for anyone who suffered for my learning. 
+
+**UPDATE**: ~~Now that I've had to do this a few times, it's *way* better to rebalance a full filesystem by adding a ramdisk to it. Not only is it faster than a flash device, it's also more reliable in most cases... and certainly for my kind of use case (a developer laptop) the important preconditions apply: lots of RAM, reliable power source. Here's the recipe:~~
 
 ``` bash
 # Create a ramdisk. Make sure /dev/ram0 isn't in use already before doing this!
