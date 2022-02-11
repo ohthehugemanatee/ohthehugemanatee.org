@@ -6,7 +6,17 @@
     <description>Recent content on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 May 2021 15:00:05 +0100</lastBuildDate><atom:link href="https://ohthehugemanatee.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Nov 2021 19:15:33 +0100</lastBuildDate><atom:link href="https://ohthehugemanatee.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building blocks for autonomous driving simulation environments</title>
+      <link>https://ohthehugemanatee.org/blog/2021/11/12/building-blocks-for-autonomous-driving-simulation-environments/</link>
+      <pubDate>Fri, 12 Nov 2021 19:15:33 +0100</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/blog/2021/11/12/building-blocks-for-autonomous-driving-simulation-environments/</guid>
+      <description>My team&amp;rsquo;s work with Volkswagen on an autonomous driving simulation environments just turned into a new Azure Well-Architected page, which makes this a good time to add some behind-the-scenes commentary from real world experience. The architecture recommended there came from a lot of discovery and experimentation work, and suits quite a broad case that I think is not well represented (yet) in cloud computing products.
+The challenge Testing and CI-style validation in autonomous driving development are a tricky challenge.</description>
+    </item>
+    
     <item>
       <title>The Cluster in My Closet - Advice for running kubernetes at home</title>
       <link>https://ohthehugemanatee.org/blog/2021/05/15/the-cluster-in-my-closet-advice-for-running-kubernetes-at-home/</link>

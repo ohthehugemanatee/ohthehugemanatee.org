@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.92.0" />
+
+    
+    
+    
+
+<title>Building blocks for autonomous driving simulation environments • Oh The Huge Manatee!</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Building blocks for autonomous driving simulation environments"/>
+<meta name="twitter:description" content="My team&rsquo;s work with Volkswagen on an autonomous driving simulation environments just turned into a new Azure Well-Architected page, which makes this a good time to add some behind-the-scenes commentary from real world experience. The architecture recommended there came from a lot of discovery and experimentation work, and suits quite a broad case that I think is not well represented (yet) in cloud computing products.
+The challenge Testing and CI-style validation in autonomous driving development are a tricky challenge."/>
+
+<meta property="og:title" content="Building blocks for autonomous driving simulation environments" />
+<meta property="og:description" content="My team&rsquo;s work with Volkswagen on an autonomous driving simulation environments just turned into a new Azure Well-Architected page, which makes this a good time to add some behind-the-scenes commentary from real world experience. The architecture recommended there came from a lot of discovery and experimentation work, and suits quite a broad case that I think is not well represented (yet) in cloud computing products.
+The challenge Testing and CI-style validation in autonomous driving development are a tricky challenge." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ohthehugemanatee.org/blog/2021/11/12/building-blocks-for-autonomous-driving-simulation-environments/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-11-12T19:15:33+01:00" />
+<meta property="article:modified_time" content="2021-11-12T19:15:33+01:00" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.3081c4981fb69a2783dd36ecfdd0e6ba7a158d4cbfdd290ebce8f78ba0469fc6.css" integrity="sha256-MIHEmB&#43;2mieD3Tbs/dDmunoVjUy/3SkOvOj3i6BGn8Y=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+<link rel="stylesheet" href="/scss/custom.c9bb9cdc7e3b8c0c27464cdd02ce48b05b01c1737cdbff727ae9152da7d3b432.css" integrity="sha256-ybuc3H47jAwnRkzdAs5IsFsBwXN82/9yeukVLafTtDI=">
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://ohthehugemanatee.org/">
+        
+          Oh The Huge Manatee!
+        
+        </a>
+      </span>
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="https://ohthehugemanatee.org/images/oh_the_huge_manatee.png" alt="Author Image" class="img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, Global ISV Partner Technical Strategy CTO for RedHat at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Oh The Huge Manatee!</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/about">
+						<span>About Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/">
+						<span>Blog</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/campbellvertesi" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	<a href="https://github.com/ohthehugemanatee" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/campbellvertesi" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>Building blocks for autonomous driving simulation environments</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Nov 12, 2021
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="/categories/automotive">AUTOMOTIVE</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/composability">COMPOSABILITY</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/dev">DEV</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/kubernetes">KUBERNETES</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/microsoft">MICROSOFT</a>
+              
+          
+      
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 8 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>My team&rsquo;s work with Volkswagen on an autonomous driving simulation environments just turned into a new <a href="https://docs.microsoft.com/en-us/azure/architecture/industries/automotive/building-blocks-autonomous-driving-simulation-environments">Azure Well-Architected</a> page, which makes this a good time to add some behind-the-scenes commentary from real world experience. The architecture recommended there came from a lot of discovery and experimentation work, and suits quite a broad case that I think is not well represented (yet) in cloud computing products.</p>
+<h2 id="the-challenge">The challenge</h2>
+<p>Testing and CI-style validation in autonomous driving development are a tricky challenge. See, an autonomous driving simulation environment is actually composed of several different components, all working together. There is always a system for time synchronization, typically coupled with some kind of data bus that all the other components can plug into. This is where the challenges start:</p>
+<ul>
+<li>Each component is a separate executable with separate requirements. In our case we had both Windows and Linux components, several of which needed exclusive GPU access.</li>
+<li>Exactly which components you need for a test is totally dependent on what part of the autonomous driving system you&rsquo;re testing. For example, a lidar sensor dev team needs very high fidelity models of objects it might be detecting. Reflective and absorbtive properties and shape require a lot of detail. So do weather conditions as far as visual occlusion and light scattering effects go. They <em>don&rsquo;t</em> need much of a road surface simulation, or pedestrians, or other drivers. The dev team working on the highway control component however, needs a totally different set of components, practically mutually exclusive.</li>
+<li>Even within one team the components may vary, as lots of this stuff is non-deterministic. It sometimes helps to validate against more than one simulation of the same environment.</li>
+<li>Components have hard and complex interdependencies, despite separate execution environments. For example, Linux and Windows based components may work closely together to simulate other cars and their drivers' behaviors. This impacts startup order, where some tools can&rsquo;t even start initializing until others - or until certain sets of others - are reporting ready. The whole simulation of course, can&rsquo;t start until everything is ready. These tools are designed to start and operate in a highly stateful manner.</li>
+<li>Because we&rsquo;re dealing with human lives and liability here, each component needs to be independently validated and verifiable, starting from a known good state. Five years later, we need to be able to reproduce as closely as possible the starting point of the simulation. &ldquo;Formal Reproducibility&rdquo; would be amazing, but depends on component development too much to be within our control.</li>
+<li>Finally, some components are designed for human UI interaction. For example the test runner, which has its own system of debug breakpoints and step debugging that can&rsquo;t be replicated in code (&ldquo;break when the car is &lt; 2m from the obstacle, or after 68000 virtual milliseconds&rdquo;). Developers rely on this kind of debugging to build.</li>
+</ul>
+<p>Anyone with DevOps engineering experience probably looks at that laundry list and thinks &ldquo;may as well wish for the f@#$king moon while you&rsquo;re at it.&rdquo; I urge a bit more empathy. Remember, these developers are working with non-deterministic code to handle non-deterministic environments. This is not trivial stuff.</p>
+<p>A platform for automated driving simulation needs to address those problems. Put another way, the <em>system</em> needs total composability and the ability to model a directed acyclic graph for startup and execution of the simulation; the <em>components</em> need flexibility in OS and interactivity.</p>
+<p>My team came up with this (admittedly complex) diagram to describe the problems in abstract.</p>
+<p><a href="/images/building-blocks-autonomous-driving-simulation-environments.png"><img src="/images/building-blocks-autonomous-driving-simulation-environments.png" alt="Diagram of the abstract components of the simulation system" title="Simulation system abstracted components"></a></p>
+<p>Go ahead and zoom in for a better view, it&rsquo;s a lot to take in. It&rsquo;s easiest to look at the big segments (&ldquo;layers&rdquo; in the parlance of the image): User input, Orchestration, Building Block Factory, Simulation Infrastructure, Storage. Most of these are self explanatory. The building block factory is whatever system creates and validates components, the &ldquo;building blocks&rdquo; of any simulation run.</p>
+<p>The workflow in the above system is straightforward to describe:</p>
+<ol>
+<li>The developer submits a human-readable document to the UI, which validates and passes it to the orchestration layer. The orchestration layer.</li>
+<li>The orchestration layer interprets the document and provisions the necessary resources - whatever they may be - in an appropriate networking, monitoring, and storage context. The resources themselves come from the Building Block Factory, so they&rsquo;re all validated and conform to a documented API (the &ldquo;building block contract&rdquo;). The provisioned, started components in their network etc frame form the Simulation Infrastructure Layer.</li>
+<li>The simulation runs autonomously, as far as possible. At the end of the simulation, outputs and logs are in the Storage Layer, and the Simulation Infrastructure Layer is deprovisioned.</li>
+</ol>
+<p>Just three steps. But the number of boxes and lines in that diagram belie just how complicated it is, on the inside.</p>
+<p>The key to the whole system is clearly in the Orchestration Layer. There are great options for the Building Block Factory in most any CI/CD and versioning toolkit. The infrastructure layer is provided by the cloud provider. But this bit of interpreting the user input into a complex graph of components, starting them, monitoring for readiness, then starting execution&hellip; that&rsquo;s hard to find in a single tool.</p>
+<p>Some parts of this problem space are well handled by a variety of tools. Provisioning and tearing down cloud resources, for example, could be done through any number of tools like Terraform, or even straight up ARM (Azure Resource Manager) templates. But then what monitors component startup state, managing that directed acyclic graph through to readiness? We evaluated several options for core technologies around which we could architect, including Puppet/Chef, Ansible, Terraform, and a collection of Azure services held together by Azure Functions and duct tape. The clear winner by a substantial margin was Kubernetes.</p>
+<p>This was a suspicous conclusion for us, a team of infra specialists. We always have to be careful about our own technical biases, especially towards the new-and-cool tools in our kit (Had Nomad existed at the time it probably would have been a good contender, and made us feel a bit better about having at least two alternatives). But however you cut the problem, Kubernetes out of the box solved almost all of the problems in the Orchestrator Layer space, and provided a great starting point for the remaining boxes.</p>
+<p>The boxes that Kubernetes does <strong>not</strong> cover OOTB, are the flexibility to run VMs or containers interchangeably (with an abstraction layer to ensure identical APIs), and the monitoring of buildup and simulation start/end.</p>
+<p>There are a number of projects to provide the former, including integrations into Azure, and our choice, <a href="https://kubevirt.io/">kube-virt</a>. Importantly for us at the time: kube-virt was an earlier stage CNCI project and therefore still rough around the edges, but it was already a supported part of Azure RedHat OpenShift, and the supported way to run Azure IoT Edge on Kubernetes.</p>
+<p>The latter problem is the core business logic, so it is the Right Focus for Custom Code. But even there Kubernetes gives us a good start, as it is already an event-driven architecture with deep connections to container lifecycle and readiness/liveness probes. What&rsquo;s more, the model of Kubernetes objects and controllers already implements the concept of a larger object abstracting a group of lower-level ones, in Deployments.</p>
+<p>In fact, we found that our custom controller would have to implement a CRD quite similar to a Kubernetes Deployment. We could even extend the Deployment object to do it. The user ultimately could provide a simple YAML like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">my simulation run</span>
+<span style="color:#f92672">spec</span>:
+    <span style="color:#f92672">start</span>:
+        <span style="color:#f92672">component</span>: <span style="color:#ae81ff">test-runner</span>
+        <span style="color:#f92672">command</span>: <span style="color:#ae81ff">C:\start.exe</span>
+    <span style="color:#f92672">components</span>:
+        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">sync-server</span>
+          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/sync-server:5.4-dev</span>
+        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">test-runner</span>
+          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/test-runner:3.2.2</span>
+          <span style="color:#f92672">interactive</span>: <span style="color:#66d9ef">true</span>
+        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">environment-sim</span>
+          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/vtd:2.1</span>
+          <span style="color:#f92672">requires</span>:
+            <span style="color:#f92672">gpu</span>: <span style="color:#ae81ff">1</span>
+          <span style="color:#f92672">depends</span>:
+            - <span style="color:#ae81ff">test-runner</span>
+            - <span style="color:#ae81ff">sync-server</span>
+    <span style="color:#f92672">results</span>:
+       <span style="color:#f92672">storageClass</span>: <span style="color:#ae81ff">AzureBlob</span>
+</code></pre></div><p>Given some metadata on each component, this is probably sufficient information for a controller to create the required deployments and run the simulation.</p>
+<ul>
+<li><code>test-runner</code> is a Windows VM image, as indicated by the component&rsquo;s own metadata. The <code>interactive</code> flag indicates that the controller should return a proxy to the RDP port on the VM.</li>
+<li>Other components are both containers.</li>
+<li>One container shows a resource request for a gpu core, which is handled by assigning the container to the right node pool.</li>
+<li>That container also declares its' dependencies. Probes are defined in the component metadata; the kubernetes controller watches for both dependencies to pass their Readiness probes, and then starts <code>environment-sim</code>.</li>
+<li>Once all three components pass their Readiness probes, <code>spec.start.command</code> is run inside <code>spec.start.component</code>. When the command terminates, the simulation is considered complete.</li>
+<li>The <code>spec.results</code> key helps the Controller create a PVC for results. The actual PVC is later accessible through a well-known naming scheme, such as <code>[datetime]-[name]</code>.</li>
+<li>Component definitions include default ports to expose, but by default nothing is exposed to the outside world.</li>
+</ul>
+<p>Of course the actual Deployments and/or Replicasets involved need a lot more information than this. But that information is all consistent enough between runs that it can be templated with default values. The structure of this CRD is similar enough to other Kubernetes objects, that we can allow the user freedom to add other keys from the container spec, for example, to override those defaults. The 99% case however, would profit from opinionated defaults.</p>
+<h2 id="implications">Implications</h2>
+<p>If you&rsquo;ve followed along this far, you&rsquo;ve noticed that this domain is not unique to automotive simulation. Lots of computational problems require a directed acyclic graph for building up interdependent components, with a defined execution and teardown afterwards. But execution automation tools like batch runners rarely offer the kind of composability that has become the norm in service-oriented infrastructure. The key insight that this approach offers, is that an event-driven architecture for managing infrastructure, like Kubernetes, has a lot to offer in discrete computational tasks as well. This is particularly the case in very domain-knowledge heavy areas like simulation, but probably also in data science, IoT, biochemistry, and others.</p>
+<p>This diagram, architecture, and first steps with a commercial customer were only the beginning. I&rsquo;m no longer on that project, but I look forward to seeing how it develops.</p>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/blog/2021/05/15/the-cluster-in-my-closet-advice-for-running-kubernetes-at-home/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">The Cluster in My Closet - Advice for running kubernetes at home</span>
+    </a>
+    
+    
+</div>
+
+
+  
+
+
+
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'ohthehugemanatee';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" integrity="sha384-ZbbbT1gw3joYkKRqh0kWyRp32UAvdqkpbLedQJSlnI8iLQcFVxaGyrOgOJiDQTTR" crossorigin="anonymous"></script>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+    
+
+
+
+    </body>
+</html>

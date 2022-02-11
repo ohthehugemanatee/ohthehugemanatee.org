@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>composability on Oh The Huge Manatee!</title>
+    <link>https://ohthehugemanatee.org/categories/composability/</link>
+    <description>Recent content in composability on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Nov 2021 19:15:33 +0100</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/composability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building blocks for autonomous driving simulation environments</title>
+      <link>https://ohthehugemanatee.org/blog/2021/11/12/building-blocks-for-autonomous-driving-simulation-environments/</link>
+      <pubDate>Fri, 12 Nov 2021 19:15:33 +0100</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/blog/2021/11/12/building-blocks-for-autonomous-driving-simulation-environments/</guid>
+      <description>My team&amp;rsquo;s work with Volkswagen on an autonomous driving simulation environments just turned into a new Azure Well-Architected page, which makes this a good time to add some behind-the-scenes commentary from real world experience. The architecture recommended there came from a lot of discovery and experimentation work, and suits quite a broad case that I think is not well represented (yet) in cloud computing products.
+The challenge Testing and CI-style validation in autonomous driving development are a tricky challenge.</description>
+    </item>
+    
+  </channel>
+</rss>
