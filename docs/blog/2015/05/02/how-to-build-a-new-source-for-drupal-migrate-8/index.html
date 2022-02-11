@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.92.0" />
 
     
     
@@ -29,8 +29,8 @@ Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used 
 Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used from the GUI, rather, it provides a framework of &ldquo;source&rdquo;, &ldquo;destination&rdquo;, and &ldquo;migration&rdquo; classes so that even the most convoluted migration is 90% written for you." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ohthehugemanatee.org/blog/2015/05/02/how-to-build-a-new-source-for-drupal-migrate-8/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2015-05-02T10:10:36&#43;00:00" />
-<meta property="article:modified_time" content="2015-05-02T10:10:36&#43;00:00" />
+<meta property="article:published_time" content="2015-05-02T10:10:36+00:00" />
+<meta property="article:modified_time" content="2015-05-02T10:10:36+00:00" />
 
 
 
@@ -46,7 +46,7 @@ Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used 
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.71157e768c4e111a23c3531b95e0cbb59bbef3c9e6901d36247cb53d6b6be258.css" integrity="sha256-cRV&#43;doxOERojw1MbleDLtZu&#43;88nmkB02JHy1PWtr4lg=">
+<link rel="stylesheet" href="/scss/hyde-hyde.3081c4981fb69a2783dd36ecfdd0e6ba7a158d4cbfdd290ebce8f78ba0469fc6.css" integrity="sha256-MIHEmB&#43;2mieD3Tbs/dDmunoVjUy/3SkOvOj3i6BGn8Y=">
 
 
 <link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
@@ -92,7 +92,7 @@ Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used 
       
       
       <p class="site__description">
-         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, a principal software engineering lead at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, Global ISV Partner Technical Strategy CTO for RedHat at Microsoft, opera singer, and parent. These are the things that go through my mind. 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -212,7 +212,7 @@ Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used 
 <p>My task this week became to write the first CSV source for Drupal 8 Migrate.</p>
 <h1 id="drupal-8-migrate-overview">Drupal 8 Migrate Overview</h1>
 <p>Drupal 8 Migrations, when you&rsquo;re using classes that already exist, are actually even easier than Migrate 7. All you do is write a single YAML file for each kind of data you&rsquo;re transferring, and put it in a custom module&rsquo;s <em>config/install</em> directory. Your YAML file gives your migration a name and a group, tells us what the source is for data, maps source fields to destination fields, and tells us what the destination objects are. Here&rsquo;s an example Migration definition file from core. See if you can understand what&rsquo;s being migrated here.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">d6_system_site</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">d6_system_site</span>
 <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Drupal 6 site configuration</span>
 <span style="color:#f92672">migration_groups</span>:
   - <span style="color:#ae81ff">Drupal 6</span>
@@ -244,7 +244,7 @@ Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used 
 <h1 id="writing-a-source-plugin-in-migrate_plus">Writing a source plugin in Migrate_plus</h1>
 <p>Enter <a href="https://www.drupal.org/sandbox/mikeryan/migrate_plus">Migrate Plus module</a>. This is the place in contrib, where we can fill out all the rest of the behavior we want from Migrate, that&rsquo;s not necessarily a core requirement. This is where we&rsquo;ll be writing our source plugin.</p>
 <p>To add a source plugin, just create a .php file in migrate_plus/src/Plugins/migrate/source . Drupal will discover the new plugin automatically the next time you rebuild the cache. The filename has to be the same as the name of the class, so choose carefully! My file is called CSV.php . Here&rsquo;s the top of the file you need for a basic :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 <span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * @file
 </span><span style="color:#e6db74"> * Contains \Drupal\migrate_plus\Plugin\migrate\source\csv.
@@ -276,11 +276,11 @@ Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used 
 <h2 id="initializeiterator">initializeIterator()</h2>
 <p>An Iterator is a complicated sounding word for an Object that contains everything you need to read from a data source, and go through it one line at a time. Maybe you&rsquo;re used to fopen(&lsquo;path/to/file&rsquo;, &lsquo;r&rsquo;) to open a file, and then you write code for every possible operation with that file. An iterator takes care of all that for you. In the case of most file-based sources, you can just use the SplFileObject class that comes with PHP.</p>
 <p>Any arguments that were passed in the source: section of the YAML file will be available under $this-&gt;configuration. So if my YAML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
   <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">csv</span>
   <span style="color:#f92672">path</span>: <span style="color:#e6db74">&#39;/vagrant/import/ACS_13_1YR_B28002_with_ann.csv&#39;</span>
 </code></pre></div><p>My initializeIterator( ) method can look like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">initializeIterator</span>() {
   <span style="color:#75715e">// File handler using our custom header-rows-respecting extension of SPLFileObject.
 </span><span style="color:#75715e"></span>  $file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SplFileObject</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;path&#39;</span>]);
@@ -290,7 +290,7 @@ Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used 
 </code></pre></div><p>Not too complicated, right? This method is called right at the beginning of the migration, the first time Migrate wants to get any information out of your source. The iterator will be stored in $this-&gt;iterator.</p>
 <h2 id="getids">getIds()</h2>
 <p>This method should return an array of all the unique keys for your source. A unique key is some value that&rsquo;s unique for that row in the source material. Sometimes there&rsquo;s more than one, which is why this is an array. Each key field name is also an array, with a child &ldquo;type&rdquo; declaration. This is hard to explain in English, but easy to show in code:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getIDs</span>() {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getIDs</span>() {
   $ids <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
   <span style="color:#66d9ef">foreach</span> ($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;keys&#39;</span>] <span style="color:#66d9ef">as</span> $key) {
     $ids[$key][<span style="color:#e6db74">&#39;type&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;string&#39;</span>;
@@ -300,14 +300,14 @@ Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used 
 </code></pre></div><p>We rely on the YAML author to tell us the key fields in the CSV, and we just reformat them accordingly. Type can be &lsquo;string&rsquo;, &lsquo;float&rsquo;, &lsquo;integer&rsquo;, whatever makes sense.</p>
 <h2 id="__tostring">__toString()</h2>
 <p>This method has to return a simple string explanation of the source query. In the case of a file-based source, it makes sense to print the path to the file, like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __toString() {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __toString() {
   <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">string</span>) $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>;
 }
 </code></pre></div><h2 id="fields">fields()</h2>
 <p>This method returns an array of available fields on the source. The keys should be the machine names, the values are descriptive, human-readable names. In the case of the CSV source, we look for headers at the top of the CSV file and build the array that way.</p>
 <h2 id="__construct">__construct()</h2>
 <p>The constructor method is called whenever a class is instantiated. You don&rsquo;t technically HAVE to have a constructor on your source class, but you&rsquo;ll find it helpful. For the CSV source, I used the constructor to make sure we have all the configuration that we need. Then I try and set sane values for fields, based on any header in the file.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#66d9ef">array</span> $configuration, $plugin_id, $plugin_definition, <span style="color:#a6e22e">MigrationInterface</span> $migration) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#66d9ef">array</span> $configuration, $plugin_id, $plugin_definition, <span style="color:#a6e22e">MigrationInterface</span> $migration) {
   <span style="color:#66d9ef">parent</span><span style="color:#f92672">::</span><span style="color:#a6e22e">__construct</span>($configuration, $plugin_id, $plugin_definition, $migration);
 
   <span style="color:#75715e">// Path is required.
@@ -347,7 +347,7 @@ Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used 
 </code></pre></div><h2 id="profit">Profit!</h2>
 <p>That&rsquo;s it! Four simple methods, and you have a new source type for Drupal 8 Migrate. Of course, you will probably find complications that require a bit more work. For CSV, supporting a header row turned out to be a real pain. Any time Migrate tried to &ldquo;rewind&rdquo; the source back to the first line, it would try and migrate the header row! I ended up extending SplFileObject just to handle this issue.</p>
 <p>Here&rsquo;s the YAML file I used to test this, importing a list of states from some US Census data.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">states</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">states</span>
 <span style="color:#f92672">label</span>: <span style="color:#ae81ff">States</span>
 <span style="color:#f92672">migration_groups</span>:
   - <span style="color:#ae81ff">US Census</span>

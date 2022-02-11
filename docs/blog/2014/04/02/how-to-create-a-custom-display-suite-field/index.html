@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.92.0" />
 
     
     
@@ -27,8 +27,8 @@
 <meta property="og:description" content="A few months ago I posted about how to create a custom Panels pane, a critical reference for anyone who uses Panels layouts. The other part of the toolkit for quick and awesome layouts is the Display Suite module. With DS you can create new &ldquo;Display modes&rdquo; for your content, to be reused around the site. For example, on one recent site I had four standard ways to display my nodes: Full, Teaser, Mini-Teaser, and Search Result." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ohthehugemanatee.org/blog/2014/04/02/how-to-create-a-custom-display-suite-field/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2014-04-02T16:12:13&#43;00:00" />
-<meta property="article:modified_time" content="2014-04-02T16:12:13&#43;00:00" />
+<meta property="article:published_time" content="2014-04-02T16:12:13+00:00" />
+<meta property="article:modified_time" content="2014-04-02T16:12:13+00:00" />
 
 
 
@@ -44,7 +44,7 @@
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.71157e768c4e111a23c3531b95e0cbb59bbef3c9e6901d36247cb53d6b6be258.css" integrity="sha256-cRV&#43;doxOERojw1MbleDLtZu&#43;88nmkB02JHy1PWtr4lg=">
+<link rel="stylesheet" href="/scss/hyde-hyde.3081c4981fb69a2783dd36ecfdd0e6ba7a158d4cbfdd290ebce8f78ba0469fc6.css" integrity="sha256-MIHEmB&#43;2mieD3Tbs/dDmunoVjUy/3SkOvOj3i6BGn8Y=">
 
 
 <link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
@@ -90,7 +90,7 @@
       
       
       <p class="site__description">
-         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, a principal software engineering lead at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, Global ISV Partner Technical Strategy CTO for RedHat at Microsoft, opera singer, and parent. These are the things that go through my mind. 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -207,7 +207,7 @@
 <p>In our example, we will display the user&rsquo;s name, but backwards. Obviously you can do much more complex things with this, but it&rsquo;s nice to have a simple example!</p>
 <h1 id="declare-your-fields">Declare your fields</h1>
 <p>First we have to tell Display Suite about our new custom field. We do this with <a href="http://drupalcontrib.org/api/drupal/contributions!ds!ds.api.php/function/hook_ds_fields_info/7">hook_ds_fields_info()</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 <span style="color:#75715e">//@file: Add a custom suite to display suite for Users.
 </span><span style="color:#75715e"></span>
@@ -229,7 +229,7 @@
   <span style="color:#66d9ef">return</span>;
 }
 </code></pre></div><p>Any guesses whathappens next? That&rsquo;s right, we have to write our render function under the name we just declared. You can put anything here, really anything renderable at all.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * Render function for the Backwards Username field.
 </span><span style="color:#e6db74"> */</span>
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_backwards_username</span>($field) {

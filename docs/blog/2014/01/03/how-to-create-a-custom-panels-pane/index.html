@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.92.0" />
 
     
     
@@ -29,8 +29,8 @@ As usual, I&rsquo;ll assume that you have an empty custom module called mymodule
 As usual, I&rsquo;ll assume that you have an empty custom module called mymodule, with only a .info and a ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ohthehugemanatee.org/blog/2014/01/03/how-to-create-a-custom-panels-pane/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2014-01-03T13:09:11&#43;00:00" />
-<meta property="article:modified_time" content="2014-01-03T13:09:11&#43;00:00" />
+<meta property="article:published_time" content="2014-01-03T13:09:11+00:00" />
+<meta property="article:modified_time" content="2014-01-03T13:09:11+00:00" />
 
 
 
@@ -46,7 +46,7 @@ As usual, I&rsquo;ll assume that you have an empty custom module called mymodule
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.71157e768c4e111a23c3531b95e0cbb59bbef3c9e6901d36247cb53d6b6be258.css" integrity="sha256-cRV&#43;doxOERojw1MbleDLtZu&#43;88nmkB02JHy1PWtr4lg=">
+<link rel="stylesheet" href="/scss/hyde-hyde.3081c4981fb69a2783dd36ecfdd0e6ba7a158d4cbfdd290ebce8f78ba0469fc6.css" integrity="sha256-MIHEmB&#43;2mieD3Tbs/dDmunoVjUy/3SkOvOj3i6BGn8Y=">
 
 
 <link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
@@ -92,7 +92,7 @@ As usual, I&rsquo;ll assume that you have an empty custom module called mymodule
       
       
       <p class="site__description">
-         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, a principal software engineering lead at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, Global ISV Partner Technical Strategy CTO for RedHat at Microsoft, opera singer, and parent. These are the things that go through my mind. 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -210,7 +210,7 @@ As usual, I&rsquo;ll assume that you have an empty custom module called mymodule
 </ol>
 <hr>
 <p>Ctools, like Views, needs a hook to declare the fact that you have custom code. To do this we&rsquo;ll use <em><a href="http://drupalcontrib.org/api/drupal/contributions!ctools!ctools.api.php/function/hook_ctools_plugin_directory/7">hook_ctools_plugin_directory</a></em>. This hook is invoked for all Ctools plugin types, and includes the module name as a variable. This way you can avoid eating up memory for anything except the targeted module. You also have to declare where your custom code will live. So here&rsquo;s the complete content of <em>mymodule.module</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 <span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * Implements hook_ctools_plugin_directory().
@@ -227,7 +227,7 @@ As usual, I&rsquo;ll assume that you have an empty custom module called mymodule
 <hr>
 <p>Oh, did you think this would be more difficult? Now that we&rsquo;ve told Ctools to look for Content Type plugins in our module&rsquo;s <em>plugins/content_types</em> subdirectory, we just add a <em>.inc</em> file for each &ldquo;Content Type&rdquo; (aka Pane) that we want to add. Let&rsquo;s do a simple one, which returns the root term of a given taxonomy term. All the following code will go in <em>plugins/content_types/taxonomy_root_term.inc</em> (a name I chose arbitrarily).</p>
 <p>Right at the top of the file, we provide a <em>$plugin</em> array which defines the basic information about our <!-- raw HTML omitted -->Pane<!-- raw HTML omitted --> Ctools Content Type. This doesn&rsquo;t go into a function or anything, it just sits at the top of the <em>.inc</em> file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
   <span style="color:#e6db74">&#39;single&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">TRUE</span>,
@@ -242,7 +242,7 @@ $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</
 );
 </code></pre></div><p>As you can see, this array defines a category, title, and description for the Panels admin interface. It also declares the names of the callbacks which provide the pane&rsquo;s edit form, rendered form, and admin info. &ldquo;Single&rdquo; means that this type has no sub-types. This is the case in every single custom pane I&rsquo;ve ever seen, so it&rsquo;s probably the case for yours as well.</p>
 <p>Now we write the callbacks we named in that array. We&rsquo;ll start with the edit form.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
 <span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * Edit form.
 </span><span style="color:#e6db74"> */</span>
@@ -275,7 +275,7 @@ $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</
  <span style="color:#66d9ef">return</span> $form;
 }
 </code></pre></div><p>This is a fairly standard Drupal form. It also goes through typical form validation and submission functions, so you can provide a pretty complete experience for the administrator. In our case, we just want to get the term ID of the term whose root parent should be displayed. We let the administrator enter the term ID, and the view mode which should be used to display it. We won&rsquo;t worry about form validation in our example. Let&rsquo;s move on to the Submit function:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * Edit form submit function.
 </span><span style="color:#e6db74"> */</span>
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_taxonomy_root_term_submit</span>($form, <span style="color:#f92672">&amp;</span>$form_state) {
@@ -283,7 +283,7 @@ $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</
   $form_state[<span style="color:#e6db74">&#39;conf&#39;</span>][<span style="color:#e6db74">&#39;view_mode&#39;</span>] <span style="color:#f92672">=</span> $form_state[<span style="color:#e6db74">&#39;values&#39;</span>][<span style="color:#e6db74">&#39;view_mode&#39;</span>];
 }
 </code></pre></div><p>Again, pretty simple stuff. We just make sure that the <em>$form_state[&lsquo;conf&rsquo;]</em> has the values entered. Now, the next callback we defined in <em>$plugin</em> is for rendering the pane:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * Render the panel.
 </span><span style="color:#e6db74"> */</span>
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_taxonomy_root_term_render</span>($subtype, $conf, $args, $contexts) {
@@ -307,7 +307,7 @@ $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</
 }
 </code></pre></div><p>First we make sure there is information - ie the taxonomy term ID we need - in the pane&rsquo;s context. Then we get the root term object and render it in the requested display mode. The only requirement for the return here is that it be a <a href="https://drupal.org/node/930760">Drupal render array</a>. So depending on your use case, you can return an image, a field&hellip; whatever you like. In most cases a block is a convenient wrapper for whatever you have to return, which is what I did here.</p>
 <p>This is as far as you have to go. The admin info callback isn&rsquo;t actually required, just don&rsquo;t include it in the <em>$plugin</em> array and you&rsquo;ll be fine. But if you want to make your life easier as a site admin, it&rsquo;s definitely a nice to have.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * Admin info.
 </span><span style="color:#e6db74"> */</span>
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_taxonomy_root_term_info</span>($subtype, $conf, $contexts) {

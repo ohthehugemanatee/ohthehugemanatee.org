@@ -2,13 +2,64 @@
   <title>Oh The Huge Manatee!</title>
   <link href="https://ohthehugemanatee.org/atom.xml" rel="self"/>
   <link href="https://ohthehugemanatee.org/"/>
-  <updated>2020-11-11T20:47:39+02:00</updated>
+  <updated>2021-05-15T15:00:05+01:00</updated>
   <id>https://ohthehugemanatee.org/</id>
   <author>
     <name>Campbell Vertesi (ohthehugemanatee)</name>
     <uri>https://ohthehugemanatee.org/</uri>
   </author>
   <generator>Hugo -- gohugo.io</generator>
+  <entry>
+    <title type="html"><![CDATA[The Cluster in My Closet - Advice for running kubernetes at home]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2021/05/15/the-cluster-in-my-closet-advice-for-running-kubernetes-at-home/"/>
+    <id>https://ohthehugemanatee.org/blog/2021/05/15/the-cluster-in-my-closet-advice-for-running-kubernetes-at-home/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2021-05-15T15:00:05+01:00</published>
+    <updated>2021-05-15T15:00:05+01:00</updated>
+    <content type="html"><![CDATA[<p>What do most people do with their old computers? I&rsquo;ve never been good at getting rid of mine. They were all repurposed into servers, running whatever key services for my household I could think of at the time. This year I decided to move out of the &ldquo;old sysadmin&rdquo; patterns of my roots, and try running my homelab in a more modern way. That&rsquo;s right: I set up a kubernetes cluster.</p>
+<p>All my old devices now go to the great cluster in the sky, and live on serving us files and media, blocking ads, and running small automations. They&rsquo;re happy, now.</p>
+<p>They may be happy, but I am not. I thought I was comfortable with Kubernetes, but boy was I wrong. Turns out, I was comfortable with kubernetes&hellip; in a stable, homoegeneous, cloud-based environment. Turns out, those cloud vendors really do cover a lot of complexity for you: using Azure Kubernetes Service to manage enterprise and microservices apps is <em>way easier</em> than running your own cluster for the kind of apps you use in the home.</p>
+<p>My home cluster consists of four Raspberry pi 4s, two old laptops, one mini desktop, and a pine64 laptop. First pain point: that&rsquo;s a mix of CPU architectures and capabilities. I&rsquo;ve got it all covered: x64, arm7, and arm64&hellip; and many container images are only built for a subset of those. At least the laptops are x64, but they&rsquo;re different makes and models, with different quirks. One of them has an unreliable USB port, which wreaks intermittent havoc with its USB ethernet adapter. The other has a dead internal IDE chip, and has to boot off of an external drive duct-taped to the back of the screen. And of course the whole thing lives in my laundry room, where temperatures and vibration from the floor will vary with the drying cycle, and where dust is all-pervasive.</p>
+<p>I&rsquo;m happy I&rsquo;ve stuck with it - this has made me <em>really</em> learn the ins and outs of detailed troubleshooting in kubernetes. I&rsquo;ve a much better understanding now of <em>why</em> different abstractions may exist, in a very practical way. Here are some of the fun features and workarounds I have in place. Each of these could be their own post, someday:</p>
+<ul>
+<li>Lots of home-oriented services run with SQLite as a backing database, which is a problem because sqlite&rsquo;s normal &lsquo;wal mode&rsquo; of accessing database files has a hard dependency on block-level file access. That means network filesystems, and all k8s' built in abstractons -  are out.
+<ul>
+<li>I ran with iSCSI devices for awhile, but the unreliability of home networking hardware was sufficient to produce data corruption every few months.</li>
+<li>I wrote my own sidecar service to periodically freeze a shared PV and sync all the files to NFS. But if the freeze comes at a bad time for sqlite, that will also cause data corruption.</li>
+<li>Longhorn doesn&rsquo;t have images for armv7 yet.</li>
+<li>Finally I settled on using the local provisioner for volumes, and using <a href="https://github.com/benbjohnson/litestream">litestream</a> to back the DBs up to NFS. This seems to be working well&hellip; even though the Pi SD cards are a slow place to write even interim data. Not to mention, when you use the local provisioner, your pod is always scheduled back to the same node. That breaks the flexibility which is half of the value of the system in the first place!</li>
+</ul>
+</li>
+<li>Very few container images offer all three of my CPU architectures, so every one of my manifests needs to use <code>NodeSelector</code>.</li>
+<li>I&rsquo;m running a single master k3s node on one of the Raspberry Pi 4s. That&rsquo;s plenty of capacity for a normal load, but when you add monitoring through <a href="https://www.netdata.cloud/">Netdata</a> and prometheus, log monitoring through Loki and Grafana, and a handful of multi-master applications, the load from cluster DNS can cause problems. I ended up implementing <a href="https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/">Nodelocal DNS cache</a> to lighten the load.</li>
+<li>The tiny fans that come on most Raspberry Pi cases are not reliable in the difficult environment of my laundry room. I&rsquo;ve had to replace all the case fans several times and eventually bought a rack for the Pis.</li>
+<li>One of my most critical services is Plex, which does much better with hardware decoding capabilities. I&rsquo;m using <a href="https://github.com/kubernetes-sigs/node-feature-discovery">node-feature-discovery</a> to get node capabilities into labels, and <a href="https://github.com/intel/intel-device-plugins-for-kubernetes/blob/main/cmd/gpu_plugin/README.md">intel-gpu-plugin</a> to make the hardware available in the pod. Oh, but node feature discovery doesn&rsquo;t have a build for armv7, so that only works on some nodes.</li>
+<li>I use images from <a href="https://linuxserver.io/">linuxserver.io</a>, which are great&hellip; but all based on <a href="https://github.com/just-containers/s6-overlay">s6_overlay</a>. This means they&rsquo;re not compatible with common privilege restriction approaches on kubernetes like security contexts. Fortunately(?) they support including arbitrary scripts on container startup, so I can hack my way around most problems.</li>
+<li>Internal services often prefer to use HTTPS. Fair enough, but they are internal services, so letsencrypt can&rsquo;t validate/issue certificates for them. That means either an internal CA, or app configurations that allow self signed certs.</li>
+<li>I mentioned I have one node with an unreliable ethernet connection. I tuned kubernetes' heartbeat and status check timings to minimize downtime when that node disappears, detecting it early and redistributing its' pods. But it&rsquo;s a delicate balance: it&rsquo;s easy to get the math wrong, or just be overzealous, and your nodes start popping into <code>NotReady</code> state with no discernable reason. Of course that disrupts intra-service communication, which can cause cascading failures.</li>
+<li>One of my cats knocked a couple of nodes down while I was away on vacation without physical access to the machines. I ended up building a private network connection to Azure and adding support for scaling with VMs there, to keep services running.</li>
+</ul>
+<p>It goes on and on. All of these are problems that you basically never encounter when running on a cloud provider. Your money really does go to a valuable purpose.</p>
+<p>On the other hand, my graveyard of machines has taught me more about internals of enterprise orchestration than I ever would have learned by implementing in real-world enterprise contexts. So it&rsquo;s been worth it for me professionally, at least.</p>
+<h2 id="whats-the-point">What&rsquo;s the point?</h2>
+<p>The moral of the story is: running a home kubernetes cluster is a lot harder than you think; and if you have half a brain you already think it&rsquo;s pretty hard. It definitely does have benefits (beyond learning) though! My home services <em>are</em> actually self-healing, easy to diagnose, and very resiliant to failure. Capacity planning is a non-issue. I have a repo of human-readable files which describe my application environments in their entirety. The trade off has been worth it for me, but only when I look through a pretty broad lens. I could have spent less time on this had I just stuck with docker-compose, for example.</p>
+<p>If you&rsquo;re considering using kubernetes for your home lab, here&rsquo;s my hard-won advice for you:</p>
+<ul>
+<li>Use uniform nodes. Identical CPUs and capabilities make your life so much better.</li>
+<li>Use a lightweight kubernetes distro, like <a href="https://k3s.io/">k3s</a>. It&rsquo;s all API compatible anyway and the community will be full of users in similar situations to yours.</li>
+<li>Don&rsquo;t worry about always doing things the Kubernetes Way. For many home applications, StatefulSets really do make for a more reliable result.</li>
+<li>Set up centralized logging first. The <a href="https://github.com/grafana/helm-charts/tree/main/charts/loki-stack">Loki stack</a> helm chart is relatively turnkey.</li>
+<li>Then set up centralized monitoring. <a href="https://netdata.cloud/">Netdata</a> beats the hell out of manually configuring everything in grafana.</li>
+<li>Keep your manifests in a repo, for the love of all that is good in the world.</li>
+<li>If any of your services are mission critical for your family members (Nexcloud and Plex in my house), leave them out of the cluster for as long as possible. Architect those applications as High-Availability. In my case, that means a multi-master mariadb cluster, multiple web heads, and layered failover&hellip; with all the health checks I can think of.</li>
+<li>Automate node setup with rancher, ansible, or similar. It&rsquo;s hard to make home hardware act like &ldquo;cattle instead of pets&rdquo;; use every tool at your disposal.</li>
+<li>Keep a timestamped log of every change you make that isn&rsquo;t in a YAML file, and every problem you encounter. Often that&rsquo;s the fastest route to find your foot guns.</li>
+<li>Have fun! Remember you&rsquo;re (hopefully) not doing this to be pragmatic. Don&rsquo;t listen to the haters, as long as <em>you&rsquo;re</em> getting what <em>you</em> want out of the experience.</li>
+</ul>
+]]></content>
+  </entry>
   <entry>
     <title type="html"><![CDATA[How to Format Video for Fast Playback on the Web]]></title>
     <link href="https://ohthehugemanatee.org/blog/2020/11/11/how-to-format-video-for-fast-playback-on-the-web/"/>
@@ -1230,28 +1281,6 @@ set -e
 <p>Not all the cracks are technological; some are purely communication. In order to use a shared data service, we need a shared data model and API. So how do you communicate and coordinate that between 5 teams and 5 applications? We found this bottleneck extremely difficult. At first, it simply took a long time to get API components built. We had to coordinate so many stakeholders, that the back-end data arch and GraphQL endpoints got way behind the front-end sites. At another point, one backender organically became the go-to for everything GraphQL. He was a bottleneck within weeks, and was stuck with all the information silo&rsquo;ed in his head. This is still an active problem area for us. We&rsquo;re working on thorough and well-maintained documentation as a reference point, but this costs time as well.</p>
 <p>Even project managers and scrum masters found new complexities. We had more than 30 people working on this project, and everyone had to be well coordinated and informed. You certainly can&rsquo;t do scrum with 30 people together - the sprint review would take days! But split it out into many smaller teams and your information and coordination problems just got much harder. Eventually we found our solution: we have 3 teams, each with their own PO, frontender(s) and backender(s), who take responsibility for whole features at a time. Each team does its own, quite vanilla, scrum process. Layered on top of this, developers are in groups which cut across the scrum teams, which have coordination meetings and maintain documentation and code standards. All the back-enders meet weekly and work with the same standards, but the tightest coordination is internal to a feature. So far this is working well, but ask me again in a few months. :)</p>
 <p>Working in a fully decoupled architecture and team structure has been amazing. It really is possible, and it really does provide a lot more flexibility. But it demands a harder focus on standards, communication, coordination, and architecture. Sometimes it&rsquo;s not about the bricks; it&rsquo;s about the mortar between them. So the next time you start work on a decoupled architecture, <em>watch out for the cracks!</em></p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[Writing Drupal 8 code for Drupal 7]]></title>
-    <link href="https://ohthehugemanatee.org/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/"/>
-    <id>https://ohthehugemanatee.org/blog/2016/11/05/writing-drupal-8-code-for-drupal-7/</id>
-    <author>
-      <name>Campbell Vertesi (ohthehugemanatee)</name>
-    </author>
-    <published>2016-11-05T12:05:50+00:00</published>
-    <updated>2016-11-05T12:05:50+00:00</updated>
-    <content type="html"><![CDATA[<p>A year ago I proposed a session for <a href="https://events.drupal.org/asia2016">Drupalcon Mumbai</a> and <a href="https://events.drupal.org/neworleans2016">Drupalcon New Orleans</a>, called <a href="https://events.drupal.org/neworleans2016/sessions/best-both-worlds-writing-drupal-8-code-drupal-7-sites">&ldquo;The best of both worlds&rdquo;</a>. It promised to show attendees how to write Drupal 8 code for Drupal 7 sites. I never ended up giving the session, but this week I got an email asking for more information. So in case it ever comes up again, here&rsquo;s my own collection of resources on the subject.</p>
-<p>The big improvement that&rsquo;s hard for D7 developers to get used to is injected services. The <a href="https://www.drupal.org/project/service_container">service container module</a> makes that possible in D7. The brilliant <a href="https://www.drupal.org/u/fabianx">FabianX</a> wrote it to make his life easier in writing <a href="https://www.drupal.org/project/render_cache">render cache</a>, and his is always a good example to follow! This module creates a service container for D7, which you use just like the container in D8. You can write independent, OO code that is unit testable, with service dependencies declared in a YAML file. Note that you will also need the <a href="https://www.drupal.org/project/registry_autoload">registry autoload</a> module to get PS4 namespaced autoloading!</p>
-<p>I just mentioned unit testable code as a benefit of the service container. To be honest this is a little tricksy in Drupal 7. For my own custom work I tend to isolate the test environment from the rest of Drupal, so I don&rsquo;t have to deal with everything else. Again, I followed Fabian&rsquo;s example there by looking at how <a href="http://cgit.drupalcode.org/render_cache/tree/tests?h=7.x-2.x">render cache does it&rsquo;s tests</a>. If you do want better integration, there is a good lullabot post that talks about (more) proper PHPUnit integration. <a href="https://www.lullabot.com/articles/write-unit-tests-for-your-drupal-7-code-part-1">https://www.lullabot.com/articles/write-unit-tests-for-your-drupal-7-code-part-1</a> .</p>
-<p>Next on my list is Composer-managed dependencies. The Acquia developer blog has a great post about <a href="https://dev.acquia.com/blog/using-composer-manager-get-island-now">using Composer Manager for this in D7</a>. This is a huge win for a lot of custom modules, and very easy.</p>
-<p>Last is plugins. The rest of this list is in no particular order, but I left plugins for last because I think this isn&rsquo;t actually necessary in D7. Personally I use modules' own hooks and just autoload independent classes. You might consider using plugins instead if you&rsquo;re going to write several plugins for the same module. In any case, <a href="https://www.previousnext.com.au/blog/drupal-8-now-object-oriented-plugins-drupal-7">Lee Rowlands has the go-to blog post about this</a>.</p>
-<p>All together, you can combine these approaches to write code for D7 with the biggest Dx features of D8: service injection, phpunit testing, composer libraries, and plugins. Note that each of these blog posts assumes different workarounds for all the other functionalities&hellip; but they should help you get an understanding of how to use that particular Dx improvement in 7.</p>
-<p>When I wrote that session proposal, I thought of this as a good way for D7 developers to learn D8 practices gradually, one at a time. I no longer think that&rsquo;s true. Mostly, there are so few working examples of D7 code using these practices, that it&rsquo;s quite hard to get your stuff working. This is particularly hard when you&rsquo;re just learning about the concept in the first place! Personally, I could mess around with this stuff and make my life harder with it in D7. But I couldn&rsquo;t really get the best advantage out of them until I had better examples. My best learning aids were the examples in D8 core, and the code scaffolding available through Drush and Drupal console.</p>
-<p>But now that I&rsquo;m comfortable with the concepts&hellip; I would absolutely use these approaches in D7 work. You know, if I&rsquo;m FORCED to work in the old system. :)</p>
-<p>One last aside here: it is easy to fall into the mindset that Drupal 8 practices are better just because they&rsquo;re newer. This is simply not true. These practices are not handed down from heaven, after all! When you have the rest of the D8 architecture in place, certain kinds of code tasks are much easier. That&rsquo;s why we like developing for it so much more. But other (less common, IMO) tasks are harder. And doing any of this in D7 means you have to put the architecture in place, too. That&rsquo;s a lot of time, and it&rsquo;s only worthwhile if you&rsquo;re going to use the particular strengths of these practices.</p>
-<p>So if it looks like one of these D8 practices will make your life easier for a particular task in D7, then by all means use these approaches to get there. Composer manager has a particularly low bar - it&rsquo;s so easy to use, and makes so many tasks easier, it&rsquo;s a good approach to many tasks. But if I ever catch you implementing service container to get two lines of code into a form_alter, I will come to where you work and slap your hands off the keyboard.</p>
-<p>Happy coding!</p>
 ]]></content>
   </entry>
 </feed>

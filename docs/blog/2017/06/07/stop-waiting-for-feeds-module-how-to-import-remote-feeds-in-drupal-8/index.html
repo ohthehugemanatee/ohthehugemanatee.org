@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.92.0" />
 
     
     
@@ -27,8 +27,8 @@
 <meta property="og:description" content="How do you import an RSS feed into entities with Drupal 8? In Drupal 6 and 7, you probably used the Feeds module. Feeds 7 made it easy (-ish) to click together a configuration that matches an RSS (or any XML, or CSV, or OPML, etc) source to a Drupal entity type, maps source data into Drupal fields, and runs an import with the site Cron. Where has that functionality gone in D8?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ohthehugemanatee.org/blog/2017/06/07/stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2017-06-07T00:33:24&#43;00:00" />
-<meta property="article:modified_time" content="2017-06-07T00:33:24&#43;00:00" />
+<meta property="article:published_time" content="2017-06-07T00:33:24+00:00" />
+<meta property="article:modified_time" content="2017-06-07T00:33:24+00:00" />
 
 
 
@@ -44,7 +44,7 @@
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.71157e768c4e111a23c3531b95e0cbb59bbef3c9e6901d36247cb53d6b6be258.css" integrity="sha256-cRV&#43;doxOERojw1MbleDLtZu&#43;88nmkB02JHy1PWtr4lg=">
+<link rel="stylesheet" href="/scss/hyde-hyde.3081c4981fb69a2783dd36ecfdd0e6ba7a158d4cbfdd290ebce8f78ba0469fc6.css" integrity="sha256-MIHEmB&#43;2mieD3Tbs/dDmunoVjUy/3SkOvOj3i6BGn8Y=">
 
 
 <link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
@@ -90,7 +90,7 @@
       
       
       <p class="site__description">
-         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, a principal software engineering lead at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, Global ISV Partner Technical Strategy CTO for RedHat at Microsoft, opera singer, and parent. These are the things that go through my mind. 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -227,7 +227,7 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p>That&rsquo;s it. One YAML file, most of which is copypasta. One cronjob. All done!</p>
 <p>Here&rsquo;s my RSS importer config for your copy and pasting pleasure. If you&rsquo;re already comfortable with migration YAMLs and XPaths, just add the names of your RSS fields as selectors in the source section, map them to drupal fields in the process section, and you&rsquo;re all done!</p>
 <p>If you aren&rsquo;t familiar with this stuff yet, don&rsquo;t worry! We&rsquo;ll dissect this together, below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_importer</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_importer</span>
 <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Import my RSS feed&#39;</span>
 <span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
 
@@ -294,12 +294,12 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p>Let&rsquo;s dive into that YAML a bit. Migrate is one of the most powerful components of Drupal 8 core, and this configuration is your gateway to it.</p>
 <p>That YAML looks like a lot, but it&rsquo;s really just 4 sections. They can appear in any order, but we need all 4: General information, source, destination, and data processing. This isn&rsquo;t rocket science after all! Let&rsquo;s look at these sections one at a time.</p>
 <p><strong>General information</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_importer</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_importer</span>
 <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;My RSS feed importer&#39;</span>
 <span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
 </code></pre></div><p>This is the basic stuff about the migration configuration. At a minimum it needs a unique machine-readable ID, a human-readable label, and <code>status: true</code> so it&rsquo;s enabled. There are other keys you can include here for fun extra features, like module dependencies, groupings (so you can run several imports together!), tags, and language. These are the critical ones, though.</p>
 <p><strong>Source</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
   <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">url</span>
   <span style="color:#f92672">data_fetcher_plugin</span>: <span style="color:#ae81ff">file</span>
   <span style="color:#f92672">urls</span>: <span style="color:#e6db74">&#39;https://example.com/feed.rss&#39;</span>
@@ -339,18 +339,18 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p>Next we have to identify the &ldquo;fields&rdquo; in the source. You see, migrate module is built around the idea that you&rsquo;ll map source fields to destination fields. That&rsquo;s core to how it thinks about the whole process. Since XML (and by extension RSS) is an unstructured format - it doesn&rsquo;t think of itself as having &ldquo;fields&rdquo; at all. So we&rsquo;ll have to give our source plugin XPaths for the data we want out of the feed, assigning each path to a virtual &ldquo;field&rdquo;. These &ldquo;fake fields&rdquo; let Migrate treat this source just like any other.</p>
 <p>If you haven&rsquo;t worked with XPaths before, the example YAML in this post gives you most of what you need to know. It&rsquo;s just a simple text system for specifying a tag within an unstructured XML document. Not too complicated when you get into it. You may want to <a href="https://duckduckgo.com/?q=xpath+basics">find a good tutorial</a> to learn some of the tricks.</p>
 <p>Let&rsquo;s look at one of these &ldquo;fake fields&rdquo;:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">summary</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">summary</span>
       <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Summary</span>
       <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:summary&#39;</span>
 </code></pre></div><p><em>name</em> is how we&rsquo;ll address this field in the rest of the migration. It&rsquo;s the source &ldquo;field name&rdquo;. <em>label</em> is the human readable name for the field. <em>selector</em> is the XPath inside the item. Most items are flat - certainly in RSS - so it&rsquo;s basically just the tag that surrounds the data you want. There, was that so hard?</p>
 <p>As a side note, you can see that my RSS feeds tend to be for iTunes. Sometimes the world eats an apple, sometimes an apple eats the world. Buy me a beer at Drupalcon and we can argue about standards.</p>
 <p>Fifth and finally, we identify which &ldquo;field&rdquo; in the source contains a unique identifier. Migrate module keeps track of the association between the source and destination objects, so it can handle updates, rollbacks, and more. The example YAML relies on the very common (but technically optional) <code>&lt;guid&gt;</code> tag as a unique identifier.</p>
 <p><strong>Destination</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">destination</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">destination</span>:
   <span style="color:#f92672">plugin</span>: <span style="color:#e6db74">&#39;entity:node&#39;</span>
 </code></pre></div><p>Yep, it&rsquo;s that simple. This is where you declare what Drupal entity type will receive the data. Actually, you could write any sort of destination plugin for this - if you want Drupal to migrate data into some crazy exotic system, you can do it! But in 99.9% of cases you&rsquo;re migrating into Drupal entities, so you&rsquo;ll want <code>entity:something</code> here. Don&rsquo;t worry about bundles (content types) here; that&rsquo;s something we take care of in field mapping.</p>
 <p><strong>Process</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">process</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">process</span>:
   <span style="color:#f92672">slug</span>: <span style="color:#ae81ff">stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8</span>
 <span style="color:#f92672">title</span>: <span style="color:#ae81ff">title</span>
   <span style="color:#f92672">field_remote_url</span>: <span style="color:#ae81ff">link</span>
@@ -380,7 +380,7 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p><strong>Importing files</strong></p>
 <p>Did you notice that I didn&rsquo;t map the images into Drupal fields in my example? That&rsquo;s because it&rsquo;s a bit confusing. We actually have an image URL that we need to download, then we have to create a file entity based on the downloaded file, and then we add the File ID to the node&rsquo;s field as a value. That&rsquo;s more complicated than I wanted to get into in the general example.</p>
 <p>To do this, we have to create a pipeline of plugins that will operate in sequence, to create the value we want to stick in our field_image.  It looks something like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#f92672">field_image</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#f92672">field_image</span>:
     -
       <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">download</span>
       <span style="color:#f92672">source</span>:
@@ -390,7 +390,7 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
     -
       <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">entity_generate</span>
 </code></pre></div><p>Looking at that download plugin, <em>image</em> seems clear. That&rsquo;s the source URL we got out of the RSS feed. But what is <em>constants/destination_uri</em>, I hear you cry? I&rsquo;m glad you asked. It&rsquo;s a constant, which I added in the source section and didn&rsquo;t tell you about. You can add any arbitrary keys to the source section, and they&rsquo;ll be available like this in processing. It is good practice to lump all your constants together into one key, to keep the namespace clean. This is what it looks like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
   <span style="color:#ae81ff">... usual source stuff here ...</span>
   <span style="color:#f92672">constants</span>:
     <span style="color:#f92672">destination_uri</span>: <span style="color:#e6db74">&#39;public://my_rss_feed/post.jpg&#39;</span>
@@ -400,7 +400,7 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p><strong>Multiple interrelated migrations</strong></p>
 <p>One of the coolest tricks that Migrate can do is to manage interdependencies between migrations. Maybe you don&rsquo;t want those images just as File entities, you actually want them in Paragraphs, which should appear in the imported node. Easy-peasy.</p>
 <p>First, you have to create a second migration for the Paragraph. Technically you should have a separate Migration YAML for each destination entity type. (yes, <code>entity_generate</code> is a dirty way to get around it, use it sparingly). So we create our second migration just for the paragraph, like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_images_importer</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_images_importer</span>
 <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Import the images from my RSS feed&#39;</span>
 <span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
 
@@ -452,21 +452,21 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <li>We&rsquo;re doing the image trick I just mentioned.</li>
 </ul>
 <p>Now, in the node migration, we can add our paragraphs field to the &ldquo;process&rdquo; section like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#f92672">field_paragraphs</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#f92672">field_paragraphs</span>:
     <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">migration_lookup</span>
     <span style="color:#f92672">migration</span>: <span style="color:#ae81ff">my_rss_images_importer</span>
     <span style="color:#f92672">source</span>: <span style="color:#ae81ff">guid</span>
 </code></pre></div><p>We&rsquo;re using the <code>migration_lookup</code> plugin. This plugin takes the value of the field given in <code>source</code>, and looks it up in <code>my_rss_images_importer</code> to see if anything with that source ID was migrated. Remember where we configured the source plugin to know that <code>guid</code> was the unique identifier for each item in this feed? That comes in handy here.</p>
 <p>So we pass the guid to <code>migration_lookup</code>, and it returns the id of the paragraph which was created for that guid. It finds out what Drupal entity ID corresponds to that source ID, and returns the Drupal entity ID to use as a field value. You can use this trick to associate content migrated from separate feeds, totally separate data sources, or whatever.</p>
 <p>You should also add a dependency on <code>my_rss_images_importer</code> at the bottom of your YAML file, like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">migration_dependencies</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">migration_dependencies</span>:
   <span style="color:#f92672">required</span>:
     - <span style="color:#ae81ff">my_rss_images_importer</span>
 </code></pre></div><p>This will ensure that <code>my_rss_images_importer</code> will always run before <code>my_rss_importer</code>.</p>
 <p>(NB: in Drupal &lt; 8.3, this plugin is called <code>migration</code>)</p>
 <p><strong>Formatting dates</strong></p>
 <p>Very often you will receive dates in a format other than what Drupal wants to accept as a valid field value. In this case the <code>format_date</code> process plugin comes in very handy, like this:</p>
-<pre><code>  field_published_date:
+<pre tabindex="0"><code>  field_published_date:
     plugin: format_date
     from_format: 'D, d M Y H:i:s O'
     to_format: 'Y-m-d\TH:i:s'

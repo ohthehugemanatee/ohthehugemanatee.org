@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.92.0" />
 
     
     
@@ -27,8 +27,8 @@
 <meta property="og:description" content="Install profiles are a great way to throw together a functional Drupal site really quickly. In Drupal 6, an Install Profile was just a blueprint for setting up a site really quickly. What you did after the site was installed was your own business! But in Drupal 7 profiles are much more integrated with core. The assumption is that when you use an install profile, you want to rely on the profile&rsquo;s maintainer for all your updates." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ohthehugemanatee.org/blog/2014/01/07/how-to-remove-a-drupal-install-profile/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2014-01-07T13:23:45&#43;00:00" />
-<meta property="article:modified_time" content="2014-01-07T13:23:45&#43;00:00" />
+<meta property="article:published_time" content="2014-01-07T13:23:45+00:00" />
+<meta property="article:modified_time" content="2014-01-07T13:23:45+00:00" />
 
 
 
@@ -44,7 +44,7 @@
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.71157e768c4e111a23c3531b95e0cbb59bbef3c9e6901d36247cb53d6b6be258.css" integrity="sha256-cRV&#43;doxOERojw1MbleDLtZu&#43;88nmkB02JHy1PWtr4lg=">
+<link rel="stylesheet" href="/scss/hyde-hyde.3081c4981fb69a2783dd36ecfdd0e6ba7a158d4cbfdd290ebce8f78ba0469fc6.css" integrity="sha256-MIHEmB&#43;2mieD3Tbs/dDmunoVjUy/3SkOvOj3i6BGn8Y=">
 
 
 <link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
@@ -90,7 +90,7 @@
       
       
       <p class="site__description">
-         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, a principal software engineering lead at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, Global ISV Partner Technical Strategy CTO for RedHat at Microsoft, opera singer, and parent. These are the things that go through my mind. 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -205,38 +205,38 @@
 <p>Very often your site will diverge from the install profile as it takes on a life of its own, and it will be useful to convert it to &ldquo;vanilla&rdquo; Drupal. Today I&rsquo;ll use a relatively simple example of a musician site which is moving away from the <a href="https://drupal.org/project/pushtape">Pushtape</a> distribution. Later I&rsquo;ll return to this subject with the much more in-depth example of moving a community site away from <a href="https://drupal.org/project/commons">Drupal Commons</a>.</p>
 <h2 id="move-things-around">Move things around</h2>
 <p>Install profiles have all their files stored in the site root&rsquo;s <em>profiles/</em> directory. The first step is going to be moving everything out of there. In the case of pushtape, we have libraries, modules, and a theme stored in there. We&rsquo;re going to move them to a more normal location.</p>
-<pre><code class="language-console" data-lang="console"># mkdir sites/all/libraries
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># mkdir sites/all/libraries
 # mv profiles/pushtape/libraries/* sites/all/libraries
-
-# mkdir sites/all/modules/custom
+<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span># mkdir sites/all/modules/custom
 # mv profiles/pushtape/modules/pushtape_* sites/all/modules/custom
 # mv profiles/pushtape/modules/* sites/all/modules
-
-# mkdir sites/all/themes
+<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span># mkdir sites/all/themes
 # mv profiles/pushtape/themes/* sites/all/themes
-</code></pre><p>Next we need to see if there are any variables set in the install profile which really depend on the profile directory. If there are, we&rsquo;ll have to set them again with the new path.</p>
-<pre><code class="language-console" data-lang="console"># cd profiles/pushtape
-# grep 'profiles/pushtape' * -R
-pushtape.install:  variable_set('sm2_path', 'profiles/pushtape/libraries/soundmanager2');
-</code></pre><p>In this case, we see one variable_set which tells the system where to find the soundmanager2 library. We can update that easily enough with drush:</p>
-<pre><code class="language-console" data-lang="console"># drush vset sm2_path 'sites/all/libraries/soundmanager2'
-</code></pre><p>Now we have to update Drupal&rsquo;s setting for which install profile was used to create the site.</p>
-<pre><code class="language-console" data-lang="console"># drush vset install_profile standard
-</code></pre><p>In some cases this will be enough to work. Personally I like to keep my modules folder more organized, so I go the extra mile:</p>
-<pre><code class="language-console" data-lang="console"># cd sites/all/modules
+</code></pre></div><p>Next we need to see if there are any variables set in the install profile which really depend on the profile directory. If there are, we&rsquo;ll have to set them again with the new path.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># cd profiles/pushtape
+# grep <span style="color:#e6db74">&#39;profiles/pushtape&#39;</span> * -R
+pushtape.install:  variable_set(&#39;sm2_path&#39;, &#39;profiles/pushtape/libraries/soundmanager2&#39;);
+</code></pre></div><p>In this case, we see one variable_set which tells the system where to find the soundmanager2 library. We can update that easily enough with drush:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># drush vset sm2_path <span style="color:#e6db74">&#39;sites/all/libraries/soundmanager2&#39;</span>
+</code></pre></div><p>Now we have to update Drupal&rsquo;s setting for which install profile was used to create the site.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># drush vset install_profile standard
+</code></pre></div><p>In some cases this will be enough to work. Personally I like to keep my modules folder more organized, so I go the extra mile:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># cd sites/all/modules
 # mkdir contrib
-# mv !(custom|contrib) contrib
-</code></pre><p>I also separated out the custom code from the features. You can figure out which custom modules implement features with <em>find . |grep features</em>, and move them into a separate directory manually.</p>
+# mv !<span style="color:#f92672">(</span>custom|contrib<span style="color:#f92672">)</span> contrib
+</code></pre></div><p>I also separated out the custom code from the features. You can figure out which custom modules implement features with <em>find . |grep features</em>, and move them into a separate directory manually.</p>
 <h2 id="clearing-caches">Clearing caches</h2>
 <p>Once you&rsquo;re done moving things around, CLEAR CACHES. Drupal keeps an index of module, library, and theme directories, and you just broke it.</p>
-<pre><code>drush cc all
+<pre tabindex="0"><code>drush cc all
 </code></pre><p>The only problem is, in many cases you will have moved a module that is required for drupal bootstrap. So you&rsquo;ll have to get the handy drush tool <a href="https://drupal.org/project/registry_rebuild">Registry Rebuild</a>, and run that before your cache clear:</p>
-<pre><code class="language-console" data-lang="console"># drush dl registry_rebuild
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># drush dl registry_rebuild
 # drush rr
 # drush cc all
-</code></pre><h2 id="extra-cleanup">Extra Cleanup</h2>
+</code></pre></div><h2 id="extra-cleanup">Extra Cleanup</h2>
 <p>As commenter @ericaitala notes, you may need some followup cleanup to really get all traces out. The easiest way to do this is from the SQL command line, which you can access via drush:</p>
-<pre><code>drush sqlq &quot;DELETE FROM `system` WHERE filename LIKE 'profiles/profilename/profilename.profile&quot;
+<pre tabindex="0"><code>drush sqlq &quot;DELETE FROM `system` WHERE filename LIKE 'profiles/profilename/profilename.profile&quot;
 drush sqlq &quot;UPDATE `system` SET status=1 WHERE filename LIKE 'profiles/standard/standard.profile'&quot;
 </code></pre><p>Technically these should both be covered by the registry_rebuild operation, but we&rsquo;re doing it by hand because it seems to be missed in some operations. The first command removes the entry for the profile from Drupal&rsquo;s system table - it removes any knowledge Drupal has that there was an install profile there. The second tells Drupal that the &ldquo;standard&rdquo; install profile is active, and should be checked for updates.</p>
 <p>That&rsquo;s it - your site is now officially a vanilla Drupal install. Test by removing the profiles/pushtape directory, clearing caches, and browsing around your site.</p>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>homelab on Oh The Huge Manatee!</title>
+    <link>https://ohthehugemanatee.org/categories/homelab/</link>
+    <description>Recent content in homelab on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 May 2021 15:00:05 +0100</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Cluster in My Closet - Advice for running kubernetes at home</title>
+      <link>https://ohthehugemanatee.org/blog/2021/05/15/the-cluster-in-my-closet-advice-for-running-kubernetes-at-home/</link>
+      <pubDate>Sat, 15 May 2021 15:00:05 +0100</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/blog/2021/05/15/the-cluster-in-my-closet-advice-for-running-kubernetes-at-home/</guid>
+      <description>What do most people do with their old computers? I&amp;rsquo;ve never been good at getting rid of mine. They were all repurposed into servers, running whatever key services for my household I could think of at the time. This year I decided to move out of the &amp;ldquo;old sysadmin&amp;rdquo; patterns of my roots, and try running my homelab in a more modern way. That&amp;rsquo;s right: I set up a kubernetes cluster.</description>
+    </item>
+    
+  </channel>
+</rss>

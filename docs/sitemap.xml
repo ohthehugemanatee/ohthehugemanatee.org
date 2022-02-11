@@ -3,18 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ohthehugemanatee.org/blog/</loc>
-    <lastmod>2021-04-14T20:47:39+02:00</lastmod>
+    <lastmod>2021-05-15T15:00:05+01:00</lastmod>
   </url><url>
     <loc>https://ohthehugemanatee.org/categories/</loc>
-    <lastmod>2021-04-14T20:47:39+02:00</lastmod>
+    <lastmod>2021-05-15T15:00:05+01:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/categories/dev/</loc>
+    <lastmod>2021-05-15T15:00:05+01:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/categories/homelab/</loc>
+    <lastmod>2021-05-15T15:00:05+01:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/categories/kubernetes/</loc>
+    <lastmod>2021-05-15T15:00:05+01:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/</loc>
+    <lastmod>2021-05-15T15:00:05+01:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/blog/2021/05/15/the-cluster-in-my-closet-advice-for-running-kubernetes-at-home/</loc>
+    <lastmod>2021-05-15T15:00:05+01:00</lastmod>
   </url><url>
     <loc>https://ohthehugemanatee.org/blog/2020/11/11/how-to-format-video-for-fast-playback-on-the-web/</loc>
     <lastmod>2021-04-14T20:47:39+02:00</lastmod>
   </url><url>
     <loc>https://ohthehugemanatee.org/categories/media/</loc>
-    <lastmod>2021-04-14T20:47:39+02:00</lastmod>
-  </url><url>
-    <loc>https://ohthehugemanatee.org/</loc>
     <lastmod>2021-04-14T20:47:39+02:00</lastmod>
   </url><url>
     <loc>https://ohthehugemanatee.org/categories/video/</loc>
@@ -49,9 +61,6 @@
   </url><url>
     <loc>https://ohthehugemanatee.org/categories/sysadmin/</loc>
     <lastmod>2019-02-11T13:58:39+00:00</lastmod>
-  </url><url>
-    <loc>https://ohthehugemanatee.org/categories/dev/</loc>
-    <lastmod>2019-01-24T15:12:30+02:00</lastmod>
   </url><url>
     <loc>https://ohthehugemanatee.org/categories/serverless/</loc>
     <lastmod>2019-01-24T15:12:30+02:00</lastmod>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.92.0" />
+
+    
+    
+    
+
+<title>The Cluster in My Closet - Advice for running kubernetes at home • Oh The Huge Manatee!</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Cluster in My Closet - Advice for running kubernetes at home"/>
+<meta name="twitter:description" content="What do most people do with their old computers? I&rsquo;ve never been good at getting rid of mine. They were all repurposed into servers, running whatever key services for my household I could think of at the time. This year I decided to move out of the &ldquo;old sysadmin&rdquo; patterns of my roots, and try running my homelab in a more modern way. That&rsquo;s right: I set up a kubernetes cluster."/>
+
+<meta property="og:title" content="The Cluster in My Closet - Advice for running kubernetes at home" />
+<meta property="og:description" content="What do most people do with their old computers? I&rsquo;ve never been good at getting rid of mine. They were all repurposed into servers, running whatever key services for my household I could think of at the time. This year I decided to move out of the &ldquo;old sysadmin&rdquo; patterns of my roots, and try running my homelab in a more modern way. That&rsquo;s right: I set up a kubernetes cluster." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ohthehugemanatee.org/blog/2021/05/15/the-cluster-in-my-closet-advice-for-running-kubernetes-at-home/" /><meta property="article:section" content="blog" />
+<meta property="article:published_time" content="2021-05-15T15:00:05+01:00" />
+<meta property="article:modified_time" content="2021-05-15T15:00:05+01:00" />
+
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.3081c4981fb69a2783dd36ecfdd0e6ba7a158d4cbfdd290ebce8f78ba0469fc6.css" integrity="sha256-MIHEmB&#43;2mieD3Tbs/dDmunoVjUy/3SkOvOj3i6BGn8Y=">
+
+
+<link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+
+<link rel="stylesheet" href="/scss/custom.c9bb9cdc7e3b8c0c27464cdd02ce48b05b01c1737cdbff727ae9152da7d3b432.css" integrity="sha256-ybuc3H47jAwnRkzdAs5IsFsBwXN82/9yeukVLafTtDI=">
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container ">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://ohthehugemanatee.org/">
+        
+          Oh The Huge Manatee!
+        
+        </a>
+      </span>
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="https://ohthehugemanatee.org/images/oh_the_huge_manatee.png" alt="Author Image" class="img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, Global ISV Partner Technical Strategy CTO for RedHat at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Oh The Huge Manatee!</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/about">
+						<span>About Me</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/">
+						<span>Blog</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/campbellvertesi" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	<a href="https://github.com/ohthehugemanatee" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://linkedin.com/in/campbellvertesi" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</section>
+
+      </div>
+    </div>
+    
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+<article>
+  <header>
+    <h1>The Cluster in My Closet - Advice for running kubernetes at home</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> May 15, 2021
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="/categories/dev">DEV</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/homelab">HOMELAB</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/kubernetes">KUBERNETES</a>
+              
+          
+      
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 7 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p>What do most people do with their old computers? I&rsquo;ve never been good at getting rid of mine. They were all repurposed into servers, running whatever key services for my household I could think of at the time. This year I decided to move out of the &ldquo;old sysadmin&rdquo; patterns of my roots, and try running my homelab in a more modern way. That&rsquo;s right: I set up a kubernetes cluster.</p>
+<p>All my old devices now go to the great cluster in the sky, and live on serving us files and media, blocking ads, and running small automations. They&rsquo;re happy, now.</p>
+<p>They may be happy, but I am not. I thought I was comfortable with Kubernetes, but boy was I wrong. Turns out, I was comfortable with kubernetes&hellip; in a stable, homoegeneous, cloud-based environment. Turns out, those cloud vendors really do cover a lot of complexity for you: using Azure Kubernetes Service to manage enterprise and microservices apps is <em>way easier</em> than running your own cluster for the kind of apps you use in the home.</p>
+<p>My home cluster consists of four Raspberry pi 4s, two old laptops, one mini desktop, and a pine64 laptop. First pain point: that&rsquo;s a mix of CPU architectures and capabilities. I&rsquo;ve got it all covered: x64, arm7, and arm64&hellip; and many container images are only built for a subset of those. At least the laptops are x64, but they&rsquo;re different makes and models, with different quirks. One of them has an unreliable USB port, which wreaks intermittent havoc with its USB ethernet adapter. The other has a dead internal IDE chip, and has to boot off of an external drive duct-taped to the back of the screen. And of course the whole thing lives in my laundry room, where temperatures and vibration from the floor will vary with the drying cycle, and where dust is all-pervasive.</p>
+<p>I&rsquo;m happy I&rsquo;ve stuck with it - this has made me <em>really</em> learn the ins and outs of detailed troubleshooting in kubernetes. I&rsquo;ve a much better understanding now of <em>why</em> different abstractions may exist, in a very practical way. Here are some of the fun features and workarounds I have in place. Each of these could be their own post, someday:</p>
+<ul>
+<li>Lots of home-oriented services run with SQLite as a backing database, which is a problem because sqlite&rsquo;s normal &lsquo;wal mode&rsquo; of accessing database files has a hard dependency on block-level file access. That means network filesystems, and all k8s' built in abstractons -  are out.
+<ul>
+<li>I ran with iSCSI devices for awhile, but the unreliability of home networking hardware was sufficient to produce data corruption every few months.</li>
+<li>I wrote my own sidecar service to periodically freeze a shared PV and sync all the files to NFS. But if the freeze comes at a bad time for sqlite, that will also cause data corruption.</li>
+<li>Longhorn doesn&rsquo;t have images for armv7 yet.</li>
+<li>Finally I settled on using the local provisioner for volumes, and using <a href="https://github.com/benbjohnson/litestream">litestream</a> to back the DBs up to NFS. This seems to be working well&hellip; even though the Pi SD cards are a slow place to write even interim data. Not to mention, when you use the local provisioner, your pod is always scheduled back to the same node. That breaks the flexibility which is half of the value of the system in the first place!</li>
+</ul>
+</li>
+<li>Very few container images offer all three of my CPU architectures, so every one of my manifests needs to use <code>NodeSelector</code>.</li>
+<li>I&rsquo;m running a single master k3s node on one of the Raspberry Pi 4s. That&rsquo;s plenty of capacity for a normal load, but when you add monitoring through <a href="https://www.netdata.cloud/">Netdata</a> and prometheus, log monitoring through Loki and Grafana, and a handful of multi-master applications, the load from cluster DNS can cause problems. I ended up implementing <a href="https://kubernetes.io/docs/tasks/administer-cluster/nodelocaldns/">Nodelocal DNS cache</a> to lighten the load.</li>
+<li>The tiny fans that come on most Raspberry Pi cases are not reliable in the difficult environment of my laundry room. I&rsquo;ve had to replace all the case fans several times and eventually bought a rack for the Pis.</li>
+<li>One of my most critical services is Plex, which does much better with hardware decoding capabilities. I&rsquo;m using <a href="https://github.com/kubernetes-sigs/node-feature-discovery">node-feature-discovery</a> to get node capabilities into labels, and <a href="https://github.com/intel/intel-device-plugins-for-kubernetes/blob/main/cmd/gpu_plugin/README.md">intel-gpu-plugin</a> to make the hardware available in the pod. Oh, but node feature discovery doesn&rsquo;t have a build for armv7, so that only works on some nodes.</li>
+<li>I use images from <a href="https://linuxserver.io/">linuxserver.io</a>, which are great&hellip; but all based on <a href="https://github.com/just-containers/s6-overlay">s6_overlay</a>. This means they&rsquo;re not compatible with common privilege restriction approaches on kubernetes like security contexts. Fortunately(?) they support including arbitrary scripts on container startup, so I can hack my way around most problems.</li>
+<li>Internal services often prefer to use HTTPS. Fair enough, but they are internal services, so letsencrypt can&rsquo;t validate/issue certificates for them. That means either an internal CA, or app configurations that allow self signed certs.</li>
+<li>I mentioned I have one node with an unreliable ethernet connection. I tuned kubernetes' heartbeat and status check timings to minimize downtime when that node disappears, detecting it early and redistributing its' pods. But it&rsquo;s a delicate balance: it&rsquo;s easy to get the math wrong, or just be overzealous, and your nodes start popping into <code>NotReady</code> state with no discernable reason. Of course that disrupts intra-service communication, which can cause cascading failures.</li>
+<li>One of my cats knocked a couple of nodes down while I was away on vacation without physical access to the machines. I ended up building a private network connection to Azure and adding support for scaling with VMs there, to keep services running.</li>
+</ul>
+<p>It goes on and on. All of these are problems that you basically never encounter when running on a cloud provider. Your money really does go to a valuable purpose.</p>
+<p>On the other hand, my graveyard of machines has taught me more about internals of enterprise orchestration than I ever would have learned by implementing in real-world enterprise contexts. So it&rsquo;s been worth it for me professionally, at least.</p>
+<h2 id="whats-the-point">What&rsquo;s the point?</h2>
+<p>The moral of the story is: running a home kubernetes cluster is a lot harder than you think; and if you have half a brain you already think it&rsquo;s pretty hard. It definitely does have benefits (beyond learning) though! My home services <em>are</em> actually self-healing, easy to diagnose, and very resiliant to failure. Capacity planning is a non-issue. I have a repo of human-readable files which describe my application environments in their entirety. The trade off has been worth it for me, but only when I look through a pretty broad lens. I could have spent less time on this had I just stuck with docker-compose, for example.</p>
+<p>If you&rsquo;re considering using kubernetes for your home lab, here&rsquo;s my hard-won advice for you:</p>
+<ul>
+<li>Use uniform nodes. Identical CPUs and capabilities make your life so much better.</li>
+<li>Use a lightweight kubernetes distro, like <a href="https://k3s.io/">k3s</a>. It&rsquo;s all API compatible anyway and the community will be full of users in similar situations to yours.</li>
+<li>Don&rsquo;t worry about always doing things the Kubernetes Way. For many home applications, StatefulSets really do make for a more reliable result.</li>
+<li>Set up centralized logging first. The <a href="https://github.com/grafana/helm-charts/tree/main/charts/loki-stack">Loki stack</a> helm chart is relatively turnkey.</li>
+<li>Then set up centralized monitoring. <a href="https://netdata.cloud/">Netdata</a> beats the hell out of manually configuring everything in grafana.</li>
+<li>Keep your manifests in a repo, for the love of all that is good in the world.</li>
+<li>If any of your services are mission critical for your family members (Nexcloud and Plex in my house), leave them out of the cluster for as long as possible. Architect those applications as High-Availability. In my case, that means a multi-master mariadb cluster, multiple web heads, and layered failover&hellip; with all the health checks I can think of.</li>
+<li>Automate node setup with rancher, ansible, or similar. It&rsquo;s hard to make home hardware act like &ldquo;cattle instead of pets&rdquo;; use every tool at your disposal.</li>
+<li>Keep a timestamped log of every change you make that isn&rsquo;t in a YAML file, and every problem you encounter. Often that&rsquo;s the fastest route to find your foot guns.</li>
+<li>Have fun! Remember you&rsquo;re (hopefully) not doing this to be pragmatic. Don&rsquo;t listen to the haters, as long as <em>you&rsquo;re</em> getting what <em>you</em> want out of the experience.</li>
+</ul>
+
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/blog/2020/11/11/how-to-format-video-for-fast-playback-on-the-web/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">How to Format Video for Fast Playback on the Web</span>
+    </a>
+    
+    
+</div>
+
+
+  
+
+
+
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'ohthehugemanatee';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+<script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" integrity="sha384-ZbbbT1gw3joYkKRqh0kWyRp32UAvdqkpbLedQJSlnI8iLQcFVxaGyrOgOJiDQTTR" crossorigin="anonymous"></script>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+    
+
+
+
+    </body>
+</html>

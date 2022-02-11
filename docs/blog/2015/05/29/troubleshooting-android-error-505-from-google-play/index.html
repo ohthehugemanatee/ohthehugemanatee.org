@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.92.0" />
 
     
     
@@ -29,8 +29,8 @@ This error message means precisely nothing. It means &ldquo;something went wrong
 This error message means precisely nothing. It means &ldquo;something went wrong during installation, and we&rsquo;re not telling you what.&rdquo; This drives me crazy. This blog post is about how to get more information out of that error message, and how to fix the problem." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ohthehugemanatee.org/blog/2015/05/29/troubleshooting-android-error-505-from-google-play/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2015-05-29T12:20:33&#43;00:00" />
-<meta property="article:modified_time" content="2015-05-29T12:20:33&#43;00:00" />
+<meta property="article:published_time" content="2015-05-29T12:20:33+00:00" />
+<meta property="article:modified_time" content="2015-05-29T12:20:33+00:00" />
 
 
 
@@ -46,7 +46,7 @@ This error message means precisely nothing. It means &ldquo;something went wrong
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.71157e768c4e111a23c3531b95e0cbb59bbef3c9e6901d36247cb53d6b6be258.css" integrity="sha256-cRV&#43;doxOERojw1MbleDLtZu&#43;88nmkB02JHy1PWtr4lg=">
+<link rel="stylesheet" href="/scss/hyde-hyde.3081c4981fb69a2783dd36ecfdd0e6ba7a158d4cbfdd290ebce8f78ba0469fc6.css" integrity="sha256-MIHEmB&#43;2mieD3Tbs/dDmunoVjUy/3SkOvOj3i6BGn8Y=">
 
 
 <link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
@@ -92,7 +92,7 @@ This error message means precisely nothing. It means &ldquo;something went wrong
       
       
       <p class="site__description">
-         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, a principal software engineering lead at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, Global ISV Partner Technical Strategy CTO for RedHat at Microsoft, opera singer, and parent. These are the things that go through my mind. 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -203,17 +203,17 @@ This error message means precisely nothing. It means &ldquo;something went wrong
 <p>Your device is not going to give you more information on its own. Instead, you need to install ADB, the &ldquo;Android Debug Bridge&rdquo; which lets you type commands directly to your Android device over a USB connection. It&rsquo;s not hard to install, so <a href="https://duckduckgo.com/?q=how+to+install+adb">go and set that up now</a>.</p>
 <p>Next, you will have to make sure your Android device permits you to use ADB. On the phone, go to Settings &gt; About Phone, and scroll down to where you see &ldquo;Build Number&rdquo; listed. Tap on &ldquo;Build Number&rdquo; until you see a popup telling you that you are now a &ldquo;developer&rdquo;. Then go back to Settings, and tap on the new &ldquo;Developer Options&rdquo; menu item near the bottom. Enable the &ldquo;USB Debugging&rdquo; option there.</p>
 <p>Now plug your phone into your computer via USB, and open up your Terminal. Windows users, use the Console - it&rsquo;s the same thing. First, we&rsquo;ll see if our Android device is even visible to ADB.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$&gt; adb devices
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$&gt; adb devices
 </code></pre></div><p>You should see a list of devices attached, with (probably) only one listing. If not, check to make sure that your phone is really in USB Debugging mode.</p>
 <p>Now, we&rsquo;re going to try to install that same troublesome application over ADB. In order to do this, you&rsquo;ll have to download the application&rsquo;s installer (APK) file on your computer. Google makes this hard to do directly, you&rsquo;ll have to use a <a href="http://apps.evozi.com/apk-downloader/">third-party website</a> or a <a href="https://addons.mozilla.org/en-us/firefox/addon/apk-downloader/?src=search">browser extension</a> to find your download link. Download that APK file and save it somewhere safe on your computer. Remember the path to that file! I saved mine in <em>~/Downloads</em>.</p>
 <p>With that APK file in hand, let&rsquo;s try installing your application over ADB. My problematic app was the Deutsche Bahn Navigator app, but obviously you should substitute the filename to your APK here.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$&gt; adb install ~/Downloads/de.hafas.android.db.apk
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$&gt; adb install ~/Downloads/de.hafas.android.db.apk
 <span style="color:#ae81ff">5051</span> KB/s <span style="color:#f92672">(</span><span style="color:#ae81ff">5991578</span> bytes in 1.158s<span style="color:#f92672">)</span>
   pkg: /data/local/tmp/de.hafas.android.db.apk
 Failure <span style="color:#f92672">[</span>INSTALL_FAILED_DUPLICATE_PERMISSION perm<span style="color:#f92672">=</span>de.dbnavigator.permission.list pkg<span style="color:#f92672">=</span>de.bahn.dbtickets<span style="color:#f92672">]</span>
 </code></pre></div><p>(Full disclosure: that is not the exact permission and package I had, I foolishly closed the terminal window before recording it. But the error and the format are correct, which is what&rsquo;s important here.)</p>
 <p>NOW we have something to work with! We get an error message, and some information that might explain what&rsquo;s going on. In this case, the installation failed because of a duplicate permission, whatever that means. But it tells me the name of the permission, and - even better - the package that controls it. Notice that com.dbtickets is not the application I was trying to install. It&rsquo;s something else, a separate app I had, called &ldquo;DB Tickets&rdquo;. This tells me that if I uninstall that other application, it should solve this problem. You can do that from ADB as well:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$&gt; adb uninstall de.bahn.dbtickets
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$&gt; adb uninstall de.bahn.dbtickets
 Success
 
 </code></pre></div><p>Now I can try installing the original app again, and it should work. I can do that from the Play Store application, or directly from ADB with the command we tried above. At this point, I&rsquo;m way more likely to try it through ADB just to make sure I get an error message if it breaks!</p>

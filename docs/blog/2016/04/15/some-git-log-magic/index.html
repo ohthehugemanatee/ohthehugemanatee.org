@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.92.0" />
 
     
     
@@ -29,8 +29,8 @@ There were a few questions I wanted to answer about one particular developer&rsq
 There were a few questions I wanted to answer about one particular developer&rsquo;s input. I&rsquo;m concerned that he is working too much after hours." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ohthehugemanatee.org/blog/2016/04/15/some-git-log-magic/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2016-04-15T13:12:41&#43;00:00" />
-<meta property="article:modified_time" content="2016-04-15T13:12:41&#43;00:00" />
+<meta property="article:published_time" content="2016-04-15T13:12:41+00:00" />
+<meta property="article:modified_time" content="2016-04-15T13:12:41+00:00" />
 
 
 
@@ -46,7 +46,7 @@ There were a few questions I wanted to answer about one particular developer&rsq
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.71157e768c4e111a23c3531b95e0cbb59bbef3c9e6901d36247cb53d6b6be258.css" integrity="sha256-cRV&#43;doxOERojw1MbleDLtZu&#43;88nmkB02JHy1PWtr4lg=">
+<link rel="stylesheet" href="/scss/hyde-hyde.3081c4981fb69a2783dd36ecfdd0e6ba7a158d4cbfdd290ebce8f78ba0469fc6.css" integrity="sha256-MIHEmB&#43;2mieD3Tbs/dDmunoVjUy/3SkOvOj3i6BGn8Y=">
 
 
 <link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
@@ -92,7 +92,7 @@ There were a few questions I wanted to answer about one particular developer&rsq
       
       
       <p class="site__description">
-         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, a principal software engineering lead at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, Global ISV Partner Technical Strategy CTO for RedHat at Microsoft, opera singer, and parent. These are the things that go through my mind. 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -212,11 +212,11 @@ There were a few questions I wanted to answer about one particular developer&rsq
 </ul>
 <p>First I had to set some standards: &ldquo;after hours&rdquo; is defined as &ldquo;between 7pm and 7am&rdquo;; ticket ID numbers are noted in our commit log with square brackets, ie <code>[#12345]</code>.</p>
 <p>We&rsquo;ll start with the total number of commits in this last release period, which we need to figure out the proportion of his commits. This is easy with <code>git shortlog</code>. Git log (and shortlog)&rsquo;s <code>--author</code> argument matches any part of the user&rsquo;s name, so it was easy enough to get Timmy&rsquo;s commits. This is would be the most intuitive git command I know of, except for the mystery <code>-s</code>: a shortlog-only argument that squashes commits down to a count.</p>
-<pre><code>$&gt; git shortlog -s --author=Timmy --after=&quot;2016-02-12&quot; --before=&quot;2016-04-14&quot;
+<pre tabindex="0"><code>$&gt; git shortlog -s --author=Timmy --after=&quot;2016-02-12&quot; --before=&quot;2016-04-14&quot;
    609  Timmy Horton
 </code></pre><p>(not his real name)</p>
 <p>To get the rest of the information we want we have to switch to full git log, and get a custom-formatted one line representation of each commit, with the information that we want. We use <code>--format</code> to speciy our custom format. Here&rsquo;s <a href="https://www.kernel.org/pub/software/scm/git/docs/git-log.html#_pretty_formats">the complete list of format variables</a> - our use is pretty trivial.</p>
-<pre><code>$&gt; git log --author=Timmy --format=&quot;%cd: %s&quot; --after=&quot;2016-02-12&quot; --before=&quot;2016-04-14&quot;
+<pre tabindex="0"><code>$&gt; git log --author=Timmy --format=&quot;%cd: %s&quot; --after=&quot;2016-02-12&quot; --before=&quot;2016-04-14&quot;
 
 Thu Apr 14 00:34:58 2016 -0400: [#50559] Remove dependency on comm_group_stats.inc from foo_communities.info
 Wed Apr 13 17:13:02 2016 -0400: [#50549] Add proper EFQs to foo_global_render_homepage_block
@@ -228,7 +228,7 @@ Tue Apr 12 03:18:49 2016 -0400: [#50248] Remove duplicate title in Pathauto alia
 Tue Apr 12 03:10:53 2016 -0400: [#50248] Change Pathauto alias for Communities
 ...
 </code></pre><p>Now we&rsquo;ll filter to just the commits which happened between 7pm and 8am, with grep. You can use <code>egrep</code> to take advantage of &ldquo;extended&rdquo; regular expression matching, so I wrote a little regex that looks for the first component of the time, and checks that the second digit is in the right range.</p>
-<pre><code>$&gt; git log --author=Timmy --format=&quot;%cd: %s&quot; --after=&quot;2016-02-12&quot; --before=&quot;2016-04-14&quot; | egrep '((0[0-9])|(19)|(2[0-3])):\d{2}:\d{2}'
+<pre tabindex="0"><code>$&gt; git log --author=Timmy --format=&quot;%cd: %s&quot; --after=&quot;2016-02-12&quot; --before=&quot;2016-04-14&quot; | egrep '((0[0-9])|(19)|(2[0-3])):\d{2}:\d{2}'
 
 Thu Apr 14 00:34:58 2016 -0400: [#50559] Remove dependency on comm_group_stats.inc from foo_communities.info
 Wed Apr 13 00:13:01 2016 -0400: [#50481] Correct counts calculations on Communities and Groups DS field and Mini Panel Panes
@@ -238,13 +238,13 @@ Tue Apr 12 03:10:53 2016 -0400: [#50248] Change Pathauto alias for Communities
 ...
 </code></pre><p>I&rsquo;ll take this regex apart for you. I know I can recognize a time as any colon-separated trio of two digit numbers. <code>\d</code> is a number, <code>{2}</code> is &ldquo;exactly two of the preceding element&rdquo;, so the pattern is <code>\d{2}:\d{2}:\d{2}</code>. We really want just the hours between 00 and 09, and between 19 and 23. Square brackets denote ranges, but regex examines one <em>character</em> at a time. It sees 01 as a zero, then a one. We have to take it apart a little more than this. The first range is <code>0[0-9]</code> - that one is easy. We separate it from its neighbor with a vertical pipe to make it an OR comparison, and surround each option in that OR in parenthesis to make sure that both digits are considered together. Since we have to think in single digits, the second time range range could be 19, or <code>2[0-3]</code>. Finally, I surround the whole OR set in parentheses because it makes it easier to read.</p>
 <p>Getting a count of this list is easy: we just pipe the result to <code>wc -l</code> to get a count of lines.</p>
-<pre><code>$&gt; git log --author=Timmy --format=&quot;%cd: %s&quot; --after=&quot;2016-02-12&quot; --before=&quot;2016-04-14&quot; | egrep '((0[0-9])|(19)|(2[0-3])):\d{2}:\d{2}' | wc -l
+<pre tabindex="0"><code>$&gt; git log --author=Timmy --format=&quot;%cd: %s&quot; --after=&quot;2016-02-12&quot; --before=&quot;2016-04-14&quot; | egrep '((0[0-9])|(19)|(2[0-3])):\d{2}:\d{2}' | wc -l
 
 225
 </code></pre><p>Wow - more than a third of his commits happened after hours! That&rsquo;s definitely not good.</p>
 <p>Let&rsquo;s find out which tickets he worked on, using our standardized notation for ticket numbers. We can exclude merge commits with git log&rsquo;s <code>--no-merges</code> argument. But what about printing just the ticket numbers? We&rsquo;ll use my favorite multitool: awk!</p>
 <p>Awk breaks up input into columns, and has a whole language for doing exotic and fun things with those columns. Who needs excel, anyway? If you want to learn more about awk, check out my <a href="https://ohthehugemanatee.org/2011/04/working-with-bash-awk.html">very old post on the subject</a>. Here we&rsquo;re just going to accept awk&rsquo;s default of space-separated columns, and print off column number 7.</p>
-<pre><code>$&gt; git log --no-merges --author=Timmy --format=&quot;%cd: %s&quot; --after=&quot;2016-02-12&quot; --before=&quot;2016-04-14&quot; | egrep '((0[0-9])|(19)|(2[0-3])):\d{2}:\d{2}' | awk '{print $7}'
+<pre tabindex="0"><code>$&gt; git log --no-merges --author=Timmy --format=&quot;%cd: %s&quot; --after=&quot;2016-02-12&quot; --before=&quot;2016-04-14&quot; | egrep '((0[0-9])|(19)|(2[0-3])):\d{2}:\d{2}' | awk '{print $7}'
 
 [#50559]
 [#50481]
@@ -256,7 +256,7 @@ Tue Apr 12 03:10:53 2016 -0400: [#50248] Change Pathauto alias for Communities
 [#50248]
 ...
 </code></pre><p>Great, but there are a lot of duplicates there. I guess 50248 was a big one, for example. So we&rsquo;ll pass it through <code>uniq</code> to limit it to just unique tickets. Uniq removes duplicates, but only duplicates in a row. So most of the time - including today - we pair it with <code>sort</code>.</p>
-<pre><code>$&gt; git log --no-merges --author=Timmy --format=&quot;%cd: %s&quot; --after=&quot;2016-02-12&quot; --before=&quot;2016-04-14&quot; | egrep '((0[0-9])|(19)|(2[0-3])):\d{2}:\d{2}' | awk '{print $7}' | sort | uniq
+<pre tabindex="0"><code>$&gt; git log --no-merges --author=Timmy --format=&quot;%cd: %s&quot; --after=&quot;2016-02-12&quot; --before=&quot;2016-04-14&quot; | egrep '((0[0-9])|(19)|(2[0-3])):\d{2}:\d{2}' | awk '{print $7}' | sort | uniq
 
 [#48192]
 [#49324]
@@ -268,7 +268,7 @@ Tue Apr 12 03:10:53 2016 -0400: [#50248] Change Pathauto alias for Communities
 [#50033]
 ...
 </code></pre><p>Much better! Now, how many commits went into each one of those tickets? This was a new one for me: we&rsquo;ll use uniq&rsquo;s <code>-c</code> flag to tell it to produce counts. And just for readability, we&rsquo;ll sort the resulting list by the count.</p>
-<pre><code>$&gt; git log --no-merges --author=Timmy --format=&quot;%cd: %s&quot; --after=&quot;2016-02-12&quot; --before=&quot;2016-04-14&quot; | egrep '((0[0-9])|(19)|(2[0-3])):\d{2}:\d{2}' | awk '{print $7}' | sort | uniq -c | sort
+<pre tabindex="0"><code>$&gt; git log --no-merges --author=Timmy --format=&quot;%cd: %s&quot; --after=&quot;2016-02-12&quot; --before=&quot;2016-04-14&quot; | egrep '((0[0-9])|(19)|(2[0-3])):\d{2}:\d{2}' | awk '{print $7}' | sort | uniq -c | sort
 
    1 [#50238]
    1 [#50251]

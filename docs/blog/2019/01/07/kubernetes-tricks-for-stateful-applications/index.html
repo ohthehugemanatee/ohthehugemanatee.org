@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.82.0" />
+<meta name="generator" content="Hugo 0.92.0" />
 
     
     
@@ -29,8 +29,8 @@ Kubernetes is one of the greatest orchestration and scaling tools ever built, de
 Kubernetes is one of the greatest orchestration and scaling tools ever built, designed for modern decoupled, stateless architectures. Kubernetes tutorials abound to show you these strong use cases. But in the real world where you don&rsquo;t get to build &ldquo;green field&rdquo; every time, there are a lot of applications that don&rsquo;t fit that model." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ohthehugemanatee.org/blog/2019/01/07/kubernetes-tricks-for-stateful-applications/" /><meta property="article:section" content="blog" />
-<meta property="article:published_time" content="2019-01-07T11:10:21&#43;00:00" />
-<meta property="article:modified_time" content="2019-01-07T11:10:21&#43;00:00" />
+<meta property="article:published_time" content="2019-01-07T11:10:21+00:00" />
+<meta property="article:modified_time" content="2019-01-07T11:10:21+00:00" />
 
 
 
@@ -46,7 +46,7 @@ Kubernetes is one of the greatest orchestration and scaling tools ever built, de
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.71157e768c4e111a23c3531b95e0cbb59bbef3c9e6901d36247cb53d6b6be258.css" integrity="sha256-cRV&#43;doxOERojw1MbleDLtZu&#43;88nmkB02JHy1PWtr4lg=">
+<link rel="stylesheet" href="/scss/hyde-hyde.3081c4981fb69a2783dd36ecfdd0e6ba7a158d4cbfdd290ebce8f78ba0469fc6.css" integrity="sha256-MIHEmB&#43;2mieD3Tbs/dDmunoVjUy/3SkOvOj3i6BGn8Y=">
 
 
 <link rel="stylesheet" href="/scss/print.2744dcbf8a0b2e74f8a50e4b34e5f441be7cf93cc7de27029121c6a09f9e77bc.css" integrity="sha256-J0Tcv4oLLnT4pQ5LNOX0Qb58&#43;TzH3icCkSHGoJ&#43;ed7w=" media="print">
@@ -92,7 +92,7 @@ Kubernetes is one of the greatest orchestration and scaling tools ever built, de
       
       
       <p class="site__description">
-         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, a principal software engineering lead at Microsoft, opera singer, and parent. These are the things that go through my mind. 
+         Thoughts and technical notes from the field. I&#39;m Campbell Vertesi, Global ISV Partner Technical Strategy CTO for RedHat at Microsoft, opera singer, and parent. These are the things that go through my mind. 
       </p>
     </div>
     <div class="collapsible-menu">
@@ -207,7 +207,7 @@ Kubernetes is one of the greatest orchestration and scaling tools ever built, de
 <p>There are a few different approaches to coupling appliciation components:</p>
 <h2 id="multi-container-pods">Multi-container pods</h2>
 <p>Level 0 is to simply specify multiple components (containers) in your deployment.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
 <span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
 <span style="color:#f92672">metadata</span>:
   <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-deployment</span>
@@ -237,7 +237,7 @@ Kubernetes is one of the greatest orchestration and scaling tools ever built, de
 <p>So how do we get around this limitation? I want a separate volume for each instance of the application.</p>
 <p>Kubernetes supports a different object type for this use case, called a <a href="https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/">StatefulSet</a>. This is exactly what it sounds like: a set of objects that define a stateful application. It&rsquo;s a template for creating multiple copies of <em>all resources</em> defined therein.</p>
 <p>A statefulset will create replicas similar to a deployment, but it will set up separate Volumes and VolumeClaims for each one. The replicas will be identical except for an index number at the end of the labels. The first one might be called <code>nginx-deployment-0</code>, the second: <code>nginx-deployment-1</code>, and so on.  The result is a set of tightly coupled components, which can be individually addressed, and scaled using normal Kubernetes tools.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
 <span style="color:#f92672">kind</span>: <span style="color:#ae81ff">StatefulSet</span>
 <span style="color:#f92672">metadata</span>:
   <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
@@ -302,12 +302,12 @@ Kubernetes is one of the greatest orchestration and scaling tools ever built, de
 <p>We&rsquo;ll use the <a href="https://github.com/GoogleCloudPlatform/metacontroller">Metacontroller</a> add-on to make our lives easier. Metacontroller makes it &ldquo;easy&rdquo; to add custom behaviors. Just write a short script, stick it into a ConfigMap or FaaS, and let Metacontroller work its magic!</p>
 <p>Metacontroller project comes with several well documented examples, including one that&rsquo;s very close to our requirement: <a href="https://github.com/GoogleCloudPlatform/metacontroller/tree/master/examples/service-per-pod">service-per-pod</a>.</p>
 <p>Step 1 is to install Metacontroller, of course:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Create &#39;metacontroller&#39; namespace, service account, and role/binding.</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Create &#39;metacontroller&#39; namespace, service account, and role/binding.</span>
 kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontroller/master/manifests/metacontroller-rbac.yaml
 <span style="color:#75715e"># Create CRDs for Metacontroller APIs, and the Metacontroller StatefulSet.</span>
 kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontroller/master/manifests/metacontroller.yaml
 </code></pre></div><p>Then we&rsquo;ll add some new metadata to our existing StatefulSet. The metacontroller script will use these values to configure the load balancers.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
 <span style="color:#f92672">kind</span>: <span style="color:#ae81ff">StatefulSet</span>
 <span style="color:#f92672">metadata</span>:
   <span style="color:#f92672">annotations</span>:
@@ -315,7 +315,7 @@ kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontr
     <span style="color:#f92672">service-per-pod-ports</span>: <span style="color:#e6db74">&#34;80:80&#34;</span>
 ...
 </code></pre></div><p>We also need to tell Kubernetes to decorate each StatefulSet with a pod-name label. We do this in the StatefulSet&rsquo;s pod template.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">...
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">...
 <span style="color:#f92672">spec</span>:
   <span style="color:#f92672">template</span>:
     <span style="color:#f92672">metadata</span>:
@@ -325,7 +325,7 @@ kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontr
 </code></pre></div><p>Note: this only works in k8s 1.9+ - if you&rsquo;re stuck with a lower version, you can script this action with Metacontroller, too. :).</p>
 <p>Now you&rsquo;re going to need two hooks. Put them in a directory together so they&rsquo;re easy to apply at once. These ones are written in jsonnet, but you could write this in whatever language you like.</p>
 <p>The first hook actually creates the LoadBalancer for each Pod.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">function(request) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">function(request) {
   local statefulset = request.<span style="color:#66d9ef">object</span>,
   local labelKey = statefulset.metadata.annotations[<span style="color:#e6db74">&#34;service-per-pod-label&#34;</span>],
   local ports = statefulset.metadata.annotations[<span style="color:#e6db74">&#34;service-per-pod-ports&#34;</span>],
@@ -358,7 +358,7 @@ kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontr
   ]
 }
 </code></pre></div><p>The other hook is the &ldquo;finalizer&rdquo; - it responds to changes or deletions in pods by tearing down the corresponding LoadBalancers.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">function(request) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">function(request) {
   <span style="color:#75715e">// If the StatefulSet is updated to no longer match our decorator selector,
 </span><span style="color:#75715e"></span>  <span style="color:#75715e">// or if the StatefulSet is deleted, clean up any attachments we made.
 </span><span style="color:#75715e"></span>  attachments: [],
@@ -366,9 +366,9 @@ kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontr
 </span><span style="color:#75715e"></span>  finalized: std.length(request.attachments[<span style="color:#960050;background-color:#1e0010">&#39;</span>Service.v1<span style="color:#960050;background-color:#1e0010">&#39;</span>]) == <span style="color:#ae81ff">0</span>
 }
 </code></pre></div><p>Add those into a subdirectory, and put them into a configmap together. Metacontroller will run them from there.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create configmap service-per-pod-hooks -n metacontroller --from-file<span style="color:#f92672">=</span>hooks
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create configmap service-per-pod-hooks -n metacontroller --from-file<span style="color:#f92672">=</span>hooks
 </code></pre></div><p>Now apply the actual decorator controller which will run those functions. Note that you have to identify your hook jsonnet files by (file) name! Get the name wrong, and the finalizer will hang forever, <a href="https://github.com/kubernetes/kubernetes/issues/72598">preventing you from deleting your statefulset</a>. In my case, the files were called <code>create-lb-per-pod.jsonnet</code> and <code>finalizer.json</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">metacontroller.k8s.io/v1alpha1</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">metacontroller.k8s.io/v1alpha1</span>
 <span style="color:#f92672">kind</span>: <span style="color:#ae81ff">DecoratorController</span>
 <span style="color:#f92672">metadata</span>:
   <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
