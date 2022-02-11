@@ -142,7 +142,7 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p>That&rsquo;s it. One YAML file, most of which is copypasta. One cronjob. All done!</p>
 <p>Here&rsquo;s my RSS importer config for your copy and pasting pleasure. If you&rsquo;re already comfortable with migration YAMLs and XPaths, just add the names of your RSS fields as selectors in the source section, map them to drupal fields in the process section, and you&rsquo;re all done!</p>
 <p>If you aren&rsquo;t familiar with this stuff yet, don&rsquo;t worry! We&rsquo;ll dissect this together, below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_importer</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_importer</span>
 <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Import my RSS feed&#39;</span>
 <span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
 
@@ -209,12 +209,12 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p>Let&rsquo;s dive into that YAML a bit. Migrate is one of the most powerful components of Drupal 8 core, and this configuration is your gateway to it.</p>
 <p>That YAML looks like a lot, but it&rsquo;s really just 4 sections. They can appear in any order, but we need all 4: General information, source, destination, and data processing. This isn&rsquo;t rocket science after all! Let&rsquo;s look at these sections one at a time.</p>
 <p><strong>General information</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_importer</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_importer</span>
 <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;My RSS feed importer&#39;</span>
 <span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
 </code></pre></div><p>This is the basic stuff about the migration configuration. At a minimum it needs a unique machine-readable ID, a human-readable label, and <code>status: true</code> so it&rsquo;s enabled. There are other keys you can include here for fun extra features, like module dependencies, groupings (so you can run several imports together!), tags, and language. These are the critical ones, though.</p>
 <p><strong>Source</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
   <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">url</span>
   <span style="color:#f92672">data_fetcher_plugin</span>: <span style="color:#ae81ff">file</span>
   <span style="color:#f92672">urls</span>: <span style="color:#e6db74">&#39;https://example.com/feed.rss&#39;</span>
@@ -254,18 +254,18 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p>Next we have to identify the &ldquo;fields&rdquo; in the source. You see, migrate module is built around the idea that you&rsquo;ll map source fields to destination fields. That&rsquo;s core to how it thinks about the whole process. Since XML (and by extension RSS) is an unstructured format - it doesn&rsquo;t think of itself as having &ldquo;fields&rdquo; at all. So we&rsquo;ll have to give our source plugin XPaths for the data we want out of the feed, assigning each path to a virtual &ldquo;field&rdquo;. These &ldquo;fake fields&rdquo; let Migrate treat this source just like any other.</p>
 <p>If you haven&rsquo;t worked with XPaths before, the example YAML in this post gives you most of what you need to know. It&rsquo;s just a simple text system for specifying a tag within an unstructured XML document. Not too complicated when you get into it. You may want to <a href="https://duckduckgo.com/?q=xpath+basics">find a good tutorial</a> to learn some of the tricks.</p>
 <p>Let&rsquo;s look at one of these &ldquo;fake fields&rdquo;:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">summary</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">summary</span>
       <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Summary</span>
       <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:summary&#39;</span>
 </code></pre></div><p><em>name</em> is how we&rsquo;ll address this field in the rest of the migration. It&rsquo;s the source &ldquo;field name&rdquo;. <em>label</em> is the human readable name for the field. <em>selector</em> is the XPath inside the item. Most items are flat - certainly in RSS - so it&rsquo;s basically just the tag that surrounds the data you want. There, was that so hard?</p>
 <p>As a side note, you can see that my RSS feeds tend to be for iTunes. Sometimes the world eats an apple, sometimes an apple eats the world. Buy me a beer at Drupalcon and we can argue about standards.</p>
 <p>Fifth and finally, we identify which &ldquo;field&rdquo; in the source contains a unique identifier. Migrate module keeps track of the association between the source and destination objects, so it can handle updates, rollbacks, and more. The example YAML relies on the very common (but technically optional) <code>&lt;guid&gt;</code> tag as a unique identifier.</p>
 <p><strong>Destination</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">destination</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">destination</span>:
   <span style="color:#f92672">plugin</span>: <span style="color:#e6db74">&#39;entity:node&#39;</span>
 </code></pre></div><p>Yep, it&rsquo;s that simple. This is where you declare what Drupal entity type will receive the data. Actually, you could write any sort of destination plugin for this - if you want Drupal to migrate data into some crazy exotic system, you can do it! But in 99.9% of cases you&rsquo;re migrating into Drupal entities, so you&rsquo;ll want <code>entity:something</code> here. Don&rsquo;t worry about bundles (content types) here; that&rsquo;s something we take care of in field mapping.</p>
 <p><strong>Process</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">process</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">process</span>:
   <span style="color:#f92672">slug</span>: <span style="color:#ae81ff">stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8</span>
 <span style="color:#f92672">title</span>: <span style="color:#ae81ff">title</span>
   <span style="color:#f92672">field_remote_url</span>: <span style="color:#ae81ff">link</span>
@@ -295,7 +295,7 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p><strong>Importing files</strong></p>
 <p>Did you notice that I didn&rsquo;t map the images into Drupal fields in my example? That&rsquo;s because it&rsquo;s a bit confusing. We actually have an image URL that we need to download, then we have to create a file entity based on the downloaded file, and then we add the File ID to the node&rsquo;s field as a value. That&rsquo;s more complicated than I wanted to get into in the general example.</p>
 <p>To do this, we have to create a pipeline of plugins that will operate in sequence, to create the value we want to stick in our field_image.  It looks something like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#f92672">field_image</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#f92672">field_image</span>:
     -
       <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">download</span>
       <span style="color:#f92672">source</span>:
@@ -305,7 +305,7 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
     -
       <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">entity_generate</span>
 </code></pre></div><p>Looking at that download plugin, <em>image</em> seems clear. That&rsquo;s the source URL we got out of the RSS feed. But what is <em>constants/destination_uri</em>, I hear you cry? I&rsquo;m glad you asked. It&rsquo;s a constant, which I added in the source section and didn&rsquo;t tell you about. You can add any arbitrary keys to the source section, and they&rsquo;ll be available like this in processing. It is good practice to lump all your constants together into one key, to keep the namespace clean. This is what it looks like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
   <span style="color:#ae81ff">... usual source stuff here ...</span>
   <span style="color:#f92672">constants</span>:
     <span style="color:#f92672">destination_uri</span>: <span style="color:#e6db74">&#39;public://my_rss_feed/post.jpg&#39;</span>
@@ -315,7 +315,7 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p><strong>Multiple interrelated migrations</strong></p>
 <p>One of the coolest tricks that Migrate can do is to manage interdependencies between migrations. Maybe you don&rsquo;t want those images just as File entities, you actually want them in Paragraphs, which should appear in the imported node. Easy-peasy.</p>
 <p>First, you have to create a second migration for the Paragraph. Technically you should have a separate Migration YAML for each destination entity type. (yes, <code>entity_generate</code> is a dirty way to get around it, use it sparingly). So we create our second migration just for the paragraph, like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_images_importer</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_images_importer</span>
 <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Import the images from my RSS feed&#39;</span>
 <span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
 
@@ -367,21 +367,21 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <li>We&rsquo;re doing the image trick I just mentioned.</li>
 </ul>
 <p>Now, in the node migration, we can add our paragraphs field to the &ldquo;process&rdquo; section like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#f92672">field_paragraphs</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#f92672">field_paragraphs</span>:
     <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">migration_lookup</span>
     <span style="color:#f92672">migration</span>: <span style="color:#ae81ff">my_rss_images_importer</span>
     <span style="color:#f92672">source</span>: <span style="color:#ae81ff">guid</span>
 </code></pre></div><p>We&rsquo;re using the <code>migration_lookup</code> plugin. This plugin takes the value of the field given in <code>source</code>, and looks it up in <code>my_rss_images_importer</code> to see if anything with that source ID was migrated. Remember where we configured the source plugin to know that <code>guid</code> was the unique identifier for each item in this feed? That comes in handy here.</p>
 <p>So we pass the guid to <code>migration_lookup</code>, and it returns the id of the paragraph which was created for that guid. It finds out what Drupal entity ID corresponds to that source ID, and returns the Drupal entity ID to use as a field value. You can use this trick to associate content migrated from separate feeds, totally separate data sources, or whatever.</p>
 <p>You should also add a dependency on <code>my_rss_images_importer</code> at the bottom of your YAML file, like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">migration_dependencies</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">migration_dependencies</span>:
   <span style="color:#f92672">required</span>:
     - <span style="color:#ae81ff">my_rss_images_importer</span>
 </code></pre></div><p>This will ensure that <code>my_rss_images_importer</code> will always run before <code>my_rss_importer</code>.</p>
 <p>(NB: in Drupal &lt; 8.3, this plugin is called <code>migration</code>)</p>
 <p><strong>Formatting dates</strong></p>
 <p>Very often you will receive dates in a format other than what Drupal wants to accept as a valid field value. In this case the <code>format_date</code> process plugin comes in very handy, like this:</p>
-<pre><code>  field_published_date:
+<pre tabindex="0"><code>  field_published_date:
     plugin: format_date
     from_format: 'D, d M Y H:i:s O'
     to_format: 'Y-m-d\TH:i:s'
@@ -443,7 +443,7 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <h3 id="1-add-some-writeable-directories-where-platformsh-cli-and-letsencrypt-need-them">1) Add some writeable directories where platform.sh CLI and letsencrypt need them.</h3>
 <p>Normally when Platform deploys your application, it puts it all in a read-only filesystem. We&rsquo;re going to mount some special directories read-write so all the letsencrypt/platform magic can work.</p>
 <p>Edit your application&rsquo;s <code>.platform.app.yaml</code> file, and find the <code>mounts:</code> section. At the bottom, add these three lines. Make sure to match the indents with everything else under the <code>mounts:</code> section!</p>
-<pre><code>    &quot;/web/.well-known&quot;: &quot;shared:files/.well-known&quot;
+<pre tabindex="0"><code>    &quot;/web/.well-known&quot;: &quot;shared:files/.well-known&quot;
     &quot;/keys&quot;: &quot;shared:files/keys&quot;
     &quot;/.platformsh&quot;: &quot;shared:files/.platformsh&quot;
 </code></pre><p>Let&rsquo;s walk through each of these:</p>
@@ -454,7 +454,7 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 </ul>
 <h3 id="2-expose-the-well-known-directory-to-the-internet">2) Expose the .well-known directory to the Internet</h3>
 <p>I mentioned above that letsencrypt test your control over a domain by creating a file which it tries to fetch over the Internet. We already created the writeable directory where the scripts can drop the file, but platform.sh (wisely) defaults to hide your directories from the Internet. We&rsquo;re going to add some configuration to the &ldquo;web&rdquo; app section to expose this .well-known directory. Find the <code>web:</code> section of your <code>.platform.app.yaml</code> file, and the <code>locations:</code> section under that. At the bottom of that section, add this:</p>
-<pre><code>      '/.well-known':
+<pre tabindex="0"><code>      '/.well-known':
             # Allow access to all files in the public files directory.
             allow: true
             expires: 5m
@@ -465,14 +465,14 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 </code></pre><p>Make sure you match the indents of the other location entries! In my (default) <code>.platform.app.yaml</code> file, I have 8 spaces before that <code>'/.well-known':</code> line. Also note that the <code>root:</code> parameter there also uses my webroot directory, so adjust that to fit your environment.</p>
 <h3 id="3-download-the-binaries-you-need-during-the-application-build-phase">3) Download the binaries you need during the application &ldquo;build&rdquo; phase</h3>
 <p>In order to do this, we&rsquo;re going to need to have the platform.sh CLI tool, and a let&rsquo;s encrypt CLI tool called lego. We&rsquo;ll download them during the &ldquo;build&rdquo; phase of your application. Still in the <code>platform.app.yaml</code> file, find the <code>hooks:</code> section, and the <code>build:</code> section under that. Add these steps to the bottom of the build:</p>
-<pre><code>      cd ~
+<pre tabindex="0"><code>      cd ~
       curl -sL https://github.com/xenolf/lego/releases/download/v0.3.1/lego_linux_amd64.tar.xz | tar -C .global/bin -xJ --strip-components=1 lego/lego
       curl -sfSL -o .global/bin/platform.phar https://github.com/platformsh/platformsh-cli/releases/download/v3.12.1/platform.phar
 </code></pre><p>We&rsquo;re just downloading reasonably recent releases of our two tools. If anyone has a better way to get the latest release of either tool, please let me know. Otherwise we&rsquo;re stuck keeping this up to date manually.</p>
 <h3 id="4-configure-the-platformsh-cli">4) Configure the platform.sh CLI</h3>
 <p>In order to configure the platform.sh CLI on your server, we have to deploy the changes from steps 1-3. Go ahead and do that now. I&rsquo;ll wait.</p>
 <p>Now connect to your platform environment via SSH (<code>platform ssh -e master</code> for most of us). First we&rsquo;ll add a config file for platform. Edit a file in <code>.platformsh/config.yaml</code> with the editor of choice. You don&rsquo;t have to use vi, but it will win you some points with me. Here are the contents for that file:</p>
-<pre><code>updates:
+<pre tabindex="0"><code>updates:
     check: false
 api:
     token_file: token
@@ -481,17 +481,17 @@ api:
 <p>Now let&rsquo;s test it by running <code>php /app/.global/bin/platform.phar auth:info</code>. If you see your account information, congratulations! You have a working platform.sh CLI installed.</p>
 <h3 id="5-request-your-first-certificate-by-hand">5) Request your first certificate by hand</h3>
 <p>Still SSH&rsquo;ed into that environment, let&rsquo;s see if everything works.</p>
-<pre><code>lego --email=&quot;support@example.com&quot; --domains=&quot;www.example.com&quot; --webroot=/app/public/ --path=/app/keys/ -a run
+<pre tabindex="0"><code>lego --email=&quot;support@example.com&quot; --domains=&quot;www.example.com&quot; --webroot=/app/public/ --path=/app/keys/ -a run
 csplit -f /app/keys/certificates/www.example.com.crt- /app/keys/certificates/www.example.com.crt '/-----BEGIN CERTIFICATE-----/' '{1}' -z -s
 php /app/.global/bin/platform.phar domain:update -p $PLATFORM_PROJECT --no-wait --yes --cert /app/keys/certificates/www.example.com.crt-00 --chain /app/keys/certificates/www.example.com.crt-01 --key /app/keys/certificates/www.example.com.key example.com
 </code></pre><p>This is three commands: register the cert with letsencrypt, then split the resulting file into it&rsquo;s components, then register those components with platform.sh. If you didn&rsquo;t get any errors, go ahead and test your site - it&rsquo;s got a certificate! (yay)</p>
 <h3 id="6-set-up-automatic-renewals-on-cron">6) Set up automatic renewals on cron</h3>
 <p>Back to <code>.platform.app.yaml</code>, look for the <code>crons:</code> section. If you&rsquo;re running drupal, you probably have a drupal cronjob in there already. Add this one at the bottom, matching indents as always.</p>
-<pre><code>    letsencrypt:
+<pre tabindex="0"><code>    letsencrypt:
         spec: '0 0 1 * *'
         cmd: '/bin/sh /app/scripts/letsencrypt.sh'
 </code></pre><p>Now let&rsquo;s create the script. Add the file <code>scripts/letsencrypt.sh</code> to your repo, with this content:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/usr/bin/env bash
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/usr/bin/env bash
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e"># Checks and updates the letsencrypt HTTPS cert.</span>
 
@@ -619,7 +619,7 @@ set -e
 <p>My task this week became to write the first CSV source for Drupal 8 Migrate.</p>
 <h1 id="drupal-8-migrate-overview">Drupal 8 Migrate Overview</h1>
 <p>Drupal 8 Migrations, when you&rsquo;re using classes that already exist, are actually even easier than Migrate 7. All you do is write a single YAML file for each kind of data you&rsquo;re transferring, and put it in a custom module&rsquo;s <em>config/install</em> directory. Your YAML file gives your migration a name and a group, tells us what the source is for data, maps source fields to destination fields, and tells us what the destination objects are. Here&rsquo;s an example Migration definition file from core. See if you can understand what&rsquo;s being migrated here.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">d6_system_site</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">d6_system_site</span>
 <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Drupal 6 site configuration</span>
 <span style="color:#f92672">migration_groups</span>:
   - <span style="color:#ae81ff">Drupal 6</span>
@@ -651,7 +651,7 @@ set -e
 <h1 id="writing-a-source-plugin-in-migrate_plus">Writing a source plugin in Migrate_plus</h1>
 <p>Enter <a href="https://www.drupal.org/sandbox/mikeryan/migrate_plus">Migrate Plus module</a>. This is the place in contrib, where we can fill out all the rest of the behavior we want from Migrate, that&rsquo;s not necessarily a core requirement. This is where we&rsquo;ll be writing our source plugin.</p>
 <p>To add a source plugin, just create a .php file in migrate_plus/src/Plugins/migrate/source . Drupal will discover the new plugin automatically the next time you rebuild the cache. The filename has to be the same as the name of the class, so choose carefully! My file is called CSV.php . Here&rsquo;s the top of the file you need for a basic :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 <span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * @file
 </span><span style="color:#e6db74"> * Contains \Drupal\migrate_plus\Plugin\migrate\source\csv.
@@ -683,11 +683,11 @@ set -e
 <h2 id="initializeiterator">initializeIterator()</h2>
 <p>An Iterator is a complicated sounding word for an Object that contains everything you need to read from a data source, and go through it one line at a time. Maybe you&rsquo;re used to fopen(&lsquo;path/to/file&rsquo;, &lsquo;r&rsquo;) to open a file, and then you write code for every possible operation with that file. An iterator takes care of all that for you. In the case of most file-based sources, you can just use the SplFileObject class that comes with PHP.</p>
 <p>Any arguments that were passed in the source: section of the YAML file will be available under $this-&gt;configuration. So if my YAML looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
   <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">csv</span>
   <span style="color:#f92672">path</span>: <span style="color:#e6db74">&#39;/vagrant/import/ACS_13_1YR_B28002_with_ann.csv&#39;</span>
 </code></pre></div><p>My initializeIterator( ) method can look like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">initializeIterator</span>() {
   <span style="color:#75715e">// File handler using our custom header-rows-respecting extension of SPLFileObject.
 </span><span style="color:#75715e"></span>  $file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SplFileObject</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;path&#39;</span>]);
@@ -697,7 +697,7 @@ set -e
 </code></pre></div><p>Not too complicated, right? This method is called right at the beginning of the migration, the first time Migrate wants to get any information out of your source. The iterator will be stored in $this-&gt;iterator.</p>
 <h2 id="getids">getIds()</h2>
 <p>This method should return an array of all the unique keys for your source. A unique key is some value that&rsquo;s unique for that row in the source material. Sometimes there&rsquo;s more than one, which is why this is an array. Each key field name is also an array, with a child &ldquo;type&rdquo; declaration. This is hard to explain in English, but easy to show in code:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getIDs</span>() {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getIDs</span>() {
   $ids <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
   <span style="color:#66d9ef">foreach</span> ($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;keys&#39;</span>] <span style="color:#66d9ef">as</span> $key) {
     $ids[$key][<span style="color:#e6db74">&#39;type&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;string&#39;</span>;
@@ -707,14 +707,14 @@ set -e
 </code></pre></div><p>We rely on the YAML author to tell us the key fields in the CSV, and we just reformat them accordingly. Type can be &lsquo;string&rsquo;, &lsquo;float&rsquo;, &lsquo;integer&rsquo;, whatever makes sense.</p>
 <h2 id="__tostring">__toString()</h2>
 <p>This method has to return a simple string explanation of the source query. In the case of a file-based source, it makes sense to print the path to the file, like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __toString() {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __toString() {
   <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">string</span>) $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>;
 }
 </code></pre></div><h2 id="fields">fields()</h2>
 <p>This method returns an array of available fields on the source. The keys should be the machine names, the values are descriptive, human-readable names. In the case of the CSV source, we look for headers at the top of the CSV file and build the array that way.</p>
 <h2 id="__construct">__construct()</h2>
 <p>The constructor method is called whenever a class is instantiated. You don&rsquo;t technically HAVE to have a constructor on your source class, but you&rsquo;ll find it helpful. For the CSV source, I used the constructor to make sure we have all the configuration that we need. Then I try and set sane values for fields, based on any header in the file.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#66d9ef">array</span> $configuration, $plugin_id, $plugin_definition, <span style="color:#a6e22e">MigrationInterface</span> $migration) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#66d9ef">array</span> $configuration, $plugin_id, $plugin_definition, <span style="color:#a6e22e">MigrationInterface</span> $migration) {
   <span style="color:#66d9ef">parent</span><span style="color:#f92672">::</span><span style="color:#a6e22e">__construct</span>($configuration, $plugin_id, $plugin_definition, $migration);
 
   <span style="color:#75715e">// Path is required.
@@ -754,7 +754,7 @@ set -e
 </code></pre></div><h2 id="profit">Profit!</h2>
 <p>That&rsquo;s it! Four simple methods, and you have a new source type for Drupal 8 Migrate. Of course, you will probably find complications that require a bit more work. For CSV, supporting a header row turned out to be a real pain. Any time Migrate tried to &ldquo;rewind&rdquo; the source back to the first line, it would try and migrate the header row! I ended up extending SplFileObject just to handle this issue.</p>
 <p>Here&rsquo;s the YAML file I used to test this, importing a list of states from some US Census data.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">states</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">states</span>
 <span style="color:#f92672">label</span>: <span style="color:#ae81ff">States</span>
 <span style="color:#f92672">migration_groups</span>:
   - <span style="color:#ae81ff">US Census</span>
@@ -850,7 +850,7 @@ set -e
 <p>There are three major ways of doing this placeholder: AJAX, ESI, and Cookies.</p>
 <p>With AJAX, you just include a little JS that says &ldquo;fill this DIV with the contents of <a href="http://example.com/user/customized/thing%22">http://example.com/user/customized/thing&quot;</a>. The client&rsquo;s web browser makes a second call to the server, which is configured to allow /user/customized/thing through the cache all the way to your website. Drupal (or whatever you&rsquo;re running) fills in the HTML that belongs in that div and returns it to the browser. Congratulations! You just served an authenticated user a page which was 99% cached. You only had to generate the contents of one div.</p>
 <p>ESI is short for <a href="https://en.wikipedia.org/wiki/Edge_Side_Includes">Edge Side Includes</a>, a small extension to HTML which effectively does the same thing as that Javascript, but on the &ldquo;Edge server&rdquo;. The Edge server is whatever service touches the HTTP request last before sending it to the client. Apache, NGINX, Varnish, pound&hellip; you want this to happen as far down the stack as you control. An ESI tag in your HTML looks like this:</p>
-<pre><code>&lt;esi:include src=&quot;http://example.com/user/customized/thing&quot; onerror=&quot;continue&quot;/&gt;
+<pre tabindex="0"><code>&lt;esi:include src=&quot;http://example.com/user/customized/thing&quot; onerror=&quot;continue&quot;/&gt;
 </code></pre><p>It&rsquo;s pretty clear, even to a human reader, what this tag means: &ldquo;replace this tag with the contents of <a href="http://example.com/user/customized/thing%22">http://example.com/user/customized/thing&quot;</a>. ESI actually supports some simple logic as well, but that&rsquo;s not really relevant to what we&rsquo;re doing here.</p>
 <p>The only difference between ESI and AJAX is where the placeholder is filled. With ESI it happens on the edge service, and with AJAX it happens in the client browser. There is a subtle difference here: a page with ESI will not be delivered until all the ESI calls have returned something, while an AJAX page will return right away, even if the components don&rsquo;t immediately appear. On the other hand, ESI is much better for degraded browsers. YMMV.</p>
 <p>The last method is using Cookies. You can store arbitrary information on cookies, as long as you&rsquo;re careful about security. That can be a very effective way to get certain limited information through a caching layer. Authcache actually comes with an example module for just such a use case. It passes the user&rsquo;s name and account URL in a cookie, so you can display it in a block.</p>
@@ -938,7 +938,7 @@ set -e
 <p>In our example, we will display the user&rsquo;s name, but backwards. Obviously you can do much more complex things with this, but it&rsquo;s nice to have a simple example!</p>
 <h1 id="declare-your-fields">Declare your fields</h1>
 <p>First we have to tell Display Suite about our new custom field. We do this with <a href="http://drupalcontrib.org/api/drupal/contributions!ds!ds.api.php/function/hook_ds_fields_info/7">hook_ds_fields_info()</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 <span style="color:#75715e">//@file: Add a custom suite to display suite for Users.
 </span><span style="color:#75715e"></span>
@@ -960,7 +960,7 @@ set -e
   <span style="color:#66d9ef">return</span>;
 }
 </code></pre></div><p>Any guesses whathappens next? That&rsquo;s right, we have to write our render function under the name we just declared. You can put anything here, really anything renderable at all.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * Render function for the Backwards Username field.
 </span><span style="color:#e6db74"> */</span>
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_backwards_username</span>($field) {
@@ -1005,7 +1005,7 @@ set -e
 <p>There are actually two possible solutions to this warning (that I can think of), and they illustrate some of the useful &ldquo;power user&rdquo; features of Drush that any frequent user should be aware of.</p>
 <p>The warning is there because drush would <em>prefer</em> to rsync the DB dump from site1 to site2, rather than a one time copy. Rsync has lots of speed improvements, not the least being diff transfer. When transferring an updated copy of a file which already exists at the destination, rsync will only send over the changes rather than the whole file. This is pretty useful if you&rsquo;re dealing with a large, text based file like an SQL dump - especially one that you&rsquo;ll be transferring often. In order to use this efficient processing though, Drush needs to know a safe path where it can store the DB dump in each location.</p>
 <p>First we&rsquo;ll add the <em>%dump-dir%</em> attribute to our alias for clientsite:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 <span style="color:#75715e">// Site clientsite, environment live 
 </span><span style="color:#75715e"></span>$aliases[<span style="color:#e6db74">&#39;live&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
   <span style="color:#e6db74">&#39;parent&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;@parent&#39;</span>,
@@ -1020,9 +1020,9 @@ set -e
 );
 </code></pre></div><p>Notice that <em>%dump-dir</em> actually goes in a special sub-array for <em>path-aliases</em>. This is very likely the only time you&rsquo;ll need to use that section, since most everything else in there is auto-detected. This is the directory on the remote side where drush will store the dump.</p>
 <p>Our options come in with the <em>@self</em> alias. In a local dev environment, the most common way to handle this is in your <em>drushrc.php</em> file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$options[<span style="color:#e6db74">&#39;dump-dir&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;~/.drush/db_dumps&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$options[<span style="color:#e6db74">&#39;dump-dir&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;~/.drush/db_dumps&#39;</span>;
 </code></pre></div><p>But this won&rsquo;t work for all cases. You can also take advantage of Drush&rsquo;s alias handling by creating a site alias with the settings you want, and letting Drush merge those settings into <em>@self</em>. When Drush builds its' cache of path aliases, it uses the site path as the cache key (for local sites only). That means that if you have a local alias with the same path as whatever <em>@self</em> happens to resolve to, your alias options will make it into the definition for <em>@self</em>. So here&rsquo;s the alternate solution:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$aliases[<span style="color:#e6db74">&#39;localdev&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$aliases[<span style="color:#e6db74">&#39;localdev&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
   <span style="color:#e6db74">&#39;root&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;/Users/cvertesi/Sites/clientsite&#39;</span>,
   <span style="color:#e6db74">&#39;uri&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;default&#39;</span>,
   <span style="color:#e6db74">&#39;path-aliases&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">array</span>(
@@ -1046,38 +1046,38 @@ set -e
 <p>Very often your site will diverge from the install profile as it takes on a life of its own, and it will be useful to convert it to &ldquo;vanilla&rdquo; Drupal. Today I&rsquo;ll use a relatively simple example of a musician site which is moving away from the <a href="https://drupal.org/project/pushtape">Pushtape</a> distribution. Later I&rsquo;ll return to this subject with the much more in-depth example of moving a community site away from <a href="https://drupal.org/project/commons">Drupal Commons</a>.</p>
 <h2 id="move-things-around">Move things around</h2>
 <p>Install profiles have all their files stored in the site root&rsquo;s <em>profiles/</em> directory. The first step is going to be moving everything out of there. In the case of pushtape, we have libraries, modules, and a theme stored in there. We&rsquo;re going to move them to a more normal location.</p>
-<pre><code class="language-console" data-lang="console"># mkdir sites/all/libraries
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># mkdir sites/all/libraries
 # mv profiles/pushtape/libraries/* sites/all/libraries
-
-# mkdir sites/all/modules/custom
+<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span># mkdir sites/all/modules/custom
 # mv profiles/pushtape/modules/pushtape_* sites/all/modules/custom
 # mv profiles/pushtape/modules/* sites/all/modules
-
-# mkdir sites/all/themes
+<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span># mkdir sites/all/themes
 # mv profiles/pushtape/themes/* sites/all/themes
-</code></pre><p>Next we need to see if there are any variables set in the install profile which really depend on the profile directory. If there are, we&rsquo;ll have to set them again with the new path.</p>
-<pre><code class="language-console" data-lang="console"># cd profiles/pushtape
-# grep 'profiles/pushtape' * -R
-pushtape.install:  variable_set('sm2_path', 'profiles/pushtape/libraries/soundmanager2');
-</code></pre><p>In this case, we see one variable_set which tells the system where to find the soundmanager2 library. We can update that easily enough with drush:</p>
-<pre><code class="language-console" data-lang="console"># drush vset sm2_path 'sites/all/libraries/soundmanager2'
-</code></pre><p>Now we have to update Drupal&rsquo;s setting for which install profile was used to create the site.</p>
-<pre><code class="language-console" data-lang="console"># drush vset install_profile standard
-</code></pre><p>In some cases this will be enough to work. Personally I like to keep my modules folder more organized, so I go the extra mile:</p>
-<pre><code class="language-console" data-lang="console"># cd sites/all/modules
+</code></pre></div><p>Next we need to see if there are any variables set in the install profile which really depend on the profile directory. If there are, we&rsquo;ll have to set them again with the new path.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># cd profiles/pushtape
+# grep <span style="color:#e6db74">&#39;profiles/pushtape&#39;</span> * -R
+pushtape.install:  variable_set(&#39;sm2_path&#39;, &#39;profiles/pushtape/libraries/soundmanager2&#39;);
+</code></pre></div><p>In this case, we see one variable_set which tells the system where to find the soundmanager2 library. We can update that easily enough with drush:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># drush vset sm2_path <span style="color:#e6db74">&#39;sites/all/libraries/soundmanager2&#39;</span>
+</code></pre></div><p>Now we have to update Drupal&rsquo;s setting for which install profile was used to create the site.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># drush vset install_profile standard
+</code></pre></div><p>In some cases this will be enough to work. Personally I like to keep my modules folder more organized, so I go the extra mile:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># cd sites/all/modules
 # mkdir contrib
-# mv !(custom|contrib) contrib
-</code></pre><p>I also separated out the custom code from the features. You can figure out which custom modules implement features with <em>find . |grep features</em>, and move them into a separate directory manually.</p>
+# mv !<span style="color:#f92672">(</span>custom|contrib<span style="color:#f92672">)</span> contrib
+</code></pre></div><p>I also separated out the custom code from the features. You can figure out which custom modules implement features with <em>find . |grep features</em>, and move them into a separate directory manually.</p>
 <h2 id="clearing-caches">Clearing caches</h2>
 <p>Once you&rsquo;re done moving things around, CLEAR CACHES. Drupal keeps an index of module, library, and theme directories, and you just broke it.</p>
-<pre><code>drush cc all
+<pre tabindex="0"><code>drush cc all
 </code></pre><p>The only problem is, in many cases you will have moved a module that is required for drupal bootstrap. So you&rsquo;ll have to get the handy drush tool <a href="https://drupal.org/project/registry_rebuild">Registry Rebuild</a>, and run that before your cache clear:</p>
-<pre><code class="language-console" data-lang="console"># drush dl registry_rebuild
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># drush dl registry_rebuild
 # drush rr
 # drush cc all
-</code></pre><h2 id="extra-cleanup">Extra Cleanup</h2>
+</code></pre></div><h2 id="extra-cleanup">Extra Cleanup</h2>
 <p>As commenter @ericaitala notes, you may need some followup cleanup to really get all traces out. The easiest way to do this is from the SQL command line, which you can access via drush:</p>
-<pre><code>drush sqlq &quot;DELETE FROM `system` WHERE filename LIKE 'profiles/profilename/profilename.profile&quot;
+<pre tabindex="0"><code>drush sqlq &quot;DELETE FROM `system` WHERE filename LIKE 'profiles/profilename/profilename.profile&quot;
 drush sqlq &quot;UPDATE `system` SET status=1 WHERE filename LIKE 'profiles/standard/standard.profile'&quot;
 </code></pre><p>Technically these should both be covered by the registry_rebuild operation, but we&rsquo;re doing it by hand because it seems to be missed in some operations. The first command removes the entry for the profile from Drupal&rsquo;s system table - it removes any knowledge Drupal has that there was an install profile there. The second tells Drupal that the &ldquo;standard&rdquo; install profile is active, and should be checked for updates.</p>
 <p>That&rsquo;s it - your site is now officially a vanilla Drupal install. Test by removing the profiles/pushtape directory, clearing caches, and browsing around your site.</p>
@@ -1100,7 +1100,7 @@ drush sqlq &quot;UPDATE `system` SET status=1 WHERE filename LIKE 'profiles/stan
 </ol>
 <hr>
 <p>Ctools, like Views, needs a hook to declare the fact that you have custom code. To do this we&rsquo;ll use <em><a href="http://drupalcontrib.org/api/drupal/contributions!ctools!ctools.api.php/function/hook_ctools_plugin_directory/7">hook_ctools_plugin_directory</a></em>. This hook is invoked for all Ctools plugin types, and includes the module name as a variable. This way you can avoid eating up memory for anything except the targeted module. You also have to declare where your custom code will live. So here&rsquo;s the complete content of <em>mymodule.module</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 <span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * Implements hook_ctools_plugin_directory().
@@ -1117,7 +1117,7 @@ drush sqlq &quot;UPDATE `system` SET status=1 WHERE filename LIKE 'profiles/stan
 <hr>
 <p>Oh, did you think this would be more difficult? Now that we&rsquo;ve told Ctools to look for Content Type plugins in our module&rsquo;s <em>plugins/content_types</em> subdirectory, we just add a <em>.inc</em> file for each &ldquo;Content Type&rdquo; (aka Pane) that we want to add. Let&rsquo;s do a simple one, which returns the root term of a given taxonomy term. All the following code will go in <em>plugins/content_types/taxonomy_root_term.inc</em> (a name I chose arbitrarily).</p>
 <p>Right at the top of the file, we provide a <em>$plugin</em> array which defines the basic information about our <!-- raw HTML omitted -->Pane<!-- raw HTML omitted --> Ctools Content Type. This doesn&rsquo;t go into a function or anything, it just sits at the top of the <em>.inc</em> file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
   <span style="color:#e6db74">&#39;single&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">TRUE</span>,
@@ -1132,7 +1132,7 @@ $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</
 );
 </code></pre></div><p>As you can see, this array defines a category, title, and description for the Panels admin interface. It also declares the names of the callbacks which provide the pane&rsquo;s edit form, rendered form, and admin info. &ldquo;Single&rdquo; means that this type has no sub-types. This is the case in every single custom pane I&rsquo;ve ever seen, so it&rsquo;s probably the case for yours as well.</p>
 <p>Now we write the callbacks we named in that array. We&rsquo;ll start with the edit form.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
 <span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * Edit form.
 </span><span style="color:#e6db74"> */</span>
@@ -1165,7 +1165,7 @@ $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</
  <span style="color:#66d9ef">return</span> $form;
 }
 </code></pre></div><p>This is a fairly standard Drupal form. It also goes through typical form validation and submission functions, so you can provide a pretty complete experience for the administrator. In our case, we just want to get the term ID of the term whose root parent should be displayed. We let the administrator enter the term ID, and the view mode which should be used to display it. We won&rsquo;t worry about form validation in our example. Let&rsquo;s move on to the Submit function:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * Edit form submit function.
 </span><span style="color:#e6db74"> */</span>
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_taxonomy_root_term_submit</span>($form, <span style="color:#f92672">&amp;</span>$form_state) {
@@ -1173,7 +1173,7 @@ $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</
   $form_state[<span style="color:#e6db74">&#39;conf&#39;</span>][<span style="color:#e6db74">&#39;view_mode&#39;</span>] <span style="color:#f92672">=</span> $form_state[<span style="color:#e6db74">&#39;values&#39;</span>][<span style="color:#e6db74">&#39;view_mode&#39;</span>];
 }
 </code></pre></div><p>Again, pretty simple stuff. We just make sure that the <em>$form_state[&lsquo;conf&rsquo;]</em> has the values entered. Now, the next callback we defined in <em>$plugin</em> is for rendering the pane:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * Render the panel.
 </span><span style="color:#e6db74"> */</span>
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_taxonomy_root_term_render</span>($subtype, $conf, $args, $contexts) {
@@ -1197,7 +1197,7 @@ $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</
 }
 </code></pre></div><p>First we make sure there is information - ie the taxonomy term ID we need - in the pane&rsquo;s context. Then we get the root term object and render it in the requested display mode. The only requirement for the return here is that it be a <a href="https://drupal.org/node/930760">Drupal render array</a>. So depending on your use case, you can return an image, a field&hellip; whatever you like. In most cases a block is a convenient wrapper for whatever you have to return, which is what I did here.</p>
 <p>This is as far as you have to go. The admin info callback isn&rsquo;t actually required, just don&rsquo;t include it in the <em>$plugin</em> array and you&rsquo;ll be fine. But if you want to make your life easier as a site admin, it&rsquo;s definitely a nice to have.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * Admin info.
 </span><span style="color:#e6db74"> */</span>
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_taxonomy_root_term_info</span>($subtype, $conf, $contexts) {
@@ -1248,7 +1248,7 @@ $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</
 </ol>
 <hr>
 <p>We implement <em><a href="https://api.drupal.org/api/views/views.api.php/function/hook_views_api/7">hook_views_api</a></em> to let Views know that our module provides some code for Views, and what version of the Views API we&rsquo;re using.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 <span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * Implements hook_views_api().
@@ -1269,7 +1269,7 @@ $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</
 <p>First let&rsquo;s look at a real field definiton though, because it&rsquo;s simpler. Here&rsquo;s how we would define a real DB table as a data source. The table looks like this:</p>
 <!-- raw HTML omitted -->
 <p>So here&rsquo;s our implementation of <em>hook_views_data</em>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * Implements hook_views_data().
 </span><span style="color:#e6db74"> */</span>
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_views_data</span>() {
@@ -1326,8 +1326,8 @@ $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</
 <li>Write your custom handler</li>
 </ol>
 <hr>
-<p>Let&rsquo;s say we want to provide our own field handler for the name field. Maybe we want it to automatically separate first names. This is easy, too! You simply decide on a name for your new handler - by convention it should begin with *modulename_handler_type_*, so we&rsquo;ll use *mymodule_handler_field_firstname*. Here&rsquo;s the relevant part of that *$data* array from before:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">...</span>
+<p>Let&rsquo;s say we want to provide our own field handler for the name field. Maybe we want it to automatically separate first names. This is easy, too! You simply decide on a name for your new handler - by convention it should begin with <em>modulename_handler_type_</em>, so we&rsquo;ll use <em>mymodule_handler_field_firstname</em>. Here&rsquo;s the relevant part of that <em>$data</em> array from before:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">...</span>
     <span style="color:#75715e">// Now the name field.
 </span><span style="color:#75715e"></span>    <span style="color:#e6db74">&#39;name&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">array</span>(
       <span style="color:#e6db74">&#39;title&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;Name&#39;</span>),
@@ -1339,7 +1339,7 @@ $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</
 <span style="color:#f92672">...</span>
 </code></pre></div><p>Not exactly rocket science, is it?</p>
 <p>Now we create a file named after the handler, also in the <em>/views</em> subdirectory. Though you could write your own handler class from scratch, you&rsquo;ll almost never have to. It&rsquo;s much easier to just extend an existing class.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 
 <span style="color:#e6db74">/**
 </span><span style="color:#e6db74"> * @file
@@ -1363,7 +1363,7 @@ $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</
 }
 </code></pre></div><p>You see the pattern we&rsquo;re following: just name a handler, then extend an existing Views handler class to do what you want. You can override options forms, the admin summary&hellip; really any aspect of the way Views handles this data. And the pattern is the same for fields, sorts, filters, and arguments.</p>
 <p>Once you&rsquo;ve created your handler&rsquo;s <em>.inc</em> file, you have to make sure your module loads it. So edit your module&rsquo;s <em>.info</em> file thusly:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">My Module</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">My Module</span>
 <span style="color:#a6e22e">description</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">Demo module from ohthehugemanatee.org</span>
 <span style="color:#a6e22e">core</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">7.x</span>
 
@@ -1374,7 +1374,7 @@ $plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</
 <hr>
 <p>We all understand how this works for data that you&rsquo;re declaring for the first time in Views. But what if you want to provide multiple handlers for a single field? Maybe there are several different ways to filter or sort it. For most use cases, you should just follow the pattern above, and simply override the Views options form in your handler class. But occasionally you really do need multiple handlers.</p>
 <p>So let&rsquo;s add a second and third field handler for our <em>name</em> field:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">...</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">...</span>
     <span style="color:#75715e">// Now the name field. This is the first, and &#39;real&#39; definition for this field.
 </span><span style="color:#75715e"></span>    <span style="color:#e6db74">&#39;name&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">array</span>(
       <span style="color:#e6db74">&#39;title&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;Name&#39;</span>),
