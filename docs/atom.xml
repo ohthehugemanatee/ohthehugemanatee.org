@@ -136,6 +136,39 @@
 ]]></content>
   </entry>
   <entry>
+    <title type="html"><![CDATA[5 Project Manager Comments That Out You as an Amateur]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2021/03/22/5-project-manager-comments-that-out-you-as-an-amateur/"/>
+    <id>https://ohthehugemanatee.org/blog/2021/03/22/5-project-manager-comments-that-out-you-as-an-amateur/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2021-03-22T10:13:04+01:00</published>
+    <updated>2021-03-22T10:13:04+01:00</updated>
+    <content type="html"><![CDATA[<p>A lot of the project managers you&rsquo;ll meet in technical consulting are new. That&rsquo;s OK! The number of developers - and correspondingly, their project managers - is growing exponentially from year to year. Even if we could assign everyone a mentor with at least a year of experience, there wouldn&rsquo;t be enough mentors to go around. A lot of people are learning as they go, and land in a role because someone thinks they have an aptitude.</p>
+<p>That said, the downside to this explosive growth is that there aren&rsquo;t always strong norms that show newcomers how highly successful professional technical project management actually <em>looks</em>, in practice. People end up substituting what makes them feel good, or what suits their personality, for what&rsquo;s actually successful in an evidence-based way.</p>
+<p>So here&rsquo;s a bit of insight in list-icle format for you: 10 things that learner PMs say that make them look like amateurs.</p>
+<h2 id="5-oh-wow-look-at-your-calendar-i-cant-work-that-way-planning-every-block-of-time">5) &ldquo;Oh wow, look at your calendar. I can&rsquo;t work that way, planning every block of time.&rdquo;</h2>
+<p>Effective and precise management of a project extends necessarily into precise control of time. A good project manager has a lot of competing demands on their time. &ldquo;Ad hoc&rdquo; planning ultimately translates into &ldquo;whatever fire is most visible for me at the moment.&rdquo; This is not the same as the most important activities. These people will always find themselves with fires to put out, however, which can make them feel like real heroes!</p>
+<h2 id="4-whatever-the-customer-says">4) &ldquo;Whatever the customer says&hellip;&rdquo;</h2>
+<p>It often feels like the customer should always be right. It <em>is</em> their property you&rsquo;re building, after all! But a consultant&rsquo;s job is (usually) not just blindly implementing. The real value is in the consultant&rsquo;s unique insight: if the customer knew how best to solve the problem, they would have done it themselves! This means that good consulting necessarily involves a certain amount of conflict, or &ldquo;push back&rdquo; if you prefer. Blindly doing whatever the customer thinks is not the mark of a professional.</p>
+<h2 id="3-we-have-to-get-this-done-on-time-i-dont-care-what-it-takes">3) &ldquo;We <em>have</em> to get this done on time, I don&rsquo;t care what it takes&rdquo;</h2>
+<p>No, we don&rsquo;t. Development is a creative activity; tasks are very hard to estimate accurately. No matter what the customer&rsquo;s deadline is, even if you set the deadline yourselves, it does not have priority over the reality of how long it takes to build something well. A good PM identifies early when reality will diverge from estimated timelines, and <em>manages</em> the situation by adjusting project scope, team size, or deadlines.</p>
+<h2 id="2-ive-been-working-60-hour-weeks">2) &ldquo;I&rsquo;ve been working 60 hour weeks&hellip;&rdquo;</h2>
+<p>Especially in North America, it&rsquo;s easy for overwork to feel like a virtue. Leaving the cultural aspect aside, the project manager&rsquo;s <em>job</em> is to control scarce work resources over time. If they can&rsquo;t manage their own scarce work resources over time (only 40 hours each week!), they certainly can&rsquo;t manage for a team of other people!</p>
+<h2 id="1-i-dont-bother-with-estimates--how-many-hours-will-this-take">1) &ldquo;I don&rsquo;t bother with estimates&hellip;&rdquo; / &ldquo;How many hours will this take?&rdquo;</h2>
+<p>There is an entire (Nobel Prize winning) field of research on best approaches to estimation. To no one&rsquo;s surprise, estimation in time is one of the least accurate options. So inaccurate, that it appears in some situations to be worse than no estimates at all. Both of these comments indicate a PM who has never run estimates using any of the more effective approaches suggested by research, such as three-part estimation, third party estimation, or abstracted unit estimation. Any of those produce usefully accurate results. My own team&rsquo;s timelines land within 5% of reality over a 4 month project, and we can predict updates based on changes in scope or architecture weeks or months in advance. We&rsquo;re not doing anything magical or revolutionary, just some basic math with abstracted estimation units.</p>
+<p>I hope this helps some new PMs out there. <strong>TL;DR</strong>:</p>
+<ul>
+<li>Get control of your schedule. Use some kind of a system to ensure you&rsquo;re spending your scarce time on the most <em>important</em> tasks, not the most urgent.</li>
+<li>Don&rsquo;t be afraid to push back on stupid customer requests! The customer is there for <em>your</em> advice. If something won&rsquo;t work, or is counter-productive, or endangers the timeline, <em>tell them about it</em>. Document that you had the conversation. If the customer still decides to proceed, you can proceed with a clear conscience and likely a better idea of why.</li>
+<li>No one wins from rushed, poor quality development at the end of a project. When it starts to look like you&rsquo;ll have a timeline crunch, <em>talk to your customer</em>. Help them decide how to adjust the scope, team size, or deadline so the crunch disappears.</li>
+<li>Limit your work time to &ldquo;just&rdquo; 40 hours per week. Do not take your laptop home with you, do not open your email after hours. This forces you to be effective with the above.</li>
+<li>Learn about different estimation systems. Go read some articles about how different Agile frameworks do it, and consider the core principles that they all share. Start estimating in <em>some</em> way that&rsquo;s more accurate than asking people for hours, and track the variance from reality over time. Estimate + variance = accurate, actionable estimates.</li>
+</ul>
+<p>The core job of a project manager is to <em>talk with your customer</em> when it looks like you need to adjust scope, deadline, or team size&hellip; and to do that as early as possible. If you make some effort towards accurate estimated timelines, constantly compare your timeline to what&rsquo;s happening in reality, and help your customer adjust scope/team/deadline when the numbers seem off&hellip; Congratulations, you are a good project manager.</p>
+]]></content>
+  </entry>
+  <entry>
     <title type="html"><![CDATA[How to Format Video for Fast Playback on the Web]]></title>
     <link href="https://ohthehugemanatee.org/blog/2020/11/11/how-to-format-video-for-fast-playback-on-the-web/"/>
     <id>https://ohthehugemanatee.org/blog/2020/11/11/how-to-format-video-for-fast-playback-on-the-web/</id>
@@ -1251,91 +1284,6 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p>However you feel about the Crellpocalypse, please don&rsquo;t leave. Not yet. Stay, and help the community improve. Don&rsquo;t stay for your job. Don&rsquo;t stay for Dries, or the DA, or Larry. Stay for the community.</p>
 <p><strong><a href="https://events.drupal.org/baltimore2017/balti-more-prenote-balti-most-fun-drupalcon">I&rsquo;ll see you at the Prenote.</a></strong></p>
 <p><img src="/images/DrupalConAsia-2.jpg" alt="The Prenote: The most fun you can have at Drupalcon."></p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[What Crell doesn&#39;t want you to know: how to automate letsencrypt on platform.sh]]></title>
-    <link href="https://ohthehugemanatee.org/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/"/>
-    <id>https://ohthehugemanatee.org/blog/2017/02/21/what-crell-doesnt-want-you-to-know-how-to-automate-letsencrypt-on-platform-dot-sh/</id>
-    <author>
-      <name>Campbell Vertesi (ohthehugemanatee)</name>
-    </author>
-    <published>2017-02-21T22:33:08+00:00</published>
-    <updated>2017-02-21T22:33:08+00:00</updated>
-    <content type="html"><![CDATA[<p>If you believe the <a href="https://docs.platform.sh/development/going-live.html#prerequisites">docs</a> and the <a href="https://twitter.com/damz/status/672559665377501184">twitters</a>, there is no way to automate <a href="https://letsencrypt.org/">letsencrypt</a> certificates updates on <a href="https://platform.sh/">platform.sh</a>. You have to create the certificates manually, upload them manually, and maintain them manually.</p>
-<p>But as readers of this blog know, the docs are only the start of the story. I&rsquo;ve really enjoyed working with platform.sh with one of my private clients, and I couldn&rsquo;t believe that with all the flexibility - all the POWER - letsencrypt was really out of reach. I found a few attempts to script it, and one really great <a href="https://gitlab.com/snippets/27467">snippet on gitlab</a>. But no one had ever really synthesized this stuff into an easy howto. So here we go.</p>
-<h3 id="1-add-some-writeable-directories-where-platformsh-cli-and-letsencrypt-need-them">1) Add some writeable directories where platform.sh CLI and letsencrypt need them.</h3>
-<p>Normally when Platform deploys your application, it puts it all in a read-only filesystem. We&rsquo;re going to mount some special directories read-write so all the letsencrypt/platform magic can work.</p>
-<p>Edit your application&rsquo;s <code>.platform.app.yaml</code> file, and find the <code>mounts:</code> section. At the bottom, add these three lines. Make sure to match the indents with everything else under the <code>mounts:</code> section!</p>
-<pre tabindex="0"><code>    &quot;/web/.well-known&quot;: &quot;shared:files/.well-known&quot;
-    &quot;/keys&quot;: &quot;shared:files/keys&quot;
-    &quot;/.platformsh&quot;: &quot;shared:files/.platformsh&quot;
-</code></pre><p>Let&rsquo;s walk through each of these:</p>
-<ul>
-<li>/web/.well-known: In order to confirm that you actually control example.com, letsencrypt drops a file somewhere on your website, and then tries to fetch it. This directory is where it&rsquo;s going to do the drop and fetch. My webroot is <code>web</code>, you should change this to match your own environment. You might use <code>public</code> or <code>www</code> or something.</li>
-<li>/keys: You have to store your keyfiles SOMEWHERE. This is that place.</li>
-<li>/.platformsh: Your master environment needs a bit of configuration to be able to login to platform and update the certs on your account. This is where that will go.</li>
-</ul>
-<h3 id="2-expose-the-well-known-directory-to-the-internet">2) Expose the .well-known directory to the Internet</h3>
-<p>I mentioned above that letsencrypt test your control over a domain by creating a file which it tries to fetch over the Internet. We already created the writeable directory where the scripts can drop the file, but platform.sh (wisely) defaults to hide your directories from the Internet. We&rsquo;re going to add some configuration to the &ldquo;web&rdquo; app section to expose this .well-known directory. Find the <code>web:</code> section of your <code>.platform.app.yaml</code> file, and the <code>locations:</code> section under that. At the bottom of that section, add this:</p>
-<pre tabindex="0"><code>      '/.well-known':
-            # Allow access to all files in the public files directory.
-            allow: true
-            expires: 5m
-            passthru: false
-            root: 'web/.well-known'
-            # Do not execute PHP scripts.
-            scripts: false
-</code></pre><p>Make sure you match the indents of the other location entries! In my (default) <code>.platform.app.yaml</code> file, I have 8 spaces before that <code>'/.well-known':</code> line. Also note that the <code>root:</code> parameter there also uses my webroot directory, so adjust that to fit your environment.</p>
-<h3 id="3-download-the-binaries-you-need-during-the-application-build-phase">3) Download the binaries you need during the application &ldquo;build&rdquo; phase</h3>
-<p>In order to do this, we&rsquo;re going to need to have the platform.sh CLI tool, and a let&rsquo;s encrypt CLI tool called lego. We&rsquo;ll download them during the &ldquo;build&rdquo; phase of your application. Still in the <code>platform.app.yaml</code> file, find the <code>hooks:</code> section, and the <code>build:</code> section under that. Add these steps to the bottom of the build:</p>
-<pre tabindex="0"><code>      cd ~
-      curl -sL https://github.com/xenolf/lego/releases/download/v0.3.1/lego_linux_amd64.tar.xz | tar -C .global/bin -xJ --strip-components=1 lego/lego
-      curl -sfSL -o .global/bin/platform.phar https://github.com/platformsh/platformsh-cli/releases/download/v3.12.1/platform.phar
-</code></pre><p>We&rsquo;re just downloading reasonably recent releases of our two tools. If anyone has a better way to get the latest release of either tool, please let me know. Otherwise we&rsquo;re stuck keeping this up to date manually.</p>
-<h3 id="4-configure-the-platformsh-cli">4) Configure the platform.sh CLI</h3>
-<p>In order to configure the platform.sh CLI on your server, we have to deploy the changes from steps 1-3. Go ahead and do that now. I&rsquo;ll wait.</p>
-<p>Now connect to your platform environment via SSH (<code>platform ssh -e master</code> for most of us). First we&rsquo;ll add a config file for platform. Edit a file in <code>.platformsh/config.yaml</code> with the editor of choice. You don&rsquo;t have to use vi, but it will win you some points with me. Here are the contents for that file:</p>
-<pre tabindex="0"><code>updates:
-    check: false
-api:
-    token_file: token
-</code></pre><p>Pretty straightforward: this tells platform not to bother updating the CLI tool automatically (it can&rsquo;t - read-only filesystem, remember?). It then tells it to login using an API token, which it can find in the file <code>.platformsh/token</code>. Let&rsquo;s create that file next.</p>
-<p>Log into the platform.sh web UI (you can launch it with <code>platform web</code> if you&rsquo;re feeling sassy), and navigate to your account settings &gt; api tokens. That&rsquo;s at <code>https://accounts.platform.sh/user/12345/api-tokens</code> (with your own user ID of course). Add an API token, and copy its value into <code>.platformsh/token</code> on the environment we&rsquo;re working on. The token should be the only contents of that file.</p>
-<p>Now let&rsquo;s test it by running <code>php /app/.global/bin/platform.phar auth:info</code>. If you see your account information, congratulations! You have a working platform.sh CLI installed.</p>
-<h3 id="5-request-your-first-certificate-by-hand">5) Request your first certificate by hand</h3>
-<p>Still SSH&rsquo;ed into that environment, let&rsquo;s see if everything works.</p>
-<pre tabindex="0"><code>lego --email=&quot;support@example.com&quot; --domains=&quot;www.example.com&quot; --webroot=/app/public/ --path=/app/keys/ -a run
-csplit -f /app/keys/certificates/www.example.com.crt- /app/keys/certificates/www.example.com.crt '/-----BEGIN CERTIFICATE-----/' '{1}' -z -s
-php /app/.global/bin/platform.phar domain:update -p $PLATFORM_PROJECT --no-wait --yes --cert /app/keys/certificates/www.example.com.crt-00 --chain /app/keys/certificates/www.example.com.crt-01 --key /app/keys/certificates/www.example.com.key example.com
-</code></pre><p>This is three commands: register the cert with letsencrypt, then split the resulting file into it&rsquo;s components, then register those components with platform.sh. If you didn&rsquo;t get any errors, go ahead and test your site - it&rsquo;s got a certificate! (yay)</p>
-<h3 id="6-set-up-automatic-renewals-on-cron">6) Set up automatic renewals on cron</h3>
-<p>Back to <code>.platform.app.yaml</code>, look for the <code>crons:</code> section. If you&rsquo;re running drupal, you probably have a drupal cronjob in there already. Add this one at the bottom, matching indents as always.</p>
-<pre tabindex="0"><code>    letsencrypt:
-        spec: '0 0 1 * *'
-        cmd: '/bin/sh /app/scripts/letsencrypt.sh'
-</code></pre><p>Now let&rsquo;s create the script. Add the file <code>scripts/letsencrypt.sh</code> to your repo, with this content:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/usr/bin/env bash
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># Checks and updates the letsencrypt HTTPS cert.</span>
-
-set -e
-
-<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$PLATFORM_ENVIRONMENT<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;master-7rqtwti&#34;</span> <span style="color:#f92672">]</span>
-  <span style="color:#66d9ef">then</span>
-    <span style="color:#75715e"># Renew the certificate</span>
-    lego --email<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;example@example.org&#34;</span> --domains<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;example.org&#34;</span> --webroot<span style="color:#f92672">=</span>/app/web/ --path<span style="color:#f92672">=</span>/app/keys/ -a renew
-    <span style="color:#75715e"># Split the certificate from any intermediate chain</span>
-    csplit -f /app/keys/certificates/example.org.crt- /app/keys/certificates/example.org.crt <span style="color:#e6db74">&#39;/-----BEGIN CERTIFICATE-----/&#39;</span> <span style="color:#e6db74">&#39;{1}&#39;</span> -z -s
-    <span style="color:#75715e"># Update the certificates on the domain</span>
-    php /app/.global/bin/platform.phar domain:update -p $PLATFORM_PROJECT --no-wait --yes --cert /app/keys/certificates/example.org.crt-00 --chain /app/keys/certificates/example.org.crt-01 --key /app/keys/certificates/example.org.key example.org
-<span style="color:#66d9ef">fi</span>
-</code></pre></div><p>Obviously you should replace all those <code>example.org</code>s and email addresses with your own domain. Make the file executable with <code>chmod u+x scripts/letsencrypt.sh</code>, commit it, and push it up to your platform.sh environment.</p>
-<h3 id="7-send-a-bragging-email-to-crell">7) Send a bragging email to Crell</h3>
-<p>Technically this isn&rsquo;t supposed to be possible, but YOU DID IT! Make sure to rub it in.</p>
-<p><img src="/images/larry-garfield.jpg" alt="&ldquo;Larry is waiting to hear from you. (photo credit Jesus Manuel Olivas)""></p>
-<p>Good luck!</p>
-<p>PS - I&rsquo;m just gonna link one more time to the guy whose snippet made this all possible: <a href="https://www.drupal.org/u/hanoii">Ariel Barreiro</a> did the hardest part of this. I&rsquo;m grateful that he made his notes public!</p>
 ]]></content>
   </entry>
 </feed>
