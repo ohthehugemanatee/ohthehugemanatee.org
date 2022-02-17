@@ -2,13 +2,32 @@
   <title>Oh The Huge Manatee!</title>
   <link href="https://ohthehugemanatee.org/atom.xml" rel="self"/>
   <link href="https://ohthehugemanatee.org/"/>
-  <updated>2021-11-12T19:15:33+01:00</updated>
+  <updated>2022-02-16T21:17:35+01:00</updated>
   <id>https://ohthehugemanatee.org/</id>
   <author>
     <name>Campbell Vertesi (ohthehugemanatee)</name>
     <uri>https://ohthehugemanatee.org/</uri>
   </author>
   <generator>Hugo -- gohugo.io</generator>
+  <entry>
+    <title type="html"><![CDATA[Starting a New Role: Partner Technical Strategy CTO for Red Hat]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2022/02/16/starting-a-new-role-partner-technical-strategy-cto-for-red-hat/"/>
+    <id>https://ohthehugemanatee.org/blog/2022/02/16/starting-a-new-role-partner-technical-strategy-cto-for-red-hat/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2022-02-16T21:17:35+01:00</published>
+    <updated>2022-02-16T21:17:35+01:00</updated>
+    <content type="html"><![CDATA[<p>This month I start a new challenge at Microsoft, as <strong>Global Partner Strategy ISV CTO</strong> for Red Hat. Translated: I am taking on technical leadership of the <a href="https://blogs.microsoft.com/blog/2015/11/04/microsoft-and-red-hat-partner-to-deliver-more-flexibility-and-choice/">Microsoft/Red Hat partnership</a>.</p>
+<p><img src="/images/microsoft-redhat-puzzle.jpg" alt="Microsoft and Red Hat logos as puzzle pieces fitting together" title="The Microsoft-Red Hat partnership"></p>
+<p>I had a wonderful and fruitful 4 years as a technical and team lead in the Commercial Software Engineering department, continuing my project-based work with some of Microsoft&rsquo;s biggest commercial customers. I got to build interesting projects with brilliant engineers, working in close collaboration with Volkswagen, Daimler, E.ON, the United Nations, and others. I got to learn what it&rsquo;s like working in an enormous company like Microsoft, and how global enterprises engage with each other.</p>
+<p>Working with Red Hat is an exciting next step for me. Red Hat 5.2 was my first exposure to Linux back in 1998, and though I never did get it working successfully, I tried again a couple of years later and built my first homemade router and file server on 6.1. It was my go-to distro for years: when I ran a research lab in university, the systems and servers were all Red Hat 8. If someone had told me back then, that 20 years later <em>this</em> would be my job, I wouldn&rsquo;t have believed it.</p>
+<p>I feel like my life has completed one of those little circles, and I am over the moon about where I landed.</p>
+<p>Microsoft and Red Hat have a lot in common: they are both enterprise focused, with strong technical fundamentals in infrastructure and cloud native in particular. Of all the hyperscalers Azure is the one that treats hybrid cloud as a first class citizen, and not just an onramp to public cloud. Red Hat is also hybrid focused, with a suite of powerful products  including Openshift, Ansible, and others. Though Microsoft has made great leaps in open source, we have a lot to learn by working closely with a company for whom open source principles are truly fundamental. And enterprise-focused though RedHat is, no one meets enterprise where they live as well as Microsoft.</p>
+<p>With all this in common, and so much to learn from each other, the partnership is already a warm and welcoming place to land. In my first weeks here it is clear that this is very fertile ground. Look for exciting things to come!</p>
+<p>Thank you to all my colleagues from Microsoft Commercial Software Engineering. I had a lot of fun with you, and learned a lot. On to the next adventure!</p>
+]]></content>
+  </entry>
   <entry>
     <title type="html"><![CDATA[Building blocks for autonomous driving simulation environments]]></title>
     <link href="https://ohthehugemanatee.org/blog/2021/11/12/building-blocks-for-autonomous-driving-simulation-environments/"/>
@@ -1254,36 +1273,6 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 </ul>
 <p>Okay, now that&rsquo;s really it. Happy feeding!</p>
 <p><img src="/images/feed-me-seymour.gif" alt="&ldquo;Feed me, Seymour!""></p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[Stay for community]]></title>
-    <link href="https://ohthehugemanatee.org/blog/2017/03/30/stay-for-community/"/>
-    <id>https://ohthehugemanatee.org/blog/2017/03/30/stay-for-community/</id>
-    <author>
-      <name>Campbell Vertesi (ohthehugemanatee)</name>
-    </author>
-    <published>2017-03-30T12:22:11+00:00</published>
-    <updated>2017-03-30T12:22:11+00:00</updated>
-    <content type="html"><![CDATA[<p>The <a href="https://www.garfieldtech.com/blog/tmi-outing">Crellpocalypse</a> in the Drupal world last week has shaken the entire community. This event and its handling have called our fundamental values and structures into question. We&rsquo;ve had <a href="https://www.reddit.com/r/drupal/comments/60y9mq/larry_garfield_on_harassment_in_the_drupal_project/">fights on social media</a>, calls for <a href="https://mikkel.hoegh.org/2017/03/23/vote-no-confidence-drupal-association-leadership">Dries to step down</a>, and valuable contributors <a href="https://janezurevc.name/time-take-some-time-drupal-community">stepping away from the community</a>. I have friends on every side of the situation, but all I can think is: <strong>This seems like the perfect time for a singing, dancing, spandexed pageant about the Drupal community.</strong></p>
-<p><img src="/images/drupalcon-la.jpg" alt="Twelve years of code, and singing the Drupalcon song with Dries and Larry is still one of my favorite memories."></p>
-<p><strong>Why?</strong> For those who don&rsquo;t know, I&rsquo;m one of the authors of the <a href="https://www.youtube.com/playlist?list=PLjVW3kqu-3e_Q41ETbML6RfbRssEdVvC4">DrupalCon Prenote</a>, the &ldquo;pre-keynote&rdquo; show that kicks off DrupalCon right before Dries' keynote. The organizer (and my officemate), Jeffrey A. &ldquo;jam&rdquo; McGuire and I have been living our own special version of the crisis (<strong>Read Jam&rsquo;s post about taking sides on this <a href="https://medium.com/@horncologne/drupal-im-taking-sides-f46194122a05">here</a></strong>). Our friend Larry Garfield has been an enthusiastic part of the Prenote ever since his first appearance as &ldquo;Lord Over-Engineering&rdquo; <a href="https://www.youtube.com/watch?v=i5bW41KYUE0&amp;list=PLjVW3kqu-3e_Q41ETbML6RfbRssEdVvC4&amp;index=20">at Drupalcon Austin</a>. Dries has often played a special guest role, too. With Drupalcon Baltimore looming on the horizon, everything seems to be coming together in one awful moment full of painful reminders - and it&rsquo;s just when we&rsquo;re supposed to be cheering for &ldquo;community.&rdquo; That awful conjunction is what makes this next Prenote in Baltimore more important than ever.</p>
-<p>I have a tremendous respect for how painful this whole situation is for everyone involved. This very public meltdown, which has already done tremendous material damage, is made even more painful by the personal friendships of the key people involved. Klaus, Dries, and Larry have been colleagues for more than a decade. Even if this was only a private falling out, it would have been a painful one. And this is a public explosion. I can&rsquo;t imagine the emotional strain that each of them is under right now. Internet mob outrage is a terrible experience, made much worse when it comes from your friends and colleagues, directed at your friends and colleagues.</p>
-<p><strong>And this is exactly why we need a Prenote right now.</strong> Because this is terrible shit that we&rsquo;re wading through, and the Prenote exists to remind us of why we should keep going. The Drupal community - not the specific leadership, but the agglomeration of people, practices, code, and rules - has a lot that&rsquo;s worth fighting for. We are the largest open source software community in the world, with a uniquely personal connection to its members. An incredible diversity of contributors from every culture imaginable who, for the most part, manage to work very well together.</p>
-<p><strong>The Drupal community is on the leading edge of how a community of this size and diversity can work.</strong>  No one has ever done this before. Things like our <a href="https://www.drupal.org/dcoc">Code of Conduct</a>, <a href="https://www.drupal.org/governance/community-working-group">Community Working Group</a>, and <a href="https://www.drupal.org/conflict-resolution">conflict resolution process</a>, can seem like established and unassailable systems. They aren&rsquo;t. Go read the version history of those links; we just get a group of people together at a Drupalcon or on video conference to try to figure out how to handle this stuff, and then codify it in writing. We take models from other kinds of communities and try to adapt them, we suggest crazy new ideas and directions. <strong>As a community, Drupal actively and aggressively tries to figure out how to make itself more diverse, and less conflict prone.</strong> Humanity has never done collaborative communities on this scale before, and the Drupal Community is on the bleeding edge of it all.</p>
-<p>The cost of the bleeding edge is that we make mistakes. We set off conflicts, we discover new kinds of obstacles. We muddle through every time, and then in retrospect try to find a better way forward for next time. I don&rsquo;t mean to diminish the size or importance of any of these conflicts. They can be serious, existential crises.</p>
-<ul>
-<li><a href="http://buytaert.net/acquia-my-drupal-startup">When Acquia first formed</a> and started to hold outsize influence, it was an existential crisis. We had to figure out how to handle a conflict of interest in our leadership, and what to do about a (then) totally asymmetrical services market. Acquia is now just one large player of several in the Drupal marketplace, and Dries found a compromise between his interests that has lasted almost a decade.</li>
-<li>When <a href="http://www.jenlampton.com/blog/introducing-backdrop-cms-drupal-fork">Nate and Jen forked Drupal</a> into <a href="https://backdropcms.org/">Backdrop CMS</a>, it presented another existential crisis for our community. We had never had such a credible fork from such key community members before. It was the apex of a crisis in the development direction for the whole project. We had to figure out how to address developer experience, how to work with a forked project, and even how to continue working with the forkers themselves. Backdrop is now a normal part of the ecosystem; Jenn and Nate remain important and welcomed Drupal community leaders almost four years later.</li>
-<li>We have had critical tensions, messy relationships, and fallings out with some of our most appreciated developers and community leaders. Whether it&rsquo;s offense taken at <a href="https://web-beta.archive.org/web/20151105173458/http://morten.dk/blog/language-twitter-misunderstanding-drupal-community">Morten</a>, or outbursts from <a href="https://www.reddit.com/r/drupal/comments/5e8dcd/a_fundamental_cultural_shift_in_drupal_or_my/">Chx</a>, these have divided our community and forced us to solve diversity problems that no one else has ever had to deal with.</li>
-</ul>
-<p>I could go on. The point is: With each crucible, we the Drupal community must try to learn and build better systems for the next time.</p>
-<p>So right now, in the midst of all this anger, this prejudice, and these accusations, I&rsquo;m here to say: <strong>we will learn from this, too.</strong> The Drupal community is extraordinary, but we must adapt in order to survive. Losing Larry is a big hit to our community in almost every dimension. This public explosion has been a big hit to us in almost every other dimension. The arguments and animosities we&rsquo;ve unleashed feel like they will tear us apart. But we must look forward. We must use this event for introspection and carry on as a better, improved community.</p>
-<p><em>Do you think Larry was punished for thoughtcrime?</em> Pitch in and help build a system where the next Larry can&rsquo;t be treated that way. <em>Do you think Dries and the DA deserve our trust in their decision?</em> Join up and help make sure the next iteration preserves the strength of independent leadership.</p>
-<p>The prenote is about why we are here, why we&rsquo;ve stayed here all these years. Because it&rsquo;s fun, because it&rsquo;s supportive, because we love it. Sometimes the best way to start addressing your pain is through humor - and we desperately need to start addressing this.</p>
-<p>However you feel about the Crellpocalypse, please don&rsquo;t leave. Not yet. Stay, and help the community improve. Don&rsquo;t stay for your job. Don&rsquo;t stay for Dries, or the DA, or Larry. Stay for the community.</p>
-<p><strong><a href="https://events.drupal.org/baltimore2017/balti-more-prenote-balti-most-fun-drupalcon">I&rsquo;ll see you at the Prenote.</a></strong></p>
-<p><img src="/images/DrupalConAsia-2.jpg" alt="The Prenote: The most fun you can have at Drupalcon."></p>
 ]]></content>
   </entry>
 </feed>
