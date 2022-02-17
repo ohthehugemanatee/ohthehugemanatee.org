@@ -1,5 +1,5 @@
 ---
-title: "Starting a New Role: Partner Technical Strategy CTO for Red Hat"
+title: "Starting a New Role: Global Partner Strategy ISV CTO for Red Hat"
 date: 2022-02-16T21:17:35+01:00
 lastmod: 2022-02-16T21:17:35+01:00
 tags : [ "career", "redhat", "microsoft"]
