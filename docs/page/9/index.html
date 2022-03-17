@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.1" />
+<meta name="generator" content="Hugo 0.92.2" />
 
     
 
@@ -160,6 +160,27 @@
   <div class="post-list">
     
     
+      
+        
+      
+      <div class="post-list__item">
+        <span class="item__title--big">
+          <a href="/2011/05/updating-kernels-for-amazon-aws.html" >Updating kernels for Amazon (AWS) Instances</a>
+        </span>
+        <span class="item__date">
+          May 09, 2011
+        </span>
+        <span >
+        
+        {% raw %} Lately I've been getting hit by an odd kernel bug on one of the servers I maintain. &nbsp;It's discussed in some depth on Launchpad, but the gist is that when trying to find an idle cpu for a new thread, the scheduler divides by cpu_power. &nbsp;On EC2 instances, it's possible for cpu_power to be 0, which causes a divide by zero kernel crash. &nbsp;Why cpu_power is 0 is still an unknown; this should never be the case.
+        
+        </span>
+        
+          ... <a class="read-more-symbol" href="/2011/05/updating-kernels-for-amazon-aws.html">➦</a>
+        
+        </div>
+        
+     
       
         
       
@@ -358,27 +379,6 @@ I have definitely seen an improvement - in a ping flood test, I'm only seeing 0.
         </span>
         
           ... <a class="read-more-symbol" href="/2010/12/more-dd-wrt-linksys-wrt54g.html">➦</a>
-        
-        </div>
-        
-     
-      
-        
-      
-      <div class="post-list__item">
-        <span class="item__title--big">
-          <a href="/2010/12/dd-wrt-versioning-and-linksys-wrt54g.html" >DD-WRT, versioning, and the Linksys WRT54G wireless router</a>
-        </span>
-        <span class="item__date">
-          Dec 20, 2010
-        </span>
-        <span >
-        
-        {% raw %} I have had all sorts of trouble with the wireless situation in my apartment. &nbsp;The layout of the place is such that the kitchen sits in between the two major rooms (living room and bedroom), and I swear those kitchen walls must be made of lead. &nbsp;No wireless signal seems to get through. &nbsp;I have phone jacks for ADSL in the living room and bedroom, nothing in between.
-        
-        </span>
-        
-          ... <a class="read-more-symbol" href="/2010/12/dd-wrt-versioning-and-linksys-wrt54g.html">➦</a>
         
         </div>
         
