@@ -2,13 +2,40 @@
   <title>Oh The Huge Manatee!</title>
   <link href="https://ohthehugemanatee.org/atom.xml" rel="self"/>
   <link href="https://ohthehugemanatee.org/"/>
-  <updated>2022-03-17T16:26:28+01:00</updated>
+  <updated>2022-04-25T11:00:15+02:00</updated>
   <id>https://ohthehugemanatee.org/</id>
   <author>
     <name>Campbell Vertesi (ohthehugemanatee)</name>
     <uri>https://ohthehugemanatee.org/</uri>
   </author>
   <generator>Hugo -- gohugo.io</generator>
+  <entry>
+    <title type="html"><![CDATA[The purpose of Music Notation and Theory]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2022/04/25/the-purpose-of-music-notation-and-theory/"/>
+    <id>https://ohthehugemanatee.org/blog/2022/04/25/the-purpose-of-music-notation-and-theory/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2022-04-25T11:00:15+02:00</published>
+    <updated>2022-04-25T11:00:15+02:00</updated>
+    <content type="html"><![CDATA[<p>I talk a fair bit about the connections between music and engineering, and a <a href="https://news.ycombinator.com/item?id=31145804#31146334">discussion on Hacker News</a> came up about one of my favorite points. I&rsquo;ve adapted my comments here.</p>
+<p>Classical musicians are overwhelmingly taught that their art form is about reproducing the notes, dynamics, and composer&rsquo;s intention as accurately as possible. This is <a href="">mistaking the finger for the moon</a>. Music, of any genre, is never about reproducing the notes and dynamics accurately. MIDI does that, and the day we can create historically informed MIDI we will have it perfected.</p>
+<p><em>Music is the spontaneous communication and individuality that occurs <strong>while</strong> reproducing those notes and dynamics and intents.</em> Genres differ in which dimensions of freedom the musician can use, but not in that fundamental objective. In classical music it&rsquo;s what makes it worthwhile to hear different interpreters of the same piece. It&rsquo;s why people join the <a href="https://www.ticketstosee.com/tickets/bayreuth-festival-tickets/">10 year waiting list to see Wagner in Bayreuth</a>, when arguably the greatest rendition of The Ring in 100 years (<a href="https://www.bbc.com/culture/article/20140430-the-10-best-classical-recordings">Solti, Vienna</a>, fight me) is available relatively cheaply everywhere.</p>
+<p>If that&rsquo;s the case&hellip;</p>
+<ol>
+<li>
+<p>Encourage your classical friends to break out of the mindset of &ldquo;cooking the recipe the master chef made exactly.&rdquo; Audiences complain that classical music is sterile and doesn&rsquo;t speak to them, precisely because this mindset is so common among all but the most elite performers. Also, notice that NO elite performers approach their musicianship that way. As Ansel Adams said, &ldquo;craft facility liberates expression.&rdquo; The point of learning all this technique and theory is to give you the tools to express <em>yourself</em> in music. Mozart&rsquo;s notes are only the vehicle.</p>
+</li>
+<li>
+<p>Satisfying the written note, the theory, and the historical practice, is not making music. They&rsquo;re simply there as tools of communication between musicians, to describe recurring patterns we hear. Otherwise we&rsquo;d be forever saying things like &ldquo;Beethoven 3, it&rsquo;s the one that starts with that thing where it sounds like it&rsquo;s going to end but really doesn&rsquo;t.&rdquo; Calling it a &ldquo;deceptive cadence&rdquo; or even a &ldquo;surprise chromatic sixth&rdquo; is just way easier and lets us operate on a higher level of abstraction. It&rsquo;s the same way &ldquo;dependency injector class&rdquo; tells you about a given chunk of code, and lets you reason about its place in the larger structure. Further, a great engineer isn&rsquo;t defined by their ability to reproduce a textbook dependency injection class, but rather by their ability to adapt the concept of dependency injection in the right places and times.</p>
+</li>
+</ol>
+<p>I think it&rsquo;s a common mistake, especially in classical music, to think about musical traditions as rooted in clear rules and numerical relationships. It&rsquo;s analogous to thinking that language is rooted in clear rules and structures.</p>
+<p>The truth is just the reverse, the rules, numbers, and structures are rooted in music. <em>They exist to describe an organic, emergent cultural mechanism that is continuously changing.</em> Ask yourself: which came first, music or theory? Language or grammar? There are plenty of musical styles with no formalized structure or numeric relationships, just as there are plenty of languages with no formalized structure or even spelling. <strong>Grammar and music theory/notation are fingers pointing at the moon, and we are looking at the finger.</strong></p>
+<p>When we try to engineer systems to help people point at the moon, we <em>should</em> be focused on the finger. Musical structure and numeric relationships are the way people communicate about music, and the tools should speak their language. Unfortunately they then have to grapple with the painful inconsistencies in that language and those structures. Computer music comprehension has problems analogous to computer language comprehension - emergent complexity so high it took neural nets to finally achieve real utility.</p>
+<p>PS - it&rsquo;s true that Western music has, near the bottom, some relationships that were mathematically derived by none other than Pythagoras, among others. Relationships of fourths, fifths, octaves, and equal temperment all had numeric justification&hellip; But that justification was still only there to describe the practice which had already become common, an explanation of &ldquo;why this sounds harmonious&rdquo; as well as a proscription for &ldquo;how to sound harmonious&rdquo;. That some rules are internalized by some generations and broken by others illustrates exactly the problem with the system.</p>
+]]></content>
+  </entry>
   <entry>
     <title type="html"><![CDATA[Time Management Advice for Effective Leaders]]></title>
     <link href="https://ohthehugemanatee.org/blog/2022/03/17/time-management-advice-for-effective-leaders/"/>
@@ -1031,23 +1058,5 @@ $ echo <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</s
 <p>No, I am not ashamed. I&rsquo;m actually pretty satisfied with myself. It&rsquo;s been years since I&rsquo;ve built a computer myself, let alone rigged one up with duct tape and spare parts. It&rsquo;s been ages since I&rsquo;ve had to dig around in the Linux boot process (greatly improved since 2005, Linus be praised). And it&rsquo;s been a long time since I&rsquo;ve sported duct tape on my computer.</p>
 <p>In a couple weeks I&rsquo;ll find out just how much special sauce Dell has put into their default Ubuntu setup to make it run. My setup is&hellip; not very default.</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[Better PHP === Better Drupalists: the PHP track at Drupalcon Vienna]]></title>
-    <link href="https://ohthehugemanatee.org/blog/2017/06/15/better-php-better-drupalists/"/>
-    <id>https://ohthehugemanatee.org/blog/2017/06/15/better-php-better-drupalists/</id>
-    <author>
-      <name>Campbell Vertesi (ohthehugemanatee)</name>
-    </author>
-    <published>2017-06-15T17:19:24+00:00</published>
-    <updated>2017-06-15T17:19:24+00:00</updated>
-    <content type="html"><![CDATA[<p>One of the best parts of Drupal 8 is our shift to enterprise PHP coding structures. With tools like composer and Symfony&rsquo;s structures like Events and Dependency Injection, Drupalists are learning to be great PHP developers, and vice-versa. Today, the fastest route to becoming a rock star Drupalist is through PHP.</p>
-<p>I&rsquo;m one of the PHP track chairs for Drupalcon Vienna, and this year our focus is <em>better PHP === better Drupalists</em>. How can better PHP make your life as a Drupal developer easier?</p>
-<p><strong>Do you like PHP 7?</strong> We want to hear about the technicalities of types, throwing all the things, and your favorite operators (mine is null coalesce, but full respect for you spaceship operator fans).</p>
-<p><strong>Have you seen the light of functional programming?</strong> Tell us why we should love higher orders with lambda functions and closures. Let&rsquo;s hear the finer points of first class functions.</p>
-<p><strong>Do your tests bring all the bugs to the yard?</strong> We want to talk about it. Every method is a promise, and your tests make sure you keep your promises. We want sessions about test driven development in a drupal context, choosing the right test framework and scope, and how your real-world tests are saving you real-world time.</p>
-<p><strong>Have you written a composer library wrapper module yet?</strong> Submit a session about how composer is saving you lines of code.</p>
-<p><strong>Is your development environment fine-tuned for drupal excellence?</strong> Tell us how, and why.</p>
-<p>We have only two weeks left until session submissions close! <a href="https://events.drupal.org/node/add/session?og_group_ref=14447">Get your session in now</a> and help us make Drupal code something to be proud of.</p>]]></content>
   </entry>
 </feed>

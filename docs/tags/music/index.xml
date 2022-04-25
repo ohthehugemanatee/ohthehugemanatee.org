@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>music on Oh The Huge Manatee!</title>
+    <link>https://ohthehugemanatee.org/tags/music/</link>
+    <description>Recent content in music on Oh The Huge Manatee!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Apr 2022 11:00:15 +0200</lastBuildDate><atom:link href="https://ohthehugemanatee.org/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The purpose of Music Notation and Theory</title>
+      <link>https://ohthehugemanatee.org/blog/2022/04/25/the-purpose-of-music-notation-and-theory/</link>
+      <pubDate>Mon, 25 Apr 2022 11:00:15 +0200</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/blog/2022/04/25/the-purpose-of-music-notation-and-theory/</guid>
+      <description>I talk a fair bit about the connections between music and engineering, and a discussion on Hacker News came up about one of my favorite points. I&amp;rsquo;ve adapted my comments here.
+Classical musicians are overwhelmingly taught that their art form is about reproducing the notes, dynamics, and composer&amp;rsquo;s intention as accurately as possible. This is mistaking the finger for the moon. Music, of any genre, is never about reproducing the notes and dynamics accurately.</description>
+    </item>
+    
+  </channel>
+</rss>

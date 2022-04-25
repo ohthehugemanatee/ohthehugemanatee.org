@@ -2,10 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ohthehugemanatee.org/tags/advice/</loc>
-    <lastmod>2022-03-17T16:26:28+01:00</lastmod>
-  </url><url>
     <loc>https://ohthehugemanatee.org/blog/</loc>
+    <lastmod>2022-04-25T11:00:15+02:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/tags/music/</loc>
+    <lastmod>2022-04-25T11:00:15+02:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/</loc>
+    <lastmod>2022-04-25T11:00:15+02:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/tags/</loc>
+    <lastmod>2022-04-25T11:00:15+02:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/blog/2022/04/25/the-purpose-of-music-notation-and-theory/</loc>
+    <lastmod>2022-04-25T11:00:15+02:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/tags/advice/</loc>
     <lastmod>2022-03-17T16:26:28+01:00</lastmod>
   </url><url>
     <loc>https://ohthehugemanatee.org/tags/leaders/</loc>
@@ -14,13 +26,7 @@
     <loc>https://ohthehugemanatee.org/tags/management/</loc>
     <lastmod>2022-03-17T16:26:28+01:00</lastmod>
   </url><url>
-    <loc>https://ohthehugemanatee.org/</loc>
-    <lastmod>2022-03-17T16:26:28+01:00</lastmod>
-  </url><url>
     <loc>https://ohthehugemanatee.org/tags/skills/</loc>
-    <lastmod>2022-03-17T16:26:28+01:00</lastmod>
-  </url><url>
-    <loc>https://ohthehugemanatee.org/tags/</loc>
     <lastmod>2022-03-17T16:26:28+01:00</lastmod>
   </url><url>
     <loc>https://ohthehugemanatee.org/blog/2022/03/17/time-management-advice-for-effective-leaders/</loc>
