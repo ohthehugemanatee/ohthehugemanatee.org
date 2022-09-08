@@ -6,7 +6,16 @@
     <description>Recent content on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Apr 2022 11:00:15 +0200</lastBuildDate><atom:link href="https://ohthehugemanatee.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Sep 2022 21:07:31 +0200</lastBuildDate><atom:link href="https://ohthehugemanatee.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Four Drupalists</title>
+      <link>https://ohthehugemanatee.org/blog/2022/09/08/four-drupalists/</link>
+      <pubDate>Thu, 08 Sep 2022 21:07:31 +0200</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/blog/2022/09/08/four-drupalists/</guid>
+      <description>Recently some of my work on prenotes came up, and reminded me that I&amp;rsquo;ve wanted to post favorite moments here for some time. For those who don&amp;rsquo;t know, a prenote is a session before the keynote of a conference or event. During that session, notables from across the community put on a humorous show of parody lyrics karaoke, terribly scripted dialogue, and general silliness. It&amp;rsquo;s a great way to kick off an event, and really sets the tone if you&amp;rsquo;re into flat-hierarchy and openness for newbies.</description>
+    </item>
+    
     <item>
       <title>The purpose of Music Notation and Theory</title>
       <link>https://ohthehugemanatee.org/blog/2022/04/25/the-purpose-of-music-notation-and-theory/</link>
@@ -148,7 +157,7 @@ Kubernetes is one of the greatest orchestration and scaling tools ever built, de
       <pubDate>Wed, 07 Feb 2018 16:42:50 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2018/02/07/the-number-1-question-i-get-asked-working-at-msy-do-you-run-linux/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>
@@ -157,7 +166,7 @@ Kubernetes is one of the greatest orchestration and scaling tools ever built, de
       <pubDate>Thu, 25 Jan 2018 11:05:31 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2018/01/25/my-war-on-systemd-resolved/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>
@@ -187,7 +196,7 @@ First I have to acknowledge the history. I co-founded my first tech company just
       <guid>https://ohthehugemanatee.org/blog/2017/07/28/bring-php-to-drupalcon/</guid>
       <description>I&amp;rsquo;ve learned something incredible as the PHP Track Chair for Drupalcon Vienna. The Drupal Association has no way to invite PHP speakers to Drupalcon.
 This blew me away when I first learned about it. After all the work to bring mainstream PHP to Drupal core, after all the outreach to PHP-FIG, after all the talks Drupalists have given at major PHP conferences, how is this possible?
-You see, basically every other PHP conference covers their speakers&#39; travel and accommodation costs.</description>
+You see, basically every other PHP conference covers their speakers&amp;rsquo; travel and accommodation costs.</description>
     </item>
     
     <item>
@@ -354,7 +363,7 @@ Are we there yet? Despite all the rejoicing on social media, this isn&amp;rsquo;
       
       <guid>https://ohthehugemanatee.org/blog/2015/10/01/how-i-got-el-capitain-working-with-my-developer-tools/</guid>
       <description>Last night I installed OSX&amp;rsquo;s new &amp;ldquo;El Capitain&amp;rdquo; update, and it broke most of the tools I use in my daily life as a developer, including homebrew and git. Here are the steps I had to follow to get everything working again.
- Disable System Integrity Protection   System Integrity Protection is a new feature of OSX, also called &amp;ldquo;rootless.&amp;rdquo; As the nickname suggests, it creates another level of access above your root account.</description>
+Disable System Integrity Protection System Integrity Protection is a new feature of OSX, also called &amp;ldquo;rootless.&amp;rdquo; As the nickname suggests, it creates another level of access above your root account.</description>
     </item>
     
     <item>
@@ -412,7 +421,7 @@ But for everyone who uses a custom ROM like Cyanogenmod, ParanoidAndroid, or AOK
       <pubDate>Mon, 03 Nov 2014 17:30:32 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2014/11/03/drupalgeddon-means-we-cant-trust-humans-with-updates/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>
@@ -421,7 +430,7 @@ But for everyone who uses a custom ROM like Cyanogenmod, ParanoidAndroid, or AOK
       <pubDate>Wed, 29 Oct 2014 13:13:04 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2014/10/29/mobile-apps-are-a-temporary-phase/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>
@@ -431,7 +440,7 @@ But for everyone who uses a custom ROM like Cyanogenmod, ParanoidAndroid, or AOK
       
       <guid>https://ohthehugemanatee.org/blog/2014/07/22/get-memcache-statistics-from-the-command-line-in-one-easy-command/</guid>
       <description>A quick one for myself to come back to. I can never find this one liner when I need it! It&amp;rsquo;s simple enough:
-watch &#39;php -r &#39;&amp;quot;&#39;&amp;quot;&#39;$m=new Memcache;$m-&amp;gt;connect(&amp;quot;127.0.0.1&amp;quot;, 11211);print_r($m-&amp;gt;getstats());&#39;&amp;quot;&#39;&amp;quot; Next time I need to get memcached stats, I&amp;rsquo;ll check back here.</description>
+watch &amp;#39;php -r &amp;#39;&amp;#34;&amp;#39;&amp;#34;&amp;#39;$m=new Memcache;$m-&amp;gt;connect(&amp;#34;127.0.0.1&amp;#34;, 11211);print_r($m-&amp;gt;getstats());&amp;#39;&amp;#34;&amp;#39;&amp;#34; Next time I need to get memcached stats, I&amp;rsquo;ll check back here.</description>
     </item>
     
     <item>
@@ -510,7 +519,7 @@ The evil Lord Over Engineering is threatening to delay the release of the CMS, w
       <guid>https://ohthehugemanatee.org/blog/2014/05/12/why-use-an-ide-when-vim-is-so-awesome/</guid>
       <description>One thing I&amp;rsquo;ve never really understood is IDEs. I mean, I get it when you have a complex, emulated environment as a key part of your development. But for the majority of us who write in high level languages like PHP or Ruby, I just don&amp;rsquo;t see the benefit. Why use some mouse-y, graphics dependent piece of software when you can use the ubiquitous Vim?
 I use Vim because:
- It can do everything any IDE I&amp;rsquo;ve seen can do.</description>
+It can do everything any IDE I&amp;rsquo;ve seen can do.</description>
     </item>
     
     <item>
@@ -538,7 +547,7 @@ I use Vim because:
       
       <guid>https://ohthehugemanatee.org/blog/2014/03/29/drupal-dev-days-szeged-2014/</guid>
       <description>Today is the last day of Drupal Dev Days in Szeged, Hungary, and I&amp;rsquo;ve never been more full of the &amp;ldquo;Drupal spirit!&amp;rdquo;
-One of Drupal&amp;rsquo;s greatest strengths is the closness of its&#39; community, how friendly and accepting they can be. Drupalcons are highlight events for many, not because of the learning as much as because of the social track: the chance to see old friends and make new ones. Even more important is the chance to experience in person this incredibly friendly community.</description>
+One of Drupal&amp;rsquo;s greatest strengths is the closness of its&amp;rsquo; community, how friendly and accepting they can be. Drupalcons are highlight events for many, not because of the learning as much as because of the social track: the chance to see old friends and make new ones. Even more important is the chance to experience in person this incredibly friendly community.</description>
     </item>
     
     <item>
@@ -548,8 +557,8 @@ One of Drupal&amp;rsquo;s greatest strengths is the closness of its&#39; communi
       
       <guid>https://ohthehugemanatee.org/blog/2014/01/10/another-cryptic-ruby-message/</guid>
       <description>Ruby on Rails drives me nuts, and today I found another example of why: the cryptic error messages. After a server update, my chiliproject/redmine site refused to start. The error message was
- &amp;ldquo;Object is not missing constant Issue!&amp;rdquo;
- What does that even mean? It took me a little while to understand that Issue in this context is the Redmine object &amp;ldquo;Issue&amp;rdquo;. But still, &amp;ldquo;Object is not missing constant X&amp;rdquo; isn&amp;rsquo;t much help.</description>
+&amp;ldquo;Object is not missing constant Issue!&amp;rdquo;
+What does that even mean? It took me a little while to understand that Issue in this context is the Redmine object &amp;ldquo;Issue&amp;rdquo;. But still, &amp;ldquo;Object is not missing constant X&amp;rdquo; isn&amp;rsquo;t much help.</description>
     </item>
     
     <item>
@@ -560,7 +569,7 @@ One of Drupal&amp;rsquo;s greatest strengths is the closness of its&#39; communi
       <guid>https://ohthehugemanatee.org/blog/2014/01/10/drush-self-aliases/</guid>
       <description>I ran into an interesting problem with the drush @self alias today. I wanted to pull a fresh copy of the DB down from a client&amp;rsquo;s live site to my local development copy. Should be as easy as drush sql-sync @clientsite.live @self, right? I&amp;rsquo;ve done this a thousand times before.
 And I&amp;rsquo;ve also ignored the warning message every time before, but today I thought I&amp;rsquo;d check it out:
- WARNING: Using temporary files to store and transfer sql-dump.</description>
+WARNING: Using temporary files to store and transfer sql-dump.</description>
     </item>
     
     <item>
@@ -589,7 +598,7 @@ As usual, I&amp;rsquo;ll assume that you have an empty custom module called mymo
       
       <guid>https://ohthehugemanatee.org/blog/2013/12/26/44497-people-are-wrong-how-to-never-use-views-php/</guid>
       <description>You&amp;rsquo;re building a View, but you can&amp;rsquo;t get that field to display the way you want it to. Or filter, or sort. Or maybe you have some data in a custom table that you want to include in the View. So you look for a contributed module, and Views PHP looks like the answer to your problem! Until you read the module page, where it says:
- &amp;ldquo;&amp;hellip;it is highly advisable to use regular handlers and plugins when available (or even to create one yourself).</description>
+&amp;ldquo;&amp;hellip;it is highly advisable to use regular handlers and plugins when available (or even to create one yourself).</description>
     </item>
     
     <item>
@@ -638,8 +647,8 @@ I made the decision to launch it using Jekyll and Octopress, rather than Drupal.
       <guid>https://ohthehugemanatee.org/blog/2013/09/02/every-feature-a-branch-every-branch-a-dev-environment-without-breaking-the-bank-the-perfect-git-flow-dev-environment-for-small-shops/</guid>
       <description>mysql_user=&amp;lsquo;root&amp;rsquo; mysql_pw=&amp;lsquo;your-mysql-password&amp;rsquo; worktree_root=&amp;quot;/var/www/public_html&amp;quot; http_root=&amp;ldquo;http://example.com&amp;rdquo; support_files=&amp;quot;/home/git&amp;quot;
 while read oldrev newrev ref do branch=echo $ref |cut -d/ -f3 worktree=&amp;quot;$worktree_root/$GL_REPO/$branch&amp;quot; repo_sanitized=echo ${GL_REPO//[-._]/} branch_sanitized=echo ${branch//[-._]/} db_name=&amp;quot;$repo_sanitized&amp;quot;_&amp;quot;$branch_sanitized&amp;quot;
- # Exit nicely if this is the gitolite-admin repo. if [ $GL_REPO = &amp;lsquo;gitolite-admin&amp;rsquo; ]; then exit 0 fi
- # Did we delete a branch? Delete the DB and checkout if [ $newrev = &amp;lsquo;0000000000000000000000000000000000000000&amp;rsquo; ]; then if [ ! $branch = &amp;lsquo;master&amp;rsquo; ]; then echo &amp;ldquo;Deleting working tree and DB for branch $branch.</description>
+# Exit nicely if this is the gitolite-admin repo. if [ $GL_REPO = &amp;lsquo;gitolite-admin&amp;rsquo; ]; then exit 0 fi
+# Did we delete a branch? Delete the DB and checkout if [ $newrev = &amp;lsquo;0000000000000000000000000000000000000000&amp;rsquo; ]; then if [ ! $branch = &amp;lsquo;master&amp;rsquo; ]; then echo &amp;ldquo;Deleting working tree and DB for branch $branch.</description>
     </item>
     
     <item>
@@ -648,7 +657,7 @@ while read oldrev newrev ref do branch=echo $ref |cut -d/ -f3 worktree=&amp;quot
       <pubDate>Thu, 20 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2013/06/20/ssl-certificates-demystified/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>
@@ -657,7 +666,7 @@ while read oldrev newrev ref do branch=echo $ref |cut -d/ -f3 worktree=&amp;quot
       <pubDate>Tue, 21 May 2013 00:00:00 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2013/05/21/review-geoserver-beginners-guide-by-stefano-iacovella-and-brian-youngblood/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>
@@ -666,7 +675,7 @@ while read oldrev newrev ref do branch=echo $ref |cut -d/ -f3 worktree=&amp;quot
       <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2013/04/18/adding-rules-to-your-contrib-module-so-you-can-reject-half-the-tickets-in-your-queue/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>
@@ -675,7 +684,7 @@ while read oldrev newrev ref do branch=echo $ref |cut -d/ -f3 worktree=&amp;quot
       <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2013/04/18/how-to-set-up-apache-solr-multicore-for-drupal/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>
@@ -813,7 +822,6 @@ LDAP is, as you might have guessed, a directory protocol. &amp;nbsp;It was devel
 Dependencies
 Before you begin, you will need:
 Amazon&#39;s standard EC2 Command Line ToolsAlestic&#39;s ebs-consistent-snapshot programTech Kismet&#39;s remove-old-snapshots.php script (which must be so named)
-
 AMI Images
 Everyone knows that Amazon Instances are ephemeral.</description>
     </item>

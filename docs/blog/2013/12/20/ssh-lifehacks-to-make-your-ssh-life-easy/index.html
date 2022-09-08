@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -208,13 +208,12 @@ ControlPath /tmp/ssh_mux_%h_%p_%r_%l
 <p><strong>Result: Multiple SSH connections are WAY faster.</strong></p>
 <h2 id="host-shortcuts-and-definitions">Host shortcuts and definitions</h2>
 <p>You can easily define commonly used connections with shortcuts. So instead of typing <code>ssh -i ~/.ssh/ohthehugemanatee.pem -P 2222 ohthehugemanatee@live.ohthehugemanatee.org</code>, you can just type <code>ssh live</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Host live 
-  Hostname live.ohthehugemanatee.org 
-  Port <span style="color:#ae81ff">2222</span>
-  User ohthehugemanatee
-  IdentityFile ~/.ssh/ohthehugemanatee.pem
-
-</code></pre></div><h2 id="ssh-agent-forwarding---one-key-to-rule-them-all">SSH Agent Forwarding - One key to rule them all</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Host live 
+</span></span><span style="display:flex;"><span>  Hostname live.ohthehugemanatee.org 
+</span></span><span style="display:flex;"><span>  Port <span style="color:#ae81ff">2222</span>
+</span></span><span style="display:flex;"><span>  User ohthehugemanatee
+</span></span><span style="display:flex;"><span>  IdentityFile ~/.ssh/ohthehugemanatee.pem
+</span></span></code></pre></div><h2 id="ssh-agent-forwarding---one-key-to-rule-them-all">SSH Agent Forwarding - One key to rule them all</h2>
 <p>Normally when you want to access a resource from multiple machines, you have to generate a public/private keypair on each machine. A great example is a git repo: if I want to access the same git repository on my localhost, the staging server, and the live server, I will have to generate three keypairs and grant access to all three. Talk about a pain in the ass!</p>
 <p>Fortunately there&rsquo;s a much easier way to do this, which is available in almost all distributed versions of openssh: SSH agent forwarding. With agent forwarding enabled, your private key from one machine becomes available for each subsequent machine you connect to. In other words, if you have one private key on your localhost, and SSH into another server, your local private key will be available if you want to SSH (or use git) from that server. Automatically. And only while you&rsquo;re connected, so it&rsquo;s safe.</p>
 <pre tabindex="0"><code>ForwardAgent yes

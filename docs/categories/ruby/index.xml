@@ -14,8 +14,8 @@
       
       <guid>https://ohthehugemanatee.org/blog/2014/01/10/another-cryptic-ruby-message/</guid>
       <description>Ruby on Rails drives me nuts, and today I found another example of why: the cryptic error messages. After a server update, my chiliproject/redmine site refused to start. The error message was
- &amp;ldquo;Object is not missing constant Issue!&amp;rdquo;
- What does that even mean? It took me a little while to understand that Issue in this context is the Redmine object &amp;ldquo;Issue&amp;rdquo;. But still, &amp;ldquo;Object is not missing constant X&amp;rdquo; isn&amp;rsquo;t much help.</description>
+&amp;ldquo;Object is not missing constant Issue!&amp;rdquo;
+What does that even mean? It took me a little while to understand that Issue in this context is the Redmine object &amp;ldquo;Issue&amp;rdquo;. But still, &amp;ldquo;Object is not missing constant X&amp;rdquo; isn&amp;rsquo;t much help.</description>
     </item>
     
   </channel>

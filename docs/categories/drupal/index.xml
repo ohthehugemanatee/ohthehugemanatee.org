@@ -6,7 +6,16 @@
     <description>Recent content in drupal on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Apr 2018 18:06:51 +0000</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/drupal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Sep 2022 21:07:31 +0200</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/drupal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Four Drupalists</title>
+      <link>https://ohthehugemanatee.org/blog/2022/09/08/four-drupalists/</link>
+      <pubDate>Thu, 08 Sep 2022 21:07:31 +0200</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/blog/2022/09/08/four-drupalists/</guid>
+      <description>Recently some of my work on prenotes came up, and reminded me that I&amp;rsquo;ve wanted to post favorite moments here for some time. For those who don&amp;rsquo;t know, a prenote is a session before the keynote of a conference or event. During that session, notables from across the community put on a humorous show of parody lyrics karaoke, terribly scripted dialogue, and general silliness. It&amp;rsquo;s a great way to kick off an event, and really sets the tone if you&amp;rsquo;re into flat-hierarchy and openness for newbies.</description>
+    </item>
+    
     <item>
       <title>Drupal Does Face Recognition: Introducing Image Auto Tag module</title>
       <link>https://ohthehugemanatee.org/blog/2018/04/19/face-recognition-on-drupal/</link>
@@ -119,7 +128,7 @@ Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used 
       <pubDate>Mon, 03 Nov 2014 17:30:32 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2014/11/03/drupalgeddon-means-we-cant-trust-humans-with-updates/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>
@@ -187,7 +196,7 @@ But what about authenticated users? You can cache elements of the page using a m
       
       <guid>https://ohthehugemanatee.org/blog/2014/03/29/drupal-dev-days-szeged-2014/</guid>
       <description>Today is the last day of Drupal Dev Days in Szeged, Hungary, and I&amp;rsquo;ve never been more full of the &amp;ldquo;Drupal spirit!&amp;rdquo;
-One of Drupal&amp;rsquo;s greatest strengths is the closness of its&#39; community, how friendly and accepting they can be. Drupalcons are highlight events for many, not because of the learning as much as because of the social track: the chance to see old friends and make new ones. Even more important is the chance to experience in person this incredibly friendly community.</description>
+One of Drupal&amp;rsquo;s greatest strengths is the closness of its&amp;rsquo; community, how friendly and accepting they can be. Drupalcons are highlight events for many, not because of the learning as much as because of the social track: the chance to see old friends and make new ones. Even more important is the chance to experience in person this incredibly friendly community.</description>
     </item>
     
     <item>
@@ -198,7 +207,7 @@ One of Drupal&amp;rsquo;s greatest strengths is the closness of its&#39; communi
       <guid>https://ohthehugemanatee.org/blog/2014/01/10/drush-self-aliases/</guid>
       <description>I ran into an interesting problem with the drush @self alias today. I wanted to pull a fresh copy of the DB down from a client&amp;rsquo;s live site to my local development copy. Should be as easy as drush sql-sync @clientsite.live @self, right? I&amp;rsquo;ve done this a thousand times before.
 And I&amp;rsquo;ve also ignored the warning message every time before, but today I thought I&amp;rsquo;d check it out:
- WARNING: Using temporary files to store and transfer sql-dump.</description>
+WARNING: Using temporary files to store and transfer sql-dump.</description>
     </item>
     
     <item>
@@ -227,7 +236,7 @@ As usual, I&amp;rsquo;ll assume that you have an empty custom module called mymo
       
       <guid>https://ohthehugemanatee.org/blog/2013/12/26/44497-people-are-wrong-how-to-never-use-views-php/</guid>
       <description>You&amp;rsquo;re building a View, but you can&amp;rsquo;t get that field to display the way you want it to. Or filter, or sort. Or maybe you have some data in a custom table that you want to include in the View. So you look for a contributed module, and Views PHP looks like the answer to your problem! Until you read the module page, where it says:
- &amp;ldquo;&amp;hellip;it is highly advisable to use regular handlers and plugins when available (or even to create one yourself).</description>
+&amp;ldquo;&amp;hellip;it is highly advisable to use regular handlers and plugins when available (or even to create one yourself).</description>
     </item>
     
     <item>
@@ -247,8 +256,8 @@ As usual, I&amp;rsquo;ll assume that you have an empty custom module called mymo
       <guid>https://ohthehugemanatee.org/blog/2013/09/02/every-feature-a-branch-every-branch-a-dev-environment-without-breaking-the-bank-the-perfect-git-flow-dev-environment-for-small-shops/</guid>
       <description>mysql_user=&amp;lsquo;root&amp;rsquo; mysql_pw=&amp;lsquo;your-mysql-password&amp;rsquo; worktree_root=&amp;quot;/var/www/public_html&amp;quot; http_root=&amp;ldquo;http://example.com&amp;rdquo; support_files=&amp;quot;/home/git&amp;quot;
 while read oldrev newrev ref do branch=echo $ref |cut -d/ -f3 worktree=&amp;quot;$worktree_root/$GL_REPO/$branch&amp;quot; repo_sanitized=echo ${GL_REPO//[-._]/} branch_sanitized=echo ${branch//[-._]/} db_name=&amp;quot;$repo_sanitized&amp;quot;_&amp;quot;$branch_sanitized&amp;quot;
- # Exit nicely if this is the gitolite-admin repo. if [ $GL_REPO = &amp;lsquo;gitolite-admin&amp;rsquo; ]; then exit 0 fi
- # Did we delete a branch? Delete the DB and checkout if [ $newrev = &amp;lsquo;0000000000000000000000000000000000000000&amp;rsquo; ]; then if [ ! $branch = &amp;lsquo;master&amp;rsquo; ]; then echo &amp;ldquo;Deleting working tree and DB for branch $branch.</description>
+# Exit nicely if this is the gitolite-admin repo. if [ $GL_REPO = &amp;lsquo;gitolite-admin&amp;rsquo; ]; then exit 0 fi
+# Did we delete a branch? Delete the DB and checkout if [ $newrev = &amp;lsquo;0000000000000000000000000000000000000000&amp;rsquo; ]; then if [ ! $branch = &amp;lsquo;master&amp;rsquo; ]; then echo &amp;ldquo;Deleting working tree and DB for branch $branch.</description>
     </item>
     
     <item>
@@ -257,7 +266,7 @@ while read oldrev newrev ref do branch=echo $ref |cut -d/ -f3 worktree=&amp;quot
       <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2013/04/18/adding-rules-to-your-contrib-module-so-you-can-reject-half-the-tickets-in-your-queue/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>
@@ -266,7 +275,7 @@ while read oldrev newrev ref do branch=echo $ref |cut -d/ -f3 worktree=&amp;quot
       <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2013/04/18/how-to-set-up-apache-solr-multicore-for-drupal/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>

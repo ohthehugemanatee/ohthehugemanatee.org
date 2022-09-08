@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -219,25 +219,25 @@ But for everyone who uses a custom ROM like Cyanogenmod, ParanoidAndroid, or AOK
 <li>Plug the phone into your computer.</li>
 </ol>
 <p>Then in the Terminal, run:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~$ heimdall detect
-Device detected
-
-~$ heimdall flash --APNHLOS ~/Downloads/Modem_GNG8_FULL/NON-HLOS.bin --MDM ~/Downloads/Modem_GNG8_FULL/modem.bin
-</code></pre></div><p>(do not include the ~$ in your typing! It&rsquo;s just an indicator to show you what you type, and what comes back from the system)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ heimdall detect
+</span></span><span style="display:flex;"><span>Device detected
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>~$ heimdall flash --APNHLOS ~/Downloads/Modem_GNG8_FULL/NON-HLOS.bin --MDM ~/Downloads/Modem_GNG8_FULL/modem.bin
+</span></span></code></pre></div><p>(do not include the ~$ in your typing! It&rsquo;s just an indicator to show you what you type, and what comes back from the system)</p>
 <p>&ldquo;heimdall detect&rdquo; tells heimdall to find your phone attached via USB. &ldquo;heimdall flash&rdquo; tells it to blow away the LTE modem firmware you have now with the file NON-HLOS.bin, and the 3G modem firmware you have now with the file modem.bin.</p>
 <p>If all goes well, the phone will reset itself and boot back up normally. You can check to see that your flash worked by looking for the new serial number in your phone Settings.</p>
 <p>Or perhaps you&rsquo;ll find the same problem I did: something else on my computer had already &ldquo;claimed&rdquo; this phone, so Heimdall errored out with &ldquo;libusbx: error [darwin_claim_interface] USBInterfaceOpen: another process has device opened for exclusive access. ERROR: Claiming interface failed!&rdquo; If you encounter this problem, you can solve it by manually shutting down that other software:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~$ sudo kextstat |grep -v apple
-Index Refs Address            Size       Wired      Name <span style="color:#f92672">(</span>Version<span style="color:#f92672">)</span> &lt;Linked Against&gt;
-  <span style="color:#ae81ff">134</span>    <span style="color:#ae81ff">0</span> 0xffffff7f80eca000 0x4000     0x4000     com.devguru.driver.SamsungComposite <span style="color:#f92672">(</span>1.4.25<span style="color:#f92672">)</span> &lt;<span style="color:#ae81ff">38</span> <span style="color:#ae81ff">4</span> 3&gt;
-  <span style="color:#ae81ff">136</span>    <span style="color:#ae81ff">0</span> 0xffffff7f80ec3000 0x3000     0x3000     com.devguru.driver.SamsungACMControl <span style="color:#f92672">(</span>1.4.25<span style="color:#f92672">)</span> &lt;<span style="color:#ae81ff">38</span> <span style="color:#ae81ff">4</span> 3&gt;
-  <span style="color:#ae81ff">138</span>    <span style="color:#ae81ff">0</span> 0xffffff7f80ead000 0xc000     0xc000     com.devguru.driver.SamsungACMData <span style="color:#f92672">(</span>1.4.25<span style="color:#f92672">)</span> &lt;<span style="color:#ae81ff">84</span> <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">4</span> 3&gt;
-  <span style="color:#ae81ff">141</span>    <span style="color:#ae81ff">0</span> 0xffffff7f829fa000 0x6000     0x6000     net.tunnelblick.tun <span style="color:#f92672">(</span>1.0<span style="color:#f92672">)</span> &lt;<span style="color:#ae81ff">7</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">4</span> 1&gt;
-</code></pre></div><p>Note the lines that say Samsung in them. Those are the Samsung drivers that are blocking Heimdall. Now I hate Kies even <em>more</em>! We can shut them down one at a time like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">~$ sudo kextunload -b com.devguru.driver.SamsungComposite
-~$ sudo kextunload -b com.devguru.driver.SamsungACMControl
-~$ sudo kextunload -b com.devguru.driver.SamsungACMData
-</code></pre></div><p>Then try the heimdall commands again. For my phone, I found greatly improved signal&hellip; and because it wasn&rsquo;t spinning extra cycles without signal, greatly improved battery life, too. So we know: every time you update your ROM, do a modem firmware update, too.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ sudo kextstat |grep -v apple
+</span></span><span style="display:flex;"><span>Index Refs Address            Size       Wired      Name <span style="color:#f92672">(</span>Version<span style="color:#f92672">)</span> &lt;Linked Against&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">134</span>    <span style="color:#ae81ff">0</span> 0xffffff7f80eca000 0x4000     0x4000     com.devguru.driver.SamsungComposite <span style="color:#f92672">(</span>1.4.25<span style="color:#f92672">)</span> &lt;<span style="color:#ae81ff">38</span> <span style="color:#ae81ff">4</span> 3&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">136</span>    <span style="color:#ae81ff">0</span> 0xffffff7f80ec3000 0x3000     0x3000     com.devguru.driver.SamsungACMControl <span style="color:#f92672">(</span>1.4.25<span style="color:#f92672">)</span> &lt;<span style="color:#ae81ff">38</span> <span style="color:#ae81ff">4</span> 3&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">138</span>    <span style="color:#ae81ff">0</span> 0xffffff7f80ead000 0xc000     0xc000     com.devguru.driver.SamsungACMData <span style="color:#f92672">(</span>1.4.25<span style="color:#f92672">)</span> &lt;<span style="color:#ae81ff">84</span> <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">4</span> 3&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">141</span>    <span style="color:#ae81ff">0</span> 0xffffff7f829fa000 0x6000     0x6000     net.tunnelblick.tun <span style="color:#f92672">(</span>1.0<span style="color:#f92672">)</span> &lt;<span style="color:#ae81ff">7</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">4</span> 1&gt;
+</span></span></code></pre></div><p>Note the lines that say Samsung in them. Those are the Samsung drivers that are blocking Heimdall. Now I hate Kies even <em>more</em>! We can shut them down one at a time like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~$ sudo kextunload -b com.devguru.driver.SamsungComposite
+</span></span><span style="display:flex;"><span>~$ sudo kextunload -b com.devguru.driver.SamsungACMControl
+</span></span><span style="display:flex;"><span>~$ sudo kextunload -b com.devguru.driver.SamsungACMData
+</span></span></code></pre></div><p>Then try the heimdall commands again. For my phone, I found greatly improved signal&hellip; and because it wasn&rsquo;t spinning extra cycles without signal, greatly improved battery life, too. So we know: every time you update your ROM, do a modem firmware update, too.</p>
 
   </div>
   

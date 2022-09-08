@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -207,37 +207,37 @@
 <p>In our example, we will display the user&rsquo;s name, but backwards. Obviously you can do much more complex things with this, but it&rsquo;s nice to have a simple example!</p>
 <h1 id="declare-your-fields">Declare your fields</h1>
 <p>First we have to tell Display Suite about our new custom field. We do this with <a href="http://drupalcontrib.org/api/drupal/contributions!ds!ds.api.php/function/hook_ds_fields_info/7">hook_ds_fields_info()</a>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-
-<span style="color:#75715e">//@file: Add a custom suite to display suite for Users.
-</span><span style="color:#75715e"></span>
-<span style="color:#e6db74">/**
-</span><span style="color:#e6db74"> * Implements hook_ds_fields_info().
-</span><span style="color:#e6db74"> * Declare my custom field.
-</span><span style="color:#e6db74"> */</span>
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_ds_fields_info</span>($entity_type) {
-  $fields <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
-
-  <span style="color:#66d9ef">if</span> ($entity_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;user&#39;</span>) { 
-    $fields[<span style="color:#e6db74">&#39;backwards_username&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
-      <span style="color:#e6db74">&#39;title&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;Backwards Username&#39;</span>),
-      <span style="color:#e6db74">&#39;field_type&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">DS_FIELD_TYPE_FUNCTION</span>,
-      <span style="color:#e6db74">&#39;function&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;mymodule_backwards_username&#39;</span>,
-    );
-  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">array</span>($entity_type <span style="color:#f92672">=&gt;</span> $fields);
-  }
-  <span style="color:#66d9ef">return</span>;
-}
-</code></pre></div><p>Any guesses whathappens next? That&rsquo;s right, we have to write our render function under the name we just declared. You can put anything here, really anything renderable at all.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
-</span><span style="color:#e6db74"> * Render function for the Backwards Username field.
-</span><span style="color:#e6db74"> */</span>
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_backwards_username</span>($field) {
-  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($field[<span style="color:#e6db74">&#39;entity&#39;</span>]<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">name</span>)) { 
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">check_plain</span>(<span style="color:#a6e22e">strrev</span>($field[<span style="color:#e6db74">&#39;entity&#39;</span>]<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">name</span>));
-  }
-}
-</code></pre></div><p>That&rsquo;s it. So simple, you&rsquo;ll wonder why you ever did it any other way!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//@file: Add a custom suite to display suite for Users.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * Implements hook_ds_fields_info().
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * Declare my custom field.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_ds_fields_info</span>($entity_type) {
+</span></span><span style="display:flex;"><span>  $fields <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> ($entity_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;user&#39;</span>) { 
+</span></span><span style="display:flex;"><span>    $fields[<span style="color:#e6db74">&#39;backwards_username&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#39;title&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;Backwards Username&#39;</span>),
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#39;field_type&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">DS_FIELD_TYPE_FUNCTION</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#39;function&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;mymodule_backwards_username&#39;</span>,
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">array</span>($entity_type <span style="color:#f92672">=&gt;</span> $fields);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Any guesses whathappens next? That&rsquo;s right, we have to write our render function under the name we just declared. You can put anything here, really anything renderable at all.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#e6db74">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * Render function for the Backwards Username field.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_backwards_username</span>($field) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isset</span>($field[<span style="color:#e6db74">&#39;entity&#39;</span>]<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">name</span>)) { 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">check_plain</span>(<span style="color:#a6e22e">strrev</span>($field[<span style="color:#e6db74">&#39;entity&#39;</span>]<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">name</span>));
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>That&rsquo;s it. So simple, you&rsquo;ll wonder why you ever did it any other way!</p>
 
   </div>
   

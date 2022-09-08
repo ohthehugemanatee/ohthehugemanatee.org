@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -200,38 +200,38 @@
   <div class="post">
     <p>One of my holiday projects was to set up my home &ldquo;data warehouse.&rdquo; Ever since <a href="https://www.dropboxforum.com/t5/Syncing-and-uploads/Linux-Dropbox-client-warn-me-that-it-ll-stop-syncing-in-Nov-why/m-p/290065/highlight/true#M42255">Dropbox killed modern Linux filesystem support</a> I&rsquo;ve been using (and loving) <a href="https://nextcloud.com/">Nextcloud</a> from my home. It backs up to an encrypted <a href="https://www.duplicati.com/">Duplicati</a> store on <a href="https://azure.microsoft.com/en-us/services/storage/blobs/">Azure blob store</a>, so that&rsquo;s offsite backups taken care of. But it was time to knit all my various drives together into a single RAID data warehouse. The only problem: how to transfer my 2 terabytes (rounded to make the math in the post easier) of data, without nasty downtime during the holidays?</p>
 <p>A local network transfer is the fastest, with the least downtime. I have a switched gigabit network in my house, and all my servers are hard wired. That&rsquo;s about 125 megabytes per second; a theoretical 5 hours to transfer everything. Not bad! Start up an rsync and I&rsquo;m all done! So I kicked it off and went to bed:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud.vert
-$ rsync -axz /media/usbdrive/ warehouse:/mnt/storage/ --log-file<span style="color:#f92672">=</span>transfer-to-warehouse.log &amp;
-</code></pre></div><p>I woke up in the morning with the excitement of a kid on Christmas. Everything should be done, right?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh warehouse df -h |grep md0
-/dev/md0        2.7T  501G  2.1T  20% /mnt/storage
-$
-</code></pre></div><p>Wait, what? How had it only transferred 500 gigabytes overnight? Including time for <em>Doctor Who</em> and breakfast, that was only 1 Megabit per second! I knew it was time to play everyone&rsquo;s favorite game: <em>&ldquo;where&rsquo;s the bottleneck?</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh nextcloud.vert
+</span></span><span style="display:flex;"><span>$ rsync -axz /media/usbdrive/ warehouse:/mnt/storage/ --log-file<span style="color:#f92672">=</span>transfer-to-warehouse.log &amp;
+</span></span></code></pre></div><p>I woke up in the morning with the excitement of a kid on Christmas. Everything should be done, right?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh warehouse df -h |grep md0
+</span></span><span style="display:flex;"><span>/dev/md0        2.7T  501G  2.1T  20% /mnt/storage
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Wait, what? How had it only transferred 500 gigabytes overnight? Including time for <em>Doctor Who</em> and breakfast, that was only 1 Megabit per second! I knew it was time to play everyone&rsquo;s favorite game: <em>&ldquo;where&rsquo;s the bottleneck?</em></p>
 <p>I guess it could be rsync scanning all those small files. If that&rsquo;s the case, we&rsquo;ll see high CPU usage, and even higher load numbers (as processes are I/O blocked):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud
-$ top
-
-top - 08:22:27 up 10:26,  <span style="color:#ae81ff">1</span> user,  load average: 1.20, 1.34, 1.33
-Tasks: <span style="color:#ae81ff">170</span> total,   <span style="color:#ae81ff">2</span> running, <span style="color:#ae81ff">106</span> sleeping,   <span style="color:#ae81ff">0</span> stopped,   <span style="color:#ae81ff">0</span> zombie
-%Cpu<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>: 28.0 us,  2.1 sy,  0.0 ni, 69.5 id,  0.1 wa,  0.0 hi,  0.3 si,  0.0 st
-KiB Mem : <span style="color:#ae81ff">16330372</span> total,   <span style="color:#ae81ff">180568</span> free,   <span style="color:#ae81ff">657104</span> used, <span style="color:#ae81ff">15492700</span> buff/cache
-KiB Swap:  <span style="color:#ae81ff">4194300</span> total,  <span style="color:#ae81ff">4162556</span> free,    <span style="color:#ae81ff">31744</span> used. <span style="color:#ae81ff">15300068</span> avail Mem 
-
-  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                                  
- <span style="color:#ae81ff">8755</span> ohthehu+  <span style="color:#ae81ff">20</span>   <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">130572</span>  <span style="color:#ae81ff">58456</span>   <span style="color:#ae81ff">2672</span> R  99.0  0.4 513:14.75 rsync                                                                                    
- <span style="color:#ae81ff">8756</span> ohthehu+  <span style="color:#ae81ff">20</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">49596</span>   <span style="color:#ae81ff">6648</span>   <span style="color:#ae81ff">5152</span> S  16.9  0.0  92:12.29 ssh 
-...
-</code></pre></div><p>OK, let&rsquo;s kill the transfer and start again using a single large, piped tarball. No more small file scans!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud
-$ cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | ssh warehouse <span style="color:#e6db74">&#34;cd /mnt/storage &amp;&amp; tar xpvf -&#34;</span>
-</code></pre></div><p>That helps, but we&rsquo;re still compressing lots of data unnecessarily (most of my data is already compressed), and encrypting it, too. We can improve it with a lightweight ssh cipher and disabled compression:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud
-$ cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | ssh -o Compression<span style="color:#f92672">=</span>no -c chacha20-poly1305@openssh.com warehouse <span style="color:#e6db74">&#34;cd /mnt/storage &amp;&amp; tar xpf -&#34;</span>
-</code></pre></div><p>That chacha20-poly1305 is a very fast cipher indeed - faster than the old arcfour cipher we used to use in this case. But SSH still puts extra work on the CPU. So let&rsquo;s remove it completely from the equation and just use netcat.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | pv | nc -l -q <span style="color:#ae81ff">5</span> -p <span style="color:#ae81ff">9999</span> 
-<span style="color:#75715e"># in a separate terminal</span>
-$ ssh warehouse cd /mnt/storage <span style="color:#f92672">&amp;&amp;</span> nc nextcloud <span style="color:#ae81ff">9999</span> | pv | tar -xf -
-</code></pre></div><p>Transfer speeds now average about 61 megabytes per second. That&rsquo;s fast enough to kick in the law of diminishing returns on my optimization effort: this will take about 8 hours to transfer if I keep it running. I had to pause work for an hour; now if I spend another hour on this, it has to shave more than 25% off my transfer time to finish any earlier tonight. I&rsquo;m not confident I can beat those numbers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh nextcloud
+</span></span><span style="display:flex;"><span>$ top
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>top - 08:22:27 up 10:26,  <span style="color:#ae81ff">1</span> user,  load average: 1.20, 1.34, 1.33
+</span></span><span style="display:flex;"><span>Tasks: <span style="color:#ae81ff">170</span> total,   <span style="color:#ae81ff">2</span> running, <span style="color:#ae81ff">106</span> sleeping,   <span style="color:#ae81ff">0</span> stopped,   <span style="color:#ae81ff">0</span> zombie
+</span></span><span style="display:flex;"><span>%Cpu<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>: 28.0 us,  2.1 sy,  0.0 ni, 69.5 id,  0.1 wa,  0.0 hi,  0.3 si,  0.0 st
+</span></span><span style="display:flex;"><span>KiB Mem : <span style="color:#ae81ff">16330372</span> total,   <span style="color:#ae81ff">180568</span> free,   <span style="color:#ae81ff">657104</span> used, <span style="color:#ae81ff">15492700</span> buff/cache
+</span></span><span style="display:flex;"><span>KiB Swap:  <span style="color:#ae81ff">4194300</span> total,  <span style="color:#ae81ff">4162556</span> free,    <span style="color:#ae81ff">31744</span> used. <span style="color:#ae81ff">15300068</span> avail Mem 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                                  
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8755</span> ohthehu+  <span style="color:#ae81ff">20</span>   <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">130572</span>  <span style="color:#ae81ff">58456</span>   <span style="color:#ae81ff">2672</span> R  99.0  0.4 513:14.75 rsync                                                                                    
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8756</span> ohthehu+  <span style="color:#ae81ff">20</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">49596</span>   <span style="color:#ae81ff">6648</span>   <span style="color:#ae81ff">5152</span> S  16.9  0.0  92:12.29 ssh 
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>OK, let&rsquo;s kill the transfer and start again using a single large, piped tarball. No more small file scans!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh nextcloud
+</span></span><span style="display:flex;"><span>$ cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | ssh warehouse <span style="color:#e6db74">&#34;cd /mnt/storage &amp;&amp; tar xpvf -&#34;</span>
+</span></span></code></pre></div><p>That helps, but we&rsquo;re still compressing lots of data unnecessarily (most of my data is already compressed), and encrypting it, too. We can improve it with a lightweight ssh cipher and disabled compression:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh nextcloud
+</span></span><span style="display:flex;"><span>$ cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | ssh -o Compression<span style="color:#f92672">=</span>no -c chacha20-poly1305@openssh.com warehouse <span style="color:#e6db74">&#34;cd /mnt/storage &amp;&amp; tar xpf -&#34;</span>
+</span></span></code></pre></div><p>That chacha20-poly1305 is a very fast cipher indeed - faster than the old arcfour cipher we used to use in this case. But SSH still puts extra work on the CPU. So let&rsquo;s remove it completely from the equation and just use netcat.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh nextcloud cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | pv | nc -l -q <span style="color:#ae81ff">5</span> -p <span style="color:#ae81ff">9999</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># in a separate terminal</span>
+</span></span><span style="display:flex;"><span>$ ssh warehouse cd /mnt/storage <span style="color:#f92672">&amp;&amp;</span> nc nextcloud <span style="color:#ae81ff">9999</span> | pv | tar -xf -
+</span></span></code></pre></div><p>Transfer speeds now average about 61 megabytes per second. That&rsquo;s fast enough to kick in the law of diminishing returns on my optimization effort: this will take about 8 hours to transfer if I keep it running. I had to pause work for an hour; now if I spend another hour on this, it has to shave more than 25% off my transfer time to finish any earlier tonight. I&rsquo;m not confident I can beat those numbers.</p>
 <p>Still - What happened to my 125 theoretical megabytes per second? Here are the culprits I suspect - and can&rsquo;t really do anything about:</p>
 <ul>
 <li>
@@ -249,26 +249,26 @@ $ ssh warehouse cd /mnt/storage <span style="color:#f92672">&amp;&amp;</span> nc
 <h3 id="appendix-easy-performance-testing">Appendix: easy performance testing</h3>
 <p>If you&rsquo;re working on a similar problem for yourself, you might find these performance testing commands helpful. The idea is to tease apart each component of the transfer. There are better, more detailed, dedicated tools for each of these, but in a game of &ldquo;find the bottleneck&rdquo; you really only need quick and dirty validation. Fun fact: the command <em>dd</em> is actually short for <strong>D</strong>own and <strong>D</strong>irty. Well it should be, at any rate.</p>
 <p><strong>Read speed (on the source</strong> is easy: hand an arbitrary large file to dd, and write down the numbers it gives.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>large-file.tar.bz2 of<span style="color:#f92672">=</span>/dev/null bs<span style="color:#f92672">=</span>1M
-<span style="color:#ae81ff">1021317200</span> bytes <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> GB<span style="color:#f92672">)</span> copied, 3.9888 s, <span style="color:#ae81ff">256</span> MB/s
-</code></pre></div><p><strong>Network speed</strong> can be tested by netcatting a gigabyte of zeros from one machine to the other.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># On the receiving machine, open a port to /dev/null</span>
-$ nc -vvlnp <span style="color:#ae81ff">12345</span> &gt;/dev/null
-<span style="color:#75715e"># On the sending machine, send a gig of zeroes to that port</span>
-$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero bs<span style="color:#f92672">=</span>1M count<span style="color:#f92672">=</span>1K | nc -vvn 192.168.1.50 <span style="color:#ae81ff">12345</span>
-Connection to 192.168.1.50 <span style="color:#ae81ff">12345</span> port <span style="color:#f92672">[</span>tcp/*<span style="color:#f92672">]</span> succeeded!
-1024+0 records in
-1024+0 records out
-<span style="color:#ae81ff">1073741824</span> bytes <span style="color:#f92672">(</span>1.1 GB, 1.0 GiB<span style="color:#f92672">)</span> copied, 11.7811 s, 91.1 MB/s
-<span style="color:#75715e"># Remember, 8 bits to a byte!</span>
-$ echo <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>bc -l <span style="color:#f92672">&lt;&lt;&lt;</span> 91*8<span style="color:#66d9ef">)</span><span style="color:#e6db74"> Megabits&#34;</span>
-<span style="color:#ae81ff">728</span> Megabits
-</code></pre></div><p><strong>Write speed on the destination</strong> can be tested with dd, too:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero bs<span style="color:#f92672">=</span>1M count<span style="color:#f92672">=</span><span style="color:#ae81ff">1024</span> of<span style="color:#f92672">=</span>/mnt/storage/test.img
-1024+0 records in
-1024+0 records out
-<span style="color:#ae81ff">1073741824</span> bytes <span style="color:#f92672">(</span>1.1 GB, 1.0 GiB<span style="color:#f92672">)</span> copied, 55.3836 s, 19.4 MB/s
-</code></pre></div><p>(note: these tests were run while the copy was happening on warehouse. Your numbers should be better than this!)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>large-file.tar.bz2 of<span style="color:#f92672">=</span>/dev/null bs<span style="color:#f92672">=</span>1M
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1021317200</span> bytes <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> GB<span style="color:#f92672">)</span> copied, 3.9888 s, <span style="color:#ae81ff">256</span> MB/s
+</span></span></code></pre></div><p><strong>Network speed</strong> can be tested by netcatting a gigabyte of zeros from one machine to the other.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># On the receiving machine, open a port to /dev/null</span>
+</span></span><span style="display:flex;"><span>$ nc -vvlnp <span style="color:#ae81ff">12345</span> &gt;/dev/null
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># On the sending machine, send a gig of zeroes to that port</span>
+</span></span><span style="display:flex;"><span>$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero bs<span style="color:#f92672">=</span>1M count<span style="color:#f92672">=</span>1K | nc -vvn 192.168.1.50 <span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>Connection to 192.168.1.50 <span style="color:#ae81ff">12345</span> port <span style="color:#f92672">[</span>tcp/*<span style="color:#f92672">]</span> succeeded!
+</span></span><span style="display:flex;"><span>1024+0 records in
+</span></span><span style="display:flex;"><span>1024+0 records out
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1073741824</span> bytes <span style="color:#f92672">(</span>1.1 GB, 1.0 GiB<span style="color:#f92672">)</span> copied, 11.7811 s, 91.1 MB/s
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remember, 8 bits to a byte!</span>
+</span></span><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>bc -l <span style="color:#f92672">&lt;&lt;&lt;</span> 91*8<span style="color:#66d9ef">)</span><span style="color:#e6db74"> Megabits&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">728</span> Megabits
+</span></span></code></pre></div><p><strong>Write speed on the destination</strong> can be tested with dd, too:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero bs<span style="color:#f92672">=</span>1M count<span style="color:#f92672">=</span><span style="color:#ae81ff">1024</span> of<span style="color:#f92672">=</span>/mnt/storage/test.img
+</span></span><span style="display:flex;"><span>1024+0 records in
+</span></span><span style="display:flex;"><span>1024+0 records out
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1073741824</span> bytes <span style="color:#f92672">(</span>1.1 GB, 1.0 GiB<span style="color:#f92672">)</span> copied, 55.3836 s, 19.4 MB/s
+</span></span></code></pre></div><p>(note: these tests were run while the copy was happening on warehouse. Your numbers should be better than this!)</p>
 
   </div>
   

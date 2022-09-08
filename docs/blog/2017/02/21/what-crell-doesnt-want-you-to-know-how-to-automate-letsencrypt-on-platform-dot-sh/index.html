@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -211,9 +211,9 @@ But as readers of this blog know, the docs are only the start of the story. I&rs
 <h3 id="1-add-some-writeable-directories-where-platformsh-cli-and-letsencrypt-need-them">1) Add some writeable directories where platform.sh CLI and letsencrypt need them.</h3>
 <p>Normally when Platform deploys your application, it puts it all in a read-only filesystem. We&rsquo;re going to mount some special directories read-write so all the letsencrypt/platform magic can work.</p>
 <p>Edit your application&rsquo;s <code>.platform.app.yaml</code> file, and find the <code>mounts:</code> section. At the bottom, add these three lines. Make sure to match the indents with everything else under the <code>mounts:</code> section!</p>
-<pre tabindex="0"><code>    &quot;/web/.well-known&quot;: &quot;shared:files/.well-known&quot;
-    &quot;/keys&quot;: &quot;shared:files/keys&quot;
-    &quot;/.platformsh&quot;: &quot;shared:files/.platformsh&quot;
+<pre tabindex="0"><code>    &#34;/web/.well-known&#34;: &#34;shared:files/.well-known&#34;
+    &#34;/keys&#34;: &#34;shared:files/keys&#34;
+    &#34;/.platformsh&#34;: &#34;shared:files/.platformsh&#34;
 </code></pre><p>Let&rsquo;s walk through each of these:</p>
 <ul>
 <li>/web/.well-known: In order to confirm that you actually control example.com, letsencrypt drops a file somewhere on your website, and then tries to fetch it. This directory is where it&rsquo;s going to do the drop and fetch. My webroot is <code>web</code>, you should change this to match your own environment. You might use <code>public</code> or <code>www</code> or something.</li>
@@ -222,12 +222,12 @@ But as readers of this blog know, the docs are only the start of the story. I&rs
 </ul>
 <h3 id="2-expose-the-well-known-directory-to-the-internet">2) Expose the .well-known directory to the Internet</h3>
 <p>I mentioned above that letsencrypt test your control over a domain by creating a file which it tries to fetch over the Internet. We already created the writeable directory where the scripts can drop the file, but platform.sh (wisely) defaults to hide your directories from the Internet. We&rsquo;re going to add some configuration to the &ldquo;web&rdquo; app section to expose this .well-known directory. Find the <code>web:</code> section of your <code>.platform.app.yaml</code> file, and the <code>locations:</code> section under that. At the bottom of that section, add this:</p>
-<pre tabindex="0"><code>      '/.well-known':
+<pre tabindex="0"><code>      &#39;/.well-known&#39;:
             # Allow access to all files in the public files directory.
             allow: true
             expires: 5m
             passthru: false
-            root: 'web/.well-known'
+            root: &#39;web/.well-known&#39;
             # Do not execute PHP scripts.
             scripts: false
 </code></pre><p>Make sure you match the indents of the other location entries! In my (default) <code>.platform.app.yaml</code> file, I have 8 spaces before that <code>'/.well-known':</code> line. Also note that the <code>root:</code> parameter there also uses my webroot directory, so adjust that to fit your environment.</p>
@@ -249,35 +249,35 @@ api:
 <p>Now let&rsquo;s test it by running <code>php /app/.global/bin/platform.phar auth:info</code>. If you see your account information, congratulations! You have a working platform.sh CLI installed.</p>
 <h3 id="5-request-your-first-certificate-by-hand">5) Request your first certificate by hand</h3>
 <p>Still SSH&rsquo;ed into that environment, let&rsquo;s see if everything works.</p>
-<pre tabindex="0"><code>lego --email=&quot;support@example.com&quot; --domains=&quot;www.example.com&quot; --webroot=/app/public/ --path=/app/keys/ -a run
-csplit -f /app/keys/certificates/www.example.com.crt- /app/keys/certificates/www.example.com.crt '/-----BEGIN CERTIFICATE-----/' '{1}' -z -s
+<pre tabindex="0"><code>lego --email=&#34;support@example.com&#34; --domains=&#34;www.example.com&#34; --webroot=/app/public/ --path=/app/keys/ -a run
+csplit -f /app/keys/certificates/www.example.com.crt- /app/keys/certificates/www.example.com.crt &#39;/-----BEGIN CERTIFICATE-----/&#39; &#39;{1}&#39; -z -s
 php /app/.global/bin/platform.phar domain:update -p $PLATFORM_PROJECT --no-wait --yes --cert /app/keys/certificates/www.example.com.crt-00 --chain /app/keys/certificates/www.example.com.crt-01 --key /app/keys/certificates/www.example.com.key example.com
 </code></pre><p>This is three commands: register the cert with letsencrypt, then split the resulting file into it&rsquo;s components, then register those components with platform.sh. If you didn&rsquo;t get any errors, go ahead and test your site - it&rsquo;s got a certificate! (yay)</p>
 <h3 id="6-set-up-automatic-renewals-on-cron">6) Set up automatic renewals on cron</h3>
 <p>Back to <code>.platform.app.yaml</code>, look for the <code>crons:</code> section. If you&rsquo;re running drupal, you probably have a drupal cronjob in there already. Add this one at the bottom, matching indents as always.</p>
 <pre tabindex="0"><code>    letsencrypt:
-        spec: '0 0 1 * *'
-        cmd: '/bin/sh /app/scripts/letsencrypt.sh'
+        spec: &#39;0 0 1 * *&#39;
+        cmd: &#39;/bin/sh /app/scripts/letsencrypt.sh&#39;
 </code></pre><p>Now let&rsquo;s create the script. Add the file <code>scripts/letsencrypt.sh</code> to your repo, with this content:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/usr/bin/env bash
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e"># Checks and updates the letsencrypt HTTPS cert.</span>
-
-set -e
-
-<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$PLATFORM_ENVIRONMENT<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;master-7rqtwti&#34;</span> <span style="color:#f92672">]</span>
-  <span style="color:#66d9ef">then</span>
-    <span style="color:#75715e"># Renew the certificate</span>
-    lego --email<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;example@example.org&#34;</span> --domains<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;example.org&#34;</span> --webroot<span style="color:#f92672">=</span>/app/web/ --path<span style="color:#f92672">=</span>/app/keys/ -a renew
-    <span style="color:#75715e"># Split the certificate from any intermediate chain</span>
-    csplit -f /app/keys/certificates/example.org.crt- /app/keys/certificates/example.org.crt <span style="color:#e6db74">&#39;/-----BEGIN CERTIFICATE-----/&#39;</span> <span style="color:#e6db74">&#39;{1}&#39;</span> -z -s
-    <span style="color:#75715e"># Update the certificates on the domain</span>
-    php /app/.global/bin/platform.phar domain:update -p $PLATFORM_PROJECT --no-wait --yes --cert /app/keys/certificates/example.org.crt-00 --chain /app/keys/certificates/example.org.crt-01 --key /app/keys/certificates/example.org.key example.org
-<span style="color:#66d9ef">fi</span>
-</code></pre></div><p>Obviously you should replace all those <code>example.org</code>s and email addresses with your own domain. Make the file executable with <code>chmod u+x scripts/letsencrypt.sh</code>, commit it, and push it up to your platform.sh environment.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/usr/bin/env bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Checks and updates the letsencrypt HTTPS cert.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>set -e
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$PLATFORM_ENVIRONMENT<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;master-7rqtwti&#34;</span> <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Renew the certificate</span>
+</span></span><span style="display:flex;"><span>    lego --email<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;example@example.org&#34;</span> --domains<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;example.org&#34;</span> --webroot<span style="color:#f92672">=</span>/app/web/ --path<span style="color:#f92672">=</span>/app/keys/ -a renew
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Split the certificate from any intermediate chain</span>
+</span></span><span style="display:flex;"><span>    csplit -f /app/keys/certificates/example.org.crt- /app/keys/certificates/example.org.crt <span style="color:#e6db74">&#39;/-----BEGIN CERTIFICATE-----/&#39;</span> <span style="color:#e6db74">&#39;{1}&#39;</span> -z -s
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Update the certificates on the domain</span>
+</span></span><span style="display:flex;"><span>    php /app/.global/bin/platform.phar domain:update -p $PLATFORM_PROJECT --no-wait --yes --cert /app/keys/certificates/example.org.crt-00 --chain /app/keys/certificates/example.org.crt-01 --key /app/keys/certificates/example.org.key example.org
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span></code></pre></div><p>Obviously you should replace all those <code>example.org</code>s and email addresses with your own domain. Make the file executable with <code>chmod u+x scripts/letsencrypt.sh</code>, commit it, and push it up to your platform.sh environment.</p>
 <h3 id="7-send-a-bragging-email-to-crell">7) Send a bragging email to Crell</h3>
 <p>Technically this isn&rsquo;t supposed to be possible, but YOU DID IT! Make sure to rub it in.</p>
-<p><img src="/images/larry-garfield.jpg" alt="&ldquo;Larry is waiting to hear from you. (photo credit Jesus Manuel Olivas)""></p>
+<p><img src="/images/larry-garfield.jpg" alt="&amp;ldquo;Larry is waiting to hear from you. (photo credit Jesus Manuel Olivas)&amp;rdquo;"></p>
 <p>Good luck!</p>
 <p>PS - I&rsquo;m just gonna link one more time to the guy whose snippet made this all possible: <a href="https://www.drupal.org/u/hanoii">Ariel Barreiro</a> did the hardest part of this. I&rsquo;m grateful that he made his notes public!</p>
 

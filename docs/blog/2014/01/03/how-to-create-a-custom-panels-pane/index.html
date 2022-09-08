@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -210,118 +210,118 @@ As usual, I&rsquo;ll assume that you have an empty custom module called mymodule
 </ol>
 <hr>
 <p>Ctools, like Views, needs a hook to declare the fact that you have custom code. To do this we&rsquo;ll use <em><a href="http://drupalcontrib.org/api/drupal/contributions!ctools!ctools.api.php/function/hook_ctools_plugin_directory/7">hook_ctools_plugin_directory</a></em>. This hook is invoked for all Ctools plugin types, and includes the module name as a variable. This way you can avoid eating up memory for anything except the targeted module. You also have to declare where your custom code will live. So here&rsquo;s the complete content of <em>mymodule.module</em>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-
-<span style="color:#e6db74">/**
-</span><span style="color:#e6db74"> * Implements hook_ctools_plugin_directory().
-</span><span style="color:#e6db74"> */</span>
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_ctools_plugin_directory</span>($owner, $plugin_type) {
-  <span style="color:#66d9ef">if</span> ($owner <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ctools&#39;</span> <span style="color:#f92672">&amp;&amp;</span> $plugin_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;content_types&#39;</span>) {
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;plugins/content_types&#39;</span>;
-  }
-}
-</code></pre></div><p>Note: <strong>Do not confuse Ctools &ldquo;Content Types&rdquo; with the &ldquo;Content Type&rdquo; entity used elsewhere in Drupal.</strong> This is just confusing naming, but they&rsquo;re totally different things. Actually the most common usage for a Ctools Content Type is a pane, just like what we&rsquo;re doing now. There are other plugin types, but none that interest us in this post.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * Implements hook_ctools_plugin_directory().
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_ctools_plugin_directory</span>($owner, $plugin_type) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> ($owner <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;ctools&#39;</span> <span style="color:#f92672">&amp;&amp;</span> $plugin_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;content_types&#39;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;plugins/content_types&#39;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Note: <strong>Do not confuse Ctools &ldquo;Content Types&rdquo; with the &ldquo;Content Type&rdquo; entity used elsewhere in Drupal.</strong> This is just confusing naming, but they&rsquo;re totally different things. Actually the most common usage for a Ctools Content Type is a pane, just like what we&rsquo;re doing now. There are other plugin types, but none that interest us in this post.</p>
 <ol start="2">
 <li>Add your custom pane</li>
 </ol>
 <hr>
 <p>Oh, did you think this would be more difficult? Now that we&rsquo;ve told Ctools to look for Content Type plugins in our module&rsquo;s <em>plugins/content_types</em> subdirectory, we just add a <em>.inc</em> file for each &ldquo;Content Type&rdquo; (aka Pane) that we want to add. Let&rsquo;s do a simple one, which returns the root term of a given taxonomy term. All the following code will go in <em>plugins/content_types/taxonomy_root_term.inc</em> (a name I chose arbitrarily).</p>
 <p>Right at the top of the file, we provide a <em>$plugin</em> array which defines the basic information about our <!-- raw HTML omitted -->Pane<!-- raw HTML omitted --> Ctools Content Type. This doesn&rsquo;t go into a function or anything, it just sits at the top of the <em>.inc</em> file:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-
-$plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
-  <span style="color:#e6db74">&#39;single&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">TRUE</span>,
-  <span style="color:#e6db74">&#39;title&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;Taxonomy root term&#39;</span>),
-  <span style="color:#e6db74">&#39;description&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;a Display of data from the root term of the given TID&#39;</span>),
-  <span style="color:#e6db74">&#39;category&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;Custom Panes&#39;</span>),
-  <span style="color:#e6db74">&#39;edit form&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;mymodule_taxonomy_root_term&#39;</span>,
-  <span style="color:#e6db74">&#39;render callback&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;mymodule_taxonomy_root_term_render&#39;</span>,
-  <span style="color:#e6db74">&#39;admin info&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;mymodule_taxonomy_root_term_info&#39;</span>,
-  <span style="color:#e6db74">&#39;defaults&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">array</span>(),
-  <span style="color:#e6db74">&#39;all contexts&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">TRUE</span>,
-);
-</code></pre></div><p>As you can see, this array defines a category, title, and description for the Panels admin interface. It also declares the names of the callbacks which provide the pane&rsquo;s edit form, rendered form, and admin info. &ldquo;Single&rdquo; means that this type has no sub-types. This is the case in every single custom pane I&rsquo;ve ever seen, so it&rsquo;s probably the case for yours as well.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$plugin <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;single&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">TRUE</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;title&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;Taxonomy root term&#39;</span>),
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;description&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;a Display of data from the root term of the given TID&#39;</span>),
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;category&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;Custom Panes&#39;</span>),
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;edit form&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;mymodule_taxonomy_root_term&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;render callback&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;mymodule_taxonomy_root_term_render&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;admin info&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;mymodule_taxonomy_root_term_info&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;defaults&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">array</span>(),
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;all contexts&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">TRUE</span>,
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><p>As you can see, this array defines a category, title, and description for the Panels admin interface. It also declares the names of the callbacks which provide the pane&rsquo;s edit form, rendered form, and admin info. &ldquo;Single&rdquo; means that this type has no sub-types. This is the case in every single custom pane I&rsquo;ve ever seen, so it&rsquo;s probably the case for yours as well.</p>
 <p>Now we write the callbacks we named in that array. We&rsquo;ll start with the edit form.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
-<span style="color:#e6db74">/**
-</span><span style="color:#e6db74"> * Edit form.
-</span><span style="color:#e6db74"> */</span>
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_taxonomy_root_term</span>($form, <span style="color:#f92672">&amp;</span>$form_state) {
- $conf <span style="color:#f92672">=</span> $form_state[<span style="color:#e6db74">&#39;conf&#39;</span>]; 
-
- $form[<span style="color:#e6db74">&#39;term&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
-   <span style="color:#e6db74">&#39;#type&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;textfield&#39;</span>,
-   <span style="color:#e6db74">&#39;#title&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;Term ID&#39;</span>),
-   <span style="color:#e6db74">&#39;#description&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;The term, from which the root term will be displayed&#39;</span>),
-   <span style="color:#e6db74">&#39;#default_value&#39;</span> <span style="color:#f92672">=&gt;</span> $conf[<span style="color:#e6db74">&#39;term&#39;</span>],
- );
-
-  $entity_info <span style="color:#f92672">=</span> <span style="color:#a6e22e">entity_get_info</span>(<span style="color:#e6db74">&#39;taxonomy_term&#39;</span>);
-
-  $options <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
-  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>($entity_info[<span style="color:#e6db74">&#39;view modes&#39;</span>])) {
-    <span style="color:#66d9ef">foreach</span> ($entity_info[<span style="color:#e6db74">&#39;view modes&#39;</span>] <span style="color:#66d9ef">as</span> $mode <span style="color:#f92672">=&gt;</span> $settings) {
-      $options[$mode] <span style="color:#f92672">=</span> $settings[<span style="color:#e6db74">&#39;label&#39;</span>];
-    }
-  }
-
- $form[<span style="color:#e6db74">&#39;view_mode&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
-   <span style="color:#e6db74">&#39;#type&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;select&#39;</span>,
-   <span style="color:#e6db74">&#39;#options&#39;</span> <span style="color:#f92672">=&gt;</span> $options,
-   <span style="color:#e6db74">&#39;#title&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;View mode&#39;</span>),
-   <span style="color:#e6db74">&#39;#default_value&#39;</span> <span style="color:#f92672">=&gt;</span> $conf[<span style="color:#e6db74">&#39;view_mode&#39;</span>],
- );
-
- <span style="color:#66d9ef">return</span> $form;
-}
-</code></pre></div><p>This is a fairly standard Drupal form. It also goes through typical form validation and submission functions, so you can provide a pretty complete experience for the administrator. In our case, we just want to get the term ID of the term whose root parent should be displayed. We let the administrator enter the term ID, and the view mode which should be used to display it. We won&rsquo;t worry about form validation in our example. Let&rsquo;s move on to the Submit function:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
-</span><span style="color:#e6db74"> * Edit form submit function.
-</span><span style="color:#e6db74"> */</span>
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_taxonomy_root_term_submit</span>($form, <span style="color:#f92672">&amp;</span>$form_state) {
-  $form_state[<span style="color:#e6db74">&#39;conf&#39;</span>][<span style="color:#e6db74">&#39;term&#39;</span>] <span style="color:#f92672">=</span> $form_state[<span style="color:#e6db74">&#39;values&#39;</span>][<span style="color:#e6db74">&#39;term&#39;</span>];
-  $form_state[<span style="color:#e6db74">&#39;conf&#39;</span>][<span style="color:#e6db74">&#39;view_mode&#39;</span>] <span style="color:#f92672">=</span> $form_state[<span style="color:#e6db74">&#39;values&#39;</span>][<span style="color:#e6db74">&#39;view_mode&#39;</span>];
-}
-</code></pre></div><p>Again, pretty simple stuff. We just make sure that the <em>$form_state[&lsquo;conf&rsquo;]</em> has the values entered. Now, the next callback we defined in <em>$plugin</em> is for rendering the pane:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
-</span><span style="color:#e6db74"> * Render the panel.
-</span><span style="color:#e6db74"> */</span>
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_taxonomy_root_term_render</span>($subtype, $conf, $args, $contexts) {
-  <span style="color:#66d9ef">if</span> ($context<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">empty</span>) {
-    <span style="color:#66d9ef">return</span>;
-  } 
-  <span style="color:#75715e">// Get full term object for the root term.
-</span><span style="color:#75715e"></span>  $term <span style="color:#f92672">=</span> <span style="color:#a6e22e">ctools_context_keyword_substitute</span>($conf[<span style="color:#e6db74">&#39;term&#39;</span>], <span style="color:#66d9ef">array</span>(), $contexts);
-  $parent_array <span style="color:#f92672">=</span> <span style="color:#a6e22e">taxonomy_get_parents_all</span>($term);
-  $root <span style="color:#f92672">=</span> <span style="color:#a6e22e">end</span>($parent_array);
-
-  <span style="color:#75715e">// Render as a block.
-</span><span style="color:#75715e"></span>  $block <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">stdClass</span>();
-  $block<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">module</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;entity&#39;</span>;
-  $block<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">delta</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;taxonomy_term-&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">str_replace</span>(<span style="color:#e6db74">&#39;-&#39;</span>, <span style="color:#e6db74">&#39;_&#39;</span>, $conf[<span style="color:#e6db74">&#39;view_mode&#39;</span>]);
-
-  $entity <span style="color:#f92672">=</span> <span style="color:#a6e22e">entity_load_single</span>(<span style="color:#e6db74">&#39;taxonomy_term&#39;</span>, $root<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">tid</span>);
-  $block<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">entity_view</span>(<span style="color:#e6db74">&#39;taxonomy_term&#39;</span>, <span style="color:#66d9ef">array</span>($root), $conf[<span style="color:#e6db74">&#39;view_mode&#39;</span>]);
-  <span style="color:#66d9ef">return</span> $block;
-
-}
-</code></pre></div><p>First we make sure there is information - ie the taxonomy term ID we need - in the pane&rsquo;s context. Then we get the root term object and render it in the requested display mode. The only requirement for the return here is that it be a <a href="https://drupal.org/node/930760">Drupal render array</a>. So depending on your use case, you can return an image, a field&hellip; whatever you like. In most cases a block is a convenient wrapper for whatever you have to return, which is what I did here.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * Edit form.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_taxonomy_root_term</span>($form, <span style="color:#f92672">&amp;</span>$form_state) {
+</span></span><span style="display:flex;"><span> $conf <span style="color:#f92672">=</span> $form_state[<span style="color:#e6db74">&#39;conf&#39;</span>]; 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> $form[<span style="color:#e6db74">&#39;term&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
+</span></span><span style="display:flex;"><span>   <span style="color:#e6db74">&#39;#type&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;textfield&#39;</span>,
+</span></span><span style="display:flex;"><span>   <span style="color:#e6db74">&#39;#title&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;Term ID&#39;</span>),
+</span></span><span style="display:flex;"><span>   <span style="color:#e6db74">&#39;#description&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;The term, from which the root term will be displayed&#39;</span>),
+</span></span><span style="display:flex;"><span>   <span style="color:#e6db74">&#39;#default_value&#39;</span> <span style="color:#f92672">=&gt;</span> $conf[<span style="color:#e6db74">&#39;term&#39;</span>],
+</span></span><span style="display:flex;"><span> );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  $entity_info <span style="color:#f92672">=</span> <span style="color:#a6e22e">entity_get_info</span>(<span style="color:#e6db74">&#39;taxonomy_term&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  $options <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>($entity_info[<span style="color:#e6db74">&#39;view modes&#39;</span>])) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> ($entity_info[<span style="color:#e6db74">&#39;view modes&#39;</span>] <span style="color:#66d9ef">as</span> $mode <span style="color:#f92672">=&gt;</span> $settings) {
+</span></span><span style="display:flex;"><span>      $options[$mode] <span style="color:#f92672">=</span> $settings[<span style="color:#e6db74">&#39;label&#39;</span>];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> $form[<span style="color:#e6db74">&#39;view_mode&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(
+</span></span><span style="display:flex;"><span>   <span style="color:#e6db74">&#39;#type&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;select&#39;</span>,
+</span></span><span style="display:flex;"><span>   <span style="color:#e6db74">&#39;#options&#39;</span> <span style="color:#f92672">=&gt;</span> $options,
+</span></span><span style="display:flex;"><span>   <span style="color:#e6db74">&#39;#title&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;View mode&#39;</span>),
+</span></span><span style="display:flex;"><span>   <span style="color:#e6db74">&#39;#default_value&#39;</span> <span style="color:#f92672">=&gt;</span> $conf[<span style="color:#e6db74">&#39;view_mode&#39;</span>],
+</span></span><span style="display:flex;"><span> );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">return</span> $form;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This is a fairly standard Drupal form. It also goes through typical form validation and submission functions, so you can provide a pretty complete experience for the administrator. In our case, we just want to get the term ID of the term whose root parent should be displayed. We let the administrator enter the term ID, and the view mode which should be used to display it. We won&rsquo;t worry about form validation in our example. Let&rsquo;s move on to the Submit function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#e6db74">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * Edit form submit function.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_taxonomy_root_term_submit</span>($form, <span style="color:#f92672">&amp;</span>$form_state) {
+</span></span><span style="display:flex;"><span>  $form_state[<span style="color:#e6db74">&#39;conf&#39;</span>][<span style="color:#e6db74">&#39;term&#39;</span>] <span style="color:#f92672">=</span> $form_state[<span style="color:#e6db74">&#39;values&#39;</span>][<span style="color:#e6db74">&#39;term&#39;</span>];
+</span></span><span style="display:flex;"><span>  $form_state[<span style="color:#e6db74">&#39;conf&#39;</span>][<span style="color:#e6db74">&#39;view_mode&#39;</span>] <span style="color:#f92672">=</span> $form_state[<span style="color:#e6db74">&#39;values&#39;</span>][<span style="color:#e6db74">&#39;view_mode&#39;</span>];
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Again, pretty simple stuff. We just make sure that the <em>$form_state[&lsquo;conf&rsquo;]</em> has the values entered. Now, the next callback we defined in <em>$plugin</em> is for rendering the pane:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#e6db74">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * Render the panel.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_taxonomy_root_term_render</span>($subtype, $conf, $args, $contexts) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> ($context<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">empty</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>  } 
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Get full term object for the root term.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $term <span style="color:#f92672">=</span> <span style="color:#a6e22e">ctools_context_keyword_substitute</span>($conf[<span style="color:#e6db74">&#39;term&#39;</span>], <span style="color:#66d9ef">array</span>(), $contexts);
+</span></span><span style="display:flex;"><span>  $parent_array <span style="color:#f92672">=</span> <span style="color:#a6e22e">taxonomy_get_parents_all</span>($term);
+</span></span><span style="display:flex;"><span>  $root <span style="color:#f92672">=</span> <span style="color:#a6e22e">end</span>($parent_array);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Render as a block.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $block <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">stdClass</span>();
+</span></span><span style="display:flex;"><span>  $block<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">module</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;entity&#39;</span>;
+</span></span><span style="display:flex;"><span>  $block<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">delta</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;taxonomy_term-&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">str_replace</span>(<span style="color:#e6db74">&#39;-&#39;</span>, <span style="color:#e6db74">&#39;_&#39;</span>, $conf[<span style="color:#e6db74">&#39;view_mode&#39;</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  $entity <span style="color:#f92672">=</span> <span style="color:#a6e22e">entity_load_single</span>(<span style="color:#e6db74">&#39;taxonomy_term&#39;</span>, $root<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">tid</span>);
+</span></span><span style="display:flex;"><span>  $block<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">entity_view</span>(<span style="color:#e6db74">&#39;taxonomy_term&#39;</span>, <span style="color:#66d9ef">array</span>($root), $conf[<span style="color:#e6db74">&#39;view_mode&#39;</span>]);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> $block;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>First we make sure there is information - ie the taxonomy term ID we need - in the pane&rsquo;s context. Then we get the root term object and render it in the requested display mode. The only requirement for the return here is that it be a <a href="https://drupal.org/node/930760">Drupal render array</a>. So depending on your use case, you can return an image, a field&hellip; whatever you like. In most cases a block is a convenient wrapper for whatever you have to return, which is what I did here.</p>
 <p>This is as far as you have to go. The admin info callback isn&rsquo;t actually required, just don&rsquo;t include it in the <em>$plugin</em> array and you&rsquo;ll be fine. But if you want to make your life easier as a site admin, it&rsquo;s definitely a nice to have.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#e6db74">/**
-</span><span style="color:#e6db74"> * Admin info.
-</span><span style="color:#e6db74"> */</span>
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_taxonomy_root_term_info</span>($subtype, $conf, $contexts) {
-  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>($conf)) {
-    $content <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;p&gt;&lt;b&gt;Term ID:&lt;/b&gt; &#39;</span> <span style="color:#f92672">.</span> $conf[<span style="color:#e6db74">&#39;term&#39;</span>] <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/p&gt;&#39;</span>;
-    $content <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;p&gt;&lt;b&gt;View mode:&lt;/b&gt; &#39;</span> <span style="color:#f92672">.</span> $conf[<span style="color:#e6db74">&#39;view_mode&#39;</span>] <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/p&gt;&#39;</span>;
-
-    $block <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">stdClass</span>;
-    $block<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> $conf[<span style="color:#e6db74">&#39;override_title&#39;</span>] <span style="color:#f92672">?</span> $conf[<span style="color:#e6db74">&#39;override_title_text&#39;</span>] <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>;
-    $block<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> $content;
-    <span style="color:#66d9ef">return</span> $block;
-  }
-}
-</code></pre></div><p>This just provides the administrative summary which you can see in the Panels UI. Again, Panels will be happy with any render array return you throw at it, so I use a block.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#e6db74">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * Admin info.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mymodule_taxonomy_root_term_info</span>($subtype, $conf, $contexts) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>($conf)) {
+</span></span><span style="display:flex;"><span>    $content <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;p&gt;&lt;b&gt;Term ID:&lt;/b&gt; &#39;</span> <span style="color:#f92672">.</span> $conf[<span style="color:#e6db74">&#39;term&#39;</span>] <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/p&gt;&#39;</span>;
+</span></span><span style="display:flex;"><span>    $content <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&lt;p&gt;&lt;b&gt;View mode:&lt;/b&gt; &#39;</span> <span style="color:#f92672">.</span> $conf[<span style="color:#e6db74">&#39;view_mode&#39;</span>] <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;&lt;/p&gt;&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    $block <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">stdClass</span>;
+</span></span><span style="display:flex;"><span>    $block<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> $conf[<span style="color:#e6db74">&#39;override_title&#39;</span>] <span style="color:#f92672">?</span> $conf[<span style="color:#e6db74">&#39;override_title_text&#39;</span>] <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>;
+</span></span><span style="display:flex;"><span>    $block<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">content</span> <span style="color:#f92672">=</span> $content;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> $block;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This just provides the administrative summary which you can see in the Panels UI. Again, Panels will be happy with any render array return you throw at it, so I use a block.</p>
 <h2 id="this-is-why-we-have-nice-things">This is why we have nice things</h2>
 <p>Anyone who&rsquo;s worked with me knows that I&rsquo;m not a huge fan of the panels everywhere approach. But I use it often, simply because it makes custom layouts and totally custom page pieces so easy to do. Duplicating even this very simple functionality in a block is actually harder than this. You&rsquo;re still using about 3 functions, but you&rsquo;d have to determine in advance where that TID will come from. It would certainly come out less flexible, and actually probably harder to maintain. With Ctools all your related code sits in one place, and your module structure actually helps you see what&rsquo;s going on where.</p>
 <p>If you learn how to do elements like this, you&rsquo;ll find Panels creeping into more and more of your builds. And rightfully so.</p>

@@ -54,7 +54,7 @@ But as readers of this blog know, the docs are only the start of the story. I&am
       <guid>https://ohthehugemanatee.org/blog/2014/01/10/drush-self-aliases/</guid>
       <description>I ran into an interesting problem with the drush @self alias today. I wanted to pull a fresh copy of the DB down from a client&amp;rsquo;s live site to my local development copy. Should be as easy as drush sql-sync @clientsite.live @self, right? I&amp;rsquo;ve done this a thousand times before.
 And I&amp;rsquo;ve also ignored the warning message every time before, but today I thought I&amp;rsquo;d check it out:
- WARNING: Using temporary files to store and transfer sql-dump.</description>
+WARNING: Using temporary files to store and transfer sql-dump.</description>
     </item>
     
     <item>
@@ -73,7 +73,7 @@ First of all, you should know that SSH has a great configuration file, typically
       <pubDate>Thu, 20 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2013/06/20/ssl-certificates-demystified/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>
@@ -82,7 +82,7 @@ First of all, you should know that SSH has a great configuration file, typically
       <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2013/04/18/how-to-set-up-apache-solr-multicore-for-drupal/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
   </channel>

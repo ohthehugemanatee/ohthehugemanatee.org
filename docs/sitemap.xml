@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ohthehugemanatee.org/blog/</loc>
-    <lastmod>2022-04-25T11:00:15+02:00</lastmod>
+    <lastmod>2022-09-08T21:07:31+02:00</lastmod>
   </url><url>
-    <loc>https://ohthehugemanatee.org/tags/music/</loc>
-    <lastmod>2022-04-25T11:00:15+02:00</lastmod>
+    <loc>https://ohthehugemanatee.org/categories/</loc>
+    <lastmod>2022-09-08T21:07:31+02:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/categories/dev/</loc>
+    <lastmod>2022-09-08T21:07:31+02:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/categories/drupal/</loc>
+    <lastmod>2022-09-08T21:07:31+02:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/blog/2022/09/08/four-drupalists/</loc>
+    <lastmod>2022-09-08T21:07:31+02:00</lastmod>
   </url><url>
     <loc>https://ohthehugemanatee.org/</loc>
+    <lastmod>2022-09-08T21:07:31+02:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/categories/prenote/</loc>
+    <lastmod>2022-09-08T21:07:31+02:00</lastmod>
+  </url><url>
+    <loc>https://ohthehugemanatee.org/tags/music/</loc>
     <lastmod>2022-04-25T11:00:15+02:00</lastmod>
   </url><url>
     <loc>https://ohthehugemanatee.org/tags/</loc>
@@ -50,13 +65,7 @@
     <loc>https://ohthehugemanatee.org/blog/2021/11/12/building-blocks-for-autonomous-driving-simulation-environments/</loc>
     <lastmod>2021-11-12T19:15:33+01:00</lastmod>
   </url><url>
-    <loc>https://ohthehugemanatee.org/categories/</loc>
-    <lastmod>2021-11-12T19:15:33+01:00</lastmod>
-  </url><url>
     <loc>https://ohthehugemanatee.org/categories/composability/</loc>
-    <lastmod>2021-11-12T19:15:33+01:00</lastmod>
-  </url><url>
-    <loc>https://ohthehugemanatee.org/categories/dev/</loc>
     <lastmod>2021-11-12T19:15:33+01:00</lastmod>
   </url><url>
     <loc>https://ohthehugemanatee.org/categories/kubernetes/</loc>
@@ -133,9 +142,6 @@
   </url><url>
     <loc>https://ohthehugemanatee.org/blog/2018/12/27/optimizing-data-transfer-speeds/</loc>
     <lastmod>2018-12-27T10:30:23+00:00</lastmod>
-  </url><url>
-    <loc>https://ohthehugemanatee.org/categories/drupal/</loc>
-    <lastmod>2018-04-19T18:06:51+00:00</lastmod>
   </url><url>
     <loc>https://ohthehugemanatee.org/blog/2018/04/19/face-recognition-on-drupal/</loc>
     <lastmod>2018-04-19T18:06:51+00:00</lastmod>

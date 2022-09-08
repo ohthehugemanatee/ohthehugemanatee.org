@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -219,7 +219,7 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p><strong>What if I told you that Drupal 8 can do everything Feeds 7 can?</strong></p>
 <p>What if I told you that it&rsquo;s even better: instead of clicking through endless menus and configuration links, waiting for things to load, missing problems, and banging your head against the mouse, you can set this up with one simple piece of text. You can copy and paste it directly from this blog post into Drupal&rsquo;s admin interface.</p>
 <h2 id="what-how">What? How?</h2>
-<p>Drupal 8 can do all the Feedsy stuff you like with <a href="https://www.drupal.org/docs/8/api/migrate-api/migrate-api-overview">Migrate</a> module. Migrate in D8 core already contains all the elements you need to build a regular importer of ANYTHING into D8. Add a couple of contrib modules to provide specific plugins for XML sources and convenience drush functions, and <em>baby you&rsquo;ve got a stew goin'!</em></p>
+<p>Drupal 8 can do all the Feedsy stuff you like with <a href="https://www.drupal.org/docs/8/api/migrate-api/migrate-api-overview">Migrate</a> module. Migrate in D8 core already contains all the elements you need to build a regular importer of ANYTHING into D8. Add a couple of contrib modules to provide specific plugins for XML sources and convenience drush functions, and <em>baby you&rsquo;ve got a stew goin&rsquo;!</em></p>
 <p>Here&rsquo;s the short version Howto:</p>
 <p><strong>1) Download and enable <a href="https://drupal.org/project/migrate_plus">migrate_plus</a> and <a href="https://drupal.org/project/migrate_tools">migrate_tools</a> modules.</strong> You should be doing this with composer, but I won&rsquo;t judge. Just get them into your codebase and enable them. Migrate Plus provides plugins for core Migrate, so you can parse remote XML, JSON, CSV, or even arbitrary spreadsheet data. Migrate Tools gives us drush commands for running migrations.</p>
 <p><strong>2) Write your Migration configuration in text</strong>, and paste it into the configuration import admin page (<code>admin/config/development/configuration/single/import</code>), or import it another way. I&rsquo;ve included a starter YAML just below, you should be able to copypasta, change a few values, and be done in time for tea.</p>
@@ -227,111 +227,110 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p>That&rsquo;s it. One YAML file, most of which is copypasta. One cronjob. All done!</p>
 <p>Here&rsquo;s my RSS importer config for your copy and pasting pleasure. If you&rsquo;re already comfortable with migration YAMLs and XPaths, just add the names of your RSS fields as selectors in the source section, map them to drupal fields in the process section, and you&rsquo;re all done!</p>
 <p>If you aren&rsquo;t familiar with this stuff yet, don&rsquo;t worry! We&rsquo;ll dissect this together, below.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_importer</span>
-<span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Import my RSS feed&#39;</span>
-<span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
-
-<span style="color:#f92672">source</span>:
-  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">url</span>
-  <span style="color:#f92672">data_fetcher_plugin</span>: <span style="color:#ae81ff">http</span>
-  <span style="color:#f92672">urls</span>: <span style="color:#e6db74">&#39;https://example.com/feed.rss&#39;</span>
-  <span style="color:#f92672">data_parser_plugin</span>: <span style="color:#ae81ff">simple_xml</span>
-
-  <span style="color:#f92672">item_selector</span>: <span style="color:#ae81ff">/rss/channel/item</span>
-  <span style="color:#f92672">fields</span>:
-    -
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">guid</span>
-      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">GUID</span>
-      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">guid</span>
-    -
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">title</span>
-      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Title</span>
-      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">title</span>
-    -
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">pub_date</span>
-      <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Publication date&#39;</span>
-      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">pubDate</span>
-    -
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">link</span>
-      <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Origin link&#39;</span>
-      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">link</span>
-    -
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">summary</span>
-      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Summary</span>
-      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:summary&#39;</span>
-    -
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">image</span>
-      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Image</span>
-      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:image[&#39;&#39;href&#39;&#39;]&#39;</span>
-
-  <span style="color:#f92672">ids</span>:
-    <span style="color:#f92672">guid</span>:
-      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
-
-<span style="color:#f92672">destination</span>:
-  <span style="color:#f92672">plugin</span>: <span style="color:#e6db74">&#39;entity:node&#39;</span>
-
-<span style="color:#f92672">process</span>:
-  <span style="color:#f92672">slug</span>: <span style="color:#ae81ff">stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8</span>
-<span style="color:#f92672">title</span>: <span style="color:#ae81ff">title</span>
-  <span style="color:#f92672">field_remote_url</span>: <span style="color:#ae81ff">link</span>
-  <span style="color:#f92672">body</span>: <span style="color:#ae81ff">summary</span>
-  <span style="color:#f92672">created</span>:
-    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">format_date</span>
-    <span style="color:#f92672">from_format</span>: <span style="color:#e6db74">&#39;D, d M Y H:i:s O&#39;</span>
-    <span style="color:#f92672">to_format</span>: <span style="color:#e6db74">&#39;U&#39;</span>
-    <span style="color:#f92672">source</span>: <span style="color:#ae81ff">pub_date</span>
-  <span style="color:#f92672">status</span>:
-    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
-    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">1</span>
-  <span style="color:#f92672">type</span>:
-    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
-    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">podcast_episode</span>
-
-</code></pre></div><p>Some of you can just stop here. If you&rsquo;re familiar with the format and the structures involved, this example is probably all you need to set up your easy RSS importer.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_importer</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Import my RSS feed&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">source</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">url</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">data_fetcher_plugin</span>: <span style="color:#ae81ff">http</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">urls</span>: <span style="color:#e6db74">&#39;https://example.com/feed.rss&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">data_parser_plugin</span>: <span style="color:#ae81ff">simple_xml</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">item_selector</span>: <span style="color:#ae81ff">/rss/channel/item</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">fields</span>:
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">guid</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">GUID</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">guid</span>
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">title</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Title</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">title</span>
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">pub_date</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Publication date&#39;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">pubDate</span>
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">link</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Origin link&#39;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">link</span>
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">summary</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Summary</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:summary&#39;</span>
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">image</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Image</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:image[&#39;&#39;href&#39;&#39;]&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ids</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">guid</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">destination</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">plugin</span>: <span style="color:#e6db74">&#39;entity:node&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">process</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">slug</span>: <span style="color:#ae81ff">stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">title</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">field_remote_url</span>: <span style="color:#ae81ff">link</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">body</span>: <span style="color:#ae81ff">summary</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">created</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">format_date</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">from_format</span>: <span style="color:#e6db74">&#39;D, d M Y H:i:s O&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">to_format</span>: <span style="color:#e6db74">&#39;U&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">source</span>: <span style="color:#ae81ff">pub_date</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">status</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">podcast_episode</span>
+</span></span></code></pre></div><p>Some of you can just stop here. If you&rsquo;re familiar with the format and the structures involved, this example is probably all you need to set up your easy RSS importer.</p>
 <p>In the interest of good examples for Migrate module though, I&rsquo;m going to continue. Read on if you want to learn more about how this config works, and how you can use Migrate to do even more amazing things&hellip;</p>
 <h2 id="anatomy-of-a-migration-yaml">Anatomy of a migration YAML</h2>
 <p>Let&rsquo;s dive into that YAML a bit. Migrate is one of the most powerful components of Drupal 8 core, and this configuration is your gateway to it.</p>
 <p>That YAML looks like a lot, but it&rsquo;s really just 4 sections. They can appear in any order, but we need all 4: General information, source, destination, and data processing. This isn&rsquo;t rocket science after all! Let&rsquo;s look at these sections one at a time.</p>
 <p><strong>General information</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_importer</span>
-<span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;My RSS feed importer&#39;</span>
-<span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
-</code></pre></div><p>This is the basic stuff about the migration configuration. At a minimum it needs a unique machine-readable ID, a human-readable label, and <code>status: true</code> so it&rsquo;s enabled. There are other keys you can include here for fun extra features, like module dependencies, groupings (so you can run several imports together!), tags, and language. These are the critical ones, though.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_importer</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;My RSS feed importer&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><p>This is the basic stuff about the migration configuration. At a minimum it needs a unique machine-readable ID, a human-readable label, and <code>status: true</code> so it&rsquo;s enabled. There are other keys you can include here for fun extra features, like module dependencies, groupings (so you can run several imports together!), tags, and language. These are the critical ones, though.</p>
 <p><strong>Source</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
-  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">url</span>
-  <span style="color:#f92672">data_fetcher_plugin</span>: <span style="color:#ae81ff">file</span>
-  <span style="color:#f92672">urls</span>: <span style="color:#e6db74">&#39;https://example.com/feed.rss&#39;</span>
-  <span style="color:#f92672">data_parser_plugin</span>: <span style="color:#ae81ff">simple_xml</span>
-
-  <span style="color:#f92672">item_selector</span>: <span style="color:#ae81ff">/rss/channel/item</span>
-  <span style="color:#f92672">fields</span>:
-    -
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">guid</span>
-      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">GUID</span>
-      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">guid</span>
-    -
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">title</span>
-      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Item Title</span>
-      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">title</span>
-    -
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">pub_date</span>
-      <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Publication date&#39;</span>
-      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">pubDate</span>
-    -
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">link</span>
-      <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Origin link&#39;</span>
-      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">link</span>
-    -
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">summary</span>
-      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Summary</span>
-      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:summary&#39;</span>
-
-  <span style="color:#f92672">ids</span>:
-    <span style="color:#f92672">guid</span>:
-      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
-</code></pre></div><p>This is the one that intimidates most people: it&rsquo;s where you describe the RSS source. Migrate module is even more flexible than Feeds was, so there&rsquo;s a lot to specify here&hellip; but it all makes sense if you take it in small pieces.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">source</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">url</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">data_fetcher_plugin</span>: <span style="color:#ae81ff">file</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">urls</span>: <span style="color:#e6db74">&#39;https://example.com/feed.rss&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">data_parser_plugin</span>: <span style="color:#ae81ff">simple_xml</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">item_selector</span>: <span style="color:#ae81ff">/rss/channel/item</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">fields</span>:
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">guid</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">GUID</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">guid</span>
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">title</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Item Title</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">title</span>
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">pub_date</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Publication date&#39;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">pubDate</span>
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">link</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Origin link&#39;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">link</span>
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">summary</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Summary</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:summary&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ids</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">guid</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span></code></pre></div><p>This is the one that intimidates most people: it&rsquo;s where you describe the RSS source. Migrate module is even more flexible than Feeds was, so there&rsquo;s a lot to specify here&hellip; but it all makes sense if you take it in small pieces.</p>
 <p>First: we want to use a remote file, so we&rsquo;ll use the Url plugin (there are others, but none that we care about right now). All the rest of the settings belong to the Url plugin, even though they aren&rsquo;t indented or anything.</p>
 <p>There are two possibilities for Url&rsquo;s data_fetcher setting: file and http. <code>file</code> is for anything you could pass to PHP&rsquo;s <a href="https://secure.php.net/manual/en/function.file-get-contents.php">file_get_contents</a>, including remote URLs. There are some great performance tricks in there, so it&rsquo;s a good option for most use cases. We&rsquo;ll be using <code>file</code> for our example. <code>http</code> is specifically for remote files accessed over HTTP, and lets you use the full power of the HTTP spec to get your file. Think authentication headers, cache rules, etc.</p>
 <p>Next we declare which plugin will read (parse) the data from that remote URL. We can read JSON, SOAP, arbitrary XML&hellip; in our use case this is an RSS feed, so we&rsquo;ll use one of the XML plugins. SimpleXML is just what it sounds like: a simple way to get data out of XML. In extreme use cases you might use XML instead, but I haven&rsquo;t encountered that yet (ever, anywhere, in any of my projects). TL;DR: SimpleXML is great. Use it.</p>
@@ -339,34 +338,34 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p>Next we have to identify the &ldquo;fields&rdquo; in the source. You see, migrate module is built around the idea that you&rsquo;ll map source fields to destination fields. That&rsquo;s core to how it thinks about the whole process. Since XML (and by extension RSS) is an unstructured format - it doesn&rsquo;t think of itself as having &ldquo;fields&rdquo; at all. So we&rsquo;ll have to give our source plugin XPaths for the data we want out of the feed, assigning each path to a virtual &ldquo;field&rdquo;. These &ldquo;fake fields&rdquo; let Migrate treat this source just like any other.</p>
 <p>If you haven&rsquo;t worked with XPaths before, the example YAML in this post gives you most of what you need to know. It&rsquo;s just a simple text system for specifying a tag within an unstructured XML document. Not too complicated when you get into it. You may want to <a href="https://duckduckgo.com/?q=xpath+basics">find a good tutorial</a> to learn some of the tricks.</p>
 <p>Let&rsquo;s look at one of these &ldquo;fake fields&rdquo;:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">summary</span>
-      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Summary</span>
-      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:summary&#39;</span>
-</code></pre></div><p><em>name</em> is how we&rsquo;ll address this field in the rest of the migration. It&rsquo;s the source &ldquo;field name&rdquo;. <em>label</em> is the human readable name for the field. <em>selector</em> is the XPath inside the item. Most items are flat - certainly in RSS - so it&rsquo;s basically just the tag that surrounds the data you want. There, was that so hard?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">summary</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Summary</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:summary&#39;</span>
+</span></span></code></pre></div><p><em>name</em> is how we&rsquo;ll address this field in the rest of the migration. It&rsquo;s the source &ldquo;field name&rdquo;. <em>label</em> is the human readable name for the field. <em>selector</em> is the XPath inside the item. Most items are flat - certainly in RSS - so it&rsquo;s basically just the tag that surrounds the data you want. There, was that so hard?</p>
 <p>As a side note, you can see that my RSS feeds tend to be for iTunes. Sometimes the world eats an apple, sometimes an apple eats the world. Buy me a beer at Drupalcon and we can argue about standards.</p>
 <p>Fifth and finally, we identify which &ldquo;field&rdquo; in the source contains a unique identifier. Migrate module keeps track of the association between the source and destination objects, so it can handle updates, rollbacks, and more. The example YAML relies on the very common (but technically optional) <code>&lt;guid&gt;</code> tag as a unique identifier.</p>
 <p><strong>Destination</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">destination</span>:
-  <span style="color:#f92672">plugin</span>: <span style="color:#e6db74">&#39;entity:node&#39;</span>
-</code></pre></div><p>Yep, it&rsquo;s that simple. This is where you declare what Drupal entity type will receive the data. Actually, you could write any sort of destination plugin for this - if you want Drupal to migrate data into some crazy exotic system, you can do it! But in 99.9% of cases you&rsquo;re migrating into Drupal entities, so you&rsquo;ll want <code>entity:something</code> here. Don&rsquo;t worry about bundles (content types) here; that&rsquo;s something we take care of in field mapping.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">destination</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">plugin</span>: <span style="color:#e6db74">&#39;entity:node&#39;</span>
+</span></span></code></pre></div><p>Yep, it&rsquo;s that simple. This is where you declare what Drupal entity type will receive the data. Actually, you could write any sort of destination plugin for this - if you want Drupal to migrate data into some crazy exotic system, you can do it! But in 99.9% of cases you&rsquo;re migrating into Drupal entities, so you&rsquo;ll want <code>entity:something</code> here. Don&rsquo;t worry about bundles (content types) here; that&rsquo;s something we take care of in field mapping.</p>
 <p><strong>Process</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">process</span>:
-  <span style="color:#f92672">slug</span>: <span style="color:#ae81ff">stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8</span>
-<span style="color:#f92672">title</span>: <span style="color:#ae81ff">title</span>
-  <span style="color:#f92672">field_remote_url</span>: <span style="color:#ae81ff">link</span>
-  <span style="color:#f92672">body</span>: <span style="color:#ae81ff">summary</span>
-  <span style="color:#f92672">created</span>:
-    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">format_date</span>
-    <span style="color:#f92672">from_format</span>: <span style="color:#e6db74">&#39;D, d M Y H:i:s O&#39;</span>
-    <span style="color:#f92672">to_format</span>: <span style="color:#e6db74">&#39;U&#39;</span>
-    <span style="color:#f92672">source</span>: <span style="color:#ae81ff">pub_date</span>
-  <span style="color:#f92672">status</span>:
-    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
-    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">1</span>
-  <span style="color:#f92672">type</span>:
-    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
-    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">podcast_episode</span>
-</code></pre></div><p>This is where the action happens: the process section describes how destination fields should get their data from the source. It&rsquo;s the &ldquo;field mapping&rdquo;, and more. Each key is a destination field, each value describes where the data comes from.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">process</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">slug</span>: <span style="color:#ae81ff">stop-waiting-for-feeds-module-how-to-import-remote-feeds-in-drupal-8</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#ae81ff">title</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">field_remote_url</span>: <span style="color:#ae81ff">link</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">body</span>: <span style="color:#ae81ff">summary</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">created</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">format_date</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">from_format</span>: <span style="color:#e6db74">&#39;D, d M Y H:i:s O&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">to_format</span>: <span style="color:#e6db74">&#39;U&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">source</span>: <span style="color:#ae81ff">pub_date</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">status</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">podcast_episode</span>
+</span></span></code></pre></div><p>This is where the action happens: the process section describes how destination fields should get their data from the source. It&rsquo;s the &ldquo;field mapping&rdquo;, and more. Each key is a destination field, each value describes where the data comes from.</p>
 <p>If you don&rsquo;t want to migrate the whole field exactly as it&rsquo;s presented in the source, you can put individual fields through <a href="https://www.drupal.org/docs/8/api/migrate-api/migrate-process-plugins">Migrate plugins</a>. These plugins apply all sorts of changes to the source content, to get it into the shape Drupal needs for a field value. If you want to take a substring from the source, explode it into an array, extract one array value and make sure it&rsquo;s a valid Drupal machine name, you can do that here. I won&rsquo;t do it in my example because that sort of thing isn&rsquo;t common for RSS feeds, but it&rsquo;s definitely possible.</p>
 <p>The examples of plugins that you see here are simple ones. <code>status</code> and <code>type</code> show you how to set a fixed field value. There are other ways, but the <code>default_value</code> plugin is the best way to keep your sanity.</p>
 <p>The <code>created</code> field is a bit more interesting. The Drupal field is a unix timestamp of the time a node was authored. The source RSS uses a string time format, though. We&rsquo;ll use the <code>format_date</code> plugin to convert between the two. Neat, eh?</p>
@@ -380,71 +379,70 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <p><strong>Importing files</strong></p>
 <p>Did you notice that I didn&rsquo;t map the images into Drupal fields in my example? That&rsquo;s because it&rsquo;s a bit confusing. We actually have an image URL that we need to download, then we have to create a file entity based on the downloaded file, and then we add the File ID to the node&rsquo;s field as a value. That&rsquo;s more complicated than I wanted to get into in the general example.</p>
 <p>To do this, we have to create a pipeline of plugins that will operate in sequence, to create the value we want to stick in our field_image.  It looks something like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#f92672">field_image</span>:
-    -
-      <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">download</span>
-      <span style="color:#f92672">source</span>:
-        - <span style="color:#ae81ff">image</span>
-        - <span style="color:#ae81ff">constants/destination_uri</span>
-      <span style="color:#f92672">rename</span>: <span style="color:#66d9ef">true</span>
-    -
-      <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">entity_generate</span>
-</code></pre></div><p>Looking at that download plugin, <em>image</em> seems clear. That&rsquo;s the source URL we got out of the RSS feed. But what is <em>constants/destination_uri</em>, I hear you cry? I&rsquo;m glad you asked. It&rsquo;s a constant, which I added in the source section and didn&rsquo;t tell you about. You can add any arbitrary keys to the source section, and they&rsquo;ll be available like this in processing. It is good practice to lump all your constants together into one key, to keep the namespace clean. This is what it looks like:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
-  <span style="color:#ae81ff">... usual source stuff here ...</span>
-  <span style="color:#f92672">constants</span>:
-    <span style="color:#f92672">destination_uri</span>: <span style="color:#e6db74">&#39;public://my_rss_feed/post.jpg&#39;</span>
-</code></pre></div><p>Before you ask, yes this is exactly the same as using the <code>default_value</code> plugin. Still, <code>default_value</code> is preferred for readability wherever possible. In this case it isn&rsquo;t really possible.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  <span style="color:#f92672">field_image</span>:
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">download</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">source</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">image</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">constants/destination_uri</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">rename</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">entity_generate</span>
+</span></span></code></pre></div><p>Looking at that download plugin, <em>image</em> seems clear. That&rsquo;s the source URL we got out of the RSS feed. But what is <em>constants/destination_uri</em>, I hear you cry? I&rsquo;m glad you asked. It&rsquo;s a constant, which I added in the source section and didn&rsquo;t tell you about. You can add any arbitrary keys to the source section, and they&rsquo;ll be available like this in processing. It is good practice to lump all your constants together into one key, to keep the namespace clean. This is what it looks like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">source</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">... usual source stuff here ...</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">constants</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">destination_uri</span>: <span style="color:#e6db74">&#39;public://my_rss_feed/post.jpg&#39;</span>
+</span></span></code></pre></div><p>Before you ask, yes this is exactly the same as using the <code>default_value</code> plugin. Still, <code>default_value</code> is preferred for readability wherever possible. In this case it isn&rsquo;t really possible.</p>
 <p>Also, note that the download plugin lets me set <code>rename: true</code>. This means that in case of a name conflict, a _0, _1, _2, _3 etc will be added to the end of the filename.</p>
 <p>You can see the whole structure here, of one plugin passing its result to the next. You can chain unlimited plugins together this way&hellip;</p>
 <p><strong>Multiple interrelated migrations</strong></p>
 <p>One of the coolest tricks that Migrate can do is to manage interdependencies between migrations. Maybe you don&rsquo;t want those images just as File entities, you actually want them in Paragraphs, which should appear in the imported node. Easy-peasy.</p>
 <p>First, you have to create a second migration for the Paragraph. Technically you should have a separate Migration YAML for each destination entity type. (yes, <code>entity_generate</code> is a dirty way to get around it, use it sparingly). So we create our second migration just for the paragraph, like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_images_importer</span>
-<span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Import the images from my RSS feed&#39;</span>
-<span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
-
-<span style="color:#f92672">source</span>:
-  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">url</span>
-  <span style="color:#f92672">data_fetcher_plugin</span>: <span style="color:#ae81ff">http</span>
-  <span style="color:#f92672">urls</span>: <span style="color:#e6db74">&#39;https://example.com/feed.rss&#39;</span>
-  <span style="color:#f92672">data_parser_plugin</span>: <span style="color:#ae81ff">simple_xml</span>
-
-  <span style="color:#f92672">item_selector</span>: <span style="color:#ae81ff">/rss/channel/item</span>
-  <span style="color:#f92672">fields</span>:
-    -
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">guid</span>
-      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">GUID</span>
-      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">guid</span>
-    -
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">image</span>
-      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Image</span>
-      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:image[&#39;&#39;href&#39;&#39;]&#39;</span>
-
-  <span style="color:#f92672">ids</span>:
-    <span style="color:#f92672">guid</span>:
-      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
-  <span style="color:#f92672">constants</span>:
-    <span style="color:#f92672">destination_uri</span>: <span style="color:#e6db74">&#39;public://my_rss_feed/post.jpg&#39;</span>
-
-<span style="color:#f92672">destination</span>:
-  <span style="color:#f92672">plugin</span>: <span style="color:#e6db74">&#39;entity:paragraph&#39;</span>
-
-<span style="color:#f92672">process</span>:
-  <span style="color:#f92672">type</span>:
-    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
-    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">podcast_image</span>
-  <span style="color:#f92672">field_image</span>:
-    -
-      <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">download</span>
-      <span style="color:#f92672">source</span>:
-        - <span style="color:#ae81ff">image</span>
-        - <span style="color:#ae81ff">constants/destination_uri</span>
-      <span style="color:#f92672">rename</span>: <span style="color:#66d9ef">true</span>
-    -
-      <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">entity_generate</span>
-
-</code></pre></div><p>If you look at that closely, you&rsquo;ll see it&rsquo;s a simpler version of the node migration we did at first. I did the copy pasting myself! Here are the differences:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">id</span>: <span style="color:#ae81ff">my_rss_images_importer</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">label</span>: <span style="color:#e6db74">&#39;Import the images from my RSS feed&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">status</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">source</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">url</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">data_fetcher_plugin</span>: <span style="color:#ae81ff">http</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">urls</span>: <span style="color:#e6db74">&#39;https://example.com/feed.rss&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">data_parser_plugin</span>: <span style="color:#ae81ff">simple_xml</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">item_selector</span>: <span style="color:#ae81ff">/rss/channel/item</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">fields</span>:
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">guid</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">GUID</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">selector</span>: <span style="color:#ae81ff">guid</span>
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">image</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">label</span>: <span style="color:#ae81ff">Image</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">selector</span>: <span style="color:#e6db74">&#39;itunes:image[&#39;&#39;href&#39;&#39;]&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ids</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">guid</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">type</span>: <span style="color:#ae81ff">string</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">constants</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">destination_uri</span>: <span style="color:#e6db74">&#39;public://my_rss_feed/post.jpg&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">destination</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">plugin</span>: <span style="color:#e6db74">&#39;entity:paragraph&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">process</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">podcast_image</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">field_image</span>:
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">download</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">source</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">image</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">constants/destination_uri</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">rename</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">entity_generate</span>
+</span></span></code></pre></div><p>If you look at that closely, you&rsquo;ll see it&rsquo;s a simpler version of the node migration we did at first. I did the copy pasting myself! Here are the differences:</p>
 <ul>
 <li>Different ID and label (duh)</li>
 <li>We only care about two &ldquo;fields&rdquo; on the source: GUID and the image URL.</li>
@@ -452,24 +450,24 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <li>We&rsquo;re doing the image trick I just mentioned.</li>
 </ul>
 <p>Now, in the node migration, we can add our paragraphs field to the &ldquo;process&rdquo; section like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#f92672">field_paragraphs</span>:
-    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">migration_lookup</span>
-    <span style="color:#f92672">migration</span>: <span style="color:#ae81ff">my_rss_images_importer</span>
-    <span style="color:#f92672">source</span>: <span style="color:#ae81ff">guid</span>
-</code></pre></div><p>We&rsquo;re using the <code>migration_lookup</code> plugin. This plugin takes the value of the field given in <code>source</code>, and looks it up in <code>my_rss_images_importer</code> to see if anything with that source ID was migrated. Remember where we configured the source plugin to know that <code>guid</code> was the unique identifier for each item in this feed? That comes in handy here.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>  <span style="color:#f92672">field_paragraphs</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">migration_lookup</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">migration</span>: <span style="color:#ae81ff">my_rss_images_importer</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">source</span>: <span style="color:#ae81ff">guid</span>
+</span></span></code></pre></div><p>We&rsquo;re using the <code>migration_lookup</code> plugin. This plugin takes the value of the field given in <code>source</code>, and looks it up in <code>my_rss_images_importer</code> to see if anything with that source ID was migrated. Remember where we configured the source plugin to know that <code>guid</code> was the unique identifier for each item in this feed? That comes in handy here.</p>
 <p>So we pass the guid to <code>migration_lookup</code>, and it returns the id of the paragraph which was created for that guid. It finds out what Drupal entity ID corresponds to that source ID, and returns the Drupal entity ID to use as a field value. You can use this trick to associate content migrated from separate feeds, totally separate data sources, or whatever.</p>
 <p>You should also add a dependency on <code>my_rss_images_importer</code> at the bottom of your YAML file, like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">migration_dependencies</span>:
-  <span style="color:#f92672">required</span>:
-    - <span style="color:#ae81ff">my_rss_images_importer</span>
-</code></pre></div><p>This will ensure that <code>my_rss_images_importer</code> will always run before <code>my_rss_importer</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">migration_dependencies</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">required</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">my_rss_images_importer</span>
+</span></span></code></pre></div><p>This will ensure that <code>my_rss_images_importer</code> will always run before <code>my_rss_importer</code>.</p>
 <p>(NB: in Drupal &lt; 8.3, this plugin is called <code>migration</code>)</p>
 <p><strong>Formatting dates</strong></p>
 <p>Very often you will receive dates in a format other than what Drupal wants to accept as a valid field value. In this case the <code>format_date</code> process plugin comes in very handy, like this:</p>
 <pre tabindex="0"><code>  field_published_date:
     plugin: format_date
-    from_format: 'D, d M Y H:i:s O'
-    to_format: 'Y-m-d\TH:i:s'
+    from_format: &#39;D, d M Y H:i:s O&#39;
+    to_format: &#39;Y-m-d\TH:i:s&#39;
     source: pub_date
 </code></pre><p>This one is pretty self-explanatory: from format, to format, and source. This is important when migrating from Drupal 6, whose date fields store dates differently from 8. It&rsquo;s also sometimes handy for RSS feeds. :)</p>
 <p><strong>Drush commands</strong></p>
@@ -481,7 +479,7 @@ If you decide to use it, don&rsquo;t be mad if we break it later.
 <li><code>drush mi</code>: Runs a migration. use <code>--all</code> to run them all. Don&rsquo;t worry, Migrate will sort out any dependencies you&rsquo;ve declared and run them in the right order. Also worth noting: <code>--limit=10</code> does a limited run of 10 items, and <code>--feedback=10</code> gives you an in-progress status line every 10 items (otherwise you get nothing until it&rsquo;s finished!).</li>
 </ul>
 <p>Okay, now that&rsquo;s really it. Happy feeding!</p>
-<p><img src="/images/feed-me-seymour.gif" alt="&ldquo;Feed me, Seymour!""></p>
+<p><img src="/images/feed-me-seymour.gif" alt="&amp;ldquo;Feed me, Seymour!&amp;rdquo;"></p>
 
   </div>
   

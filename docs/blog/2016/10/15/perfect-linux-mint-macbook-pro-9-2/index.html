@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -201,7 +201,7 @@ This week I read about everyone&rsquo;s problems getting OSX Sierra going, and I
   
   <div class="post">
     <p>A few months ago I posted about my <a href="/blog/2015/10/01/how-i-got-el-capitain-working-with-my-developer-tools/">frustrations getting El Capitan working</a> with my relatively simple developer needs. At the time I complained about the direction Apple is going. One of these days, I threatened, I would jump back to Linux as a primary desktop environment.</p>
-<p>This week I read about everyone&rsquo;s problems getting OSX Sierra going, and I decided it was time to take the plunge. Apple, I completely understand the direction you are going with your environment. You&rsquo;ve gotta lock down in order to make peoples' computers reliable, easy to use appliances. But I don&rsquo;t want an appliance, I want a computer. I disagree with some of your choices about the system, what software I should use, where I may install it from, and how I may use it. I&rsquo;m switching to an OS that lets me make those choices.</p>
+<p>This week I read about everyone&rsquo;s problems getting OSX Sierra going, and I decided it was time to take the plunge. Apple, I completely understand the direction you are going with your environment. You&rsquo;ve gotta lock down in order to make peoples&rsquo; computers reliable, easy to use appliances. But I don&rsquo;t want an appliance, I want a computer. I disagree with some of your choices about the system, what software I should use, where I may install it from, and how I may use it. I&rsquo;m switching to an OS that lets me make those choices.</p>
 <p>Someone recently described the choice to me as &ldquo;program, or be programmed.&rdquo; That really stuck in my mind. OSX increasingly feels like &ldquo;someone else&rsquo;s computer&rdquo; for me. Someone else is making all the choices. Well, I don&rsquo;t have to &ldquo;be programmed&rdquo; passively. I can run an environment which respects my choices about privacy, which gives me the freedom to do whatever I want with my computer. So this week I went back to Linux.</p>
 <p>The last time I used Linux as a primary laptop OS was with Gentoo in 2003. OK, easy to say that this has come a LONG way since then. Still I don&rsquo;t know if I would recommend converting your existing system if you&rsquo;re a techno noob; better to buy a system with Linux pre-configured. With that said, I am damn impressed with how well <a href="http://linuxmint.com/">Linux Mint</a> runs out of the box on my Macbook Pro 9,2 (mid-2012). Setting everything up was a snap.</p>
 <h2 id="how-to-get-linux-mint-18-running-perfectly-on-a-macbook-pro-92">How to Get Linux Mint 18 running perfectly on a Macbook Pro 9,2</h2>
@@ -228,20 +228,20 @@ This week I read about everyone&rsquo;s problems getting OSX Sierra going, and I
 <p>I had two big tweaks: the task bar, and the touchpad. I also did one minor tweak to improve my battery life.</p>
 <p>I actually like the OSX dock and task bar concept. I find the default Windows-style taskbar finicky and a painful way to describe what applications are currently running. So I added <a href="https://glx-dock.org/">Cairo Dock</a>, and configured Cinnamon&rsquo;s built in taskbars to be a bit more OSX&rsquo;ish.</p>
 <p>I&rsquo;m very finicky about my touchpad&rsquo;s behavior, and Linux Mint&rsquo;s control panel didn&rsquo;t expose enough of the options to me. Fortunately the Mac touchpad runs on the excellent <a href="ftp://www.x.org/pub/X11R7.5/doc/man/man4/synaptics.4.html">Synaptics driver</a>. That means you can configure every detail from the terminal with &ldquo;synclient optionname=value&rdquo; or &ldquo;synclient -l&rdquo; to list your current settings. Use that man page I linked to tell what options do what, and you can set the perfect configuration. Once you&rsquo;ve figured out what options are just right for you, put them in a file called /etc/X11/xorg.conf.d/60-synaptics.conf, like this:</p>
-<pre tabindex="0"><code>Section &quot;InputClass&quot;
-  Identifier &quot;touchpad&quot;
-  Driver &quot;synaptics&quot;
-  MatchIsTouchpad &quot;on&quot;
-  MatchDevicePath &quot;/dev/input/event*&quot;
-  Option &quot;FingerHigh&quot; &quot;90&quot;
-  Option &quot;CoastingSpeed&quot; &quot;7&quot;
-  Option &quot;CoastingFriction&quot; &quot;16&quot;
-  Option &quot;EmulateTwoFingerMinW&quot; &quot;2&quot;
-  Option &quot;RTCornerButton&quot; &quot;0&quot;
-  Option &quot;RBCornerButton&quot; &quot;0&quot;
-  Option &quot;LTCornerButton&quot; &quot;0&quot;
-  Option &quot;LBCornerButton&quot; &quot;0&quot;
-  Option &quot;PalmDetect&quot; &quot;on&quot;
+<pre tabindex="0"><code>Section &#34;InputClass&#34;
+  Identifier &#34;touchpad&#34;
+  Driver &#34;synaptics&#34;
+  MatchIsTouchpad &#34;on&#34;
+  MatchDevicePath &#34;/dev/input/event*&#34;
+  Option &#34;FingerHigh&#34; &#34;90&#34;
+  Option &#34;CoastingSpeed&#34; &#34;7&#34;
+  Option &#34;CoastingFriction&#34; &#34;16&#34;
+  Option &#34;EmulateTwoFingerMinW&#34; &#34;2&#34;
+  Option &#34;RTCornerButton&#34; &#34;0&#34;
+  Option &#34;RBCornerButton&#34; &#34;0&#34;
+  Option &#34;LTCornerButton&#34; &#34;0&#34;
+  Option &#34;LBCornerButton&#34; &#34;0&#34;
+  Option &#34;PalmDetect&#34; &#34;on&#34;
 EndSection
 </code></pre><p>You will probably have to create the xorg.conf.d subdirectory&hellip; and you&rsquo;ll have to be sudo for the whole thing.</p>
 <p>Finally, I thought I&rsquo;d try to get more life out of this old battery. So I installed <a href="https://01.org/powertop">powertop</a>, and accepted all of it&rsquo;s automated recommendations. Now I get about 5 hours, which matches my experience in OSX. It is a 4 year old laptop, after all!</p>

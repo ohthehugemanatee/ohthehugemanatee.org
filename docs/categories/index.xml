@@ -6,7 +6,34 @@
     <description>Recent content in Categories on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Nov 2021 19:15:33 +0100</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Sep 2022 21:07:31 +0200</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dev</title>
+      <link>https://ohthehugemanatee.org/categories/dev/</link>
+      <pubDate>Thu, 08 Sep 2022 21:07:31 +0200</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/categories/dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>drupal</title>
+      <link>https://ohthehugemanatee.org/categories/drupal/</link>
+      <pubDate>Thu, 08 Sep 2022 21:07:31 +0200</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/categories/drupal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>prenote</title>
+      <link>https://ohthehugemanatee.org/categories/prenote/</link>
+      <pubDate>Thu, 08 Sep 2022 21:07:31 +0200</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/categories/prenote/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>automotive</title>
       <link>https://ohthehugemanatee.org/categories/automotive/</link>
@@ -22,15 +49,6 @@
       <pubDate>Fri, 12 Nov 2021 19:15:33 +0100</pubDate>
       
       <guid>https://ohthehugemanatee.org/categories/composability/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dev</title>
-      <link>https://ohthehugemanatee.org/categories/dev/</link>
-      <pubDate>Fri, 12 Nov 2021 19:15:33 +0100</pubDate>
-      
-      <guid>https://ohthehugemanatee.org/categories/dev/</guid>
       <description></description>
     </item>
     
@@ -175,15 +193,6 @@
       <pubDate>Thu, 27 Dec 2018 10:30:23 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/categories/network/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>drupal</title>
-      <link>https://ohthehugemanatee.org/categories/drupal/</link>
-      <pubDate>Thu, 19 Apr 2018 18:06:51 +0000</pubDate>
-      
-      <guid>https://ohthehugemanatee.org/categories/drupal/</guid>
       <description></description>
     </item>
     

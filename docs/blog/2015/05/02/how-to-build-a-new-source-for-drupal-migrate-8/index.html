@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -212,57 +212,57 @@ Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used 
 <p>My task this week became to write the first CSV source for Drupal 8 Migrate.</p>
 <h1 id="drupal-8-migrate-overview">Drupal 8 Migrate Overview</h1>
 <p>Drupal 8 Migrations, when you&rsquo;re using classes that already exist, are actually even easier than Migrate 7. All you do is write a single YAML file for each kind of data you&rsquo;re transferring, and put it in a custom module&rsquo;s <em>config/install</em> directory. Your YAML file gives your migration a name and a group, tells us what the source is for data, maps source fields to destination fields, and tells us what the destination objects are. Here&rsquo;s an example Migration definition file from core. See if you can understand what&rsquo;s being migrated here.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">d6_system_site</span>
-<span style="color:#f92672">label</span>: <span style="color:#ae81ff">Drupal 6 site configuration</span>
-<span style="color:#f92672">migration_groups</span>:
-  - <span style="color:#ae81ff">Drupal 6</span>
-<span style="color:#f92672">source</span>:
-  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">variable</span>
-  <span style="color:#f92672">variables</span>:
-    - <span style="color:#ae81ff">site_name</span>
-    - <span style="color:#ae81ff">site_mail</span>
-    - <span style="color:#ae81ff">site_slogan</span>
-    - <span style="color:#ae81ff">site_frontpage</span>
-    - <span style="color:#ae81ff">site_403</span>
-    - <span style="color:#ae81ff">site_404</span>
-    - <span style="color:#ae81ff">drupal_weight_select_max</span>
-    - <span style="color:#ae81ff">admin_compact_mode</span>
-<span style="color:#f92672">process</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">site_name</span>
-  <span style="color:#f92672">mail</span>: <span style="color:#ae81ff">site_mail</span>
-  <span style="color:#f92672">slogan</span>: <span style="color:#ae81ff">site_slogan</span>
-  <span style="color:#f92672">&#39;page/front&#39;</span>: <span style="color:#ae81ff">site_frontpage</span>
-  <span style="color:#f92672">&#39;page/403&#39;</span>: <span style="color:#ae81ff">site_403</span>
-  <span style="color:#f92672">&#39;page/404&#39;</span>: <span style="color:#ae81ff">site_404</span>
-  <span style="color:#f92672">weight_select_max</span>: <span style="color:#ae81ff">drupal_weight_select_max</span>
-  <span style="color:#f92672">admin_compact_mode</span>: <span style="color:#ae81ff">admin_compact_mode</span>
-<span style="color:#f92672">destination</span>:
-  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">config</span>
-  <span style="color:#f92672">config_name</span>: <span style="color:#ae81ff">system.site</span>
-</code></pre></div><p>You probably figured it out: this migration takes the system settings (variables) from a Drupal 6 site, and puts them into the Drupal 7 configuration. Not terribly hard, right? You can even do data transformations from the source field value to the destination.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">id</span>: <span style="color:#ae81ff">d6_system_site</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">label</span>: <span style="color:#ae81ff">Drupal 6 site configuration</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">migration_groups</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">Drupal 6</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">source</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">variable</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">variables</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">site_name</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">site_mail</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">site_slogan</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">site_frontpage</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">site_403</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">site_404</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">drupal_weight_select_max</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">admin_compact_mode</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">process</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">site_name</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">mail</span>: <span style="color:#ae81ff">site_mail</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">slogan</span>: <span style="color:#ae81ff">site_slogan</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#39;page/front&#39;</span>: <span style="color:#ae81ff">site_frontpage</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#39;page/403&#39;</span>: <span style="color:#ae81ff">site_403</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#39;page/404&#39;</span>: <span style="color:#ae81ff">site_404</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">weight_select_max</span>: <span style="color:#ae81ff">drupal_weight_select_max</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">admin_compact_mode</span>: <span style="color:#ae81ff">admin_compact_mode</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">destination</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">config</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">config_name</span>: <span style="color:#ae81ff">system.site</span>
+</span></span></code></pre></div><p>You probably figured it out: this migration takes the system settings (variables) from a Drupal 6 site, and puts them into the Drupal 7 configuration. Not terribly hard, right? You can even do data transformations from the source field value to the destination.</p>
 <p>Unfortunately, the only sources we have so far are for Drupal 6 and 7 sites, pulling directly from the database. If you want to use Migrate 8 the way we used Migrate 7, as an easy way to pull in data from arbitrary sources, you&rsquo;ll have to contribute.</p>
 <h1 id="writing-a-source-plugin-in-migrate_plus">Writing a source plugin in Migrate_plus</h1>
 <p>Enter <a href="https://www.drupal.org/sandbox/mikeryan/migrate_plus">Migrate Plus module</a>. This is the place in contrib, where we can fill out all the rest of the behavior we want from Migrate, that&rsquo;s not necessarily a core requirement. This is where we&rsquo;ll be writing our source plugin.</p>
 <p>To add a source plugin, just create a .php file in migrate_plus/src/Plugins/migrate/source . Drupal will discover the new plugin automatically the next time you rebuild the cache. The filename has to be the same as the name of the class, so choose carefully! My file is called CSV.php . Here&rsquo;s the top of the file you need for a basic :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-<span style="color:#e6db74">/**
-</span><span style="color:#e6db74"> * @file
-</span><span style="color:#e6db74"> * Contains \Drupal\migrate_plus\Plugin\migrate\source\csv.
-</span><span style="color:#e6db74"> */</span>
-
-<span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">Drupal\migrate_plus\Plugin\migrate\source</span>;
-
-<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Drupal\migrate\Plugin\migrate\source\SourcePluginBase</span>;
-
-<span style="color:#e6db74">/**
-</span><span style="color:#e6db74"> * Source for CSV files.
-</span><span style="color:#e6db74"> *
-</span><span style="color:#e6db74"> * @MigrateSource(
-</span><span style="color:#e6db74"> *   id = &#34;csv&#34;
-</span><span style="color:#e6db74"> * )
-</span><span style="color:#e6db74"> */</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CSV</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">SourcePluginBase</span> {
-</code></pre></div><p>I&rsquo;m calling this out separately because for newbies to Drupal 8, this is the hard part. This is all the information that Drupal needs to be able to find your class when it needs it. The @file comment is important. That and the namespace below have to match the actual location of the .php file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * @file
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * Contains \Drupal\migrate_plus\Plugin\migrate\source\csv.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">Drupal\migrate_plus\Plugin\migrate\source</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Drupal\migrate\Plugin\migrate\source\SourcePluginBase</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * Source for CSV files.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * @MigrateSource(
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> *   id = &#34;csv&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> * )
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CSV</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">SourcePluginBase</span> {
+</span></span></code></pre></div><p>I&rsquo;m calling this out separately because for newbies to Drupal 8, this is the hard part. This is all the information that Drupal needs to be able to find your class when it needs it. The @file comment is important. That and the namespace below have to match the actual location of the .php file.</p>
 <p>Then you declare any other classes that you need, with their full namespace. To start with all you need is SourcePluginBase.</p>
 <p>Finally you have to annotate the class with that @MigrateSource(id=&ldquo;csv&rdquo;). This is how Migrate module knows that this is a MigrateSource, and the name of your Plugin. Don&rsquo;t miss it!</p>
 <p>Inside the class, you must have the following methods. I&rsquo;ll explain a bit more about each afterwards.</p>
@@ -276,102 +276,102 @@ Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used 
 <h2 id="initializeiterator">initializeIterator()</h2>
 <p>An Iterator is a complicated sounding word for an Object that contains everything you need to read from a data source, and go through it one line at a time. Maybe you&rsquo;re used to fopen(&lsquo;path/to/file&rsquo;, &lsquo;r&rsquo;) to open a file, and then you write code for every possible operation with that file. An iterator takes care of all that for you. In the case of most file-based sources, you can just use the SplFileObject class that comes with PHP.</p>
 <p>Any arguments that were passed in the source: section of the YAML file will be available under $this-&gt;configuration. So if my YAML looks like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">source</span>:
-  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">csv</span>
-  <span style="color:#f92672">path</span>: <span style="color:#e6db74">&#39;/vagrant/import/ACS_13_1YR_B28002_with_ann.csv&#39;</span>
-</code></pre></div><p>My initializeIterator( ) method can look like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">initializeIterator</span>() {
-  <span style="color:#75715e">// File handler using our custom header-rows-respecting extension of SPLFileObject.
-</span><span style="color:#75715e"></span>  $file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SplFileObject</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;path&#39;</span>]);
-  $file<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setFlags</span>(<span style="color:#a6e22e">SplFileObject</span><span style="color:#f92672">::</span><span style="color:#a6e22e">READ_CSV</span>);
-  <span style="color:#66d9ef">return</span> $file;
-}
-</code></pre></div><p>Not too complicated, right? This method is called right at the beginning of the migration, the first time Migrate wants to get any information out of your source. The iterator will be stored in $this-&gt;iterator.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">source</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">csv</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">path</span>: <span style="color:#e6db74">&#39;/vagrant/import/ACS_13_1YR_B28002_with_ann.csv&#39;</span>
+</span></span></code></pre></div><p>My initializeIterator( ) method can look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">initializeIterator</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// File handler using our custom header-rows-respecting extension of SPLFileObject.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SplFileObject</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;path&#39;</span>]);
+</span></span><span style="display:flex;"><span>  $file<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setFlags</span>(<span style="color:#a6e22e">SplFileObject</span><span style="color:#f92672">::</span><span style="color:#a6e22e">READ_CSV</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> $file;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Not too complicated, right? This method is called right at the beginning of the migration, the first time Migrate wants to get any information out of your source. The iterator will be stored in $this-&gt;iterator.</p>
 <h2 id="getids">getIds()</h2>
 <p>This method should return an array of all the unique keys for your source. A unique key is some value that&rsquo;s unique for that row in the source material. Sometimes there&rsquo;s more than one, which is why this is an array. Each key field name is also an array, with a child &ldquo;type&rdquo; declaration. This is hard to explain in English, but easy to show in code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getIDs</span>() {
-  $ids <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
-  <span style="color:#66d9ef">foreach</span> ($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;keys&#39;</span>] <span style="color:#66d9ef">as</span> $key) {
-    $ids[$key][<span style="color:#e6db74">&#39;type&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;string&#39;</span>;
-  }
-  <span style="color:#66d9ef">return</span> $ids;
-}
-</code></pre></div><p>We rely on the YAML author to tell us the key fields in the CSV, and we just reformat them accordingly. Type can be &lsquo;string&rsquo;, &lsquo;float&rsquo;, &lsquo;integer&rsquo;, whatever makes sense.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getIDs</span>() {
+</span></span><span style="display:flex;"><span>  $ids <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">foreach</span> ($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;keys&#39;</span>] <span style="color:#66d9ef">as</span> $key) {
+</span></span><span style="display:flex;"><span>    $ids[$key][<span style="color:#e6db74">&#39;type&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;string&#39;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> $ids;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>We rely on the YAML author to tell us the key fields in the CSV, and we just reformat them accordingly. Type can be &lsquo;string&rsquo;, &lsquo;float&rsquo;, &lsquo;integer&rsquo;, whatever makes sense.</p>
 <h2 id="__tostring">__toString()</h2>
 <p>This method has to return a simple string explanation of the source query. In the case of a file-based source, it makes sense to print the path to the file, like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __toString() {
-  <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">string</span>) $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>;
-}
-</code></pre></div><h2 id="fields">fields()</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __toString() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">string</span>) $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="fields">fields()</h2>
 <p>This method returns an array of available fields on the source. The keys should be the machine names, the values are descriptive, human-readable names. In the case of the CSV source, we look for headers at the top of the CSV file and build the array that way.</p>
 <h2 id="__construct">__construct()</h2>
 <p>The constructor method is called whenever a class is instantiated. You don&rsquo;t technically HAVE to have a constructor on your source class, but you&rsquo;ll find it helpful. For the CSV source, I used the constructor to make sure we have all the configuration that we need. Then I try and set sane values for fields, based on any header in the file.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#66d9ef">array</span> $configuration, $plugin_id, $plugin_definition, <span style="color:#a6e22e">MigrationInterface</span> $migration) {
-  <span style="color:#66d9ef">parent</span><span style="color:#f92672">::</span><span style="color:#a6e22e">__construct</span>($configuration, $plugin_id, $plugin_definition, $migration);
-
-  <span style="color:#75715e">// Path is required.
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;path&#39;</span>])) {
-    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MigrateException</span>(<span style="color:#e6db74">&#39;You must declare the &#34;path&#34; to the source CSV file in your source settings.&#39;</span>);
-  }
-
-  <span style="color:#75715e">// Key field(s) are required
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;keys&#39;</span>])) {
-    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MigrateException</span>(<span style="color:#e6db74">&#39;You must declare the &#34;keys&#34; the source CSV file in your source settings.&#39;</span>);
-  }
-
-  <span style="color:#75715e">// Set header rows from the migrate configuration.
-</span><span style="color:#75715e"></span>  $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">headerRows</span> <span style="color:#f92672">=</span> <span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;header_rows&#39;</span>]) <span style="color:#f92672">?</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;header_rows&#39;</span>] <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>;
-
-  <span style="color:#75715e">// Figure out what CSV columns we have.
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">// One can either pass in an explicit list of column names to use, or if we have
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">// a header row we can use the names from that
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> ($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">headerRows</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;csvColumns&#39;</span>])) {
-    $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">csvColumns</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
-
-    <span style="color:#75715e">// Skip all but the last header
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">headerRows</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; $i<span style="color:#f92672">++</span>) {
-      $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getNextLine</span>();
-    }
-
-    $row <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getNextLine</span>();
-    <span style="color:#66d9ef">foreach</span> ($row <span style="color:#66d9ef">as</span> $key <span style="color:#f92672">=&gt;</span> $header) {
-      $header <span style="color:#f92672">=</span> <span style="color:#a6e22e">trim</span>($header);
-      $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getIterator</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">csvColumns</span>[] <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>($header, $header);
-    }
-  }
-  <span style="color:#66d9ef">elseif</span> ($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;csvColumns&#39;</span>]) {
-    $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getIterator</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">csvColumns</span> <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;csvColumns&#39;</span>];
-  }
-}
-</code></pre></div><h2 id="profit">Profit!</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(<span style="color:#66d9ef">array</span> $configuration, $plugin_id, $plugin_definition, <span style="color:#a6e22e">MigrationInterface</span> $migration) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">parent</span><span style="color:#f92672">::</span><span style="color:#a6e22e">__construct</span>($configuration, $plugin_id, $plugin_definition, $migration);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Path is required.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;path&#39;</span>])) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MigrateException</span>(<span style="color:#e6db74">&#39;You must declare the &#34;path&#34; to the source CSV file in your source settings.&#39;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Key field(s) are required
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;keys&#39;</span>])) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MigrateException</span>(<span style="color:#e6db74">&#39;You must declare the &#34;keys&#34; the source CSV file in your source settings.&#39;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Set header rows from the migrate configuration.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">headerRows</span> <span style="color:#f92672">=</span> <span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;header_rows&#39;</span>]) <span style="color:#f92672">?</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;header_rows&#39;</span>] <span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Figure out what CSV columns we have.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// One can either pass in an explicit list of column names to use, or if we have
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// a header row we can use the names from that
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> ($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">headerRows</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">empty</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;csvColumns&#39;</span>])) {
+</span></span><span style="display:flex;"><span>    $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">csvColumns</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Skip all but the last header
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">&lt;</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">headerRows</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; $i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>      $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getNextLine</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    $row <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getNextLine</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> ($row <span style="color:#66d9ef">as</span> $key <span style="color:#f92672">=&gt;</span> $header) {
+</span></span><span style="display:flex;"><span>      $header <span style="color:#f92672">=</span> <span style="color:#a6e22e">trim</span>($header);
+</span></span><span style="display:flex;"><span>      $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getIterator</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">csvColumns</span>[] <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>($header, $header);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">elseif</span> ($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;csvColumns&#39;</span>]) {
+</span></span><span style="display:flex;"><span>    $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getIterator</span>()<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">csvColumns</span> <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">configuration</span>[<span style="color:#e6db74">&#39;csvColumns&#39;</span>];
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="profit">Profit!</h2>
 <p>That&rsquo;s it! Four simple methods, and you have a new source type for Drupal 8 Migrate. Of course, you will probably find complications that require a bit more work. For CSV, supporting a header row turned out to be a real pain. Any time Migrate tried to &ldquo;rewind&rdquo; the source back to the first line, it would try and migrate the header row! I ended up extending SplFileObject just to handle this issue.</p>
 <p>Here&rsquo;s the YAML file I used to test this, importing a list of states from some US Census data.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">id</span>: <span style="color:#ae81ff">states</span>
-<span style="color:#f92672">label</span>: <span style="color:#ae81ff">States</span>
-<span style="color:#f92672">migration_groups</span>:
-  - <span style="color:#ae81ff">US Census</span>
-
-<span style="color:#f92672">source</span>:
-  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">csv</span>
-  <span style="color:#f92672">path</span>: <span style="color:#e6db74">&#39;/vagrant/import/ACS_13_1YR_B28002_with_ann.csv&#39;</span>
-  <span style="color:#f92672">header_rows</span>: <span style="color:#ae81ff">2</span>
-  <span style="color:#f92672">fields</span>:
-    - <span style="color:#ae81ff">Id2</span>
-    - <span style="color:#ae81ff">Geography</span>
-  <span style="color:#f92672">keys</span>:
-    - <span style="color:#ae81ff">Id2</span>
-
-<span style="color:#f92672">process</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Geography</span>
-  <span style="color:#f92672">vid</span>:
-    -
-      <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
-      <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">state</span>
-
-<span style="color:#f92672">destination</span>:
-  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">entity:taxonomy_term</span>
-</code></pre></div><p>You can see my CSV source and Iterator in the <a href="https://www.drupal.org/node/2458003">issue queue for migrate_plus</a>. Good luck, and happy migrating!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">id</span>: <span style="color:#ae81ff">states</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">label</span>: <span style="color:#ae81ff">States</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">migration_groups</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">US Census</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">source</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">csv</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">path</span>: <span style="color:#e6db74">&#39;/vagrant/import/ACS_13_1YR_B28002_with_ann.csv&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">header_rows</span>: <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">fields</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">Id2</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">Geography</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">keys</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">Id2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">process</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Geography</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">vid</span>:
+</span></span><span style="display:flex;"><span>    -
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">default_value</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">default_value</span>: <span style="color:#ae81ff">state</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">destination</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">plugin</span>: <span style="color:#ae81ff">entity:taxonomy_term</span>
+</span></span></code></pre></div><p>You can see my CSV source and Iterator in the <a href="https://www.drupal.org/node/2458003">issue queue for migrate_plus</a>. Good luck, and happy migrating!</p>
 <h2 id="thanks">Thanks</h2>
 <p>I learned a lot this week. Big thanks to the <a href="https://www.drupal.org/node/2127611">Migrate Documentation</a>, but especially to <a href="https://www.drupal.org/u/chx">chx</a>, <a href="https://www.drupal.org/u/mikeryan">mikeryan</a>, and the other good folks in #drupal-migrate who helped set me straight.</p>
 

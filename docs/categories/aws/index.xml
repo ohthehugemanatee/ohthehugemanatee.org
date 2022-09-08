@@ -17,7 +17,6 @@
 Dependencies
 Before you begin, you will need:
 Amazon&#39;s standard EC2 Command Line ToolsAlestic&#39;s ebs-consistent-snapshot programTech Kismet&#39;s remove-old-snapshots.php script (which must be so named)
-
 AMI Images
 Everyone knows that Amazon Instances are ephemeral.</description>
     </item>

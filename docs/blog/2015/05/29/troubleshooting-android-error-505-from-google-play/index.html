@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -198,25 +198,24 @@ This error message means precisely nothing. It means &ldquo;something went wrong
   
   <div class="post">
     <p>I recently got a new Android phone, and very quickly had trouble installing some of my favorite apps. Google&rsquo;s Play Store downloads the app successfully, then presents me with &ldquo;Unknown Error -505&rdquo;.</p>
-<p><img src="/images/error-505.jpg" alt="&ldquo;Error 505&rdquo;"></p>
+<p><img src="/images/error-505.jpg" alt="&amp;ldquo;Error 505&amp;rdquo;"></p>
 <p>This error message means precisely nothing. It means &ldquo;something went wrong during installation, and we&rsquo;re not telling you what.&rdquo; This drives me crazy. This blog post is about how to get more information out of that error message, and how to fix the problem.</p>
 <p>Your device is not going to give you more information on its own. Instead, you need to install ADB, the &ldquo;Android Debug Bridge&rdquo; which lets you type commands directly to your Android device over a USB connection. It&rsquo;s not hard to install, so <a href="https://duckduckgo.com/?q=how+to+install+adb">go and set that up now</a>.</p>
 <p>Next, you will have to make sure your Android device permits you to use ADB. On the phone, go to Settings &gt; About Phone, and scroll down to where you see &ldquo;Build Number&rdquo; listed. Tap on &ldquo;Build Number&rdquo; until you see a popup telling you that you are now a &ldquo;developer&rdquo;. Then go back to Settings, and tap on the new &ldquo;Developer Options&rdquo; menu item near the bottom. Enable the &ldquo;USB Debugging&rdquo; option there.</p>
 <p>Now plug your phone into your computer via USB, and open up your Terminal. Windows users, use the Console - it&rsquo;s the same thing. First, we&rsquo;ll see if our Android device is even visible to ADB.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$&gt; adb devices
-</code></pre></div><p>You should see a list of devices attached, with (probably) only one listing. If not, check to make sure that your phone is really in USB Debugging mode.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$&gt; adb devices
+</span></span></code></pre></div><p>You should see a list of devices attached, with (probably) only one listing. If not, check to make sure that your phone is really in USB Debugging mode.</p>
 <p>Now, we&rsquo;re going to try to install that same troublesome application over ADB. In order to do this, you&rsquo;ll have to download the application&rsquo;s installer (APK) file on your computer. Google makes this hard to do directly, you&rsquo;ll have to use a <a href="http://apps.evozi.com/apk-downloader/">third-party website</a> or a <a href="https://addons.mozilla.org/en-us/firefox/addon/apk-downloader/?src=search">browser extension</a> to find your download link. Download that APK file and save it somewhere safe on your computer. Remember the path to that file! I saved mine in <em>~/Downloads</em>.</p>
 <p>With that APK file in hand, let&rsquo;s try installing your application over ADB. My problematic app was the Deutsche Bahn Navigator app, but obviously you should substitute the filename to your APK here.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$&gt; adb install ~/Downloads/de.hafas.android.db.apk
-<span style="color:#ae81ff">5051</span> KB/s <span style="color:#f92672">(</span><span style="color:#ae81ff">5991578</span> bytes in 1.158s<span style="color:#f92672">)</span>
-  pkg: /data/local/tmp/de.hafas.android.db.apk
-Failure <span style="color:#f92672">[</span>INSTALL_FAILED_DUPLICATE_PERMISSION perm<span style="color:#f92672">=</span>de.dbnavigator.permission.list pkg<span style="color:#f92672">=</span>de.bahn.dbtickets<span style="color:#f92672">]</span>
-</code></pre></div><p>(Full disclosure: that is not the exact permission and package I had, I foolishly closed the terminal window before recording it. But the error and the format are correct, which is what&rsquo;s important here.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$&gt; adb install ~/Downloads/de.hafas.android.db.apk
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5051</span> KB/s <span style="color:#f92672">(</span><span style="color:#ae81ff">5991578</span> bytes in 1.158s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  pkg: /data/local/tmp/de.hafas.android.db.apk
+</span></span><span style="display:flex;"><span>Failure <span style="color:#f92672">[</span>INSTALL_FAILED_DUPLICATE_PERMISSION perm<span style="color:#f92672">=</span>de.dbnavigator.permission.list pkg<span style="color:#f92672">=</span>de.bahn.dbtickets<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>(Full disclosure: that is not the exact permission and package I had, I foolishly closed the terminal window before recording it. But the error and the format are correct, which is what&rsquo;s important here.)</p>
 <p>NOW we have something to work with! We get an error message, and some information that might explain what&rsquo;s going on. In this case, the installation failed because of a duplicate permission, whatever that means. But it tells me the name of the permission, and - even better - the package that controls it. Notice that com.dbtickets is not the application I was trying to install. It&rsquo;s something else, a separate app I had, called &ldquo;DB Tickets&rdquo;. This tells me that if I uninstall that other application, it should solve this problem. You can do that from ADB as well:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$&gt; adb uninstall de.bahn.dbtickets
-Success
-
-</code></pre></div><p>Now I can try installing the original app again, and it should work. I can do that from the Play Store application, or directly from ADB with the command we tried above. At this point, I&rsquo;m way more likely to try it through ADB just to make sure I get an error message if it breaks!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$&gt; adb uninstall de.bahn.dbtickets
+</span></span><span style="display:flex;"><span>Success
+</span></span></code></pre></div><p>Now I can try installing the original app again, and it should work. I can do that from the Play Store application, or directly from ADB with the command we tried above. At this point, I&rsquo;m way more likely to try it through ADB just to make sure I get an error message if it breaks!</p>
 <p>You can follow this process to get further information about any error -505 you may receive. You can do all sorts of things through ADB to resolve this kind of problem. Check the <a href="https://developer.android.com/tools/help/adb.html#commandsummary">complete list of commands</a> for more information.</p>
 <h2 id="postlude">Postlude</h2>
 <p>This experience pointed out two large Ux failures on the part of Google:</p>

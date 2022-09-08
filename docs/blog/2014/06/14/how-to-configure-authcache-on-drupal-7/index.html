@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -230,9 +230,9 @@ Our goal is a simple authenticated user caching system based on Authcache&rsquo;
 </ul>
 <p>That&rsquo;s a lot of modules, because znerol has done a great job of compartmentalizing functionality. This is complicated stuff, and the less of it you have to enable, the better!</p>
 <p>When you enable the modules, you&rsquo;ll get a message complaining that you don&rsquo;t have the cache backend configured yet. Add these two lines to your settings.php to let Drupal know about the Authcache backend:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$conf[<span style="color:#e6db74">&#39;cache_backends&#39;</span>][] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;sites/all/modules/authcache/authcache.cache.inc&#39;</span>;
-$conf[<span style="color:#e6db74">&#39;cache_backends&#39;</span>][] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;sites/all/modules/authcache/modules/authcache_builtin/authcache_builtin.cache.inc&#39;</span>;
-</code></pre></div><p>Now your site is prepared to deliver cached content to authenticated users. Now comes the first scary bit: disable Drupal&rsquo;s built in page caching from admin/config/development/performance .</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$conf[<span style="color:#e6db74">&#39;cache_backends&#39;</span>][] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;sites/all/modules/authcache/authcache.cache.inc&#39;</span>;
+</span></span><span style="display:flex;"><span>$conf[<span style="color:#e6db74">&#39;cache_backends&#39;</span>][] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;sites/all/modules/authcache/modules/authcache_builtin/authcache_builtin.cache.inc&#39;</span>;
+</span></span></code></pre></div><p>Now your site is prepared to deliver cached content to authenticated users. Now comes the first scary bit: disable Drupal&rsquo;s built in page caching from admin/config/development/performance .</p>
 <h2 id="configure-authcache">Configure Authcache</h2>
 <p>Now that you&rsquo;re set up to deliver cached content to authenticated users, we can get to the fun part: configuring. Unlike Anonymous user caching, in order to cache content for authenticated users we actually need to let our caching system know a little bit about the various components of a given page. The front page of the demo Drupal site you downloaded is a reasonably complicated one. Panels with Views and Quicktabs, including several blocks which are unique to each user. We have to go through each element which could be customized to a user, and set an authcache policy on it.</p>
 <p>As we proceed, you will notice a little red button which has appeared in the top left corner of your browser window.</p>
@@ -246,35 +246,35 @@ $conf[<span style="color:#e6db74">&#39;cache_backends&#39;</span>][] <span style
 <p>Actually, some of those modules are already working for you. The most notable is authcache_form, which jumps into every Forms API based form - that is to say, all of them - and replaces the form token with a placeholder. The token gets filled in by AJAX after the rest of the page loads from cache. Authcache_comments works invisibly, too.</p>
 <p>For the page elements which are less predictable than forms, authcache modules offer you, the administrator, a way to identify the elements which need special handling and set how they should be handled. So to get the rest of the page working properly, We have to identify a handful of page elements which need separate caching behavior from the rest of the frontpage.</p>
 <p>Working from the top of the page downwards, first we&rsquo;ll deal with that &ldquo;Your posts&rdquo; quicktab. Edit the View which generates that block, at admin/structure/views/view/posts/edit/block_2 . If you expand the &ldquo;Advanced&rdquo; section on the right, you&rsquo;ll see that we have an &ldquo;Authcache&rdquo; section now! Open it up, and enable the &ldquo;authcache&rdquo; checkbox which appears. Now you have a wealth of options for caching just this View.</p>
-<p><img src="/images/authcache-views.png" alt="authcache views&rdquo; alt=&ldquo;the authcache views interface"></p>
+<p><img src="/images/authcache-views.png" alt="authcache views&amp;rdquo; alt=&amp;ldquo;the authcache views interface"></p>
 <p>Note that just because it&rsquo;s customized per user doesn&rsquo;t mean it shouldn&rsquo;t be cached! We can cache this fragment for about an hour before running that query again. Once we save the View and clear caches, if you return to the frontpage you&rsquo;ll find that each user gets their own &ldquo;Your posts&rdquo; block. Success!</p>
-<p>The next block over in the quicktab, Random Post, is a little trickier. This one we want to change as often as possible. We could follow a similar approach to what we just did, and in Views' authcache settings just set a cache lifetime of 0. But in most cases this isn&rsquo;t necessary. On a truly high performance site, you should cache EVERYTHING, even if only for a few seconds. A cache lifetime of 5 or 10 seconds is usually short enough that users won&rsquo;t notice it; but your server will. For a block which appears on every page of the site, a 10 second cache lifetime can mean it only has to actually query and compute once when a user clicks through 3 links to find the content he wants. This is a sort of microcache, and it can save you CPU cycles. For this block, let&rsquo;s set a cache lifetime of 10 seconds. Set cache lifetime to &ldquo;Custom&rdquo;, and enter 10 seconds into the field which appears. This one does not have to be cached per user; it can be global.</p>
+<p>The next block over in the quicktab, Random Post, is a little trickier. This one we want to change as often as possible. We could follow a similar approach to what we just did, and in Views&rsquo; authcache settings just set a cache lifetime of 0. But in most cases this isn&rsquo;t necessary. On a truly high performance site, you should cache EVERYTHING, even if only for a few seconds. A cache lifetime of 5 or 10 seconds is usually short enough that users won&rsquo;t notice it; but your server will. For a block which appears on every page of the site, a 10 second cache lifetime can mean it only has to actually query and compute once when a user clicks through 3 links to find the content he wants. This is a sort of microcache, and it can save you CPU cycles. For this block, let&rsquo;s set a cache lifetime of 10 seconds. Set cache lifetime to &ldquo;Custom&rdquo;, and enter 10 seconds into the field which appears. This one does not have to be cached per user; it can be global.</p>
 <p>You should apply these same tricks to all three blocks on the sidebar: users like you, recent comments, who&rsquo;s online, and who&rsquo;s new. But for the sake of practice, I&rsquo;ll show you a couple of different ways to get to that Authcache setting.</p>
 <p>You can find it in the Panels Content admin screen (thanks, authcache_panels!).</p>
-<p><img src="/images/authcache-panels.png" alt="authcache panels&rdquo; alt=&ldquo;the authcache panels interface"></p>
+<p><img src="/images/authcache-panels.png" alt="authcache panels&amp;rdquo; alt=&amp;ldquo;the authcache panels interface"></p>
 <p>You can find it on the Block configuration page (thanks, authcache_block!).</p>
-<p><img src="/images/authcache-block.png" alt="authcache block&rdquo; alt=&ldquo;the authcache block interface"></p>
-<p>(note: on the Demo site these are not positioned as blocks; they are positioned by panels. That means they don&rsquo;t go through blocks' normal render process, which means that authcache_block would be useless here!</p>
+<p><img src="/images/authcache-block.png" alt="authcache block&amp;rdquo; alt=&amp;ldquo;the authcache block interface"></p>
+<p>(note: on the Demo site these are not positioned as blocks; they are positioned by panels. That means they don&rsquo;t go through blocks&rsquo; normal render process, which means that authcache_block would be useless here!</p>
 <p>Following this process you can deliver the frontpage to users, while only asking Drupal to generate one or two objects.</p>
 <h2 id="avoid-the-db-entirely">Avoid the DB entirely</h2>
 <p>The last step, once you have the page behaving the way you want, is probably my favorite. It is possible to have Authcache deliver pages without EVER hitting the database! In order to get this going, you need to make sure that all the information Authcache needs about your caching configuration is available either in settings.php, or in memcached. We also ned to tell Authcache to attempt building the page without a DB connection. This is surprisingly easy. With memcached already set up, we just need to add the following to settings.php</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">// Authcache should try to serve from cache without connecting to the DB.
-</span><span style="color:#75715e"></span>$conf[<span style="color:#e6db74">&#39;authcache_builtin_cache_without_database&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>;
-
-<span style="color:#75715e">// Cache settings that are usually set in the &#39;performance&#39; admin UI.
-</span><span style="color:#75715e"></span>$conf[<span style="color:#e6db74">&#39;page_compression&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-$conf[<span style="color:#e6db74">&#39;page_cache_maximum_age&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">600</span>;
-
-<span style="color:#75715e">// Tell Drupal that authcache keys should be stored in Memcached.
-</span><span style="color:#75715e"></span>$conf[<span style="color:#e6db74">&#39;cache_class_cache_authcache_key&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;MemCacheDrupal&#39;</span>;
-
-<span style="color:#75715e">// Tell Drupal that page cache should be stored in Memcached.
-</span><span style="color:#75715e"></span>$conf[<span style="color:#e6db74">&#39;cache_class_cache_page&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;MemCacheDrupal&#39;</span>;
-</code></pre></div><p>That&rsquo;s actually all there is to it. BAM! You&rsquo;re serving your frontpage without ever touching the DB.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// Authcache should try to serve from cache without connecting to the DB.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$conf[<span style="color:#e6db74">&#39;authcache_builtin_cache_without_database&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">TRUE</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cache settings that are usually set in the &#39;performance&#39; admin UI.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$conf[<span style="color:#e6db74">&#39;page_compression&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>$conf[<span style="color:#e6db74">&#39;page_cache_maximum_age&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">600</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tell Drupal that authcache keys should be stored in Memcached.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$conf[<span style="color:#e6db74">&#39;cache_class_cache_authcache_key&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;MemCacheDrupal&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Tell Drupal that page cache should be stored in Memcached.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$conf[<span style="color:#e6db74">&#39;cache_class_cache_page&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;MemCacheDrupal&#39;</span>;
+</span></span></code></pre></div><p>That&rsquo;s actually all there is to it. BAM! You&rsquo;re serving your frontpage without ever touching the DB.</p>
 <h2 id="troubleshootinggoing-deeper">Troubleshooting/Going deeper</h2>
 <p><strong>Some pages come up with a red light in Authcache Debug.</strong></p>
 <p>That&rsquo;s normal. There are all sorts of situations in which you would not want to cache a page. If one of your test users creates a node and then visits that new node, you will notice just such a red light.</p>
-<p><img src="/images/authcache-red.png" alt="authcache red&rdquo; alt=&ldquo;authcache cancels caching on a page"></p>
+<p><img src="/images/authcache-red.png" alt="authcache red&amp;rdquo; alt=&amp;ldquo;authcache cancels caching on a page"></p>
 <p>Authcache Debug is your best friend here. Sometimes this is something simple, like in this example. All we need to do is enable authcache_menu, and this will turn green. Other times the problem is deeper. Perhaps there is a page element which needs a caching mechanism defined. Or perhaps a fragment that you have set to use ESI, isn&rsquo;t visible for the ESI tags to be evaluated.</p>
 <p>It is also worth noting that authcache_debug is not infallible. There are definitely situations where it gets it wrong. Ultimately the best way to tell for certain is to open up your browser&rsquo;s developer tools and look at the Cache-Control headers yourself.</p>
 <p><strong>That &ldquo;random&rdquo; block and the &ldquo;user&rdquo; block change on every page load! I thought I set a 1 hour cache lifetime on those. What gives?</strong></p>
@@ -282,8 +282,8 @@ $conf[<span style="color:#e6db74">&#39;page_cache_maximum_age&#39;</span>] <span
 <p><strong>It still seems like I&rsquo;m bootstrapping Drupal an awful lot&hellip; What else can I do?</strong></p>
 <p>One of the cool tricks that comes with Authcache is a separate front controller. This is an alternative to Drupal&rsquo;s own index.php which handles normal page requests. The authcache front controller is much lighter weight, and can make direct calls to the DB without a full Drupal bootstrap. All of the authcache modules are designed to work well with it.</p>
 <p>To set up the frontcontroller, simply copy sites/all/modules/authcache/modules/authcache_p13n/safe_frontcontroller/authcache.php to your site&rsquo;s root directory. Then add the following line to settings.php :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$conf[<span style="color:#e6db74">&#39;authcache_p13n_frontcontroller_path&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;authcache.php&#39;</span>;
-</code></pre></div><p>This is actually recommended for most installations, not only because it makes the URL for fragments shorter; but it also saves some $_SERVER key rewrites which can cause problems.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span>$conf[<span style="color:#e6db74">&#39;authcache_p13n_frontcontroller_path&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;authcache.php&#39;</span>;
+</span></span></code></pre></div><p>This is actually recommended for most installations, not only because it makes the URL for fragments shorter; but it also saves some $_SERVER key rewrites which can cause problems.</p>
 <p><strong>Caching ALL the things</strong></p>
 <p>Authcache comes with a pretty sensible set of defaults as far as which pages should be cached. But you may want to tweak them. For example, you may want to exclude search result pages from caching. You can control this at admin/config/system/authcache/pagecaching .</p>
 <p><strong>But what about (obscure problem X)</strong></p>

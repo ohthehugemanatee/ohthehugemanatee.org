@@ -15,7 +15,7 @@
       <guid>https://ohthehugemanatee.org/blog/2014/01/10/drush-self-aliases/</guid>
       <description>I ran into an interesting problem with the drush @self alias today. I wanted to pull a fresh copy of the DB down from a client&amp;rsquo;s live site to my local development copy. Should be as easy as drush sql-sync @clientsite.live @self, right? I&amp;rsquo;ve done this a thousand times before.
 And I&amp;rsquo;ve also ignored the warning message every time before, but today I thought I&amp;rsquo;d check it out:
- WARNING: Using temporary files to store and transfer sql-dump.</description>
+WARNING: Using temporary files to store and transfer sql-dump.</description>
     </item>
     
   </channel>

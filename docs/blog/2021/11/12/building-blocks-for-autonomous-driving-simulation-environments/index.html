@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -216,7 +216,7 @@ The challenge Testing and CI-style validation in autonomous driving development 
 <li>Each component is a separate executable with separate requirements. In our case we had both Windows and Linux components, several of which needed exclusive GPU access.</li>
 <li>Exactly which components you need for a test is totally dependent on what part of the autonomous driving system you&rsquo;re testing. For example, a lidar sensor dev team needs very high fidelity models of objects it might be detecting. Reflective and absorbtive properties and shape require a lot of detail. So do weather conditions as far as visual occlusion and light scattering effects go. They <em>don&rsquo;t</em> need much of a road surface simulation, or pedestrians, or other drivers. The dev team working on the highway control component however, needs a totally different set of components, practically mutually exclusive.</li>
 <li>Even within one team the components may vary, as lots of this stuff is non-deterministic. It sometimes helps to validate against more than one simulation of the same environment.</li>
-<li>Components have hard and complex interdependencies, despite separate execution environments. For example, Linux and Windows based components may work closely together to simulate other cars and their drivers' behaviors. This impacts startup order, where some tools can&rsquo;t even start initializing until others - or until certain sets of others - are reporting ready. The whole simulation of course, can&rsquo;t start until everything is ready. These tools are designed to start and operate in a highly stateful manner.</li>
+<li>Components have hard and complex interdependencies, despite separate execution environments. For example, Linux and Windows based components may work closely together to simulate other cars and their drivers&rsquo; behaviors. This impacts startup order, where some tools can&rsquo;t even start initializing until others - or until certain sets of others - are reporting ready. The whole simulation of course, can&rsquo;t start until everything is ready. These tools are designed to start and operate in a highly stateful manner.</li>
 <li>Because we&rsquo;re dealing with human lives and liability here, each component needs to be independently validated and verifiable, starting from a known good state. Five years later, we need to be able to reproduce as closely as possible the starting point of the simulation. &ldquo;Formal Reproducibility&rdquo; would be amazing, but depends on component development too much to be within our control.</li>
 <li>Finally, some components are designed for human UI interaction. For example the test runner, which has its own system of debug breakpoints and step debugging that can&rsquo;t be replicated in code (&ldquo;break when the car is &lt; 2m from the obstacle, or after 68000 virtual milliseconds&rdquo;). Developers rely on this kind of debugging to build.</li>
 </ul>
@@ -239,32 +239,32 @@ The challenge Testing and CI-style validation in autonomous driving development 
 <p>There are a number of projects to provide the former, including integrations into Azure, and our choice, <a href="https://kubevirt.io/">kube-virt</a>. Importantly for us at the time: kube-virt was an earlier stage CNCI project and therefore still rough around the edges, but it was already a supported part of Azure RedHat OpenShift, and the supported way to run Azure IoT Edge on Kubernetes.</p>
 <p>The latter problem is the core business logic, so it is the Right Focus for Custom Code. But even there Kubernetes gives us a good start, as it is already an event-driven architecture with deep connections to container lifecycle and readiness/liveness probes. What&rsquo;s more, the model of Kubernetes objects and controllers already implements the concept of a larger object abstracting a group of lower-level ones, in Deployments.</p>
 <p>In fact, we found that our custom controller would have to implement a CRD quite similar to a Kubernetes Deployment. We could even extend the Deployment object to do it. The user ultimately could provide a simple YAML like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">my simulation run</span>
-<span style="color:#f92672">spec</span>:
-    <span style="color:#f92672">start</span>:
-        <span style="color:#f92672">component</span>: <span style="color:#ae81ff">test-runner</span>
-        <span style="color:#f92672">command</span>: <span style="color:#ae81ff">C:\start.exe</span>
-    <span style="color:#f92672">components</span>:
-        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">sync-server</span>
-          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/sync-server:5.4-dev</span>
-        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">test-runner</span>
-          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/test-runner:3.2.2</span>
-          <span style="color:#f92672">interactive</span>: <span style="color:#66d9ef">true</span>
-        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">environment-sim</span>
-          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/vtd:2.1</span>
-          <span style="color:#f92672">requires</span>:
-            <span style="color:#f92672">gpu</span>: <span style="color:#ae81ff">1</span>
-          <span style="color:#f92672">depends</span>:
-            - <span style="color:#ae81ff">test-runner</span>
-            - <span style="color:#ae81ff">sync-server</span>
-    <span style="color:#f92672">results</span>:
-       <span style="color:#f92672">storageClass</span>: <span style="color:#ae81ff">AzureBlob</span>
-</code></pre></div><p>Given some metadata on each component, this is probably sufficient information for a controller to create the required deployments and run the simulation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">my simulation run</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">start</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">component</span>: <span style="color:#ae81ff">test-runner</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">command</span>: <span style="color:#ae81ff">C:\start.exe</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">components</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">sync-server</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/sync-server:5.4-dev</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">test-runner</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/test-runner:3.2.2</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">interactive</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">environment-sim</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/vtd:2.1</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">requires</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">gpu</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">depends</span>:
+</span></span><span style="display:flex;"><span>            - <span style="color:#ae81ff">test-runner</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#ae81ff">sync-server</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">results</span>:
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">storageClass</span>: <span style="color:#ae81ff">AzureBlob</span>
+</span></span></code></pre></div><p>Given some metadata on each component, this is probably sufficient information for a controller to create the required deployments and run the simulation.</p>
 <ul>
 <li><code>test-runner</code> is a Windows VM image, as indicated by the component&rsquo;s own metadata. The <code>interactive</code> flag indicates that the controller should return a proxy to the RDP port on the VM.</li>
 <li>Other components are both containers.</li>
 <li>One container shows a resource request for a gpu core, which is handled by assigning the container to the right node pool.</li>
-<li>That container also declares its' dependencies. Probes are defined in the component metadata; the kubernetes controller watches for both dependencies to pass their Readiness probes, and then starts <code>environment-sim</code>.</li>
+<li>That container also declares its&rsquo; dependencies. Probes are defined in the component metadata; the kubernetes controller watches for both dependencies to pass their Readiness probes, and then starts <code>environment-sim</code>.</li>
 <li>Once all three components pass their Readiness probes, <code>spec.start.command</code> is run inside <code>spec.start.component</code>. When the command terminates, the simulation is considered complete.</li>
 <li>The <code>spec.results</code> key helps the Controller create a PVC for results. The actual PVC is later accessible through a well-known naming scheme, such as <code>[datetime]-[name]</code>.</li>
 <li>Component definitions include default ports to expose, but by default nothing is exposed to the outside world.</li>

@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -207,7 +207,7 @@
 <p>My home cluster consists of four Raspberry pi 4s, two old laptops, one mini desktop, and a pine64 laptop. First pain point: that&rsquo;s a mix of CPU architectures and capabilities. I&rsquo;ve got it all covered: x64, arm7, and arm64&hellip; and many container images are only built for a subset of those. At least the laptops are x64, but they&rsquo;re different makes and models, with different quirks. One of them has an unreliable USB port, which wreaks intermittent havoc with its USB ethernet adapter. The other has a dead internal IDE chip, and has to boot off of an external drive duct-taped to the back of the screen. And of course the whole thing lives in my laundry room, where temperatures and vibration from the floor will vary with the drying cycle, and where dust is all-pervasive.</p>
 <p>I&rsquo;m happy I&rsquo;ve stuck with it - this has made me <em>really</em> learn the ins and outs of detailed troubleshooting in kubernetes. I&rsquo;ve a much better understanding now of <em>why</em> different abstractions may exist, in a very practical way. Here are some of the fun features and workarounds I have in place. Each of these could be their own post, someday:</p>
 <ul>
-<li>Lots of home-oriented services run with SQLite as a backing database, which is a problem because sqlite&rsquo;s normal &lsquo;wal mode&rsquo; of accessing database files has a hard dependency on block-level file access. That means network filesystems, and all k8s' built in abstractons -  are out.
+<li>Lots of home-oriented services run with SQLite as a backing database, which is a problem because sqlite&rsquo;s normal &lsquo;wal mode&rsquo; of accessing database files has a hard dependency on block-level file access. That means network filesystems, and all k8s&rsquo; built in abstractons -  are out.
 <ul>
 <li>I ran with iSCSI devices for awhile, but the unreliability of home networking hardware was sufficient to produce data corruption every few months.</li>
 <li>I wrote my own sidecar service to periodically freeze a shared PV and sync all the files to NFS. But if the freeze comes at a bad time for sqlite, that will also cause data corruption.</li>
@@ -221,7 +221,7 @@
 <li>One of my most critical services is Plex, which does much better with hardware decoding capabilities. I&rsquo;m using <a href="https://github.com/kubernetes-sigs/node-feature-discovery">node-feature-discovery</a> to get node capabilities into labels, and <a href="https://github.com/intel/intel-device-plugins-for-kubernetes/blob/main/cmd/gpu_plugin/README.md">intel-gpu-plugin</a> to make the hardware available in the pod. Oh, but node feature discovery doesn&rsquo;t have a build for armv7, so that only works on some nodes.</li>
 <li>I use images from <a href="https://linuxserver.io/">linuxserver.io</a>, which are great&hellip; but all based on <a href="https://github.com/just-containers/s6-overlay">s6_overlay</a>. This means they&rsquo;re not compatible with common privilege restriction approaches on kubernetes like security contexts. Fortunately(?) they support including arbitrary scripts on container startup, so I can hack my way around most problems.</li>
 <li>Internal services often prefer to use HTTPS. Fair enough, but they are internal services, so letsencrypt can&rsquo;t validate/issue certificates for them. That means either an internal CA, or app configurations that allow self signed certs.</li>
-<li>I mentioned I have one node with an unreliable ethernet connection. I tuned kubernetes' heartbeat and status check timings to minimize downtime when that node disappears, detecting it early and redistributing its' pods. But it&rsquo;s a delicate balance: it&rsquo;s easy to get the math wrong, or just be overzealous, and your nodes start popping into <code>NotReady</code> state with no discernable reason. Of course that disrupts intra-service communication, which can cause cascading failures.</li>
+<li>I mentioned I have one node with an unreliable ethernet connection. I tuned kubernetes&rsquo; heartbeat and status check timings to minimize downtime when that node disappears, detecting it early and redistributing its&rsquo; pods. But it&rsquo;s a delicate balance: it&rsquo;s easy to get the math wrong, or just be overzealous, and your nodes start popping into <code>NotReady</code> state with no discernable reason. Of course that disrupts intra-service communication, which can cause cascading failures.</li>
 <li>One of my cats knocked a couple of nodes down while I was away on vacation without physical access to the machines. I ended up building a private network connection to Azure and adding support for scaling with VMs there, to keep services running.</li>
 </ul>
 <p>It goes on and on. All of these are problems that you basically never encounter when running on a cloud provider. Your money really does go to a valuable purpose.</p>

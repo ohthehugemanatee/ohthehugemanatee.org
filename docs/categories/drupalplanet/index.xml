@@ -34,7 +34,7 @@ First I have to acknowledge the history. I co-founded my first tech company just
       <guid>https://ohthehugemanatee.org/blog/2017/07/28/bring-php-to-drupalcon/</guid>
       <description>I&amp;rsquo;ve learned something incredible as the PHP Track Chair for Drupalcon Vienna. The Drupal Association has no way to invite PHP speakers to Drupalcon.
 This blew me away when I first learned about it. After all the work to bring mainstream PHP to Drupal core, after all the outreach to PHP-FIG, after all the talks Drupalists have given at major PHP conferences, how is this possible?
-You see, basically every other PHP conference covers their speakers&#39; travel and accommodation costs.</description>
+You see, basically every other PHP conference covers their speakers&amp;rsquo; travel and accommodation costs.</description>
     </item>
     
     <item>
@@ -121,7 +121,7 @@ Migrate in Drupal 7 is a fantastic piece of code. It is not designed to be used 
       <pubDate>Mon, 03 Nov 2014 17:30:32 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2014/11/03/drupalgeddon-means-we-cant-trust-humans-with-updates/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>
@@ -208,7 +208,7 @@ The evil Lord Over Engineering is threatening to delay the release of the CMS, w
       
       <guid>https://ohthehugemanatee.org/blog/2014/03/29/drupal-dev-days-szeged-2014/</guid>
       <description>Today is the last day of Drupal Dev Days in Szeged, Hungary, and I&amp;rsquo;ve never been more full of the &amp;ldquo;Drupal spirit!&amp;rdquo;
-One of Drupal&amp;rsquo;s greatest strengths is the closness of its&#39; community, how friendly and accepting they can be. Drupalcons are highlight events for many, not because of the learning as much as because of the social track: the chance to see old friends and make new ones. Even more important is the chance to experience in person this incredibly friendly community.</description>
+One of Drupal&amp;rsquo;s greatest strengths is the closness of its&amp;rsquo; community, how friendly and accepting they can be. Drupalcons are highlight events for many, not because of the learning as much as because of the social track: the chance to see old friends and make new ones. Even more important is the chance to experience in person this incredibly friendly community.</description>
     </item>
     
     <item>
@@ -219,7 +219,7 @@ One of Drupal&amp;rsquo;s greatest strengths is the closness of its&#39; communi
       <guid>https://ohthehugemanatee.org/blog/2014/01/10/drush-self-aliases/</guid>
       <description>I ran into an interesting problem with the drush @self alias today. I wanted to pull a fresh copy of the DB down from a client&amp;rsquo;s live site to my local development copy. Should be as easy as drush sql-sync @clientsite.live @self, right? I&amp;rsquo;ve done this a thousand times before.
 And I&amp;rsquo;ve also ignored the warning message every time before, but today I thought I&amp;rsquo;d check it out:
- WARNING: Using temporary files to store and transfer sql-dump.</description>
+WARNING: Using temporary files to store and transfer sql-dump.</description>
     </item>
     
     <item>
@@ -248,7 +248,7 @@ As usual, I&amp;rsquo;ll assume that you have an empty custom module called mymo
       
       <guid>https://ohthehugemanatee.org/blog/2013/12/26/44497-people-are-wrong-how-to-never-use-views-php/</guid>
       <description>You&amp;rsquo;re building a View, but you can&amp;rsquo;t get that field to display the way you want it to. Or filter, or sort. Or maybe you have some data in a custom table that you want to include in the View. So you look for a contributed module, and Views PHP looks like the answer to your problem! Until you read the module page, where it says:
- &amp;ldquo;&amp;hellip;it is highly advisable to use regular handlers and plugins when available (or even to create one yourself).</description>
+&amp;ldquo;&amp;hellip;it is highly advisable to use regular handlers and plugins when available (or even to create one yourself).</description>
     </item>
     
     <item>
@@ -266,7 +266,7 @@ As usual, I&amp;rsquo;ll assume that you have an empty custom module called mymo
       <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
       
       <guid>https://ohthehugemanatee.org/blog/2013/04/18/adding-rules-to-your-contrib-module-so-you-can-reject-half-the-tickets-in-your-queue/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>

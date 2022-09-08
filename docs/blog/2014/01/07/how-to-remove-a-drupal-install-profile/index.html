@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -205,39 +205,39 @@
 <p>Very often your site will diverge from the install profile as it takes on a life of its own, and it will be useful to convert it to &ldquo;vanilla&rdquo; Drupal. Today I&rsquo;ll use a relatively simple example of a musician site which is moving away from the <a href="https://drupal.org/project/pushtape">Pushtape</a> distribution. Later I&rsquo;ll return to this subject with the much more in-depth example of moving a community site away from <a href="https://drupal.org/project/commons">Drupal Commons</a>.</p>
 <h2 id="move-things-around">Move things around</h2>
 <p>Install profiles have all their files stored in the site root&rsquo;s <em>profiles/</em> directory. The first step is going to be moving everything out of there. In the case of pushtape, we have libraries, modules, and a theme stored in there. We&rsquo;re going to move them to a more normal location.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># mkdir sites/all/libraries
-# mv profiles/pushtape/libraries/* sites/all/libraries
-<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span># mkdir sites/all/modules/custom
-# mv profiles/pushtape/modules/pushtape_* sites/all/modules/custom
-# mv profiles/pushtape/modules/* sites/all/modules
-<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span># mkdir sites/all/themes
-# mv profiles/pushtape/themes/* sites/all/themes
-</code></pre></div><p>Next we need to see if there are any variables set in the install profile which really depend on the profile directory. If there are, we&rsquo;ll have to set them again with the new path.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># cd profiles/pushtape
-# grep <span style="color:#e6db74">&#39;profiles/pushtape&#39;</span> * -R
-pushtape.install:  variable_set(&#39;sm2_path&#39;, &#39;profiles/pushtape/libraries/soundmanager2&#39;);
-</code></pre></div><p>In this case, we see one variable_set which tells the system where to find the soundmanager2 library. We can update that easily enough with drush:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># drush vset sm2_path <span style="color:#e6db74">&#39;sites/all/libraries/soundmanager2&#39;</span>
-</code></pre></div><p>Now we have to update Drupal&rsquo;s setting for which install profile was used to create the site.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># drush vset install_profile standard
-</code></pre></div><p>In some cases this will be enough to work. Personally I like to keep my modules folder more organized, so I go the extra mile:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># cd sites/all/modules
-# mkdir contrib
-# mv !<span style="color:#f92672">(</span>custom|contrib<span style="color:#f92672">)</span> contrib
-</code></pre></div><p>I also separated out the custom code from the features. You can figure out which custom modules implement features with <em>find . |grep features</em>, and move them into a separate directory manually.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span># mkdir sites/all/libraries
+</span></span><span style="display:flex;"><span># mv profiles/pushtape/libraries/* sites/all/libraries
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span># mkdir sites/all/modules/custom
+</span></span><span style="display:flex;"><span># mv profiles/pushtape/modules/pushtape_* sites/all/modules/custom
+</span></span><span style="display:flex;"><span># mv profiles/pushtape/modules/* sites/all/modules
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span># mkdir sites/all/themes
+</span></span><span style="display:flex;"><span># mv profiles/pushtape/themes/* sites/all/themes
+</span></span></code></pre></div><p>Next we need to see if there are any variables set in the install profile which really depend on the profile directory. If there are, we&rsquo;ll have to set them again with the new path.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span># cd profiles/pushtape
+</span></span><span style="display:flex;"><span># grep <span style="color:#e6db74">&#39;profiles/pushtape&#39;</span> * -R
+</span></span><span style="display:flex;"><span>pushtape.install:  variable_set(&#39;sm2_path&#39;, &#39;profiles/pushtape/libraries/soundmanager2&#39;);
+</span></span></code></pre></div><p>In this case, we see one variable_set which tells the system where to find the soundmanager2 library. We can update that easily enough with drush:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span># drush vset sm2_path <span style="color:#e6db74">&#39;sites/all/libraries/soundmanager2&#39;</span>
+</span></span></code></pre></div><p>Now we have to update Drupal&rsquo;s setting for which install profile was used to create the site.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span># drush vset install_profile standard
+</span></span></code></pre></div><p>In some cases this will be enough to work. Personally I like to keep my modules folder more organized, so I go the extra mile:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span># cd sites/all/modules
+</span></span><span style="display:flex;"><span># mkdir contrib
+</span></span><span style="display:flex;"><span># mv !<span style="color:#f92672">(</span>custom|contrib<span style="color:#f92672">)</span> contrib
+</span></span></code></pre></div><p>I also separated out the custom code from the features. You can figure out which custom modules implement features with <em>find . |grep features</em>, and move them into a separate directory manually.</p>
 <h2 id="clearing-caches">Clearing caches</h2>
 <p>Once you&rsquo;re done moving things around, CLEAR CACHES. Drupal keeps an index of module, library, and theme directories, and you just broke it.</p>
 <pre tabindex="0"><code>drush cc all
 </code></pre><p>The only problem is, in many cases you will have moved a module that is required for drupal bootstrap. So you&rsquo;ll have to get the handy drush tool <a href="https://drupal.org/project/registry_rebuild">Registry Rebuild</a>, and run that before your cache clear:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console"># drush dl registry_rebuild
-# drush rr
-# drush cc all
-</code></pre></div><h2 id="extra-cleanup">Extra Cleanup</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span># drush dl registry_rebuild
+</span></span><span style="display:flex;"><span># drush rr
+</span></span><span style="display:flex;"><span># drush cc all
+</span></span></code></pre></div><h2 id="extra-cleanup">Extra Cleanup</h2>
 <p>As commenter @ericaitala notes, you may need some followup cleanup to really get all traces out. The easiest way to do this is from the SQL command line, which you can access via drush:</p>
-<pre tabindex="0"><code>drush sqlq &quot;DELETE FROM `system` WHERE filename LIKE 'profiles/profilename/profilename.profile&quot;
-drush sqlq &quot;UPDATE `system` SET status=1 WHERE filename LIKE 'profiles/standard/standard.profile'&quot;
+<pre tabindex="0"><code>drush sqlq &#34;DELETE FROM `system` WHERE filename LIKE &#39;profiles/profilename/profilename.profile&#34;
+drush sqlq &#34;UPDATE `system` SET status=1 WHERE filename LIKE &#39;profiles/standard/standard.profile&#39;&#34;
 </code></pre><p>Technically these should both be covered by the registry_rebuild operation, but we&rsquo;re doing it by hand because it seems to be missed in some operations. The first command removes the entry for the profile from Drupal&rsquo;s system table - it removes any knowledge Drupal has that there was an install profile there. The second tells Drupal that the &ldquo;standard&rdquo; install profile is active, and should be checked for updates.</p>
 <p>That&rsquo;s it - your site is now officially a vanilla Drupal install. Test by removing the profiles/pushtape directory, clearing caches, and browsing around your site.</p>
 <p><em>NOTE: With a more complex install profile I expect to encounter more difficulty. Stay tuned for the post on extricating yourself from Commons later this year!</em></p>

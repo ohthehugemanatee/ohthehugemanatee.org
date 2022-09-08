@@ -6,7 +6,16 @@
     <description>Recent content in dev on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Nov 2021 19:15:33 +0100</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Sep 2022 21:07:31 +0200</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Four Drupalists</title>
+      <link>https://ohthehugemanatee.org/blog/2022/09/08/four-drupalists/</link>
+      <pubDate>Thu, 08 Sep 2022 21:07:31 +0200</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/blog/2022/09/08/four-drupalists/</guid>
+      <description>Recently some of my work on prenotes came up, and reminded me that I&amp;rsquo;ve wanted to post favorite moments here for some time. For those who don&amp;rsquo;t know, a prenote is a session before the keynote of a conference or event. During that session, notables from across the community put on a humorous show of parody lyrics karaoke, terribly scripted dialogue, and general silliness. It&amp;rsquo;s a great way to kick off an event, and really sets the tone if you&amp;rsquo;re into flat-hierarchy and openness for newbies.</description>
+    </item>
+    
     <item>
       <title>Building blocks for autonomous driving simulation environments</title>
       <link>https://ohthehugemanatee.org/blog/2021/11/12/building-blocks-for-autonomous-driving-simulation-environments/</link>

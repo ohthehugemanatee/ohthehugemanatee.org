@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -207,92 +207,92 @@ Kubernetes is one of the greatest orchestration and scaling tools ever built, de
 <p>There are a few different approaches to coupling appliciation components:</p>
 <h2 id="multi-container-pods">Multi-container pods</h2>
 <p>Level 0 is to simply specify multiple components (containers) in your deployment.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-deployment</span>
-  <span style="color:#f92672">labels</span>:
-    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">3</span>
-  <span style="color:#f92672">selector</span>:
-    <span style="color:#f92672">matchLabels</span>:
-      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-  <span style="color:#f92672">template</span>:
-    <span style="color:#f92672">metadata</span>:
-      <span style="color:#f92672">labels</span>:
-        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-    <span style="color:#f92672">spec</span>:
-      <span style="color:#f92672">containers</span>:
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">php</span>
-        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">php:fpm</span>
-        <span style="color:#f92672">ports</span>:
-        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">9000</span>
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
-        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:latest</span>
-        <span style="color:#f92672">ports</span>:
-        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
-</code></pre></div><p>This specifies 3 copies of the same application, with the same two containers in each replica. This is a coupled application, but it&rsquo;s still stateless. Let&rsquo;s add a volume - that&rsquo;s where we get into trouble.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-deployment</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">matchLabels</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">php</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">php:fpm</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">9000</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:latest</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
+</span></span></code></pre></div><p>This specifies 3 copies of the same application, with the same two containers in each replica. This is a coupled application, but it&rsquo;s still stateless. Let&rsquo;s add a volume - that&rsquo;s where we get into trouble.</p>
 <p>The problem: If you add a Volume the normal way (<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">persistentVolumeClaim</a>), each of your replicas will try and connect to the same volume. It&rsquo;ll act like a network shared drive. Maybe that&rsquo;s OK for your application, but not if it&rsquo;s our super-stateful example! And depending on your volume class, the volume may reject multiple connections like (<a href="https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv">Azure Disk</a> does, for example).</p>
 <p>So how do we get around this limitation? I want a separate volume for each instance of the application.</p>
 <p>Kubernetes supports a different object type for this use case, called a <a href="https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/">StatefulSet</a>. This is exactly what it sounds like: a set of objects that define a stateful application. It&rsquo;s a template for creating multiple copies of <em>all resources</em> defined therein.</p>
 <p>A statefulset will create replicas similar to a deployment, but it will set up separate Volumes and VolumeClaims for each one. The replicas will be identical except for an index number at the end of the labels. The first one might be called <code>nginx-deployment-0</code>, the second: <code>nginx-deployment-1</code>, and so on.  The result is a set of tightly coupled components, which can be individually addressed, and scaled using normal Kubernetes tools.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">StatefulSet</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
-  <span style="color:#f92672">labels</span>:
-    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">3</span>
-  <span style="color:#f92672">selector</span>:
-    <span style="color:#f92672">matchLabels</span>:
-      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-  <span style="color:#f92672">serviceName</span>: <span style="color:#e6db74">&#34;nginx&#34;</span>
-  <span style="color:#f92672">template</span>:
-    <span style="color:#f92672">metadata</span>:
-      <span style="color:#f92672">labels</span>:
-        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-    <span style="color:#f92672">spec</span>:
-      <span style="color:#f92672">containers</span>:
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
-        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:latest</span>
-        <span style="color:#f92672">ports</span>:
-        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">php</span>
-        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">php:fpm</span>
-        <span style="color:#f92672">volumeMounts</span>:
-        - <span style="color:#f92672">mountPath</span>: <span style="color:#e6db74">&#34;/var/www/html&#34;</span>
-          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">data</span>
-  <span style="color:#f92672">volumeClaimTemplates</span>:
-    - <span style="color:#f92672">metadata</span>:
-        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">data</span>
-      <span style="color:#f92672">spec</span>:
-        <span style="color:#f92672">storageClassName</span>: <span style="color:#ae81ff">default</span>
-        <span style="color:#f92672">accessModes</span>:
-          - <span style="color:#ae81ff">ReadWriteOnce</span>
-        <span style="color:#f92672">resources</span>:
-          <span style="color:#f92672">requests</span>:
-            <span style="color:#f92672">storage</span>: <span style="color:#ae81ff">5Gi</span>
----
-<span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Service</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
-  <span style="color:#f92672">labels</span>:
-    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">ports</span>:
-    - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">http</span>
-  <span style="color:#f92672">clusterIP</span>: <span style="color:#ae81ff">None</span>
-  <span style="color:#f92672">selector</span>:
-    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-</code></pre></div><p>There are a few details to notice here.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">StatefulSet</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">matchLabels</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">serviceName</span>: <span style="color:#e6db74">&#34;nginx&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:latest</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">php</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">php:fpm</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">volumeMounts</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">mountPath</span>: <span style="color:#e6db74">&#34;/var/www/html&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">data</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">volumeClaimTemplates</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">data</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">storageClassName</span>: <span style="color:#ae81ff">default</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">accessModes</span>:
+</span></span><span style="display:flex;"><span>          - <span style="color:#ae81ff">ReadWriteOnce</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">requests</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">storage</span>: <span style="color:#ae81ff">5Gi</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Service</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">http</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">clusterIP</span>: <span style="color:#ae81ff">None</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span></code></pre></div><p>There are a few details to notice here.</p>
 <p>Yes, we&rsquo;ve replaced <em>Deployment</em> with <em>StatefulSet</em>. You get a shiny gold star if you noticed that one.</p>
 <p>The interesting part is the <em>VolumeClaimTemplates</em> section, below the containers definition. This keyword only exists inside a StatefulSet, and it&rsquo;s just what it sounds like: a template for creating Persistent Volume Claims.</p>
 <p>If you apply this config, you&rsquo;ll see three PVs created, with three PVCs, attached to three Pods. You can apply HPA rules to scale these up and down just like you would with deployments.</p>
-<p>There&rsquo;s also that weird Service at the bottom. A naked service with no clusterIP? What&rsquo;s the point? The point is as a helper for Kubernetes' internal DNS. All of those nice StatefulSet pods will come under a neat subdomain, eg nginx-0.nginx, nginx-1.nginx, etc. Additionally you can connect to active members of the StatefulSet by using that nginx domain component. A dns lookup on it will show all the IPs of the active members in the CNAME record.</p>
+<p>There&rsquo;s also that weird Service at the bottom. A naked service with no clusterIP? What&rsquo;s the point? The point is as a helper for Kubernetes&rsquo; internal DNS. All of those nice StatefulSet pods will come under a neat subdomain, eg nginx-0.nginx, nginx-1.nginx, etc. Additionally you can connect to active members of the StatefulSet by using that nginx domain component. A dns lookup on it will show all the IPs of the active members in the CNAME record.</p>
 <p>&ldquo;But what about external access?&rdquo; I hear you cry. Yes, we&rsquo;ve built a great stateful application that can scale instances, but it&rsquo;s only internally addressable! Good luck hosting those games&hellip;</p>
 <h2 id="external-access-and-metacontroller">External access and metacontroller</h2>
 <p>Normally you would put a LoadBalancer service in front of your application. But a Kubernetes load balancer will grab all of these StatefulSet members - so you can&rsquo;t address them externally one-by-one. What you <em>really</em> want to do, is create an external IP address for each statefulset member.</p>
@@ -302,136 +302,135 @@ Kubernetes is one of the greatest orchestration and scaling tools ever built, de
 <p>We&rsquo;ll use the <a href="https://github.com/GoogleCloudPlatform/metacontroller">Metacontroller</a> add-on to make our lives easier. Metacontroller makes it &ldquo;easy&rdquo; to add custom behaviors. Just write a short script, stick it into a ConfigMap or FaaS, and let Metacontroller work its magic!</p>
 <p>Metacontroller project comes with several well documented examples, including one that&rsquo;s very close to our requirement: <a href="https://github.com/GoogleCloudPlatform/metacontroller/tree/master/examples/service-per-pod">service-per-pod</a>.</p>
 <p>Step 1 is to install Metacontroller, of course:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Create &#39;metacontroller&#39; namespace, service account, and role/binding.</span>
-kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontroller/master/manifests/metacontroller-rbac.yaml
-<span style="color:#75715e"># Create CRDs for Metacontroller APIs, and the Metacontroller StatefulSet.</span>
-kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontroller/master/manifests/metacontroller.yaml
-</code></pre></div><p>Then we&rsquo;ll add some new metadata to our existing StatefulSet. The metacontroller script will use these values to configure the load balancers.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">StatefulSet</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">annotations</span>:
-    <span style="color:#f92672">service-per-pod-label</span>: <span style="color:#e6db74">&#34;pod-name&#34;</span>
-    <span style="color:#f92672">service-per-pod-ports</span>: <span style="color:#e6db74">&#34;80:80&#34;</span>
-...
-</code></pre></div><p>We also need to tell Kubernetes to decorate each StatefulSet with a pod-name label. We do this in the StatefulSet&rsquo;s pod template.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">...
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">template</span>:
-    <span style="color:#f92672">metadata</span>:
-      <span style="color:#f92672">annotations</span>:
-        <span style="color:#f92672">pod-name-label</span>: <span style="color:#e6db74">&#34;pod-name&#34;</span>
-...
-</code></pre></div><p>Note: this only works in k8s 1.9+ - if you&rsquo;re stuck with a lower version, you can script this action with Metacontroller, too. :).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create &#39;metacontroller&#39; namespace, service account, and role/binding.</span>
+</span></span><span style="display:flex;"><span>kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontroller/master/manifests/metacontroller-rbac.yaml
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create CRDs for Metacontroller APIs, and the Metacontroller StatefulSet.</span>
+</span></span><span style="display:flex;"><span>kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontroller/master/manifests/metacontroller.yaml
+</span></span></code></pre></div><p>Then we&rsquo;ll add some new metadata to our existing StatefulSet. The metacontroller script will use these values to configure the load balancers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">StatefulSet</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">annotations</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">service-per-pod-label</span>: <span style="color:#e6db74">&#34;pod-name&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">service-per-pod-ports</span>: <span style="color:#e6db74">&#34;80:80&#34;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>We also need to tell Kubernetes to decorate each StatefulSet with a pod-name label. We do this in the StatefulSet&rsquo;s pod template.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">annotations</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">pod-name-label</span>: <span style="color:#e6db74">&#34;pod-name&#34;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>Note: this only works in k8s 1.9+ - if you&rsquo;re stuck with a lower version, you can script this action with Metacontroller, too. :).</p>
 <p>Now you&rsquo;re going to need two hooks. Put them in a directory together so they&rsquo;re easy to apply at once. These ones are written in jsonnet, but you could write this in whatever language you like.</p>
 <p>The first hook actually creates the LoadBalancer for each Pod.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">function(request) {
-  local statefulset = request.<span style="color:#66d9ef">object</span>,
-  local labelKey = statefulset.metadata.annotations[<span style="color:#e6db74">&#34;service-per-pod-label&#34;</span>],
-  local ports = statefulset.metadata.annotations[<span style="color:#e6db74">&#34;service-per-pod-ports&#34;</span>],
-
-  <span style="color:#75715e">// Create a service for each Pod, with a selector on the given label key.
-</span><span style="color:#75715e"></span>  attachments: [
-    {
-      apiVersion: <span style="color:#e6db74">&#34;v1&#34;</span>,
-      kind: <span style="color:#e6db74">&#34;Service&#34;</span>,
-      metadata: {
-        name: statefulset.metadata.name + <span style="color:#e6db74">&#34;-&#34;</span> + index,
-        labels: {app: <span style="color:#e6db74">&#34;service-per-pod&#34;</span>}
-      },
-      spec: {
-        type: <span style="color:#e6db74">&#34;LoadBalancer&#34;</span>,
-        selector: {
-<span style="color:#a6e22e">          [labelKey]</span>: statefulset.metadata.name + <span style="color:#e6db74">&#34;-&#34;</span> + index
-        },
-        ports: [
-          {
-            local parts = std.split(portnums, <span style="color:#e6db74">&#34;:&#34;</span>),
-            port: std.parseInt(parts[<span style="color:#ae81ff">0</span>]),
-            targetPort: std.parseInt(parts[<span style="color:#ae81ff">1</span>]),
-          }
-          <span style="color:#66d9ef">for</span> portnums <span style="color:#66d9ef">in</span> std.split(ports, <span style="color:#e6db74">&#34;,&#34;</span>)
-        ]
-      }
-    }
-    <span style="color:#66d9ef">for</span> index <span style="color:#66d9ef">in</span> std.range(<span style="color:#ae81ff">0</span>, statefulset.spec.replicas - <span style="color:#ae81ff">1</span>)
-  ]
-}
-</code></pre></div><p>The other hook is the &ldquo;finalizer&rdquo; - it responds to changes or deletions in pods by tearing down the corresponding LoadBalancers.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">function(request) {
-  <span style="color:#75715e">// If the StatefulSet is updated to no longer match our decorator selector,
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">// or if the StatefulSet is deleted, clean up any attachments we made.
-</span><span style="color:#75715e"></span>  attachments: [],
-  <span style="color:#75715e">// Mark as finalized once we observe all Services are gone.
-</span><span style="color:#75715e"></span>  finalized: std.length(request.attachments[<span style="color:#960050;background-color:#1e0010">&#39;</span>Service.v1<span style="color:#960050;background-color:#1e0010">&#39;</span>]) == <span style="color:#ae81ff">0</span>
-}
-</code></pre></div><p>Add those into a subdirectory, and put them into a configmap together. Metacontroller will run them from there.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create configmap service-per-pod-hooks -n metacontroller --from-file<span style="color:#f92672">=</span>hooks
-</code></pre></div><p>Now apply the actual decorator controller which will run those functions. Note that you have to identify your hook jsonnet files by (file) name! Get the name wrong, and the finalizer will hang forever, <a href="https://github.com/kubernetes/kubernetes/issues/72598">preventing you from deleting your statefulset</a>. In my case, the files were called <code>create-lb-per-pod.jsonnet</code> and <code>finalizer.json</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">metacontroller.k8s.io/v1alpha1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">DecoratorController</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">resources</span>:
-  - <span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1beta1</span>
-    <span style="color:#f92672">resource</span>: <span style="color:#ae81ff">statefulsets</span>
-    <span style="color:#f92672">annotationSelector</span>:
-      <span style="color:#f92672">matchExpressions</span>:
-      - {<span style="color:#f92672">key: service-per-pod-label, operator</span>: <span style="color:#ae81ff">Exists}</span>
-      - {<span style="color:#f92672">key: service-per-pod-ports, operator</span>: <span style="color:#ae81ff">Exists}</span>
-  <span style="color:#f92672">attachments</span>:
-  - <span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-    <span style="color:#f92672">resource</span>: <span style="color:#ae81ff">services</span>
-  <span style="color:#f92672">hooks</span>:
-    <span style="color:#f92672">sync</span>:
-      <span style="color:#f92672">webhook</span>:
-        <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://service-per-pod.metacontroller/create-lb-per-pod</span>
-    <span style="color:#f92672">finalize</span>:
-      <span style="color:#f92672">webhook</span>:
-        <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://service-per-pod.metacontroller/finalizer</span>
----
-<span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1beta1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
-  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">metacontroller</span>
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">1</span>
-  <span style="color:#f92672">selector</span>:
-    <span style="color:#f92672">matchLabels</span>:
-      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
-  <span style="color:#f92672">template</span>:
-    <span style="color:#f92672">metadata</span>:
-      <span style="color:#f92672">labels</span>:
-        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
-    <span style="color:#f92672">spec</span>:
-      <span style="color:#f92672">containers</span>:
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
-        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">metacontroller/jsonnetd:0.1</span>
-        <span style="color:#f92672">imagePullPolicy</span>: <span style="color:#ae81ff">Always</span>
-        <span style="color:#f92672">workingDir</span>: <span style="color:#ae81ff">/hooks</span>
-        <span style="color:#f92672">volumeMounts</span>:
-        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
-          <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/hooks</span>
-      <span style="color:#f92672">volumes</span>:
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
-        <span style="color:#f92672">configMap</span>:
-          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod-hooks</span>
----
-<span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Service</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
-  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">metacontroller</span>
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">selector</span>:
-    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
-  <span style="color:#f92672">ports</span>:
-  - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
-    <span style="color:#f92672">targetPort</span>: <span style="color:#ae81ff">8080</span>
-
-</code></pre></div><p>That&rsquo;s it! Now you can scale complete replicas of a very-stateful application with a simple <code>kubectl scale sts nginx --replicas=900</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>function(request) {
+</span></span><span style="display:flex;"><span>  local statefulset = request.<span style="color:#66d9ef">object</span>,
+</span></span><span style="display:flex;"><span>  local labelKey = statefulset.metadata.annotations[<span style="color:#e6db74">&#34;service-per-pod-label&#34;</span>],
+</span></span><span style="display:flex;"><span>  local ports = statefulset.metadata.annotations[<span style="color:#e6db74">&#34;service-per-pod-ports&#34;</span>],
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Create a service for each Pod, with a selector on the given label key.</span>
+</span></span><span style="display:flex;"><span>  attachments: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      apiVersion: <span style="color:#e6db74">&#34;v1&#34;</span>,
+</span></span><span style="display:flex;"><span>      kind: <span style="color:#e6db74">&#34;Service&#34;</span>,
+</span></span><span style="display:flex;"><span>      metadata: {
+</span></span><span style="display:flex;"><span>        name: statefulset.metadata.name + <span style="color:#e6db74">&#34;-&#34;</span> + index,
+</span></span><span style="display:flex;"><span>        labels: {app: <span style="color:#e6db74">&#34;service-per-pod&#34;</span>}
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      spec: {
+</span></span><span style="display:flex;"><span>        type: <span style="color:#e6db74">&#34;LoadBalancer&#34;</span>,
+</span></span><span style="display:flex;"><span>        selector: {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">          [labelKey]</span>: statefulset.metadata.name + <span style="color:#e6db74">&#34;-&#34;</span> + index
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        ports: [
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            local parts = std.split(portnums, <span style="color:#e6db74">&#34;:&#34;</span>),
+</span></span><span style="display:flex;"><span>            port: std.parseInt(parts[<span style="color:#ae81ff">0</span>]),
+</span></span><span style="display:flex;"><span>            targetPort: std.parseInt(parts[<span style="color:#ae81ff">1</span>]),
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">for</span> portnums <span style="color:#66d9ef">in</span> std.split(ports, <span style="color:#e6db74">&#34;,&#34;</span>)
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> index <span style="color:#66d9ef">in</span> std.range(<span style="color:#ae81ff">0</span>, statefulset.spec.replicas - <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The other hook is the &ldquo;finalizer&rdquo; - it responds to changes or deletions in pods by tearing down the corresponding LoadBalancers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>function(request) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// If the StatefulSet is updated to no longer match our decorator selector,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// or if the StatefulSet is deleted, clean up any attachments we made.</span>
+</span></span><span style="display:flex;"><span>  attachments: [],
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Mark as finalized once we observe all Services are gone.</span>
+</span></span><span style="display:flex;"><span>  finalized: std.length(request.attachments[<span style="color:#960050;background-color:#1e0010">&#39;</span>Service.v1<span style="color:#960050;background-color:#1e0010">&#39;</span>]) == <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Add those into a subdirectory, and put them into a configmap together. Metacontroller will run them from there.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl create configmap service-per-pod-hooks -n metacontroller --from-file<span style="color:#f92672">=</span>hooks
+</span></span></code></pre></div><p>Now apply the actual decorator controller which will run those functions. Note that you have to identify your hook jsonnet files by (file) name! Get the name wrong, and the finalizer will hang forever, <a href="https://github.com/kubernetes/kubernetes/issues/72598">preventing you from deleting your statefulset</a>. In my case, the files were called <code>create-lb-per-pod.jsonnet</code> and <code>finalizer.json</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">metacontroller.k8s.io/v1alpha1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">DecoratorController</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1beta1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resource</span>: <span style="color:#ae81ff">statefulsets</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">annotationSelector</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">matchExpressions</span>:
+</span></span><span style="display:flex;"><span>      - {<span style="color:#f92672">key: service-per-pod-label, operator</span>: <span style="color:#ae81ff">Exists}</span>
+</span></span><span style="display:flex;"><span>      - {<span style="color:#f92672">key: service-per-pod-ports, operator</span>: <span style="color:#ae81ff">Exists}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">attachments</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resource</span>: <span style="color:#ae81ff">services</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">hooks</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">sync</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">webhook</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://service-per-pod.metacontroller/create-lb-per-pod</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">finalize</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">webhook</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://service-per-pod.metacontroller/finalizer</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1beta1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">metacontroller</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">matchLabels</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">metacontroller/jsonnetd:0.1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">imagePullPolicy</span>: <span style="color:#ae81ff">Always</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">workingDir</span>: <span style="color:#ae81ff">/hooks</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">volumeMounts</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/hooks</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">configMap</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod-hooks</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Service</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">metacontroller</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">targetPort</span>: <span style="color:#ae81ff">8080</span>
+</span></span></code></pre></div><p>That&rsquo;s it! Now you can scale complete replicas of a very-stateful application with a simple <code>kubectl scale sts nginx --replicas=900</code>.</p>
 <p>Enjoy bragging to your friends about your &ldquo;macroservices architecture&rdquo;, pushing the limits of Kubernetes to run and replicate a stateful monolith!</p>
 <p><em>Everyone hates writing YAML. Check out the <a href="https://github.com/ohthehugemanatee/kubernetes-stateful-example">sample code for this post on Github</a></em></p>
 

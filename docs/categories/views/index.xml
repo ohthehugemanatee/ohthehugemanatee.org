@@ -14,7 +14,7 @@
       
       <guid>https://ohthehugemanatee.org/blog/2013/12/26/44497-people-are-wrong-how-to-never-use-views-php/</guid>
       <description>You&amp;rsquo;re building a View, but you can&amp;rsquo;t get that field to display the way you want it to. Or filter, or sort. Or maybe you have some data in a custom table that you want to include in the View. So you look for a contributed module, and Views PHP looks like the answer to your problem! Until you read the module page, where it says:
- &amp;ldquo;&amp;hellip;it is highly advisable to use regular handlers and plugins when available (or even to create one yourself).</description>
+&amp;ldquo;&amp;hellip;it is highly advisable to use regular handlers and plugins when available (or even to create one yourself).</description>
     </item>
     
   </channel>

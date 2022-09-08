@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -204,16 +204,16 @@ In terms of format, there are some really great options if you only care about c
 <p>In terms of format, there are some really great options if you only care about compatibility with the most popular browsers (ahem - chrome). webm/VP8 is the way to go here, or webm/VP9 if you really only care about chrome. You&rsquo;ll get a very small filesize and high quality, with hardware playback on the latest devices. But if you want to include Safari and others, or if you care about non-flagsip devices or ones more than a couple of years old, it has to be MP4/h.264 . Your filesize won&rsquo;t be as small, but it will play with hardware acceleration on any device since about 2011.</p>
 <p>One common opimization is to use <code>@media</code> queries to dfault to webm/VP9 and fallback to other formats based on the browser capabilities. Do that if you want, but for my use cases I prefer simplicity over bandwidth savings.</p>
 <p>I use <a href="https://ffmpeg.org/">ffmpeg</a>, because it does everything except my laundry (and I&rsquo;m pretty sure that&rsquo;s because I don&rsquo;t know th right flags for &ldquo;spin cycle&rdquo;). To convert one video into a format that is universally compatible:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ffmpeg  -i input.mp4 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  -c:v libx264 <span style="color:#75715e"># h264 encoder \</span>
-  -profile:v main <span style="color:#75715e"># h264 options to make available. for &gt;5 year old phones, use &#34;baseline&#34;. \</span>
-  -preset veryslow <span style="color:#75715e"># slowest option, best compression \</span>
-  -s hd720 <span style="color:#75715e"># rarely need higher resolution than this \</span>
-  -b:v 1.5M <span style="color:#75715e"># sets the video bitrate \</span>
-  -an <span style="color:#75715e"># no audio track; this is for a background video \</span>
-  -movflags +faststart <span style="color:#75715e"># allows playing while the file is downloading \</span>
-  output.mp4
-</code></pre></div><p>The non-obvious options:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg  -i input.mp4 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -c:v libx264 <span style="color:#75715e"># h264 encoder \</span>
+</span></span><span style="display:flex;"><span>  -profile:v main <span style="color:#75715e"># h264 options to make available. for &gt;5 year old phones, use &#34;baseline&#34;. \</span>
+</span></span><span style="display:flex;"><span>  -preset veryslow <span style="color:#75715e"># slowest option, best compression \</span>
+</span></span><span style="display:flex;"><span>  -s hd720 <span style="color:#75715e"># rarely need higher resolution than this \</span>
+</span></span><span style="display:flex;"><span>  -b:v 1.5M <span style="color:#75715e"># sets the video bitrate \</span>
+</span></span><span style="display:flex;"><span>  -an <span style="color:#75715e"># no audio track; this is for a background video \</span>
+</span></span><span style="display:flex;"><span>  -movflags +faststart <span style="color:#75715e"># allows playing while the file is downloading \</span>
+</span></span><span style="display:flex;"><span>  output.mp4
+</span></span></code></pre></div><p>The non-obvious options:</p>
 <ul>
 <li><code>-profile:v main</code> sets which features of h264 to use. The standard evolved over time, and depending on just how new your playback devices are, there improvements available. Most of the time <code>main</code> is the right choice, but if you want to target older devices use <code>baseline</code>.</li>
 <li><code>-b:v 1.5M</code> sets a 1.5 Megabit bitrate. You should experiment with this number to find the right tradeoff between quality and filesize. You can find out the bitrate of your original source with <code>ffinfo</code>, or with the output of this <code>ffmpeg</code> command.</li>

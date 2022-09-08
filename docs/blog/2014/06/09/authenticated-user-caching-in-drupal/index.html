@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.101.0" />
 
     
     
@@ -212,7 +212,7 @@ But what about authenticated users? You can cache elements of the page using a m
 <p>There are three major ways of doing this placeholder: AJAX, ESI, and Cookies.</p>
 <p>With AJAX, you just include a little JS that says &ldquo;fill this DIV with the contents of <a href="http://example.com/user/customized/thing%22">http://example.com/user/customized/thing&quot;</a>. The client&rsquo;s web browser makes a second call to the server, which is configured to allow /user/customized/thing through the cache all the way to your website. Drupal (or whatever you&rsquo;re running) fills in the HTML that belongs in that div and returns it to the browser. Congratulations! You just served an authenticated user a page which was 99% cached. You only had to generate the contents of one div.</p>
 <p>ESI is short for <a href="https://en.wikipedia.org/wiki/Edge_Side_Includes">Edge Side Includes</a>, a small extension to HTML which effectively does the same thing as that Javascript, but on the &ldquo;Edge server&rdquo;. The Edge server is whatever service touches the HTTP request last before sending it to the client. Apache, NGINX, Varnish, pound&hellip; you want this to happen as far down the stack as you control. An ESI tag in your HTML looks like this:</p>
-<pre tabindex="0"><code>&lt;esi:include src=&quot;http://example.com/user/customized/thing&quot; onerror=&quot;continue&quot;/&gt;
+<pre tabindex="0"><code>&lt;esi:include src=&#34;http://example.com/user/customized/thing&#34; onerror=&#34;continue&#34;/&gt;
 </code></pre><p>It&rsquo;s pretty clear, even to a human reader, what this tag means: &ldquo;replace this tag with the contents of <a href="http://example.com/user/customized/thing%22">http://example.com/user/customized/thing&quot;</a>. ESI actually supports some simple logic as well, but that&rsquo;s not really relevant to what we&rsquo;re doing here.</p>
 <p>The only difference between ESI and AJAX is where the placeholder is filled. With ESI it happens on the edge service, and with AJAX it happens in the client browser. There is a subtle difference here: a page with ESI will not be delivered until all the ESI calls have returned something, while an AJAX page will return right away, even if the components don&rsquo;t immediately appear. On the other hand, ESI is much better for degraded browsers. YMMV.</p>
 <p>The last method is using Cookies. You can store arbitrary information on cookies, as long as you&rsquo;re careful about security. That can be a very effective way to get certain limited information through a caching layer. Authcache actually comes with an example module for just such a use case. It passes the user&rsquo;s name and account URL in a cookie, so you can display it in a block.</p>

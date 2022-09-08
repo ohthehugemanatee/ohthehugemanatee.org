@@ -2,13 +2,55 @@
   <title>Oh The Huge Manatee!</title>
   <link href="https://ohthehugemanatee.org/atom.xml" rel="self"/>
   <link href="https://ohthehugemanatee.org/"/>
-  <updated>2022-04-25T11:00:15+02:00</updated>
+  <updated>2022-09-08T21:07:31+02:00</updated>
   <id>https://ohthehugemanatee.org/</id>
   <author>
     <name>Campbell Vertesi (ohthehugemanatee)</name>
     <uri>https://ohthehugemanatee.org/</uri>
   </author>
   <generator>Hugo -- gohugo.io</generator>
+  <entry>
+    <title type="html"><![CDATA[Four Drupalists]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2022/09/08/four-drupalists/"/>
+    <id>https://ohthehugemanatee.org/blog/2022/09/08/four-drupalists/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2022-09-08T21:07:31+02:00</published>
+    <updated>2022-09-08T21:07:31+02:00</updated>
+    <content type="html"><![CDATA[<p>Recently some of my work on prenotes came up, and reminded me that I&rsquo;ve wanted to post favorite moments here for some time. For those who don&rsquo;t know, a <em>prenote</em> is a session before the keynote of a conference or event. During that session, notables from across the community put on a humorous show of parody lyrics karaoke, terribly scripted dialogue, and general silliness. It&rsquo;s a great way to kick off an event, and really sets the tone if you&rsquo;re into flat-hierarchy and openness for newbies.</p>
+<p>Without further ado, here is the first of my favorite prenote moments, performed for Drupalcon Amsterdam in 2019.</p>
+<p>(the four of us pass a joint around)</p>
+<p><strong>Rob:</strong> Ahh.. Very passable, this, very passable.</p>
+<p><strong>Cam:</strong> Nothing like a good hit of Lemon Kush Blue Drop Haze, ay Adam?</p>
+<p><strong>Adam:</strong> Dude&hellip;</p>
+<p><strong>Jam:</strong> Who&rsquo;d a thought ten years ago we&rsquo;d all be sittin&rsquo; here smoking a bong on the prenote stage?</p>
+<p><strong>Rob:</strong> Yep. In those days, we&rsquo;d a&rsquo; been glad to even give a session.</p>
+<p><strong>Cam:</strong> A session OFF the mainstage.</p>
+<p><strong>Jam:</strong> Without mics or speaker notes.</p>
+<p><strong>Adam:</strong> OR a session.</p>
+<p><strong>Rob:</strong> In a filthy broom closet.</p>
+<p><strong>Jam:</strong> I never used to have a broom closet. I used to have to present in the alley behind the convention center.</p>
+<p><strong>Cam:</strong> The best WE could manage was talking to strangers at a bus stop.</p>
+<p><strong>Adam:</strong> But you know, we were happy in those days, though we weren’t Drupal Famous.</p>
+<p><strong>Rob:</strong> Aye. BECAUSE we weren’t Drupal Famous. Dries used to say to me: Rob, Twitter followers don&rsquo;t buy you happiness.'</p>
+<p><strong>Jam:</strong> He was right. I was happier then and I had NO followers. We used to have this tiiiny old PHPBB bulletin board, with enormous fatal errors in the forums.</p>
+<p><strong>Cam:</strong> Bulletin board! You were lucky to have a bulletin board! We used to share one ICQ account, all twenty-six of us, no wifi. Half the router was dead; we were all plugged into the other half for fear of PACKET LOSS!</p>
+<p><strong>Adam:</strong> You were lucky to have a ROUTER! <em>We</em> used to have to use a token ring network!</p>
+<p><strong>Rob:</strong> Ohhh we used to DREAM of a token ring network! Woulda’ been luxury to us. We used to share a dial-up connection on a copper phone line. We got woken up every morning by the sound of SCREEEEE-WOOOEOOOOOEOOO-BIBOMMMM-BIBOMM-BIBOMM. Internet connection! Hmpfh.</p>
+<p><strong>Jam:</strong> Well when I say “Internet connection”, it was just a 14.4 baud modem connected to a tin can and some string, but it was an Internet connection to US.</p>
+<p><strong>Cam:</strong> Our tin can and string were cut; we had to send packets by smoke signal!</p>
+<p><strong>Adam:</strong> You were lucky to have smoke signals! There were a hundred and fifty of us sending our TCP packets on USB sticks by carrier pigeon.</p>
+<p><strong>Rob:</strong> 1 Gigabyte sticks?</p>
+<p><strong>Adam:</strong> Yep.</p>
+<p><strong>Rob:</strong> You were lucky. For us, once a week old Geppeto would come to town pushing a hand cart with UDP packets. SYN and ACK, hmpf! We used to join stand-up at 6 in the morning, clean the backlog, drink a cup of cold coffee, go down to code in the basement for fourteen hours a day week-in-week-out. When we finished a project, the PM would schedule a 2 week retrospective.</p>
+<p><strong>Cam:</strong> Luxury. We used to join standup at 3 o’clock in the morning, rewrite the whole ticketing system from scratch, eat a handful of coffee grinds, write our modules without an IDE for 2 cents a month, clock out, and the PM would beat us over the head with a laptop, if we were LUCKY!</p>
+<p><strong>Adam:</strong> Well we had it tough. We used to have to wake up the carrier pigeons at twelve o’clock at night, and format the USB sticks by hand. We drank a cup of sulfuric acid, worked twenty-four hours a day writing modules on a punch card machine for for four cents every six years, and when we got home, our PM would strangle us with a mouse cable.</p>
+<p><strong>Jam:</strong> Right. I had to join morning standup at ten o’clock at night, half an hour before I went to bed, drink a cup of molten lava, work twenty-nine hours a day making punch cards with my teeth, paying the CEO for permission to come to work, and when we got home, our PM would kill us and dance about on our graves singing the Drupal song.</p>
+<p><strong>Rob:</strong> But you try and tell the young Drupalists today that&hellip; and they won&rsquo;t believe ya'.</p>
+<p><strong>ALL:</strong> Nope, nope&hellip;</p>
+]]></content>
+  </entry>
   <entry>
     <title type="html"><![CDATA[The purpose of Music Notation and Theory]]></title>
     <link href="https://ohthehugemanatee.org/blog/2022/04/25/the-purpose-of-music-notation-and-theory/"/>
@@ -132,7 +174,7 @@ The basic skill you have to nurture is to say &ldquo;no&rdquo; more than you thi
 <li>Each component is a separate executable with separate requirements. In our case we had both Windows and Linux components, several of which needed exclusive GPU access.</li>
 <li>Exactly which components you need for a test is totally dependent on what part of the autonomous driving system you&rsquo;re testing. For example, a lidar sensor dev team needs very high fidelity models of objects it might be detecting. Reflective and absorbtive properties and shape require a lot of detail. So do weather conditions as far as visual occlusion and light scattering effects go. They <em>don&rsquo;t</em> need much of a road surface simulation, or pedestrians, or other drivers. The dev team working on the highway control component however, needs a totally different set of components, practically mutually exclusive.</li>
 <li>Even within one team the components may vary, as lots of this stuff is non-deterministic. It sometimes helps to validate against more than one simulation of the same environment.</li>
-<li>Components have hard and complex interdependencies, despite separate execution environments. For example, Linux and Windows based components may work closely together to simulate other cars and their drivers' behaviors. This impacts startup order, where some tools can&rsquo;t even start initializing until others - or until certain sets of others - are reporting ready. The whole simulation of course, can&rsquo;t start until everything is ready. These tools are designed to start and operate in a highly stateful manner.</li>
+<li>Components have hard and complex interdependencies, despite separate execution environments. For example, Linux and Windows based components may work closely together to simulate other cars and their drivers&rsquo; behaviors. This impacts startup order, where some tools can&rsquo;t even start initializing until others - or until certain sets of others - are reporting ready. The whole simulation of course, can&rsquo;t start until everything is ready. These tools are designed to start and operate in a highly stateful manner.</li>
 <li>Because we&rsquo;re dealing with human lives and liability here, each component needs to be independently validated and verifiable, starting from a known good state. Five years later, we need to be able to reproduce as closely as possible the starting point of the simulation. &ldquo;Formal Reproducibility&rdquo; would be amazing, but depends on component development too much to be within our control.</li>
 <li>Finally, some components are designed for human UI interaction. For example the test runner, which has its own system of debug breakpoints and step debugging that can&rsquo;t be replicated in code (&ldquo;break when the car is &lt; 2m from the obstacle, or after 68000 virtual milliseconds&rdquo;). Developers rely on this kind of debugging to build.</li>
 </ul>
@@ -155,32 +197,32 @@ The basic skill you have to nurture is to say &ldquo;no&rdquo; more than you thi
 <p>There are a number of projects to provide the former, including integrations into Azure, and our choice, <a href="https://kubevirt.io/">kube-virt</a>. Importantly for us at the time: kube-virt was an earlier stage CNCI project and therefore still rough around the edges, but it was already a supported part of Azure RedHat OpenShift, and the supported way to run Azure IoT Edge on Kubernetes.</p>
 <p>The latter problem is the core business logic, so it is the Right Focus for Custom Code. But even there Kubernetes gives us a good start, as it is already an event-driven architecture with deep connections to container lifecycle and readiness/liveness probes. What&rsquo;s more, the model of Kubernetes objects and controllers already implements the concept of a larger object abstracting a group of lower-level ones, in Deployments.</p>
 <p>In fact, we found that our custom controller would have to implement a CRD quite similar to a Kubernetes Deployment. We could even extend the Deployment object to do it. The user ultimately could provide a simple YAML like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">my simulation run</span>
-<span style="color:#f92672">spec</span>:
-    <span style="color:#f92672">start</span>:
-        <span style="color:#f92672">component</span>: <span style="color:#ae81ff">test-runner</span>
-        <span style="color:#f92672">command</span>: <span style="color:#ae81ff">C:\start.exe</span>
-    <span style="color:#f92672">components</span>:
-        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">sync-server</span>
-          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/sync-server:5.4-dev</span>
-        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">test-runner</span>
-          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/test-runner:3.2.2</span>
-          <span style="color:#f92672">interactive</span>: <span style="color:#66d9ef">true</span>
-        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">environment-sim</span>
-          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/vtd:2.1</span>
-          <span style="color:#f92672">requires</span>:
-            <span style="color:#f92672">gpu</span>: <span style="color:#ae81ff">1</span>
-          <span style="color:#f92672">depends</span>:
-            - <span style="color:#ae81ff">test-runner</span>
-            - <span style="color:#ae81ff">sync-server</span>
-    <span style="color:#f92672">results</span>:
-       <span style="color:#f92672">storageClass</span>: <span style="color:#ae81ff">AzureBlob</span>
-</code></pre></div><p>Given some metadata on each component, this is probably sufficient information for a controller to create the required deployments and run the simulation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">my simulation run</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">start</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">component</span>: <span style="color:#ae81ff">test-runner</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">command</span>: <span style="color:#ae81ff">C:\start.exe</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">components</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">sync-server</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/sync-server:5.4-dev</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">test-runner</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/test-runner:3.2.2</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">interactive</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">environment-sim</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">image</span>: <span style="color:#ae81ff">sim/vtd:2.1</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">requires</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">gpu</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">depends</span>:
+</span></span><span style="display:flex;"><span>            - <span style="color:#ae81ff">test-runner</span>
+</span></span><span style="display:flex;"><span>            - <span style="color:#ae81ff">sync-server</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">results</span>:
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">storageClass</span>: <span style="color:#ae81ff">AzureBlob</span>
+</span></span></code></pre></div><p>Given some metadata on each component, this is probably sufficient information for a controller to create the required deployments and run the simulation.</p>
 <ul>
 <li><code>test-runner</code> is a Windows VM image, as indicated by the component&rsquo;s own metadata. The <code>interactive</code> flag indicates that the controller should return a proxy to the RDP port on the VM.</li>
 <li>Other components are both containers.</li>
 <li>One container shows a resource request for a gpu core, which is handled by assigning the container to the right node pool.</li>
-<li>That container also declares its' dependencies. Probes are defined in the component metadata; the kubernetes controller watches for both dependencies to pass their Readiness probes, and then starts <code>environment-sim</code>.</li>
+<li>That container also declares its&rsquo; dependencies. Probes are defined in the component metadata; the kubernetes controller watches for both dependencies to pass their Readiness probes, and then starts <code>environment-sim</code>.</li>
 <li>Once all three components pass their Readiness probes, <code>spec.start.command</code> is run inside <code>spec.start.component</code>. When the command terminates, the simulation is considered complete.</li>
 <li>The <code>spec.results</code> key helps the Controller create a PVC for results. The actual PVC is later accessible through a well-known naming scheme, such as <code>[datetime]-[name]</code>.</li>
 <li>Component definitions include default ports to expose, but by default nothing is exposed to the outside world.</li>
@@ -206,7 +248,7 @@ The basic skill you have to nurture is to say &ldquo;no&rdquo; more than you thi
 <p>My home cluster consists of four Raspberry pi 4s, two old laptops, one mini desktop, and a pine64 laptop. First pain point: that&rsquo;s a mix of CPU architectures and capabilities. I&rsquo;ve got it all covered: x64, arm7, and arm64&hellip; and many container images are only built for a subset of those. At least the laptops are x64, but they&rsquo;re different makes and models, with different quirks. One of them has an unreliable USB port, which wreaks intermittent havoc with its USB ethernet adapter. The other has a dead internal IDE chip, and has to boot off of an external drive duct-taped to the back of the screen. And of course the whole thing lives in my laundry room, where temperatures and vibration from the floor will vary with the drying cycle, and where dust is all-pervasive.</p>
 <p>I&rsquo;m happy I&rsquo;ve stuck with it - this has made me <em>really</em> learn the ins and outs of detailed troubleshooting in kubernetes. I&rsquo;ve a much better understanding now of <em>why</em> different abstractions may exist, in a very practical way. Here are some of the fun features and workarounds I have in place. Each of these could be their own post, someday:</p>
 <ul>
-<li>Lots of home-oriented services run with SQLite as a backing database, which is a problem because sqlite&rsquo;s normal &lsquo;wal mode&rsquo; of accessing database files has a hard dependency on block-level file access. That means network filesystems, and all k8s' built in abstractons -  are out.
+<li>Lots of home-oriented services run with SQLite as a backing database, which is a problem because sqlite&rsquo;s normal &lsquo;wal mode&rsquo; of accessing database files has a hard dependency on block-level file access. That means network filesystems, and all k8s&rsquo; built in abstractons -  are out.
 <ul>
 <li>I ran with iSCSI devices for awhile, but the unreliability of home networking hardware was sufficient to produce data corruption every few months.</li>
 <li>I wrote my own sidecar service to periodically freeze a shared PV and sync all the files to NFS. But if the freeze comes at a bad time for sqlite, that will also cause data corruption.</li>
@@ -220,7 +262,7 @@ The basic skill you have to nurture is to say &ldquo;no&rdquo; more than you thi
 <li>One of my most critical services is Plex, which does much better with hardware decoding capabilities. I&rsquo;m using <a href="https://github.com/kubernetes-sigs/node-feature-discovery">node-feature-discovery</a> to get node capabilities into labels, and <a href="https://github.com/intel/intel-device-plugins-for-kubernetes/blob/main/cmd/gpu_plugin/README.md">intel-gpu-plugin</a> to make the hardware available in the pod. Oh, but node feature discovery doesn&rsquo;t have a build for armv7, so that only works on some nodes.</li>
 <li>I use images from <a href="https://linuxserver.io/">linuxserver.io</a>, which are great&hellip; but all based on <a href="https://github.com/just-containers/s6-overlay">s6_overlay</a>. This means they&rsquo;re not compatible with common privilege restriction approaches on kubernetes like security contexts. Fortunately(?) they support including arbitrary scripts on container startup, so I can hack my way around most problems.</li>
 <li>Internal services often prefer to use HTTPS. Fair enough, but they are internal services, so letsencrypt can&rsquo;t validate/issue certificates for them. That means either an internal CA, or app configurations that allow self signed certs.</li>
-<li>I mentioned I have one node with an unreliable ethernet connection. I tuned kubernetes' heartbeat and status check timings to minimize downtime when that node disappears, detecting it early and redistributing its' pods. But it&rsquo;s a delicate balance: it&rsquo;s easy to get the math wrong, or just be overzealous, and your nodes start popping into <code>NotReady</code> state with no discernable reason. Of course that disrupts intra-service communication, which can cause cascading failures.</li>
+<li>I mentioned I have one node with an unreliable ethernet connection. I tuned kubernetes&rsquo; heartbeat and status check timings to minimize downtime when that node disappears, detecting it early and redistributing its&rsquo; pods. But it&rsquo;s a delicate balance: it&rsquo;s easy to get the math wrong, or just be overzealous, and your nodes start popping into <code>NotReady</code> state with no discernable reason. Of course that disrupts intra-service communication, which can cause cascading failures.</li>
 <li>One of my cats knocked a couple of nodes down while I was away on vacation without physical access to the machines. I ended up building a private network connection to Azure and adding support for scaling with VMs there, to keep services running.</li>
 </ul>
 <p>It goes on and on. All of these are problems that you basically never encounter when running on a cloud provider. Your money really does go to a valuable purpose.</p>
@@ -288,16 +330,16 @@ The basic skill you have to nurture is to say &ldquo;no&rdquo; more than you thi
 <p>In terms of format, there are some really great options if you only care about compatibility with the most popular browsers (ahem - chrome). webm/VP8 is the way to go here, or webm/VP9 if you really only care about chrome. You&rsquo;ll get a very small filesize and high quality, with hardware playback on the latest devices. But if you want to include Safari and others, or if you care about non-flagsip devices or ones more than a couple of years old, it has to be MP4/h.264 . Your filesize won&rsquo;t be as small, but it will play with hardware acceleration on any device since about 2011.</p>
 <p>One common opimization is to use <code>@media</code> queries to dfault to webm/VP9 and fallback to other formats based on the browser capabilities. Do that if you want, but for my use cases I prefer simplicity over bandwidth savings.</p>
 <p>I use <a href="https://ffmpeg.org/">ffmpeg</a>, because it does everything except my laundry (and I&rsquo;m pretty sure that&rsquo;s because I don&rsquo;t know th right flags for &ldquo;spin cycle&rdquo;). To convert one video into a format that is universally compatible:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ffmpeg  -i input.mp4 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  -c:v libx264 <span style="color:#75715e"># h264 encoder \</span>
-  -profile:v main <span style="color:#75715e"># h264 options to make available. for &gt;5 year old phones, use &#34;baseline&#34;. \</span>
-  -preset veryslow <span style="color:#75715e"># slowest option, best compression \</span>
-  -s hd720 <span style="color:#75715e"># rarely need higher resolution than this \</span>
-  -b:v 1.5M <span style="color:#75715e"># sets the video bitrate \</span>
-  -an <span style="color:#75715e"># no audio track; this is for a background video \</span>
-  -movflags +faststart <span style="color:#75715e"># allows playing while the file is downloading \</span>
-  output.mp4
-</code></pre></div><p>The non-obvious options:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg  -i input.mp4 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -c:v libx264 <span style="color:#75715e"># h264 encoder \</span>
+</span></span><span style="display:flex;"><span>  -profile:v main <span style="color:#75715e"># h264 options to make available. for &gt;5 year old phones, use &#34;baseline&#34;. \</span>
+</span></span><span style="display:flex;"><span>  -preset veryslow <span style="color:#75715e"># slowest option, best compression \</span>
+</span></span><span style="display:flex;"><span>  -s hd720 <span style="color:#75715e"># rarely need higher resolution than this \</span>
+</span></span><span style="display:flex;"><span>  -b:v 1.5M <span style="color:#75715e"># sets the video bitrate \</span>
+</span></span><span style="display:flex;"><span>  -an <span style="color:#75715e"># no audio track; this is for a background video \</span>
+</span></span><span style="display:flex;"><span>  -movflags +faststart <span style="color:#75715e"># allows playing while the file is downloading \</span>
+</span></span><span style="display:flex;"><span>  output.mp4
+</span></span></code></pre></div><p>The non-obvious options:</p>
 <ul>
 <li><code>-profile:v main</code> sets which features of h264 to use. The standard evolved over time, and depending on just how new your playback devices are, there improvements available. Most of the time <code>main</code> is the right choice, but if you want to target older devices use <code>baseline</code>.</li>
 <li><code>-b:v 1.5M</code> sets a 1.5 Megabit bitrate. You should experiment with this number to find the right tradeoff between quality and filesize. You can find out the bitrate of your original source with <code>ffinfo</code>, or with the output of this <code>ffmpeg</code> command.</li>
@@ -317,7 +359,7 @@ The basic skill you have to nurture is to say &ldquo;no&rdquo; more than you thi
     <published>2019-10-08T19:10:15+00:00</published>
     <updated>2019-10-08T19:10:15+00:00</updated>
     <content type="html"><![CDATA[<p>Chinese censors are in the news this weekend: <a href="https://variety.com/2019/gaming/news/blizzard-bans-blitzchung-hearthstone-hong-kong-china-statement-1203363050/">Blizzard banned a grandmaster Hearthstone player for supporting Hong Kong in an interview</a>, <a href="https://www.newsweek.com/south-park-band-china-why-banned-china-s23-e02-23x02-1463762">South Park was added to the &ldquo;banned&rdquo; list for their critique of Chinese censorship in Hollywood</a>, and <a href="https://www.cnn.com/2019/10/07/business/houston-rockets-nba-china-daryl-morey/index.html">an NBA franchise owner&rsquo;s job was on the line for a pro-HK tweet</a>. Increasingly, Western companies are finding themselves up against the wall to prioritize western liberal values against access to the enormous Chinese market. We can imagine the difficult, high-pressure decisions for executives in this situation.</p>
-<p>As a consumer it feels like we don&rsquo;t face that kind of pressure, or that kind of decision. Those of us whose choices do not impact thousands of employees' livelihoods, and millions of consumers' information environments, seem to have little leverage. If <a href="https://www.theguardian.com/technology/2019/sep/25/revealed-how-tiktok-censors-videos-that-do-not-please-beijing">TikTok quietly hides any videos of Hong Kong unrest</a>, or <a href="https://sputniknews.com/asia/201801121060701327-china-delta-apology-taiwan-tibet/">Delta lists Taiwan as a part of China</a>, or <a href="https://mothership.sg/2018/01/marriott-zara-qantas-taiwan-tibet-sovereignty/">Marriott includes cities in Tibet, Taiwan, Hong Kong, and Macau as inside China</a>&hellip; we can&rsquo;t tell the difference. The whole point of censorship is that you remain blissfully unaware of what you&rsquo;re missing.</p>
+<p>As a consumer it feels like we don&rsquo;t face that kind of pressure, or that kind of decision. Those of us whose choices do not impact thousands of employees&rsquo; livelihoods, and millions of consumers&rsquo; information environments, seem to have little leverage. If <a href="https://www.theguardian.com/technology/2019/sep/25/revealed-how-tiktok-censors-videos-that-do-not-please-beijing">TikTok quietly hides any videos of Hong Kong unrest</a>, or <a href="https://sputniknews.com/asia/201801121060701327-china-delta-apology-taiwan-tibet/">Delta lists Taiwan as a part of China</a>, or <a href="https://mothership.sg/2018/01/marriott-zara-qantas-taiwan-tibet-sovereignty/">Marriott includes cities in Tibet, Taiwan, Hong Kong, and Macau as inside China</a>&hellip; we can&rsquo;t tell the difference. The whole point of censorship is that you remain blissfully unaware of what you&rsquo;re missing.</p>
 <p>When we as consumers think about China&rsquo;s censorship power in our lives the important question is: <em>How can we tell when it&rsquo;s happening</em>? It&rsquo;s not unthinkable for Chrome to invisibly hide certain content, or Facebook, or your iPhone. In fact most of the information services you use likely do this already, in the name of curating content you will &ldquo;like.&rdquo; This isn&rsquo;t necessarily a problem in and of itself; it only gets problematic when the filters are <em>invisible</em>.</p>
 <p>This is a part of the point of Free and Open Source software. Filters can&rsquo;t be applied in secret, and by definition you have the right to fork software to do things <em>your</em> way if you like. It&rsquo;s <em>your</em> right to have <em>your</em> device behave the way <em>you</em> want it to. And black boxes should inspire some suspicion that they may be doing things you don&rsquo;t like.</p>
 <p>At this point it would be easy to descend into the typical open source rant: if only Facebook open sourced its filters! If only Instagram were open! I&rsquo;ll leave that for others. I want to point out something a little subtler:</p>
@@ -367,80 +409,80 @@ The basic skill you have to nurture is to say &ldquo;no&rdquo; more than you thi
 <li><strong>Nested volumes</strong>: BTRFS lets you divide the filesystem into &ldquo;subvolumes&rdquo; - each of which can (someday) have its own RAID configuration.</li>
 </ul>
 <p>It&rsquo;s easy to look at the drive and tell how many MiB of space has not been used yet. But it&rsquo;s very hard to accurately say how much of your data you can write in that space. For this reason the amount of &ldquo;free space&rdquo; reported on BRFS volumes by system utilities like <code>df</code> can jump a lot - like my disappearing 4GiB. Worse, the free space reported by general tools is misleading. BTRFS can run out of space while <code>df</code> still thinks you have lots available.</p>
-<p>Let&rsquo;s walk through how BTRFS stores data, to understand the problem a bit better. Then we can solve it with some of BTRFS' own tools.</p>
+<p>Let&rsquo;s walk through how BTRFS stores data, to understand the problem a bit better. Then we can solve it with some of BTRFS&rsquo; own tools.</p>
 <h2 id="how-much-free-space-do-i-have">How much free space do I have?</h2>
 <p>Rather than using general tools like <code>df</code> to answer this question, it&rsquo;s better to get more detail using the <code>btrfs</code> CLI tool.</p>
 <p>BTRFS starts out with a big pool of raw storage, and allocates as it goes. You can get a listing of all the devices in a block device like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo btrfs <span style="color:#66d9ef">fi</span> show
-Label: <span style="color:#e6db74">&#39;OS&#39;</span>  uuid: c0d21ade-5570-41a3-b0cf-a5ce219e7a8e
-  Total devices <span style="color:#ae81ff">1</span> FS bytes used 31.74GiB
-  devid    <span style="color:#ae81ff">1</span> size 48.83GiB used 47.80GiB path /dev/nvme0n1p2
-</code></pre></div><p>In this case, I only have one physical device involved. You can see that it gives me a total number of bytes allocated, compared to the total size. In another filesystem this might be the number reported to <code>df</code>. Not so with BTRFS! Let&rsquo;s dig deeper.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ btrfs <span style="color:#66d9ef">fi</span> df /
-
-Data, single: total<span style="color:#f92672">=</span>45.75GiB, used<span style="color:#f92672">=</span>30.56GiB
-System, single: total<span style="color:#f92672">=</span>32.00MiB, used<span style="color:#f92672">=</span>16.00KiB
-Metadata, single: total<span style="color:#f92672">=</span>2.02GiB, used<span style="color:#f92672">=</span>1.17GiB
-GlobalReserve, single: total<span style="color:#f92672">=</span>89.31MiB, used<span style="color:#f92672">=</span>0.00B
-</code></pre></div><p>The &ldquo;total&rdquo; values here are the breakdown of what the first command counts as &ldquo;used&rdquo;. <code>btrfs fi df</code> shows us of the allocated space, how much is actually storing data, and how much is just empty allocation. In this case: on my 48GiB device, 47GiB is allocated. Of the allocation, 31GiB is actually storing data. Side note: if you&rsquo;re in a multi-drive situation this command will take into account RAID metadata.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo btrfs <span style="color:#66d9ef">fi</span> show
+</span></span><span style="display:flex;"><span>Label: <span style="color:#e6db74">&#39;OS&#39;</span>  uuid: c0d21ade-5570-41a3-b0cf-a5ce219e7a8e
+</span></span><span style="display:flex;"><span>  Total devices <span style="color:#ae81ff">1</span> FS bytes used 31.74GiB
+</span></span><span style="display:flex;"><span>  devid    <span style="color:#ae81ff">1</span> size 48.83GiB used 47.80GiB path /dev/nvme0n1p2
+</span></span></code></pre></div><p>In this case, I only have one physical device involved. You can see that it gives me a total number of bytes allocated, compared to the total size. In another filesystem this might be the number reported to <code>df</code>. Not so with BTRFS! Let&rsquo;s dig deeper.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ btrfs <span style="color:#66d9ef">fi</span> df /
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Data, single: total<span style="color:#f92672">=</span>45.75GiB, used<span style="color:#f92672">=</span>30.56GiB
+</span></span><span style="display:flex;"><span>System, single: total<span style="color:#f92672">=</span>32.00MiB, used<span style="color:#f92672">=</span>16.00KiB
+</span></span><span style="display:flex;"><span>Metadata, single: total<span style="color:#f92672">=</span>2.02GiB, used<span style="color:#f92672">=</span>1.17GiB
+</span></span><span style="display:flex;"><span>GlobalReserve, single: total<span style="color:#f92672">=</span>89.31MiB, used<span style="color:#f92672">=</span>0.00B
+</span></span></code></pre></div><p>The &ldquo;total&rdquo; values here are the breakdown of what the first command counts as &ldquo;used&rdquo;. <code>btrfs fi df</code> shows us of the allocated space, how much is actually storing data, and how much is just empty allocation. In this case: on my 48GiB device, 47GiB is allocated. Of the allocation, 31GiB is actually storing data. Side note: if you&rsquo;re in a multi-drive situation this command will take into account RAID metadata.</p>
 <p>Here&rsquo;s an easier view:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo btrfs <span style="color:#66d9ef">fi</span> usage /
-
-Overall:
-    Device size:      48.83GiB
-    Device allocated:     47.80GiB
-    Device unallocated:      1.03GiB
-    Device missing:        0.00B
-    Used:       31.74GiB
-    Free <span style="color:#f92672">(</span>estimated<span style="color:#f92672">)</span>:     16.22GiB  <span style="color:#f92672">(</span>min: 16.22GiB<span style="color:#f92672">)</span>
-    Data ratio:           1.00
-    Metadata ratio:         1.00
-    Global reserve:     89.31MiB  <span style="color:#f92672">(</span>used: 0.00B<span style="color:#f92672">)</span>
-
-Data,single: Size:45.75GiB, Used:30.56GiB
-   /dev/nvme0n1p2   45.75GiB
-
-Metadata,single: Size:2.02GiB, Used:1.18GiB
-   /dev/nvme0n1p2    2.02GiB
-
-System,single: Size:32.00MiB, Used:16.00KiB
-   /dev/nvme0n1p2   32.00MiB
-
-Unallocated:
-   /dev/nvme0n1p2    1.03GiB
-</code></pre></div><p>This shows the breakdown of space allocated and used across all the devices in this block device. &ldquo;Overall&rdquo; is for the whole block device, and that &ldquo;Free (estimated)&rdquo; number is what gets reported to <code>df</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo btrfs <span style="color:#66d9ef">fi</span> usage /
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Overall:
+</span></span><span style="display:flex;"><span>    Device size:      48.83GiB
+</span></span><span style="display:flex;"><span>    Device allocated:     47.80GiB
+</span></span><span style="display:flex;"><span>    Device unallocated:      1.03GiB
+</span></span><span style="display:flex;"><span>    Device missing:        0.00B
+</span></span><span style="display:flex;"><span>    Used:       31.74GiB
+</span></span><span style="display:flex;"><span>    Free <span style="color:#f92672">(</span>estimated<span style="color:#f92672">)</span>:     16.22GiB  <span style="color:#f92672">(</span>min: 16.22GiB<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    Data ratio:           1.00
+</span></span><span style="display:flex;"><span>    Metadata ratio:         1.00
+</span></span><span style="display:flex;"><span>    Global reserve:     89.31MiB  <span style="color:#f92672">(</span>used: 0.00B<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Data,single: Size:45.75GiB, Used:30.56GiB
+</span></span><span style="display:flex;"><span>   /dev/nvme0n1p2   45.75GiB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Metadata,single: Size:2.02GiB, Used:1.18GiB
+</span></span><span style="display:flex;"><span>   /dev/nvme0n1p2    2.02GiB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>System,single: Size:32.00MiB, Used:16.00KiB
+</span></span><span style="display:flex;"><span>   /dev/nvme0n1p2   32.00MiB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Unallocated:
+</span></span><span style="display:flex;"><span>   /dev/nvme0n1p2    1.03GiB
+</span></span></code></pre></div><p>This shows the breakdown of space allocated and used across all the devices in this block device. &ldquo;Overall&rdquo; is for the whole block device, and that &ldquo;Free (estimated)&rdquo; number is what gets reported to <code>df</code>.</p>
 <p>This is a problem: <strong>most of my normal tools tell me I have 15GB free space. But if I write 1GiB more data, BTRFS will run out of space anyways.</strong> This issue is a pain in the ass and hard to diagnose. It&rsquo;s even harder to fix, since most of the solutions require having some extra space on the device.</p>
 <h2 id="converting-unused-allocation-to-free-space">Converting unused allocation to free space</h2>
 <p>So, why does BTRFS allocate so much space to store such a small amount of data? Here I am storing 31GiB of data in 47GiB of allocation, the used/total ratio is 0.66! This is very inefficient. It&rsquo;s an unfortunate consequence of being a copy-on-write filesystem - BTRFS starts every write in a freshly allocated chunk. But the chunksize is static, and files come in all sizes. So lots of the time, a chunk is incompletely filled. That&rsquo;s the &ldquo;allocated but not used&rdquo; space we&rsquo;re complaining about.</p>
 <p>Fortunately there&rsquo;s a way to address this problem: BTRFS has a tool to &ldquo;rebalance&rdquo; your filesystem. It was originally designed for balancing the data stored across multiple drives (hence the name). It is also useful in single drive configurations though, to rebalance how data is stored within the allocation.</p>
 <p>By default, <code>balance</code> will rewrite <em>all</em> the data on the disk. This is probably unnecessary. Chunks will be unevenly filled, but we saw above that the average should be about 66% used. So we&rsquo;ll filter based on data (<code>-d</code>) usage, and only rebalance chunks that are less than 66% used. That will leave any partially filled chunks which are more-filled than average.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Run it in the background, cause it takes a long time.</span>
-$ sudo btrfs balance start -dusage<span style="color:#f92672">=</span><span style="color:#ae81ff">66</span> / &amp;
-<span style="color:#75715e"># Check status</span>
-$ sudo btrfs balance status -v /       
-Balance on <span style="color:#e6db74">&#39;/&#39;</span> is running
-<span style="color:#ae81ff">1</span> out of about <span style="color:#ae81ff">27</span> chunks balanced <span style="color:#f92672">(</span><span style="color:#ae81ff">5</span> considered<span style="color:#f92672">)</span>,  96% left
-Dumping filters: flags 0x1, state 0x1, 
-<span style="color:#75715e"># Or be lazy, and have bash report status every 60 seconds.</span>
-$ <span style="color:#66d9ef">while</span> :; <span style="color:#66d9ef">do</span> sudo btrfs balance status -v / ; sleep 60; <span style="color:#66d9ef">done</span>
-Balance on <span style="color:#e6db74">&#39;/&#39;</span> is running
-<span style="color:#ae81ff">3</span> out of about <span style="color:#ae81ff">27</span> chunks balanced <span style="color:#f92672">(</span><span style="color:#ae81ff">12</span> considered<span style="color:#f92672">)</span>,  89% left
-Dumping filters: flags 0x1, state 0x1, force is off
-  DATA <span style="color:#f92672">(</span>flags 0x2<span style="color:#f92672">)</span>: balancing, usage<span style="color:#f92672">=</span><span style="color:#ae81ff">66</span>
-Balance on <span style="color:#e6db74">&#39;/&#39;</span> is running
-<span style="color:#ae81ff">4</span> out of about <span style="color:#ae81ff">27</span> chunks balanced <span style="color:#f92672">(</span><span style="color:#ae81ff">13</span> considered<span style="color:#f92672">)</span>,  85% left
-Dumping filters: flags 0x1, state 0x1, force is off
-  DATA <span style="color:#f92672">(</span>flags 0x2<span style="color:#f92672">)</span>: balancing, usage<span style="color:#f92672">=</span><span style="color:#ae81ff">66</span>
-...
-<span style="color:#75715e"># When the balance operation finishes:</span>
-Done, had to relocate <span style="color:#ae81ff">19</span> out of <span style="color:#ae81ff">59</span> chunks
-</code></pre></div><p>There&rsquo;s a nice big differnce once it&rsquo;s finished:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ btrfs filesystem df /
-Data, single: total<span style="color:#f92672">=</span>32.53GiB, used<span style="color:#f92672">=</span>30.83GiB
-System, single: total<span style="color:#f92672">=</span>32.00MiB, used<span style="color:#f92672">=</span>16.00KiB
-Metadata, single: total<span style="color:#f92672">=</span>2.02GiB, used<span style="color:#f92672">=</span>1.17GiB
-GlobalReserve, single: total<span style="color:#f92672">=</span>84.67MiB, used<span style="color:#f92672">=</span>0.00B
-</code></pre></div><p>That&rsquo;s 15GiB of space allocated for other use. My usage ratio is now 0.94. Huzzah! In some rare cases you may need to do this on the Metadata allocation (use <code>-musage</code> instead of <code>-dusage</code> above).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Run it in the background, cause it takes a long time.</span>
+</span></span><span style="display:flex;"><span>$ sudo btrfs balance start -dusage<span style="color:#f92672">=</span><span style="color:#ae81ff">66</span> / &amp;
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check status</span>
+</span></span><span style="display:flex;"><span>$ sudo btrfs balance status -v /       
+</span></span><span style="display:flex;"><span>Balance on <span style="color:#e6db74">&#39;/&#39;</span> is running
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> out of about <span style="color:#ae81ff">27</span> chunks balanced <span style="color:#f92672">(</span><span style="color:#ae81ff">5</span> considered<span style="color:#f92672">)</span>,  96% left
+</span></span><span style="display:flex;"><span>Dumping filters: flags 0x1, state 0x1, 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Or be lazy, and have bash report status every 60 seconds.</span>
+</span></span><span style="display:flex;"><span>$ <span style="color:#66d9ef">while</span> :; <span style="color:#66d9ef">do</span> sudo btrfs balance status -v / ; sleep 60; <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>Balance on <span style="color:#e6db74">&#39;/&#39;</span> is running
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span> out of about <span style="color:#ae81ff">27</span> chunks balanced <span style="color:#f92672">(</span><span style="color:#ae81ff">12</span> considered<span style="color:#f92672">)</span>,  89% left
+</span></span><span style="display:flex;"><span>Dumping filters: flags 0x1, state 0x1, force is off
+</span></span><span style="display:flex;"><span>  DATA <span style="color:#f92672">(</span>flags 0x2<span style="color:#f92672">)</span>: balancing, usage<span style="color:#f92672">=</span><span style="color:#ae81ff">66</span>
+</span></span><span style="display:flex;"><span>Balance on <span style="color:#e6db74">&#39;/&#39;</span> is running
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span> out of about <span style="color:#ae81ff">27</span> chunks balanced <span style="color:#f92672">(</span><span style="color:#ae81ff">13</span> considered<span style="color:#f92672">)</span>,  85% left
+</span></span><span style="display:flex;"><span>Dumping filters: flags 0x1, state 0x1, force is off
+</span></span><span style="display:flex;"><span>  DATA <span style="color:#f92672">(</span>flags 0x2<span style="color:#f92672">)</span>: balancing, usage<span style="color:#f92672">=</span><span style="color:#ae81ff">66</span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># When the balance operation finishes:</span>
+</span></span><span style="display:flex;"><span>Done, had to relocate <span style="color:#ae81ff">19</span> out of <span style="color:#ae81ff">59</span> chunks
+</span></span></code></pre></div><p>There&rsquo;s a nice big differnce once it&rsquo;s finished:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ btrfs filesystem df /
+</span></span><span style="display:flex;"><span>Data, single: total<span style="color:#f92672">=</span>32.53GiB, used<span style="color:#f92672">=</span>30.83GiB
+</span></span><span style="display:flex;"><span>System, single: total<span style="color:#f92672">=</span>32.00MiB, used<span style="color:#f92672">=</span>16.00KiB
+</span></span><span style="display:flex;"><span>Metadata, single: total<span style="color:#f92672">=</span>2.02GiB, used<span style="color:#f92672">=</span>1.17GiB
+</span></span><span style="display:flex;"><span>GlobalReserve, single: total<span style="color:#f92672">=</span>84.67MiB, used<span style="color:#f92672">=</span>0.00B
+</span></span></code></pre></div><p>That&rsquo;s 15GiB of space allocated for other use. My usage ratio is now 0.94. Huzzah! In some rare cases you may need to do this on the Metadata allocation (use <code>-musage</code> instead of <code>-dusage</code> above).</p>
 <h2 id="if-youve-already-run-out-of-space">If you&rsquo;ve already run out of space</h2>
 <p>If you have already run out of space, you can&rsquo;t run a <code>balance</code>! In that caseyou have to get sneaky. Here are your options:</p>
 <h3 id="1-free-up-space">1) Free up space</h3>
@@ -448,52 +490,52 @@ GlobalReserve, single: total<span style="color:#f92672">=</span>84.67MiB, used<s
 <p>Once you have a little bit of wiggle room, rebalance a small segment, like Metadata. Then proceed with rebalancing data as described above.</p>
 <h3 id="2-add-some-space">2) Add some space</h3>
 <p>Don&rsquo;t forget, a BTRFS volume can span multiple devices! I had to exercise this option recently. Add a device - a flash drive will do, but choose the fastest thing you can - and add it to the BTRFS volume.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Add your extra drive (/dev/sda).</span>
-$ sudo btrfs device add -f /dev/sda / 
-<span style="color:#75715e"># Now run the smallest balance operation you can.</span>
-$ sudo btrfs balance start -dusage<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> /
-Done, had to relocate <span style="color:#ae81ff">1</span> out of <span style="color:#ae81ff">59</span> chunks
-<span style="color:#75715e"># Remove the device, and run a proper balance.</span>
-$ sudo btrfs device remove /dev/sda /
-$ sudo btrfs balance start -dusage<span style="color:#f92672">=</span><span style="color:#ae81ff">66</span> /
-Done, had to relocate <span style="color:#ae81ff">18</span> out of <span style="color:#ae81ff">59</span> chunks
-</code></pre></div><p>Balance operations usually take a long time - more than an hour is not unusual. It will take even longer with slow flash media involved. For that reason, I use a very low balance filter (<code>-dusage=</code>) in this example. We only need to free up a teensy bit of space to run balance again without the flash disk in the mix.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Add your extra drive (/dev/sda).</span>
+</span></span><span style="display:flex;"><span>$ sudo btrfs device add -f /dev/sda / 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Now run the smallest balance operation you can.</span>
+</span></span><span style="display:flex;"><span>$ sudo btrfs balance start -dusage<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> /
+</span></span><span style="display:flex;"><span>Done, had to relocate <span style="color:#ae81ff">1</span> out of <span style="color:#ae81ff">59</span> chunks
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remove the device, and run a proper balance.</span>
+</span></span><span style="display:flex;"><span>$ sudo btrfs device remove /dev/sda /
+</span></span><span style="display:flex;"><span>$ sudo btrfs balance start -dusage<span style="color:#f92672">=</span><span style="color:#ae81ff">66</span> /
+</span></span><span style="display:flex;"><span>Done, had to relocate <span style="color:#ae81ff">18</span> out of <span style="color:#ae81ff">59</span> chunks
+</span></span></code></pre></div><p>Balance operations usually take a long time - more than an hour is not unusual. It will take even longer with slow flash media involved. For that reason, I use a very low balance filter (<code>-dusage=</code>) in this example. We only need to free up a teensy bit of space to run balance again without the flash disk in the mix.</p>
 <p>And this last option is how I saved my computer last night. I hope this helps someone out of a similar predicament someday.</p>
 <p><strong>Update to the update</strong>: Do not do this! A friendly commentor from the BTRFS community let me know that this is actually a <em>really bad idea</em>, since anything that interrupts your RAM will wreck your filesystem irreparably. Stick with the USB drive solution, above. Thank you <code>@Zygo</code> for the correction, and sorry for anyone who suffered for my learning.</p>
 <p><strong>UPDATE</strong>: <del>Now that I&rsquo;ve had to do this a few times, it&rsquo;s <em>way</em> better to rebalance a full filesystem by adding a ramdisk to it. Not only is it faster than a flash device, it&rsquo;s also more reliable in most cases&hellip; and certainly for my kind of use case (a developer laptop) the important preconditions apply: lots of RAM, reliable power source. Here&rsquo;s the recipe:</del></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Create a ramdisk. Make sure /dev/ram0 isn&#39;t in use already before doing this!</span>
-$ sudo mknod -m <span style="color:#ae81ff">660</span> /dev/ram0 b <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">0</span> 
-$ sudo chown root:disk /dev/ram0
-<span style="color:#75715e"># Mount the ramdisk with a concrete size. Otherwise it grows to whatever is needed.</span>
-$ sudo mkdir /mnt/ramdisk
-$ sudo mount -t ramfs -o size<span style="color:#f92672">=</span>4G,maxsize<span style="color:#f92672">=</span>4G /dev/ram0 /mnt/ramdisk
-<span style="color:#75715e"># Create a file on the ramdisk to use as a loopback device.</span>
-$ sudo dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero of /mnt/ramdisk/extend.img bs<span style="color:#f92672">=</span>4M count<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>
-$ sudo losetup -fP /mnt/ramdisk/extend.img
-<span style="color:#75715e"># figure out which loopback device ID is yours</span>
-$ sudo losetup -a |grep extend.img
-/dev/loop10: <span style="color:#f92672">[</span>5243078<span style="color:#f92672">]</span>:8563965 <span style="color:#f92672">(</span>/mnt/ramdisk/extend.img<span style="color:#f92672">)</span>
-<span style="color:#75715e"># Add the loopback device to the btrfs filesystem</span>
-$ sudo btrfs device add /dev/loop10 /
-<span style="color:#75715e"># Decide on your balance ratio and balance as usual.</span>
-$ sudo btrfs <span style="color:#66d9ef">fi</span> usage / |head -n <span style="color:#ae81ff">6</span>
-Overall:
-    Device size:		 400.91GiB
-    Device allocated:		 396.36GiB
-    Device unallocated:		   4.55GiB
-    Device missing:		     0.00B
-    Used:			 348.91GiB
-$ echo <span style="color:#e6db74">&#39;scale=2;348/396&#39;</span> |bc
-.87
-
-$ sudo btrfs balance start -dusage<span style="color:#f92672">=</span><span style="color:#ae81ff">87</span> /
-Done, had to relocate <span style="color:#ae81ff">46</span> out of <span style="color:#ae81ff">400</span> chunks
-<span style="color:#75715e"># Remove the device and destroy it.</span>
-$ sudo btrfs device delete /dev/loop0 /
-$ sudo losetup -d /dev/loop10
-$ sudo umount /mnt/ramdisk
-$ sudo rm -rf /dev/ram0 
-</code></pre></div>]]></content>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create a ramdisk. Make sure /dev/ram0 isn&#39;t in use already before doing this!</span>
+</span></span><span style="display:flex;"><span>$ sudo mknod -m <span style="color:#ae81ff">660</span> /dev/ram0 b <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">0</span> 
+</span></span><span style="display:flex;"><span>$ sudo chown root:disk /dev/ram0
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Mount the ramdisk with a concrete size. Otherwise it grows to whatever is needed.</span>
+</span></span><span style="display:flex;"><span>$ sudo mkdir /mnt/ramdisk
+</span></span><span style="display:flex;"><span>$ sudo mount -t ramfs -o size<span style="color:#f92672">=</span>4G,maxsize<span style="color:#f92672">=</span>4G /dev/ram0 /mnt/ramdisk
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create a file on the ramdisk to use as a loopback device.</span>
+</span></span><span style="display:flex;"><span>$ sudo dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero of /mnt/ramdisk/extend.img bs<span style="color:#f92672">=</span>4M count<span style="color:#f92672">=</span><span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>$ sudo losetup -fP /mnt/ramdisk/extend.img
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># figure out which loopback device ID is yours</span>
+</span></span><span style="display:flex;"><span>$ sudo losetup -a |grep extend.img
+</span></span><span style="display:flex;"><span>/dev/loop10: <span style="color:#f92672">[</span>5243078<span style="color:#f92672">]</span>:8563965 <span style="color:#f92672">(</span>/mnt/ramdisk/extend.img<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add the loopback device to the btrfs filesystem</span>
+</span></span><span style="display:flex;"><span>$ sudo btrfs device add /dev/loop10 /
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Decide on your balance ratio and balance as usual.</span>
+</span></span><span style="display:flex;"><span>$ sudo btrfs <span style="color:#66d9ef">fi</span> usage / |head -n <span style="color:#ae81ff">6</span>
+</span></span><span style="display:flex;"><span>Overall:
+</span></span><span style="display:flex;"><span>    Device size:		 400.91GiB
+</span></span><span style="display:flex;"><span>    Device allocated:		 396.36GiB
+</span></span><span style="display:flex;"><span>    Device unallocated:		   4.55GiB
+</span></span><span style="display:flex;"><span>    Device missing:		     0.00B
+</span></span><span style="display:flex;"><span>    Used:			 348.91GiB
+</span></span><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#39;scale=2;348/396&#39;</span> |bc
+</span></span><span style="display:flex;"><span>.87
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ sudo btrfs balance start -dusage<span style="color:#f92672">=</span><span style="color:#ae81ff">87</span> /
+</span></span><span style="display:flex;"><span>Done, had to relocate <span style="color:#ae81ff">46</span> out of <span style="color:#ae81ff">400</span> chunks
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remove the device and destroy it.</span>
+</span></span><span style="display:flex;"><span>$ sudo btrfs device delete /dev/loop0 /
+</span></span><span style="display:flex;"><span>$ sudo losetup -d /dev/loop10
+</span></span><span style="display:flex;"><span>$ sudo umount /mnt/ramdisk
+</span></span><span style="display:flex;"><span>$ sudo rm -rf /dev/ram0 
+</span></span></code></pre></div>]]></content>
   </entry>
   <entry>
     <title type="html"><![CDATA[Serverless is the MS Access of the Future]]></title>
@@ -512,7 +554,7 @@ $ sudo rm -rf /dev/ram0
 <p>Very quickly you&rsquo;ve taken on a similar complexity, setup, and maintenance cost to what you were trying to avoid in the first place. This might be OK if it were a net zero transaction, but it&rsquo;s not. You&rsquo;ve taken on those costs, in exchange for&hellip; the rest of the limitations and a platform over which you have no control.</p>
 <p>This feels a lot like so many MSAccess applications I worked with in the early 2000&rsquo;s. When the application was simple, it was great to have a visual data engine. But with a larger data model, the UI increasingly became an obstacle. You would increasingly use text to express your queries, duplicate data in more convenient tables to avoid tricky joins, and &hellip; In the end, the workarounds piled up. Managing a complex application on MSAccess is just as hard as managing it on any other RDBMS, but without the flexibility and power, and with more kludgy workarounds. Access is a great product for simple or straightforward use cases. But the moment your application grows too big, you start paying a heavy tax.</p>
 <p>It&rsquo;s not controversial to suggest that the core value of Serverless is providing OOTB great hosting for simpler, highly encapsulated code, even code segments. The controversial part is the future prediction, where the metaphor really kicks in.</p>
-<p>What happened to MSAccess? Other RDBMS' got much better, and friendlier. From easy-to-use ORMs for easy-to-use programming languages, to GUIs like MySQLAdmin, to cloud-based application builders backed by RDBMSes, the full-powered RDBMS ecosystem gradually took over the use case for MSAccess. The ease-of-use benefit which was so core to the Access value proposition gradually disappeared, and users ended up with the choice between a fully-flexible power system and a limited one, both relatively easy to use. Finally Access 2010 became a GUI on top of SQL, integrated with Sharepoint.</p>
+<p>What happened to MSAccess? Other RDBMS&rsquo; got much better, and friendlier. From easy-to-use ORMs for easy-to-use programming languages, to GUIs like MySQLAdmin, to cloud-based application builders backed by RDBMSes, the full-powered RDBMS ecosystem gradually took over the use case for MSAccess. The ease-of-use benefit which was so core to the Access value proposition gradually disappeared, and users ended up with the choice between a fully-flexible power system and a limited one, both relatively easy to use. Finally Access 2010 became a GUI on top of SQL, integrated with Sharepoint.</p>
 <p>Serverless is headed in a similar direction. Other tools, largely from the container ecosystem, are already nibbling at their lunch. If you&rsquo;re at the point where you need to configure VM sizes and scaling rules on your Serverless provider, you&rsquo;re probably considering jumping to a managed Kubernetes provider instead. If you don&rsquo;t need to configure that stuff, you&rsquo;re looking at pure-container cloud solutions like Azure Container Instances. Same flexibility and cost structure, but with run-anywhere compatibility and a development environment which matches the CI testbed and prod. The only uncontested ground left is applications that are too small to bother containerizing.</p>
 <p>Meanwhile the container ecosystem is taking off at rocket speed, making that &ldquo;flexibility tradeoff&rdquo; worse and worsse for serverless. Where is the multi-cloud ecosystem for serverless? Where is the network security modeling market? Compare the difficulty of local dev and hosted CI environments for serverless code, to the out of the box auto-detected container builds available in every major CI platform. I&rsquo;s clear: serverless isn&rsquo;t actually all that much easier anymore. And it&rsquo;s only going one way. Soon enough, Serverless will become a nice frontend for a container runtime.</p>
 ]]></content>
@@ -533,92 +575,92 @@ $ sudo rm -rf /dev/ram0
 <p>There are a few different approaches to coupling appliciation components:</p>
 <h2 id="multi-container-pods">Multi-container pods</h2>
 <p>Level 0 is to simply specify multiple components (containers) in your deployment.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-deployment</span>
-  <span style="color:#f92672">labels</span>:
-    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">3</span>
-  <span style="color:#f92672">selector</span>:
-    <span style="color:#f92672">matchLabels</span>:
-      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-  <span style="color:#f92672">template</span>:
-    <span style="color:#f92672">metadata</span>:
-      <span style="color:#f92672">labels</span>:
-        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-    <span style="color:#f92672">spec</span>:
-      <span style="color:#f92672">containers</span>:
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">php</span>
-        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">php:fpm</span>
-        <span style="color:#f92672">ports</span>:
-        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">9000</span>
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
-        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:latest</span>
-        <span style="color:#f92672">ports</span>:
-        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
-</code></pre></div><p>This specifies 3 copies of the same application, with the same two containers in each replica. This is a coupled application, but it&rsquo;s still stateless. Let&rsquo;s add a volume - that&rsquo;s where we get into trouble.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx-deployment</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">matchLabels</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">php</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">php:fpm</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">9000</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:latest</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
+</span></span></code></pre></div><p>This specifies 3 copies of the same application, with the same two containers in each replica. This is a coupled application, but it&rsquo;s still stateless. Let&rsquo;s add a volume - that&rsquo;s where we get into trouble.</p>
 <p>The problem: If you add a Volume the normal way (<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">persistentVolumeClaim</a>), each of your replicas will try and connect to the same volume. It&rsquo;ll act like a network shared drive. Maybe that&rsquo;s OK for your application, but not if it&rsquo;s our super-stateful example! And depending on your volume class, the volume may reject multiple connections like (<a href="https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv">Azure Disk</a> does, for example).</p>
 <p>So how do we get around this limitation? I want a separate volume for each instance of the application.</p>
 <p>Kubernetes supports a different object type for this use case, called a <a href="https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/">StatefulSet</a>. This is exactly what it sounds like: a set of objects that define a stateful application. It&rsquo;s a template for creating multiple copies of <em>all resources</em> defined therein.</p>
 <p>A statefulset will create replicas similar to a deployment, but it will set up separate Volumes and VolumeClaims for each one. The replicas will be identical except for an index number at the end of the labels. The first one might be called <code>nginx-deployment-0</code>, the second: <code>nginx-deployment-1</code>, and so on.  The result is a set of tightly coupled components, which can be individually addressed, and scaled using normal Kubernetes tools.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">StatefulSet</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
-  <span style="color:#f92672">labels</span>:
-    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">3</span>
-  <span style="color:#f92672">selector</span>:
-    <span style="color:#f92672">matchLabels</span>:
-      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-  <span style="color:#f92672">serviceName</span>: <span style="color:#e6db74">&#34;nginx&#34;</span>
-  <span style="color:#f92672">template</span>:
-    <span style="color:#f92672">metadata</span>:
-      <span style="color:#f92672">labels</span>:
-        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-    <span style="color:#f92672">spec</span>:
-      <span style="color:#f92672">containers</span>:
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
-        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:latest</span>
-        <span style="color:#f92672">ports</span>:
-        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">php</span>
-        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">php:fpm</span>
-        <span style="color:#f92672">volumeMounts</span>:
-        - <span style="color:#f92672">mountPath</span>: <span style="color:#e6db74">&#34;/var/www/html&#34;</span>
-          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">data</span>
-  <span style="color:#f92672">volumeClaimTemplates</span>:
-    - <span style="color:#f92672">metadata</span>:
-        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">data</span>
-      <span style="color:#f92672">spec</span>:
-        <span style="color:#f92672">storageClassName</span>: <span style="color:#ae81ff">default</span>
-        <span style="color:#f92672">accessModes</span>:
-          - <span style="color:#ae81ff">ReadWriteOnce</span>
-        <span style="color:#f92672">resources</span>:
-          <span style="color:#f92672">requests</span>:
-            <span style="color:#f92672">storage</span>: <span style="color:#ae81ff">5Gi</span>
----
-<span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Service</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
-  <span style="color:#f92672">labels</span>:
-    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">ports</span>:
-    - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
-      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">http</span>
-  <span style="color:#f92672">clusterIP</span>: <span style="color:#ae81ff">None</span>
-  <span style="color:#f92672">selector</span>:
-    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
-</code></pre></div><p>There are a few details to notice here.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">StatefulSet</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">matchLabels</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">serviceName</span>: <span style="color:#e6db74">&#34;nginx&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:latest</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">containerPort</span>: <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">php</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">php:fpm</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">volumeMounts</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">mountPath</span>: <span style="color:#e6db74">&#34;/var/www/html&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">data</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">volumeClaimTemplates</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">name</span>: <span style="color:#ae81ff">data</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">storageClassName</span>: <span style="color:#ae81ff">default</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">accessModes</span>:
+</span></span><span style="display:flex;"><span>          - <span style="color:#ae81ff">ReadWriteOnce</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">requests</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">storage</span>: <span style="color:#ae81ff">5Gi</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Service</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">http</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">clusterIP</span>: <span style="color:#ae81ff">None</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">nginx</span>
+</span></span></code></pre></div><p>There are a few details to notice here.</p>
 <p>Yes, we&rsquo;ve replaced <em>Deployment</em> with <em>StatefulSet</em>. You get a shiny gold star if you noticed that one.</p>
 <p>The interesting part is the <em>VolumeClaimTemplates</em> section, below the containers definition. This keyword only exists inside a StatefulSet, and it&rsquo;s just what it sounds like: a template for creating Persistent Volume Claims.</p>
 <p>If you apply this config, you&rsquo;ll see three PVs created, with three PVCs, attached to three Pods. You can apply HPA rules to scale these up and down just like you would with deployments.</p>
-<p>There&rsquo;s also that weird Service at the bottom. A naked service with no clusterIP? What&rsquo;s the point? The point is as a helper for Kubernetes' internal DNS. All of those nice StatefulSet pods will come under a neat subdomain, eg nginx-0.nginx, nginx-1.nginx, etc. Additionally you can connect to active members of the StatefulSet by using that nginx domain component. A dns lookup on it will show all the IPs of the active members in the CNAME record.</p>
+<p>There&rsquo;s also that weird Service at the bottom. A naked service with no clusterIP? What&rsquo;s the point? The point is as a helper for Kubernetes&rsquo; internal DNS. All of those nice StatefulSet pods will come under a neat subdomain, eg nginx-0.nginx, nginx-1.nginx, etc. Additionally you can connect to active members of the StatefulSet by using that nginx domain component. A dns lookup on it will show all the IPs of the active members in the CNAME record.</p>
 <p>&ldquo;But what about external access?&rdquo; I hear you cry. Yes, we&rsquo;ve built a great stateful application that can scale instances, but it&rsquo;s only internally addressable! Good luck hosting those games&hellip;</p>
 <h2 id="external-access-and-metacontroller">External access and metacontroller</h2>
 <p>Normally you would put a LoadBalancer service in front of your application. But a Kubernetes load balancer will grab all of these StatefulSet members - so you can&rsquo;t address them externally one-by-one. What you <em>really</em> want to do, is create an external IP address for each statefulset member.</p>
@@ -628,136 +670,135 @@ $ sudo rm -rf /dev/ram0
 <p>We&rsquo;ll use the <a href="https://github.com/GoogleCloudPlatform/metacontroller">Metacontroller</a> add-on to make our lives easier. Metacontroller makes it &ldquo;easy&rdquo; to add custom behaviors. Just write a short script, stick it into a ConfigMap or FaaS, and let Metacontroller work its magic!</p>
 <p>Metacontroller project comes with several well documented examples, including one that&rsquo;s very close to our requirement: <a href="https://github.com/GoogleCloudPlatform/metacontroller/tree/master/examples/service-per-pod">service-per-pod</a>.</p>
 <p>Step 1 is to install Metacontroller, of course:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Create &#39;metacontroller&#39; namespace, service account, and role/binding.</span>
-kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontroller/master/manifests/metacontroller-rbac.yaml
-<span style="color:#75715e"># Create CRDs for Metacontroller APIs, and the Metacontroller StatefulSet.</span>
-kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontroller/master/manifests/metacontroller.yaml
-</code></pre></div><p>Then we&rsquo;ll add some new metadata to our existing StatefulSet. The metacontroller script will use these values to configure the load balancers.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">StatefulSet</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">annotations</span>:
-    <span style="color:#f92672">service-per-pod-label</span>: <span style="color:#e6db74">&#34;pod-name&#34;</span>
-    <span style="color:#f92672">service-per-pod-ports</span>: <span style="color:#e6db74">&#34;80:80&#34;</span>
-...
-</code></pre></div><p>We also need to tell Kubernetes to decorate each StatefulSet with a pod-name label. We do this in the StatefulSet&rsquo;s pod template.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">...
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">template</span>:
-    <span style="color:#f92672">metadata</span>:
-      <span style="color:#f92672">annotations</span>:
-        <span style="color:#f92672">pod-name-label</span>: <span style="color:#e6db74">&#34;pod-name&#34;</span>
-...
-</code></pre></div><p>Note: this only works in k8s 1.9+ - if you&rsquo;re stuck with a lower version, you can script this action with Metacontroller, too. :).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create &#39;metacontroller&#39; namespace, service account, and role/binding.</span>
+</span></span><span style="display:flex;"><span>kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontroller/master/manifests/metacontroller-rbac.yaml
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create CRDs for Metacontroller APIs, and the Metacontroller StatefulSet.</span>
+</span></span><span style="display:flex;"><span>kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontroller/master/manifests/metacontroller.yaml
+</span></span></code></pre></div><p>Then we&rsquo;ll add some new metadata to our existing StatefulSet. The metacontroller script will use these values to configure the load balancers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">StatefulSet</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">annotations</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">service-per-pod-label</span>: <span style="color:#e6db74">&#34;pod-name&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">service-per-pod-ports</span>: <span style="color:#e6db74">&#34;80:80&#34;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>We also need to tell Kubernetes to decorate each StatefulSet with a pod-name label. We do this in the StatefulSet&rsquo;s pod template.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">annotations</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">pod-name-label</span>: <span style="color:#e6db74">&#34;pod-name&#34;</span>
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>Note: this only works in k8s 1.9+ - if you&rsquo;re stuck with a lower version, you can script this action with Metacontroller, too. :).</p>
 <p>Now you&rsquo;re going to need two hooks. Put them in a directory together so they&rsquo;re easy to apply at once. These ones are written in jsonnet, but you could write this in whatever language you like.</p>
 <p>The first hook actually creates the LoadBalancer for each Pod.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">function(request) {
-  local statefulset = request.<span style="color:#66d9ef">object</span>,
-  local labelKey = statefulset.metadata.annotations[<span style="color:#e6db74">&#34;service-per-pod-label&#34;</span>],
-  local ports = statefulset.metadata.annotations[<span style="color:#e6db74">&#34;service-per-pod-ports&#34;</span>],
-
-  <span style="color:#75715e">// Create a service for each Pod, with a selector on the given label key.
-</span><span style="color:#75715e"></span>  attachments: [
-    {
-      apiVersion: <span style="color:#e6db74">&#34;v1&#34;</span>,
-      kind: <span style="color:#e6db74">&#34;Service&#34;</span>,
-      metadata: {
-        name: statefulset.metadata.name + <span style="color:#e6db74">&#34;-&#34;</span> + index,
-        labels: {app: <span style="color:#e6db74">&#34;service-per-pod&#34;</span>}
-      },
-      spec: {
-        type: <span style="color:#e6db74">&#34;LoadBalancer&#34;</span>,
-        selector: {
-<span style="color:#a6e22e">          [labelKey]</span>: statefulset.metadata.name + <span style="color:#e6db74">&#34;-&#34;</span> + index
-        },
-        ports: [
-          {
-            local parts = std.split(portnums, <span style="color:#e6db74">&#34;:&#34;</span>),
-            port: std.parseInt(parts[<span style="color:#ae81ff">0</span>]),
-            targetPort: std.parseInt(parts[<span style="color:#ae81ff">1</span>]),
-          }
-          <span style="color:#66d9ef">for</span> portnums <span style="color:#66d9ef">in</span> std.split(ports, <span style="color:#e6db74">&#34;,&#34;</span>)
-        ]
-      }
-    }
-    <span style="color:#66d9ef">for</span> index <span style="color:#66d9ef">in</span> std.range(<span style="color:#ae81ff">0</span>, statefulset.spec.replicas - <span style="color:#ae81ff">1</span>)
-  ]
-}
-</code></pre></div><p>The other hook is the &ldquo;finalizer&rdquo; - it responds to changes or deletions in pods by tearing down the corresponding LoadBalancers.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">function(request) {
-  <span style="color:#75715e">// If the StatefulSet is updated to no longer match our decorator selector,
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">// or if the StatefulSet is deleted, clean up any attachments we made.
-</span><span style="color:#75715e"></span>  attachments: [],
-  <span style="color:#75715e">// Mark as finalized once we observe all Services are gone.
-</span><span style="color:#75715e"></span>  finalized: std.length(request.attachments[<span style="color:#960050;background-color:#1e0010">&#39;</span>Service.v1<span style="color:#960050;background-color:#1e0010">&#39;</span>]) == <span style="color:#ae81ff">0</span>
-}
-</code></pre></div><p>Add those into a subdirectory, and put them into a configmap together. Metacontroller will run them from there.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kubectl create configmap service-per-pod-hooks -n metacontroller --from-file<span style="color:#f92672">=</span>hooks
-</code></pre></div><p>Now apply the actual decorator controller which will run those functions. Note that you have to identify your hook jsonnet files by (file) name! Get the name wrong, and the finalizer will hang forever, <a href="https://github.com/kubernetes/kubernetes/issues/72598">preventing you from deleting your statefulset</a>. In my case, the files were called <code>create-lb-per-pod.jsonnet</code> and <code>finalizer.json</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">metacontroller.k8s.io/v1alpha1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">DecoratorController</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">resources</span>:
-  - <span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1beta1</span>
-    <span style="color:#f92672">resource</span>: <span style="color:#ae81ff">statefulsets</span>
-    <span style="color:#f92672">annotationSelector</span>:
-      <span style="color:#f92672">matchExpressions</span>:
-      - {<span style="color:#f92672">key: service-per-pod-label, operator</span>: <span style="color:#ae81ff">Exists}</span>
-      - {<span style="color:#f92672">key: service-per-pod-ports, operator</span>: <span style="color:#ae81ff">Exists}</span>
-  <span style="color:#f92672">attachments</span>:
-  - <span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-    <span style="color:#f92672">resource</span>: <span style="color:#ae81ff">services</span>
-  <span style="color:#f92672">hooks</span>:
-    <span style="color:#f92672">sync</span>:
-      <span style="color:#f92672">webhook</span>:
-        <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://service-per-pod.metacontroller/create-lb-per-pod</span>
-    <span style="color:#f92672">finalize</span>:
-      <span style="color:#f92672">webhook</span>:
-        <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://service-per-pod.metacontroller/finalizer</span>
----
-<span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1beta1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
-  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">metacontroller</span>
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">1</span>
-  <span style="color:#f92672">selector</span>:
-    <span style="color:#f92672">matchLabels</span>:
-      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
-  <span style="color:#f92672">template</span>:
-    <span style="color:#f92672">metadata</span>:
-      <span style="color:#f92672">labels</span>:
-        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
-    <span style="color:#f92672">spec</span>:
-      <span style="color:#f92672">containers</span>:
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
-        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">metacontroller/jsonnetd:0.1</span>
-        <span style="color:#f92672">imagePullPolicy</span>: <span style="color:#ae81ff">Always</span>
-        <span style="color:#f92672">workingDir</span>: <span style="color:#ae81ff">/hooks</span>
-        <span style="color:#f92672">volumeMounts</span>:
-        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
-          <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/hooks</span>
-      <span style="color:#f92672">volumes</span>:
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
-        <span style="color:#f92672">configMap</span>:
-          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod-hooks</span>
----
-<span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
-<span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Service</span>
-<span style="color:#f92672">metadata</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
-  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">metacontroller</span>
-<span style="color:#f92672">spec</span>:
-  <span style="color:#f92672">selector</span>:
-    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
-  <span style="color:#f92672">ports</span>:
-  - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
-    <span style="color:#f92672">targetPort</span>: <span style="color:#ae81ff">8080</span>
-
-</code></pre></div><p>That&rsquo;s it! Now you can scale complete replicas of a very-stateful application with a simple <code>kubectl scale sts nginx --replicas=900</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>function(request) {
+</span></span><span style="display:flex;"><span>  local statefulset = request.<span style="color:#66d9ef">object</span>,
+</span></span><span style="display:flex;"><span>  local labelKey = statefulset.metadata.annotations[<span style="color:#e6db74">&#34;service-per-pod-label&#34;</span>],
+</span></span><span style="display:flex;"><span>  local ports = statefulset.metadata.annotations[<span style="color:#e6db74">&#34;service-per-pod-ports&#34;</span>],
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Create a service for each Pod, with a selector on the given label key.</span>
+</span></span><span style="display:flex;"><span>  attachments: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      apiVersion: <span style="color:#e6db74">&#34;v1&#34;</span>,
+</span></span><span style="display:flex;"><span>      kind: <span style="color:#e6db74">&#34;Service&#34;</span>,
+</span></span><span style="display:flex;"><span>      metadata: {
+</span></span><span style="display:flex;"><span>        name: statefulset.metadata.name + <span style="color:#e6db74">&#34;-&#34;</span> + index,
+</span></span><span style="display:flex;"><span>        labels: {app: <span style="color:#e6db74">&#34;service-per-pod&#34;</span>}
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      spec: {
+</span></span><span style="display:flex;"><span>        type: <span style="color:#e6db74">&#34;LoadBalancer&#34;</span>,
+</span></span><span style="display:flex;"><span>        selector: {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">          [labelKey]</span>: statefulset.metadata.name + <span style="color:#e6db74">&#34;-&#34;</span> + index
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        ports: [
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            local parts = std.split(portnums, <span style="color:#e6db74">&#34;:&#34;</span>),
+</span></span><span style="display:flex;"><span>            port: std.parseInt(parts[<span style="color:#ae81ff">0</span>]),
+</span></span><span style="display:flex;"><span>            targetPort: std.parseInt(parts[<span style="color:#ae81ff">1</span>]),
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">for</span> portnums <span style="color:#66d9ef">in</span> std.split(ports, <span style="color:#e6db74">&#34;,&#34;</span>)
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> index <span style="color:#66d9ef">in</span> std.range(<span style="color:#ae81ff">0</span>, statefulset.spec.replicas - <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The other hook is the &ldquo;finalizer&rdquo; - it responds to changes or deletions in pods by tearing down the corresponding LoadBalancers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span>function(request) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// If the StatefulSet is updated to no longer match our decorator selector,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// or if the StatefulSet is deleted, clean up any attachments we made.</span>
+</span></span><span style="display:flex;"><span>  attachments: [],
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Mark as finalized once we observe all Services are gone.</span>
+</span></span><span style="display:flex;"><span>  finalized: std.length(request.attachments[<span style="color:#960050;background-color:#1e0010">&#39;</span>Service.v1<span style="color:#960050;background-color:#1e0010">&#39;</span>]) == <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Add those into a subdirectory, and put them into a configmap together. Metacontroller will run them from there.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kubectl create configmap service-per-pod-hooks -n metacontroller --from-file<span style="color:#f92672">=</span>hooks
+</span></span></code></pre></div><p>Now apply the actual decorator controller which will run those functions. Note that you have to identify your hook jsonnet files by (file) name! Get the name wrong, and the finalizer will hang forever, <a href="https://github.com/kubernetes/kubernetes/issues/72598">preventing you from deleting your statefulset</a>. In my case, the files were called <code>create-lb-per-pod.jsonnet</code> and <code>finalizer.json</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">metacontroller.k8s.io/v1alpha1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">DecoratorController</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">resources</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1beta1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resource</span>: <span style="color:#ae81ff">statefulsets</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">annotationSelector</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">matchExpressions</span>:
+</span></span><span style="display:flex;"><span>      - {<span style="color:#f92672">key: service-per-pod-label, operator</span>: <span style="color:#ae81ff">Exists}</span>
+</span></span><span style="display:flex;"><span>      - {<span style="color:#f92672">key: service-per-pod-ports, operator</span>: <span style="color:#ae81ff">Exists}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">attachments</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">resource</span>: <span style="color:#ae81ff">services</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">hooks</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">sync</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">webhook</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://service-per-pod.metacontroller/create-lb-per-pod</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">finalize</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">webhook</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">url</span>: <span style="color:#ae81ff">http://service-per-pod.metacontroller/finalizer</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">apps/v1beta1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Deployment</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">metacontroller</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">replicas</span>: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">matchLabels</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">labels</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">containers</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">metacontroller/jsonnetd:0.1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">imagePullPolicy</span>: <span style="color:#ae81ff">Always</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">workingDir</span>: <span style="color:#ae81ff">/hooks</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">volumeMounts</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">mountPath</span>: <span style="color:#ae81ff">/hooks</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">hooks</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">configMap</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod-hooks</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Service</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">service-per-pod</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">namespace</span>: <span style="color:#ae81ff">metacontroller</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">selector</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">app</span>: <span style="color:#ae81ff">service-per-pod</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">targetPort</span>: <span style="color:#ae81ff">8080</span>
+</span></span></code></pre></div><p>That&rsquo;s it! Now you can scale complete replicas of a very-stateful application with a simple <code>kubectl scale sts nginx --replicas=900</code>.</p>
 <p>Enjoy bragging to your friends about your &ldquo;macroservices architecture&rdquo;, pushing the limits of Kubernetes to run and replicate a stateful monolith!</p>
 <p><em>Everyone hates writing YAML. Check out the <a href="https://github.com/ohthehugemanatee/kubernetes-stateful-example">sample code for this post on Github</a></em></p>
 ]]></content>
@@ -773,38 +814,38 @@ kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/metacontr
     <updated>2018-12-27T10:30:23+00:00</updated>
     <content type="html"><![CDATA[<p>One of my holiday projects was to set up my home &ldquo;data warehouse.&rdquo; Ever since <a href="https://www.dropboxforum.com/t5/Syncing-and-uploads/Linux-Dropbox-client-warn-me-that-it-ll-stop-syncing-in-Nov-why/m-p/290065/highlight/true#M42255">Dropbox killed modern Linux filesystem support</a> I&rsquo;ve been using (and loving) <a href="https://nextcloud.com/">Nextcloud</a> from my home. It backs up to an encrypted <a href="https://www.duplicati.com/">Duplicati</a> store on <a href="https://azure.microsoft.com/en-us/services/storage/blobs/">Azure blob store</a>, so that&rsquo;s offsite backups taken care of. But it was time to knit all my various drives together into a single RAID data warehouse. The only problem: how to transfer my 2 terabytes (rounded to make the math in the post easier) of data, without nasty downtime during the holidays?</p>
 <p>A local network transfer is the fastest, with the least downtime. I have a switched gigabit network in my house, and all my servers are hard wired. That&rsquo;s about 125 megabytes per second; a theoretical 5 hours to transfer everything. Not bad! Start up an rsync and I&rsquo;m all done! So I kicked it off and went to bed:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud.vert
-$ rsync -axz /media/usbdrive/ warehouse:/mnt/storage/ --log-file<span style="color:#f92672">=</span>transfer-to-warehouse.log &amp;
-</code></pre></div><p>I woke up in the morning with the excitement of a kid on Christmas. Everything should be done, right?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh warehouse df -h |grep md0
-/dev/md0        2.7T  501G  2.1T  20% /mnt/storage
-$
-</code></pre></div><p>Wait, what? How had it only transferred 500 gigabytes overnight? Including time for <em>Doctor Who</em> and breakfast, that was only 1 Megabit per second! I knew it was time to play everyone&rsquo;s favorite game: <em>&ldquo;where&rsquo;s the bottleneck?</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh nextcloud.vert
+</span></span><span style="display:flex;"><span>$ rsync -axz /media/usbdrive/ warehouse:/mnt/storage/ --log-file<span style="color:#f92672">=</span>transfer-to-warehouse.log &amp;
+</span></span></code></pre></div><p>I woke up in the morning with the excitement of a kid on Christmas. Everything should be done, right?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh warehouse df -h |grep md0
+</span></span><span style="display:flex;"><span>/dev/md0        2.7T  501G  2.1T  20% /mnt/storage
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Wait, what? How had it only transferred 500 gigabytes overnight? Including time for <em>Doctor Who</em> and breakfast, that was only 1 Megabit per second! I knew it was time to play everyone&rsquo;s favorite game: <em>&ldquo;where&rsquo;s the bottleneck?</em></p>
 <p>I guess it could be rsync scanning all those small files. If that&rsquo;s the case, we&rsquo;ll see high CPU usage, and even higher load numbers (as processes are I/O blocked):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud
-$ top
-
-top - 08:22:27 up 10:26,  <span style="color:#ae81ff">1</span> user,  load average: 1.20, 1.34, 1.33
-Tasks: <span style="color:#ae81ff">170</span> total,   <span style="color:#ae81ff">2</span> running, <span style="color:#ae81ff">106</span> sleeping,   <span style="color:#ae81ff">0</span> stopped,   <span style="color:#ae81ff">0</span> zombie
-%Cpu<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>: 28.0 us,  2.1 sy,  0.0 ni, 69.5 id,  0.1 wa,  0.0 hi,  0.3 si,  0.0 st
-KiB Mem : <span style="color:#ae81ff">16330372</span> total,   <span style="color:#ae81ff">180568</span> free,   <span style="color:#ae81ff">657104</span> used, <span style="color:#ae81ff">15492700</span> buff/cache
-KiB Swap:  <span style="color:#ae81ff">4194300</span> total,  <span style="color:#ae81ff">4162556</span> free,    <span style="color:#ae81ff">31744</span> used. <span style="color:#ae81ff">15300068</span> avail Mem 
-
-  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                                  
- <span style="color:#ae81ff">8755</span> ohthehu+  <span style="color:#ae81ff">20</span>   <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">130572</span>  <span style="color:#ae81ff">58456</span>   <span style="color:#ae81ff">2672</span> R  99.0  0.4 513:14.75 rsync                                                                                    
- <span style="color:#ae81ff">8756</span> ohthehu+  <span style="color:#ae81ff">20</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">49596</span>   <span style="color:#ae81ff">6648</span>   <span style="color:#ae81ff">5152</span> S  16.9  0.0  92:12.29 ssh 
-...
-</code></pre></div><p>OK, let&rsquo;s kill the transfer and start again using a single large, piped tarball. No more small file scans!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud
-$ cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | ssh warehouse <span style="color:#e6db74">&#34;cd /mnt/storage &amp;&amp; tar xpvf -&#34;</span>
-</code></pre></div><p>That helps, but we&rsquo;re still compressing lots of data unnecessarily (most of my data is already compressed), and encrypting it, too. We can improve it with a lightweight ssh cipher and disabled compression:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud
-$ cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | ssh -o Compression<span style="color:#f92672">=</span>no -c chacha20-poly1305@openssh.com warehouse <span style="color:#e6db74">&#34;cd /mnt/storage &amp;&amp; tar xpf -&#34;</span>
-</code></pre></div><p>That chacha20-poly1305 is a very fast cipher indeed - faster than the old arcfour cipher we used to use in this case. But SSH still puts extra work on the CPU. So let&rsquo;s remove it completely from the equation and just use netcat.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh nextcloud cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | pv | nc -l -q <span style="color:#ae81ff">5</span> -p <span style="color:#ae81ff">9999</span> 
-<span style="color:#75715e"># in a separate terminal</span>
-$ ssh warehouse cd /mnt/storage <span style="color:#f92672">&amp;&amp;</span> nc nextcloud <span style="color:#ae81ff">9999</span> | pv | tar -xf -
-</code></pre></div><p>Transfer speeds now average about 61 megabytes per second. That&rsquo;s fast enough to kick in the law of diminishing returns on my optimization effort: this will take about 8 hours to transfer if I keep it running. I had to pause work for an hour; now if I spend another hour on this, it has to shave more than 25% off my transfer time to finish any earlier tonight. I&rsquo;m not confident I can beat those numbers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh nextcloud
+</span></span><span style="display:flex;"><span>$ top
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>top - 08:22:27 up 10:26,  <span style="color:#ae81ff">1</span> user,  load average: 1.20, 1.34, 1.33
+</span></span><span style="display:flex;"><span>Tasks: <span style="color:#ae81ff">170</span> total,   <span style="color:#ae81ff">2</span> running, <span style="color:#ae81ff">106</span> sleeping,   <span style="color:#ae81ff">0</span> stopped,   <span style="color:#ae81ff">0</span> zombie
+</span></span><span style="display:flex;"><span>%Cpu<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>: 28.0 us,  2.1 sy,  0.0 ni, 69.5 id,  0.1 wa,  0.0 hi,  0.3 si,  0.0 st
+</span></span><span style="display:flex;"><span>KiB Mem : <span style="color:#ae81ff">16330372</span> total,   <span style="color:#ae81ff">180568</span> free,   <span style="color:#ae81ff">657104</span> used, <span style="color:#ae81ff">15492700</span> buff/cache
+</span></span><span style="display:flex;"><span>KiB Swap:  <span style="color:#ae81ff">4194300</span> total,  <span style="color:#ae81ff">4162556</span> free,    <span style="color:#ae81ff">31744</span> used. <span style="color:#ae81ff">15300068</span> avail Mem 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                                  
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8755</span> ohthehu+  <span style="color:#ae81ff">20</span>   <span style="color:#ae81ff">0</span>  <span style="color:#ae81ff">130572</span>  <span style="color:#ae81ff">58456</span>   <span style="color:#ae81ff">2672</span> R  99.0  0.4 513:14.75 rsync                                                                                    
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8756</span> ohthehu+  <span style="color:#ae81ff">20</span>   <span style="color:#ae81ff">0</span>   <span style="color:#ae81ff">49596</span>   <span style="color:#ae81ff">6648</span>   <span style="color:#ae81ff">5152</span> S  16.9  0.0  92:12.29 ssh 
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>OK, let&rsquo;s kill the transfer and start again using a single large, piped tarball. No more small file scans!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh nextcloud
+</span></span><span style="display:flex;"><span>$ cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | ssh warehouse <span style="color:#e6db74">&#34;cd /mnt/storage &amp;&amp; tar xpvf -&#34;</span>
+</span></span></code></pre></div><p>That helps, but we&rsquo;re still compressing lots of data unnecessarily (most of my data is already compressed), and encrypting it, too. We can improve it with a lightweight ssh cipher and disabled compression:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh nextcloud
+</span></span><span style="display:flex;"><span>$ cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | ssh -o Compression<span style="color:#f92672">=</span>no -c chacha20-poly1305@openssh.com warehouse <span style="color:#e6db74">&#34;cd /mnt/storage &amp;&amp; tar xpf -&#34;</span>
+</span></span></code></pre></div><p>That chacha20-poly1305 is a very fast cipher indeed - faster than the old arcfour cipher we used to use in this case. But SSH still puts extra work on the CPU. So let&rsquo;s remove it completely from the equation and just use netcat.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ssh nextcloud cd /media/bigdrive <span style="color:#f92672">&amp;&amp;</span> tar cf - . | pv | nc -l -q <span style="color:#ae81ff">5</span> -p <span style="color:#ae81ff">9999</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># in a separate terminal</span>
+</span></span><span style="display:flex;"><span>$ ssh warehouse cd /mnt/storage <span style="color:#f92672">&amp;&amp;</span> nc nextcloud <span style="color:#ae81ff">9999</span> | pv | tar -xf -
+</span></span></code></pre></div><p>Transfer speeds now average about 61 megabytes per second. That&rsquo;s fast enough to kick in the law of diminishing returns on my optimization effort: this will take about 8 hours to transfer if I keep it running. I had to pause work for an hour; now if I spend another hour on this, it has to shave more than 25% off my transfer time to finish any earlier tonight. I&rsquo;m not confident I can beat those numbers.</p>
 <p>Still - What happened to my 125 theoretical megabytes per second? Here are the culprits I suspect - and can&rsquo;t really do anything about:</p>
 <ul>
 <li>
@@ -822,26 +863,26 @@ $ ssh warehouse cd /mnt/storage <span style="color:#f92672">&amp;&amp;</span> nc
 <h3 id="appendix-easy-performance-testing">Appendix: easy performance testing</h3>
 <p>If you&rsquo;re working on a similar problem for yourself, you might find these performance testing commands helpful. The idea is to tease apart each component of the transfer. There are better, more detailed, dedicated tools for each of these, but in a game of &ldquo;find the bottleneck&rdquo; you really only need quick and dirty validation. Fun fact: the command <em>dd</em> is actually short for <strong>D</strong>own and <strong>D</strong>irty. Well it should be, at any rate.</p>
 <p><strong>Read speed (on the source</strong> is easy: hand an arbitrary large file to dd, and write down the numbers it gives.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>large-file.tar.bz2 of<span style="color:#f92672">=</span>/dev/null bs<span style="color:#f92672">=</span>1M
-<span style="color:#ae81ff">1021317200</span> bytes <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> GB<span style="color:#f92672">)</span> copied, 3.9888 s, <span style="color:#ae81ff">256</span> MB/s
-</code></pre></div><p><strong>Network speed</strong> can be tested by netcatting a gigabyte of zeros from one machine to the other.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># On the receiving machine, open a port to /dev/null</span>
-$ nc -vvlnp <span style="color:#ae81ff">12345</span> &gt;/dev/null
-<span style="color:#75715e"># On the sending machine, send a gig of zeroes to that port</span>
-$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero bs<span style="color:#f92672">=</span>1M count<span style="color:#f92672">=</span>1K | nc -vvn 192.168.1.50 <span style="color:#ae81ff">12345</span>
-Connection to 192.168.1.50 <span style="color:#ae81ff">12345</span> port <span style="color:#f92672">[</span>tcp/*<span style="color:#f92672">]</span> succeeded!
-1024+0 records in
-1024+0 records out
-<span style="color:#ae81ff">1073741824</span> bytes <span style="color:#f92672">(</span>1.1 GB, 1.0 GiB<span style="color:#f92672">)</span> copied, 11.7811 s, 91.1 MB/s
-<span style="color:#75715e"># Remember, 8 bits to a byte!</span>
-$ echo <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>bc -l <span style="color:#f92672">&lt;&lt;&lt;</span> 91*8<span style="color:#66d9ef">)</span><span style="color:#e6db74"> Megabits&#34;</span>
-<span style="color:#ae81ff">728</span> Megabits
-</code></pre></div><p><strong>Write speed on the destination</strong> can be tested with dd, too:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero bs<span style="color:#f92672">=</span>1M count<span style="color:#f92672">=</span><span style="color:#ae81ff">1024</span> of<span style="color:#f92672">=</span>/mnt/storage/test.img
-1024+0 records in
-1024+0 records out
-<span style="color:#ae81ff">1073741824</span> bytes <span style="color:#f92672">(</span>1.1 GB, 1.0 GiB<span style="color:#f92672">)</span> copied, 55.3836 s, 19.4 MB/s
-</code></pre></div><p>(note: these tests were run while the copy was happening on warehouse. Your numbers should be better than this!)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>large-file.tar.bz2 of<span style="color:#f92672">=</span>/dev/null bs<span style="color:#f92672">=</span>1M
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1021317200</span> bytes <span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> GB<span style="color:#f92672">)</span> copied, 3.9888 s, <span style="color:#ae81ff">256</span> MB/s
+</span></span></code></pre></div><p><strong>Network speed</strong> can be tested by netcatting a gigabyte of zeros from one machine to the other.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># On the receiving machine, open a port to /dev/null</span>
+</span></span><span style="display:flex;"><span>$ nc -vvlnp <span style="color:#ae81ff">12345</span> &gt;/dev/null
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># On the sending machine, send a gig of zeroes to that port</span>
+</span></span><span style="display:flex;"><span>$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero bs<span style="color:#f92672">=</span>1M count<span style="color:#f92672">=</span>1K | nc -vvn 192.168.1.50 <span style="color:#ae81ff">12345</span>
+</span></span><span style="display:flex;"><span>Connection to 192.168.1.50 <span style="color:#ae81ff">12345</span> port <span style="color:#f92672">[</span>tcp/*<span style="color:#f92672">]</span> succeeded!
+</span></span><span style="display:flex;"><span>1024+0 records in
+</span></span><span style="display:flex;"><span>1024+0 records out
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1073741824</span> bytes <span style="color:#f92672">(</span>1.1 GB, 1.0 GiB<span style="color:#f92672">)</span> copied, 11.7811 s, 91.1 MB/s
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remember, 8 bits to a byte!</span>
+</span></span><span style="display:flex;"><span>$ echo <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>bc -l <span style="color:#f92672">&lt;&lt;&lt;</span> 91*8<span style="color:#66d9ef">)</span><span style="color:#e6db74"> Megabits&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">728</span> Megabits
+</span></span></code></pre></div><p><strong>Write speed on the destination</strong> can be tested with dd, too:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>/dev/zero bs<span style="color:#f92672">=</span>1M count<span style="color:#f92672">=</span><span style="color:#ae81ff">1024</span> of<span style="color:#f92672">=</span>/mnt/storage/test.img
+</span></span><span style="display:flex;"><span>1024+0 records in
+</span></span><span style="display:flex;"><span>1024+0 records out
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1073741824</span> bytes <span style="color:#f92672">(</span>1.1 GB, 1.0 GiB<span style="color:#f92672">)</span> copied, 55.3836 s, 19.4 MB/s
+</span></span></code></pre></div><p>(note: these tests were run while the copy was happening on warehouse. Your numbers should be better than this!)</p>
 ]]></content>
   </entry>
   <entry>
@@ -937,12 +978,12 @@ $ echo <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</s
 <p>This shift is old news for most of the world. As much as the Hacker News crowd still bitches about it as FUD, this strategic direction has been in and out of the financial pages for years now. Microsoft has pivoted to platform services. Look at their profits by product over the last 8 years:</p>
 <p><img src="/images/microsoft-profits-by-product.png" alt="Microsoft profits by product, over year."></p>
 <p>The trend is obvious: <strong>server and platform services are the place to invest</strong>. Office only remains at the top of the heap because it transitioned to SaaS. Even Windows license profits are declining. This means focusing on interoperability. Make sure <em>everything</em> can run on your platform, because anything else is to handicap the source of your biggest short- and medium-term profit. In fact, <strong>remaining adversarial to Open Source would kill the golden goose</strong>. Microsoft <em>has</em> to change its values in order to make this shift.</p>
-<p>So much for financial and strategic direction; but this is a hundred-thousand-person company. That ship doesn&rsquo;t turn on a dime, no matter what the press releases tell you. So <strong>my second interview question became &ldquo;How is the transition going?&quot;</strong> This sort of question makes people uncomfortable: the answer is either transparently unrealistic, or critical of your environment and colleagues. Over and over again, I heard the right answer: It&rsquo;s freakin' hard.</p>
+<p>So much for financial and strategic direction; but this is a hundred-thousand-person company. That ship doesn&rsquo;t turn on a dime, no matter what the press releases tell you. So <strong>my second interview question became &ldquo;How is the transition going?&rdquo;</strong> This sort of question makes people uncomfortable: the answer is either transparently unrealistic, or critical of your environment and colleagues. Over and over again, I heard the right answer: It&rsquo;s freakin&rsquo; hard.</p>
 <p>MS has more than 40 years of proprietary development experience and institutional momentum. All of their culture and systems - from hiring, to code reviews, to legal authorizations - have been organized around that model. That&rsquo;s very hard to change! I heard horror stories about the beginning of the transition, having to pass every line of contribution past the Legal department. I heard about managers feeling lost, or losing a sense of authority over their own team. I heard about development teams struggling to understand that their place in an OSS project was on par with some Rando Calrissian contributor from Kansas. And I heard about how the company was helping people with the transition, changing systems and structures to make this cultural shift happen.</p>
 <p>The stories I heard were important evidence, which contradicted the old narrative I had in my head. <strong>Embrace, extend, extinguish does not involve leadership challenges, or breaking down of hierarchies</strong>. It does not involve personal struggle and departmental reorganization. The stories I heard evidenced an organization trying a real paradigm shift, for tens of thousands of people around the world. It is not perfect, and it is not finished, but I believe that the transition is real.</p>
 <p><strong>When you accept that Microsoft is trying to reorient its own culture to Open Source, suddenly all those &ldquo;transparent&rdquo; PR moves you dismissed get re-framed</strong>. They are accomplishments. It&rsquo;s incredibly difficult to change the culture of one of the biggest companies in the world&hellip; but today, almost half of Azure users run Linux. Microsoft&rsquo;s virtualization work made them the <a href="http://www.techradar.com/news/software/operating-systems/inside-the-linux-kernel-3-0-1035353/2">fifth largest contributor to the 3.x Linux kernel</a>. Microsoft maintains <a href="https://octoverse.github.com/">the biggest project on Github (by contributor count)</a>. They maintain a BSD distribution <em>and</em> a Linux distribution. And a huge part of LXD (the container-based virtualization system for Linux) comes from Microsoft&rsquo;s work with Canonical.</p>
 <p>That&rsquo;s impressive for any company. But Microsoft? It boggles the mind. This level of contribution is not lip-service. You don&rsquo;t maintain a 15 thousand person community just for PR. <strong>Microsoft is contributing as much or more to open source than many other major players, who have had this in their culture from the start</strong> (Google, Facebook, Twitter, LinkedIn&hellip;). It&rsquo;s an accomplishment, and it&rsquo;s impressive!</p>
-<p>In the group I&rsquo;m entering, a strong commitment to Open Source is built into the project structure, the team responsibilities, and the budgeting practice. Every project has time specifically set aside for contribution; developers' connections to their communities are respected and encouraged. After a decade of working with companies who try to engage with open source responsibly, I can say that <strong>this is the strongest institutional commitment to &ldquo;giving back&rdquo; that I have ever seen</strong>. It&rsquo;s a stronger support for contribution than I&rsquo;ve ever been able to offer in any of my roles, from sole proprietor to CTO.</p>
+<p>In the group I&rsquo;m entering, a strong commitment to Open Source is built into the project structure, the team responsibilities, and the budgeting practice. Every project has time specifically set aside for contribution; developers&rsquo; connections to their communities are respected and encouraged. After a decade of working with companies who try to engage with open source responsibly, I can say that <strong>this is the strongest institutional commitment to &ldquo;giving back&rdquo; that I have ever seen</strong>. It&rsquo;s a stronger support for contribution than I&rsquo;ve ever been able to offer in any of my roles, from sole proprietor to CTO.</p>
 <p>This does mean a lot more work outside of the Drupal world, though. I will still attend Drupalcons. I will still give technical talks, participate, and help make great open source communities for Drupal and other OSS projects. If anything, I will do those things <em>more</em>. And I will do them wearing a Microsoft shirt.</p>
 <p>Microsoft is making a genuine, and enormous, push to being open source community members and leaders. From everything I&rsquo;ve seen, they are doing it extremely well. From the outside at least, <strong>this is what it looks like to do enterprise Open Source The Right Way</strong>.</p>
 ]]></content>
@@ -984,11 +1025,11 @@ $ echo <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</s
 <p>I&rsquo;ll let you in on a secret: you don&rsquo;t have to be good at writing tests. Being good (generally) means your tests run faster, and cover more edge cases. Those are both Good Things, but the basic value of even amateur, I&rsquo;m-just-figuring-it-out tests is 75% of the point.</p>
 <p>The core value of tests is that they run the exact. same. thing. every. damn. time. That&rsquo;s more precise than refreshing your browser, where a hundred factors might come into play before your code fires. Oh, and did I mention that you can trigger your debugger from your tests? Because you can.</p>
 <p>A basic test is just firing off one method or function on it&rsquo;s own, with known values as input. You write &ldquo;asserts&rdquo; to check the output. For example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">testAddition</span>() {
-  $result <span style="color:#f92672">=</span> <span style="color:#a6e22e">\MathClass</span><span style="color:#f92672">::</span><span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>);
-  <span style="color:#a6e22e">self</span><span style="color:#f92672">::</span><span style="color:#a6e22e">assertEquals</span>(<span style="color:#ae81ff">6</span>, $result);
-}
-</code></pre></div><p>This is not the most complicated concept in the world. But this four lines means I can re-run the <code>addition</code> function a thousand times, stepping through it, with the same values every time. For testing a little additon function, this is certainly not necessary. But for testing submitted values entered on a web form, it saves me a ridiculous amount of time copypasting Lipsum text and fighting with form cache. You can also use this for big, integrated tests that require lots of dependencies. For example, Drupal includes base classes for various levels of bootstrap right up to the whole system. If you&rsquo;re writing a complicated migration, it&rsquo;s not crazy to have a test for it. You can determine the exact start state of the system (effectively a db dump), kick off the exact migration scripts in the right order, and validate the result, all in one command, with no clicking or human inaccuracy.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">testAddition</span>() {
+</span></span><span style="display:flex;"><span>  $result <span style="color:#f92672">=</span> <span style="color:#a6e22e">\MathClass</span><span style="color:#f92672">::</span><span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">self</span><span style="color:#f92672">::</span><span style="color:#a6e22e">assertEquals</span>(<span style="color:#ae81ff">6</span>, $result);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This is not the most complicated concept in the world. But this four lines means I can re-run the <code>addition</code> function a thousand times, stepping through it, with the same values every time. For testing a little additon function, this is certainly not necessary. But for testing submitted values entered on a web form, it saves me a ridiculous amount of time copypasting Lipsum text and fighting with form cache. You can also use this for big, integrated tests that require lots of dependencies. For example, Drupal includes base classes for various levels of bootstrap right up to the whole system. If you&rsquo;re writing a complicated migration, it&rsquo;s not crazy to have a test for it. You can determine the exact start state of the system (effectively a db dump), kick off the exact migration scripts in the right order, and validate the result, all in one command, with no clicking or human inaccuracy.</p>
 <p>Tests do more than just save you time in coding. They also save time in maintenance, since you can leave your tests in place and know as soon as there&rsquo;s a regression. They also make refactoring possible. Having complete tests that make sure the whole system <em>works</em> means that I never have to worry if my refactor broke something. I know it didn&rsquo;t, because it passes the same tests.</p>
 <p>OK, we all get it: testing saves you time. But the important part of test writing for this article, is how much you learn about your framework as you&rsquo;re doing it. You see, the hard part of writing tests is paring down the system you need for the test, to get rid of external factors. For example, technically I could bootstrap all of Symfony to run that example test above&hellip; but it&rsquo;s much faster if I just instantiate the MathClass class and run the function directly. So in my test, I won&rsquo;t bother starting anything from the system around it.</p>
 <p>Most of your tests will be somewhere in between this simple example and a behemoth which needs the full weight of your framework to run. You want to only instantiate the bare minimum. So in Symphony, maybe you bootstrap the service container, but you only load up the services you need for the code you&rsquo;re testing. And of those, probably half of them can be &ldquo;dummies&rdquo; that are just there to give a type signature to a constructor. Good testing frameworks (shout out to PHPUnit!) make this easy.</p>
@@ -1009,7 +1050,7 @@ $ echo <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</s
     <updated>2017-07-28T17:01:59+00:00</updated>
     <content type="html"><![CDATA[<p>I&rsquo;ve learned something incredible as the PHP Track Chair for Drupalcon Vienna. <strong>The Drupal Association has no way to invite PHP speakers to Drupalcon</strong>.</p>
 <p>This blew me away when I first learned about it. After all the work to bring mainstream PHP to Drupal core, after all the outreach to <a href="https://php-fig.org">PHP-FIG</a>, after all the talks Drupalists have given at major PHP conferences, how is this possible?</p>
-<p>You see, <strong>basically every other PHP conference covers their speakers' travel and accommodation costs</strong>. Drupalcon doesn&rsquo;t, and never has. Historically it has to do with Drupalcon&rsquo;s identity as a community conference, rather than a professional one. But it means <strong>the best PHP speakers never get to Drupalcon</strong>.</p>
+<p>You see, <strong>basically every other PHP conference covers their speakers&rsquo; travel and accommodation costs</strong>. Drupalcon doesn&rsquo;t, and never has. Historically it has to do with Drupalcon&rsquo;s identity as a community conference, rather than a professional one. But it means <strong>the best PHP speakers never get to Drupalcon</strong>.</p>
 <p>On one hand that&rsquo;s great for our project: our speakers are all passionate volunteers! They&rsquo;re specialists who care deeply about the project. On the other hand, it contributes to isolated, &ldquo;stay on the island&rdquo; thinking. If the only speakers we hear are Drupalists, where do we get new insights? If the only people at the BoF or code sprint table are Drupalists, how do we leverage the strengths of the broader PHP community? How do we contribute back? <em>How do we grow?</em></p>
 <p>Every year, the lack of financial support holds back major PHP contributors from speaking at Drupalcon. The maintainers of Composer, PHPUnit, and Guzzle <em>want</em> to come to Drupalcon, but we don&rsquo;t make it possible. <strong>These people built and maintain the cornerstones of Drupal. Why do we hold them at arm&rsquo;s length?</strong></p>
 <p>This year, as Drupalcon PHP Track Chair, I&rsquo;m in a position to make some changes. So I invited two notable PHP speakers to come and join us at the con: <strong>Sebastian Bergmann, author of PHPUnit</strong>, and <strong>Michelle Sanver, president of @phpwomen</strong>. Today I&rsquo;m announcing a very special <a href="https://www.gofundme.com/php-at-drupalcon">GoFundMe campaign</a> to pay the travel and accommodation for these two exceptional contributors.</p>
@@ -1020,43 +1061,6 @@ $ echo <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</s
 <p>We&rsquo;ve estimated costs conservatively; this is not a lot of money. Anything we collect above and beyond their needs will go to the Drupal Association, but let&rsquo;s be honest with ourselves: this campaign isn&rsquo;t just about bringing Sebastian and Michelle to Drupalcon. <strong>Your donation shows the Drupal Association that you want to welcome contributors from other communities.</strong> You prove to them that their constituents <em>want</em> to bring in this kind of speaker. <strong>When you donate, you stand up for the kind of community you believe in.</strong></p>
 <p>Please <a href="https://www.gofundme.com/php-at-drupalcon/donate">donate</a>, share, and tweet the campaign today.</p>
 <!-- raw HTML omitted -->
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[That time I resurrected my Linux MacBook Pro]]></title>
-    <link href="https://ohthehugemanatee.org/blog/2017/06/17/that-time-i-resurrected-my-linux-macbook-pro/"/>
-    <id>https://ohthehugemanatee.org/blog/2017/06/17/that-time-i-resurrected-my-linux-macbook-pro/</id>
-    <author>
-      <name>Campbell Vertesi (ohthehugemanatee)</name>
-    </author>
-    <published>2017-06-17T23:06:02+00:00</published>
-    <updated>2017-06-17T23:06:02+00:00</updated>
-    <content type="html"><![CDATA[<p>In the airport last week, my laptop stopped booting.</p>
-<p>I have a 2012 Macbook Pro - yes, that coveted &ldquo;last good model&rdquo; - and it runs Ubuntu Linux. It&rsquo;s my roving office as I travel the world to conferences, performances, and job sites. So when I started it up at JFK airport this week and got a gray screen of death, I was a little concerned.</p>
-<p>I tried starting into Startup Manager by holding the &ldquo;Option&rdquo; key. No bootable options appeared. Just an unhopeful file folder with a question mark. This was Not A Good Sign.</p>
-<p><img src="/images/folder-questionmark.jpg" alt="When this is all your computer does, it is Not A Good Sign."></p>
-<p>Generally this icon means that EFI couldn&rsquo;t find a valid startup device. This is not the first time I&rsquo;ve seen this - I&rsquo;ve played with my boot options enough to mess this up for myself a few times! I breathed a heavy sigh and tried starting onto the recovery partition by holding &ldquo;Command+R&rdquo;. I hadn&rsquo;t done anything in particular with Grub recently, but I had done some kernel updates, and you never know&hellip; But the recovery boot just got me a circle with a line through it, the universal &ldquo;no&rdquo; sign. This was an even worse sign.</p>
-<p><img src="/images/mac-no-sign.png" alt="This is an Even Worse Sign."></p>
-<p>This immediately threw the issue out of the realm of &ldquo;something I messed up myself&rdquo;, and into the less-entertaining realm of &ldquo;hardware failure.&rdquo;</p>
-<p>At home I have some tools for diagnosing this sort of issue, but in the airport I had limited options - and unlimited time. So I started into Apple&rsquo;s built in Diagnostic Test mode by holding &ldquo;D&rdquo;. A lesser-known feature of the Apple boot manager, is that if it doesn&rsquo;t have a device to boot from, it can download an image from the Internet, load it into RAM, and boot from there. I had never had the chance to try it out before, but that didn&rsquo;t give much satisfaction as I grimly waited for it to work it&rsquo;s magic.</p>
-<p>The diagnostic report looked fine, everything in tip-top shape! That is, until I went to the hard drive diagnostic page - there wasn&rsquo;t one. Not just no hard drive diagnostic, but completely no page for SATA diagnostics at all.</p>
-<p>At this point it was clear that a catastrophic hard disk failure was my best-case scenario. Maybe it just skipped the drive diagnostic because no devices reported back, I hoped. There&rsquo;s something zen in that moment, when you find yourself <em>hoping</em> that you&rsquo;ve <em>only</em> lost your entire hard drive. All my work is backed up and relatively accessible, after all; I could stare digital death in the eye with only a hundred-Euro bill for a new drive. A motherboard failure, though - I tried not to think of it.</p>
-<p>When I got home, I pulled out my toolkit. I opened up my mac to look for signs of burnout or other damage. Nothing. No smell, no scorches, no scratches. Not even any capacitor whine. I have a lot of respect for the engineers who designed a system that, even after 5 years of hard abuse, still retained it&rsquo;s &ldquo;new motherboard smell.&rdquo; I optimistically tried re-seating the SATA cable for my drive, but wasn&rsquo;t surprised when that didn&rsquo;t work.</p>
-<p>I opened my desktop gaming computer, and plugged my laptop hard disk in there. I got the worst result possible from this test: the drive worked fine. It booted into my beautifully customized Linux desktop, dutifully selecting a random background image from the Internet - as luck would have it, a man screaming at his laptop in frustration. Though everyone knows that the silicon gods have a strong sense of irony.</p>
-<p>I did a couple of follow up tests to confirm the diagnosis, but it was clear: the hard drive was fine, it was the SATA controller on my Macbook that had died. Everything else seemed intact; I could boot from a USB stick just fine, with a reasonable performance degradation (there&rsquo;s a ~33% speed difference between SATA3 and USB3 interfaces). But it couldn&rsquo;t detect anything connected internally.</p>
-<p>The first goal was to get myself a computer for work. I&rsquo;m a contractor, which means that I don&rsquo;t take days off if I can help it. So I threw together a nice looking machine from spare parts I had laying around the house, and used my ex-laptop hard drive as a primary. When it first booted, I confess to a very satisfying &ldquo;I told you those parts would come in handy someday&rdquo; jab to my wife. She was very impressed, I could tell from the way she rolled her eyes at me. :)</p>
-<p>My immediate need of a working machine for the office satisfied, the second priority was to buy a new laptop. I&rsquo;m on the road <strong>a lot</strong>. A desktop working environment - even one that lets me cheerfully tease my partner a little - is a band-aid at best. In fact, my next onsite was in Zürich in two weeks! I briefly considered taking my tower carry-on, before buckling down to find a computer.</p>
-<p>My local electronics shop was a bust. They had plenty of beautiful looking machines that would run Linux perfectly nicely - those Lenovos are really coming along! - but they all had one fatal flaw: I can&rsquo;t work on a German keyboard.</p>
-<p>I&rsquo;ve lived in Germany for 6 years now; I&rsquo;m comfortable in the language and culture, and I can complain about the bureaucracy with the best of them. But I just can&rsquo;t handle their terrible keyboard layout. QWERTZ might be fine for writing the language, but code and the *nix terminal are very QWERTY-centric. No, there was no way I would put up with a QWERTZ laptop for my next 5 years.</p>
-<p>So I bought one of the popular Dell XPS 13 &ldquo;developer edition&rdquo; laptops, with Ubuntu pre-installed. I excitedly checked my order status right away, and saw the shipping date&hellip; was the day after I leave for Zürich. Shit.</p>
-<p>So my old laptop is back in service, limping along for one last hurrah. The black box on the back looks like some impressive hardware hack, but it&rsquo;s just the old internal drive connected by USB.</p>
-<figure class="center"><img src="/images/me-and-my-busted-laptop.jpg"/>
-</figure>
-
-<p>Yes, I had to do the GRUB dance pretty extensively to get it booting. boot-repair is a wonderful tool, but nothing seems to handle elegantly switching between BIOS and EFI boot modes. I ended up having to copy EFI files from my USB stick by hand. As every Linux desktop user ever has said: &ldquo;if it&rsquo;s working I won&rsquo;t ask any questions.&rdquo;</p>
-<p>Yes, I will take this computer into a board room in two weeks.</p>
-<p>No, I am not ashamed. I&rsquo;m actually pretty satisfied with myself. It&rsquo;s been years since I&rsquo;ve built a computer myself, let alone rigged one up with duct tape and spare parts. It&rsquo;s been ages since I&rsquo;ve had to dig around in the Linux boot process (greatly improved since 2005, Linus be praised). And it&rsquo;s been a long time since I&rsquo;ve sported duct tape on my computer.</p>
-<p>In a couple weeks I&rsquo;ll find out just how much special sauce Dell has put into their default Ubuntu setup to make it run. My setup is&hellip; not very default.</p>
 ]]></content>
   </entry>
 </feed>
