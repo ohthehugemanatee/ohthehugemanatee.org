@@ -21,14 +21,13 @@ I imagine collecting metadata over a period of a few years to glean these insigh
   * what doctors you have visited regularly enough to store
   * what medical conditions you've probably had
 * Storage
-  * photos/videos
-    * every place you've taken a picture
-    * who you were with
-    * what you were doing
-    * what you wear (brands etc)
-    * your interests/hobbies
-    * when you travel, and where to
-    * do you have kids, how many and how old
+  * every place you've taken a picture
+  * who you were with
+  * what you were doing
+  * what you wear (brands etc)
+  * your interests/hobbies
+  * when you travel, and where to
+  * do you have kids, how many and how old
 * Location
   * home address
   * work address (and therefore likely job)
