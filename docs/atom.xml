@@ -2,13 +2,97 @@
   <title>Oh The Huge Manatee!</title>
   <link href="https://ohthehugemanatee.org/atom.xml" rel="self"/>
   <link href="https://ohthehugemanatee.org/"/>
-  <updated>2022-09-08T21:07:31+02:00</updated>
+  <updated>2022-09-19T19:30:16+02:00</updated>
   <id>https://ohthehugemanatee.org/</id>
   <author>
     <name>Campbell Vertesi (ohthehugemanatee)</name>
     <uri>https://ohthehugemanatee.org/</uri>
   </author>
   <generator>Hugo -- gohugo.io</generator>
+  <entry>
+    <title type="html"><![CDATA[Whatsapp Is Too Expensive for Me]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2022/09/19/whatsapp-is-too-expensive-for-me/"/>
+    <id>https://ohthehugemanatee.org/blog/2022/09/19/whatsapp-is-too-expensive-for-me/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2022-09-19T19:30:16+02:00</published>
+    <updated>2022-09-19T19:30:16+02:00</updated>
+    <content type="html"><![CDATA[<p>Plenty of my friends and colleagues use WhatsApp and enjoy it. But I think few people are really considering the information pricetag they&rsquo;re paying for a chat client. It comes up frequently enough that I thought I&rsquo;d catalog the information you give Meta/Facebook/Zuckerberg by installing WhatsApp.</p>
+<p>I imagine collecting metadata over a period of a few years to glean these insights. This is all extracted from &ldquo;metadata&rdquo;, by the way.  You don&rsquo;t need access to the contents of someone&rsquo;s messages to know all about them.</p>
+<ul>
+<li>Contacts
+<ul>
+<li>everyone you have ever known, when you last contacted them and when you last updated their info.</li>
+<li>what high school, universities you attended</li>
+<li>what you studied</li>
+<li>where you have worked and when</li>
+<li>who are your family (contacts named &ldquo;mom&rdquo; or with same last name)</li>
+<li>who are your friends</li>
+<li>approximately where you live</li>
+<li>your hobbies</li>
+<li>your political leanings and affiliations</li>
+<li>what doctors you have visited regularly enough to store</li>
+<li>what medical conditions you&rsquo;ve probably had</li>
+</ul>
+</li>
+<li>Storage
+<ul>
+<li>photos/videos
+<ul>
+<li>every place you&rsquo;ve taken a picture</li>
+<li>who you were with</li>
+<li>what you were doing</li>
+<li>what you wear (brands etc)</li>
+<li>your interests/hobbies</li>
+<li>when you travel, and where to</li>
+<li>do you have kids, how many and how old</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Location
+<ul>
+<li>home address</li>
+<li>work address (and therefore likely job)</li>
+<li>friends and where they live</li>
+<li>who you&rsquo;re sleeping with</li>
+<li>your path to work, what transit you use, where you change stations etc</li>
+<li>social events</li>
+<li>hobbies</li>
+<li>doctors / medical history</li>
+<li>how often you use the toilet and for how long</li>
+<li>kids&rsquo; schools and paths there</li>
+<li>where you shop and what brands</li>
+</ul>
+</li>
+<li>Generally from having an app
+<ul>
+<li>your sleep/wake schedule</li>
+<li>how often you use your phone</li>
+<li>your phone make/model/year</li>
+<li>any phone peripherals you own (eg earbuds)</li>
+<li>what other social applications you share from</li>
+</ul>
+</li>
+</ul>
+<p>Of course I haven&rsquo;t included any data that&rsquo;s publicly available to purchase and correlate with you to build a more complete profile, which Meta certainly does. Credit card information, brands you frequent, your subscriptions, which video services you use (netflix, hulu, etc), your SSN, income bracket, age, sex, and more. Nor have I included information we get by combining metadata, like psychological profile, alcohol/drug habits, risk of medical conditions like heart attack, etc.</p>
+<p>Even talking about that knowledge in the abstract like this, the significance doesn&rsquo;t really land. Another way to look at it is the specific knowledge about your life that they gather from this information. Here are some examples from <a href="https://ssd.eff.org/en/module/why-metadata-matters">the EFF</a>:</p>
+<blockquote>
+<ul>
+<li>They know you rang a phone sex line at 2:24 am and spoke for 18 minutes. But they don&rsquo;t know what you talked about.</li>
+<li>They know you called the suicide prevention hotline from the Golden Gate Bridge. But the topic of the call remains a secret.</li>
+<li>They know you got an email from an HIV testing service, then called your doctor, then visited an HIV support group website in the same hour. But they don&rsquo;t know what was in the email or what you talked about on the phone.</li>
+<li>They know you received an email from a digital rights activist group with the subject line “Let’s Tell Congress: Stop SESTA/FOSTA” and then called your elected representative immediately after. But the content of those communications remains safe from government intrusion.</li>
+<li>They know you called a gynecologist, spoke for a half hour, and then called the local abortion clinic’s number later that day.</li>
+</ul>
+</blockquote>
+<p>This is not quite the same as knowing when you were masturbating and to what, that you&rsquo;re suicidally depressed, have HIV, that you&rsquo;re a digital rights activist, and are having an abortion&hellip; but it&rsquo;s just as bad.</p>
+<p>When an app asks me for permissions, I try to mentally translate it into a request for specific information like this. So when I go to install WhatsApp, it says &ldquo;in order to use Whatsapp, you have to tell me everyone you have ever known, when you last talked to them, where you studied, your doctors&rsquo; names, your medical history, family and friends name, where you live and work, your route between them, when you&rsquo;re sleeping vs awake, your hobbies, etc&hellip;&rdquo;</p>
+<p>There are plenty of apps where that tradeoff is worth it for me. But not a chat app. They&rsquo;re a dime a dozen! Especially not when there are alternatives like Signal available which ask for no information and offer the same features.</p>
+<p>I think most people don&rsquo;t consider app installs this way. That&rsquo;s not an accident, it&rsquo;s a feature of how the system is built. People who are tricked - practically everyone - are not fools. They are victims. So when I see that you have WhatsApp installed, I don&rsquo;t judge you. I judge Meta.</p>
+]]></content>
+  </entry>
   <entry>
     <title type="html"><![CDATA[Four Drupalists]]></title>
     <link href="https://ohthehugemanatee.org/blog/2022/09/08/four-drupalists/"/>
@@ -1038,30 +1122,6 @@ The basic skill you have to nurture is to say &ldquo;no&rdquo; more than you thi
 <p>I&rsquo;m not going to write a detailed howto on testing here. There are a thousand of them all over the internet, and it&rsquo;s pretty specific to your individual language. The point is: write tests. It will take a couple of months to get used to it, but after that you&rsquo;ll find you develop faster, refactor faster, experience fewer bugs and regressions&hellip; and you&rsquo;ll find you understand your framework better than any of your peers.</p>
 <h2 id="being-a-rock-star-developer">Being a rock star developer</h2>
 <p>These three tools are the fast track to understanding your framework and language on an extremely deep level. That understanding is the definition of a &ldquo;rock star&rdquo; developer. You will still google for solutions sometimes, but more often you&rsquo;ll look directly at the doco, or for other examples in the code. You&rsquo;ll probably still forget exactly which methods to use for obscure corners of the framework, or what parameters they take, but you&rsquo;ll have the tools to rediscover that information readily at hand. Most importantly, you&rsquo;ll understand how your system <em>thinks</em>, which is what being a rock star is all about.</p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[Why no mainstream PHP speakers come to Drupalcon - and how we&#39;re changing that]]></title>
-    <link href="https://ohthehugemanatee.org/blog/2017/07/28/bring-php-to-drupalcon/"/>
-    <id>https://ohthehugemanatee.org/blog/2017/07/28/bring-php-to-drupalcon/</id>
-    <author>
-      <name>Campbell Vertesi (ohthehugemanatee)</name>
-    </author>
-    <published>2017-07-28T17:01:59+00:00</published>
-    <updated>2017-07-28T17:01:59+00:00</updated>
-    <content type="html"><![CDATA[<p>I&rsquo;ve learned something incredible as the PHP Track Chair for Drupalcon Vienna. <strong>The Drupal Association has no way to invite PHP speakers to Drupalcon</strong>.</p>
-<p>This blew me away when I first learned about it. After all the work to bring mainstream PHP to Drupal core, after all the outreach to <a href="https://php-fig.org">PHP-FIG</a>, after all the talks Drupalists have given at major PHP conferences, how is this possible?</p>
-<p>You see, <strong>basically every other PHP conference covers their speakers&rsquo; travel and accommodation costs</strong>. Drupalcon doesn&rsquo;t, and never has. Historically it has to do with Drupalcon&rsquo;s identity as a community conference, rather than a professional one. But it means <strong>the best PHP speakers never get to Drupalcon</strong>.</p>
-<p>On one hand that&rsquo;s great for our project: our speakers are all passionate volunteers! They&rsquo;re specialists who care deeply about the project. On the other hand, it contributes to isolated, &ldquo;stay on the island&rdquo; thinking. If the only speakers we hear are Drupalists, where do we get new insights? If the only people at the BoF or code sprint table are Drupalists, how do we leverage the strengths of the broader PHP community? How do we contribute back? <em>How do we grow?</em></p>
-<p>Every year, the lack of financial support holds back major PHP contributors from speaking at Drupalcon. The maintainers of Composer, PHPUnit, and Guzzle <em>want</em> to come to Drupalcon, but we don&rsquo;t make it possible. <strong>These people built and maintain the cornerstones of Drupal. Why do we hold them at arm&rsquo;s length?</strong></p>
-<p>This year, as Drupalcon PHP Track Chair, I&rsquo;m in a position to make some changes. So I invited two notable PHP speakers to come and join us at the con: <strong>Sebastian Bergmann, author of PHPUnit</strong>, and <strong>Michelle Sanver, president of @phpwomen</strong>. Today I&rsquo;m announcing a very special <a href="https://www.gofundme.com/php-at-drupalcon">GoFundMe campaign</a> to pay the travel and accommodation for these two exceptional contributors.</p>
-<!-- raw HTML omitted -->
-<p>I believe in the benefits of closer cooperation with the PHP community.</p>
-<p>I believe there&rsquo;s a lot we can learn from these people, and a lot we can teach them too.</p>
-<p><strong>And I believe that I&rsquo;m not the only one.</strong></p>
-<p>We&rsquo;ve estimated costs conservatively; this is not a lot of money. Anything we collect above and beyond their needs will go to the Drupal Association, but let&rsquo;s be honest with ourselves: this campaign isn&rsquo;t just about bringing Sebastian and Michelle to Drupalcon. <strong>Your donation shows the Drupal Association that you want to welcome contributors from other communities.</strong> You prove to them that their constituents <em>want</em> to bring in this kind of speaker. <strong>When you donate, you stand up for the kind of community you believe in.</strong></p>
-<p>Please <a href="https://www.gofundme.com/php-at-drupalcon/donate">donate</a>, share, and tweet the campaign today.</p>
-<!-- raw HTML omitted -->
 ]]></content>
   </entry>
 </feed>
