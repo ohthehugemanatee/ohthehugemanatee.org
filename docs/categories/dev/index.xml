@@ -6,7 +6,17 @@
     <description>Recent content in dev on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Sep 2022 21:07:31 +0200</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Dec 2022 09:01:00 +0100</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software Estimation Deniers: the Flat-Earthers of Project Management</title>
+      <link>https://ohthehugemanatee.org/blog/2022/12/20/software-estimation-deniers-the-flat-earthers-of-project-management/</link>
+      <pubDate>Tue, 20 Dec 2022 09:01:00 +0100</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/blog/2022/12/20/software-estimation-deniers-the-flat-earthers-of-project-management/</guid>
+      <description>Another day, another Hacker News post complaining about estimation in software build projects. These articles and comment sections should come with a trigger warning for armchair speculation. Project management and time estimation are fields of serious research. Drawing conclusions from your personal experience, with no idea what the research says, is as silly as writing your experience that the world is obviously flat.
+Estimation is actually well understood in academic project management.</description>
+    </item>
+    
     <item>
       <title>Four Drupalists</title>
       <link>https://ohthehugemanatee.org/blog/2022/09/08/four-drupalists/</link>

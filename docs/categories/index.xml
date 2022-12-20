@@ -6,22 +6,40 @@
     <description>Recent content in Categories on Oh The Huge Manatee!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Sep 2022 19:30:16 +0200</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Dec 2022 09:01:00 +0100</lastBuildDate><atom:link href="https://ohthehugemanatee.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dev</title>
+      <link>https://ohthehugemanatee.org/categories/dev/</link>
+      <pubDate>Tue, 20 Dec 2022 09:01:00 +0100</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/categories/dev/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>estimation</title>
+      <link>https://ohthehugemanatee.org/categories/estimation/</link>
+      <pubDate>Tue, 20 Dec 2022 09:01:00 +0100</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/categories/estimation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>project management</title>
+      <link>https://ohthehugemanatee.org/categories/project-management/</link>
+      <pubDate>Tue, 20 Dec 2022 09:01:00 +0100</pubDate>
+      
+      <guid>https://ohthehugemanatee.org/categories/project-management/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>privacy</title>
       <link>https://ohthehugemanatee.org/categories/privacy/</link>
       <pubDate>Mon, 19 Sep 2022 19:30:16 +0200</pubDate>
       
       <guid>https://ohthehugemanatee.org/categories/privacy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>dev</title>
-      <link>https://ohthehugemanatee.org/categories/dev/</link>
-      <pubDate>Thu, 08 Sep 2022 21:07:31 +0200</pubDate>
-      
-      <guid>https://ohthehugemanatee.org/categories/dev/</guid>
       <description></description>
     </item>
     
@@ -85,15 +103,6 @@
       <pubDate>Sat, 15 May 2021 15:00:05 +0100</pubDate>
       
       <guid>https://ohthehugemanatee.org/categories/homelab/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>project management</title>
-      <link>https://ohthehugemanatee.org/categories/project-management/</link>
-      <pubDate>Mon, 22 Mar 2021 10:13:04 +0100</pubDate>
-      
-      <guid>https://ohthehugemanatee.org/categories/project-management/</guid>
       <description></description>
     </item>
     

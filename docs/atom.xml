@@ -2,13 +2,53 @@
   <title>Oh The Huge Manatee!</title>
   <link href="https://ohthehugemanatee.org/atom.xml" rel="self"/>
   <link href="https://ohthehugemanatee.org/"/>
-  <updated>2022-09-19T19:30:16+02:00</updated>
+  <updated>2022-12-20T09:01:00+01:00</updated>
   <id>https://ohthehugemanatee.org/</id>
   <author>
     <name>Campbell Vertesi (ohthehugemanatee)</name>
     <uri>https://ohthehugemanatee.org/</uri>
   </author>
   <generator>Hugo -- gohugo.io</generator>
+  <entry>
+    <title type="html"><![CDATA[Software Estimation Deniers: the Flat-Earthers of Project Management]]></title>
+    <link href="https://ohthehugemanatee.org/blog/2022/12/20/software-estimation-deniers-the-flat-earthers-of-project-management/"/>
+    <id>https://ohthehugemanatee.org/blog/2022/12/20/software-estimation-deniers-the-flat-earthers-of-project-management/</id>
+    <author>
+      <name>Campbell Vertesi (ohthehugemanatee)</name>
+    </author>
+    <published>2022-12-20T09:01:00+01:00</published>
+    <updated>2022-12-20T09:01:00+01:00</updated>
+    <content type="html"><![CDATA[<p>Another day, another <a href="https://news.ycombinator.com/item?id=34061206">Hacker News post</a> complaining about estimation in software build projects. These articles and comment sections should come with a trigger warning for armchair speculation. <strong>Project management and time estimation are fields of serious research. Drawing conclusions from your personal experience, with no idea what the research says, is as silly as writing your experience that the world is obviously flat.</strong></p>
+<p>Estimation is actually well understood in academic project management. There is (Nobel Prize winning!) research about what, actually, are the problems inherent to estimation, and how to produce specific and accurate estimates despite them. This academic field is almost 50 years old, and no one who complains about estimation in blog posts or comments is aware of it.</p>
+<p>Stop navel gazing and actually go READ about the subject. I know it&rsquo;s hard for us to take in anything longer than a StackExchange post, but please try, BEFORE you write about your shitty experience with estimates and generalize to the entire problem space.</p>
+<p>Here are some things that the research has said for <em>decades</em>:</p>
+<ul>
+<li>
+<p>Humans are <em>all</em> bad at time estimation. Even the ones who consider themselves good at it, estimating tasks with which they are very familiar, &ldquo;only&rdquo; underestimate by 30% <em>at best</em>.</p>
+</li>
+<li>
+<p>Humans are pretty good at estimating non-time attributes of work, even those with a direct correlation to time. Like effort, complexity, or &ldquo;cups of coffee.&rdquo;</p>
+</li>
+<li>
+<p>if you estimate something with a time corellation (e.g. complexity) in a consistent way and measure the average throughput over time, you can very precisely and accurately estimate time to completion. This is the Law of Large Numbers, which is how casinos can accurately predict profits when dealing with much more randomness than exists in software projects.</p>
+</li>
+<li>
+<p>Note that long term estimates produced with the Law of Large Numbers include unexpected complexity, personal issues, illness, windows updates, etc. It&rsquo;s a statistical law.</p>
+</li>
+<li>
+<p>the accuracy of average time estimates is proportional to the time left on the project. It runs opposite to the uncertainty of distant features. I.e. this method does not predict how much you can build in a week; you&rsquo;re better off with your relatively intimate knowledge of the feature at that point in time and a gut check. Rather it predicts how much you will build over 12 weeks, with extraordinary accuracy.</p>
+</li>
+<li>
+<p>estimates are better understood when presented with a confidence interval, e.g. &ldquo;The work as we understand it today will take 8 weeks, with 95% certainty.&rdquo;</p>
+</li>
+<li>
+<p>Estimates are damaging to teams when they are treated as proscriptive. They are constructive when used as predictions. i.e. rather than &ldquo;you must get this work done in 8 weeks,&rdquo; it&rsquo;s &ldquo;we understand this as 8 weeks of work.&rdquo; Proscriptive estimates compound the problems with human estimation (see first point).</p>
+</li>
+</ul>
+<p>What I HAVEN&rsquo;T seen in the research, but which is undoubtedly true, is that most teams violate these fundamentals. A certain percentage of those team members then complain on the Internet that estimates are useless.</p>
+<p>Asking your team to estimate in time units IS useless. Summing those time estimates to create a long term plan is doubly useless. Cracking the whip on your team when that estimate proves incorrect is triply useless. And complaining about it on the Internet because you&rsquo;ve never read any of the grown up work on the subject&hellip; well that&rsquo;s hacker culture.</p>
+]]></content>
+  </entry>
   <entry>
     <title type="html"><![CDATA[Whatsapp Is Too Expensive for Me]]></title>
     <link href="https://ohthehugemanatee.org/blog/2022/09/19/whatsapp-is-too-expensive-for-me/"/>
@@ -1067,57 +1107,6 @@ The basic skill you have to nurture is to say &ldquo;no&rdquo; more than you thi
 <p>In the group I&rsquo;m entering, a strong commitment to Open Source is built into the project structure, the team responsibilities, and the budgeting practice. Every project has time specifically set aside for contribution; developers&rsquo; connections to their communities are respected and encouraged. After a decade of working with companies who try to engage with open source responsibly, I can say that <strong>this is the strongest institutional commitment to &ldquo;giving back&rdquo; that I have ever seen</strong>. It&rsquo;s a stronger support for contribution than I&rsquo;ve ever been able to offer in any of my roles, from sole proprietor to CTO.</p>
 <p>This does mean a lot more work outside of the Drupal world, though. I will still attend Drupalcons. I will still give technical talks, participate, and help make great open source communities for Drupal and other OSS projects. If anything, I will do those things <em>more</em>. And I will do them wearing a Microsoft shirt.</p>
 <p>Microsoft is making a genuine, and enormous, push to being open source community members and leaders. From everything I&rsquo;ve seen, they are doing it extremely well. From the outside at least, <strong>this is what it looks like to do enterprise Open Source The Right Way</strong>.</p>
-]]></content>
-  </entry>
-  <entry>
-    <title type="html"><![CDATA[The 3 skills you need to become a rock star developer]]></title>
-    <link href="https://ohthehugemanatee.org/blog/2017/08/04/the-only-3-tools-you-need-to-become-a-rock-star-developer/"/>
-    <id>https://ohthehugemanatee.org/blog/2017/08/04/the-only-3-tools-you-need-to-become-a-rock-star-developer/</id>
-    <author>
-      <name>Campbell Vertesi (ohthehugemanatee)</name>
-    </author>
-    <published>2017-08-04T12:03:27+00:00</published>
-    <updated>2017-08-04T12:03:27+00:00</updated>
-    <content type="html"><![CDATA[<p>A lot is made of so-called &ldquo;rockstar developers&rdquo; in any given language or framework. They have a seemingly magical knowledge of the language and API, finding obscure methods and writing best-practice code as if by instinct. I&rsquo;d like to lift the curtain on this: it&rsquo;s not that hard to be this kind of rock star. You can do it, too&hellip; even without a fancy computer science degree. If you know how to code in a given language, you just need 3 skills and some patience. It will take about a year of working this way to get there, but you&rsquo;ll find people throwing around &ldquo;the R word&rdquo; sooner than you think.</p>
-<ol>
-<li>Know how to explore the source</li>
-</ol>
-<hr>
-<p>For most of us this comes down to knowing how to use your IDE, but other tools are available. It doesn&rsquo;t matter what tool you use, as long as it has these functionalities at a minimum:</p>
-<ul>
-<li><strong>Something that lets you explore the object graph.</strong> In my IDE, a hotkey takes you directly from any usage of a function, method, or property, to the definition in use. It respects overrides and understands class inheritance. A different hotkey shows me the descendants of a method/property/class; how it&rsquo;s extended and overridden by it&rsquo;s children. You need to be able to poke around the entire application with enough ease that you can notice common design patterns. Class structure is where some of the most important design patterns live, and you want to learn from and match the rest of your application or framework.</li>
-<li><strong>Something that lets you quickly look up documentation.</strong> One of my favorite things about Drupal is that the documentation standard is in the code itself, which makes this one very easy to satisfy. Most good IDEs will integrate with external documentation systems though. Exact types and example usages should be a hotkey away.</li>
-<li><strong>Something that provides hints as you code.</strong> My IDE pays attention to type hints, and suggests available methods and properties as I type. This is more a speed thing than anything else, but it saves me from having to remember every single corner of the API.</li>
-<li><strong>Fast, robust searching.</strong> Very often you know what you want to do, but you don&rsquo;t know quite how to do it. The rest of your framework is your friend: look for other code that does something similar. Think about how you might do this searching a codebase: simple text matching probably won&rsquo;t do - you need regex matching, at least. Constraint by location, probably constraints by filename, too. The other day I (really) was looking for an example of custom route access callbacks in Drupal - something that&rsquo;s awkwardly described in the doco, and it turns out, doesn&rsquo;t exactly work as documented anyway. I needed to search files matching <code>*.services.yml</code> for services with a tag value &ldquo;applies_to&rdquo; that starts with an underscore. The robust search capability of my IDE helped me find my example, and all I had to write was a little regex.</li>
-</ul>
-<p>These functionalities are standard-issue in any normal IDE. So perhaps we should just reduce this whole point to &ldquo;use an IDE, and learn its hotkeys.&rdquo; This will help you learn by example much faster.</p>
-<ol start="2">
-<li>Know how to use your debugger</li>
-</ol>
-<hr>
-<p>There are two kinds of developers in the world: those who use a debugger, and those who piss their time into the wind. Most self-taught developers spend years beating their heads against the wall trying to resolve bugs. It&rsquo;s a major effort to remember everything in state, so they can&rsquo;t write more than 2 lines of code without some visible output to validate what&rsquo;s going on. I understand. I did this too. The PHP debugger (XDebug) seemed complicated to use, and I didn&rsquo;t really understand why it was important. So I avoided it for a long time.</p>
-<p><strong>Holy shit, it&rsquo;s important</strong>. A debugger lets you step through your code one line at a time, as it&rsquo;s being executed. You can look at the value of any variable, try out isolated lines of code to see what they return, and modify values as it&rsquo;s running. Honestly half the time, I develop by writing a skeleton of what I want in sloppy, busted code&hellip; then fire up the debugger and do the real writing while I&rsquo;m looking at the actual values involved.</p>
-<p>The other really valuable contribution of a debugger to your life, is that you can &ldquo;step into&rdquo; any function or method being called. That means you can jump directly inside the function to see what it does, and inside the functions <em>it</em> uses, and so on and so on. Turns out that it&rsquo;s turtles all the way down: this is the best way to learn really how your framework works. Five and six layers deep you find patterns of abstraction that you simply won&rsquo;t get anywhere else. The kind of understanding you get from walking a complete code path to it&rsquo;s full depth, is impossible to get any other way. It&rsquo;s the kind of understanding that rock stars have.</p>
-<p>Debuggers typically offer other useful functionalities, like performance profiling. Those are great when you need them, and I don&rsquo;t want to minimize their importance. Compared to the everyday functionalities though, these are edge cases. You need the basic tool of debugging <em>every time you touch the code.</em> So invest the time to figure out your debugger. It will take you an afternoon to really figure it out on your local environment. Spend that afternoon now. Thank me later.</p>
-<ol start="3">
-<li>Know how to write tests</li>
-</ol>
-<hr>
-<p>I&rsquo;ll let you in on a secret: you don&rsquo;t have to be good at writing tests. Being good (generally) means your tests run faster, and cover more edge cases. Those are both Good Things, but the basic value of even amateur, I&rsquo;m-just-figuring-it-out tests is 75% of the point.</p>
-<p>The core value of tests is that they run the exact. same. thing. every. damn. time. That&rsquo;s more precise than refreshing your browser, where a hundred factors might come into play before your code fires. Oh, and did I mention that you can trigger your debugger from your tests? Because you can.</p>
-<p>A basic test is just firing off one method or function on it&rsquo;s own, with known values as input. You write &ldquo;asserts&rdquo; to check the output. For example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">testAddition</span>() {
-</span></span><span style="display:flex;"><span>  $result <span style="color:#f92672">=</span> <span style="color:#a6e22e">\MathClass</span><span style="color:#f92672">::</span><span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">self</span><span style="color:#f92672">::</span><span style="color:#a6e22e">assertEquals</span>(<span style="color:#ae81ff">6</span>, $result);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>This is not the most complicated concept in the world. But this four lines means I can re-run the <code>addition</code> function a thousand times, stepping through it, with the same values every time. For testing a little additon function, this is certainly not necessary. But for testing submitted values entered on a web form, it saves me a ridiculous amount of time copypasting Lipsum text and fighting with form cache. You can also use this for big, integrated tests that require lots of dependencies. For example, Drupal includes base classes for various levels of bootstrap right up to the whole system. If you&rsquo;re writing a complicated migration, it&rsquo;s not crazy to have a test for it. You can determine the exact start state of the system (effectively a db dump), kick off the exact migration scripts in the right order, and validate the result, all in one command, with no clicking or human inaccuracy.</p>
-<p>Tests do more than just save you time in coding. They also save time in maintenance, since you can leave your tests in place and know as soon as there&rsquo;s a regression. They also make refactoring possible. Having complete tests that make sure the whole system <em>works</em> means that I never have to worry if my refactor broke something. I know it didn&rsquo;t, because it passes the same tests.</p>
-<p>OK, we all get it: testing saves you time. But the important part of test writing for this article, is how much you learn about your framework as you&rsquo;re doing it. You see, the hard part of writing tests is paring down the system you need for the test, to get rid of external factors. For example, technically I could bootstrap all of Symfony to run that example test above&hellip; but it&rsquo;s much faster if I just instantiate the MathClass class and run the function directly. So in my test, I won&rsquo;t bother starting anything from the system around it.</p>
-<p>Most of your tests will be somewhere in between this simple example and a behemoth which needs the full weight of your framework to run. You want to only instantiate the bare minimum. So in Symphony, maybe you bootstrap the service container, but you only load up the services you need for the code you&rsquo;re testing. And of those, probably half of them can be &ldquo;dummies&rdquo; that are just there to give a type signature to a constructor. Good testing frameworks (shout out to PHPUnit!) make this easy.</p>
-<p>The process of trying to pare down (or build up) dependencies to the minimum you need, <em>is a fantastic way to learn your framework&rsquo;s internals</em>. What REALLY are the dependencies for this function? What subsystems from my framework does it need to run, and what parts of those subsystems? This is a lot like the understanding you get from stepping through an entire request in the debugger: it&rsquo;s rock-star level understanding.</p>
-<p>I&rsquo;m not going to write a detailed howto on testing here. There are a thousand of them all over the internet, and it&rsquo;s pretty specific to your individual language. The point is: write tests. It will take a couple of months to get used to it, but after that you&rsquo;ll find you develop faster, refactor faster, experience fewer bugs and regressions&hellip; and you&rsquo;ll find you understand your framework better than any of your peers.</p>
-<h2 id="being-a-rock-star-developer">Being a rock star developer</h2>
-<p>These three tools are the fast track to understanding your framework and language on an extremely deep level. That understanding is the definition of a &ldquo;rock star&rdquo; developer. You will still google for solutions sometimes, but more often you&rsquo;ll look directly at the doco, or for other examples in the code. You&rsquo;ll probably still forget exactly which methods to use for obscure corners of the framework, or what parameters they take, but you&rsquo;ll have the tools to rediscover that information readily at hand. Most importantly, you&rsquo;ll understand how your system <em>thinks</em>, which is what being a rock star is all about.</p>
 ]]></content>
   </entry>
 </feed>
